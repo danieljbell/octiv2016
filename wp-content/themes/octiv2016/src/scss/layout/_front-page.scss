@@ -236,50 +236,6 @@ DOCUMENT WORKFLOWS
   align-items: center;
 }
 
-// .browser-window {
-//   border: 1px solid $mgray;
-//   position: relative;
-//   box-shadow: 0 0 25px rgba(black, 0.1);
-//   &:before {
-//     position: absolute;
-//     content: '';
-//     height: 30px;
-//     top: -30px;
-//     left: -1px;
-//     right: -1px;
-//     border: 1px solid $mgray;
-//     background-image: linear-gradient($white, $lgray);
-//     border-radius: $radius $radius 0 0;
-//   }
-//   > div {
-//     padding: 10px;
-//     &:before {
-//       position: absolute;
-//       content: '';
-//       height: 14px;
-//       width: 14px;
-//       top: -30px;
-//       left: -1px;
-//       right: -1px;
-//       border-radius: 50%;
-//       box-shadow: 10px 10px 0 #ff564f, 30px 10px #ffb429, 50px 10px #24c238;
-//     }
-//     &:after {
-//       position: absolute;
-//       content: '';
-//       filter: brightness(0.75);
-//       top: -26px;
-//       right: 10px;
-//       content: '';
-//       width: 20px;
-//       height: 20px;
-//       background-image: url(img/menu.svg);
-//       background-repeat: no-repeat;
-//       background-position: 100%;
-//     }
-//   }
-// }
-
 /*
 ==============================
 WORKFLOWS SECTION
@@ -332,9 +288,12 @@ CONNECTIONS SECTION
 }
 
 .connections-content a {
-  box-shadow: inset 0 -2px 0 $brand3;
-  &:hover {
-    box-shadow: inset 0 -28px 0 $brand3;
+  box-shadow: inset 0 -200px 0 $brand3;
+  @include bp(sm) {
+    box-shadow: inset 0 -2px 0 $brand3;
+    &:hover {
+      box-shadow: inset 0 -28px 0 $brand3;
+    }
   }
 }
 
@@ -601,9 +560,12 @@ USER EXPERIENCE SECTION
 }
 
 .ux-content a {
-  box-shadow: inset 0 -2px 0 $brand4;
-  &:hover {
-    box-shadow: inset 0 -28px 0 $brand4;
+  box-shadow: inset 0 -200px 0 $brand4;
+  @include bp(sm) {
+    box-shadow: inset 0 -2px 0 $brand4;
+    &:hover {
+      box-shadow: inset 0 -28px 0 $brand4;
+    }
   }
 }
 
@@ -621,9 +583,12 @@ DOCUMENTS SECTION
 }
 
 .documents-content a {
-  box-shadow: inset 0 -2px 0 $brand;
-  &:hover {
-    box-shadow: inset 0 -28px 0 $brand;
+  box-shadow: inset 0 -200px 0 $brand;
+  @include bp(sm) {
+    box-shadow: inset 0 -2px 0 $brand;
+    &:hover {
+      box-shadow: inset 0 -28px 0 $brand;
+    }
   }
 }
 
@@ -767,9 +732,12 @@ COMMERCIAL
 }
 
 .commercial-content a {
-  box-shadow: inset 0 -2px 0 $brand5;
-  &:hover {
-    box-shadow: inset 0 -28px 0 $brand5;
+  box-shadow: inset 0 -200px 0 $brand5;
+  @include bp(sm) {
+    box-shadow: inset 0 -2px 0 $brand5;
+    &:hover {
+      box-shadow: inset 0 -28px 0 $brand5;
+    }
   }
 }
 

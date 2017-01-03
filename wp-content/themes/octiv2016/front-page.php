@@ -276,16 +276,6 @@
 
 
 <style>
-/*.home .fixed-hero-section {
-	background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv_Hero<?php echo mt_rand(1,5) ?>.jpg);
-}
-
-@media screen and (min-width: 768px) {
-	.home .fixed-hero-section {
-		background-image: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 70%), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv_Hero<?php echo mt_rand(1,5) ?>.jpg);
-	}
-}*/
-
 
 @media screen and (max-width: 767px) {
 	.home .fixed-hero-section .half > div:first-child {
