@@ -30,6 +30,9 @@ wp-content/*
 # ignore specific themes
 wp-content/themes/twenty*/
 
-
-# ignore specific themes
+# DON'T ignore current theme
 !wp-content/themes/octiv2016/
+
+# ignore current theme build files
+wp-content/themes/octiv2016/node_modules/
+wp-content/themes/octiv2016/bower_components/
