@@ -1,0 +1,570 @@
+<?php
+
+/*
+==============================
+REGISTER SUPPORT POST TYPE
+==============================
+*/
+add_action( 'init', 'register_support_post_type' );
+
+function register_support_post_type() {
+
+  $labels = array(
+    'name'                => 'Support',
+    'singular_name'       => 'Support Doc',
+    'add_new'             => 'Add New Support Doc',
+    'add_new_item'        => 'Add New Support Doc',
+    'edit_item'           => 'Edit Support Doc',
+    'new_item'            => 'New Support Doc',
+    'all_items'           => 'All Support Doc',
+    'view_item'           => 'View Support Doc',
+    'search_items'        => 'Search Support Doc',
+    'not_found'           => 'No support doc found',
+    'not_found_in_trash'  => 'No support doc found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Support Doc'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    'with_front' => true,
+    'hierarchical'  => true,
+    'menu_icon'   => 'dashicons-welcome-learn-more',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+    'capability_type' => 'support',
+    'map_meta_cap' => true,
+    'show_in_rest'       => true,
+		'rest_base'          => 'support-api',
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_support',
+    'read_post'              => 'read_support',
+    'delete_post'            => 'delete_support',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_supports',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_supports',
+    'edit_others_posts'      => 'manage_supports',
+    'publish_posts'          => 'manage_supports',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_supports',
+    'delete_private_posts'   => 'manage_supports',
+    'delete_published_posts' => 'manage_supports',
+    'delete_others_posts'    => 'manage_supports',
+    'edit_private_posts'     => 'edit_supports',
+    'edit_published_posts'   => 'edit_supports'
+    ),
+  );
+
+  register_post_type( 'support', $args );
+}
+
+
+/*
+===================================
+REMOVE YOAST FROM SUPPORT PAGES
+===================================
+*/
+// Returns true if user has specific role
+function check_user_role( $role, $user_id = null ) {
+    if ( is_numeric( $user_id ) )
+        $user = get_userdata( $user_id );
+    else
+        $user = wp_get_current_user();
+    if ( empty( $user ) )
+        return false;
+    return in_array( $role, (array) $user->roles );
+}
+
+// Disable WordPress SEO meta box for all roles other than administrator and seo
+function wpse_init(){
+    if( !check_user_role('administrator') ){
+        // Remove page analysis columns from post lists, also SEO status on post editor
+        add_filter('wpseo_use_page_analysis', '__return_false');
+        // Remove Yoast meta boxes
+        add_action('add_meta_boxes', 'disable_seo_metabox', 100000);
+    }
+}
+add_action('init', 'wpse_init');
+
+function disable_seo_metabox(){
+    remove_meta_box('wpseo_meta', 'support', 'normal');
+}
+
+
+/*
+==============================
+REGISTER EVENT POST TYPE
+==============================
+*/
+add_action( 'init', 'register_event_post_type' );
+
+function register_event_post_type() {
+
+  $labels = array(
+    'name'                => 'Events',
+    'singular_name'       => 'Event',
+    'add_new'             => 'Add New Event',
+    'add_new_item'        => 'Add New Event',
+    'edit_item'           => 'Edit Event',
+    'new_item'            => 'New Event',
+    'all_items'           => 'All Events',
+    'view_item'           => 'View Event',
+    'search_items'        => 'Search Event',
+    'not_found'           => 'No event found',
+    'not_found_in_trash'  => 'No event found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Events'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-tickets-alt',
+    'supports'    => array( 'title', 'editor', 'thumbnail' ),
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_event',
+    'read_post'              => 'read_event',
+    'delete_post'            => 'delete_event',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_event',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_event',
+    'edit_others_posts'      => 'edit_others_event',
+    'publish_posts'          => 'publish_event',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'delete_event',
+    'delete_private_posts'   => 'delete_private_event',
+    'delete_published_posts' => 'delete_published_event',
+    'delete_others_posts'    => 'delete_others_event',
+    'edit_private_posts'     => 'edit_private_event',
+    'edit_published_posts'   => 'edit_published_event'
+    ),
+  );
+
+  register_post_type( 'events', $args );
+}
+
+/*
+==============================
+EVENT TAXONOMY
+==============================
+*/
+function events_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'event_type',
+        'events',
+        array(
+            'label' => __( 'Event Type' ),
+            'rewrite' => array( 'slug' => 'events' ),
+            'hierarchical' => true,
+            'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_event_type',
+                'edit_terms' => 'publish_event_type'
+            )
+        )
+    );
+}
+add_action( 'init', 'events_init' );
+
+/*
+===================================
+REGISTER PRESS RELEASE POST TYPE
+===================================
+*/
+add_action( 'init', 'register_press_release_post_type' );
+
+function register_press_release_post_type() {
+
+  $labels = array(
+    'name'                => 'Press Releases',
+    'singular_name'       => 'Press Release',
+    'add_new'             => 'Add New Press Release',
+    'add_new_item'        => 'Add New Press Release',
+    'edit_item'           => 'Edit Press Release',
+    'new_item'            => 'New Press Release',
+    'all_items'           => 'All Press Releases',
+    'view_item'           => 'View Press Release',
+    'search_items'        => 'Search Press Release',
+    'not_found'           => 'No press release found',
+    'not_found_in_trash'  => 'No press release found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Press Releases'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'exclude_from_search' => false,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-megaphone',
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_press_releases',
+    'read_post'              => 'read_press_releases',
+    'delete_post'            => 'delete_press_releases',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_press_releases',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_press_releases',
+    'edit_others_posts'      => 'manage_press_releases',
+    'publish_posts'          => 'manage_press_releases',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_press_releases',
+    'delete_private_posts'   => 'manage_press_releases',
+    'delete_published_posts' => 'manage_press_releases',
+    'delete_others_posts'    => 'manage_press_releases',
+    'edit_private_posts'     => 'edit_press_releases',
+    'edit_published_posts'   => 'edit_press_releases'
+    ),
+  );
+
+  register_post_type( 'press-releases', $args );
+}
+
+
+/*
+========================================
+REGISTER PRODUCT RELEASE POST TYPE
+========================================
+*/
+add_action( 'init', 'register_release_post_type' );
+
+function register_release_post_type() {
+
+  $labels = array(
+    'name'                => 'Releases',
+    'singular_name'       => 'Product Release',
+    'add_new'             => 'Add New Product Release',
+    'add_new_item'        => 'Add New Product Release',
+    'edit_item'           => 'Edit Product Release',
+    'new_item'            => 'New Product Release',
+    'all_items'           => 'All Product Release',
+    'view_item'           => 'View Product Release',
+    'search_items'        => 'Search Product Release',
+    'not_found'           => 'No product release found',
+    'not_found_in_trash'  => 'No product release found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Product Releases'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    'hierarchical' => true,
+    'menu_icon'   => 'dashicons-megaphone',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+    'capability_type' => 'support',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_release',
+    'read_post'              => 'read_release',
+    'delete_post'            => 'delete_release',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_releases',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_releases',
+    'edit_others_posts'      => 'manage_releases',
+    'publish_posts'          => 'manage_releases',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_releases',
+    'delete_private_posts'   => 'manage_releases',
+    'delete_published_posts' => 'manage_releases',
+    'delete_others_posts'    => 'manage_releases',
+    'edit_private_posts'     => 'edit_releases',
+    'edit_published_posts'   => 'edit_releases'
+    ),
+  );
+
+  register_post_type( 'releases', $args );
+
+
+}
+
+
+/*
+===================================
+REGISTER LANDING PAGE POST TYPE
+===================================
+*/
+add_action( 'init', 'register_landing_page_post_type' );
+
+function register_landing_page_post_type() {
+
+  $labels = array(
+    'name'                => 'Landing Pages',
+    'singular_name'       => 'Landing Page',
+    'add_new'             => 'Add New Landing Page',
+    'add_new_item'        => 'Add New Landing Page',
+    'edit_item'           => 'Edit Landing Page',
+    'new_item'            => 'New Landing Page',
+    'all_items'           => 'All Landing Pages',
+    'view_item'           => 'View Landing Page',
+    'search_items'        => 'Search Landing Page',
+    'not_found'           => 'No landing page found',
+    'not_found_in_trash'  => 'No landing page found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Landing Page'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'exclude_from_search' => true,
+    'has_archive' => false,
+    'menu_icon'   => 'dashicons-welcome-add-page',
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_landing_pages',
+    'read_post'              => 'read_landing_pages',
+    'delete_post'            => 'delete_landing_pages',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_landing_pages',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_landing_pages',
+    'edit_others_posts'      => 'manage_landing_pages',
+    'publish_posts'          => 'manage_landing_pages',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_landing_pages',
+    'delete_private_posts'   => 'manage_landing_pages',
+    'delete_published_posts' => 'manage_landing_pages',
+    'delete_others_posts'    => 'manage_landing_pages',
+    'edit_private_posts'     => 'edit_landing_pages',
+    'edit_published_posts'   => 'edit_landing_pages'
+    ),
+  );
+
+  register_post_type( 'lp', $args );
+}
+
+
+
+/*
+==============================
+REGISTER CATALOG POST TYPE
+==============================
+*/
+add_action( 'init', 'register_catalog_post_type' );
+
+function register_catalog_post_type() {
+
+  $labels = array(
+    'name'                => 'Catalog',
+    'singular_name'       => 'Catalog',
+    'add_new'             => 'Add New Catalog',
+    'add_new_item'        => 'Add New Catalog',
+    'edit_item'           => 'Edit Catalog',
+    'new_item'            => 'New Catalog',
+    'all_items'           => 'All Catalog',
+    'view_item'           => 'View Catalog',
+    'search_items'        => 'Search Catalog',
+    'not_found'           => 'No catalog found',
+    'not_found_in_trash'  => 'No catalog found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Catalog'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    // 'hierarchical'  => true,
+    'rewrite'            => array( 'slug' => 'platform/catalog' ),
+    'menu_icon'   => 'dashicons-media-text',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'capability_type' => 'catalog',
+    'map_meta_cap' => true,
+    // 'show_in_rest'       => true,
+		// 'rest_base'          => 'support-api',
+		// 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_catalog',
+    'read_post'              => 'read_catalog',
+    'delete_post'            => 'delete_catalog',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_catalogs',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_catalogs',
+    'edit_others_posts'      => 'manage_catalogs',
+    'publish_posts'          => 'manage_catalogs',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_catalogs',
+    'delete_private_posts'   => 'manage_catalogs',
+    'delete_published_posts' => 'manage_catalogs',
+    'delete_others_posts'    => 'manage_catalogs',
+    'edit_private_posts'     => 'edit_catalogs',
+    'edit_published_posts'   => 'edit_catalogs'
+    ),
+  );
+
+  register_post_type( 'catalog', $args );
+}
+
+/*
+==============================
+CATALOG TAXONOMY
+==============================
+*/
+function catalog_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'catalog_type',
+        'catalog',
+        array(
+            'label' => __( 'Catalog Type' ),
+            // 'rewrite' => array( 'slug' => 'events' ),
+            'hierarchical' => true,
+            // 'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_catalog',
+                'edit_terms' => 'publish_catalog'
+            )
+        )
+    );
+}
+add_action( 'init', 'catalog_init' );
+
+
+/*
+==============================
+REGISTER INTEGRATIONS POST TYPE
+==============================
+*/
+add_action( 'init', 'register_integration_post_type' );
+
+function register_integration_post_type() {
+
+  $labels = array(
+    'name'                => 'Integrations',
+    'singular_name'       => 'Integration',
+    'add_new'             => 'Add New Integration',
+    'add_new_item'        => 'Add New Integration',
+    'edit_item'           => 'Edit Integration',
+    'new_item'            => 'New Integration',
+    'all_items'           => 'All Integration',
+    'view_item'           => 'View Integration',
+    'search_items'        => 'Search Integration',
+    'not_found'           => 'No integration found',
+    'not_found_in_trash'  => 'No integration found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Integrations'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    // 'hierarchical'  => true,
+    'rewrite'            => array( 'slug' => 'platform/integrations' ),
+    'menu_icon'   => 'dashicons-media-text',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'capability_type' => 'integrations',
+    'map_meta_cap' => true,
+    // 'show_in_rest'       => true,
+        // 'rest_base'          => 'support-api',
+        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_integration',
+    'read_post'              => 'read_integration',
+    'delete_post'            => 'delete_integration',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_integrations',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_integrations',
+    'edit_others_posts'      => 'manage_integrations',
+    'publish_posts'          => 'manage_integrations',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_integrations',
+    'delete_private_posts'   => 'manage_integrations',
+    'delete_published_posts' => 'manage_integrations',
+    'delete_others_posts'    => 'manage_integrations',
+    'edit_private_posts'     => 'edit_integrations',
+    'edit_published_posts'   => 'edit_integrations'
+    ),
+  );
+
+  register_post_type( 'integration', $args );
+}
+
+/*
+==============================
+INTEGRATION TAXONOMY
+==============================
+*/
+function integration_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'integration_type',
+        'integration',
+        array(
+            'label' => __( 'Integration Type' ),
+            'rewrite' => array( 'slug' => 'platform/integrations' ),
+            'hierarchical' => true,
+            'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_integration',
+                'edit_terms' => 'publish_integration'
+            )
+        )
+    );
+}
+add_action( 'init', 'integration_init' );
+?>
