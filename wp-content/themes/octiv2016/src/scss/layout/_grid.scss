@@ -1,0 +1,392 @@
+.half,
+.half-force,
+.half-stack,
+.third,
+.fourth,
+.fifth,
+.sixth,
+.two-third,
+.two-third-reversed,
+.two-third-reversed-stack,
+.two-third-reversed-force,
+.fourth-3-fourth,
+.fourth-3-fourth-reversed {
+	display: flex;
+	flex-wrap: wrap;
+	> div,
+	> figure {
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+}
+
+.half > div,
+.half > li {
+	@include bp(sm) {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.half > li {
+	margin-bottom: 0;
+}
+
+.half-force > div {
+	width: calc(50% - 1rem);
+	margin-right: 2rem;
+	flex: 1;
+}
+
+.half-stack {
+	display: block;
+	@media screen and (min-width: 769px) {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
+.half-stack > div {
+	@media screen and (min-width: 769px) {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		flex: 1;
+		&:first-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.third > div {
+	@include bp(md) {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	@include bp(lg) {
+		width: calc((100% / 3) - 1.3333rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 2rem;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.fourth > div {
+	@include bp(sm) {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	@include bp(md) {
+		width: calc((100% / 4) - 1.5rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 2rem;
+		}
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.fifth > div {
+	@include bp(md) {
+		width: calc((100% / 5) - 1.6rem);
+		margin-right: 2rem;
+		&:nth-child(5n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.sixth > div {
+	@include bp(sm) {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	@include bp(lg) {
+		width: calc((100% / 6) - 1.7rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 2rem;
+		}
+		&:nth-child(6n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.two-third > div,
+.two-third > aside,
+.two-third > figure {
+	@include bp(md) {
+		// margin-bottom: 0;
+		&:nth-child(2n-1) {
+			width: calc(((100% / 3) * 2) - 0.7rem);
+			margin-right: 2rem;
+		}
+		&:nth-child(2n) {
+			width: calc((100% / 3) - 1.3333rem);
+		}
+	}
+}
+
+
+.two-third-reversed > div {
+	@include bp(md) {
+		// margin-bottom: 0;
+		&:nth-child(2n-1) {
+			width: calc((100% / 3) - 1.3333rem);
+			margin-right: 2rem;
+		}
+		&:nth-child(2n) {
+			width: calc(((100% / 3) * 2) - 0.7rem);
+		}
+	}
+}
+.two-third-reversed-stack {
+	display: block;
+	@include bp(sm) {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
+.two-third-reversed-stack > div {
+	&:nth-child(2n-1) {
+		@include bp(md) {
+			width: calc((100% / 3) - 1.3333rem);
+		}
+	}
+	&:nth-child(2n) {
+		@include bp(md) {
+			margin-right: 2rem;
+			width: calc((100% / 3) * 2 - 1.3333rem);
+		}
+	}
+}
+
+.fourth-3-fourth > div {
+	@include bp(sm) {
+		&:nth-child(2n-1) {
+			width: calc((100% / 4) - 1.3333rem);
+			margin-right: 2rem;
+		}
+		&:nth-child(2n) {
+			width: calc(((100% / 4) * 3) - 0.7rem);
+		}
+	}
+}
+
+.fourth-3-fourth-reversed > div {
+	@include bp(sm) {
+		&:nth-child(2n-1) {
+			width: calc(((100% / 4) * 3) - 0.7rem);
+			margin-right: 2rem;
+		}
+		&:nth-child(2n) {
+			width: calc((100% / 4) - 1.3333rem);
+		}	
+	}
+}
+
+/*
+==============================
+CENTERED GRID ELEMENTS
+==============================
+*/
+[class$='-only'] > div {
+	margin-bottom: 2rem;
+	@include bp(sm) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include bp(sm) {
+	.two-third-only > div {
+		width: calc((100% / 3) * 2);
+	}
+	.half-only > div {
+		width: calc(100% / 2);
+	}
+	.third-only > div {
+		width: calc(100% / 3);
+	}
+	.fourth-only > div {
+		width: calc(100% / 4);
+	}
+}
+
+
+
+/*
+==============================
+NESTED GRIDS
+==============================
+*/
+.half .half > div {
+	width: 100%;
+	margin-right: 0;
+	@include bp(lg) {
+		width: calc((100% / 2) - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.two-third .half > div {
+	width: 100%;
+	margin-right: 0;
+	@include bp(sm) {
+		width: calc((100% / 2) - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}	
+	}
+	@include bp(md) {
+		width: 100%;
+		margin-right: 0;
+	}
+	@include bp(lg) {
+		width: calc((100% / 2) - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}		
+	}
+}
+
+
+/*
+==============================
+LINED GRID ELEMENTS
+==============================
+*/
+.lined-grid > * {
+	border: 1px solid $mgray;
+}
+
+.lined-grid {
+	&.third > * {
+		margin: 0 !important;
+		padding: 1rem;
+		text-align: center;
+		width: calc((100% / 3));
+		&:nth-child(3n+1),
+		&:nth-child(3n-1) {
+			border-left: 0;
+			border-top: 0;
+		}
+		&:nth-child(2n+1),
+		&:nth-child(5n+1) {
+			border-top: 0;
+			border-right: 0;
+			border-left: 0;
+		}
+		&:nth-child(2n-1) {
+			border-right: 1px solid $mgray;
+		}
+		&:nth-child(3n) {
+			border-right: 0;
+		}
+		&:last-child,
+		&:nth-last-child(2) {
+			border-bottom: 0;
+		}
+	}
+	&.fourth > * {
+		margin: 0 !important;
+		padding: 1rem;
+		text-align: center;
+		width: calc((100% / 2));
+		@include bp(md) {
+			width: calc((100% / 4));
+		}
+		&:nth-child(2n),
+		&:nth-child(2n-1) {
+			border-left: 0;
+			border-right: 0;
+			border-top: 0;
+		}
+		&:nth-child(2n) {
+			border-left: 1px solid $mgray;
+		}
+		&:nth-last-child(1),
+		&:nth-last-child(2) {
+			border-bottom: 0;
+		}
+		@include bp(md) {
+			&:nth-child(2n) {
+				border-bottom: 1px solid $mgray;
+			}
+			&:nth-child(2n-1) {
+				border-left: 1px solid $mgray;
+			}
+			&:first-child,
+			&:nth-child(5n) {
+				border-left: 0;
+			}
+			&:nth-last-child(1),
+			&:nth-last-child(3),
+			&:nth-last-child(4) {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+/*
+==============================
+CTA OVERRIDES
+==============================
+*/
+.cta div > div {
+	@include bp(sm) {
+		margin-bottom: 0;
+		h4 {
+			margin-top: 1rem;
+		}
+	}
+}
+
+
+/*
+==============================
+GRIDS IN FORMS
+==============================
+*/
+form .half,
+form .half-force,
+form .half-stack,
+form .third,
+form .fourth,
+form .fifth,
+form .sixth,
+form .two-third,
+form .two-third-reversed,
+form .two-third-reversed-stack,
+form .two-third-reversed-force,
+form .fourth-3-fourth,
+form .fourth-3-fourth-reversed {
+	> div {
+		margin-bottom: 0rem;
+	}
+}

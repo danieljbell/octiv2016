@@ -1,0 +1,8 @@
+.post-type-archive-press-releases {
+	article {
+		border-bottom: 1px solid $mgray;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}

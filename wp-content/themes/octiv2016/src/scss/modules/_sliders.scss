@@ -1,0 +1,190 @@
+/*
+==============================
+BASE SLIDER STYLES
+==============================
+*/
+.slider,
+.adaptiveHeightSlider {
+  position: relative;
+  .slick-slide {
+    padding: 3rem 0;
+    color: $white;
+    box-shadow: inset 0 0 50px rgba(black, 0.75);
+    background-size: cover;
+    background-position: top center;
+  }
+  h4 {
+    @include bp(sm) {
+      font-size: 1.8em;
+      margin-bottom: 1.5rem;
+    }
+  }
+  p {
+    line-height: 1;
+    @include bp(sm) {
+      font-size: 1.3em;
+    }
+  }
+  .slick-dots {
+    // max-width: 1080px;
+    // margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .slick-dots li {
+    display: inline-block;
+    visibility: hidden;
+    float: left;
+    cursor: pointer;
+    &:before {
+      visibility: initial;
+      content: '•';
+      font-size: 3rem;
+      color: $mgray;
+      transition: all 250ms ease-in-out;
+    }
+    &.slick-active:before {
+      color: $brand;
+    }
+  }
+  strong {
+    display: block;
+    margin: 1.5rem 0 0;
+    @include bp(md) {
+      display: inline;
+      &:after {
+        content: '|';
+        display: inline-block;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+  img {
+    width: initial;
+    margin: 0 auto;
+    @media screen and (min-width: 767px) {
+      margin-left: -1rem;
+    }
+  }
+}
+
+button.slick-prev:focus, button.slick-next:focus {
+  outline: none;
+  font-weight: bold;
+  color: $gray;
+  background-color: $white;
+  border-radius: $radius;
+}
+
+
+
+/*
+==============================
+HOME PAGE OVERRIDES
+==============================
+*/
+.client-testimonials .slider-for {
+  @include bp(sm) {
+    font-size: 1.4em;
+    line-height: 1;
+    // margin-bottom: 1rem;
+  }
+  .slick-slide {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    @include bp(sm) {
+      min-height: 400px;
+    }
+  }
+  img {
+    margin: 0 auto;
+    width: initial;
+    filter: grayscale(1) invert(1) brightness(300%) drop-shadow(5px 5px 5px rgba(0,0,0,.75));
+  }
+  h4 {
+    @include bp(sm) {
+      font-size: 1.25em;
+    }
+  }
+  p {
+    margin-top: 1rem;
+    @include bp(md) {
+      font-size: 0.8em;
+    }
+    strong {
+      display: block;
+      @include bp(md) {
+        font-size: 1.3em;
+        display: inline;
+        &:after {
+          content: '|';
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+  .site-width {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include bp(md) {
+      flex-direction: row;
+      justify-content: flex-start;
+      // padding-top: 6rem;
+      // padding-bottom: 6rem;
+    }
+    > div {
+      margin: auto;
+      color: $white;
+      text-shadow: 2px 2px 5px rgba(black, 0.75);
+      &:first-child {
+        flex-basis: 33%;
+      }
+      &:last-child {
+        flex-basis: 66%;
+      }
+      a {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        @include bp(md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.client-testimonials .slick-active:focus {
+  outline: none;
+}
+
+.client-testimonials .slider-nav {
+  img {
+    width: initial;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: all 250ms ease-out;
+    margin: 0 auto;
+    transform: scale(0.7);
+    cursor: pointer;
+  }
+  .slick-current img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slider-nav-section {
+  display: none;
+  @include bp(sm) {
+    display: block;
+  }
+}
+
+.client-testimonials .slick-arrow {
+  display: none !important;
+}
+

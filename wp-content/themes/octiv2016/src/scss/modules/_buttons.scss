@@ -1,0 +1,90 @@
+button {
+	border: 0;
+	background-color: transparent;
+}
+
+%button {
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	border-radius: $radius;
+	transition: all 200ms ease-out;
+	@include bp(sm) {
+		display: inline-block;
+		width: initial;
+	}
+}
+
+.btn-primary {
+	@extend %button;
+	background-color: $brand;
+	color: $white;
+	&:hover,
+	&:focus {
+		outline: 0;
+		background-color: lighten($brand, 15%);
+		color: $white;
+	}
+}
+
+.btn-primary-outline {
+	@extend %button;
+	border: 1px solid $brand;
+	color: $brand;
+	&:hover,
+	&:focus,
+	.card:hover & {
+		outline: 0;		
+		background-color: $brand;
+		color: $white;
+	}
+}
+
+.btn-arrow {
+	@extend %button;
+	color: $white;
+	box-shadow: inset 0 -200px 0 $brand2;
+	border-radius: $radius;
+	&:after {
+		content: " \00a0>";
+	}
+	@include bp(sm) {
+		color: $gray;
+		box-shadow: inset 0 -2px 0 $brand2;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0.1rem;
+		border-radius: 0;
+		&:hover, &:focus {
+			outline: 0;
+			box-shadow: inset 0 -28px 0 $brand2;
+			color: $white;
+		}
+	}
+}
+
+.btn-secondary-outline {
+	@extend %button;
+	border: 1px solid $gray;
+	color: $gray;
+	&:hover {
+		background-color: $gray;
+		color: $white;
+	}
+}
+
+.btn-white-outline {
+	@extend %button;
+	border: 1px solid $white;
+	color: $white;
+	// font-weight: normal;
+	&:hover,
+	&:active {
+		background-color: $white;
+		color: $gray;
+		text-shadow: none;
+	}
+}

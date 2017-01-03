@@ -1,0 +1,52 @@
+.parent-pageid-74 .breadcrumb + section {
+	font-size: 1.1em;
+	@media screen and (min-width: 769px) {
+		font-size: inherit;
+	}
+}
+
+.laptop-screenshot {
+  padding-bottom: 2rem;
+  @include bp(md) {
+    width: 60%;
+    padding-left: 2rem;
+  }
+}
+
+.tablet-screenshot {
+  // width: 100%;
+  @include bp(sm) {
+    width: 50%
+  }
+  @include bp(md) {
+    width: 30%;
+  }
+  &.float-l {
+    @include bp(sm) {
+      float: left;
+      padding-right: 2rem;
+    }
+  }
+}
+
+
+.parent-pageid-74 .breadcrumb + section .site-width > p:first-child:first-letter {
+  color: $brand;
+  padding: 0 .5rem 1rem 0;
+  font-size: 5rem;
+  line-height: 0.75;
+  float: left;
+  font-weight: 700;
+}
+
+.parent-pageid-74 .breadcrumb + section .site-width > p:first-child:first-line {
+  font-weight: bold;
+}
+
+.parent-pageid-74 blockquote {
+  @include bp(md) {
+    float: right;
+    width: 40%;
+    margin-left: 2rem;
+  }
+}

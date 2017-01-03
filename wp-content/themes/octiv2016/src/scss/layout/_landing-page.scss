@@ -1,0 +1,31 @@
+.page-template-landing-page .page-content .two-third,
+.single-lp .page-content .two-third {
+	> * {
+		&:first-child {
+			width: 100%;
+			margin-right: 0;
+			@include bp(md) {
+				width: calc((100% / 5) * 3 - 1rem);
+				margin-right: 2rem;
+			}
+			@include bp(lg) {
+				width: calc((100% / 3) * 2 - 1rem);
+				margin-right: 2rem;
+			}
+		}
+		&:last-child {
+			width: 100%;
+			@include bp(md) {
+				width: calc((100% / 5) * 2 - 1rem);
+			}
+			@include bp(lg) {
+				width: calc((100% / 3) - 1rem);
+			}
+		}
+	}
+}
+
+.page-template-landing-page .page-content .two-third iframe,
+.single-lp .page-content .two-third iframe {
+	min-height: 615px;
+}

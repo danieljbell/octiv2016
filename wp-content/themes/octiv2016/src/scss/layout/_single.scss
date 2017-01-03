@@ -1,0 +1,153 @@
+.single-post .page-body .two-third > div {
+	width: 100%;
+	@include bp(lg) {
+		width: calc((100% / 3) * 2 - 1.3333rem);
+	}
+}
+
+.single-post .post-content {
+	font-size: 1.1em;
+	@media screen and (min-width: 769px) {
+		font-size: inherit;
+	}
+}
+
+.post-author img {
+	max-width: 65px;
+	border-radius: 50%;
+	border: 1px solid $mgray;
+	box-shadow: 0 0 15px rgba(black, 0.05);
+}
+
+.post-content {
+	position: relative;
+
+	h1:first-of-type {
+		color: $white;
+		text-shadow: 2px 3px 2px rgba(0,0,0,0.75);
+		margin-bottom: $spacing-unit;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	.single-releases & {
+		margin-top: 0;
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.post-sharing {
+	padding-top: $spacing-unit * 2;
+
+	a {
+		display: inline-block;
+		width: 100%;
+		background-image: linear-gradient($white, $lgray);
+		border: 1px solid $mgray;
+		border-radius: $radius;
+		padding: ($spacing-unit / 1.5) 0;
+		margin: ($spacing-unit / 2) $spacing-unit ($spacing-unit / 1.5) 0;
+		transition: all 200ms ease-in-out;
+		text-align: center;
+
+		&:hover, &:focus {
+			background-image: initial;
+			border: 1px solid transparent;
+			fill: $white;
+		}
+
+		svg {
+			max-width: 25px;
+		}
+
+		@include bp(sm) {
+			max-width: $spacing-unit * 5;
+		}
+
+		&:first-of-type {
+			fill: #01abf0;
+			&:hover, &:focus {
+				outline: 0;
+				background-color: #01abf0;
+				fill: $white;
+			}	
+		}
+
+		&:nth-of-type(2) {
+			fill: #017ab8;
+			&:hover, &:focus {
+				outline: 0;
+				background-color: #017ab8;
+				fill: $white;
+			}	
+		}
+
+		&:nth-of-type(3) {
+			fill: #39579a;
+			&:hover, &:focus {
+				outline: 0;
+				background-color: #39579a;
+				fill: $white;
+			}
+		}
+	}
+
+	img {
+		max-width: 25px;
+		margin: 0 auto;
+	}
+
+}
+
+.post-meta {
+	padding-top: $spacing-unit * 1.5;
+	padding-bottom: $spacing-unit;
+	border-top: 1px solid $mgray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include bp(md) {
+		flex-direction: row;
+	}
+
+	> div:first-child {
+		flex-shrink: 0;
+	}
+
+	> div:last-child {
+		text-align: center;
+		@include bp(md) {
+			margin-left: 1rem;
+			text-align: initial;
+		}
+	}
+
+	img {
+		max-width: 85px;
+		border-radius: 50%;
+		border: 1px solid $mgray;
+		box-shadow: 0 0 15px rgba(black, 0.05);
+	}
+
+	strong {
+		display: block;
+		font-size: 1.3rem;
+		line-height: 1.7rem;
+	}
+
+}
+
+.related-articles {
+	h3 {
+		padding-bottom: $spacing-unit * 2;
+	}
+	@include bp(lg) {
+		.card:last-child {
+			display: none;
+		}
+	}
+}

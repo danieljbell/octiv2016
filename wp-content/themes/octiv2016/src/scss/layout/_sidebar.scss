@@ -1,0 +1,69 @@
+.post-sidebar {
+	display: none;
+	@include bp(lg) {
+		display: initial;
+		padding-left: $spacing-unit * 2;
+	}
+}
+
+.post-author {
+	display: none;
+	@include bp(lg) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	> div {
+		margin-bottom: 2rem;
+	}
+	> div:first-child {
+		margin-right: 1rem;
+	}
+}
+
+.newsletter-signup {
+  background: $lgray;
+  border: 1px solid $mgray;
+  padding: ($spacing-unit * 2) ($spacing-unit * 2) $spacing-unit;
+  text-align: center;
+  @include bp(lg) {
+  	margin-bottom: $spacing-unit * 2;
+  }
+  .single-events &,
+  .single-releases &,
+  .page-template-landing-page & {
+  	text-align: left;
+  }
+}
+
+.ad-container {
+	display: none;
+	background-color: $brand;
+	text-align: center;
+	color: $white;
+	@include bp(lg) {
+		display: block;
+		padding: 2rem;
+	}
+	img {
+		width: initial;
+		max-width: 150px;
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
+	a {
+		text-decoration: none !important;
+		&:hover{
+			color: $brand;
+		}
+	}
+}
+
+/*
+==============================
+VIDEO SIDEBAR
+==============================
+*/
+.page-template-page-video-view .ad-container img {
+	max-width: initial;
+}

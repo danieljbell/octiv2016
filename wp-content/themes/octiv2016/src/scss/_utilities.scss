@@ -1,0 +1,331 @@
+.centered,
+.centered > * {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	* {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.site-width,
+%site-width {
+	width: calc(100% - 2rem);
+	max-width: map-get($breakpoints, xl);
+	margin-left: auto;
+	margin-right: auto;
+	@include bp(sm) {
+		width: calc(100% - 4rem);
+	}
+	@include bp(lg) {
+		width: calc(100% - 8rem);
+	}
+}
+
+
+.post-edit-link {
+	position: absolute;
+}
+
+section[class$="callout"] {
+	color: $white;
+}
+
+.callout {
+	background-color: $lgray;
+	color: $gray !important;
+	background-image: linear-gradient(lighten($lgray, 5%), darken($lgray, 5%));
+}
+
+.brand-callout {
+	background-color: $brand;
+	background-image: linear-gradient(lighten($brand,10%), darken($brand, 10%));
+	> * {
+		color: $white;
+	}
+}
+
+.brand-two-callout {
+	background-color: $brand2;
+	background-image: linear-gradient(lighten($brand2,10%), darken($brand2, 10%));
+	> * {
+		color: $white;
+	}
+	.btn-white-outline:hover {
+		color: $brand2;
+	}
+}
+
+.brand-three-callout {
+	background-color: $brand3;
+	background-image: linear-gradient(lighten($brand3,10%), darken($brand3, 10%));
+	> * {
+		color: $white;
+	}
+}
+
+.brand-four-callout {
+	background-color: $brand4;
+	background-image: linear-gradient(lighten($brand4,10%), darken($brand4, 10%));
+	> * {
+		color: $white;
+	}
+}
+
+.brand-five-callout {
+	background-color: $brand5;
+	background-image: linear-gradient(lighten($brand5,10%), darken($brand5, 10%));
+	* {
+		color: $gray;
+	}
+}
+
+.dark-callout {
+	background-color: $gray;
+	background-image: linear-gradient(lighten($gray,10%), darken($gray, 10%));
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	@include bp(sm) {
+		text-align: right;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.hide-sm {
+	display: none;
+	@include bp(sm) {
+		display: block;
+	}
+}
+
+.hide-md {
+	display: none;
+	@include bp(md) {
+		display: block;
+	}
+}
+
+.hide-lg {
+	display: none;
+	@include bp(lg) {
+		display: block;
+	}
+}
+
+.brand-font {
+	color: $brand !important;
+}
+
+.pad-x {
+	padding-left: $spacing-unit * 3;
+	padding-right: $spacing-unit * 3;
+}
+
+.pad-y {
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	&-m {
+		padding-top: $spacing-unit * 3;
+		padding-bottom: $spacing-unit * 3;
+	}
+}
+
+.pad-t {
+	@include bp(sm) {
+		padding-top: $spacing-unit;
+	}
+}
+
+.pad-r {
+	@include bp(sm) {
+		padding-right: $spacing-unit;
+	}
+}
+
+.pad-b {
+	@include bp(sm) {
+		padding-bottom: $spacing-unit;
+	}
+	&-m {
+		padding-bottom: $spacing-unit * 3;
+	}
+}
+
+.pad-l {
+	@include bp(sm) {
+		padding-left: $spacing-unit;
+	}
+}
+
+.mar-x {
+	margin-left: $spacing-unit * 3;
+	margin-right: $spacing-unit * 3;
+}
+
+.mar-y {
+	margin-top: $spacing-unit * 3;
+	margin-bottom: $spacing-unit * 3;
+}
+
+.mar-t {
+	margin-top: $spacing-unit * 3;
+}
+
+.mar-r {
+	margin-right: $spacing-unit;
+}
+
+.mar-l {
+	@include bp(sm) {
+		margin-left: $spacing-unit;
+	}
+}
+
+.mar-b {
+	margin-bottom: $spacing-unit;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.pos-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+
+.white-text {
+	color: $white;
+	text-shadow: 1px 2px 2px rgba(black, 0.85);
+}
+
+.float-r {
+	@include bp(md) {
+		float: right;
+	}
+	&-a {
+		float: right;
+	}
+}
+
+.float-l {
+  @include bp(md) {
+		float: left;
+	}
+}
+
+.inline {
+	display: inline;
+	> * {
+		display: inline;
+		margin-right: $spacing-unit / 2;
+	}
+}
+
+.box {
+	background-color: $lgray;
+	background-image: linear-gradient($white, $lgray);
+	border: 1px solid $mgray;
+	padding: $spacing-unit;
+	box-shadow: 0 0 15px rgba(0,0,0,0.05);
+	border-radius: $radius;
+}
+
+/*
+==============================
+FILTER OVERLAYS
+==============================
+*/
+[class$='-filter'] {
+	mix-blend-mode: hard-light;
+	width: 100px;
+	height: 100px;
+	margin-top: -3rem;
+	position: relative;
+	z-index: 2;
+}
+
+.brand-filter {
+	background-color: lighten($brand, 5%);
+}
+
+.brand-two-filter {
+	background-color: $brand2;
+}
+
+.brand-three-filter {
+	background-color: $brand3;
+}
+
+.brand-four-filter {
+	background-color: $brand4;
+}
+
+.brand-five-filter {
+	background-color: $brand5;
+}
+
+/*
+=========================
+ANIMATED CLASSES
+=========================
+*/
+.is-faded {
+	opacity: 0.7;
+}
+
+.is-scaled {
+	transform: scale(1.03);
+}
+
+// TYPED STYLES
+.typed-cursor{
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    position: relative;
+    z-index: 1;
+    color: $brand;
+    margin-left: 5px;
+    font-style: italic;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.page-body {
+	@include bp(lg) {
+		transition: all 100ms ease-in-out;
+	}
+}
+
+.overlay .page-body:after {
+	@include bp(lg) {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: #000;
+		opacity: 0.5;
+		z-index: 11;
+	}
+}

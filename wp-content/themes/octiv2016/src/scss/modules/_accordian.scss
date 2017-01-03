@@ -1,0 +1,79 @@
+.accordian dt {
+    background-color: $lgray;
+    background-image: linear-gradient($white, $lgray);
+    border: 1px solid $mgray;
+    margin-top: 1rem;
+    padding: 1rem;
+    position: relative
+}
+
+.accordian dt:first-child {
+    padding: 1rem;
+    margin-top: 0
+}
+
+.accordian dt:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    transform: translateY(-50%);
+    transition: transform .2s ease-out;
+}
+
+.accordian dt.rotated:after {
+    transform: translateY(-50%) rotate(45deg)
+}
+
+.accordian dd {
+    border: 1px solid $mgray;
+    border-top: 0;
+    padding: 1rem 0
+}
+
+.accordian dd dt {
+    background-image: none;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $mgray;
+    margin: 1.5rem 1rem 0;
+    padding: 0;
+    font-weight: 700
+}
+
+.accordian dd dt:first-child {
+    padding: 0
+}
+
+.accordian dd dt:after {
+    color: #000;
+    right: 0
+}
+
+.accordian dd dd {
+    border: 0;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem
+}
+
+.accordian dd dd:after,
+.accordian dd dd:before {
+    content: " ";
+    display: table
+}
+
+.accordian dd dd button {
+    margin-top: 1rem
+}
+
+.accordian dd dd img {
+    padding: .5rem 0
+}
+
+.accordian h4 {
+	font-weight: 200;
+	font-size: 1rem;
+	margin-top: 1.5rem;
+}

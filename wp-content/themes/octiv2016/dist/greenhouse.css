@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
+html,
+body,
+input,
+textarea,
+#submit_app {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+#main {
+    padding-top: 0;
+}
+
+p,
+ul,
+ol {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    margin: 10px 0 20px 0;
+}
+
+a {
+    color: #ed4c06;
+}
+
+#wrapper {
+    padding: 0 !important;
+}
+
+#board_title {
+    font-size: 1px;
+    color: rgba(255,255,255,0);
+}
+
+h2 {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #5f6369;
+    margin: 30px 0;
+    padding: 30px 0 0;
+    border-top: solid 1px #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.opening a {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #ed4c06;
+    margin: 0 0 16px;
+    padding: 0;
+    letter-spacing: -.01em;
+}
+
+.opening span,
+.location {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: .03em;
+    margin: 16px 0 30px 0;
+    padding: 0;
+    color: #000;
+}
+
+#app_body {
+    padding: 0 !important;
+    max-width: none;
+}
+
+#app-title {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #ed4c06;
+    margin: 6px 0 15px 0;
+    padding: 0;
+    letter-spacing: -.02em;
+}
+
+#application {
+    background: #fff;
+    border: solid 1px #ccc;
+}
+
+#application hr {
+    background-color: #ccc;
+}
+
+#submit_app {
+    margin: 0 auto;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    border-radius: 3px;
+    display: block;
+    color: #fff;
+    background: #ed4c06;
+    max-width: 180px;
+    margin: 0px 10px 0 auto;
+    text-align: center;
+    line-height: 30px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#submit_app:hover,
+#submit_app:focus, {
+    background: #c66030;
+}
+
+input[type=text],
+textarea {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#main_fields div.field input[type=text]:focus, #main_fields div.field textarea:focus, #custom_fields div.field input[type=text]:focus, #custom_fields div.field textarea:focus, #eeoc_fields div.field input[type=text]:focus, #eeoc_fields div.field textarea:focus {
+    border-color: #ed4c06;
+}

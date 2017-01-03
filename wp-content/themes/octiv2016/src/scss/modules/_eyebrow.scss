@@ -1,0 +1,76 @@
+.eyebrow .site-width {
+	display: flex;
+	justify-content: space-between;
+}
+.eyebrow a {
+	color: #fff;
+}
+
+.eyebrow strong {
+	text-decoration: underline;
+}
+
+.eyebrow img[src*='.png'] {
+	max-width: 15px;
+}
+
+.eyebrow #search-button {
+	display: inline-block;
+	width: 18px;
+}
+
+.eyebrow svg {
+	fill: $white;
+	margin-bottom: -2px;
+}
+
+.eyebrow .site-width > div:first-child {
+	display: flex;
+	align-items: center;
+	> div {
+		padding-right: 0.5rem;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.eyebrow .centered {
+	display: none;
+	@include bp(xl) {
+		display: block;
+	}
+}
+
+.eyebrow-nav li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	a {
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		border-right: 1px solid rgba(white, 0.5);
+	}
+	&:nth-child(2),
+	&:nth-child(3) {
+		display: none;
+		@include bp(sm) {
+			display: initial;
+		}
+	}
+	// &:nth-child(3) a {
+	// 	margin-right: 0.5em;
+	// }
+	&:last-child a {
+		border: 0;
+		padding-right: 0;
+		padding-left: 0;
+		margin-left: 0.4em;
+	}
+}
+
+.menu-open #site-top {
+	position: relative;
+	z-index: 5;
+	background-color: $white;
+}

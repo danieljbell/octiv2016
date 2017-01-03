@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+section {
+	padding: 3rem 0;
+}
+
+img {
+	width: 100%;
+	display: block;
+	&:focus {
+		outline: focus-ring-color auto 5px;
+	}
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid $mgray;
+	background: transparent;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $brand;
+	text-decoration: none;
+}

@@ -1,0 +1,1091 @@
+.home .fixed-hero-section {
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 35px rgba(black, 0.75);
+  color: $white;
+  a {
+    color: $white !important;
+    transition: all 200ms ease-out;
+    &:hover,
+    &:focus {
+      color: $gray !important;
+      text-shadow: none !important;
+    }
+  }
+  .half {
+    justify-content: center;
+    text-align: center;
+    > div {
+      width: 100% !important;
+      margin-right: 0;
+      @include bp(md) {
+        width: 80% !important;
+      }
+      @include bp(xxl) {
+        width: 75% !important;
+      }
+    }
+  }
+}
+
+.home .hero-video {
+  position: absolute;
+  z-index: 0;
+  background-image: url(../dist/img/home-video-hero.jpg);
+  background-size: cover;
+  background-position: 100%;
+  transform: translateY(-50%);
+  top: 50%; left: 0; right: 0;
+  width: 100%;
+}
+
+.home .video-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0; left: 0; right: 0; bottom: 0;
+  // background-image: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0));
+  background-image: linear-gradient(to right, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.65));
+}
+
+.home h1 {
+  font-size: 1.4rem;
+  line-height: 1.1em;
+  margin-bottom: 1rem;
+  span.typed {
+    line-height: 1.1em;
+    font-style: italic;
+    color: $brand;
+    font-weight: lighter;
+  }
+  @include bp(sm) {
+    font-size: 2rem;
+  }
+  @include bp(md) {
+    font-size: 2.25rem;
+  }
+  @include bp(xl) {
+    font-size: 2.65rem;
+  }
+  @include bp(xxl) {
+    font-size: 3rem;
+  }
+}
+
+.home .fixed-hero-section a {
+  color: #000;
+  transition: all 200ms ease-out;
+  &:first-child,
+  &:nth-child(6) {
+    box-shadow: inset 0 -2px 0 $brand2-hard;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -50px 0 $brand2-hard;
+      outline: 0;
+    }
+  }
+  &:nth-child(2) {
+    box-shadow: inset 0 -2px 0 $brand3-hard;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -50px 0 $brand3-hard;
+      outline: 0;
+    }
+  }
+  &:nth-child(3) {
+    box-shadow: inset 0 -2px 0 $brand4-hard;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -50px 0 $brand4-hard;
+      outline: 0;
+    }
+  }
+  &:nth-child(4) {
+    box-shadow: inset 0 -2px 0 $brand-hard;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -50px 0 $brand-hard;
+      outline: 0;
+    }
+  }
+  &:nth-child(5) {
+    box-shadow: inset 0 -2px 0 $brand5-hard;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -50px 0 $brand5-hard;
+      outline: 0;
+    }
+  }
+  &.btn-primary {
+    box-shadow: none !important;
+    color: $white !important;
+  }
+}
+
+// BREAKPOINTS FOR HERO SECTION
+.home .fixed-hero-section .half > div {
+  @include bp(md) {
+    width: 70%;
+  }
+  @include bp(lg) {
+    width: 60%;
+  }
+  @include bp(xl) {
+    width: 55%;
+  }
+}
+
+.home .fixed-hero-section p {
+  font-size: 1.2em;
+  @include bp(sm) {
+    font-size: 1.4em;
+  }
+  @include bp(lg) {
+    font-size: 1.7em;
+    padding-right: 2em;
+  }
+}
+
+.twentytwenty-container {
+  box-shadow: 0 10px 25px rgba(black, 0.25);
+}
+
+.home section {
+  @include bp(sm) {
+    padding: 6rem 0;
+  }
+}
+
+.home #workflows .half-stack,
+.home #connections .half,
+.home #user-experience .half-stack,
+.home #documents .half,
+.home #commercial .half-stack,
+.home #enterprise .half
+ {
+  > div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    @include bp(lg) {
+      width: calc(50% - 1rem);
+      margin-right: 2rem;
+      flex: 1;
+    }
+  }
+}
+
+.home #workflows .half-stack,
+.home #user-experience .half-stack,
+.home #documents .half-stack,
+.home #commercial .half-stack {
+  flex-direction: column;
+  @include bp(lg) {
+    flex-direction: row-reverse;
+  }
+}
+
+/*
+==============================
+DOCUMENT WORKFLOWS
+==============================
+*/
+.home .workflows-content,
+.home .connections-content,
+.home .ux-content,
+.home .documents-content,
+.home .commercial-content,
+.home .enterprise-content {
+  display: flex;
+  flex-direction: column;
+  @include bp(sm) {
+    flex-direction: row;
+  }
+  > div:first-child {
+    flex-shrink: 0;
+    display: none;
+    @include bp(sm) {
+      display: block;
+      margin-right: 1rem;
+    }
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.home .workflows-content,
+.home .connections-content,
+.home .ux-content,
+.home .documents-content,
+.home .company-size-content,
+.home .workflows-visual,
+.home .connections-visual,
+.home .documents-visual,
+.home .enterprise-visual {
+  @include bp(sm) {
+    margin-bottom: 0;
+  }
+}
+
+#workflows .half-stack,
+#connections .half,
+#user-experience .half-stack,
+#documents .half-stack,
+#commercial .half-stack,
+#enterprise .half {
+  align-items: center;
+}
+
+// .browser-window {
+//   border: 1px solid $mgray;
+//   position: relative;
+//   box-shadow: 0 0 25px rgba(black, 0.1);
+//   &:before {
+//     position: absolute;
+//     content: '';
+//     height: 30px;
+//     top: -30px;
+//     left: -1px;
+//     right: -1px;
+//     border: 1px solid $mgray;
+//     background-image: linear-gradient($white, $lgray);
+//     border-radius: $radius $radius 0 0;
+//   }
+//   > div {
+//     padding: 10px;
+//     &:before {
+//       position: absolute;
+//       content: '';
+//       height: 14px;
+//       width: 14px;
+//       top: -30px;
+//       left: -1px;
+//       right: -1px;
+//       border-radius: 50%;
+//       box-shadow: 10px 10px 0 #ff564f, 30px 10px #ffb429, 50px 10px #24c238;
+//     }
+//     &:after {
+//       position: absolute;
+//       content: '';
+//       filter: brightness(0.75);
+//       top: -26px;
+//       right: 10px;
+//       content: '';
+//       width: 20px;
+//       height: 20px;
+//       background-image: url(img/menu.svg);
+//       background-repeat: no-repeat;
+//       background-position: 100%;
+//     }
+//   }
+// }
+
+/*
+==============================
+WORKFLOWS SECTION
+==============================
+*/
+.workflows-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand2;
+}
+
+.workflows-visual .timeline {
+  box-shadow: inset 0 99px $white, inset 0 102px $mgray;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-around;
+  // .workflows-visual .timeline .button
+  .button {
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0 0 25px rgba(black, 0.1);
+    border: 3px solid $mgray;
+    width: 150px;
+    height: 150px;
+    transform: translateY(25px);
+    display: flex;
+    opacity: 0;
+    transition: all 200ms ease-out;
+    span {
+      margin: auto;
+    }
+  }
+}
+
+.workflows-visual.in-view .timeline {
+  .button {
+    opacity: 1;
+  }
+}
+
+/*
+==============================
+CONNECTIONS SECTION
+==============================
+*/
+.connections-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand3;
+}
+
+.connections-content a {
+  box-shadow: inset 0 -2px 0 $brand3;
+  &:hover {
+    box-shadow: inset 0 -28px 0 $brand3;
+  }
+}
+
+.connections-visual,
+.documents-visual {
+  position: relative;
+  min-height: 400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  @include bp(sm) {
+    background-size: 65%;
+  }
+}
+
+.connections-visual div[class*="badge"],
+.documents-visual div[class*="badge"] {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  a {
+    height: 75px;
+    width: 75px;
+    border: 3px solid $white;
+    border-radius: 50%;
+    background-color: $lgray;
+    @include bp(sm) {
+      height: 100px;
+      width: 100px;
+      border: 5px solid $white;
+    }
+  }
+  svg {
+    margin: auto;
+    width: 100%;
+    max-width: 75%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.connections-visual div.octiv-badge,
+.documents-visual div.octiv-badge {
+  height: 75px;
+  width: 75px;
+  border: 3px solid $white;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: $brand;
+  box-shadow: 0 0 25px rgba(black, 0.2);
+  overflow: hidden;
+  @include bp(sm) {
+    height: 100px;
+    width: 100px;
+    border: 5px solid $white;
+  }
+  svg {
+    fill: $white;
+    max-width: 55%;
+  }
+}
+
+.connections-visual div[class*="badge"] a {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  transition: all 200ms ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.connections-visual.in-view {
+  background-image:
+    linear-gradient(transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)),
+    linear-gradient(90deg, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)),
+    linear-gradient(45deg, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)),
+    linear-gradient(-45deg, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px));
+}
+
+.connections-visual.in-view div.octiv-badge {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.connections-visual.in-view div[class*='badge'],
+.documents-visual.in-view div[class*='badge'] {
+  transition: all 200ms ease-out;
+  a {
+    box-shadow: 0 0 25px rgba(black, 0.2);
+    &:focus {
+      outline: 0;
+    }
+  }
+  svg {
+    transition: all 200ms ease-out;
+  }
+  a:hover, a:focus {
+    outline: 0;
+    transition: all 200ms ease-out;
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+.connections-visual.in-view div.top-badge {
+  transform: translate(-50%, -195%);
+  @include bp(sm) {
+    transform: translate(-50%, -225%);
+    &:hover {
+      transform: translate(-50%, -225%);
+    }
+  }
+  svg {
+    fill: #00a1e0;
+  }
+  a:hover, a:focus {
+    background-color: #00a1e0;
+  }
+}
+
+.connections-visual.in-view div.top-right-badge {
+  transition-delay: 100ms;
+  transform: translate(60%, -160%);
+  @include bp(sm) {
+    transform: translate(80%, -180%);
+    &:hover {
+      transform: translate(80%, -180%);
+    }
+  }
+  svg {
+    max-width: 65%;
+    fill: #22a7f0;
+  }
+  a:hover, a:focus {
+    background-color: #22a7f0;
+  }
+}
+
+.connections-visual.in-view div.right-badge {
+  transition-delay: 200ms;
+  transform: translate(95%, -50%);
+  @include bp(sm) {
+    transform: translate(125%, -50%);
+    &:hover {
+      transform: translate(125%, -50%);
+    }
+  }
+  svg {
+    max-width: 80%;
+    fill: #334f9f;
+  }
+  a:hover, a:focus {
+    background-color: #334f9f;
+  }
+}
+
+.connections-visual.in-view div.bottom-right-badge {
+  transition-delay: 300ms;
+  transform: translate(60%, 60%);
+  @include bp(sm) {
+    transform: translate(80%, 80%);
+    &:hover {
+      transform: translate(80%, 80%);
+    }
+  }
+  svg {
+    max-width: 80%;
+    fill: #2a3281;
+  }
+  a:hover, a:focus {
+    background-color: #2a3281;
+  }
+}
+
+.connections-visual.in-view div.bottom-badge {
+  transition-delay: 400ms;
+  transform: translate(-50%, 95%);
+  @include bp(sm) {
+    transform: translate(-50%, 125%);
+    &:hover {
+      transform: translate(-50%, 125%);
+    }
+  }
+  svg {
+    max-width: 85%;
+    fill: #00a1e0;
+  }
+  a:hover, a:focus {
+    background-color: #00a1e0;
+  }
+}
+
+.connections-visual.in-view div.bottom-left-badge {
+  transition-delay: 500ms;
+  transform: translate(-160%, 60%);
+  @include bp(sm) {
+    transform: translate(-180%, 80%);
+    &:hover {
+      transform: translate(-180%, 80%);
+    }
+  }
+  svg {
+    max-width: 55%;
+    fill: #0c8eff;
+  }
+  a:hover, a:focus {
+    background-color: #0c8eff;
+  }
+}
+
+.connections-visual.in-view div.left-badge {
+  transition-delay: 600ms;
+  transform: translate(-195%,-50%);
+  @include bp(sm) {
+    transform: translate(-225%,-50%);
+    &:hover {
+      transform: translate(-225%,-50%);
+    }
+  }
+  svg {
+    max-width: 55%;
+    fill: #007ee5;
+  }
+  a:hover, a:focus {
+    background-color: #007ee5;
+  }
+}
+
+.connections-visual.in-view div.top-left-badge {
+  transition-delay: 700ms;
+  transform: translate(-160%, -160%);
+  @include bp(sm) {
+    transform: translate(-180%, -180%);
+    &:hover {
+      transition-delay: 0ms;
+      transform: translate(-180%, -180%);
+    }
+  }
+}
+
+
+
+/*
+==============================
+USER EXPERIENCE SECTION
+==============================
+*/
+#user-experience {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.85) 55%,rgba(255,255,255,0) 80%), url(../dist/img/user-experience-bg.jpg);
+  // box-shadow: inset 0 0 50px rgba(black, 0.5);
+  background-position: right center;
+  background-size: cover;
+  padding: 8rem 0;
+}
+
+.ux-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand4;
+}
+
+.ux-content a {
+  box-shadow: inset 0 -2px 0 $brand4;
+  &:hover {
+    box-shadow: inset 0 -28px 0 $brand4;
+  }
+}
+
+
+
+/*
+==============================
+DOCUMENTS SECTION
+==============================
+*/
+.documents-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand;
+}
+
+.documents-content a {
+  box-shadow: inset 0 -2px 0 $brand;
+  &:hover {
+    box-shadow: inset 0 -28px 0 $brand;
+  }
+}
+
+.documents-visual {
+  min-height: initial;
+  transition: all 200ms ease-out;
+  transition-delay: 600ms;
+}
+
+.documents-visual div[class*="badge"] {
+  transform: translate(-50%, 0%);
+}
+
+.documents-visual.in-view {
+  transform: translateY(-50%);
+}
+
+.documents-visual .document-inputs {
+  transform: translateY(-50%);
+}
+
+.documents-visual .document-inputs div {
+  width: 95px;
+  height: 95px;
+  background-color: $lgray;
+  border-radius: 50%;
+  border: 5px solid $white;
+  box-shadow: 0 0 15px rgba(black, 0.15);
+  transition: all 200ms ease-out;
+}
+
+.documents-visual .document-inputs div svg {
+  width: 60%;
+}
+
+.documents-visual .document-inputs .badge-img {
+  transform: translate(-225%, 100%);
+}
+
+.documents-visual .document-inputs .badge-line-chart {
+  transform: translate(-225%, -25%);
+  transition-delay: 100ms !important;
+}
+
+.documents-visual .document-inputs .badge-table {
+  transform: translate(-125%,35%);
+  transition-delay: 200ms !important;
+}
+
+.documents-visual .document-inputs .badge-video {
+  transform: translate(-50%, -50%);
+  transition-delay: 300ms !important;
+}
+
+.documents-visual .document-inputs .badge-bar-chart {
+  transform: translate(25%, 35%);
+  transition-delay: 400ms !important;
+}
+
+.documents-visual .document-inputs .badge-pie-chart {
+  transform: translate(125%, -25%);
+  transition-delay: 500ms !important;
+}
+
+.documents-visual .document-inputs .badge-content {
+  transform: translate(125%,100%);
+  transition-delay: 600ms !important;
+
+}
+
+.documents-visual.in-view .document-inputs div[class*="badge"] {
+  transform: translate(-50%,100%);
+  box-shadow: none;
+}
+
+.documents-visual.in-view div.octiv-badge {
+  transform: translate(-50%, -0%) scale(1.3);
+}
+
+.documents-visual.in-view .document-outputs .badge-proposals {
+  transform: translate(-225%,75%);
+  transition-delay: 800ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-quotes {
+  transform: translate(-225%,185%);
+  transition-delay: 900ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-rfps {
+  transform: translate(-115%,125%);
+  transition-delay: 1000ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-sows {
+  transform: translate(-50%, 225%);
+  transition-delay: 1100ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-ndas {
+  transform: translate(15%,125%);
+  transition-delay: 1200ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-ndas2 {
+  transform: translate(125%,75%);
+  transition-delay: 1300ms;
+}
+
+.documents-visual.in-view .document-outputs .badge-msas {
+  transform: translate(125%,185%);
+  transition-delay: 1400ms;
+}
+
+.documents-visual .document-outputs a {
+  display: flex;
+  &:hover, &:focus {
+    background-color: $brand;
+    span {
+      color: $white;
+    }
+  }
+}
+
+.documents-visual .document-outputs a span {
+  margin: auto;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: $gray;
+}
+
+/*
+==============================
+COMMERCIAL
+==============================
+*/
+.commercial-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand5;
+}
+
+.commercial-content a {
+  box-shadow: inset 0 -2px 0 $brand5;
+  &:hover {
+    box-shadow: inset 0 -28px 0 $brand5;
+  }
+}
+
+.home .commercial-visual {
+  min-height: 150px;
+  transform-origin: top left;
+  transition: all 300ms ease-out;
+  @include bp(xl) {
+    transform: scale(1.2);
+  }
+  &.flow-2 {
+    transform: scale(1.2) translateX(15%);
+  }
+  &.flow-3 {
+    transform: scale(1.2) translateX(10%);
+  }
+}
+
+// Workflow Shapes
+.home #commercial [class*="workflow"] {
+  width: 50px;
+  height: 50px;
+  top: 0;
+  position: absolute;
+  transition: all 300ms ease-out;
+  &.rotated {
+    transform: rotate(45deg);
+  }
+}
+
+.workflow-box.callout {
+  border: 1px solid $mgray;
+}
+
+.workflow-circle {
+  border-radius: 50%;
+  &.callout {
+    border: 1px solid $mgray;
+  }
+}
+
+.home #commercial [class*="step"] hr {
+  transform: translateX(100%);
+  margin: 0;
+  top: 50%;
+  position: relative;
+  &:nth-child(2) {
+    top: 100%;
+    transform: translateX(150%) rotate(90deg);
+  }
+}
+
+.step-1 hr:nth-child(2) {
+  opacity: 0;
+}
+
+.step-2 {
+  transform: translateX(calc(100% + 36px));
+}
+
+.step-3 {
+  transform: translateX(calc(300% + 9px)) translateY(calc(100% + 18px));
+  hr:nth-child(2) {
+    top: 0 !important;
+  }
+}
+
+.step-4 {
+  transform: translateX(calc(450% + 9px));
+}
+
+.step-5 {
+  &.rotated {
+    transform: translateX(calc(650% + 9px)) rotate(45deg) !important;
+    hr {
+      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+      &:nth-child(2) {
+        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+      }
+    }
+  }
+}
+
+.step-6.workflow-box {
+  transform: translateX(calc(650% + 9px)) translateY(calc(100% + 18px));
+  hr {
+    opacity: 0;
+  }
+}
+
+.step-6.workflow-circle {
+  transform: translateX(calc(850% + 9px));
+}
+
+.flow-2 .step-1 {
+  transform: translateX(calc(350% + 9px));
+  z-index: 2;
+  hr:nth-child(2) {
+    opacity: 0 !important;
+  }
+}
+
+.flow-2 .step-2 {
+  transform: translateX(0);
+  hr:nth-child(2) {
+    opacity: 0 !important;
+  }
+}
+
+.flow-2 .step-3 {
+  transform: translateX(calc(100% + 36px)) translateY(calc(100% + 18px));
+  z-index: 2;
+  hr:nth-child(2) {
+    opacity: 0 !important;
+  }
+}
+
+.flow-2 .step-4 {
+  transform: translateX(calc(350% + 9px)) translateY(calc(100% + 18px));
+  z-index: 2;
+}
+
+.flow-2 .step-5 {
+  &.rotated {
+    transform: translateX(calc(100% + 36px)) rotate(45deg) !important;
+    hr {
+      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+      &:nth-child(2) {
+        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+      }
+    }
+  }
+}
+
+.flow-2 .step-6.workflow-box {
+  transform: translateX(calc(550% + 9px)) translateY(calc(100% + 18px));
+}
+
+.flow-2 .step-6.workflow-circle {
+  transform: translateX(calc(550% + 9px));
+}
+
+.flow-3 .step-1 {
+  transform: translateX(calc(500% + 9px));
+}
+
+.flow-3 .step-2 {
+  transform: translateX(calc(300% + 9px));
+  z-index: 3;
+  hr:nth-child(2) {
+    opacity: 0 !important;
+  }
+}
+
+.flow-3 .step-3 {
+  transform: translateX(0) translateY(calc(100% + 18px));
+  z-index: 2;
+}
+
+.flow-3 .step-4 {
+  transform: translateX(calc(100% + 25px));
+  z-index: 2;
+}
+
+.flow-3 .step-5 {
+  &.rotated {
+    transform: translateX(0) rotate(45deg) !important;
+    hr {
+      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+      &:nth-child(2) {
+        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+      }
+    }
+  }
+}
+
+.flow-3 .step-6.workflow-box {
+  transform: translateX(calc(700% + 9px));
+  hr {
+    opacity: 1;
+    transform: translateY(50px) translateX(0%) rotate(90deg) !important;
+  }
+}
+
+.flow-3 .step-6.workflow-circle {
+  transform: translateX(calc(700% + 9px)) translateY(calc(100% + 18px));
+  z-index: 2;
+}
+
+.workflow-brand {
+  @extend .brand-callout;
+}
+
+.workflow-brand-2 {
+  @extend .brand-two-callout;
+}
+
+.workflow-brand-3 {
+  @extend .brand-three-callout;
+}
+
+.workflow-brand-4 {
+  @extend .brand-four-callout;
+}
+
+.workflow-brand-5 {
+  @extend .brand-five-callout;
+}
+
+.workflow-gray {
+  @extend .callout;
+  border: 1px solid $mgray;
+}
+
+
+/*
+==============================
+ENTERPRISE
+==============================
+*/
+#enterprise {
+  background-image: linear-gradient(to right, rgba(white,0.95), rgba(white,0) 20%, rgba(white,0.9) 60%), url(/wp-content/uploads/2016/12/Image-9.jpg);
+}
+
+.enterprise-content {
+  margin-top: 3rem;
+  background-image: linear-gradient(to left, rgba(white,1), rgba(white,0.8) 90%, rgba(white,0) 100%);
+}
+
+.enterprise-content > div:first-child svg {
+  width: 100%;
+  max-width: 75px;
+  fill: $brand2;
+}
+
+/*
+==============================
+REVAMP CTA
+==============================
+*/
+.home #revamp {
+  @include bp(xl) {
+    padding-bottom: 0;
+    .half > div,
+    input[type="submit"] {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.home #revamp .half > div {
+  &:first-child {
+    width: 100%;
+    margin-right: 0;
+    @include bp(xl) {
+      width: calc((100% / 2) - 2rem);
+      margin-right: 2rem;
+    }
+  }
+  &:last-child {
+    display: none;
+    @include bp(xl) {
+      display: block;
+    }
+  }
+}
+
+// .home #revamp.fixed {
+//   transform: translateY(0%);
+//   transition: all 300ms ease-out;
+//   position: fixed;
+//   z-index: 999;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   padding: 1rem 0 0;
+//   background-color: $brand;
+//   color: $white;
+// }
+
+
+
+/*
+========================================
+REMOVE 4TH CARD FROM RESULTS FOR DESKTOP
+========================================
+*/
+.home .card:last-child {
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+
+/*
+===================================================
+THROW AWAY STYLES FOR DEMO OF CENTERED HOME HERO
+===================================================
+*/
+.fixed-hero-section.center {
+  h1, span, p {
+    font-size: 1.8em !important;
+    line-height: 1.3;
+  }
+  h1 {
+    line-height: 1;
+  }
+  .half {
+    justify-content: center;
+    text-align: center;
+    > div {
+      margin-right: 0;
+      width: 80% !important;
+      @include bp(xxl) {
+        width: 70% !important;
+      }
+    }
+  }
+}

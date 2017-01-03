@@ -1,0 +1,128 @@
+.card {
+	border: 1px solid $mgray;
+	border-radius: $radius;
+	box-shadow: 0 0 15px rgba(black,0.1);
+	transition: all 200ms ease-in-out;
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	> div {
+		padding: 1rem;
+	}
+}
+
+.card:hover {
+	box-shadow: 0 0 15px rgba(black,0.3);
+}
+
+.card *:last-child {
+ margin-bottom: 0;
+}
+
+.card-tb {
+	box-shadow: inset 0 0 50px rgba(black, 0.25);
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h4 {
+	line-height: 1em;
+}
+
+.card p {
+	font-size: 0.85em;
+}
+
+.card a[class^='btn'] {
+	display: block;
+	box-shadow: inset 0 -200px 0 $brand2;
+	border-radius: $radius;
+	padding: 0.5rem 1rem;
+	color: $white;
+	@media screen and (min-width: 769px) {
+		display: inline;
+		color: $gray;
+		box-shadow: inset 0 -2px 0 $brand2;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0.1rem;
+		border-radius: 0;
+		&:hover, &:focus {
+			outline: 0;
+			box-shadow: inset 0 -28px 0 $brand2;
+			color: $white;
+		}
+	}
+}
+
+
+%card-tag {
+	color: $white;
+	font-weight: bold;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	padding: 0.25rem 0.4rem 0.25rem 0.4rem;
+	font-size: 0.6em !important;
+	display: inline-flex;
+  flex-direction: row;
+	margin-bottom: $spacing-unit * 0.5;
+	border-radius: $radius;
+	transition: all 200ms ease-in-out;
+	svg {
+		max-width: 20px;
+		height: 16px;
+		display: inline-block;
+		margin-right: 5px;
+		fill: $white;
+	}
+}
+
+.card-tag-whitepapers {
+	@extend %card-tag;
+	background: $brand;
+}
+.card-tag-webinars {
+	@extend %card-tag;
+	background: $brand2;
+}
+.card-tag-blog {
+	@extend %card-tag;
+	background-color: $brand3;
+}
+.card-tag-client-stories {
+	@extend %card-tag;
+	background-color: $brand4;
+}
+
+.card-tag-events {
+	@extend %card-tag;
+	background-color: $brand5;
+}
+
+
+.sidebar-card {
+	min-height: 135px;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	h4 {
+		font-size: 1em;
+		line-height: 1em;
+	}
+	div {
+		flex-basis: 55%;
+	}
+	> a {
+    display: block;
+    min-height: 100%;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+	}
+}

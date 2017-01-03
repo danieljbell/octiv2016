@@ -1,0 +1,56 @@
+.tabs-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  @include bp(sm) {
+    flex-direction: row;
+  }
+  > li {
+    flex: 1;
+    border: 1px solid $mgray;
+    border-radius: $radius $radius 0 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient($white, $lgray);
+    transition: all 300ms ease-out;
+    &:hover {
+      background-color: $brand2;
+      background-image: linear-gradient(lighten($brand2, 5%), darken($brand2, 5%));
+      a {
+        color: $white;
+      }
+    }
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 0.5rem;
+      color: $gray;
+    }
+    &.current {
+      background-color: $brand;
+      background-image: linear-gradient(lighten($brand, 5%), darken($brand, 5%));
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// Pulls the original tabhead offscreen
+.tabhead {
+  position: absolute;
+  left: -999em;
+}
+
+.tabbody {
+  border: 1px solid $mgray;
+  border-top: 0;
+  border-radius: 0 0 $radius $radius;
+  padding: 1rem;
+  background-color: $lgray;
+  background-image: linear-gradient($white, $lgray);
+}

@@ -1,0 +1,36 @@
+.sticky-sidebar {
+  display: none;
+  @include bp(md) {
+    display: block;
+  }
+}
+
+hr ~ .sidebar-links {
+  margin-top: -0.5em;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar-links li {
+  padding-bottom: 0;
+}
+
+.sidebar-links a {
+ font-size: 0.9em;
+ line-height: 1;
+ color: $gray;
+ transition: all 300ms ease-out;
+ &:hover,
+ &:active {
+  color: $brand;
+  text-decoration: underline;
+ }
+}
+
+.sidebar-links .active a {
+  font-weight: 700;
+  color: $brand;
+}

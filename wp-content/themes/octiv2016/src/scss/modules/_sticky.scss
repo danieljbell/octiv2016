@@ -1,0 +1,15 @@
+.sticky {
+	position: fixed;
+	top: 3rem;
+  width: 100%;
+	max-width: calc(1280px - (50%))!important;
+  padding-right: 2rem;
+  // transition: all 200ms ease-out;
+}
+
+.sticky + div {
+  @include bp(md) {
+    padding-left: calc((25% + .7rem))!important;
+    width: 100% !important;
+  }
+}

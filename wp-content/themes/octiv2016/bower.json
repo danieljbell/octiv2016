@@ -1,0 +1,28 @@
+{
+  "name": "starter-kit",
+  "description": "Project starter kit",
+  "main": "index.js",
+  "authors": [
+    "Daniel Bell"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/danieljbell/starter-kit",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.2.3",
+    "bootstrap-sass": "~3.3.7"
+  },
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "bootstrap-sass": "~3.3.7",
+    "slick-carousel": "~1.6.0",
+    "jquery-accessible-tabs": "~1.9.9"
+  }
+}

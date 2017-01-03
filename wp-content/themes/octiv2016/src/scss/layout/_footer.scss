@@ -1,0 +1,154 @@
+#site-footer {
+	padding-top: 0;
+	padding-bottom: 1rem;
+	font-size: 0.85em;
+	line-height: 1.4em;
+	color: lighten($gray, 35%);
+	@include bp(sm) {
+		text-align: inherit;
+	}
+	> .site-width:first-of-type {
+		border-top: 1px solid $mgray;
+		padding-top: 2rem;
+	}
+}
+
+#site-footer .two-third-reversed > div:first-child {
+	text-align: center;
+	@include bp(lg) {
+		text-align: left;
+	}
+}
+
+.footer-logo {
+	max-width: 175px;
+	margin: 0 auto $spacing-unit;	
+	@include bp(md) {
+		max-width: 125px;
+		margin: inherit;
+	}
+}
+
+#site-footer ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#site-footer li {
+	svg {
+		width: 15px;
+		height: 15px;
+		margin: auto;
+	}
+	a {
+		color: lighten($gray, 35%);
+	}
+	&:before {
+		display: none;
+	}
+}
+
+#site-footer .inline li {
+	display: block;
+	text-align: center;
+	@include bp(sm) {
+		display: inline-block;
+		text-align: left;
+	}
+}
+
+#site-footer .footer-copyright {
+	text-align: center;
+	@include bp(sm) {
+		text-align: initial;
+	}
+}
+
+#site-footer .inline li {
+	&:first-of-type a,
+	&:nth-of-type(2) a,
+	&:nth-of-type(3) a {
+		height: 30px;
+		width: 30px;
+		border: 2px solid $gray;
+		padding: 4px;
+		border-radius: 50%;
+		display: inline-flex;
+		justify-content: center;
+		transition: all 200ms ease-out;
+	}
+	&:first-of-type a {
+		&:hover, &:focus {
+			border-color: #01abf0;
+			background-color: #01abf0;
+			outline: 0;
+			svg {
+				fill: $white;
+			}
+		}
+	}
+	&:nth-of-type(2) a {
+		&:hover, &:focus {
+			border-color: #017ab8;
+			background-color: #017ab8;
+			outline: 0;
+			svg {
+				fill: $white;
+			}
+		}
+	}
+	&:nth-of-type(3) a {
+		&:hover, &:focus {
+			border-color: #39579a;
+			background-color: #39579a;
+			outline: 0;
+			svg {
+				fill: $white;
+			}
+		}
+	}
+}
+
+#site-footer .fifth div {
+	width: calc((100% / 2) - 1rem);
+	margin-right: 2rem;
+	&:nth-child(2n) {
+		margin-right: 0;
+	}
+	@include bp(sm) {
+		width: calc((100% / 3) - 1.3333rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 2rem;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	@include bp(md) {
+		width: calc((100% / 5) - 1.6rem);
+		margin-right: 2rem;
+		&:nth-child(2n),
+		&:nth-child(3n) {
+			margin-right: 2rem;
+		}
+		&:nth-child(5n) {
+			margin-right: 0;
+		}
+	}
+}
+
+#site-footer .two-third-reversed > div {
+	width: 100%;
+	margin-right: 0;
+	@include bp(lg) {
+		&:nth-child(2n-1) {
+			width: calc((100% / 3) - 1.3333rem);
+			margin-right: 2rem;
+		}
+		&:nth-child(2n) {
+			width: calc(((100% / 3) * 2) - 0.7rem);
+		}
+	}
+}
+

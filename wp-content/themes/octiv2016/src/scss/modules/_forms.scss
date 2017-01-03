@@ -1,0 +1,157 @@
+form {
+	font-family: $sans-serif !important;
+	div {
+		position: relative;
+		label {
+			// font-weight: bold;
+		}
+		input[type='text'],
+		input[type='email'],
+		input[type='tel'] {
+			&:focus {
+				& + label {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	input, textarea, select {
+		font-family: $sans-serif;
+		width: 100%;
+		color: $gray;
+		border-radius: $radius;
+		border: 1px solid $mgray;
+		padding: ($spacing-unit);
+		margin-bottom: $spacing-unit;
+		transition: box-shadow 200ms ease-in-out;
+		&:active, &:focus {
+			outline: 0;
+			box-shadow: inset 0 -3px $brand;
+		}
+	}
+	input {
+		:invalid {
+		  background-color: #ffdddd;
+		}
+		&[type='submit'] {
+			font-size: 1.1rem;
+			// text-transform: uppercase;
+			font-weight: bold;
+			text-shadow: 1px 2px 2px rgba(black, 0.5);
+			background: $brand;
+			color: $white;
+			border: 0;
+			transition: background 200ms ease-in-out;
+			border-radius: $radius; // ($spacing-unit * 2);
+			&:hover, &:active, &:focus {
+				background: darken($brand, 10%);
+			}
+		}
+	}
+	select {
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-position: 95%;
+		background-size: 20px;
+		&.fancy {
+			appearance: none;
+			background-image: url(../dist/img/select-arrow.svg);
+		}
+		&:disabled {
+			color: transparentize($gray,0.55);
+		}
+	}
+}
+
+.inline-form {
+	@include clearfix;
+	margin-top: $spacing-unit;
+	input {
+		height: $spacing-unit * 3;
+		width: 100%;
+		@include bp(sm) {
+			float: left;
+			display: inline;
+			margin-bottom: 0;
+			&:first-child {
+				width: 70%;
+				border-radius: $radius 0 0 $radius !important;
+				border-right: none;
+			}
+			&:last-child {
+				width: 30%;
+				border-radius: 0 $radius $radius 0;
+			}
+		}
+	}
+	.home &,
+	.page-template-page-resources & {
+		margin-top: 0;
+	}
+}
+
+::placeholder {
+	color: $gray;
+}
+
+.support-form {
+	input[type='email'] {
+		background-color: #fff !important;
+	}
+	input[type='radio'],
+	input[type='checkbox'] {
+		margin-right: 0.5rem;
+		width: initial;
+	}
+	label {
+		text-transform: none;
+	}
+}
+
+
+fieldset {
+	legend {
+		font-weight: bold;
+		color: $brand;
+	}
+	form & label {
+		font-weight: normal;
+		display: inline-block;
+		margin: 0 0.5rem 0.25rem 0;
+		width: 100%;
+		@include bp(sm) {
+			width: calc((100% / 2) - 1rem);
+		}
+		@include bp(lg) {
+			width: calc((100% / 3) - 1rem);
+		}
+		input {
+			width: initial;
+			margin: 0 0.5rem 0 0;
+			display: inline-block;
+		}
+	}
+}
+
+.mktoAsterix {
+	display: inline-block;
+	color: $brand;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.mktoLabel {
+	font-weight: bold;
+	font-size: 0.85em;
+}
+
+.mktoError {
+	top: 50%;
+	right: initial !important;
+	bottom: initial !important;
+  position: absolute;
+  transform: translateY(-50%) translateX(5px);
+  color: red;
+  font-size: 0.85em;
+  font-weight: bold;
+}

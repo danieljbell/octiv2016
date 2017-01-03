@@ -1,0 +1,134 @@
+/*
+==============================
+CAREERS HERO SLIDER
+==============================
+*/  
+.page-template-careers .slider p,
+.page-template-careers .slider h4 {
+  @include bp(md) {
+    font-size: 1.75em;
+  }
+}
+
+.page-template-careers .slider h4 {
+  @include bp(md) {
+    font-size: 3em;
+  }
+}
+
+.page-template-careers .slick-dots,
+.page-template-careers .slick-dots li:before {
+  display: none !important;
+}
+
+.page-template-careers .slick-slide {
+  padding: 3rem 0;
+  @include bp(md) {
+    padding: 6rem 0;
+  }
+}
+
+.page-template-careers .slick-track {
+  position: relative;
+}
+
+.page-template-careers .slick-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  color: $white;
+  font-size: 1.5rem;
+  z-index: 10;
+  @include bp(sm) {
+    bottom: 2rem;
+  }
+}
+
+.page-template-careers .slick-arrow.slick-prev {
+  right: 3rem;
+}
+
+
+
+.page-template-careers .lined-grid {
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+	img[src$='.png'] {
+    max-width: 65px;
+    margin: 0 auto 1rem;
+    @include bp(md) {
+      max-width: 85px;
+    }
+  }
+}
+
+.lined-grid img.icon-parental[src$='.png'] {
+  max-width: 40px;
+  @include bp(md) {
+    max-width: 55px;
+  }
+}
+
+.lined-grid img.icon-parking[src$='.png'] {
+  max-width: 80px;
+}
+
+.lined-grid img.icon-offsites[src$='.png'] {
+  max-width: 45px;
+  @include bp(md) {
+    max-width: 55px;
+  }
+}
+
+.employee-testimonials {
+  font-size: 1.25em;
+}
+
+.employee-testimonials .slick-track {
+  display: flex;
+}
+
+.employee-testimonials .career-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem !important;
+  @include bp(md) {
+    padding: 2rem !important;
+  }
+  margin: 0 1rem;
+  color: $white;
+  &:nth-child(2n-1) {
+    @extend .brand-callout;
+    background-image: url(../dist/img/octiv-pattern.svg);
+  }
+  &:nth-child(2n) {
+    @extend .brand-two-callout;
+    background-image: url(../dist/img/octiv-pattern.svg);
+  }
+  &:nth-child(3n) {
+    @extend .brand-three-callout;
+    background-image: url(../dist/img/octiv-pattern.svg);
+  }
+  &:nth-child(4n) {
+    @extend .brand-four-callout;
+    background-image: url(../dist/img/octiv-pattern.svg);
+  }
+  &:nth-child(5n) {
+    @extend .brand-two-callout;
+    background-image: url(../dist/img/octiv-pattern.svg);
+  }
+}
+
+.employee-testimonials .slick-slide {
+  height: initial;
+  min-height: initial;
+}
+
+.employee-testimonials .slick-arrow,
+.employee-testimonials .slick-dots, {
+  display: none !important;
+}

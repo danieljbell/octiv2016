@@ -1,0 +1,14 @@
+.testimonial {
+	background-color: $brand;
+	padding: $spacing-unit * 3;
+	font-size: $spacing-unit * 1.25;
+	color: $white;
+	&:nth-child(2n) {
+		background-color: $gray;
+	}
+	img {
+		max-width: 75px;
+		float: left;
+		padding-right: $spacing-unit;
+	}
+}
