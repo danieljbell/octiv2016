@@ -259,7 +259,27 @@
 				<p>Contact sales today to see how Octiv can help your organization.</p>
 				<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 					<form id="mktoForm_1008"></form>
-				<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008);</script>
+				<script>
+					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008);
+					MktoForms2.whenReady(function (form) {
+					  var pageURL = document.documentURI;
+						var contactForm = document.querySelector('#mktoForm_1008');
+						var mktoStyleSheets = document.querySelectorAll('link');
+						var leadSource = document.querySelector('input[name="LeadSource"]');
+
+						contactForm.attributes.style.value = '';
+
+						mktoStyleSheets.forEach(function(link) {
+							if (link.id.includes('mkto')) {
+								link.remove();
+							}
+						});
+
+						contactForm.childNodes[0].remove();
+						leadSource.value = pageURL;
+
+					});
+				</script>
 			</div>
 			<div class="pos-rel">
 				<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/computer-frame.png" alt="computer" style="pointer-events: none; position: relative; z-index:2;">

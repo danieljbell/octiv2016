@@ -9,38 +9,6 @@
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <section>
-  <!-- <div class="centered-slider">
-    <?php
-      $args = array(
-        'post_type' => 'integration',
-        'posts_per_page' => 10
-      );
-
-      $query = new WP_Query($args);
-
-      if ($query->have_posts()) :
-        while ($query->have_posts()) :
-          $query->the_post();
-          echo '<div class="card">';
-            echo '<div class="">';
-              echo '<div class="pos-rel integration-card-bg" style="background-image: url(' . get_field('integration_logo', $post->ID) . '), linear-gradient(#fff, #f0f0f0);">';
-                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" title="' . get_the_title() . '"></a>';
-              echo '</div>';
-              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
-              echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>';
-              echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="btn-arrow">Learn More</a>';
-            echo '</div>';
-          echo '</div>';
-        endwhile;
-      endif;
-      wp_reset_query();
-
-    ?>
-  </div>
-  <div class="centered-slider-buttons"></div>
-  <br>
-  <br>
-  <br> -->
   <div class="site-width">
     <div class="fourth-3-fourth">
       <div class="sticky-sidebar" id="sticky-sidebar">
@@ -84,9 +52,9 @@
             echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
-            echo '<div class="card">';
-              echo '<div>';
-                echo '<a href="' . get_the_permalink() . '"><img src="' . get_field('integration_logo') . '" alt="' . get_the_title() . '"></a>';
+            echo '<div class="card pos-rel">';
+              echo '<div style="padding: 4rem;">';
+                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 50%; transform: translate(-50%, -50%); left: 50%;"><img src="' . get_field('integration_logo') . '" alt="' . get_the_title() . '"></a>';
               echo '</div>';
             echo '</div>';
           ?>

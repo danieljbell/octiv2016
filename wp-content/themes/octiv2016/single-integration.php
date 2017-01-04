@@ -160,13 +160,15 @@
         if ($query->have_posts()) :
           while ($query->have_posts()) :
             $query->the_post();
+            $thing = get_the_terms($post->ID, 'integration_type');
             echo '<div class="card">';
               echo '<div class="">';
                 echo '<div class="pos-rel integration-card-bg" style="background-image: url(' . get_field('integration_logo', $post->ID) . '), linear-gradient(#fff, #f0f0f0);">';
                   echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" title="' . get_the_title() . '"></a>';
                 echo '</div>';
+                echo '<span class="card-tag-whitepapers">' . $thing[0]->name . '</span>';
                 echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
-                echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>';
+                echo '<p>' . get_field('integration_description', $post->ID, false) . '</p>';
                 echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="btn-arrow">Learn More</a>';
               echo '</div>';
             echo '</div>';
