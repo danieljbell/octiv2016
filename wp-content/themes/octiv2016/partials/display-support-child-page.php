@@ -1,5 +1,5 @@
-<?php 
-	$queried_object = get_queried_object(); 
+<?php
+	$queried_object = get_queried_object();
 	$content_type = get_field('content_type', $queried_object);
 ?>
 
@@ -46,4 +46,4 @@
 				</div>
 			</div>
 		</section>
-<?php endif; } ?>
+<?php endif; ?>

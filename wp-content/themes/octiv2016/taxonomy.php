@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
+<!-- <div class="fixed-hero-section">
 	<div class="site-width white-text">
 		<h1>
-			<?php echo str_replace('Event Type: ','',get_the_archive_title()); ?>
+			<?php echo str_replace('Event Type: ', '', get_the_archive_title()); ?>
 		</h1>
 	</div>
 </div>
@@ -23,7 +23,7 @@
 			endif; wp_reset_query();
 		?>
 	</div>
-</section>
+</section> -->
 
 
 <?php get_footer(); ?>
