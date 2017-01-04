@@ -71,56 +71,6 @@
   }
 }
 
-.home .fixed-hero-section a {
-  color: #000;
-  transition: all 200ms ease-out;
-  &:first-child,
-  &:nth-child(6) {
-    box-shadow: inset 0 -2px 0 $brand2-hard;
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -50px 0 $brand2-hard;
-      outline: 0;
-    }
-  }
-  &:nth-child(2) {
-    box-shadow: inset 0 -2px 0 $brand3-hard;
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -50px 0 $brand3-hard;
-      outline: 0;
-    }
-  }
-  &:nth-child(3) {
-    box-shadow: inset 0 -2px 0 $brand4-hard;
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -50px 0 $brand4-hard;
-      outline: 0;
-    }
-  }
-  &:nth-child(4) {
-    box-shadow: inset 0 -2px 0 $brand-hard;
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -50px 0 $brand-hard;
-      outline: 0;
-    }
-  }
-  &:nth-child(5) {
-    box-shadow: inset 0 -2px 0 $brand5-hard;
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -50px 0 $brand5-hard;
-      outline: 0;
-    }
-  }
-  &.btn-primary {
-    box-shadow: none !important;
-    color: $white !important;
-  }
-}
-
 // BREAKPOINTS FOR HERO SECTION
 .home .fixed-hero-section .half > div {
   @include bp(md) {
@@ -584,6 +534,8 @@ DOCUMENTS SECTION
 
 .documents-content a {
   box-shadow: inset 0 -200px 0 $brand;
+  // remove this line when links can be used
+  pointer-events: none;
   @include bp(sm) {
     box-shadow: inset 0 -2px 0 $brand;
     &:hover {
@@ -593,7 +545,7 @@ DOCUMENTS SECTION
 }
 
 .documents-visual {
-  min-height: initial;
+  min-height: 200px;
   transition: all 200ms ease-out;
   transition-delay: 600ms;
 }
@@ -611,13 +563,28 @@ DOCUMENTS SECTION
 }
 
 .documents-visual .document-inputs div {
-  width: 95px;
-  height: 95px;
+  width: 65px;
+  height: 65px;
   background-color: $lgray;
   border-radius: 50%;
   border: 5px solid $white;
   box-shadow: 0 0 15px rgba(black, 0.15);
   transition: all 200ms ease-out;
+  @include bp(sm) {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.documents-visual .document-outputs div {
+  width: 65px;
+  height: 65px;
+  font-size: 0.75em;
+  @include bp(sm) {
+    width: 95px;
+    height: 95px;
+    font-size: initial;
+  }
 }
 
 .documents-visual .document-inputs div svg {
@@ -742,17 +709,34 @@ COMMERCIAL
 }
 
 .home .commercial-visual {
-  min-height: 150px;
   transform-origin: top left;
   transition: all 300ms ease-out;
+  transform: scale(0.57);
+  min-height: 75px;
+  @include bp(sm) {
+    min-height: 150px;
+    transform: scale(0.9);
+  }
   @include bp(xl) {
     transform: scale(1.2);
   }
   &.flow-2 {
-    transform: scale(1.2) translateX(15%);
+    transform: scale(0.57) translateX(25%);
+    @include bp(sm) {
+      transform: scale(0.9) translateX(25%);
+    }
+    @include bp(xl) {
+      transform: scale(1.2) translateX(15%);
+    }
   }
   &.flow-3 {
-    transform: scale(1.2) translateX(10%);
+    transform: scale(0.57) translateX(15%);
+    @include bp(sm) {
+      transform: scale(0.9) translateX(15%);
+    }
+    @include bp(xl) {
+      transform: scale(1.2) translateX(10%);
+    }
   }
 }
 

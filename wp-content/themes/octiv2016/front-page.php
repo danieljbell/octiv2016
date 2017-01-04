@@ -7,7 +7,7 @@
 	    <div class="half white-text">
 	        <div>
 	            <h1><span style="display: block;">Unified Document Workflows</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Sophisticated Companies</span></h1>
-	            <p>Build and automate <a href="#workflows">document workflows</a> that <a href="#connections">connect systems and data</a> for a better <a href="#user-experience">end-user experience</a>. <a href="#documents">Sales &amp; Legal Documents</a> for <a href="#commercial">commercial</a> and <a href="#enterprise">enterprise</a> teams.</p>
+	            <p class="fancy-links">Build and automate <a href="#workflows">document workflows</a> that <a href="#connections">connect systems and data</a> for a better <a href="#user-experience">end-user experience</a>. <a href="#documents">Sales &amp; Legal Documents</a> for <a href="#commercial">commercial</a> and <a href="#enterprise">enterprise</a> teams.</p>
 	            <p style="margin-top: 3em; font-size: initial !important;"><a href="#" class="btn-primary">Play Video</a></p>
 	        </div>
 	    </div>
@@ -261,24 +261,6 @@
 					<form id="mktoForm_1008"></form>
 				<script>
 					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008);
-					MktoForms2.whenReady(function (form) {
-					  var pageURL = document.documentURI;
-						var contactForm = document.querySelector('#mktoForm_1008');
-						var mktoStyleSheets = document.querySelectorAll('link');
-						var leadSource = document.querySelector('input[name="LeadSource"]');
-
-						contactForm.attributes.style.value = '';
-
-						mktoStyleSheets.forEach(function(link) {
-							if (link.id.includes('mkto')) {
-								link.remove();
-							}
-						});
-
-						contactForm.childNodes[0].remove();
-						leadSource.value = pageURL;
-
-					});
 				</script>
 			</div>
 			<div class="pos-rel">

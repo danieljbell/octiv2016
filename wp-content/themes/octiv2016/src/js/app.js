@@ -553,38 +553,38 @@ $('body').scrollspy({
 REMOVE STYLES FOR CONTACT FORM
 ==============================
 */
-// MktoForms2.whenReady(function (form) {
-//   var pageURL = document.documentURI;
-//   var formObj = $('.mktoForm');
-//
-//   // Remove styles
-//   removeStyles(formObj);
-//   $(window).resize(function(){
-//     removeStyles(formObj);
-//   });
-//
-//   // Add styles
-//   formObj.find('.mktoFormRow').addClass('third');
-//   formObj.find('select').addClass('fancy');
-//   formObj.find('.mktoButton').addClass('btn-primary');
-//   formObj.find('.mktoButtonRow').addClass('centered');
-//
-//   // Send page URL to Marketo
-//   $('input[name="LeadSource"]').attr('value', pageURL);
-//
-//   function removeStyles(formObj) {
-//     $('#mktoForms2BaseStyle').remove();
-//     $('#mktoForms2ThemeStyle').remove();
-//     formObj.find('.mktoOffset').remove();
-//     formObj.find('.mktoGutter').remove();
-//     formObj.find('.mktoClear').remove();
-//     formObj.attr('style', '');
-//     formObj.find('style').remove();
-//     formObj.find('.mktoHasWidth').attr('style', '');
-//     formObj.find('.mktoButtonWrap');
-//     formObj.find('.mktoInset').attr('style', '');
-//   }
-// });
+MktoForms2.whenReady(function (form) {
+  var pageURL = document.documentURI;
+  var formObj = $('.mktoForm');
+
+  // Remove styles
+  removeStyles(formObj);
+  $(window).resize(function(){
+    removeStyles(formObj);
+  });
+
+  // Add styles
+  formObj.find('.mktoFormRow').addClass('third');
+  formObj.find('select').addClass('fancy');
+  formObj.find('.mktoButton').addClass('btn-primary');
+  formObj.find('.mktoButtonRow').addClass('centered');
+
+  // Send page URL to Marketo
+  $('input[name="LeadSource"]').attr('value', pageURL);
+
+  function removeStyles(formObj) {
+    $('#mktoForms2BaseStyle').remove();
+    $('#mktoForms2ThemeStyle').remove();
+    formObj.find('.mktoOffset').remove();
+    formObj.find('.mktoGutter').remove();
+    formObj.find('.mktoClear').remove();
+    formObj.attr('style', '');
+    formObj.find('style').remove();
+    formObj.find('.mktoHasWidth').attr('style', '');
+    formObj.find('.mktoButtonWrap');
+    formObj.find('.mktoInset').attr('style', '');
+  }
+});
 
 
 
