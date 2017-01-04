@@ -24,12 +24,29 @@ get_header();
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <?php
+$count = 0;
   if (have_rows('page_section')) :
     while (have_rows('page_section')) :
+      $count++;
       the_row();
-      echo '<section>';
+      echo '<section class="fat-section">';
         echo '<div class="site-width">';
-          echo get_sub_field('section_title');
+          if ($count % 2 == 0) {
+            echo '<div class="half">';
+          } else {
+            echo '<div class="half-stack">';
+          }
+            echo '<div class="section-visual">col 1</div>';
+            echo '<div class="section-content">';
+              echo '<div>';
+                echo '<img src="//fillmurray.com/75/75" style="max-width: 75px;">';
+              echo '</div>';
+              echo '<div>';
+                echo '<h2>' . get_sub_field('section_title') . '</h2>';
+                echo '<p>' . get_sub_field('section_content') . '</p>';
+              echo '</div>';
+            echo '</div>';
+          echo '</div>';
         echo '</div>';
       echo '</section>';
     endwhile;

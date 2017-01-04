@@ -99,12 +99,6 @@
   box-shadow: 0 10px 25px rgba(black, 0.25);
 }
 
-.home section {
-  @include bp(sm) {
-    padding: 6rem 0;
-  }
-}
-
 .home #workflows .half-stack,
 .home #connections .half,
 .home #user-experience .half-stack,

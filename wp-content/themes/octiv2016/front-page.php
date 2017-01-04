@@ -15,7 +15,7 @@
 </div>
 
 
-<section class="callout">
+<section class="callout fat-section">
 	<div class="site-width">
 		<h2 class="centered">How Octiv unifies your document workflow</h2>
 		<br>
@@ -51,7 +51,7 @@
 	}
 </style>
 
-<section id="workflows">
+<section id="workflows" class="fat-section">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="workflows-visual">
@@ -82,7 +82,7 @@
 	<hr>
 </div>
 
-<section id="connections">
+<section id="connections" class="fat-section">
 	<div class="site-width">
 		<div class="half">
 			<div class="connections-visual">
@@ -131,7 +131,7 @@
 	</div>
 </section>
 
-<section id="user-experience">
+<section id="user-experience" class="fat-section">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="ux-visual"></div>
@@ -151,7 +151,7 @@
 	</div>
 </section>
 
-<section id="documents">
+<section id="documents" class="fat-section">
 	<div class="site-width">
 		<div class="half">
 			<div class="documents-visual">
@@ -197,7 +197,7 @@
 	<hr>
 </div>
 
-<section id="commercial" style="overflow-x: hidden;">
+<section id="commercial" style="overflow-x: hidden;" class="fat-section">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="pos-rel commercial-visual flow-1">
@@ -229,7 +229,7 @@
 	<hr>
 </div>
 
-<section id="enterprise">
+<section id="enterprise" class="fat-section">
 	<div class="site-width">
 		<div class="half">
 			<div class="enterprise-visual"></div>
@@ -251,7 +251,7 @@
 
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 
-<section id="revamp">
+<section id="revamp" class="fat-section">
 	<div class="site-width">
 		<div class="half">
 			<div>

@@ -22,7 +22,7 @@
 
 .half > div,
 .half > li {
-	@include bp(sm) {
+	@media screen and (min-width: 769px) {
 		width: calc(50% - 1rem);
 		margin-right: 2rem;
 		&:nth-child(2n) {
@@ -200,7 +200,7 @@
 		}
 		&:nth-child(2n) {
 			width: calc((100% / 4) - 1.3333rem);
-		}	
+		}
 	}
 }
 
@@ -259,7 +259,7 @@ NESTED GRIDS
 		margin-right: 2rem;
 		&:nth-child(2n) {
 			margin-right: 0;
-		}	
+		}
 	}
 	@include bp(md) {
 		width: 100%;
@@ -270,7 +270,7 @@ NESTED GRIDS
 		margin-right: 2rem;
 		&:nth-child(2n) {
 			margin-right: 0;
-		}		
+		}
 	}
 }
 
