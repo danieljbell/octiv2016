@@ -4,13 +4,9 @@
   box-shadow: inset 0 0 35px rgba(black, 0.75);
   color: $white;
   a {
-    color: $white !important;
+    color: $white;
+    text-shadow: none;
     transition: all 200ms ease-out;
-    &:hover,
-    &:focus {
-      color: $gray !important;
-      text-shadow: none !important;
-    }
   }
   .half {
     justify-content: center;
@@ -327,7 +323,7 @@ CONNECTIONS SECTION
 
 .connections-visual.in-view div[class*='badge'],
 .documents-visual.in-view div[class*='badge'] {
-  transition: all 200ms ease-out;
+  transition: all $bounce-in;
   a {
     box-shadow: 0 0 25px rgba(black, 0.2);
     &:focus {
@@ -541,7 +537,7 @@ DOCUMENTS SECTION
 .documents-visual {
   min-height: 200px;
   transition: all 200ms ease-out;
-  transition-delay: 600ms;
+  transition-delay: 1000ms;
 }
 
 .documents-visual div[class*="badge"] {
@@ -563,7 +559,7 @@ DOCUMENTS SECTION
   border-radius: 50%;
   border: 5px solid $white;
   box-shadow: 0 0 15px rgba(black, 0.15);
-  transition: all 200ms ease-out;
+  transition: all $bounce-out !important;
   @include bp(sm) {
     width: 95px;
     height: 95px;
@@ -627,41 +623,42 @@ DOCUMENTS SECTION
 
 .documents-visual.in-view div.octiv-badge {
   transform: translate(-50%, -0%) scale(1.3);
+  transition: all 1000ms cubic-bezier(.17,.67,.29,1.29);
 }
 
 .documents-visual.in-view .document-outputs .badge-proposals {
   transform: translate(-225%,75%);
-  transition-delay: 800ms;
+  transition-delay: 1200ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-quotes {
   transform: translate(-225%,185%);
-  transition-delay: 900ms;
+  transition-delay: 1300ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-rfps {
   transform: translate(-115%,125%);
-  transition-delay: 1000ms;
+  transition-delay: 1400ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-sows {
   transform: translate(-50%, 225%);
-  transition-delay: 1100ms;
+  transition-delay: 1500ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-ndas {
   transform: translate(15%,125%);
-  transition-delay: 1200ms;
+  transition-delay: 1600ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-ndas2 {
   transform: translate(125%,75%);
-  transition-delay: 1300ms;
+  transition-delay: 1700ms;
 }
 
 .documents-visual.in-view .document-outputs .badge-msas {
   transform: translate(125%,185%);
-  transition-delay: 1400ms;
+  transition-delay: 1800ms;
 }
 
 .documents-visual .document-outputs a {

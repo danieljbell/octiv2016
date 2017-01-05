@@ -109,7 +109,7 @@ blockquote {
 	box-shadow: inset 0 -2px 0 $brand2-hard;
 	transition: all 200ms ease-out;
 	&:hover {
-		color: #000;
+		color: #000 !important;
 		text-shadow: none;
 		box-shadow: inset 0 -1.5em 0 $brand2-hard;
 	}

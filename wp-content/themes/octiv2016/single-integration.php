@@ -37,7 +37,7 @@
         <h4 style="font-size: 2em;">About <?php echo get_the_title(); ?></h4>
         <?php echo get_field('integration_description'); ?>
         <?php if (get_field('integration_link')) : ?>
-          <a href="<?php echo get_field('integration_link'); ?>" class="btn-arrow">Learn More</a>
+          <p><a href="<?php echo get_field('integration_link'); ?>" class="btn-arrow">Learn More</a></p>
         <?php endif; ?>
       </div>
     </div>
@@ -189,40 +189,26 @@
         <p style="margin-bottom: 0;"><?php echo get_the_excerpt(); ?> Fill out the form to speak with a member of our sales team about unifying your document workflow with <?php echo get_the_title(); ?>.</p>
       </div>
       <div>
-        <form action="#">
-          <div class="third">
-            <div>
-              <label for="first_name">First Name</label>
-              <input type="text" name="first_name">
-            </div>
-            <div>
-              <label for="last_name">Last Name</label>
-              <input type="text" name="last_name">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="text" name="email">
-            </div>
-            <div>
-              <label for="company">Company</label>
-              <input type="text" name="company">
-            </div>
-            <div>
-              <label for="company_size">Company Size</label>
-              <select name="company_size" class="fancy">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-            <div>
-              <label for="phone_number">Phone Number</label>
-              <input type="tel" name="phone_number">
-            </div>
-            <div></div>
-            <div><a href="#" class="btn-white-outline" style="display: block;">Let's Talk</a></div>
-          </div>
-        </form>
+        <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+					<form id="mktoForm_1008"></form>
+				<script>
+					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+						//Add an onSuccess handler
+				    form.onSuccess(function(values, followUpUrl) {
+							// Get the form field values
+							var vals = form.vals();
+
+							// Update the redirect url with form fields
+							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
+
+							// Redirect the page with form field
+							location.href = followUpUrl;
+
+			        // Return false to prevent the submission handler continuing with its own processing
+			        return false;
+				    });
+					});
+				</script>
       </div>
     </div>
   </div>
