@@ -29,17 +29,15 @@ TYPED FOR HOMEPAGE
 ==============================
 */
 if ($('.typed').length) {
-  $(function(){
-      $(".typed").typed({
-        strings: ["Medical Corporations", "Industrial Giants", "Publishing Moguls", "Sophisticated Companies"],
-        typeSpeed: 30,
-        backSpeed: 15,
-        startDelay: 2000,
-        backDelay: 3000,
-        loop: true,
-        loopCount: false
-      });
-    });
+  $(".typed").typed({
+    strings: ["Medical Corporations", "Industrial Giants", "Publishing Moguls", "Sophisticated Companies"],
+    typeSpeed: 30,
+    backSpeed: 15,
+    startDelay: 2000,
+    backDelay: 3000,
+    loop: true,
+    loopCount: false
+  });
 }
 
 /*

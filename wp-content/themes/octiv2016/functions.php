@@ -667,5 +667,15 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
 
     }
 
+		if ( is_singular( 'post' ) ) {
+        $breadcrumb[] = array(
+					'url' => site_url() . '/Resources',
+          'text' => 'Resources',
+        );
+
+        array_splice( $links, 1, 0, $breadcrumb );
+
+    }
+
     return $links;
 }

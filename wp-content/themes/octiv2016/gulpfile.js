@@ -36,8 +36,8 @@ gulp.task('js', function () {
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/jquery-accessible-tabs/js/jquery.tabs.js',
       'bower_components/slick-carousel/slick/slick.js',
-      'bower_components/twentytwenty-master/js/jquery.event.move.js',
-      'bower_components/twentytwenty-master/js/jquery.twentytwenty.js',
+      'bower_components/twentytwenty/js/jquery.event.move.js',
+      'bower_components/twentytwenty/js/jquery.twentytwenty.js',
       'bower_components/typed.js/js/typed.js',
       'bower_components/waypoints/lib/jquery.waypoints.js',
       'bower_components/waypoints/lib/shortcuts/inview.js',
@@ -64,7 +64,7 @@ gulp.task('watch', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "localhost:8888"
+        proxy: "localhost:1337"
     });
 });
 
