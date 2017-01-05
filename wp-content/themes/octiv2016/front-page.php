@@ -265,10 +265,13 @@
 				    form.onSuccess(function(values, followUpUrl) {
 							// Get the form field values
 							var vals = form.vals();
-							var personalizedLink = 'localhost:3000/?first_name=' + vals.FirstName;
-							followUpUrl += vals.FirstName;
+
+							// Update the redirect url with form fields
+							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
+
+							// Redirect the page with form field
 							location.href = followUpUrl;
-							// console.log('followUpUrl = ' + followUpUrl);
+
 			        // Return false to prevent the submission handler continuing with its own processing
 			        return false;
 				    });

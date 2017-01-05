@@ -23,7 +23,18 @@ $first_name = $_GET['first_name'];
 <section>
   <div class="site-width">
     <script>
-      console.log(location.href);
+      var thing = getParameterByName('first_name');
+      window.history.replaceState( {} , 'bar', '/thank-you' );
+
+      function getParameterByName(name, url) {
+    	    if (!url) url = window.location.href;
+    	    name = name.replace(/[\[\]]/g, "\\$&");
+    	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    	        results = regex.exec(url);
+    	    if (!results) return null;
+    	    if (!results[2]) return '';
+    	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    		}
     </script>
   </div>
 </section>
