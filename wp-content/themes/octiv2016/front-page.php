@@ -260,7 +260,19 @@
 				<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 					<form id="mktoForm_1008"></form>
 				<script>
-					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008);
+					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+						//Add an onSuccess handler
+				    form.onSuccess(function(values, followUpUrl) {
+							// Get the form field values
+							var vals = form.vals();
+							var personalizedLink = 'localhost:3000/?first_name=' + vals.FirstName;
+							followUpUrl += vals.FirstName;
+							location.href = followUpUrl;
+							// console.log('followUpUrl = ' + followUpUrl);
+			        // Return false to prevent the submission handler continuing with its own processing
+			        return false;
+				    });
+					});
 				</script>
 			</div>
 			<div class="pos-rel">

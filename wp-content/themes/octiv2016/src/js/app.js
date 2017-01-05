@@ -568,7 +568,7 @@ MktoForms2.whenReady(function (form) {
   formObj.find('.mktoButtonRow').addClass('centered');
 
   // Send page URL to Marketo
-  $('input[name="LeadSource"]').attr('value', pageURL);
+  $('input[name="sourceURL"]').attr('value', pageURL);
 
   function removeStyles(formObj) {
     $('#mktoForms2BaseStyle').remove();
