@@ -6,7 +6,7 @@
 	<div class="site-width pos-rel" style="z-index: 2;">
 	    <div class="half white-text">
 	        <div>
-	            <h1><span style="display: block;">Unified Document Workflows</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Sophisticated Companies</span></h1>
+	            <h1><span style="display: block;">Daniel Unified Document Workflows</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Sophisticated Companies</span></h1>
 	            <p class="fancy-links">Build and automate <a href="#workflows">document workflows</a> that <a href="#connections">connect systems and data</a> for a better <a href="#user-experience">end-user experience</a>. <a href="#documents">Sales &amp; Legal Documents</a> for <a href="#commercial">commercial</a> and <a href="#enterprise">enterprise</a> teams.</p>
 	            <p style="margin-top: 3em; font-size: initial !important;"><a href="#" class="btn-primary">Play Video</a></p>
 	        </div>
