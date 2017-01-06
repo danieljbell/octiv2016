@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-  console.log(window.innerHeight / 2);
-  console.log(window.innerHeight / 3);
-  console.log(window.innerHeight / 4);
-
   $('#documents .document-outputs a').on('click', function(e) {
     e.preventDefault();
   })
@@ -589,7 +585,7 @@ $('.sidebar-links a').on('click', function(e) {
 });
 
 
-if ($('.single-integration').length) {
+if ($('.single-integration').length || $('.page-template-page-solutions').length) {
   $('.fixed-hero-section a').on('click', function(e) {
     e.preventDefault();
     var target = $(this.hash);
@@ -617,38 +613,41 @@ $('body').scrollspy({
 REMOVE STYLES FOR CONTACT FORM
 ==============================
 */
-MktoForms2.whenReady(function (form) {
-  var pageURL = document.documentURI;
-  var formObj = $('.mktoForm');
 
-  // Remove styles
-  removeStyles(formObj);
-  $(window).resize(function(){
+if (window.MktoForms2) {
+  MktoForms2.whenReady(function (form) {
+    var pageURL = document.documentURI;
+    var formObj = $('.mktoForm');
+
+    // Remove styles
     removeStyles(formObj);
+    $(window).resize(function(){
+      removeStyles(formObj);
+    });
+
+    // Add styles
+    formObj.find('.mktoFormRow').addClass('third');
+    formObj.find('select').addClass('fancy');
+    formObj.find('.mktoButton').addClass('btn-primary');
+    formObj.find('.mktoButtonRow').addClass('centered');
+
+    // Send page URL to Marketo
+    $('input[name="sourceURL"]').attr('value', pageURL);
+
+    function removeStyles(formObj) {
+      $('#mktoForms2BaseStyle').remove();
+      $('#mktoForms2ThemeStyle').remove();
+      formObj.find('.mktoOffset').remove();
+      formObj.find('.mktoGutter').remove();
+      formObj.find('.mktoClear').remove();
+      formObj.attr('style', '');
+      formObj.find('style').remove();
+      formObj.find('.mktoHasWidth').attr('style', '');
+      formObj.find('.mktoButtonWrap');
+      formObj.find('.mktoInset').attr('style', '');
+    }
   });
-
-  // Add styles
-  formObj.find('.mktoFormRow').addClass('third');
-  formObj.find('select').addClass('fancy');
-  formObj.find('.mktoButton').addClass('btn-primary');
-  formObj.find('.mktoButtonRow').addClass('centered');
-
-  // Send page URL to Marketo
-  $('input[name="sourceURL"]').attr('value', pageURL);
-
-  function removeStyles(formObj) {
-    $('#mktoForms2BaseStyle').remove();
-    $('#mktoForms2ThemeStyle').remove();
-    formObj.find('.mktoOffset').remove();
-    formObj.find('.mktoGutter').remove();
-    formObj.find('.mktoClear').remove();
-    formObj.attr('style', '');
-    formObj.find('style').remove();
-    formObj.find('.mktoHasWidth').attr('style', '');
-    formObj.find('.mktoButtonWrap');
-    formObj.find('.mktoInset').attr('style', '');
-  }
-});
+}
 
 
 

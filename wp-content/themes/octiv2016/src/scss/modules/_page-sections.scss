@@ -1,0 +1,7 @@
+.section-content {
+  display: flex;
+  > div:first-child {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}

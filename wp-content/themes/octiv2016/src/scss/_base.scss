@@ -9,7 +9,7 @@ body {
 section {
 	padding: 3rem 0;
 	&.fat-section {
-		@include bp(sm) {
+		@include bp(md) {
 	    padding: 6rem 0;
 	  }
 	}
