@@ -56,9 +56,27 @@
 		<div class="half-stack">
 			<div class="workflows-visual">
 				<div class="timeline">
-					<div class="build button"><span>build</span></div>
-					<div class="integrate button"><span>integrate</span></div>
-					<div class="publish button"><span>publish</span></div>
+					<div class="build button">
+						<span class="centered">
+							<svg style="width: 100%; max-width: 65%;" fill="#42b0d8">
+								<use xlink:href="#icon-wrench">
+							</svg>
+						</span>
+					</div>
+					<div class="integrate button">
+						<span class="centered">
+							<svg style="width: 100%; max-width: 40%;" fill="#33ab40">
+								<use xlink:href="#icon-plug">
+							</svg>
+						</span>
+					</div>
+					<div class="publish button">
+						<span class="centered">
+							<svg style="width: 100%; max-width: 45%;" fill="#ed4c06">
+								<use xlink:href="#icon-document">
+							</svg>
+						</span>
+					</div>
 				</div>
 			</div>
 			<div class="workflows-content">

@@ -57,8 +57,11 @@ $radius: 5px;
 ANIMATION TIMINGS
 =========================
 */
-$bounce-in: 500ms cubic-bezier(.17,.67,.29,1.29);
-$bounce-out: 500ms cubic-bezier(.67,-.17,.29,1.29);
+$fast: 250ms;
+$normal: 500ms;
+$slow: 1000ms;
+$bounce-in: cubic-bezier(.17,.67,.29,1.29);
+$bounce-out: cubic-bezier(.67,-.17,.29,1.29);
 
 
 /*

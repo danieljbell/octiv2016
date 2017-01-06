@@ -188,31 +188,97 @@ WORKFLOWS SECTION
 }
 
 .workflows-visual .timeline {
+  overflow: hidden;
   box-shadow: inset 0 99px $white, inset 0 102px $mgray;
-  min-height: 200px;
+  min-height: 215px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   // .workflows-visual .timeline .button
   .button {
     border-radius: 50%;
+    position: relative;
     background-color: $white;
     box-shadow: 0 0 25px rgba(black, 0.1);
     border: 3px solid $mgray;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     transform: translateY(25px);
     display: flex;
-    opacity: 0;
-    transition: all 200ms ease-out;
+    transition: all 500ms $bounce-in;
+    margin: 0 0rem;
+    top: 25px;
+    @include bp(md) {
+      top: initial;
+      width: 150px;
+      height: 150px;
+      margin: 0 0.85rem;
+    }
     span {
       margin: auto;
+    }
+    svg {
+      position: relative;
+      top: -25px;
+      @include bp(md) {
+        top: -3px;
+      }
     }
   }
 }
 
+.workflows-visual .build.button {
+  transform: translateX(-150%) translateY(25px);
+  z-index: 3;
+  svg {
+    left: -2px;
+  }
+}
+
+.workflows-visual .integrate.button {
+  transform: translateX(-275%) translateY(25px);
+  z-index: 2;
+  transition-duration: 600ms;
+}
+
+.workflows-visual .publish.button {
+  transform: translateX(-390%) translateY(25px);
+  transition-duration: 700ms;
+}
+
+.workflows-visual .build:after,
+.workflows-visual .integrate:after,
+.workflows-visual .publish:after {
+  content: 'Build';
+  font-weight: bold;
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.workflows-visual .build:after {
+  content: 'Build';
+}
+
+.workflows-visual .integrate:after {
+  content: 'Integrate';
+}
+
+.workflows-visual .publish:after {
+  content: 'Publish';
+}
+
 .workflows-visual.in-view .timeline {
-  .button {
-    opacity: 1;
+  .build.button,
+  .integrate.button,
+  .publish.button {
+    transform: translateX(0%) translateY(25px);
+  }
+  .integrate.button {
+    transition-delay: 500ms;
+  }
+  .publish.button {
+    transition-delay: 1000ms;
   }
 }
 
@@ -323,7 +389,7 @@ CONNECTIONS SECTION
 
 .connections-visual.in-view div[class*='badge'],
 .documents-visual.in-view div[class*='badge'] {
-  transition: all $bounce-in;
+  transition: all $normal $bounce-in;
   a {
     box-shadow: 0 0 25px rgba(black, 0.2);
     &:focus {
@@ -486,11 +552,14 @@ USER EXPERIENCE SECTION
 ==============================
 */
 #user-experience {
-  background-image: linear-gradient(to right, rgba(255,255,255,0.85) 55%,rgba(255,255,255,0) 80%), url(../dist/img/user-experience-bg.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(../dist/img/user-experience-bg.jpg);
   // box-shadow: inset 0 0 50px rgba(black, 0.5);
   background-position: right center;
   background-size: cover;
-  padding: 8rem 0;
+  @include bp(sm) {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.85) 55%,rgba(255,255,255,0) 80%), url(../dist/img/user-experience-bg.jpg);
+    padding: 8rem 0;
+  }
 }
 
 .ux-content > div:first-child svg {
@@ -559,7 +628,7 @@ DOCUMENTS SECTION
   border-radius: 50%;
   border: 5px solid $white;
   box-shadow: 0 0 15px rgba(black, 0.15);
-  transition: all $bounce-out !important;
+  transition: all $normal $bounce-out !important;
   @include bp(sm) {
     width: 95px;
     height: 95px;
