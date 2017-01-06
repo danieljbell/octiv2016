@@ -29,8 +29,9 @@ form {
 			box-shadow: inset 0 -3px $brand;
 		}
 		[class="brand-callout"] & {
+			border: 0;
 			&:active, &:focus {
-				box-shadow: inset 0 -3px $gray;
+				box-shadow: inset 0 -3px $brand2;
 			}
 		}
 	}

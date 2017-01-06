@@ -70,7 +70,7 @@
                   else :
                     echo '<h4>' . get_sub_field('trigger_title') . '</h4>';
                   endif;
-                  echo get_sub_field('trigger_description');
+                  echo '<p>' . get_sub_field('trigger_description') . '</p>';
                   if (get_sub_field('trigger_link')) :
                     echo '<a href="' . get_sub_field('trigger_link') . '" class="btn-arrow">Learn More</a>';
                   endif;
