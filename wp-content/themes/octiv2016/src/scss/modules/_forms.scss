@@ -28,6 +28,11 @@ form {
 			outline: 0;
 			box-shadow: inset 0 -3px $brand;
 		}
+		[class="brand-callout"] & {
+			&:active, &:focus {
+				box-shadow: inset 0 -3px $gray;
+			}
+		}
 	}
 	input {
 		:invalid {
@@ -138,6 +143,9 @@ fieldset {
 	color: $brand;
 	font-weight: bold;
 	margin-right: 5px;
+	[class*="callout"] & {
+		color: $white;
+	}
 }
 
 .mktoLabel {
@@ -146,12 +154,19 @@ fieldset {
 }
 
 .mktoError {
-	top: 50%;
-	right: initial !important;
-	bottom: initial !important;
-  position: absolute;
-  transform: translateY(-50%) translateX(5px);
+	top: -1rem !important;
+	right: 0 !important;
+	bottom: 0 !important;
+  // position: absolute;
+  // transform: translateY(-50%) translateX(5px);
   color: red;
   font-size: 0.85em;
   font-weight: bold;
+	[class*="callout"] & {
+		color: $gray;
+	}
+}
+
+.mktoErrorDetail {
+	font-style: italic;
 }

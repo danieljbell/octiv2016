@@ -142,7 +142,7 @@
 					</svg>
 				</div>
 				<div>
-					<h2>End-User Experience</h2>
+					<h2>A Better End-User Experience</h2>
 					<p>Octiv reduces the friction for end users through ease of consumption, online editing, collaboration, mark-up or redlining. By streamlining workflows, Octiv reduces the number of time-consuming steps as well as interactions with technology and teams.</p>
 					<a href="#" class="btn-arrow">Learn More</a>
 				</div>

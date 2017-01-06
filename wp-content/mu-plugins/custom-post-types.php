@@ -506,7 +506,7 @@ function register_integration_post_type() {
     'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/integrations' ),
-    'menu_icon'   => 'dashicons-media-text',
+    'menu_icon'   => 'dashicons-admin-plugins',
     'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'capability_type' => 'integrations',
     'map_meta_cap' => true,
@@ -567,4 +567,75 @@ function integration_init() {
     );
 }
 add_action( 'init', 'integration_init' );
+
+
+
+/*
+==============================
+REGISTER USE CASE POST TYPE
+==============================
+*/
+add_action( 'init', 'register_use_case_post_type' );
+
+function register_use_case_post_type() {
+
+  $labels = array(
+    'name'                => 'Use Cases',
+    'singular_name'       => 'Use Case',
+    'add_new'             => 'Add New Use Case',
+    'add_new_item'        => 'Add New Use Case',
+    'edit_item'           => 'Edit Use Case',
+    'new_item'            => 'New Use Case',
+    'all_items'           => 'All Use Case',
+    'view_item'           => 'View Use Case',
+    'search_items'        => 'Search Use Case',
+    'not_found'           => 'No use case found',
+    'not_found_in_trash'  => 'No use case found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Use Cases'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => true,
+    // 'hierarchical'  => true,
+    'rewrite'            => array( 'slug' => 'platform/use-cases' ),
+    'menu_icon'   => 'dashicons-art',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'capability_type' => 'use-cases',
+    'map_meta_cap' => true,
+    // 'show_in_rest'       => true,
+        // 'rest_base'          => 'support-api',
+        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_use_case',
+    'read_post'              => 'read_use_case',
+    'delete_post'            => 'delete_use_case',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_use_cases',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_use_cases',
+    'edit_others_posts'      => 'manage_use_cases',
+    'publish_posts'          => 'manage_use_cases',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_use_cases',
+    'delete_private_posts'   => 'manage_use_cases',
+    'delete_published_posts' => 'manage_use_cases',
+    'delete_others_posts'    => 'manage_use_cases',
+    'edit_private_posts'     => 'edit_use_cases',
+    'edit_published_posts'   => 'edit_use_cases'
+    ),
+  );
+
+  register_post_type( 'use-cases', $args );
+}
+
 ?>

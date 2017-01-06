@@ -28,6 +28,12 @@ button {
 		background-color: lighten($brand, 15%);
 		color: $white;
 	}
+	[class="brand-callout"] & {
+		background-color: $brand2;
+		&:hover {
+			background-color: darken($brand2, 10%);
+		}
+	}
 }
 
 .btn-primary-outline {
@@ -37,7 +43,7 @@ button {
 	&:hover,
 	&:focus,
 	.card:hover & {
-		outline: 0;		
+		outline: 0;
 		background-color: $brand;
 		color: $white;
 	}
