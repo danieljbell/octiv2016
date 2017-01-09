@@ -182,35 +182,35 @@ if(is_404() && $_GET['ref']=="tb"){
                 <p class="centered">Octiv streamlines the workflow for teams that support sales and legal documents.</p>
                 <div class="fourth">
                   <div>
-                    <a href="#">
+                    <a href="/solutions/octiv-for-cios">
                       <svg>
                         <use xlink:href="#icon-CIOs">
                       </svg>
                     </a>
                     <h4>For CIOs</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Quod, <a href="#">rem</a>?</p>
+                    <p>Octiv helps CIOs <a href="/solutions/octiv-for-cios/#unify-standardize">unify &amp; standardize</a> a range of <a href="/solutions/octiv-for-cios/#document-workflows">document workflows</a> that leverage <a href="/solutions/octiv-for-cios/#current-applications">current applications</a> and <a href="/solutions/octiv-for-cios/#data">data</a>.</p>
                   </div>
                   <div>
-                    <a href="#">
+                    <a href="/solutions/octiv-for-sales/">
                       <svg>
                         <use xlink:href="#icon-handshake">
                       </svg>
                     </a>
                     <h4>For Sales</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Officia, <a href="#">rerum</a>.</p>
+                    <p>Octiv helps Sales reduce time spent creating <a href="/solutions/octiv-for-sales/#proposals">proposals</a>, <a href="/solutions/octiv-for-sales/#quotes">quotes</a>, <a href="/solutions/octiv-for-sales/#sows">SOWs</a> and other common <a href="/solutions/octiv-for-sales/#documents">documents</a>.</p>
                   </div>
                   <div>
-                    <a href="#">
+                    <a href="/solutions/octiv-for-legal/">
                       <svg>
                         <use xlink:href="#icon-legal">
                       </svg>
                     </a>
                     <h4>For Legal</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Nihil, <a href="#">temporibus</a>!</p>
+                    <p>Octiv helps Legal streamline the workflow for <a href="/solutions/octiv-for-legal/#review">review</a>, <a href="/solutions/octiv-for-legal/#edit">edit</a> and <a href="/solutions/octiv-for-legal/#approval">approval</a> of commercial <a href="/solutions/octiv-for-legal/#documents">documents</a>.</p>
                   </div>
                   <div>
                     <a href="#">
-                      <svg>
+                      <svg style="max-width: 85px;">
                         <use xlink:href="#icon-finance">
                       </svg>
                     </a>
@@ -311,57 +311,74 @@ if(is_404() && $_GET['ref']=="tb"){
                         while ($event_query->have_posts()) :
                           $event_query->the_post();
                           $post_terms = get_the_terms($post->ID, 'event_type');
-                          echo '<li>';
-                          echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
-                          echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+                          echo '<li class="nav-event">';
+                          echo '<div class="nav-event-date">NOV 17</div>';
+                          echo '<div>';
+                            echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
+                            echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+                          echo '</div>';
                           echo '</li>';
                         endwhile;
                         echo '</ul>';
                       endif;
                       wp_reset_query();
                     ?>
+                    <div class="half-only centered">
+                      <a href="/events" class="btn-primary-outline">View All Events</a>
+                    </div>
                   </div>
                   <div>
                     <h2>Learn About Octiv</h2>
                     <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
-                    <ul class="half no-bul">
+                    <ul class="half no-bul nav-resources">
                       <li>
                         <span>
-                          <svg>
+                          <svg class="blog-icon">
                             <use xlink:href="#icon-blog">
                           </svg>
                         </span>
-                        <h4>Blog</h4>
-                        <p>Something cool about our <a href="#">blog</a>.</p>
+                        <div>
+                          <h4>Blog</h4>
+                          <p>Something cool about our <a href="/resources/blog">blog</a>.</p>
+                        </div>
                       </li>
                       <li>
                         <span>
-                          <svg>
+                          <svg class="client-story-icon">
                             <use xlink:href="#icon-client-story">
                           </svg>
                         </span>
-                        <h4>Client Stories</h4>
-                        <p>Something cool about our <a href="#">client stories</a>.</p>
+                        <div>
+                          <h4>Client Stories</h4>
+                          <p>Something cool about our <a href="/resources/client-stories">client stories</a>.</p>
+                        </div>
                       </li>
                       <li>
                         <span>
-                          <svg>
+                          <svg class="webinar-icon">
                             <use xlink:href="#icon-webinar">
                           </svg>
                         </span>
-                        <h4>Webinars</h4>
-                        <p>Something cool about our <a href="#">webinars</a>.</p>
+                        <div>
+                          <h4>Webinars</h4>
+                          <p>Something cool about our <a href="/resources/webinars">webinars</a>.</p>
+                        </div>
                       </li>
                       <li>
-                        <span>
+                        <span class="whitepaper-icon">
                           <svg>
                             <use xlink:href="#icon-whitepapers">
                           </svg>
                         </span>
-                        <h4>Whitepapers</h4>
-                        <p>Something cool about our <a href="#">whitepapers</a>.</p>
+                        <div>
+                          <h4>Whitepapers</h4>
+                          <p>Something cool about our <a href="/resources/whitepapers">whitepapers</a>.</p>
+                        </div>
                       </li>
                     </ul>
+                  </div>
+                  <div class="half-only centered">
+                    <a href="/resources" class="btn-primary-outline">View All Resources</a>
                   </div>
                 </div>
               </div>
