@@ -20,13 +20,16 @@
   $schedule_heading = get_field('schedule_heading');
     if (have_rows('schedule')) :
       echo '<section><div class="site-width">';
-      if ($schedule_heading) : 
+      if ($schedule_heading) :
         echo '<h2 style="padding: 1rem 0 2rem;" class="centered">' . $schedule_heading . '</h2>';
       endif;
       echo '<div class="slider">';
       while (have_rows('schedule')) :
         echo '<div>';
         the_row();
+        echo '<h3>' . get_sub_field('event_title') . '</h3>';
+        echo '<h4>' . get_sub_field('event_location') . '</h4>';
+        echo '<p>' . get_sub_field('event_description') . '<p>';
         if (have_rows('day')) :
           echo '<div class="fourth-3-fourth">';
           while (have_rows('day')) :
@@ -67,13 +70,13 @@
 
   <?php
   $count = 0;
-    if (have_rows('special_event')) :
-      while (have_rows('special_event')) :
+    if (have_rows('page_section')) :
+      while (have_rows('page_section')) :
         $count++;
         the_row();
           echo '<section class="dark-callout"';
-            if (get_sub_field('special_event_background')) :
-              echo 'style="background-image: url(' . get_sub_field('special_event_image') . ');"';
+            if (get_sub_field('page_section_background')) :
+              echo 'style="background-image: url(' . get_sub_field('page_section_image') . ');"';
             endif;
           echo '>';
             echo '<div class="site-width">';
@@ -83,12 +86,12 @@
                 echo '<div class="half-stack">';
               }
                 echo '<div class="white-text">';
-                  echo '<h2>' . get_sub_field('special_event_title') . '</h2>';
-                  echo '<p>' . get_sub_field('special_event_location') . '&nbsp;|&nbsp;' . get_sub_field('special_event_date') . '&nbsp;|&nbsp;' . get_sub_field('special_event_time') . '</p>';
-                  echo '<p>' . get_sub_field('special_event_description') . '</p>';
+                  echo '<h2>' . get_sub_field('section_title') . '</h2>';
+                  echo '<p>' . get_sub_field('page_section_location') . '&nbsp;|&nbsp;' . get_sub_field('page_section_date') . '&nbsp;|&nbsp;' . get_sub_field('page_section_time') . '</p>';
+                  echo '<p>' . get_sub_field('page_section_description') . '</p>';
                 echo '</div>';
                 echo '<div class="box" style="color: #000;">';
-                  echo '<iframe src="' . get_sub_field('special_event_form') . '" width="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
+                  echo '<iframe src="' . get_sub_field('page_section_form') . '" width="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
                 echo '</div>';
               echo '</div>';
             echo '</div>';
@@ -120,7 +123,7 @@
       .fixed-hero-section {
         background-position: center;
         background-size: cover;
-        padding: 6rem 0; 
+        padding: 6rem 0;
       }
     }
 
@@ -152,7 +155,7 @@
         <h1><?php the_title(); ?></h1>
       </div>
     </div>
-    
+
     <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
 
@@ -166,7 +169,7 @@
               <hr>
               <?php
                 $args = array(
-                  'post_type' => 'events', 
+                  'post_type' => 'events',
                   'posts_per_page' => 3,
                   'post__not_in' => array($post->ID)
                 );
@@ -177,7 +180,7 @@
                   endwhile;
                 endif;
                 wp_reset_query();
-              ?>    
+              ?>
             </div>
             <div>
               <div class="video-outer">

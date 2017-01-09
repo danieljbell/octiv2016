@@ -295,6 +295,77 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li>
             <button id="nav-resources">Resources</button>
+            <div class="callout">
+              <div class="site-width">
+                <div class="half">
+                  <div>
+                    <h2>Upcoming Events</h2>
+                    <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
+                    <?php
+                      $args = array(
+                        'post_type' => 'events'
+                      );
+                      $event_query = new WP_Query($args);
+                      if ($event_query->have_posts()) :
+                        echo '<ul class="half no-bul">';
+                        while ($event_query->have_posts()) :
+                          $event_query->the_post();
+                          $post_terms = get_the_terms($post->ID, 'event_type');
+                          echo '<li>';
+                          echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
+                          echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+                          echo '</li>';
+                        endwhile;
+                        echo '</ul>';
+                      endif;
+                      wp_reset_query();
+                    ?>
+                  </div>
+                  <div>
+                    <h2>Learn About Octiv</h2>
+                    <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
+                    <ul class="half no-bul">
+                      <li>
+                        <span>
+                          <svg>
+                            <use xlink:href="#icon-blog">
+                          </svg>
+                        </span>
+                        <h4>Blog</h4>
+                        <p>Something cool about our <a href="#">blog</a>.</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg>
+                            <use xlink:href="#icon-client-story">
+                          </svg>
+                        </span>
+                        <h4>Client Stories</h4>
+                        <p>Something cool about our <a href="#">client stories</a>.</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg>
+                            <use xlink:href="#icon-webinar">
+                          </svg>
+                        </span>
+                        <h4>Webinars</h4>
+                        <p>Something cool about our <a href="#">webinars</a>.</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg>
+                            <use xlink:href="#icon-whitepapers">
+                          </svg>
+                        </span>
+                        <h4>Whitepapers</h4>
+                        <p>Something cool about our <a href="#">whitepapers</a>.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li>
             <button id="nav-company">Company</button>
