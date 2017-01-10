@@ -662,19 +662,23 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
             'url' => site_url() . '/platform',
             'text' => 'Platform',
         );
-
         array_splice( $links, 1, 0, $breadcrumb );
-
     }
 
 		if ( is_singular( 'post' ) ) {
         $breadcrumb[] = array(
-					'url' => site_url() . '/Resources',
+					'url' => site_url() . '/resources',
           'text' => 'Resources',
         );
-
         array_splice( $links, 1, 0, $breadcrumb );
+    }
 
+		if ( is_tax( 'event_type' ) ) {
+        $breadcrumb[] = array(
+					'url' => site_url() . '/events',
+          'text' => 'Events',
+        );
+        array_splice( $links, 1, 0, $breadcrumb );
     }
 
     return $links;

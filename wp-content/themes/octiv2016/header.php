@@ -302,8 +302,42 @@ if(is_404() && $_GET['ref']=="tb"){
                     <h2>Upcoming Events</h2>
                     <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
                     <?php
+                    $today = date('Ymd');
+
+                    // $upcoming_args = array (
+              			//     'post_type' => 'events',
+                    //     'order' => 'ASC',
+                    //     'orderby' => 'meta_value',
+              			//     'meta_query' => array(
+              			// 		array(
+              			// 	        'key'		=> 'event_start_date',
+              			// 	        'compare'	=> '>=',
+              			// 	        'value'		=> $today,
+              			// 	    )
+              			//     ),
+              			// );
+                    //
+                    // //query for upcoming posts
+              			// $posts = get_posts( $upcoming_args );
+                    //
+              			// //loop through upcoming posts
+              			// foreach ( $posts as $post ) : setup_postdata( $post );
+              			// 	echo get_field('event_start_date') . '<br>';
+              			// endforeach; wp_reset_postdata();
+
+                    // echo $today;
                       $args = array(
-                        'post_type' => 'events'
+                        'post_type' => 'events',
+                        'posts_per_page' => 6,
+                        'order' => 'ASC',
+                        'orderby' => 'meta_value',
+                        'meta_query' => array(
+              					array(
+              				        'key'		=> 'event_start_date',
+              				        'compare'	=> '>=',
+              				        'value'		=> $today,
+              				    )
+              			    ),
                       );
                       $event_query = new WP_Query($args);
                       if ($event_query->have_posts()) :
@@ -312,7 +346,7 @@ if(is_404() && $_GET['ref']=="tb"){
                           $event_query->the_post();
                           $post_terms = get_the_terms($post->ID, 'event_type');
                           echo '<li class="nav-event">';
-                          echo '<div class="nav-event-date">NOV 17</div>';
+                          echo '<div class="nav-event-date">' . get_field('event_start_date') . '</div>';
                           echo '<div>';
                             echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
                             echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';

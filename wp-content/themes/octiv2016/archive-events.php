@@ -53,6 +53,7 @@
             echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '<a href="/events/' . $custom_term->slug . '" style="color: rgba(0,0,0,0.5); font-size: 0.65em; display: inline-block; margin-left: 0.5rem; font-style: italic; font-weight: normal;">(see all)</a></h3>';
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
+            $event_date = get_field('event_start_date');
             $term = get_the_terms($post->ID, 'event_type');
             if ($term[0]->slug === 'demos') :
               echo do_shortcode( '[get_card thumb="false"]' );
@@ -61,7 +62,7 @@
               echo do_shortcode( '[get_card thumb="true"]' );
             endif;
             if ($term[0]->slug === 'webinar') :
-              echo do_shortcode( '[get_card thumb="false"]' );
+              echo do_shortcode( '[get_card thumb="true"]' );
             endif;
           endwhile;
             echo '</div>';

@@ -460,6 +460,7 @@ li div.nav-event-date {
 	font-size: 1.3em;
 	line-height: 0.9;
 	margin-right: 0.5rem;
+	text-transform: uppercase;
 }
 
 .nav-resources li span {
@@ -485,4 +486,8 @@ li div.nav-event-date {
 
 .nav-resources .webinar-icon {
 	fill: $brand2;
+}
+
+#nav-solution + .callout .fourth p {
+	font-size: 0.9em;
 }
