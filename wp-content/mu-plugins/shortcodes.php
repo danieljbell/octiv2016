@@ -21,6 +21,9 @@ add_shortcode('get_card', function($atts) {
             if ($tag === 'beta') :
               echo '<p class="card-tag-webinars float-r-a">Beta</p>';
             endif;
+            if ($tag === 'past') :
+              echo '<p class="card-tag-webinars float-r-a">Past Event</p>';
+            endif;
             if ($tag === 'roadmap') :
               echo '<p class="card-tag-blog float-r-a">Roadmap</p>';
             endif;

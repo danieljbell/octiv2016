@@ -3,7 +3,7 @@
   <?php
     // test for industry conference in term slug
     $term = get_the_terms($post->ID, 'event_type');
-    if ($term[0]->slug === 'industry-conference') :
+    if ($term[0]->slug === 'industry-conferences') :
   ?>
 
   <div class="fixed-hero-section">
@@ -47,24 +47,6 @@
         echo '</div>';
       endwhile;
       echo '</div></div></section>';
-    endif;
-  ?>
-
-  <?php
-    if (get_field('event_connect')) :
-      echo '<section class="brand-two-callout">';
-        echo '<div class="site-width">';
-          echo '<div class="half">';
-            echo '<div>';
-              echo '<h2>' . get_field('event_connect_title') . '</h2>';
-              echo '<p>' . get_field('event_connect_description') . '</p>';
-            echo '</div>';
-            echo '<div>';
-              echo '<iframe src="' . get_field('event_connect_form') . '" width="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
-            echo '</div>';
-          echo '</div>';
-        echo '</div>';
-      echo '</section>';
     endif;
   ?>
 
@@ -147,7 +129,7 @@
   <?php
     // test for webinar in term slug
     $term = get_the_terms($post->ID, 'event_type');
-    if ($term[0]->slug === 'webinar') :
+    if ($term[0]->slug === 'webinars') :
     $webinar_source = get_field('webinar_source', $queried_object);
   ?>
     <div class="fixed-hero-section">

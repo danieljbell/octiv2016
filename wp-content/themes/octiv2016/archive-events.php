@@ -56,12 +56,18 @@
             $event_date = get_field('event_start_date');
             $term = get_the_terms($post->ID, 'event_type');
             if ($term[0]->slug === 'demos') :
-              echo do_shortcode( '[get_card thumb="false"]' );
+              // print_r($event_date);
+              // print_r(date('Ymd'));
+              $tag_conditional = '';
+              if ($event_date < date('Ymd')) {
+                $tag_conditional = 'past';
+              }
+              echo do_shortcode( '[get_card thumb="false" tag="' . $tag_conditional . '"]' );
             endif;
-            if ($term[0]->slug === 'industry-conference') :
+            if ($term[0]->slug === 'industry-conferences') :
               echo do_shortcode( '[get_card thumb="true"]' );
             endif;
-            if ($term[0]->slug === 'webinar') :
+            if ($term[0]->slug === 'webinars') :
               echo do_shortcode( '[get_card thumb="true"]' );
             endif;
           endwhile;

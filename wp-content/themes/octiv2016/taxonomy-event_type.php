@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
+<?php $tax_title = str_replace('Event Type: ', '', get_the_archive_title()); ?>
+
 <div class="fixed-hero-section">
   <div class="site-width white-text">
-    <h1><?php echo str_replace('Event Type: ', '', get_the_archive_title()); ?></h1>
+    <h1><?php echo $tax_title; ?></h1>
   </div>
 </div>
 
@@ -12,7 +14,7 @@
   <div class="site-width">
     <div class="fourth-3-fourth">
       <div class="sticky-sidebar" id="sticky-sidebar">
-        <h4>Events</h4>
+        <h4><?php echo $tax_title; ?></h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
           <li><a href="#upcoming">Upcoming</a></li>
@@ -21,7 +23,7 @@
       </div>
       <div class="sticky-listing">
         <section style="padding-top: 0;">
-          <h3 id="upcoming">Upcoming Events</h3>
+          <h3 id="upcoming">Upcoming <?php echo $tax_title; ?></h3>
           <?php
       			// global date param
       			$today = date('Ymd');
@@ -39,7 +41,7 @@
       			    'meta_query' => array(
       					array(
   				        'key'		=> 'event_start_date',
-  				        'compare'	=> '<=',
+  				        'compare'	=> '>',
   				        'value'		=> $today,
     				    )
     			    ),
@@ -55,13 +57,13 @@
               endwhile;
               echo '</div>';
               else :
-                echo 'Sorry, there are no ' . str_replace('Event Type: ', '', get_the_archive_title()) . ' currently planned at this time.';
+                echo 'Sorry, there are no ' . $tax_title . ' currently planned at this time.';
             endif;
 
     			?>
         </section>
         <section style="padding-top: 0;">
-          <h3 id="past">Past Events</h3>
+          <h3 id="past">Past <?php echo $tax_title; ?></h3>
           <?php
       			// global date param
       			$today = date('Ymd');
@@ -79,7 +81,7 @@
       			    'meta_query' => array(
       					array(
   				        'key'		=> 'event_start_date',
-  				        'compare'	=> '>',
+  				        'compare'	=> '<',
   				        'value'		=> $today,
     				    ),
     			    ),
@@ -91,7 +93,7 @@
               echo '<div class="third">';
               while ($past_query->have_posts()) :
                 $past_query->the_post();
-                echo do_shortcode('[get_card]');
+                echo do_shortcode('[get_card tag="past"]');
               endwhile;
               echo '</div>';
               else :
