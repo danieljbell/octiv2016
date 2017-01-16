@@ -1,13 +1,17 @@
 <?php get_header(); ?>
 
-<?php if( get_field('status')[0] == 'roadmap' ) : ?>
+<?php
+  $feature_status = get_field('status');
+?>
+
+<?php if( $feature_status[0] == 'roadmap' ) : ?>
   <div class="fixed-hero-section" style="background-color: #33ab40;">
     <div class="site-width" style="color: #fff;">
       <h1><?php the_title(); ?></h1>
       <p style="margin-bottom: 0;"><em>Note: This is on the roadmap.</em></p>
     </div>
   </div>
-<?php elseif( get_field('status')[0] == 'beta' ) : ?>
+<?php elseif( $feature_status[0] == 'beta' ) : ?>
   <div class="fixed-hero-section" style="background-color: #42b0d8;">
     <div class="site-width" style="color: #fff;">
       <h1><?php the_title(); ?></h1>
