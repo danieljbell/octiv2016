@@ -45,6 +45,13 @@ add_shortcode('get_card', function($atts) {
             elseif ($excerpt === 'custom') :
               echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
               echo '<p>' . get_field('short_description', $post->ID) . '</p>';
+            elseif ($excerpt === 'date') :
+              $event_start = get_field('event_start_date');
+              $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+              $date = date_create($event_start);
+              $date = date_format($date,"F d, Y");
+              echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<p>' . $date . '</p>';
             else :
               echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
             endif;

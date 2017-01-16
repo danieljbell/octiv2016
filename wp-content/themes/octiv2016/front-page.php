@@ -204,6 +204,7 @@
 				<div>
 					<h2>Sales &amp; Legal Documents</h2>
 					<p>Octiv powers commercial, customer-facing documents such as proposals, quotes, RFPs, SOWs, NDAs, MSAs partner agreements and other commercial contracts. Octiv streamlines workflows which reduces time-consuming steps as well as interactions with technology and teams. This simplifies the seller experience and gives time back to sales to be more productive.</p>
+					<p><strong>Add something to link to the Octiv for pages for each industry.</strong></p>
 					<a href="#" class="btn-arrow">Learn More</a>
 				</div>
 			</div>

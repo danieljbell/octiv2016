@@ -84,12 +84,13 @@ if(is_404() && $_GET['ref']=="tb"){
               <div class="site-width">
                 <div class="half">
                   <div>
-                    <h2>Octiv Powers Unified Document Workflows for a Range of Applications</h2>
+                    <!-- <h2>Octiv Powers Unified Document Workflows for a Range of Applications</h2>
                     <p>Build and automate <a href="/#workflows">document workflows</a> that <a href="/#connections">connect systems and data</a> for a better <a href="/#user-experience">end-user experience</a>. Integrate and standardize the processes, systems and data required to create and manage mission-critical <a href="/#documents">sales and legal documents</a> for <a href="/#commercial">commercial</a> and <a href="/#enterprise">enterprise</a> teams. Octiv integrates with CPQ, ERP, CRM and other systems in a single, streamlined workflow.</p>
-                    <a href="#" class="btn-arrow">Learn More</a>
+                    <a href="#" class="btn-arrow">Learn More</a> -->
+                    <a href="/platform/integrations">Integrations</a>
                   </div>
                   <div>
-                    <h2>Octiv Offers Best in Cloud Technology</h2>
+                    <!-- <h2>Octiv Offers Best in Cloud Technology</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, cumque.</p>
                     <ul class="half">
                       <li><a href="#">Native HTML5 Octiv Docs</a></li>
@@ -97,7 +98,11 @@ if(is_404() && $_GET['ref']=="tb"){
                       <li><a href="#">AWS for Ultimate Scalability</a></li>
                       <li><a href="#">Industry-Best Salesforce Integration</a></li>
                       <li><a href="#">Industry-Best Security</a></li>
-                    </ul>
+                    </ul> -->
+                    <a href="/platform/catalog">Catalog</a>
+                  </div>
+                  <div>
+                    <a href="/platform/use-cases">Use Cases</a>
                   </div>
                 </div>
               </div>
@@ -180,7 +185,7 @@ if(is_404() && $_GET['ref']=="tb"){
               <div class="site-width">
                 <h2 class="centered">Solutions by Role &amp; Function</h2>
                 <p class="centered">Octiv streamlines the workflow for teams that support sales and legal documents.</p>
-                <div class="fourth">
+                <div class="third">
                   <div>
                     <a href="/solutions/octiv-for-cios">
                       <svg>
@@ -215,6 +220,24 @@ if(is_404() && $_GET['ref']=="tb"){
                       </svg>
                     </a>
                     <h4>For Finance</h4>
+                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <svg style="max-width: 115px;">
+                        <use xlink:href="#icon-people">
+                      </svg>
+                    </a>
+                    <h4>For HR</h4>
+                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <svg style="max-width: 85px;">
+                        <use xlink:href="#icon-finance">
+                      </svg>
+                    </a>
+                    <h4>For Procurement</h4>
                     <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
                   </div>
                 </div>
@@ -302,30 +325,7 @@ if(is_404() && $_GET['ref']=="tb"){
                     <h2>Upcoming Events</h2>
                     <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
                     <?php
-                    $today = date('Ymd');
-
-                    // $upcoming_args = array (
-              			//     'post_type' => 'events',
-                    //     'order' => 'ASC',
-                    //     'orderby' => 'meta_value',
-              			//     'meta_query' => array(
-              			// 		array(
-              			// 	        'key'		=> 'event_start_date',
-              			// 	        'compare'	=> '>=',
-              			// 	        'value'		=> $today,
-              			// 	    )
-              			//     ),
-              			// );
-                    //
-                    // //query for upcoming posts
-              			// $posts = get_posts( $upcoming_args );
-                    //
-              			// //loop through upcoming posts
-              			// foreach ( $posts as $post ) : setup_postdata( $post );
-              			// 	echo get_field('event_start_date') . '<br>';
-              			// endforeach; wp_reset_postdata();
-
-                    // echo $today;
+                      $today = date('Ymd');
                       $args = array(
                         'post_type' => 'events',
                         'posts_per_page' => 6,
@@ -345,8 +345,12 @@ if(is_404() && $_GET['ref']=="tb"){
                         while ($event_query->have_posts()) :
                           $event_query->the_post();
                           $post_terms = get_the_terms($post->ID, 'event_type');
+                          $event_start = get_field('event_start_date');
+                          $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+                          $date = date_create($event_start);
+                          $date = date_format($date,"M d");
                           echo '<li class="nav-event">';
-                          echo '<div class="nav-event-date">' . get_field('event_start_date') . '</div>';
+                          echo '<div class="nav-event-date">' . $date . '</div>';
                           echo '<div>';
                             echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
                             echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
@@ -372,7 +376,7 @@ if(is_404() && $_GET['ref']=="tb"){
                           </svg>
                         </span>
                         <div>
-                          <h4>Blog</h4>
+                          <h4><a href="/resources/blog" style="box-shadow: none;">Blog</a></h4>
                           <p>Something cool about our <a href="/resources/blog">blog</a>.</p>
                         </div>
                       </li>
@@ -383,7 +387,7 @@ if(is_404() && $_GET['ref']=="tb"){
                           </svg>
                         </span>
                         <div>
-                          <h4>Client Stories</h4>
+                          <h4><a href="/resources/client-stories" style="box-shadow: none;">Client Stories</a></h4>
                           <p>Something cool about our <a href="/resources/client-stories">client stories</a>.</p>
                         </div>
                       </li>
@@ -394,7 +398,7 @@ if(is_404() && $_GET['ref']=="tb"){
                           </svg>
                         </span>
                         <div>
-                          <h4>Webinars</h4>
+                          <h4><a href="/resources/webinars" style="box-shadow: none;">Webinars</a></h4>
                           <p>Something cool about our <a href="/resources/webinars">webinars</a>.</p>
                         </div>
                       </li>
@@ -405,7 +409,7 @@ if(is_404() && $_GET['ref']=="tb"){
                           </svg>
                         </span>
                         <div>
-                          <h4>Whitepapers</h4>
+                          <h4><a href="/resources/whitepapers" style="box-shadow: none;">Whitepapers</a></h4>
                           <p>Something cool about our <a href="/resources/whitepapers">whitepapers</a>.</p>
                         </div>
                       </li>
@@ -420,6 +424,28 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li>
             <button id="nav-company">Company</button>
+            <div class="callout">
+              <div class="site-width">
+                <div class="half">
+                  <div class="centered">
+                    <h2>Our People</h2>
+                    <div class="third">
+                      <div><a href="/company/#leadership">Leadership</a></div>
+                      <div><a href="/company/#board-of-directors">Board of Directors</a></div>
+                      <div><a href="/company/careers">Careers</a></div>
+                    </div>
+                  </div>
+                  <div class="centered">
+                    <h2>About Octiv</h2>
+                    <div class="third">
+                      <div><a href="/company">Overview</a></div>
+                      <div><a href="/press-releases">Press</a></div>
+                      <div><a href="/company/contact-us">Contact Us</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>

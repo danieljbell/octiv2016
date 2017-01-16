@@ -1,21 +1,21 @@
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
-	<div class="site-width white-text">
-		<h1>Releases</h1>
+	<div class="site-width white-text centered">
+		<section>
+			<div class="two-third-only">
+				<div style="margin-bottom: 0;">
+					<h1>Get ready for the next release</h1>
+					<p class="font-bump" style="margin-bottom: 0;">If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.</p>
+				</div>
+			</div>
+		</section>
 	</div>
 </div>
 
-<div class="breadcrumb">
-	<div class="site-width">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li>Releases</li>
-		</ul>
-	</div>
-</div>
+<?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
-<section class="white-bg">
+<section>
 	<div class="site-width">
 		<h2>Upcoming Releases</h2>
 		<div class="third">

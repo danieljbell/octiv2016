@@ -53,7 +53,7 @@
               echo '<div class="third">';
               while ($upcoming_query->have_posts()) :
                 $upcoming_query->the_post();
-                echo do_shortcode('[get_card]');
+                echo do_shortcode('[get_card excerpt="date"]');
               endwhile;
               echo '</div>';
               else :
@@ -93,7 +93,7 @@
               echo '<div class="third">';
               while ($past_query->have_posts()) :
                 $past_query->the_post();
-                echo do_shortcode('[get_card tag="past"]');
+                echo do_shortcode('[get_card tag="past" excerpt="date"]');
               endwhile;
               echo '</div>';
               else :

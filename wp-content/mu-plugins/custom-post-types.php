@@ -409,6 +409,7 @@ function register_catalog_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
+    // 'publicly_queryable' => false,
     'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/catalog' ),
@@ -503,6 +504,7 @@ function register_integration_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
+    // 'publicly_queryable' => false,
     'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/integrations' ),
@@ -598,6 +600,7 @@ function register_use_case_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
+    // 'publicly_queryable' => false,
     'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/use-cases' ),

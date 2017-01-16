@@ -53,10 +53,6 @@ get_header();
 				<p><img src="/wp-content/uploads/2016/10/joe-heth.jpg" alt="Joe" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Joe Heth</strong><br>Lead Architect</p>
 			</div>
 			<div class="career-slide">
-				<p>I feel humbled to work for such a great company right out of college. The people are encouraging and the product solves real problems!</p>
-				<p><img src="/wp-content/uploads/2016/10/shelby-couch.jpg" alt="Shelby" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Shelby Couch</strong><br>Office and Community Engagement Manager</p>
-			</div>
-			<div class="career-slide">
 				<p>Love working at Octiv because of the people. It's a fun experience coming into the office every day and getting to see my coworkers and team members.</p>
 				<p><img src="/wp-content/uploads/2016/10/tom-marvel.jpg" alt="Tom" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Tom Marvel</strong><br>Technical Consultant</p>
 			</div>
@@ -76,16 +72,8 @@ get_header();
 				<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/scott-c.png" alt="Scott Cramer" />
-				<p><strong>Scott Cramer</strong><br />Inside Sales<br><a href="https://www.linkedin.com/in/scott-cramer-82b51a7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-			</div>
-			<div>
 				<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
 				<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-			</div>
-			<div>
-				<img src="/wp-content/uploads/2016/07/samantha-haddad.png" alt="Samantha Haddad-Foster" />
-				<p><strong>Samantha Haddad-Foster</strong><br />Talent<br><a href="https://www.linkedin.com/in/samanthahaddad"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 			</div>
 			<div>
 				<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
@@ -115,7 +103,7 @@ get_header();
 	</div>
 </section>
 
-<section class="callout">
+<section class="callout" id="board-of-directors">
 	<div class="site-width">
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
 		<div class="third centered leadership">

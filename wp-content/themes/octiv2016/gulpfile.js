@@ -25,7 +25,7 @@ gulp.task('css', function () {
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.reload({stream:true}))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', function () {

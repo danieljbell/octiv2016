@@ -16,6 +16,7 @@
 						<li><a href="/platform/catalog">Catalog</a></li>
 						<li><a href="/platform/integrations">Integrations</a></li>
 						<li><a href="/support">Support</a></li>
+						<li><a href="/platform/use-cases">Use Cases</a></li>
 					</ul>
 				</div>
 				<div>
@@ -30,9 +31,10 @@
 				<div>
 					<h5>Why Octiv</h5>
 					<ul>
-						<li><a href="#">Vs. Savo</a></li>
+						<li><a href="/why-octiv">Overview</a></li>
+						<!-- <li><a href="#">Vs. Savo</a></li>
 						<li><a href="#">Vs. Qvidian</a></li>
-						<li><a href="#">Vs. Seismic</a></li>
+						<li><a href="#">Vs. Seismic</a></li> -->
 					</ul>
 				</div>
 				<div>
@@ -52,7 +54,7 @@
 						<li><a href="/company/#leadership">Leadership</a></li>
 						<li><a href="/company/careers">Careers</a></li>
 						<li><a href="/press-releases">Press</a></li>
-						<li><a href="#">Contact Us</a></li>
+						<li><a href="/contact-us">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>

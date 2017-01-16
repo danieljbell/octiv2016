@@ -9,9 +9,12 @@ main:before {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #000;
-  opacity: 0.65;
+  background-color: #fff;
   z-index: 4;
+	@include bp(xl) {
+		background-color: #000;
+	  opacity: 0.65;
+	}
 }
 
 header {
