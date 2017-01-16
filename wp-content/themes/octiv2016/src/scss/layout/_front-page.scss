@@ -686,8 +686,14 @@ DOCUMENTS SECTION
 }
 
 .documents-visual.in-view .document-inputs div[class*="badge"] {
-  transform: translate(-50%,125%);
+  transform: translate(-50%,200%);
   box-shadow: none;
+  @include bp(md) {
+    transform: translate(-50%,200%);
+  }
+  @include bp(lg) {
+    transform: translate(-50%,150%);
+  }
 }
 
 .documents-visual.in-view div.octiv-badge {

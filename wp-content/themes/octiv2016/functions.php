@@ -658,11 +658,28 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     global $post;
 
     if ( is_singular( array('integration', 'catalog', 'use-cases') ) || is_post_type_archive( array('integration', 'catalog', 'use-cases') ) || is_tax('integration_type') ) {
-        $breadcrumb[] = array(
-            'url' => site_url() . '/platform',
-            'text' => 'Platform',
-        );
-        array_splice( $links, 1, 0, $breadcrumb );
+			// if ( is_singular( 'catalog' ) ) {
+	    //     $breadcrumb[] = array(
+			// 			'url' => site_url() . '/platform',
+	    //       'text' => 'Platform',
+	    //     );
+			// 		$breadcrumb[] = array(
+			// 			'url' => site_url() . '/catalog',
+	    //       'text' => 'Catalog',
+	    //     );
+			// 		$breadcrumb[] = array(
+			// 			'url' => site_url() . '/tax',
+	    //       'text' => 'Tax',
+	    //     );
+	    //     array_splice( $links, 1, 1, $breadcrumb );
+
+	    // } else {
+				$breadcrumb[] = array(
+						'url' => site_url() . '/platform',
+						'text' => 'Platform',
+				);
+				array_splice( $links, 1, 0, $breadcrumb );
+			// }
     }
 
 		if ( is_singular( 'post' ) ) {
@@ -680,6 +697,8 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
         );
         array_splice( $links, 1, 0, $breadcrumb );
     }
+
+
 
     return $links;
 }

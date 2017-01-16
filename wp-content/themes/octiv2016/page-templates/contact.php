@@ -66,7 +66,7 @@ TEMPLATE NAME: Contact Us
   </div>
 </section>
 
-<section style="background-image: url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat;">
+<section style="background-image: url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
   <div class="site-width white-text">
     <div class="half">
       <div>

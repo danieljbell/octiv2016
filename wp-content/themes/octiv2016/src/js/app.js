@@ -310,7 +310,7 @@ SLIDERS
 $('.slider').slick({
   // autoplay : true,
   // autoplaySpeed : 8000,
-  adaptiveHeight : true,
+  // adaptiveHeight : true,
   arrows : true,
   prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
   nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
@@ -576,7 +576,7 @@ if ($('.sticky-sidebar').length) {
 SMOOTH SCROLLING FOR SIDEBAR LINKS
 ==================================
 */
-$('.sidebar-links a').on('click', function(e) {
+$('.nav.sidebar-links a').on('click', function(e) {
   e.preventDefault();
   var target = $(this.hash);
   $('html, body').animate({
@@ -646,6 +646,17 @@ if (window.MktoForms2) {
       formObj.find('.mktoButtonWrap');
       formObj.find('.mktoInset').attr('style', '');
     }
+  });
+}
+
+if ($('#catalog-screenshots').length) {
+  $('#catalog-screenshots').on('click', 'img', function() {
+    var imagePath = this.currentSrc;
+    var imageTitle = this.alt;
+    $('.empty-modal').find('.modal-content').html(function() {
+      return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
+    });
+    $('.empty-modal').modal();
   });
 }
 

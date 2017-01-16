@@ -1,8 +1,16 @@
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
-  <div class="site-width white-text">
-    <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+  <div class="site-width white-text centered">
+    <svg fill="#fff" style="filter: drop-shadow(0px 0px 8px rgba(0,0,0,1)); margin-bottom: 1.5rem;">
+      <use xlink:href="#icon-handshake">
+    </svg>
+    <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+    <div class="half-only">
+      <div>
+        <p class="font-bump">Explore Octiv’s products and services by category, function, and utility. You can combine multiple components of the platform to solve for your business use cases.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -51,10 +59,13 @@
             echo '<section style="padding-top: 0;">';
             echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
             echo '<div class="third">';
-          while($loop->have_posts()) : $loop->the_post(); 
+          while($loop->have_posts()) : $loop->the_post();
             $tag = get_field('status');
-            if ($tag == 'roadmap') {
+            if ($tag[0] == 'roadmap') {
               $tag = 'roadmap';
+            }
+            if ($tag[0] == 'beta') {
+              $tag = 'beta';
             }
             echo do_shortcode('[get_card excerpt="true" tag="' . $tag . '"]');
           ?>
