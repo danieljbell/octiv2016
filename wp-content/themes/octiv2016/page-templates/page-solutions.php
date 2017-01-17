@@ -58,7 +58,6 @@ $count = 0;
             echo '<div class="section-content">';
               echo '<div class="section-icon">';
                 $icon_file = get_sub_field('section_icon', true);
-                // print_r($icon_file[url]);
                 echo file_get_contents($icon_file[url]);
               echo '</div>';
               echo '<div>';
