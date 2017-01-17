@@ -56,8 +56,8 @@ $count = 0;
           }
             echo '<div class="section-visual">col 1</div>';
             echo '<div class="section-content">';
-              echo '<div>';
-                echo '<img src="//fillmurray.com/75/75" style="max-width: 75px;">';
+              echo '<div class="section-icon">';
+                echo file_get_contents(get_sub_field('section_icon', true)[url]);
               echo '</div>';
               echo '<div>';
                 echo '<h2>' . get_sub_field('section_title') . '</h2>';
@@ -79,6 +79,25 @@ $count = 0;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .section-icon svg {
+    width: 100%;
+    max-width: 75px;
+    fill: #42b0d8;
+  }
+  @media screen and (max-width: 600px) {
+    .section-icon {
+      display: none;
+    }
+  }
+  .fat-section:nth-of-type(2) .section-icon svg {
+    fill: #33ab40;
+  }
+  .fat-section:nth-of-type(3) .section-icon svg {
+    fill: #b949f5;
+  }
+  .fat-section:nth-of-type(4) .section-icon svg {
+    fill: #ed4c06;
   }
 </style>
 

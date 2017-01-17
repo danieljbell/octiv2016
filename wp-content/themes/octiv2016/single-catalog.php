@@ -108,6 +108,14 @@
       display: none;
     }
   }
+  @media screen and (max-width: 1279px) {
+    main .fourth-3-fourth > div:first-child {
+      display: none;
+    }
+    main .fourth-3-fourth > div:nth-child(2) {
+      width: 100%;
+    }
+  }
 </style>
 
 <?php if( get_field('status') == 'beta' ) : ?>
