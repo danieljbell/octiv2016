@@ -90,16 +90,13 @@ header {
 	color: $gray;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
-	transition: all 250ms ease-out;
+	// transition: all 250ms ease-out;
 	display: block;
 	text-align: center;
 	&:hover, &:focus {
 		outline: none;
 		color: $white;
 		background-color: $brand;
-	}
-	@include bp(md) {
-		display: iniline-block;
 	}
 }
 
@@ -110,13 +107,32 @@ header {
 	}
 }
 
-.site-navigation-container li > ul {
+.site-navigation-container .sub-menu {
 	display: none;
 	position: absolute;
 	background-color: $white;
 	box-shadow: 0 0 15px rgba(black, 0.2);
-	padding: 2rem;
+	padding: 0;
 	z-index: 1000;
+}
+
+.sub-menu-item a {
+	text-align: center;
+	border-radius: 0 !important;
+	background-color: transparent !important;
+	color: $gray !important;
+	@include bp(sm) {
+		border-bottom: 1px solid $mgray;
+		text-align: left !important;
+	}
+	&:hover {
+		background-color: $brand !important;
+		color: $white !important;
+	}
+}
+
+.sub-menu-item:last-child a {
+	border-bottom: 0;
 }
 
 // main:before {

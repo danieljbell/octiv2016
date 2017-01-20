@@ -69,6 +69,7 @@
 
 // BREAKPOINTS FOR HERO SECTION
 .home .fixed-hero-section .half > div {
+  margin-bottom: 0;
   @include bp(md) {
     width: 70%;
   }
@@ -85,8 +86,14 @@
   @include bp(sm) {
     font-size: 1.4em;
   }
-  @include bp(lg) {
+  @include bp(md) {
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @include bp(xxl) {
     font-size: 1.7em;
+    padding-left: 2em;
     padding-right: 2em;
   }
 }

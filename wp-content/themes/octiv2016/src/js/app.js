@@ -241,32 +241,33 @@ menuToggle.addEventListener('click', function() {
   }
 });
 
-var headerNavItems = document.querySelectorAll('.site-navigation-container ul > li');
+var headerNavItems = document.querySelectorAll('.site-navigation-container .menu-item');
 headerNavItems.forEach(function(item) {
   item.addEventListener('mouseover', function() {
     if (this.children.length > 1) {
-      this.children[1].style.display = "block";
+      if (window.innerWidth > 600) {
+        this.children[1].style.display = "block";
+      }
+    }
+    if (item.children[0].title != "Contact Us") {
+      headerNavItems[5].children[0].style.backgroundColor = "transparent";
+      headerNavItems[5].children[0].style.color = "#000000";
     }
   });
   item.addEventListener('mouseleave', function() {
     if (this.children.length > 1) {
-      this.children[1].style.display = "none";
+      if (window.innerWidth > 600) {
+        this.children[1].style.display = "none";
+      }
+    }
+    if (item.children[0].title != "Contact Us") {
+      headerNavItems[5].children[0].style.backgroundColor = "#ed4c06";
+      headerNavItems[5].children[0].style.color = "#ffffff";
     }
   });
-  // Change highlight for hover
-  // if (link.title != "Contact Us") {
-  //   if (window.innerWidth > 600) {
-  //     link.addEventListener('mouseover', function() {
-  //       headerNavLinks[5].style.backgroundColor = 'transparent';
-  //       headerNavLinks[5].style.color = '#000000';
-  //     });
-  //   }
-  //   link.addEventListener('mouseleave', function() {
-  //     headerNavLinks[5].style.backgroundColor = '#ed4c06';
-  //     headerNavLinks[5].style.color = '#ffffff';
-  //   });
-  // }
 });
+
+
 
 
 /*

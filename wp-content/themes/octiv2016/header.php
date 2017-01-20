@@ -78,11 +78,11 @@ if(is_404() && $_GET['ref']=="tb"){
     <div class="site-navigation-container">
       <nav>
         <ul>
-          <li>
+          <li class="menu-item">
             <a href="/platform" title="Platform">Platform</a>
-            <ul>
-              <li><a href="/platform/catalog">Catalog</a></li>
-              <li><a href="/platform/integrations">Integrations</a></li>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/platform/catalog">Catalog</a></li>
+              <li class="sub-menu-item"><a href="/platform/integrations">Integrations</a></li>
             </ul>
             <?php
               // echo '
@@ -176,15 +176,15 @@ if(is_404() && $_GET['ref']=="tb"){
               // ';
             ?>
           </li>
-          <li>
+          <li class="menu-item">
             <a href="/solutions" title="Solutions">Solutions</a>
-            <ul>
-              <li><a href="/solutions/for-cios">For CIOs</a></li>
-              <li><a href="/solutions/for-sales">For Sales</a></li>
-              <li><a href="/solutions/for-legal">For Legal</a></li>
-              <li><a href="/solutions/for-finance">For Finance</a></li>
-              <li><a href="/solutions/for-hr">For HR</a></li>
-              <li><a href="/solutions/for-procurement">For Procurement</a></li>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/solutions/for-cios">For CIOs</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-sales">For Sales</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-legal">For Legal</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-finance">For Finance</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-hr">For HR</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-procurement">For Procurement</a></li>
             </ul>
             <?php
               // echo '
@@ -268,7 +268,7 @@ if(is_404() && $_GET['ref']=="tb"){
               // ';
             ?>
           </li>
-          <li>
+          <li class="menu-item">
             <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
             <?php
               // echo '
@@ -331,14 +331,14 @@ if(is_404() && $_GET['ref']=="tb"){
               // ';
             ?>
           </li>
-          <li>
+          <li class="menu-item">
             <a href="/resources" title="Resources">Resources</a>
-            <ul>
-              <li><a href="/resources/blog">Blog</a></li>
-              <li><a href="/resources/client-stories">Client Stories</a></li>
-              <li><a href="/resources/webinars">Webinars</a></li>
-              <li><a href="/resources/whitepapers">Whitepapers</a></li>
-              <li><a href="/events">Upcoming Events</a></li>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/resources/blog">Blog</a></li>
+              <li class="sub-menu-item"><a href="/resources/client-stories">Client Stories</a></li>
+              <li class="sub-menu-item"><a href="/resources/webinars">Webinars</a></li>
+              <li class="sub-menu-item"><a href="/resources/whitepapers">Whitepapers</a></li>
+              <li class="sub-menu-item"><a href="/events">Upcoming Events</a></li>
             </ul>
             <?php
               // echo '
@@ -451,14 +451,14 @@ if(is_404() && $_GET['ref']=="tb"){
         //         ';
               ?>
           </li>
-          <li>
+          <li class="menu-item">
             <a href="/company" title="Company">Company</a>
-            <ul>
-              <li><a href="/company/#leadership">Leadership</a></li>
-              <li><a href="/company/#board-of-directors">Board of Directors</a></li>
-              <li><a href="/company/careers">Careers</a></li>
-              <li><a href="/press-releases">Press</a></li>
-              <li><a href="/brand-assets">Brand Assets</a></li>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/company/#leadership">Leadership</a></li>
+              <li class="sub-menu-item"><a href="/company/#board-of-directors">Board of Directors</a></li>
+              <li class="sub-menu-item"><a href="/company/careers">Careers</a></li>
+              <li class="sub-menu-item"><a href="/press-releases">Press</a></li>
+              <li class="sub-menu-item"><a href="/brand-assets">Brand Assets</a></li>
             </ul>
             <?php
               // echo '
@@ -488,7 +488,7 @@ if(is_404() && $_GET['ref']=="tb"){
               // ';
             ?>
           </li>
-          <li>
+          <li class="menu-item">
             <a href="/contact-us" title="Contact Us">Contact Us</a>
           </li>
         </ul>

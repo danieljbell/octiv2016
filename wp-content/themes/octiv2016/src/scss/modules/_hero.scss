@@ -50,8 +50,10 @@ HOME PAGE SPECIFIC STYLES
 
 .home .fixed-hero-section > .site-width {
   padding-top: 10%;
+  padding-bottom: 10%;
   @include bp(sm) {
     padding-top: 5%;
+    padding-bottom: 5%;
   }
 }
 
