@@ -111,9 +111,14 @@ header {
 	display: none;
 	position: absolute;
 	background-color: $white;
-	box-shadow: 0 0 15px rgba(black, 0.2);
+	border-radius: $radius;
+	box-shadow: 0 0 20px rgba(black, 0.35);
 	padding: 0;
 	z-index: 1000;
+}
+
+.sub-menu-item {
+	padding-bottom: 0;
 }
 
 .sub-menu-item a {
@@ -129,6 +134,14 @@ header {
 		background-color: $brand !important;
 		color: $white !important;
 	}
+}
+
+.sub-menu-item:first-child:hover a {
+	border-radius: $radius $radius 0 0 !important;
+}
+
+.sub-menu-item:last-child:hover a {
+	border-radius: 0 0 $radius $radius !important;
 }
 
 .sub-menu-item:last-child a {
