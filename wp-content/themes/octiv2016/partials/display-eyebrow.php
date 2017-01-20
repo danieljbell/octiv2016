@@ -9,19 +9,23 @@
         </div>
         <div class="centered">
             <?php if (!is_single(1390)) : ?>
-            <p style="margin-bottom: 0px;"><a href="/press-releases/octiv-secures-strategic-investment-ge-ventures/">Octiv Secures Strategic Investment from GE Ventures. - <strong>Read More</strong></a></p>  
+            <p style="margin-bottom: 0px;"><a href="/press-releases/octiv-secures-strategic-investment-ge-ventures/">Octiv Secures Strategic Investment from GE Ventures. - <strong>Read More</strong></a></p>
             <?php else : ?>
-                
+
             <?php endif; ?>
         </div>
         <div class="eyebrow-nav">
             <ul>
-                <li>
-                    <a href="/company/contact" title="Contact Us">Contact</a>
-                </li>
-                <li>
-                    <a href="#" title="Log In">Login</a>
-                </li>
+                <?php
+                  // echo '
+                  //   <li>
+                  //       <a href="/company/contact" title="Contact Us">Contact</a>
+                  //   </li>
+                  //   <li>
+                  //       <a href="#" title="Log In">Login</a>
+                  //   </li>
+                  // ';
+                ?>
                 <li>
                     <a href="/support" title="Support">Support</a>
                 </li>

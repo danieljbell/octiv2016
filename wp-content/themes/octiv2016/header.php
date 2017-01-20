@@ -74,383 +74,427 @@ if(is_404() && $_GET['ref']=="tb"){
         endif;
       ?>
     </div>
+    <button id="menu-toggle">Menu</button>
     <div class="site-navigation-container">
-      <button id="menu-toggle">Menu</button>
       <nav>
         <ul>
           <li>
-            <button id="nav-platform">Platform</button>
-            <div class="callout">
-              <div class="site-width">
-                <div class="half">
-                  <div>
-                    <!-- <h2>Octiv Powers Unified Document Workflows for a Range of Applications</h2>
-                    <p>Build and automate <a href="/#workflows">document workflows</a> that <a href="/#connections">connect systems and data</a> for a better <a href="/#user-experience">end-user experience</a>. Integrate and standardize the processes, systems and data required to create and manage mission-critical <a href="/#documents">sales and legal documents</a> for <a href="/#commercial">commercial</a> and <a href="/#enterprise">enterprise</a> teams. Octiv integrates with CPQ, ERP, CRM and other systems in a single, streamlined workflow.</p>
-                    <a href="#" class="btn-arrow">Learn More</a> -->
-                    <a href="/platform/integrations">Integrations</a>
-                  </div>
-                  <div>
-                    <!-- <h2>Octiv Offers Best in Cloud Technology</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, cumque.</p>
-                    <ul class="half">
-                      <li><a href="#">Native HTML5 Octiv Docs</a></li>
-                      <li><a href="#">Mobile-Responsive UI</a></li>
-                      <li><a href="#">AWS for Ultimate Scalability</a></li>
-                      <li><a href="#">Industry-Best Salesforce Integration</a></li>
-                      <li><a href="#">Industry-Best Security</a></li>
-                    </ul> -->
-                    <a href="/platform/catalog">Catalog</a>
-                  </div>
-                  <div>
-                    <a href="/platform/use-cases">Use Cases</a>
-                  </div>
-                </div>
-              </div>
-              <div class="brand-two-callout">
-                <div class="site-width centered">
-                  <h2>Octiv Offers Best in Cloud Technology</h2>
-                </div>
-                <div class="platform-slider">
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-pen">
-                      </svg>
-                      Authoring in any environment
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-workflow-icon">
-                      </svg>
-                      Streamlined, Collaborative Workflows
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-integrate">
-                      </svg>
-                      Integrating with Existing Systems
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-repo">
-                      </svg>
-                      Store and Access in any Repository
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="">
-                      </svg>
-                      feature 5
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="">
-                      </svg>
-                      feature 6
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="">
-                      </svg>
-                      feature 7
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="">
-                      </svg>
-                      feature 8
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/platform" title="Platform">Platform</a>
+            <ul>
+              <li><a href="/platform/catalog">Catalog</a></li>
+              <li><a href="/platform/integrations">Integrations</a></li>
+            </ul>
+            <?php
+              // echo '
+              // <button id="nav-platform">Platform</button>
+              // <div class="callout">
+              //   <div class="site-width">
+              //     <div class="half">
+              //       <div>
+              //         <a href="/platform/integrations">Integrations</a>
+              //       </div>
+              //       <div>
+              //         <a href="/platform/catalog">Catalog</a>
+              //       </div>
+              //       <div>
+              //         <a href="/platform/use-cases">Use Cases</a>
+              //       </div>
+              //     </div>
+              //   </div>
+              //   <div class="brand-two-callout">
+              //     <div class="site-width centered">
+              //       <h2>Octiv Offers Best in Cloud Technology</h2>
+              //     </div>
+              //     <div class="platform-slider">
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-pen">
+              //           </svg>
+              //           Authoring in any environment
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-workflow-icon">
+              //           </svg>
+              //           Streamlined, Collaborative Workflows
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-integrate">
+              //           </svg>
+              //           Integrating with Existing Systems
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-repo">
+              //           </svg>
+              //           Store and Access in any Repository
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="">
+              //           </svg>
+              //           feature 5
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="">
+              //           </svg>
+              //           feature 6
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="">
+              //           </svg>
+              //           feature 7
+              //         </a>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="">
+              //           </svg>
+              //           feature 8
+              //         </a>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
+              // ';
+            ?>
           </li>
           <li>
-            <button id="nav-solution">Solution</button>
-            <div class="callout">
-              <div class="site-width">
-                <h2 class="centered">Solutions by Role &amp; Function</h2>
-                <p class="centered">Octiv streamlines the workflow for teams that support sales and legal documents.</p>
-                <div class="third">
-                  <div>
-                    <a href="/solutions/octiv-for-cios">
-                      <svg>
-                        <use xlink:href="#icon-CIOs">
-                      </svg>
-                    </a>
-                    <h4>For CIOs</h4>
-                    <p>Octiv helps CIOs <a href="/solutions/octiv-for-cios/#unify-standardize">unify &amp; standardize</a> a range of <a href="/solutions/octiv-for-cios/#document-workflows">document workflows</a> that leverage <a href="/solutions/octiv-for-cios/#current-applications">current applications</a> and <a href="/solutions/octiv-for-cios/#data">data</a>.</p>
-                  </div>
-                  <div>
-                    <a href="/solutions/octiv-for-sales/">
-                      <svg>
-                        <use xlink:href="#icon-handshake">
-                      </svg>
-                    </a>
-                    <h4>For Sales</h4>
-                    <p>Octiv helps Sales reduce time spent creating <a href="/solutions/octiv-for-sales/#proposals">proposals</a>, <a href="/solutions/octiv-for-sales/#quotes">quotes</a>, <a href="/solutions/octiv-for-sales/#sows">SOWs</a> and other common <a href="/solutions/octiv-for-sales/#documents">documents</a>.</p>
-                  </div>
-                  <div>
-                    <a href="/solutions/octiv-for-legal/">
-                      <svg>
-                        <use xlink:href="#icon-legal">
-                      </svg>
-                    </a>
-                    <h4>For Legal</h4>
-                    <p>Octiv helps Legal streamline the workflow for <a href="/solutions/octiv-for-legal/#review">review</a>, <a href="/solutions/octiv-for-legal/#edit">edit</a> and <a href="/solutions/octiv-for-legal/#approval">approval</a> of commercial <a href="/solutions/octiv-for-legal/#documents">documents</a>.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg style="max-width: 85px;">
-                        <use xlink:href="#icon-finance">
-                      </svg>
-                    </a>
-                    <h4>For Finance</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg style="max-width: 115px;">
-                        <use xlink:href="#icon-people">
-                      </svg>
-                    </a>
-                    <h4>For HR</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg style="max-width: 85px;">
-                        <use xlink:href="#icon-finance">
-                      </svg>
-                    </a>
-                    <h4>For Procurement</h4>
-                    <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
-                  </div>
-                </div>
-                <hr>
-                <br>
-                <div class="half">
-                  <div>
-                    <h4>Solutions for Industry Challenges</h4>
-                    <p>Octiv’s enables organizations to support a variety of industry use cases. Octiv speeds up <a href="#">financial services</a> products to market, creates competitive advantage for <a href="#">manufacturers</a> and automates proposals in <a href="#">media and entertainment</a>.</p>
-                    <a href="#" class="btn-arrow">Learn More</a>
-                  </div>
-                  <div>
-                    <h4>How Do You Go To Market?</h4>
-                    <p>Octiv’s supports commercial processes and workflows for how you go-to-market. Whether you have a <a href="#">long-cycles sales</a> workflow, high-volume, <a href="#">transactional</a> workflow or <a href="#">channel and distributor</a> workflows, Octiv can support your staff to closed won deals.</p>
-                    <a href="#" class="btn-arrow">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/solutions" title="Solutions">Solutions</a>
+            <ul>
+              <li><a href="/solutions/for-cios">For CIOs</a></li>
+              <li><a href="/solutions/for-sales">For Sales</a></li>
+              <li><a href="/solutions/for-legal">For Legal</a></li>
+              <li><a href="/solutions/for-finance">For Finance</a></li>
+              <li><a href="/solutions/for-hr">For HR</a></li>
+              <li><a href="/solutions/for-procurement">For Procurement</a></li>
+            </ul>
+            <?php
+              // echo '
+              // <button id="nav-solution">Solutions</button>
+              // <div class="callout">
+              //   <div class="site-width">
+              //     <h2 class="centered">Solutions by Role &amp; Function</h2>
+              //     <p class="centered">Octiv streamlines the workflow for teams that support sales and legal documents.</p>
+              //     <div class="third">
+              //       <div>
+              //         <a href="/solutions/octiv-for-cios">
+              //           <svg>
+              //             <use xlink:href="#icon-CIOs">
+              //           </svg>
+              //         </a>
+              //         <h4>For CIOs</h4>
+              //         <p>Octiv helps CIOs <a href="/solutions/octiv-for-cios/#unify-standardize">unify &amp; standardize</a> a range of <a href="/solutions/octiv-for-cios/#document-workflows">document workflows</a> that leverage <a href="/solutions/octiv-for-cios/#current-applications">current applications</a> and <a href="/solutions/octiv-for-cios/#data">data</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="/solutions/octiv-for-sales/">
+              //           <svg>
+              //             <use xlink:href="#icon-handshake">
+              //           </svg>
+              //         </a>
+              //         <h4>For Sales</h4>
+              //         <p>Octiv helps Sales reduce time spent creating <a href="/solutions/octiv-for-sales/#proposals">proposals</a>, <a href="/solutions/octiv-for-sales/#quotes">quotes</a>, <a href="/solutions/octiv-for-sales/#sows">SOWs</a> and other common <a href="/solutions/octiv-for-sales/#documents">documents</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="/solutions/octiv-for-legal/">
+              //           <svg>
+              //             <use xlink:href="#icon-legal">
+              //           </svg>
+              //         </a>
+              //         <h4>For Legal</h4>
+              //         <p>Octiv helps Legal streamline the workflow for <a href="/solutions/octiv-for-legal/#review">review</a>, <a href="/solutions/octiv-for-legal/#edit">edit</a> and <a href="/solutions/octiv-for-legal/#approval">approval</a> of commercial <a href="/solutions/octiv-for-legal/#documents">documents</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg style="max-width: 85px;">
+              //             <use xlink:href="#icon-finance">
+              //           </svg>
+              //         </a>
+              //         <h4>For Finance</h4>
+              //         <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg style="max-width: 115px;">
+              //             <use xlink:href="#icon-people">
+              //           </svg>
+              //         </a>
+              //         <h4>For HR</h4>
+              //         <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg style="max-width: 85px;">
+              //             <use xlink:href="#icon-finance">
+              //           </svg>
+              //         </a>
+              //         <h4>For Procurement</h4>
+              //         <p>Lorem <a href="#">ipsum dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipisicing elit</a>. Unde, <a href="#">minus</a>.</p>
+              //       </div>
+              //     </div>
+              //     <hr>
+              //     <br>
+              //     <div class="half">
+              //       <div>
+              //         <h4>Solutions for Industry Challenges</h4>
+              //         <p>Octiv’s enables organizations to support a variety of industry use cases. Octiv speeds up <a href="#">financial services</a> products to market, creates competitive advantage for <a href="#">manufacturers</a> and automates proposals in <a href="#">media and entertainment</a>.</p>
+              //         <a href="#" class="btn-arrow">Learn More</a>
+              //       </div>
+              //       <div>
+              //         <h4>How Do You Go To Market?</h4>
+              //         <p>Octiv’s supports commercial processes and workflows for how you go-to-market. Whether you have a <a href="#">long-cycles sales</a> workflow, high-volume, <a href="#">transactional</a> workflow or <a href="#">channel and distributor</a> workflows, Octiv can support your staff to closed won deals.</p>
+              //         <a href="#" class="btn-arrow">Learn More</a>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
+              // ';
+            ?>
           </li>
           <li>
-            <button id="nav-why-octiv">Why Octiv</button>
-            <div class="callout">
-              <div class="site-width centered">
-                <h2>Clients Love Octiv. And It's Mutual.</h2>
-                <div class="sixth">
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-time-giver">
-                      </svg>
-                    </a>
-                    <p>We are <a href="#">time-givers</a>.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-puzzle">
-                      </svg>
-                    </a>
-                    <p>We make the complex, <a href="#">simple</a>.</p>
-                  </div>
-                  <div>
-                    <a href="/support">
-                      <svg>
-                        <use xlink:href="#icon-headset">
-                      </svg>
-                    </a>
-                    <p>We offer world-class <a href="/support">support</a>.</p>
-                  </div>
-                  <div>
-                    <a href="/platform/integrations">
-                      <svg>
-                        <use xlink:href="#icon-handshake">
-                      </svg>
-                    </a>
-                    <p>We work well with your <a href="/platform/integrations">partners</a>.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-lock">
-                      </svg>
-                    </a>
-                    <p>We are <a href="#">secure</a> and reliable.</p>
-                  </div>
-                  <div>
-                    <a href="#">
-                      <svg>
-                        <use xlink:href="#icon-workflow-icon">
-                      </svg>
-                    </a>
-                    <p>We eat, sleep and breath <a href="#">document workflows</a>.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
+            <?php
+              // echo '
+              // <button id="nav-why-octiv">Why Octiv</button>
+              // <div class="callout">
+              //   <div class="site-width centered">
+              //     <h2>Clients Love Octiv. And It\'s Mutual.</h2>
+              //     <div class="sixth">
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-time-giver">
+              //           </svg>
+              //         </a>
+              //         <p>We are <a href="#">time-givers</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-puzzle">
+              //           </svg>
+              //         </a>
+              //         <p>We make the complex, <a href="#">simple</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="/support">
+              //           <svg>
+              //             <use xlink:href="#icon-headset">
+              //           </svg>
+              //         </a>
+              //         <p>We offer world-class <a href="/support">support</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="/platform/integrations">
+              //           <svg>
+              //             <use xlink:href="#icon-handshake">
+              //           </svg>
+              //         </a>
+              //         <p>We work well with your <a href="/platform/integrations">partners</a>.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-lock">
+              //           </svg>
+              //         </a>
+              //         <p>We are <a href="#">secure</a> and reliable.</p>
+              //       </div>
+              //       <div>
+              //         <a href="#">
+              //           <svg>
+              //             <use xlink:href="#icon-workflow-icon">
+              //           </svg>
+              //         </a>
+              //         <p>We eat, sleep and breath <a href="#">document workflows</a>.</p>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
+              // ';
+            ?>
           </li>
           <li>
-            <button id="nav-resources">Resources</button>
-            <div class="callout">
-              <div class="site-width">
-                <div class="half">
-                  <div>
-                    <h2>Upcoming Events</h2>
-                    <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
-                    <?php
-                      $today = date('Ymd');
-                      $args = array(
-                        'post_type' => 'events',
-                        'posts_per_page' => 6,
-                        'order' => 'ASC',
-                        'orderby' => 'meta_value',
-                        'meta_query' => array(
-              					array(
-              				        'key'		=> 'event_start_date',
-              				        'compare'	=> '>=',
-              				        'value'		=> $today,
-              				    )
-              			    ),
-                      );
-                      $event_query = new WP_Query($args);
-                      if ($event_query->have_posts()) :
-                        echo '<ul class="half no-bul">';
-                        while ($event_query->have_posts()) :
-                          $event_query->the_post();
-                          $post_terms = get_the_terms($post->ID, 'event_type');
-                          $event_start = get_field('event_start_date');
-                          $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
-                          $date = date_create($event_start);
-                          $date = date_format($date,"M d");
-                          echo '<li class="nav-event">';
-                          echo '<div class="nav-event-date">' . $date . '</div>';
-                          echo '<div>';
-                            echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
-                            echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
-                          echo '</div>';
-                          echo '</li>';
-                        endwhile;
-                        echo '</ul>';
-                      endif;
-                      wp_reset_query();
-                    ?>
-                    <div class="half-only centered">
-                      <a href="/events" class="btn-primary-outline">View All Events</a>
-                    </div>
-                  </div>
-                  <div>
-                    <h2>Learn About Octiv</h2>
-                    <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
-                    <ul class="half no-bul nav-resources">
-                      <li>
-                        <span>
-                          <svg class="blog-icon">
-                            <use xlink:href="#icon-blog">
-                          </svg>
-                        </span>
-                        <div>
-                          <h4><a href="/resources/blog" style="box-shadow: none;">Blog</a></h4>
-                          <p>Something cool about our <a href="/resources/blog">blog</a>.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <span>
-                          <svg class="client-story-icon">
-                            <use xlink:href="#icon-client-story">
-                          </svg>
-                        </span>
-                        <div>
-                          <h4><a href="/resources/client-stories" style="box-shadow: none;">Client Stories</a></h4>
-                          <p>Something cool about our <a href="/resources/client-stories">client stories</a>.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <span>
-                          <svg class="webinar-icon">
-                            <use xlink:href="#icon-webinar">
-                          </svg>
-                        </span>
-                        <div>
-                          <h4><a href="/resources/webinars" style="box-shadow: none;">Webinars</a></h4>
-                          <p>Something cool about our <a href="/resources/webinars">webinars</a>.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <span class="whitepaper-icon">
-                          <svg>
-                            <use xlink:href="#icon-whitepapers">
-                          </svg>
-                        </span>
-                        <div>
-                          <h4><a href="/resources/whitepapers" style="box-shadow: none;">Whitepapers</a></h4>
-                          <p>Something cool about our <a href="/resources/whitepapers">whitepapers</a>.</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="half-only centered">
-                    <a href="/resources" class="btn-primary-outline">View All Resources</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/resources" title="Resources">Resources</a>
+            <ul>
+              <li><a href="/resources/blog">Blog</a></li>
+              <li><a href="/resources/client-stories">Client Stories</a></li>
+              <li><a href="/resources/webinars">Webinars</a></li>
+              <li><a href="/resources/whitepapers">Whitepapers</a></li>
+              <li><a href="/events">Upcoming Events</a></li>
+            </ul>
+            <?php
+              // echo '
+              // <button id="nav-resources">Resources</button>
+              // <div class="callout">
+              //   <div class="site-width">
+              //     <div class="half">
+              //       <div>
+              //         <h2>Upcoming Events</h2>
+              //         <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
+              //         <?php
+              //           $today = date('Ymd');
+              //           $args = array(
+              //             'post_type' => 'events',
+              //             'posts_per_page' => 6,
+              //             'order' => 'ASC',
+              //             'orderby' => 'meta_value',
+              //             'meta_query' => array(
+              //             array(
+              //                   'key'		=> 'event_start_date',
+              //                   'compare'	=> '>=',
+              //                   'value'		=> $today,
+              //               )
+              //             ),
+              //           );
+              //           $event_query = new WP_Query($args);
+              //           if ($event_query->have_posts()) :
+              //             echo '<ul class="half no-bul">';
+              //             while ($event_query->have_posts()) :
+              //               $event_query->the_post();
+              //               $post_terms = get_the_terms($post->ID, 'event_type');
+              //               $event_start = get_field('event_start_date');
+              //               $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+              //               $date = date_create($event_start);
+              //               $date = date_format($date,"M d");
+              //               echo '<li class="nav-event">';
+              //               echo '<div class="nav-event-date">' . $date . '</div>';
+              //               echo '<div>';
+              //                 echo '<strong style="display: block; margin-bottom: -0.25em; font-size: 0.75em; text-transform: uppercase;">' . $post_terms[0]->name . '</strong>';
+              //                 echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+              //               echo '</div>';
+              //               echo '</li>';
+              //             endwhile;
+              //             echo '</ul>';
+              //           endif;
+              //           wp_reset_query();
+              //         ?>
+              <?php
+        //         echo '
+        //         <div class="half-only centered">
+        //           <a href="/events" class="btn-primary-outline">View All Events</a>
+        //         </div>
+        //       </div>
+        //       <div>
+        //         <h2>Learn About Octiv</h2>
+        //         <p>Fool me once, shame on you. Fool Chuck Norris once and he will roundhouse kick you in the face.</p>
+        //         <ul class="half no-bul nav-resources">
+        //           <li>
+        //             <span>
+        //               <svg class="blog-icon">
+        //                 <use xlink:href="#icon-blog">
+        //               </svg>
+        //             </span>
+        //             <div>
+        //               <h4><a href="/resources/blog" style="box-shadow: none;">Blog</a></h4>
+        //               <p>Something cool about our <a href="/resources/blog">blog</a>.</p>
+        //             </div>
+        //           </li>
+        //           <li>
+        //             <span>
+        //               <svg class="client-story-icon">
+        //                 <use xlink:href="#icon-client-story">
+        //               </svg>
+        //             </span>
+        //             <div>
+        //               <h4><a href="/resources/client-stories" style="box-shadow: none;">Client Stories</a></h4>
+        //               <p>Something cool about our <a href="/resources/client-stories">client stories</a>.</p>
+        //             </div>
+        //           </li>
+        //           <li>
+        //             <span>
+        //               <svg class="webinar-icon">
+        //                 <use xlink:href="#icon-webinar">
+        //               </svg>
+        //             </span>
+        //             <div>
+        //               <h4><a href="/resources/webinars" style="box-shadow: none;">Webinars</a></h4>
+        //               <p>Something cool about our <a href="/resources/webinars">webinars</a>.</p>
+        //             </div>
+        //           </li>
+        //           <li>
+        //             <span class="whitepaper-icon">
+        //               <svg>
+        //                 <use xlink:href="#icon-whitepapers">
+        //               </svg>
+        //             </span>
+        //             <div>
+        //               <h4><a href="/resources/whitepapers" style="box-shadow: none;">Whitepapers</a></h4>
+        //               <p>Something cool about our <a href="/resources/whitepapers">whitepapers</a>.</p>
+        //             </div>
+        //           </li>
+        //         </ul>
+        //       </div>
+        //       <div class="half-only centered">
+        //         <a href="/resources" class="btn-primary-outline">View All Resources</a>
+        //       </div>
+        //     </div>
+        //   </div>
+        //  </div>
+        //         ';
+              ?>
           </li>
           <li>
-            <button id="nav-company">Company</button>
-            <div class="callout">
-              <div class="site-width">
-                <div class="half">
-                  <div class="centered">
-                    <h2>Our People</h2>
-                    <div class="third">
-                      <div><a href="/company/#leadership">Leadership</a></div>
-                      <div><a href="/company/#board-of-directors">Board of Directors</a></div>
-                      <div><a href="/company/careers">Careers</a></div>
-                    </div>
-                  </div>
-                  <div class="centered">
-                    <h2>About Octiv</h2>
-                    <div class="third">
-                      <div><a href="/company">Overview</a></div>
-                      <div><a href="/press-releases">Press</a></div>
-                      <div><a href="/company/contact-us">Contact Us</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/company" title="Company">Company</a>
+            <ul>
+              <li><a href="/company/#leadership">Leadership</a></li>
+              <li><a href="/company/#board-of-directors">Board of Directors</a></li>
+              <li><a href="/company/careers">Careers</a></li>
+              <li><a href="/press-releases">Press</a></li>
+              <li><a href="/brand-assets">Brand Assets</a></li>
+            </ul>
+            <?php
+              // echo '
+              // <button id="nav-company">Company</button>
+              // <div class="callout">
+              //   <div class="site-width">
+              //     <div class="half">
+              //       <div class="centered">
+              //         <h2>Our People</h2>
+              //         <div class="third">
+              //           <div><a href="/company/#leadership">Leadership</a></div>
+              //           <div><a href="/company/#board-of-directors">Board of Directors</a></div>
+              //           <div><a href="/company/careers">Careers</a></div>
+              //         </div>
+              //       </div>
+              //       <div class="centered">
+              //         <h2>About Octiv</h2>
+              //         <div class="third">
+              //           <div><a href="/company">Overview</a></div>
+              //           <div><a href="/press-releases">Press</a></div>
+              //           <div><a href="/company/contact-us">Contact Us</a></div>
+              //         </div>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
+              // ';
+            ?>
+          </li>
+          <li>
+            <a href="/contact-us" title="Contact Us">Contact Us</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-</div><?php // close #site-top ?>
+</div>
 
 <main class="page-body" id="page-body">

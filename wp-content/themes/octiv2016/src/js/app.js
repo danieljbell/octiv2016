@@ -232,53 +232,94 @@ $('#site-logo').on('contextmenu', function(e) {
 NAVIGATION
 ==============================
 */
-
-// Clicking any button
-$('.site-navigation-container nav button').on('click', function() {
-  var $this = $(this);
-
-  if ($this.hasClass('active')) {
-    $this.removeClass('active');
-    $this.next().removeClass('active');
-    if (window.innerWidth > 600) {
-        document.body.classList.remove('menu-open');
-    }
+var menuToggle = document.querySelector('#menu-toggle');
+menuToggle.addEventListener('click', function() {
+  if (document.body.classList.contains('menu-open')) {
+    document.body.classList.remove('menu-open');
   } else {
-    $this.parent().siblings().find('button').removeClass('active');
-    $this.parent().siblings().find('.callout').removeClass('active');
-    $this.next().addClass('active');
-    $this.addClass('active');
     document.body.classList.add('menu-open');
   }
 });
 
-// Clicking the menu toggle on smaller devices
-$(document).on('click', '#menu-toggle', function() {
-  document.body.classList.toggle('menu-open');
-  if (!$('.site-navigation-container nav button').hasClass('active') && (window.innerWidth > 600)) {
-    $('.site-navigation-container #nav-platform')
-      .addClass('active')
-      .next()
-        .addClass('active');
-  }
-});
-
-$(document).on('keyup', function(e) {
-  if (e.keyCode === 27) {
-    closeNav();
-  }
-});
-
-function closeNav(elem) {
-  var $this = $('.site-navigation-container nav button');
-  if ($this.hasClass('active')) {
-    $this.removeClass('active');
-    $this.next().removeClass('active');
-    if (window.innerWidth > 600) {
-        document.body.classList.remove('menu-open');
+var headerNavItems = document.querySelectorAll('.site-navigation-container ul > li');
+headerNavItems.forEach(function(item) {
+  item.addEventListener('mouseover', function() {
+    if (this.children.length > 1) {
+      this.children[1].style.display = "block";
     }
-  }
-}
+  });
+  item.addEventListener('mouseleave', function() {
+    if (this.children.length > 1) {
+      this.children[1].style.display = "none";
+    }
+  });
+  // Change highlight for hover
+  // if (link.title != "Contact Us") {
+  //   if (window.innerWidth > 600) {
+  //     link.addEventListener('mouseover', function() {
+  //       headerNavLinks[5].style.backgroundColor = 'transparent';
+  //       headerNavLinks[5].style.color = '#000000';
+  //     });
+  //   }
+  //   link.addEventListener('mouseleave', function() {
+  //     headerNavLinks[5].style.backgroundColor = '#ed4c06';
+  //     headerNavLinks[5].style.color = '#ffffff';
+  //   });
+  // }
+});
+
+
+/*
+==============================
+MEGA MENU NAVIGATION
+==============================
+*/
+// Clicking any button
+// $('.site-navigation-container nav button').on('click', function() {
+//   var $this = $(this);
+//
+//   if ($this.hasClass('active')) {
+//     $this.removeClass('active');
+//     $this.next().removeClass('active');
+//     if (window.innerWidth > 600) {
+//         document.body.classList.remove('menu-open');
+//     }
+//   } else {
+//     $this.parent().siblings().find('button').removeClass('active');
+//     $this.parent().siblings().find('.callout').removeClass('active');
+//     $this.next().addClass('active');
+//     $this.addClass('active');
+//     document.body.classList.add('menu-open');
+//   }
+// });
+//
+// // Clicking the menu toggle on smaller devices
+// $(document).on('click', '#menu-toggle', function() {
+//   document.body.classList.toggle('menu-open');
+//   if (!$('.site-navigation-container nav button').hasClass('active') && (window.innerWidth > 600)) {
+//     $('.site-navigation-container #nav-platform')
+//       .addClass('active')
+//       .next()
+//         .addClass('active');
+//   }
+// });
+//
+// $(document).on('keyup', function(e) {
+//   if (e.keyCode === 27) {
+//     closeNav();
+//   }
+// });
+//
+// function closeNav(elem) {
+//   var $this = $('.site-navigation-container nav button');
+//   if ($this.hasClass('active')) {
+//     $this.removeClass('active');
+//     $this.next().removeClass('active');
+//     if (window.innerWidth > 600) {
+//         document.body.classList.remove('menu-open');
+//     }
+//   }
+// }
 
 
 
@@ -387,27 +428,6 @@ $('.slider-nav').slick({
       breakpoint: 568,
       settings: {
         slidesToShow: 1,
-        infinite: true
-      }
-    }
-  ]
-});
-
-$('.platform-slider').slick({
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  autoplay : true,
-  arrows : false,
-  autoplaySpeed : 2000,
-  centerMode: true,
-  variableWidth: true,
-  centerPadding: '10%',
-  focusOnSelect: true,
-  responsive : [
-    {
-      breakpoint: 1281,
-      settings: {
-        slidesToShow: 3,
         infinite: true
       }
     }
