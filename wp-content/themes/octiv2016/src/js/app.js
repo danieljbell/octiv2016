@@ -242,30 +242,27 @@ menuToggle.addEventListener('click', function() {
 });
 
 var headerNavItems = document.querySelectorAll('.site-navigation-container .menu-item');
-headerNavItems.forEach(function(item) {
-  item.addEventListener('mouseover', function() {
+var i;
+for (i = 0; i < headerNavItems.length; i++) {
+  headerNavItems[i].addEventListener('mouseover', function(i) {
     if (this.children.length > 1) {
       if (window.innerWidth > 600) {
         this.children[1].style.display = "block";
       }
     }
-    if (item.children[0].title != "Contact Us") {
-      headerNavItems[5].children[0].style.backgroundColor = "transparent";
-      headerNavItems[5].children[0].style.color = "#000000";
-    }
+      this.parentElement.children[5].children[0].style.backgroundColor = "transparent";
+      this.parentElement.children[5].children[0].style.color = "#000000";
   });
-  item.addEventListener('mouseleave', function() {
+  headerNavItems[i].addEventListener('mouseleave', function() {
     if (this.children.length > 1) {
       if (window.innerWidth > 600) {
         this.children[1].style.display = "none";
       }
     }
-    if (item.children[0].title != "Contact Us") {
-      headerNavItems[5].children[0].style.backgroundColor = "#ed4c06";
-      headerNavItems[5].children[0].style.color = "#ffffff";
-    }
+    this.parentElement.children[5].children[0].style.backgroundColor = "#ed4c06";
+    this.parentElement.children[5].children[0].style.color = "#ffffff";
   });
-});
+}
 
 
 
@@ -520,6 +517,7 @@ TABS
 $(".tabs").accessibleTabs({
   tabhead:'h6',
   currentInfoText: '',
+  autoAnchor: true,
   fx:"show",
   fxspeed:null
 });

@@ -270,6 +270,11 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li class="menu-item">
             <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="#">vs. Spring CM</a></li>
+              <li class="sub-menu-item"><a href="#">vs. Apptus</a></li>
+              <li class="sub-menu-item"><a href="#">vs. Seismic</a></li>
+            </ul>
             <?php
               // echo '
               // <button id="nav-why-octiv">Why Octiv</button>
@@ -452,7 +457,7 @@ if(is_404() && $_GET['ref']=="tb"){
               ?>
           </li>
           <li class="menu-item">
-            <a href="/company" title="Company">Company</a>
+            <a href="/company" class="active" title="Company">Company</a>
             <ul class="sub-menu">
               <li class="sub-menu-item"><a href="/company/#leadership">Leadership</a></li>
               <li class="sub-menu-item"><a href="/company/#board-of-directors">Board of Directors</a></li>
@@ -490,6 +495,11 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li class="menu-item">
             <a href="/contact-us" title="Contact Us">Contact Us</a>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/contact-us/#sales">Sales</a></li>
+              <li class="sub-menu-item"><a href="/contact-us/#support">Support</a></li>
+              <li class="sub-menu-item"><a href="/contact-us/#press">Press</a></li>
+            </ul>
           </li>
         </ul>
       </nav>

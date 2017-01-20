@@ -20,7 +20,7 @@ TEMPLATE NAME: Contact Us
   <div class="site-width">
     <p>Something about contacting us and filling out the form below. Now for some Chuck Norris jokes to fill space. Chuck Norris will attain statehood in 2009. His state flower will be the Magnolia. Chuck Norris doesn't churn butter. He roundhouse kicks the cows and the butter comes straight out. Police label anyone attacking Chuck Norris as a Code 45-11.... A suicide. Chuck Norris is the only man to ever defeat a brick wall in a game of tennis.</p>
     <div class="tabs">
-      <h6>Sales</h6>
+      <h6 id="sales">Sales</h6>
       <div class="tabbody">
         <br>
         <h4 class="centered">Fill out the form below or call 317.550.0148 to request a call with one of our experts.</h4>
@@ -46,22 +46,22 @@ TEMPLATE NAME: Contact Us
 					});
 				</script>
       </div>
-      <h6>Support</h6>
+      <h6 id="support">Support</h6>
       <div class="tabbody">
         <?php get_template_part('partials/display', 'support-form'); ?>
       </div>
-      <h6>Press</h6>
+      <h6 id="press">Press</h6>
       <div class="tabbody">
         press something
       </div>
-      <h6>Partner</h6>
+      <!-- <h6>Partner</h6>
       <div class="tabbody">
         partner something
       </div>
       <h6>Careers</h6>
       <div class="tabbody">
         careers something
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
