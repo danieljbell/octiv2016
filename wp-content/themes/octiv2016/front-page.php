@@ -7,8 +7,7 @@
 	    <div class="half white-text">
 	        <div>
 	            <h1><span style="display: block;">Unified Document Workflows</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Sophisticated Companies</span></h1>
-	            <p class="fancy-links">Build and automate <a href="#workflows">document workflows</a> that <a href="#connections">connect systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Power your <a href="#documents">documents</a> for Sales, Legal, Finance, HR, Procurement and Sourcing for <a href="#commercial">commercial</a> and <a href="#enterprise">enterprise</a> teams.</p>
-	            <!-- <p style="margin-top: 3em; font-size: initial !important;"><a href="#" class="btn-primary">Play Video</a></p> -->
+	            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance, and HR. Free your teams. Free up time.</p>
 	        </div>
 	    </div>
 	</div>

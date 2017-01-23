@@ -495,11 +495,6 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li class="menu-item">
             <a href="/contact-us" title="Contact Us">Contact Us</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/contact-us/#sales">Sales</a></li>
-              <li class="sub-menu-item"><a href="/contact-us/#support">Support</a></li>
-              <li class="sub-menu-item"><a href="/contact-us/#press">Press</a></li>
-            </ul>
           </li>
         </ul>
       </nav>

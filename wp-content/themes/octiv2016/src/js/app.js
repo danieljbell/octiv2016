@@ -242,16 +242,18 @@ menuToggle.addEventListener('click', function() {
 });
 
 var headerNavItems = document.querySelectorAll('.site-navigation-container .menu-item');
-var i;
-for (i = 0; i < headerNavItems.length; i++) {
+
+for (var i = 0; i < headerNavItems.length; i++) {
   headerNavItems[i].addEventListener('mouseover', function(i) {
     if (this.children.length > 1) {
       if (window.innerWidth > 600) {
         this.children[1].style.display = "block";
       }
     }
+    if (this.computedName !== "Contact Us") {
       this.parentElement.children[5].children[0].style.backgroundColor = "transparent";
       this.parentElement.children[5].children[0].style.color = "#000000";
+    }
   });
   headerNavItems[i].addEventListener('mouseleave', function() {
     if (this.children.length > 1) {
@@ -604,7 +606,7 @@ $('.nav.sidebar-links a').on('click', function(e) {
 });
 
 
-if ($('.single-integration').length || $('.page-template-page-solutions').length) {
+if ($('.single-integration').length || $('.page-template-page-solutions').length || $('.page-template-platform-page').length) {
   $('.fixed-hero-section a').on('click', function(e) {
     e.preventDefault();
     var target = $(this.hash);
@@ -674,6 +676,17 @@ if ($('#catalog-screenshots').length) {
     var imageTitle = this.alt;
     $('.empty-modal').find('.modal-content').html(function() {
       return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
+    });
+    $('.empty-modal').modal();
+  });
+}
+
+if ($('.browser-window').length) {
+  $('.browser-window').on('click', 'img', function() {
+    var imagePath = this.currentSrc;
+    var imageTitle = this.alt;
+    $('.empty-modal').find('.modal-content').html(function() {
+      return '<h3 class="centered">' + imageTitle + '</h3><br><br><div class="browser-window"><div><img src="' + imagePath + '"></div></div>';
     });
     $('.empty-modal').modal();
   });

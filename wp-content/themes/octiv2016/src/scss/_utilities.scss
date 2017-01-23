@@ -339,3 +339,48 @@ ANIMATED CLASSES
 	list-style-type: none;
 	padding-left: 0;
 }
+
+
+.browser-window {
+  border: 1px solid $mgray;
+  position: relative;
+  box-shadow: 0 0 25px rgba(black, 0.1);
+  &:before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    top: -30px;
+    left: -1px;
+    right: -1px;
+    border: 1px solid $mgray;
+    background-image: linear-gradient($white, $lgray);
+    border-radius: $radius $radius 0 0;
+  }
+  > div {
+    padding: 10px;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 14px;
+      width: 14px;
+      top: -30px;
+      left: -1px;
+      right: -1px;
+      border-radius: 50%;
+      box-shadow: 10px 10px 0 #ff564f, 30px 10px #ffb429, 50px 10px #24c238;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      filter: brightness(0.75);
+      top: -26px;
+      right: 10px;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url(img/menu.svg);
+      background-repeat: no-repeat;
+      background-position: 100%;
+    }
+  }
+}
