@@ -1,8 +1,8 @@
 <?php
 /*
-==============================
-TEMPLATE NAME: Platform Page
-==============================
+========================================
+TEMPLATE NAME: Solutions Parent Page
+========================================
 */
 get_header();
 ?>
@@ -11,11 +11,13 @@ get_header();
 	<div class="site-width white-text centered">
 		<div class="two-third-only">
 			<div class="font-bump">
-				<h1 style="margin-bottom: 0.5rem;">The Octiv Platform Powers Document Workflows for a Range of Use Cases</h1>
+				<h1 style="margin-bottom: 0.5rem;">Streamline Document Workflows for a Range of Functional and Industry Use Cases</h1>
 				<div class="font-bump fancy-links">
           <?php the_content(); ?>
         </div>
 			</div>
+      <br>
+      <a href="#call-to-action" class="btn-white-outline">See More</a>
 		</div>
 	</div>
 </div>
@@ -88,42 +90,18 @@ $count = 0;
   endif;
 ?>
 
-<section class="solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #ccc);">
-	<div class="site-width">
-		<h2 class="centered">Octiv Drive Productivity &amp; Performance Outcomes</h2>
-		<p class="centered">Explore Use Cases:</p>
-		<br>
-		<div class="third">
-			<?php
-				$args = array(
-					'post_type' => 'page',
-					'post_parent' => 1942,
-					'order' => 'ASC',
-					'order_by' => 'name'
-				);
-				$solutions_query = new WP_Query($args);
-				if ($solutions_query->have_posts()) :
-					while ($solutions_query->have_posts()) :
-						$solutions_query->the_post();
-						echo '<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');">';
-							echo '<a href="' . get_the_permalink() . '">';
-								echo '<div>';
-									echo '<div class="card-icon">';
-										echo '<img src="' . get_field('page_icon', $post->ID) . '" alt="' . get_the_title() . '" style="max-width: 75px; filter: invert(1) drop-shadow(2px 2px 2px black);">';
-									echo '</div>';
-									echo '<div class="card-content">';
-										echo '<h4>' . get_the_title() . '</h4>';
-									echo '</div>';
-								echo '</div>';
-							echo '</div>';
-						echo '</a>';
-					endwhile;
-				endif;
-				wp_reset_query();
-			?>
-		</div>
-	</div>
+<section id="call-to-action" class="callout" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #ccc);">
+  <div class="site-width">
+    <h2 class="centered">Octiv for Industry - See how Octiv is driving compelling business cases for industry use cases.</h2>
+    <div class="third">
+      <div>column</div>
+      <div>column</div>
+      <div>column</div>
+    </div>
+  </div>
 </section>
+
+
 
 <style>
 	.fixed-hero-section {
@@ -152,7 +130,7 @@ $count = 0;
 		.section-icon {
 			display: none;
 		}
-		.fat-section:nth-of-type(2) a.btn-arrow {
+    .fat-section:nth-of-type(2) a.btn-arrow {
   		box-shadow: inset 0 -72px 0 #33ab40 !important;
   	}
     .fat-section:nth-of-type(3) a.btn-arrow {
@@ -207,7 +185,7 @@ $count = 0;
 	.fixed-hero-section .two-third-only > div p {
 		margin-bottom: 0;
 	}
-	.solutions-container .card {
+	/*.solutions-container .card {
 		color: #fff;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.85);
 		background-size: cover;
@@ -239,24 +217,10 @@ $count = 0;
 	}
 	.solutions-container .card-content > div {
 		display: none;
-	}
+	}*/
 	#site-footer .site-width:first-of-type {
 		border: 0;
 	}
 </style>
-
-<!-- <script>
-	var backgroundSections = document.querySelectorAll('.fat-section.white-text');
-	function checkBackground() {
-		for (var i = 0; i < backgroundSections.length; i++) {
-			var currentBG = backgroundSections[i].style.backgroundImage;
-			var newBG = currentBG.split(' ').slice(-1).toString();
-			if (window.innerWidth > 768) {
-				backgroundSections[i].style.backgroundImage = newBG;
-			}
-		}
-	}
-	window.addEventListener('resize', checkBackground);
-</script> -->
 
 <?php get_footer(); ?>

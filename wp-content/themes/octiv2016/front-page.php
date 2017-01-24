@@ -17,6 +17,7 @@
 <section class="callout fat-section">
 	<div class="site-width">
 		<h2 class="centered">How Octiv unifies your document workflow</h2>
+		<p class="centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem assumenda animi, hic dolores eos suscipit!</p>
 		<br>
 		<br>
 		<br>

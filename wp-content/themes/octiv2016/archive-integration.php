@@ -1,8 +1,16 @@
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
-  <div class="site-width white-text">
-    <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+  <div class="site-width white-text centered">
+    <svg fill="#fff" style="filter: drop-shadow(0px 0px 8px rgba(0,0,0,1)); margin-bottom: 1.5rem;">
+      <use xlink:href="#icon-integrate">
+    </svg>
+    <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+    <div class="half-only">
+      <div>
+        <p class="font-bump">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, natus!</p>
+      </div>
+    </div>
   </div>
 </div>
 

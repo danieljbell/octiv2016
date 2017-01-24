@@ -1,5 +1,6 @@
 .home .fixed-hero-section {
   overflow: hidden;
+  background-image: url(../dist/img/home-video-hero.jpg);
   position: relative;
   box-shadow: inset 0 0 35px rgba(black, 0.75);
   color: $white;
@@ -25,6 +26,10 @@
 }
 
 .home .hero-video {
+  display: none;
+  @include bp(md) {
+    display: block;
+  }
   position: absolute;
   z-index: 0;
   background-image: url(../dist/img/home-video-hero.jpg);
@@ -39,7 +44,6 @@
   position: absolute;
   z-index: 2;
   top: 0; left: 0; right: 0; bottom: 0;
-  // background-image: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0));
   background-image: linear-gradient(to right, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.65));
 }
 
@@ -48,6 +52,7 @@
   line-height: 1.1em;
   margin-bottom: 1rem;
   span.typed {
+    font-size: 0.9em;
     line-height: 1.1em;
     font-style: italic;
     color: $brand;

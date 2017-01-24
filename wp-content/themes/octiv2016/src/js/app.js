@@ -606,7 +606,7 @@ $('.nav.sidebar-links a').on('click', function(e) {
 });
 
 
-if ($('.single-integration').length || $('.page-template-page-solutions').length || $('.page-template-platform-page').length) {
+if ($('.single-integration').length || $('.page-template-page-solutions').length || $('.page-template-platform-page').length || $('.page-template-solutions-parent-page').length || $('.page-template-page-section-layout').length) {
   $('.fixed-hero-section a').on('click', function(e) {
     e.preventDefault();
     var target = $(this.hash);
@@ -686,7 +686,7 @@ if ($('.browser-window').length) {
     var imagePath = this.currentSrc;
     var imageTitle = this.alt;
     $('.empty-modal').find('.modal-content').html(function() {
-      return '<h3 class="centered">' + imageTitle + '</h3><br><br><div class="browser-window"><div><img src="' + imagePath + '"></div></div>';
+      return '<h3 class="centered">' + imageTitle + '</h3><br><br><div class="browser-window"><div style="padding: 0;"><img src="' + imagePath + '"></div></div>';
     });
     $('.empty-modal').modal();
   });
