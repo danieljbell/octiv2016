@@ -8,11 +8,10 @@
 				<p class="pad-t"><a href="tel:317-550-0148" style="color: inherit;">317.550.0148</a></p>
 				<p>54 Monument Circle, Suite 200<br>Indianapolis, IN 46204</p>
 			</div>
-			<div class="fifth">
+			<div class="fourth">
 				<div>
-					<h5>Platform</h5>
+					<h5><a href="/platform" style="color: #555;">Platform</a></h5>
 					<ul>
-						<li><a href="/platform">Overview</a></li>
 						<li><a href="/platform/catalog">Catalog</a></li>
 						<li><a href="/platform/integrations">Integrations</a></li>
 						<li><a href="/support">Support</a></li>
@@ -20,37 +19,47 @@
 					</ul>
 				</div>
 				<div>
-					<h5>Solution</h5>
-					<ul>
-						<li><a href="#">Workflows</a></li>
-						<li><a href="#">Industries</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Departments</a></li>
-					</ul>
+					<h5><a href="/solutions" style="color: #555;">Solutions</a></h5>
+					<?php
+						$args = array(
+							'post_type' => 'page',
+							'post_parent' => 1942,
+							'order' => 'ASC',
+							'order_by' => 'name'
+						);
+						$solutions_query = new WP_Query($args);
+						if ($solutions_query->have_posts()) :
+							echo '<ul>';
+							while ($solutions_query->have_posts()) :
+								$solutions_query->the_post();
+								echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+							endwhile;
+							echo '</ul>';
+						endif;
+						wp_reset_query();
+					?>
 				</div>
-				<div>
+				<!-- <div>
 					<h5>Why Octiv</h5>
 					<ul>
 						<li><a href="/why-octiv">Overview</a></li>
-						<!-- <li><a href="#">Vs. Savo</a></li>
+						<li><a href="#">Vs. Savo</a></li>
 						<li><a href="#">Vs. Qvidian</a></li>
-						<li><a href="#">Vs. Seismic</a></li> -->
+						<li><a href="#">Vs. Seismic</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<div>
-					<h5>Resources</h5>
+					<h5><a href="/resources" style="color: #555;">Resources</a></h5>
 					<ul>
 						<li><a href="/resources/blog">Blog</a></li>
 						<li><a href="/resources/client-stories">Client Stories</a></li>
-						<li><a href="/events">Events</a></li>
 						<li><a href="/resources/webinars">Webinars</a></li>
 						<li><a href="/resources/whitepapers">Whitepapers</a></li>
 					</ul>
 				</div>
 				<div>
-					<h5>Company</h5>
+					<h5><a href="/company" style="color: #555;">Company</a></h5>
 					<ul>
-						<li><a href="/company/">Overview</a></li>
 						<li><a href="/company/#leadership">Leadership</a></li>
 						<li><a href="/company/careers">Careers</a></li>
 						<li><a href="/press-releases">Press</a></li>

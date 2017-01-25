@@ -8,9 +8,11 @@ get_header();
 ?>
 
 <div class="fixed-hero-section">
-	<div class="site-width white-text centered">
+	<div class="video-overlay"></div>
+	<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/platform-video.mp4" autoplay loop></video>
+	<div class="site-width white-text centered pos-rel" style="z-index: 2;">
 		<div class="two-third-only">
-			<div class="font-bump">
+			<div class="font-bump" style="margin-right: auto; margin-bottom: 0;">
 				<h1 style="margin-bottom: 0.5rem;">The Octiv Platform Powers Document Workflows for a Range of Use Cases</h1>
 				<div class="font-bump fancy-links">
           <?php the_content(); ?>
@@ -105,11 +107,12 @@ $count = 0;
 				if ($solutions_query->have_posts()) :
 					while ($solutions_query->have_posts()) :
 						$solutions_query->the_post();
+						$icon = get_field('page_icon', $post->ID, true);
 						echo '<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');">';
 							echo '<a href="' . get_the_permalink() . '">';
 								echo '<div>';
 									echo '<div class="card-icon">';
-										echo '<img src="' . get_field('page_icon', $post->ID) . '" alt="' . get_the_title() . '" style="max-width: 75px; filter: invert(1) drop-shadow(2px 2px 2px black);">';
+										echo file_get_contents($icon[url]);
 									echo '</div>';
 									echo '<div class="card-content">';
 										echo '<h4>' . get_the_title() . '</h4>';
@@ -215,6 +218,7 @@ $count = 0;
 		overflow: hidden;
 	}
 	.solutions-container svg {
+		width: 100%;
 		fill: #fff;
 		filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));
 		max-width: 75px;

@@ -209,7 +209,7 @@
 						<?php
 						$args = array(
 							'post_type' => 'page',
-							'post_parent' => 2061,
+							'post_parent' => 1942,
 							'order' => 'ASC',
 							'order_by' => 'name'
 						);
@@ -253,7 +253,7 @@
 	<hr>
 </div>
 
-<section id="productive">
+<section id="productive" style="background-image: linear-gradient(to right, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0)), url(//unsplash.it/1920/400/?gravity=east);">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="productive-visual">

@@ -8,16 +8,16 @@ get_header();
 ?>
 
 <div class="fixed-hero-section">
-	<div class="site-width white-text centered">
+	<div class="video-overlay"></div>
+	<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/solutions-video.mp4" autoplay loop></video>
+	<div class="site-width white-text centered pos-rel" style="z-index: 2;">
 		<div class="two-third-only">
-			<div class="font-bump">
+			<div class="font-bump" style="margin-right: auto; margin-bottom: 0;">
 				<h1 style="margin-bottom: 0.5rem;">Streamline Document Workflows for a Range of Functional and Industry Use Cases</h1>
 				<div class="font-bump fancy-links">
           <?php the_content(); ?>
         </div>
 			</div>
-      <br>
-      <a href="#call-to-action" class="btn-white-outline">See More</a>
 		</div>
 	</div>
 </div>
