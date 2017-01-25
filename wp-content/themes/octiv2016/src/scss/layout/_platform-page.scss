@@ -11,6 +11,20 @@
     text-shadow: none;
     transition: all 200ms ease-out;
   }
+  .half {
+    justify-content: center;
+    text-align: center;
+    > div {
+      width: 100% !important;
+      margin-right: 0;
+      @include bp(md) {
+        width: 80% !important;
+      }
+      @include bp(xxl) {
+        width: 75% !important;
+      }
+    }
+  }
 }
 
 .page-template-platform-page .hero-video,
@@ -40,4 +54,22 @@
 .page-template-solutions-parent-page .fixed-hero-section,
 .page-template-solutions-parent-page .hero-video {
   background-image: url(../dist/img/solutions-video-hero.jpg);
+}
+
+.page-template-platform-page .fixed-hero-section p,
+.page-template-solutions-parent-page .fixed-hero-section p {
+  font-size: 1.2em;
+  @include bp(sm) {
+    font-size: 1.4em;
+  }
+  @include bp(md) {
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @include bp(xxl) {
+    font-size: 1.7em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }

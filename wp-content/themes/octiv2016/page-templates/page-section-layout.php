@@ -8,27 +8,39 @@ TEMPLATE NAME: Page Section Layout
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-	<div class="site-width white-text centered">
-		<div class="two-third-only">
-			<div class="font-bump">
-				<h1 style="margin-bottom: 0.5rem;">
-          <?php
-            if ($post->ID === 2080) :
-              echo 'Clients Love Octiv. And It\'s Mutual';
-            else :
-              echo the_title();
-            endif;
-          ?>
-        </h1>
-				<div class="font-bump fancy-links">
-          <?php the_content(); ?>
-        </div>
+<?php
+	if ($post->post_title === "Why Octiv") :
+		echo '
+			<div class="fixed-hero-section">
+				<div class="site-width white-text centered">
+					<div class="two-third-only">
+						<div class="font-bump">
+							<h1 style="margin-bottom: 0.5rem;">Clients Love Octiv. And It\'s Mutual</h1>
+							<div class="font-bump fancy-links">
+								' . get_the_content() . '
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
-
+		';
+	else :
+		echo '
+			<div class="fixed-hero-section">
+				<div class="site-width white-text centered">
+					<div class="two-third-only">
+						<div class="font-bump">
+							<h1 style="margin-bottom: 0.5rem;">' . get_the_title() . '</h1>
+							<div class="font-bump fancy-links">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		';
+	endif;
+?>
 
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
