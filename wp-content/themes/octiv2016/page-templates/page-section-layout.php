@@ -137,18 +137,7 @@ main .half {
   .section-icon {
     display: none;
   }
-  .fat-section:nth-of-type(2) a.btn-arrow {
-    box-shadow: inset 0 -72px 0 #33ab40 !important;
-  }
-  .fat-section:nth-of-type(3) a.btn-arrow {
-    box-shadow: inset 0 -72px 0 #b949f5 !important;
-  }
-  .fat-section:nth-of-type(4) a.btn-arrow {
-    box-shadow: inset 0 -72px 0 #ed4c06 !important;
-  }
-  .fat-section:nth-of-type(5) a.btn-arrow {
-    box-shadow: inset 0 -72px 0 #fac500 !important;
-  }
+
 }
 .fat-section:nth-of-type(2) .section-icon svg {
   fill: #33ab40;
@@ -161,31 +150,6 @@ main .half {
 }
 .fat-section:nth-of-type(5) .section-icon svg {
   fill: #fac500;
-}
-
-.fat-section:nth-of-type(2) a.btn-arrow {
-  box-shadow: inset 0 -2px 0 #33ab40;
-}
-.fat-section:nth-of-type(2) a.btn-arrow:hover {
-  box-shadow: inset 0 -32px 0 #33ab40;
-}
-.fat-section:nth-of-type(3) a.btn-arrow {
-  box-shadow: inset 0 -2px 0 #b949f5;
-}
-.fat-section:nth-of-type(3) a.btn-arrow:hover {
-  box-shadow: inset 0 -32px 0 #b949f5;
-}
-.fat-section:nth-of-type(4) a.btn-arrow {
-  box-shadow: inset 0 -2px 0 #ed4c06;
-}
-.fat-section:nth-of-type(4) a.btn-arrow:hover {
-  box-shadow: inset 0 -32px 0 #ed4c06;
-}
-.fat-section:nth-of-type(5) a.btn-arrow {
-  box-shadow: inset 0 -2px 0 #fac500;
-}
-.fat-section:nth-of-type(5) a.btn-arrow:hover {
-  box-shadow: inset 0 -32px 0 #fac500;
 }
 
 .fixed-hero-section .two-third-only > div,
