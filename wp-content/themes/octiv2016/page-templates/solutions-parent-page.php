@@ -22,7 +22,7 @@ get_header();
 	</div>
 </div>
 
-<?php get_template_part('partials/display', 'breadcrumbs'); ?>
+<?php // get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <?php
 $count = 0;

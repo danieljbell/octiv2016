@@ -15,7 +15,6 @@
 						<li><a href="/platform/catalog">Catalog</a></li>
 						<li><a href="/platform/integrations">Integrations</a></li>
 						<li><a href="/support">Support</a></li>
-						<li><a href="/platform/use-cases">Use Cases</a></li>
 					</ul>
 				</div>
 				<div>

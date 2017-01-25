@@ -174,14 +174,24 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li class="menu-item">
             <a href="/solutions" title="Solutions">Solutions</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/solutions/for-it">For IT</a></li>
-              <li class="sub-menu-item"><a href="/solutions/for-sales">For Sales</a></li>
-              <li class="sub-menu-item"><a href="/solutions/for-legal">For Legal</a></li>
-              <li class="sub-menu-item"><a href="/solutions/for-finance">For Finance</a></li>
-              <li class="sub-menu-item"><a href="/solutions/for-hr">For HR</a></li>
-              <li class="sub-menu-item"><a href="/solutions/for-procurement">For Procurement</a></li>
-            </ul>
+              <?php
+    						$args = array(
+    							'post_type' => 'page',
+    							'post_parent' => 1942,
+    							'order' => 'ASC',
+    							'order_by' => 'name'
+    						);
+    						$solutions_query = new WP_Query($args);
+    						if ($solutions_query->have_posts()) :
+    							echo '<ul class="sub-menu">';
+    							while ($solutions_query->have_posts()) :
+    								$solutions_query->the_post();
+    								echo '<li class="sub-menu-item"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+    							endwhile;
+    							echo '</ul>';
+    						endif;
+    						wp_reset_query();
+    					?>
             <?php
               // echo '
               // <button id="nav-solution">Solutions</button>
