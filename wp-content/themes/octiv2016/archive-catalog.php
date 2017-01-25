@@ -6,7 +6,7 @@
       <use xlink:href="#icon-handshake">
     </svg>
     <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
-    <div class="half-only">
+    <div class="two-third-only">
       <div>
         <p class="font-bump">Explore Octiv’s products and services by category, function, and utility. You can combine multiple components of the platform to solve for your business use cases.</p>
       </div>

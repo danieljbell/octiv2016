@@ -11,7 +11,10 @@ get_header();
 
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
-      <img src="<?php echo get_field('page_icon'); ?>" alt="" style="max-width: 150px; margin-bottom: 1rem; filter: invert(1) drop-shadow(2px 2px 2px black);">
+      <?php
+        $icon = get_field('page_icon', $post->ID, true);
+        echo '<div style="max-width: 175px; margin-bottom: 1rem;">' . file_get_contents($icon[url]) . '</div>';
+      ?>
       <h1><?php echo the_title(); ?></h1>
       <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
         <div class="font-bump fancy-links">
@@ -94,6 +97,10 @@ $count = 0;
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .fixed-hero-section svg {
+    fill: #ffffff;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
   }
   .section-icon svg {
     width: 100%;

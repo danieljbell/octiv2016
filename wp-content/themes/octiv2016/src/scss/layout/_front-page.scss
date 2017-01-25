@@ -111,9 +111,9 @@
 .home #connections .half,
 .home #user-experience .half-stack,
 .home #documents .half,
-.home #commercial .half-stack,
-.home #enterprise .half
- {
+.home #productive .half-stack {
+// .home #commercial .half-stack,
+// .home #enterprise .half {
   > div {
     width: 100%;
     margin-right: 0;
@@ -128,8 +128,8 @@
 
 .home #workflows .half-stack,
 .home #user-experience .half-stack,
-.home #documents .half-stack,
-.home #commercial .half-stack {
+.home #documents .half-stack {
+// .home #commercial .half-stack {
   flex-direction: column;
   @include bp(lg) {
     flex-direction: row-reverse;
@@ -145,8 +145,9 @@ DOCUMENT WORKFLOWS
 .home .connections-content,
 .home .ux-content,
 .home .documents-content,
-.home .commercial-content,
-.home .enterprise-content {
+.home .productive-content {
+// .home .commercial-content,
+// .home .enterprise-content {
   display: flex;
   flex-direction: column;
   @include bp(sm) {
@@ -169,11 +170,12 @@ DOCUMENT WORKFLOWS
 .home .connections-content,
 .home .ux-content,
 .home .documents-content,
-.home .company-size-content,
+.home .productive-content,
 .home .workflows-visual,
 .home .connections-visual,
 .home .documents-visual,
-.home .enterprise-visual {
+.home .productive-visual {
+// .home .enterprise-visual {
   @include bp(sm) {
     margin-bottom: 0;
   }
@@ -183,8 +185,9 @@ DOCUMENT WORKFLOWS
 #connections .half,
 #user-experience .half-stack,
 #documents .half-stack,
-#commercial .half-stack,
-#enterprise .half {
+#productive .half-stack {
+// #commercial .half-stack,
+// #enterprise .half {
   align-items: center;
 }
 
@@ -603,18 +606,6 @@ DOCUMENTS SECTION
   fill: $brand;
 }
 
-.documents-content a {
-  box-shadow: inset 0 -200px 0 $brand;
-  // remove this line when links can be used
-  pointer-events: none;
-  @include bp(sm) {
-    box-shadow: inset 0 -2px 0 $brand;
-    &:hover {
-      box-shadow: inset 0 -28px 0 $brand;
-    }
-  }
-}
-
 .documents-visual {
   min-height: 200px;
   transition: all 200ms ease-out;
@@ -765,254 +756,334 @@ DOCUMENTS SECTION
   color: $gray;
 }
 
+.documents-content ul a {
+  display: flex;
+  align-items: center;
+  color: $gray;
+  > div {
+    flex-shrink: 0;
+    max-width: 35px;
+    margin-right: 0.5rem;
+  }
+  span {
+    box-shadow: inset 0 -2px 0 $brand2;
+    transition: all 250ms ease-out;
+  }
+  &:hover {
+    span {
+      color: $white;
+      box-shadow: inset 0 -32px 0 $brand2;
+    }
+  }
+}
+
+.documents-content ul li {
+  &:nth-child(2) a span {
+    box-shadow: inset 0 -2px 0 $brand3;
+  }
+  &:nth-child(2):hover a span {
+    box-shadow: inset 0 -32px 0 $brand3;
+  }
+  &:nth-child(3) a span {
+    box-shadow: inset 0 -2px 0 $brand4;
+  }
+  &:nth-child(3):hover a span {
+    box-shadow: inset 0 -32px 0 $brand4;
+  }
+  &:nth-child(4) a span {
+    box-shadow: inset 0 -2px 0 $brand;
+  }
+  &:nth-child(4):hover a span {
+    box-shadow: inset 0 -32px 0 $brand;
+  }
+  &:nth-child(5) a span {
+    box-shadow: inset 0 -2px 0 $brand5;
+  }
+  &:nth-child(5):hover a span {
+    box-shadow: inset 0 -32px 0 $brand5;
+  }
+}
+
+.documents-content ul svg {
+  width: 100%;
+  fill: $brand2;
+}
+
+.documents-content ul li {
+  &:nth-child(2) svg {
+    fill: $brand3;
+  }
+  &:nth-child(3) svg {
+    fill: $brand4;
+  }
+  &:nth-child(4) svg {
+    fill: $brand;
+  }
+  &:nth-child(5) svg {
+    fill: $brand5;
+  }
+}
+
+
 /*
 ==============================
-COMMERCIAL
+PRODUCTIVE CONTENT
 ==============================
 */
-.commercial-content > div:first-child svg {
+.productive-content > div:first-child svg {
   width: 100%;
   max-width: 75px;
   fill: $brand5;
 }
 
-.commercial-content a {
-  box-shadow: inset 0 -200px 0 $brand5;
-  @include bp(sm) {
-    box-shadow: inset 0 -2px 0 $brand5;
-    &:hover {
-      box-shadow: inset 0 -28px 0 $brand5;
-    }
-  }
-}
-
-.home .commercial-visual {
-  transform-origin: top left;
-  transition: all 300ms ease-out;
-  transform: scale(0.57);
-  min-height: 75px;
-  @include bp(sm) {
-    min-height: 150px;
-    transform: scale(0.9);
-  }
-  @include bp(xl) {
-    transform: scale(1.2);
-  }
-  &.flow-2 {
-    transform: scale(0.57) translateX(25%);
-    @include bp(sm) {
-      transform: scale(0.9) translateX(25%);
-    }
-    @include bp(xl) {
-      transform: scale(1.2) translateX(15%);
-    }
-  }
-  &.flow-3 {
-    transform: scale(0.57) translateX(15%);
-    @include bp(sm) {
-      transform: scale(0.9) translateX(15%);
-    }
-    @include bp(xl) {
-      transform: scale(1.2) translateX(10%);
-    }
-  }
-}
-
-// Workflow Shapes
-.home #commercial [class*="workflow"] {
-  width: 50px;
-  height: 50px;
-  top: 0;
-  position: absolute;
-  transition: all 300ms ease-out;
-  &.rotated {
-    transform: rotate(45deg);
-  }
-}
-
-.workflow-box.callout {
-  border: 1px solid $mgray;
-}
-
-.workflow-circle {
-  border-radius: 50%;
-  &.callout {
-    border: 1px solid $mgray;
-  }
-}
-
-.home #commercial [class*="step"] hr {
-  transform: translateX(100%);
-  margin: 0;
-  top: 50%;
-  position: relative;
-  &:nth-child(2) {
-    top: 100%;
-    transform: translateX(150%) rotate(90deg);
-  }
-}
-
-.step-1 hr:nth-child(2) {
-  opacity: 0;
-}
-
-.step-2 {
-  transform: translateX(calc(100% + 36px));
-}
-
-.step-3 {
-  transform: translateX(calc(300% + 9px)) translateY(calc(100% + 18px));
-  hr:nth-child(2) {
-    top: 0 !important;
-  }
-}
-
-.step-4 {
-  transform: translateX(calc(450% + 9px));
-}
-
-.step-5 {
-  &.rotated {
-    transform: translateX(calc(650% + 9px)) rotate(45deg) !important;
-    hr {
-      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
-      &:nth-child(2) {
-        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
-      }
-    }
-  }
-}
-
-.step-6.workflow-box {
-  transform: translateX(calc(650% + 9px)) translateY(calc(100% + 18px));
-  hr {
-    opacity: 0;
-  }
-}
-
-.step-6.workflow-circle {
-  transform: translateX(calc(850% + 9px));
-}
-
-.flow-2 .step-1 {
-  transform: translateX(calc(350% + 9px));
-  z-index: 2;
-  hr:nth-child(2) {
-    opacity: 0 !important;
-  }
-}
-
-.flow-2 .step-2 {
-  transform: translateX(0);
-  hr:nth-child(2) {
-    opacity: 0 !important;
-  }
-}
-
-.flow-2 .step-3 {
-  transform: translateX(calc(100% + 36px)) translateY(calc(100% + 18px));
-  z-index: 2;
-  hr:nth-child(2) {
-    opacity: 0 !important;
-  }
-}
-
-.flow-2 .step-4 {
-  transform: translateX(calc(350% + 9px)) translateY(calc(100% + 18px));
-  z-index: 2;
-}
-
-.flow-2 .step-5 {
-  &.rotated {
-    transform: translateX(calc(100% + 36px)) rotate(45deg) !important;
-    hr {
-      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
-      &:nth-child(2) {
-        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
-      }
-    }
-  }
-}
-
-.flow-2 .step-6.workflow-box {
-  transform: translateX(calc(550% + 9px)) translateY(calc(100% + 18px));
-}
-
-.flow-2 .step-6.workflow-circle {
-  transform: translateX(calc(550% + 9px));
-}
-
-.flow-3 .step-1 {
-  transform: translateX(calc(500% + 9px));
-}
-
-.flow-3 .step-2 {
-  transform: translateX(calc(300% + 9px));
-  z-index: 3;
-  hr:nth-child(2) {
-    opacity: 0 !important;
-  }
-}
-
-.flow-3 .step-3 {
-  transform: translateX(0) translateY(calc(100% + 18px));
-  z-index: 2;
-}
-
-.flow-3 .step-4 {
-  transform: translateX(calc(100% + 25px));
-  z-index: 2;
-}
-
-.flow-3 .step-5 {
-  &.rotated {
-    transform: translateX(0) rotate(45deg) !important;
-    hr {
-      transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
-      &:nth-child(2) {
-        transform: translateY(16px) translateX(85%) rotate(45deg)!important;
-      }
-    }
-  }
-}
-
-.flow-3 .step-6.workflow-box {
-  transform: translateX(calc(700% + 9px));
-  hr {
-    opacity: 1;
-    transform: translateY(50px) translateX(0%) rotate(90deg) !important;
-  }
-}
-
-.flow-3 .step-6.workflow-circle {
-  transform: translateX(calc(700% + 9px)) translateY(calc(100% + 18px));
-  z-index: 2;
-}
-
-.workflow-brand {
-  @extend .brand-callout;
-}
-
-.workflow-brand-2 {
-  @extend .brand-two-callout;
-}
-
-.workflow-brand-3 {
-  @extend .brand-three-callout;
-}
-
-.workflow-brand-4 {
-  @extend .brand-four-callout;
-}
-
-.workflow-brand-5 {
-  @extend .brand-five-callout;
-}
-
-.workflow-gray {
-  @extend .callout;
-  border: 1px solid $mgray;
-}
+/*
+==============================
+COMMERCIAL
+==============================
+*/
+// .commercial-content > div:first-child svg {
+//   width: 100%;
+//   max-width: 75px;
+//   fill: $brand5;
+// }
+//
+// .commercial-content a {
+//   box-shadow: inset 0 -200px 0 $brand5;
+//   @include bp(sm) {
+//     box-shadow: inset 0 -2px 0 $brand5;
+//     &:hover {
+//       box-shadow: inset 0 -28px 0 $brand5;
+//     }
+//   }
+// }
+//
+// .home .commercial-visual {
+//   transform-origin: top left;
+//   transition: all 300ms ease-out;
+//   transform: scale(0.57);
+//   min-height: 75px;
+//   @include bp(sm) {
+//     min-height: 150px;
+//     transform: scale(0.9);
+//   }
+//   @include bp(xl) {
+//     transform: scale(1.2);
+//   }
+//   &.flow-2 {
+//     transform: scale(0.57) translateX(25%);
+//     @include bp(sm) {
+//       transform: scale(0.9) translateX(25%);
+//     }
+//     @include bp(xl) {
+//       transform: scale(1.2) translateX(15%);
+//     }
+//   }
+//   &.flow-3 {
+//     transform: scale(0.57) translateX(15%);
+//     @include bp(sm) {
+//       transform: scale(0.9) translateX(15%);
+//     }
+//     @include bp(xl) {
+//       transform: scale(1.2) translateX(10%);
+//     }
+//   }
+// }
+//
+// // Workflow Shapes
+// .home #commercial [class*="workflow"] {
+//   width: 50px;
+//   height: 50px;
+//   top: 0;
+//   position: absolute;
+//   transition: all 300ms ease-out;
+//   &.rotated {
+//     transform: rotate(45deg);
+//   }
+// }
+//
+// .workflow-box.callout {
+//   border: 1px solid $mgray;
+// }
+//
+// .workflow-circle {
+//   border-radius: 50%;
+//   &.callout {
+//     border: 1px solid $mgray;
+//   }
+// }
+//
+// .home #commercial [class*="step"] hr {
+//   transform: translateX(100%);
+//   margin: 0;
+//   top: 50%;
+//   position: relative;
+//   &:nth-child(2) {
+//     top: 100%;
+//     transform: translateX(150%) rotate(90deg);
+//   }
+// }
+//
+// .step-1 hr:nth-child(2) {
+//   opacity: 0;
+// }
+//
+// .step-2 {
+//   transform: translateX(calc(100% + 36px));
+// }
+//
+// .step-3 {
+//   transform: translateX(calc(300% + 9px)) translateY(calc(100% + 18px));
+//   hr:nth-child(2) {
+//     top: 0 !important;
+//   }
+// }
+//
+// .step-4 {
+//   transform: translateX(calc(450% + 9px));
+// }
+//
+// .step-5 {
+//   &.rotated {
+//     transform: translateX(calc(650% + 9px)) rotate(45deg) !important;
+//     hr {
+//       transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+//       &:nth-child(2) {
+//         transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+//       }
+//     }
+//   }
+// }
+//
+// .step-6.workflow-box {
+//   transform: translateX(calc(650% + 9px)) translateY(calc(100% + 18px));
+//   hr {
+//     opacity: 0;
+//   }
+// }
+//
+// .step-6.workflow-circle {
+//   transform: translateX(calc(850% + 9px));
+// }
+//
+// .flow-2 .step-1 {
+//   transform: translateX(calc(350% + 9px));
+//   z-index: 2;
+//   hr:nth-child(2) {
+//     opacity: 0 !important;
+//   }
+// }
+//
+// .flow-2 .step-2 {
+//   transform: translateX(0);
+//   hr:nth-child(2) {
+//     opacity: 0 !important;
+//   }
+// }
+//
+// .flow-2 .step-3 {
+//   transform: translateX(calc(100% + 36px)) translateY(calc(100% + 18px));
+//   z-index: 2;
+//   hr:nth-child(2) {
+//     opacity: 0 !important;
+//   }
+// }
+//
+// .flow-2 .step-4 {
+//   transform: translateX(calc(350% + 9px)) translateY(calc(100% + 18px));
+//   z-index: 2;
+// }
+//
+// .flow-2 .step-5 {
+//   &.rotated {
+//     transform: translateX(calc(100% + 36px)) rotate(45deg) !important;
+//     hr {
+//       transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+//       &:nth-child(2) {
+//         transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+//       }
+//     }
+//   }
+// }
+//
+// .flow-2 .step-6.workflow-box {
+//   transform: translateX(calc(550% + 9px)) translateY(calc(100% + 18px));
+// }
+//
+// .flow-2 .step-6.workflow-circle {
+//   transform: translateX(calc(550% + 9px));
+// }
+//
+// .flow-3 .step-1 {
+//   transform: translateX(calc(500% + 9px));
+// }
+//
+// .flow-3 .step-2 {
+//   transform: translateX(calc(300% + 9px));
+//   z-index: 3;
+//   hr:nth-child(2) {
+//     opacity: 0 !important;
+//   }
+// }
+//
+// .flow-3 .step-3 {
+//   transform: translateX(0) translateY(calc(100% + 18px));
+//   z-index: 2;
+// }
+//
+// .flow-3 .step-4 {
+//   transform: translateX(calc(100% + 25px));
+//   z-index: 2;
+// }
+//
+// .flow-3 .step-5 {
+//   &.rotated {
+//     transform: translateX(0) rotate(45deg) !important;
+//     hr {
+//       transform: translateY(-42px) translateX(85%) rotate(135deg) !important;
+//       &:nth-child(2) {
+//         transform: translateY(16px) translateX(85%) rotate(45deg)!important;
+//       }
+//     }
+//   }
+// }
+//
+// .flow-3 .step-6.workflow-box {
+//   transform: translateX(calc(700% + 9px));
+//   hr {
+//     opacity: 1;
+//     transform: translateY(50px) translateX(0%) rotate(90deg) !important;
+//   }
+// }
+//
+// .flow-3 .step-6.workflow-circle {
+//   transform: translateX(calc(700% + 9px)) translateY(calc(100% + 18px));
+//   z-index: 2;
+// }
+//
+// .workflow-brand {
+//   @extend .brand-callout;
+// }
+//
+// .workflow-brand-2 {
+//   @extend .brand-two-callout;
+// }
+//
+// .workflow-brand-3 {
+//   @extend .brand-three-callout;
+// }
+//
+// .workflow-brand-4 {
+//   @extend .brand-four-callout;
+// }
+//
+// .workflow-brand-5 {
+//   @extend .brand-five-callout;
+// }
+//
+// .workflow-gray {
+//   @extend .callout;
+//   border: 1px solid $mgray;
+// }
 
 
 /*
@@ -1020,36 +1091,36 @@ COMMERCIAL
 ENTERPRISE
 ==============================
 */
-#enterprise {
-  background-image: linear-gradient(to right, rgba(white,0.95), rgba(white,0) 20%, rgba(white,0) 80%, rgba(white,0.9)), linear-gradient(to top, rgba(white,1) 40%, rgba(white,0) 60%), url(/wp-content/uploads/2016/12/Image-9.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 15% -3rem;
-  @include bp(sm) {
-    background-position: 5% -2rem;
-  }
-  @include bp(lg) {
-    background-image: linear-gradient(to right, rgba(white,0.95), rgba(white,0) 20%, rgba(white,0.9) 60%), url(/wp-content/uploads/2016/12/Image-9.jpg);
-    background-position: 20% center;
-  }
-}
-
-.enterprise-visual {
-  min-height: 200px;
-}
-
-.enterprise-content {
-  margin-top: 3rem;
-  @include bp(lg) {
-    background-image: linear-gradient(to left, rgba(white,1), rgba(white,0.8) 90%, rgba(white,0) 100%);
-  }
-}
-
-.enterprise-content > div:first-child svg {
-  width: 100%;
-  max-width: 75px;
-  fill: $brand2;
-}
+// #enterprise {
+//   background-image: linear-gradient(to right, rgba(white,0.95), rgba(white,0) 20%, rgba(white,0) 80%, rgba(white,0.9)), linear-gradient(to top, rgba(white,1) 40%, rgba(white,0) 60%), url(/wp-content/uploads/2016/12/Image-9.jpg);
+//   background-repeat: no-repeat;
+//   background-size: auto;
+//   background-position: 15% -3rem;
+//   @include bp(sm) {
+//     background-position: 5% -2rem;
+//   }
+//   @include bp(lg) {
+//     background-image: linear-gradient(to right, rgba(white,0.95), rgba(white,0) 20%, rgba(white,0.9) 60%), url(/wp-content/uploads/2016/12/Image-9.jpg);
+//     background-position: 20% center;
+//   }
+// }
+//
+// .enterprise-visual {
+//   min-height: 200px;
+// }
+//
+// .enterprise-content {
+//   margin-top: 3rem;
+//   @include bp(lg) {
+//     background-image: linear-gradient(to left, rgba(white,1), rgba(white,0.8) 90%, rgba(white,0) 100%);
+//   }
+// }
+//
+// .enterprise-content > div:first-child svg {
+//   width: 100%;
+//   max-width: 75px;
+//   fill: $brand2;
+// }
 
 /*
 ==============================

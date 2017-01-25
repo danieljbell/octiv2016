@@ -80,10 +80,6 @@ if(is_404() && $_GET['ref']=="tb"){
         <ul>
           <li class="menu-item">
             <a href="/platform" title="Platform">Platform</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/platform/catalog">Catalog</a></li>
-              <li class="sub-menu-item"><a href="/platform/integrations">Integrations</a></li>
-            </ul>
             <?php
               // echo '
               // <button id="nav-platform">Platform</button>
@@ -179,7 +175,7 @@ if(is_404() && $_GET['ref']=="tb"){
           <li class="menu-item">
             <a href="/solutions" title="Solutions">Solutions</a>
             <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/solutions/for-cios">For CIOs</a></li>
+              <li class="sub-menu-item"><a href="/solutions/for-it">For IT</a></li>
               <li class="sub-menu-item"><a href="/solutions/for-sales">For Sales</a></li>
               <li class="sub-menu-item"><a href="/solutions/for-legal">For Legal</a></li>
               <li class="sub-menu-item"><a href="/solutions/for-finance">For Finance</a></li>
@@ -270,11 +266,6 @@ if(is_404() && $_GET['ref']=="tb"){
           </li>
           <li class="menu-item">
             <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="#">vs. Spring CM</a></li>
-              <li class="sub-menu-item"><a href="#">vs. Apptus</a></li>
-              <li class="sub-menu-item"><a href="#">vs. Seismic</a></li>
-            </ul>
             <?php
               // echo '
               // <button id="nav-why-octiv">Why Octiv</button>
@@ -343,7 +334,6 @@ if(is_404() && $_GET['ref']=="tb"){
               <li class="sub-menu-item"><a href="/resources/client-stories">Client Stories</a></li>
               <li class="sub-menu-item"><a href="/resources/webinars">Webinars</a></li>
               <li class="sub-menu-item"><a href="/resources/whitepapers">Whitepapers</a></li>
-              <li class="sub-menu-item"><a href="/events">Upcoming Events</a></li>
             </ul>
             <?php
               // echo '

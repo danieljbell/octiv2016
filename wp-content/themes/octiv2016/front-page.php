@@ -7,7 +7,7 @@
 	    <div class="half white-text">
 	        <div>
 	            <h1><span style="display: block;">Unified Document Workflows</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Sophisticated Companies</span></h1>
-	            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance, and HR. Free your teams. Free up time.</p>
+	            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
 	        </div>
 	    </div>
 	</div>
@@ -202,10 +202,47 @@
 					</svg>
 				</div>
 				<div>
-					<h2>Sales &amp; Legal Documents</h2>
-					<p>Octiv powers commercial, customer-facing documents such as proposals, quotes, RFPs, SOWs, NDAs, MSAs partner agreements and other commercial contracts. Octiv streamlines workflows which reduces time-consuming steps as well as interactions with technology and teams. This simplifies the seller experience and gives time back to sales to be more productive.</p>
-					<p><strong>Add something to link to the Octiv for pages for each industry.</strong></p>
-					<a href="#" class="btn-arrow">Learn More</a>
+					<h2>Octiv Powers Your Documents</h2>
+					<p>Business runs on information, and often that information is created, shared and used in a document. From presentations and proposals to contracts and invoices to offer letters and performance appraisals - Octiv makes the documents you use easier to create and better to use.</p>
+					<p style="margin-bottom: 0.25rem;"><strong>Explore Our Solutions:</strong></p>
+					<ul class="third" style="list-style-type: none; padding: 0;">
+						<?php
+						$args = array(
+							'post_type' => 'page',
+							'post_parent' => 1942,
+							'order' => 'ASC',
+							'order_by' => 'name'
+						);
+						$solutions_query = new WP_Query($args);
+						if ($solutions_query->have_posts()) :
+							while ($solutions_query->have_posts()) :
+								$solutions_query->the_post();
+								$icon = get_field('page_icon', $post->ID, true);
+								echo '<li>';
+									echo '<a href="' . get_the_permalink() . '">';
+										echo '<div>' . file_get_contents($icon[url]) . '</div>';
+										echo '<span>' . get_the_title() . '</span>';
+									echo '</a>';
+								echo '</li>';
+							endwhile;
+						endif;
+						wp_reset_query();
+						?>
+						<!-- <li>
+							<a href="/solutions/for-sales" style="display: flex; flex-direction: row;">
+								<div style="flex-shrink: 0; max-width: 35px; margin-right: 0.5rem;">
+									<svg viewBox="0 0 60 47.4" style="width: 100%;">
+										<use xlink:href="#icon-handshake">
+									</svg>
+								</div>
+								<div>For Sales</div>
+							</a>
+						</li>
+						<li>For Legal</li>
+						<li>For Finance</li>
+						<li>For HR</li>
+						<li>For IT</li> -->
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -216,57 +253,81 @@
 	<hr>
 </div>
 
-<section id="commercial" style="overflow-x: hidden;" class="fat-section">
+<section id="productive">
 	<div class="site-width">
 		<div class="half-stack">
-			<div class="pos-rel commercial-visual flow-1">
-				<div class="step-1 workflow-box workflow-brand"><hr><hr></div>
-				<div class="step-2 workflow-box workflow-brand-5"><hr><hr></div>
-				<div class="step-3 workflow-box workflow-brand-3"><hr><hr></div>
-				<div class="step-4 workflow-circle workflow-brand-2"><hr></div>
-				<div class="step-5 workflow-box rotated workflow-brand-4"><hr><hr></div>
-				<div class="step-6 workflow-circle callout"></div>
-				<div class="step-6 workflow-box callout"><hr></div>
+			<div class="productive-visual">
 			</div>
-			<div class="commercial-content">
+			<div class="productive-content">
 				<div>
-					<svg viewBox="0 0 100 108.3">
-						<use xlink:href="#icon-commercial">
+					<svg viewBox="0 0 50 50">
+						<use xlink:href="#icon-time-giver">
 					</svg>
 				</div>
 				<div>
-					<h2>Commercial Teams</h2>
-					<p>Octiv simplifies the experience for commercial teams. Octiv supports high-volume, transactional workflows, complex, long-cycle workflows and channel/distributor workflows.</p>
-					<a href="#" class="btn-arrow">Learn More</a>
+					<h2>More Productive Teams</h2>
+					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv simplifies how your teams create, share and manage documents - giving them time back to be more productive.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<div class="site-width">
-	<hr>
-</div>
-
-<section id="enterprise" class="fat-section">
-	<div class="site-width">
-		<div class="half">
-			<div class="enterprise-visual"></div>
-			<div class="enterprise-content">
-				<div>
-					<svg viewBox="0 0 100 99.7">
-						<use xlink:href="#icon-enterprise">
-					</svg>
-				</div>
-				<div>
-					<h2>Enterprise Teams</h2>
-					<p>Octiv is enterprise-ready. Enterprise document workflows often span multiple applications and repositories and can also span numerous teams, geographies and languages. Octiv offers enterprises a way to unify and standardize document workflows that maximize existing IT investments while enhancing interoperability. Eliminate process steps, save time and create new efficiencies with Octiv.</p>
-					<a href="#" class="btn-arrow">Learn More</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<?php // Commercial & Enterprise sections
+	// echo '
+	// <section id="commercial" style="overflow-x: hidden;" class="fat-section">
+	// 	<div class="site-width">
+	// 		<div class="half-stack">
+	// 			<div class="pos-rel commercial-visual flow-1">
+	// 				<div class="step-1 workflow-box workflow-brand"><hr><hr></div>
+	// 				<div class="step-2 workflow-box workflow-brand-5"><hr><hr></div>
+	// 				<div class="step-3 workflow-box workflow-brand-3"><hr><hr></div>
+	// 				<div class="step-4 workflow-circle workflow-brand-2"><hr></div>
+	// 				<div class="step-5 workflow-box rotated workflow-brand-4"><hr><hr></div>
+	// 				<div class="step-6 workflow-circle callout"></div>
+	// 				<div class="step-6 workflow-box callout"><hr></div>
+	// 			</div>
+	// 			<div class="commercial-content">
+	// 				<div>
+	// 					<svg viewBox="0 0 100 108.3">
+	// 						<use xlink:href="#icon-commercial">
+	// 					</svg>
+	// 				</div>
+	// 				<div>
+	// 					<h2>Commercial Teams</h2>
+	// 					<p>Octiv simplifies the experience for commercial teams. Octiv supports high-volume, transactional workflows, complex, long-cycle workflows and channel/distributor workflows.</p>
+	// 					<a href="#" class="btn-arrow">Learn More</a>
+	// 				</div>
+	// 			</div>
+	// 		</div>
+	// 	</div>
+	// </section>
+	//
+	// <div class="site-width">
+	// 	<hr>
+	// </div>
+	//
+	// <section id="enterprise" class="fat-section">
+	// 	<div class="site-width">
+	// 		<div class="half">
+	// 			<div class="enterprise-visual"></div>
+	// 			<div class="enterprise-content">
+	// 				<div>
+	// 					<svg viewBox="0 0 100 99.7">
+	// 						<use xlink:href="#icon-enterprise">
+	// 					</svg>
+	// 				</div>
+	// 				<div>
+	// 					<h2>Enterprise Teams</h2>
+	// 					<p>Octiv is enterprise-ready. Enterprise document workflows often span multiple applications and repositories and can also span numerous teams, geographies and languages. Octiv offers enterprises a way to unify and standardize document workflows that maximize existing IT investments while enhancing interoperability. Eliminate process steps, save time and create new efficiencies with Octiv.</p>
+	// 					<a href="#" class="btn-arrow">Learn More</a>
+	// 				</div>
+	// 			</div>
+	// 		</div>
+	// 	</div>
+	// </section>
+	// ';
+?>
 
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 
