@@ -253,7 +253,7 @@
 	<hr>
 </div>
 
-<section id="productive" style="background-image: linear-gradient(to right, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0)), url(//unsplash.it/1920/400/?gravity=east);">
+<section id="productive">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="productive-visual">
