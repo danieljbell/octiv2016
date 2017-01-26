@@ -30,7 +30,7 @@ TYPED FOR HOMEPAGE
 */
 if ($('.typed').length) {
   $(".typed").typed({
-    strings: ["Publishing Moguls", "Global Leaders", "Tech Innovators", "Market Makers", "Real Estate Titans"],
+    strings: ["Publishing Moguls", "Tech Innovators", "Market Makers", "Real Estate Titans", "Global Leaders"],
     typeSpeed: 30,
     backSpeed: 15,
     startDelay: 2000,
