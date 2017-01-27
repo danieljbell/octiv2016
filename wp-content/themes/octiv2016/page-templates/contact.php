@@ -18,12 +18,26 @@ TEMPLATE NAME: Contact Us
 
 <section>
   <div class="site-width">
-    <p>Something about contacting us and filling out the form below. Now for some Chuck Norris jokes to fill space. Chuck Norris will attain statehood in 2009. His state flower will be the Magnolia. Chuck Norris doesn't churn butter. He roundhouse kicks the cows and the butter comes straight out. Police label anyone attacking Chuck Norris as a Code 45-11.... A suicide. Chuck Norris is the only man to ever defeat a brick wall in a game of tennis.</p>
+    <div class="two-third-only">
+      <div style="margin-bottom: 0;">
+        <p class="font-bump centered" style="margin-bottom: 0;">Octiv gives hundreds of companies the ability to increase efficiency and improve the end-user experience for their customers. To learn more about how Octiv can streamline your company’s workflows, fill out the form to speak to one of our experts today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-width">
+  <hr>
+</div>
+
+<section>
+  <div class="site-width">
+    <h2 class="centered">Who do you need to talk to?</h2>
+    <br>
+    <br>
     <div class="tabs">
       <h6 id="sales">Sales</h6>
       <div class="tabbody">
-        <br>
-        <h4 class="centered">Fill out the form below or call 317.550.0148 to request a call with one of our experts.</h4>
         <br>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 					<form id="mktoForm_1008"></form>
@@ -45,23 +59,18 @@ TEMPLATE NAME: Contact Us
 				    });
 					});
 				</script>
+        <br>
       </div>
       <h6 id="support">Support</h6>
       <div class="tabbody">
         <?php get_template_part('partials/display', 'support-form'); ?>
       </div>
       <h6 id="press">Press</h6>
-      <div class="tabbody">
-        press something
+      <div class="tabbody centered">
+        <br>
+        <h4>Press inquiries?</h4>
+        <p>Email us at <a href="mailto:press@octiv.com">press@octiv.com</a>.</p>
       </div>
-      <!-- <h6>Partner</h6>
-      <div class="tabbody">
-        partner something
-      </div>
-      <h6>Careers</h6>
-      <div class="tabbody">
-        careers something
-      </div> -->
     </div>
   </div>
 </section>

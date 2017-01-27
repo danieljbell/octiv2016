@@ -17,12 +17,11 @@
 <section class="callout fat-section">
 	<div class="site-width">
 		<h2 class="centered">How Octiv unifies your document workflow</h2>
-		<div class="two-third-only">
-			<div>
+		<div class="two-third-only" style="margin-bottom: 0;">
+			<div style="margin-bottom: 0;">
 				<p class="centered">Octiv is a cloud platform that streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
 			</div>
 		</div>
-		<br>
 		<br>
 		<br>
 		<div id="workflow-comparison" class="twentytwenty-container">
@@ -338,8 +337,8 @@
 	<div class="site-width">
 		<div class="half">
 			<div>
-				<h2>Ready to Revamp Your Productivity?</h2>
-				<p>Contact sales today to see how Octiv can help your organization.</p>
+				<h2>Ready to Streamline Your Company's Workflows?</h2>
+				<p>Contact us today to learn more about how Octiv can help you.</p>
 				<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 					<form id="mktoForm_1008"></form>
 				<script>

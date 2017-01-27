@@ -32,7 +32,6 @@ gulp.task('js', function () {
   gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
-      // 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/jquery-accessible-tabs/js/jquery.tabs.js',
       'bower_components/slick-carousel/slick/slick.js',

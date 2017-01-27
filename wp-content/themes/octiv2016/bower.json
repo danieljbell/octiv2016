@@ -25,6 +25,7 @@
     "slick-carousel": "~1.6.0",
     "jquery-accessible-tabs": "~1.9.9",
     "twentytwenty": "*",
-    "typed.js": "~1.1.4"
+    "typed.js": "~1.1.4",
+    "waypoints": "~4.0.1"
   }
 }

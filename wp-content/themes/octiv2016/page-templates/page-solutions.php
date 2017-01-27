@@ -126,37 +126,20 @@ get_header();
 
 <section class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
   <div class="site-width">
-    <h2 class="centered">Octiv <?php echo get_the_title(); ?> is great, but here are some other use cases.</h2>
+    <h2 class="centered">See What Octiv Can Do</h2>
     <br>
     <br>
     <?php
-      $args = array(
-        'post_type' => 'page',
-        'post_parent' => 1942,
-        'post__not_in' => array($post->ID)
-      );
-      $solutions_query = new WP_Query($args);
-      if ($solutions_query->have_posts()) :
-        echo '<div class="third">';
-        while ($solutions_query->have_posts()) :
-          $solutions_query->the_post();
-          $icon = get_field('page_icon', $post->ID, true);
-          echo '<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');">';
-            echo '<a href="' . get_the_permalink() . '">';
-              echo '<div>';
-                echo '<div class="card-icon">';
-                  echo file_get_contents($icon[url]);
-                echo '</div>';
-                echo '<div class="card-content">';
-                  echo '<h4>' . get_the_title() . '</h4>';
-                echo '</div>';
-              echo '</div>';
-            echo '</div>';
-          echo '</a>';
-        endwhile;
-        echo '</div>';
-      endif;
-      wp_reset_query();
+      $terms = get_terms( array(
+        'taxonomy' => 'feature_type',
+        'orderby' => 'id',
+        'hide_empty' => false,
+      ) );
+      echo '<div class="third">';
+        foreach ( $terms as $term ) {
+          echo '<div class="card"><div class="centered"><a href="/platform/features/#' . $term->slug . '">' . $term->name . '</a></div></div>';
+        }
+      echo '</div>';
     ?>
   </div>
 </section>
@@ -179,26 +162,33 @@ get_header();
     max-width: 75px;
     fill: #42b0d8;
   }
-  main .half-stack,
+  /*main .half-stack,
 	main .half {
 		align-items: center;
-	}
-  @media screen and (max-width: 600px) {
-    .section-icon {
-      display: none;
-    }
-  }
-  .fat-section:nth-of-type(2) .section-icon svg {
+	}*/
+  .fat-section .section-content:nth-of-type(2) .section-icon svg {
     fill: #33ab40;
   }
-  .fat-section:nth-of-type(3) .section-icon svg {
+  .fat-section .section-content:nth-of-type(3) .section-icon svg {
     fill: #b949f5;
   }
-  .fat-section:nth-of-type(4) .section-icon svg {
+  .fat-section .section-content:nth-of-type(4) .section-icon svg {
     fill: #ed4c06;
   }
+  @media screen and (max-width: 600px) {
+    .section-content  {
+      flex-direction: column;
+    }
+    .section-icon {
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .section-icon svg {
+      max-width: 125px;
+    }
+  }
 
-  .solutions-container .card {
+  /*.solutions-container .card {
 		color: #fff;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.85);
 		background-size: cover;
@@ -231,7 +221,7 @@ get_header();
 	}
 	.solutions-container .card-content > div {
 		display: none;
-	}
+	}*/
 </style>
 
 <script>

@@ -65,7 +65,7 @@ if(is_404() && $_GET['ref']=="tb"){
 
 <?php get_template_part('partials/display', 'eyebrow'); ?>
   <header class="site-width" role="banner">
-    <div>
+    <div class="logo-container">
       <?php // Logo
         if (is_front_page()) :
           echo '<svg viewBox="0 0 100 21.9" id="site-logo"><use xlink:href="#icon-octiv-logo"></svg>';

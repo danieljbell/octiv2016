@@ -59,79 +59,28 @@ SCROLLING EVENTS FOR HOMEPAGE
 ==============================
 */
 if ($('body').hasClass('home')) {
-  // Set up variables
-    var windowScroll = $(this).scrollTop();
-    var workflowsContainer = $('#workflows');
-    var connectionsContainer = $('#connections');
-    var documentsContainer = $('#documents');
-
-    // Spin out connections for keyboard tabbing
-    connectionsContainer.find('.connections-visual > div:nth-child(2) a').focus(function() {
-      connectionsContainer.find('.connections-visual').addClass('in-view');
-    })
-
-    // Get coordinates
-    var workflowsContainerPos = workflowsContainer.offset().top;
-    var connectionsContainerPos = connectionsContainer.offset().top;
-    var documentsContainerPos = documentsContainer.offset().top;
-
-    // If resize, refresh coordinates
-    $(window).resize(function() {
-      workflowsContainerPos = workflowsContainer.offset().top;
-      connectionsContainerPos = connectionsContainer.offset().top;
-      documentsContainerPos = documentsContainer.offset().top;
-    });
-
-    // Let's get to scrolling
-    $(window).scroll(function() {
-      // Refresh the windowScroll variable
-      windowScroll = $(this).scrollTop();
-
-      if (window.innerWidth > 600) {
-        // Bring in the fancies for workflows
-        if (windowScroll > (workflowsContainerPos + (window.innerHeight / 4))) {
-          workflowsContainer.find('.workflows-visual').addClass('in-view');
-        } else if (windowScroll < (workflowsContainerPos - 200)) {
-          workflowsContainer.find('.workflows-visual').removeClass('in-view');
-        }
-
-        // Bring in the fancies for connections
-        if (windowScroll > (connectionsContainerPos + (window.innerHeight / 4))) {
-          connectionsContainer.find('.connections-visual').addClass('in-view');
-        } else if (windowScroll < (connectionsContainerPos - 200)) {
-          connectionsContainer.find('.connections-visual').removeClass('in-view');
-        }
-
-        // Bring in the fancies for documents
-        if (windowScroll > (documentsContainerPos + (window.innerHeight / 4))) {
-          documentsContainer.find('.documents-visual').addClass('in-view');
-        } else if (windowScroll < (documentsContainerPos - 200)) {
-          documentsContainer.find('.documents-visual').removeClass('in-view');
-        }
-      } else {
-        // Bring in the fancies for workflows
-        if (windowScroll > (workflowsContainerPos - (window.innerHeight / 4))) {
-          workflowsContainer.find('.workflows-visual').addClass('in-view');
-        } else if (windowScroll < (workflowsContainerPos - 200)) {
-          workflowsContainer.find('.workflows-visual').removeClass('in-view');
-        }
-
-        // Bring in the fancies for connections
-        if (windowScroll > (connectionsContainerPos - (window.innerHeight / 4))) {
-          connectionsContainer.find('.connections-visual').addClass('in-view');
-        } else if (windowScroll < (connectionsContainerPos - 200)) {
-          connectionsContainer.find('.connections-visual').removeClass('in-view');
-        }
-
-        // Bring in the fancies for documents
-        if (windowScroll > (documentsContainerPos - (window.innerHeight / 4))) {
-          documentsContainer.find('.documents-visual').addClass('in-view');
-        } else if (windowScroll < (documentsContainerPos - 200)) {
-          documentsContainer.find('.documents-visual').removeClass('in-view');
-        }
-      }
-
-    });
+  var workflowsWaypoint = new Waypoint({
+    element: document.querySelector('#workflows'),
+    handler: function(element, direction) {
+        $('.workflows-visual').toggleClass('in-view');
+    },
+    offset: '65%'
+  });
+  var connectionsWaypoint = new Waypoint({
+    element: document.querySelector('#connections'),
+    handler: function(element, direction) {
+        $('.connections-visual').toggleClass('in-view');
+    },
+    offset: '65%'
+  });
+  var documentsWaypoint = new Waypoint({
+    element: document.querySelector('#documents'),
+    handler: function(element, direction) {
+        $('.documents-visual').toggleClass('in-view');
+    },
+    offset: '65%'
+  });
+  
 
     // Smooth Scrolling
     $('.home .fixed-hero-section a').on('click', function(e) {

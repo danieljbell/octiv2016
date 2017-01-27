@@ -112,11 +112,7 @@
   <div id="fsSubmit2411006" class="fsSubmit fsPagination">
     <button type="button" id="fsPreviousButton2411006" class="fsPreviousButton" value="Previous Page" style="display:none;"><span class="fsFull">Previous</span><span class="fsSlim">←</span></button>
     <button type="button" id="fsNextButton2411006" class="fsNextButton" value="Next Page" style="display:none;"><span class="fsFull">Next</span><span class="fsSlim">→</span></button>
-    <input id="fsSubmitButton2411006"
-    class="fsSubmitButton"
-    style="display: block;"
-    type="submit"
-    value="Submit Form" />
+    <input id="fsSubmitButton2411006" class="fsSubmitButton" style="display: block; width: initial; margin-left: auto; margin-right: auto;" type="submit" value="Submit Form" />
     <div class="clear"></div>
   </div>
 </form>
