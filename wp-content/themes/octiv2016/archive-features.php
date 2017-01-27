@@ -20,11 +20,12 @@
   <div class="site-width">
     <div class="fourth-3-fourth">
       <div class="sticky-sidebar" id="sticky-sidebar">
-        <h4>Catalog</h4>
+        <h4><?php echo str_replace('Archives: ', '', get_the_archive_title()); ?></h4>
         <hr>
         <?php
           $terms = get_terms( array(
-              'taxonomy' => 'catalog_type',
+              'taxonomy' => 'feature_type',
+              'orderby' => 'id',
               'hide_empty' => false,
           ) );
           if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
@@ -38,16 +39,19 @@
       </div>
       <div class="sticky-listing">
         <?php
-          $custom_terms = get_terms('catalog_type');
+          $custom_terms = get_terms( array(
+            'taxonomy' => 'feature_type',
+            'orderby' => 'id'
+          ) );
           $i = 0;
           foreach($custom_terms as $custom_term) {
             wp_reset_query();
             $args = array(
-              'post_type' => 'catalog',
+              'post_type' => 'features',
               'posts_per_page' => -1,
               'tax_query' => array(
                 array(
-                  'taxonomy' => 'catalog_type',
+                  'taxonomy' => 'feature_type',
                   'field' => 'slug',
                   'terms' => $custom_term->slug,
                 ),

@@ -14,6 +14,7 @@
 					<ul>
 						<li><a href="/platform/catalog">Catalog</a></li>
 						<li><a href="/platform/integrations">Integrations</a></li>
+						<li><a href="/releases">Releases</a></li>
 						<li><a href="/support">Support</a></li>
 					</ul>
 				</div>
@@ -60,6 +61,7 @@
 					<h5><a href="/company" style="color: #555;">Company</a></h5>
 					<ul>
 						<li><a href="/company/#leadership">Leadership</a></li>
+						<li><a href="/company/#board-of-directors">Board of Directors</a></li>
 						<li><a href="/company/careers">Careers</a></li>
 						<li><a href="/press-releases">Press</a></li>
 						<li><a href="/contact-us">Contact Us</a></li>

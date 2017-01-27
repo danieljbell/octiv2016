@@ -90,14 +90,41 @@ $count = 0;
   endif;
 ?>
 
-<section id="call-to-action" class="callout" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #ccc);">
+<section id="call-to-action" class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
   <div class="site-width">
-    <h2 class="centered">Octiv for Industry - See how Octiv is driving compelling business cases for industry use cases.</h2>
-    <div class="third">
-      <div>column</div>
-      <div>column</div>
-      <div>column</div>
-    </div>
+    <h2 class="centered">Octiv for Industry</h2>
+		<p class="centered">See how Octiv is driving compelling business cases for industry use cases.</p>
+		<br>
+		<br>
+		<?php
+      $args = array(
+        'post_type' => 'page',
+        'post_parent' => 1942,
+        'post__not_in' => array($post->ID)
+      );
+      $solutions_query = new WP_Query($args);
+      if ($solutions_query->have_posts()) :
+        echo '<div class="third">';
+        while ($solutions_query->have_posts()) :
+          $solutions_query->the_post();
+          $icon = get_field('page_icon', $post->ID, true);
+          echo '<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');">';
+            echo '<a href="' . get_the_permalink() . '">';
+              echo '<div>';
+                echo '<div class="card-icon">';
+                  echo file_get_contents($icon[url]);
+                echo '</div>';
+                echo '<div class="card-content">';
+                  echo '<h4>' . get_the_title() . '</h4>';
+                echo '</div>';
+              echo '</div>';
+            echo '</div>';
+          echo '</a>';
+        endwhile;
+        echo '</div>';
+      endif;
+      wp_reset_query();
+    ?>
   </div>
 </section>
 
@@ -185,7 +212,7 @@ $count = 0;
 	.fixed-hero-section .two-third-only > div p {
 		margin-bottom: 0;
 	}
-	/*.solutions-container .card {
+	.solutions-container .card {
 		color: #fff;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.85);
 		background-size: cover;
@@ -193,6 +220,7 @@ $count = 0;
 		overflow: hidden;
 	}
 	.solutions-container svg {
+		width: 100%;
 		fill: #fff;
 		filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));
 		max-width: 75px;
@@ -217,7 +245,7 @@ $count = 0;
 	}
 	.solutions-container .card-content > div {
 		display: none;
-	}*/
+	}
 	#site-footer .site-width:first-of-type {
 		border: 0;
 	}

@@ -83,11 +83,11 @@ TEMPLATE NAME: Contact Us
           <div>
             <img src="<?php echo get_template_directory_URI(); ?>/dist/img/phone.png" alt="Phone Number" style="max-width: 40px;">
             <p><strong>Main Phone Line</strong><br>317.550.0148</p>
-            <p>1 - Sales<br>2 - Press<br>3 - Partners</p>
+            <p>1 - Sales<br>2 - Support<br>3 - Billing</p>
           </div>
           <div>
             <img src="<?php echo get_template_directory_URI(); ?>/dist/img/email.svg" alt="Email" style="max-width: 75px;">
-            <p><strong>Main Email</strong><br><a href="mailto:general@octiv.com">general@octiv.com</a></p>
+            <p><strong>Main Email</strong></p>
             <p><a href="mailto:sales@octiv.com">sales@octiv.com</a><br><a href="mailto:press@octiv.com">press@octiv.com</a><br><a href="mailto:partners@octiv.com">partners@octiv.com</a></p>
           </div>
         </div>

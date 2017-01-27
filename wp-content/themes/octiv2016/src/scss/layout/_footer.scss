@@ -22,16 +22,41 @@
 
 .footer-logo {
 	max-width: 175px;
-	margin: 0 auto $spacing-unit;	
+	margin: 0 auto $spacing-unit;
 	@include bp(md) {
 		max-width: 125px;
 		margin: inherit;
 	}
 }
 
+#site-footer h5 {
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid $mgray;
+}
+
 #site-footer ul {
 	list-style-type: none;
 	padding-left: 0;
+}
+
+#site-footer h5 + ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	@include bp(md) {
+		display: block;
+	}
+	li {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		@include bp(md) {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
 }
 
 #site-footer li {
@@ -151,4 +176,3 @@
 		}
 	}
 }
-

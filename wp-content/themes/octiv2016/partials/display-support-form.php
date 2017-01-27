@@ -55,17 +55,31 @@
           <textarea id="field43792600" name="field43792600" rows="10" cols="50" class="fsField"><?php if ($description) : echo $description; endif; ?></textarea>
         </div>
       </div>
+      <div id="fsRow2411006-7" class="fsRow fsFieldRow fsLastRow input-block" style="margin-bottom: 1rem;">
+        <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell48958837" lang="en">
+        <p class="fsLabel fsLabelVertical"><strong>I authorize Octiv Support to access my Octiv account, as needed, to trouble-shoot this issue.</strong></p>
+        <fieldset id="label48958837">
+          <div class="fieldset-content">
+            <label class="fsOptionLabel vertical" for="field48958837_1"><input type="checkbox" id="field48958837_1" name="field48958837[]" value="Yes" class="fsField vertical" />Yes</label>
+          </div>
+        </fieldset>
+        </div>
+      </div>
       <div id="fsRow2411006-7" class="input-block">
         <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell43792603" aria-describedby="fsSupporting43792603" lang="en">
           <label id="label43792603" class="label" for="field43792603">Browser</label>
           <p id="fsSupporting43792603" class="explination fsSupporting">Which browser were you using when you experienced the issue?</p>
-          <div><fieldset id="label43792603">
-<div class="fieldset-content half">
-<label class="fsOptionLabel vertical" for="field43792603_1"><input type="checkbox" id="field43792603_1" name="field43792603[]" value="Chrome" class="fsField vertical" />Chrome</label>
-<label class="fsOptionLabel vertical" for="field43792603_2"><input type="checkbox" id="field43792603_2" name="field43792603[]" value="Firefox" class="fsField vertical" />Firefox</label>
-<label class="fsOptionLabel vertical" for="field43792603_3"><input type="checkbox" id="field43792603_3" name="field43792603[]" value="Safari" class="fsField vertical" />Safari</label>
-<label class="fsOptionLabel vertical" for="field43792603_4"><input type="checkbox" id="field43792603_4" name="field43792603[]" value="Internet Explorer" class="fsField vertical" />Internet Explorer</label>
-</div></fieldset></div>
+          <div>
+            <fieldset id="label43792603">
+              <div class="fieldset-content half">
+                <label class="fsOptionLabel vertical" for="field43792603_1"><input type="checkbox" id="field43792603_1" name="field43792603[]" value="Chrome" class="fsField vertical" />Chrome</label>
+                <label class="fsOptionLabel vertical" for="field43792603_2"><input type="checkbox" id="field43792603_2" name="field43792603[]" value="Firefox" class="fsField vertical" />Firefox</label>
+                <label class="fsOptionLabel vertical" for="field43792603_3"><input type="checkbox" id="field43792603_3" name="field43792603[]" value="Safari" class="fsField vertical" />Safari</label>
+                <label class="fsOptionLabel vertical" for="field43792603_4"><input type="checkbox" id="field43792603_4" name="field43792603[]" value="Internet Explorer" class="fsField vertical" />Internet Explorer</label>
+                <label class="fsOptionLabel vertical" for="field43792603_5"><input type="checkbox" id="field43792603_5" name="field43792603[]" value="Edge" class="fsField vertical" />Edge</label>
+              </div>
+            </fieldset>
+          </div>
         </div>
         <p></p>
       </div>
@@ -81,9 +95,9 @@
         </div>
       </div>
       <h4>Urgency Levels</h4>
-      <p class="explination"><strong>Critical:</strong><br>Production issue has brought business to a halt, require immediate resolution or workaround.</p>
-       <p class="explination"><strong>High:</strong><br>System performance issue or bug affecting some but not all users. Short-term workaround is available, but not scalable.</p>
-       <p class="explination"><strong>Normal:</strong><br>Inquiry regarding a routine technical issue; information requested on application capabilities, navigation, installation or configuration; issue affecting efficiency but not functionality. Reasonable workaround available.</p>
+      <p class="explination"><strong>Critical:</strong><br>Issue has brought business to a halt and requires immediate resolution or workaround.</p>
+       <p class="explination"><strong>High:</strong><br>Issue is negatively impacting business but documents are generated with a short-term workaround.</p>
+       <p class="explination"><strong>Normal:</strong><br>Issue is a routine inquiry and non-business impacting.</p>
       <div id="fsRow2411006-9" class="input-block">
         <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell43792566" lang="en">
           <label id="label43792566" class="label" for="field43792566">Screenshot/Attachment</label>

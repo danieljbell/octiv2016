@@ -1,6 +1,6 @@
 .page-template-company-page .fixed-hero-section {
 	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://octiv.com/wp-content/uploads/2016/06/company-bg.jpg);
-	background-size: cover; 
+	background-size: cover;
 	background-position: center -100px;
 	@include bp(md) {
 		background-position: center;
@@ -41,12 +41,14 @@
 	box-shadow: 0 0 35px rgba(0,0,0,0.1);
 }
 
-.leadership img {
+#leadership img,
+#board-of-directors img {
 	max-width: 165px;
 	border-radius: 50%;
 }
 
-.leadership img[src*=".svg"] {
+#leadership img[src*=".svg"],
+#board-of-directors img[src*=".svg"] {
 	max-width: 45px;
 }
 
@@ -77,7 +79,7 @@
 				margin: 0 0 0.5rem;
 			}
 		}
-	}	
+	}
 	ul {
 		padding: 0;
 	}

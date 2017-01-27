@@ -383,27 +383,27 @@ function register_landing_page_post_type() {
 
 /*
 ==============================
-REGISTER CATALOG POST TYPE
+REGISTER FEATURES POST TYPE
 ==============================
 */
-add_action( 'init', 'register_catalog_post_type' );
+add_action( 'init', 'register_features_post_type' );
 
-function register_catalog_post_type() {
+function register_features_post_type() {
 
   $labels = array(
-    'name'                => 'Catalog',
-    'singular_name'       => 'Catalog',
-    'add_new'             => 'Add New Catalog',
-    'add_new_item'        => 'Add New Catalog',
-    'edit_item'           => 'Edit Catalog',
-    'new_item'            => 'New Catalog',
-    'all_items'           => 'All Catalog',
-    'view_item'           => 'View Catalog',
-    'search_items'        => 'Search Catalog',
-    'not_found'           => 'No catalog found',
-    'not_found_in_trash'  => 'No catalog found in Trash',
+    'name'                => 'Features',
+    'singular_name'       => 'Feature',
+    'add_new'             => 'Add New Feature',
+    'add_new_item'        => 'Add New Feature',
+    'edit_item'           => 'Edit Feature',
+    'new_item'            => 'New Feature',
+    'all_items'           => 'All Feature',
+    'view_item'           => 'View Features',
+    'search_items'        => 'Search Features',
+    'not_found'           => 'No features found',
+    'not_found_in_trash'  => 'No features found in Trash',
     'parent_item_colon'   => '',
-    'menu_name'           => 'Catalog'
+    'menu_name'           => 'Features'
   );
 
   $args = array(
@@ -412,10 +412,10 @@ function register_catalog_post_type() {
     // 'publicly_queryable' => false,
     'has_archive' => true,
     // 'hierarchical'  => true,
-    'rewrite'            => array( 'slug' => 'platform/catalog' ),
+    'rewrite'            => array( 'slug' => 'platform/features' ),
     'menu_icon'   => 'dashicons-media-text',
     'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-    'capability_type' => 'catalog',
+    'capability_type' => 'features',
     'map_meta_cap' => true,
     // 'show_in_rest'       => true,
 		// 'rest_base'          => 'support-api',
@@ -423,57 +423,57 @@ function register_catalog_post_type() {
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
-    'edit_post'              => 'edit_catalog',
-    'read_post'              => 'read_catalog',
-    'delete_post'            => 'delete_catalog',
+    'edit_post'              => 'edit_feature',
+    'read_post'              => 'read_feature',
+    'delete_post'            => 'delete_feature',
 
     // primitive/meta caps
-    'create_posts'           => 'create_catalogs',
+    'create_posts'           => 'create_features',
 
     // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_catalogs',
-    'edit_others_posts'      => 'manage_catalogs',
-    'publish_posts'          => 'manage_catalogs',
+    'edit_posts'             => 'edit_features',
+    'edit_others_posts'      => 'manage_features',
+    'publish_posts'          => 'manage_features',
     'read_private_posts'     => 'read',
 
     // primitive caps used inside of map_meta_cap()
     'read'                   => 'read',
-    'delete_posts'           => 'manage_catalogs',
-    'delete_private_posts'   => 'manage_catalogs',
-    'delete_published_posts' => 'manage_catalogs',
-    'delete_others_posts'    => 'manage_catalogs',
-    'edit_private_posts'     => 'edit_catalogs',
-    'edit_published_posts'   => 'edit_catalogs'
+    'delete_posts'           => 'manage_features',
+    'delete_private_posts'   => 'manage_features',
+    'delete_published_posts' => 'manage_features',
+    'delete_others_posts'    => 'manage_features',
+    'edit_private_posts'     => 'edit_features',
+    'edit_published_posts'   => 'edit_features'
     ),
   );
 
-  register_post_type( 'catalog', $args );
+  register_post_type( 'features', $args );
 }
 
 /*
 ==============================
-CATALOG TAXONOMY
+FEATURE TAXONOMY
 ==============================
 */
-function catalog_init() {
+function feature_init() {
     // create a new taxonomy
     register_taxonomy(
-        'catalog_type',
-        'catalog',
+        'feature_type',
+        'features',
         array(
-            'label' => __( 'Catalog Type' ),
+            'label' => __( 'Feature Type' ),
             // 'rewrite' => array( 'slug' => 'events' ),
             'hierarchical' => true,
             // 'hasArchive' => true,
             'show_ui' => true,
             'capabilities' => array(
-                'assign_terms' => 'edit_catalog',
-                'edit_terms' => 'publish_catalog'
+                'assign_terms' => 'edit_features',
+                'edit_terms' => 'publish_features'
             )
         )
     );
 }
-add_action( 'init', 'catalog_init' );
+add_action( 'init', 'feature_init' );
 
 
 /*

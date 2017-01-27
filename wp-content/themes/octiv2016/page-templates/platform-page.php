@@ -90,7 +90,7 @@ $count = 0;
   endif;
 ?>
 
-<section class="solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #ccc);">
+<section class="solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
 	<div class="site-width">
 		<h2 class="centered">Octiv Drive Productivity &amp; Performance Outcomes</h2>
 		<p class="centered">Explore Use Cases:</p>

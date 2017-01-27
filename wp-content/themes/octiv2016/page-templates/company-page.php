@@ -62,42 +62,54 @@ get_header();
 <section id="leadership">
 	<div class="site-width">
 		<h2 class="centered">Leadership<br>&nbsp;</h2>
-		<div class="leadership third centered">
+		<div class="third">
 			<div>
-				<img src="/wp-content/uploads/2016/07/Adam-Becker.png" alt="Adam Becker" />
-				<p><strong>Adam Becker</strong><br />Account Management<br><a href="https://www.linkedin.com/in/becker3ww"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Adam-Becker.png" alt="Adam Becker" />
+					<p><strong>Adam Becker</strong><br />Account Management<br><a href="https://www.linkedin.com/in/becker3ww"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/shannon-bradley.png" alt="Shannon Bradley" />
-				<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/shannon-bradley.png" alt="Shannon Bradley" />
+					<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
-				<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
+					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
-				<p><strong>David Kerr</strong><br />COO<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
+					<p><strong>David Kerr</strong><br />CEO<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="Jesse Kurth" />
-				<p><strong>Jesse Kurth</strong><br />Professional Services<br><a href="https://www.linkedin.com/in/jessekurth"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="Jesse Kurth" />
+					<p><strong>Jesse Kurth</strong><br />Professional Services<br><a href="https://www.linkedin.com/in/jessekurth"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
-				<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
+					<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/john-ludwig.png" alt="John Ludwig" />
-				<p><strong>John Ludwig</strong><br />CFO<br><a href="https://www.linkedin.com/in/john-ludwig-987bb64b" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/john-ludwig.png" alt="John Ludwig" />
+					<p><strong>John Ludwig</strong><br />CFO<br><a href="https://www.linkedin.com/in/john-ludwig-987bb64b" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
+				</div>
 			</div>
 			<div>
-				<img src="/wp-content/uploads/2016/07/Jim-McIntosh.png" alt="Jim McIntosh" />
-				<p><strong>Jim McIntosh</strong><br />Product<br><a href="https://www.linkedin.com/in/mcintosh"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-			</div>
-			<div>
-				<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
-				<p><strong>Dustin Sapp</strong><br />CEO<br><a href="https://www.linkedin.com/in/dustinsapp" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Jim-McIntosh.png" alt="Jim McIntosh" />
+					<p><strong>Jim McIntosh</strong><br />Product<br><a href="https://www.linkedin.com/in/mcintosh"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -106,7 +118,7 @@ get_header();
 <section class="callout" id="board-of-directors">
 	<div class="site-width">
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
-		<div class="third centered leadership">
+		<div class="third centered">
 			<div>
 				<img src="/wp-content/uploads/2016/07/Scott-Dorsey.jpg" alt="Scott Dorsey" />
 				<p><strong>Scott Dorsey</strong><br />Chairman<br><a href="https://www.linkedin.com/pub/scott-dorsey/3/b39/96"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
