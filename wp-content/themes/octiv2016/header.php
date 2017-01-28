@@ -176,10 +176,8 @@ if(is_404() && $_GET['ref']=="tb"){
             <a href="/solutions" title="Solutions">Solutions</a>
               <?php
     						$args = array(
-    							'post_type' => 'page',
-    							'post_parent' => 1942,
-    							'order' => 'ASC',
-    							'order_by' => 'name'
+    							'post_type' => 'solutions',
+                  'orderby' => 'id'
     						);
     						$solutions_query = new WP_Query($args);
     						if ($solutions_query->have_posts()) :

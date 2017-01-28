@@ -22,8 +22,7 @@
 					<h5><a href="/solutions" style="color: #555;">Solutions</a></h5>
 					<?php
 						$args = array(
-							'post_type' => 'page',
-							'post_parent' => 1942,
+							'post_type' => 'solutions',
 							'order' => 'ASC',
 							'order_by' => 'name'
 						);

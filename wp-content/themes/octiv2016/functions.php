@@ -690,6 +690,14 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
         array_splice( $links, 1, 0, $breadcrumb );
     }
 
+		if ( is_singular( 'solutions' ) ) {
+        $breadcrumb[] = array(
+					'url' => site_url() . '/solutions',
+          'text' => 'Solutions',
+        );
+        array_splice( $links, 1, 0, $breadcrumb );
+    }
+
 		if ( is_tax( 'event_type' ) ) {
         $breadcrumb[] = array(
 					'url' => site_url() . '/events',

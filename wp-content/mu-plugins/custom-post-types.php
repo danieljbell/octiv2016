@@ -70,6 +70,75 @@ function register_support_post_type() {
 
 
 /*
+==============================
+REGISTER SOLUTIONS POST TYPE
+==============================
+*/
+add_action( 'init', 'register_solutions_post_type' );
+
+function register_solutions_post_type() {
+
+  $labels = array(
+    'name'                => 'Solutions',
+    'singular_name'       => 'Solution',
+    'add_new'             => 'Add New Solution',
+    'add_new_item'        => 'Add New Solution',
+    'edit_item'           => 'Edit Solution',
+    'new_item'            => 'New Solution',
+    'all_items'           => 'All Solution',
+    'view_item'           => 'View Solutions',
+    'search_items'        => 'Search Solutions',
+    'not_found'           => 'No solutions found',
+    'not_found_in_trash'  => 'No solutions found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Solutions'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    // 'has_archive' => true,
+    // 'with_front' => true,
+    'hierarchical'  => true,
+    'menu_icon'   => 'dashicons-welcome-learn-more',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+    'capability_type' => 'support',
+    'map_meta_cap' => true,
+    'show_in_rest'       => true,
+		'rest_base'          => 'support-api',
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_solution',
+    'read_post'              => 'read_solution',
+    'delete_post'            => 'delete_solution',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_solutions',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_solutions',
+    'edit_others_posts'      => 'manage_solutions',
+    'publish_posts'          => 'manage_solutions',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_solutions',
+    'delete_private_posts'   => 'manage_solutions',
+    'delete_published_posts' => 'manage_solutions',
+    'delete_others_posts'    => 'manage_solutions',
+    'edit_private_posts'     => 'edit_solutions',
+    'edit_published_posts'   => 'edit_solutions'
+    ),
+  );
+
+  register_post_type( 'solutions', $args );
+}
+
+
+/*
 ===================================
 REMOVE YOAST FROM SUPPORT PAGES
 ===================================

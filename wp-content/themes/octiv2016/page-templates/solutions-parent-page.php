@@ -98,9 +98,7 @@ $count = 0;
 		<br>
 		<?php
       $args = array(
-        'post_type' => 'page',
-        'post_parent' => 1942,
-        'post__not_in' => array($post->ID)
+        'post_type' => 'solutions',
       );
       $solutions_query = new WP_Query($args);
       if ($solutions_query->have_posts()) :
