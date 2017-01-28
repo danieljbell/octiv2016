@@ -177,7 +177,7 @@ if(is_404() && $_GET['ref']=="tb"){
               <?php
     						$args = array(
     							'post_type' => 'solutions',
-                  'orderby' => 'id'
+                  'orderby' => 'menu_order'
     						);
     						$solutions_query = new WP_Query($args);
     						if ($solutions_query->have_posts()) :
