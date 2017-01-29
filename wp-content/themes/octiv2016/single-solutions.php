@@ -3,7 +3,8 @@
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
       <?php
-        $icon = get_field('page_icon', $post->ID, true);
+        $icon = get_field('page_icon', true);
+        print_r($icon);
         echo '<div style="max-width: 175px; margin-bottom: 1rem;">' . file_get_contents($icon[url]) . '</div>';
       ?>
       <h1><?php echo the_title(); ?></h1>
