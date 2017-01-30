@@ -117,7 +117,7 @@ $count = 0;
             echo '<a href="' . get_the_permalink() . '">';
               echo '<div>';
                 echo '<div class="card-icon">';
-                  echo file_get_contents($icon[url]);
+                  echo file_get_contents($icon[url], false, $context);
                 echo '</div>';
                 echo '<div class="card-content">';
                   echo '<h4>' . get_the_title() . '</h4>';
