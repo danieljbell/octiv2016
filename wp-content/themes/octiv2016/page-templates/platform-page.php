@@ -106,10 +106,9 @@ $count = 0;
 		<div class="third">
 			<?php
 				$args = array(
-					'post_type' => 'page',
-					'post_parent' => 1942,
+					'post_type' => 'solutions',
 					'order' => 'ASC',
-					'order_by' => 'name'
+					'order_by' => 'menu_order'
 				);
 				$solutions_query = new WP_Query($args);
 				if ($solutions_query->have_posts()) :
