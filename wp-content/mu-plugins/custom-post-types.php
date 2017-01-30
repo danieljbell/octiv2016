@@ -99,6 +99,7 @@ function register_solutions_post_type() {
     'public'      => true,
     // 'has_archive' => true,
     // 'with_front' => true,
+    // 'publicly_queryable' => false,
     'hierarchical'  => true,
     'menu_icon'   => 'dashicons-welcome-learn-more',
     'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
