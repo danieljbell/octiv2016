@@ -80,7 +80,7 @@ if ($('body').hasClass('home')) {
     },
     offset: '65%'
   });
-  
+
 
     // Smooth Scrolling
     $('.home .fixed-hero-section a').on('click', function(e) {
@@ -555,7 +555,7 @@ $('.nav.sidebar-links a').on('click', function(e) {
 });
 
 
-if ($('.single-integration').length || $('.page-template-page-solutions').length || $('.page-template-platform-page').length || $('.page-template-solutions-parent-page').length || $('.page-template-page-section-layout').length) {
+if ($('.single-integration').length || $('.single-solutions').length || $('.page-template-platform-page').length || $('.page-template-solutions-parent-page').length || $('.page-template-page-section-layout').length) {
   $('.fixed-hero-section a').on('click', function(e) {
     e.preventDefault();
     var target = $(this.hash);

@@ -238,6 +238,7 @@
     var initialText = links[i].innerText;
     var replaceText = initialText.replace('&', '-');
     replaceText = replaceText.replace(/ /g, '-');
+    replaceText = replaceText.replace('and', '-');
     replaceText = replaceText.replace('---', '-');
     replaceText = replaceText.toLowerCase();
     links[i].href = '#' + replaceText;
