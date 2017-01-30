@@ -133,7 +133,7 @@
 
 <section class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
   <div class="site-width">
-    <h2 class="centered">See What Octiv Can Do</h2>
+    <h2 class="centered">Explore Octiv’s Platform Components</h2>
     <br>
     <br>
     <?php
@@ -142,9 +142,11 @@
         'orderby' => 'id',
         'hide_empty' => false,
       ) );
-      echo '<div class="third">';
+      echo '<div class="fourth">';
         foreach ( $terms as $term ) {
-          echo '<div class="card"><div class="centered"><a href="/platform/features/#' . $term->slug . '">' . $term->name . '</a></div></div>';
+          $term_array = get_field('page_icon', $term->taxonomy . '_' . $term->term_id);
+          $term_icon_url = $term_array[url];
+          echo '<div class="card" style="position: relative;"><a href="/platform/features/#' . $term->slug . '">' . file_get_contents($term_icon_url, false, $context) . '<span>' . $term->name . '</span></a></div>';
         }
       echo '</div>';
     ?>
@@ -195,40 +197,37 @@
     }
   }
 
-  /*.solutions-container .card {
-		color: #fff;
-		text-shadow: 2px 2px 3px rgba(0,0,0,0.85);
-		background-size: cover;
-		background-position: center;
-		overflow: hidden;
-	}
-	.solutions-container svg {
-		width: 100%;
-		fill: #fff;
-		filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));
-		max-width: 75px;
-		max-height: 75px;
-	}
-	.solutions-container a,
-	.solutions-container a.btn-arrow {
-		color: #fff;
-	}
-	.solutions-container a.btn-arrow:hover {
-		text-shadow: none;
-	}
-	.solutions-container .card a > div {
-		padding: 2rem 1rem;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-	}
-	.solutions-container .card-icon {
-		margin-right: 1rem;
-	}
-	.solutions-container .card-content > div {
-		display: none;
-	}*/
+  .solutions-container svg {
+    width: 100%;
+    fill: #000;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    margin-right: 0.5rem;
+  }
+  .solutions-container .card {
+    padding: 2rem;
+  }
+  .solutions-container a {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .solutions-container .card:hover a,
+  .solutions-container .card a:focus {
+    color: #ffffff;
+    outline: none;
+    background-color: #ed4c06;
+  }
+  .solutions-container .card:hover svg,
+  .solutions-container .card a:focus svg {
+    fill: #ffffff;
+  }
 </style>
 
 <script>
