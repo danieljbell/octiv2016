@@ -50,7 +50,7 @@
       echo '
         <div class="section-content" id="' . $section_title . '">
           <div class="section-icon">
-          ' . file_get_contents($icon_file[url]) . '
+          ' . file_get_contents($icon_file[url], false, $context) . '
           </div>
           <div>
             <h2>' . get_sub_field('section_title') . '</h2>
