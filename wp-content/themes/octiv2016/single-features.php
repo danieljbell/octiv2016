@@ -33,16 +33,16 @@
     <div class="fourth-3-fourth">
       <div>
         <h4><?php
-        $taxonomy = get_the_terms($post->ID, 'catalog_type');
+        $taxonomy = get_the_terms($post->ID, 'feature_type');
         print_r($taxonomy[0]->name);
         ?></h4>
         <hr>
         <?php
           $args = array(
-            'post_type' => 'catalog',
+            'post_type' => 'features',
             'tax_query' => array(
           		array(
-          			'taxonomy' => 'catalog_type',
+          			'taxonomy' => 'feature_type',
           			'field'    => 'slug',
           			'terms'    => $taxonomy[0]->name,
           		),
