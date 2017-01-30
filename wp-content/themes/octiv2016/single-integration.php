@@ -47,7 +47,7 @@
 <section style="padding-bottom: 0;">
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div class="sticky-sidebar">
+      <div class="sticky-sidebar" id="sticky-sidebar">
         <h4>Events</h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
