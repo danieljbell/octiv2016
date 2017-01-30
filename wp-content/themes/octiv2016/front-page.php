@@ -1,3 +1,13 @@
+<?php
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+	'http' => array(
+		'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+	)
+));
+?>
+
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
@@ -221,7 +231,7 @@
 								$icon = get_field('page_icon', $post->ID, true);
 								echo '<li>';
 									echo '<a href="' . get_the_permalink() . '">';
-										echo '<div>' . file_get_contents($icon[url]) . '</div>';
+										echo '<div>' . file_get_contents($icon[url], false, $context) . '</div>';
 										echo '<span>' . get_the_title() . '</span>';
 									echo '</a>';
 								echo '</li>';
