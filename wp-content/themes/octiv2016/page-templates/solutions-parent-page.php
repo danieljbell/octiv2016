@@ -4,6 +4,13 @@
 TEMPLATE NAME: Solutions Parent Page
 ========================================
 */
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+	'http' => array(
+		'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+	)
+));
 get_header();
 ?>
 
@@ -63,7 +70,7 @@ $count = 0;
 							echo '<div class="section-icon">';
 								if (get_sub_field('section_icon')) {
 									$icon_file = get_sub_field('section_icon', true);
-									echo file_get_contents($icon_file[url]);
+									echo file_get_contents($icon_file[url], false, $context);
 								}
 							echo '</div>';
               echo '<div>';
