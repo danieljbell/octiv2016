@@ -1,3 +1,15 @@
+<?php
+  $user = 'octiv';
+  $pass = 'D@n13lR0cks!';
+  $context = stream_context_create(array(
+    'http' => array(
+      'header' => "Authorization: Basic" . base64_encode("$username:$password")
+    )
+  ));
+  $page_icon_url = get_field('page_icon');
+  $page_icon = file_get_contents($page_icon_url[url], false, $context);
+?>
+
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
@@ -5,7 +17,9 @@
       <?php
         $icon = get_field('page_icon', true);
         print_r($icon);
-        echo '<div style="max-width: 175px; margin-bottom: 1rem;">' . file_get_contents($icon[url]) . '</div>';
+        echo '<div style="max-width: 175px; margin-bottom: 1rem;">';
+          echo $page_icon;
+        echo '</div>';
       ?>
       <h1><?php echo the_title(); ?></h1>
       <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
