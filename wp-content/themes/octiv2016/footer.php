@@ -12,7 +12,7 @@
 				<div>
 					<h5><a href="/platform" style="color: #555;">Platform</a></h5>
 					<ul>
-						<li><a href="/platform/catalog">Catalog</a></li>
+						<li><a href="/platform/features">Features</a></li>
 						<li><a href="/platform/integrations">Integrations</a></li>
 						<li><a href="/releases">Releases</a></li>
 						<li><a href="/support">Support</a></li>
