@@ -229,7 +229,7 @@ $context = stream_context_create(array(
 							while ($solutions_query->have_posts()) :
 								$solutions_query->the_post();
 								$icon = get_field('page_icon', $post->ID, true);
-								echo '<li style="font-size: 0.9em;">';
+								echo '<li style="font-size: 0.8em;">';
 									echo '<a href="' . get_the_permalink() . '">';
 										echo '<div>' . file_get_contents($icon[url], false, $context) . '</div>';
 										echo '<span>' . get_the_title() . '</span>';
