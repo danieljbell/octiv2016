@@ -3,7 +3,7 @@
   $pass = 'D@n13lR0cks!';
   $context = stream_context_create(array(
     'http' => array(
-      'header'  => "Authorization: Basic " . base64_encode("$username:$password")
+      'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
     )
   ));
   $get_page_icon = get_field('page_icon');
