@@ -14,7 +14,7 @@
 </div>
 
 
-<section class="callout fat-section">
+<section class="callout">
 	<div class="site-width">
 		<h2 class="centered">How Octiv unifies your document workflow</h2>
 		<div class="two-third-only" style="margin-bottom: 0;">
@@ -110,28 +110,28 @@
 					<svg viewBox="0 0 126.1 126.1"><use xlink:href="#icon-octiv-mark"></svg>
 				</div>
 				<div class="top-badge">
-					<a href="#"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
+					<a href="/platform/integrations/crm/salesforce"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
 				</div>
 				<div class="top-right-badge">
-					<a href="#"><svg viewBox="0 0 40 21.6"><use xlink:href="#icon-box"></svg></a>
+					<a href="/platform/integrations/file-storage/box"><svg viewBox="0 0 40 21.6"><use xlink:href="#icon-box"></svg></a>
 				</div>
 				<div class="right-badge">
-					<a href="#"><svg viewBox="0 0 364 103"><use xlink:href="#icon-docusign"></svg></a>
+					<a href="/platform/integrations/esignature/docusign"><svg viewBox="0 0 364 103"><use xlink:href="#icon-docusign"></svg></a>
 				</div>
 				<div class="bottom-right-badge">
-					<a href="#"><svg viewBox="0 0 37.9 11.8"><use xlink:href="#icon-dynamics"></svg></a>
+					<a href="/platform/integrations/crm/microsoft-dynamics"><svg viewBox="0 0 37.9 11.8"><use xlink:href="#icon-dynamics"></svg></a>
 				</div>
 				<div class="bottom-badge">
-					<a href="#"><svg viewBox="0 0 100 33.3"><use xlink:href="#icon-steelbrick"></svg></a>
+					<a href="/platform/integrations/cpq/salesforce-steelbrick"><svg viewBox="0 0 100 33.3"><use xlink:href="#icon-steelbrick"></svg></a>
 				</div>
 				<div class="bottom-left-badge">
-					<a href="#"><svg viewBox="0 0 36.8 36.9"><use xlink:href="#icon-financial-force"></svg></a>
+					<a href="/platform/integrations/finance/financialforce"><svg viewBox="0 0 36.8 36.9"><use xlink:href="#icon-financial-force"></svg></a>
 				</div>
 				<div class="left-badge">
-					<a href="#"><svg viewBox="0 0 42.4 39.5"><use xlink:href="#icon-dropbox"></svg></a>
+					<a href="/platform/integrations/file-storage/dropbox"><svg viewBox="0 0 42.4 39.5"><use xlink:href="#icon-dropbox"></svg></a>
 				</div>
 				<div class="top-left-badge">
-					<a href="#"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
+					<a href="/platform/integrations/"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
 				</div>
 			</div>
 			<div class="connections-content">
@@ -210,8 +210,7 @@
 					<ul class="third" style="list-style-type: none; padding: 0;">
 						<?php
 						$args = array(
-							'post_type' => 'page',
-							'post_parent' => 1942,
+							'post_type' => 'solutions',
 							'order' => 'ASC',
 							'order_by' => 'name'
 						);
