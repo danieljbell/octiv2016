@@ -106,6 +106,8 @@ $count = 0;
 		<?php
       $args = array(
         'post_type' => 'solutions',
+				'orderby' => 'menu_order',
+				'order' => 'ASC'
       );
       $solutions_query = new WP_Query($args);
       if ($solutions_query->have_posts()) :
