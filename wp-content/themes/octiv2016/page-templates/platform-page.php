@@ -207,18 +207,4 @@ $count = 0;
 	}
 </style>
 
-<!-- <script>
-	var backgroundSections = document.querySelectorAll('.fat-section.white-text');
-	function checkBackground() {
-		for (var i = 0; i < backgroundSections.length; i++) {
-			var currentBG = backgroundSections[i].style.backgroundImage;
-			var newBG = currentBG.split(' ').slice(-1).toString();
-			if (window.innerWidth > 768) {
-				backgroundSections[i].style.backgroundImage = newBG;
-			}
-		}
-	}
-	window.addEventListener('resize', checkBackground);
-</script> -->
-
 <?php get_footer(); ?>
