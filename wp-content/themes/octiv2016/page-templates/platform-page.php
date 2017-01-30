@@ -5,6 +5,14 @@ TEMPLATE NAME: Platform Page
 ==============================
 */
 get_header();
+
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+	'http' => array(
+		'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+	)
+));
 ?>
 
 <div class="fixed-hero-section">
@@ -63,7 +71,7 @@ $count = 0;
 							echo '<div class="section-icon">';
 								if (get_sub_field('section_icon')) {
 									$icon_file = get_sub_field('section_icon', true);
-									echo file_get_contents($icon_file[url]);
+									echo file_get_contents($icon_file[url], false, $context);
 								}
 							echo '</div>';
               echo '<div>';
@@ -112,7 +120,7 @@ $count = 0;
 							echo '<a href="' . get_the_permalink() . '">';
 								echo '<div>';
 									echo '<div class="card-icon">';
-										echo file_get_contents($icon[url]);
+										echo file_get_contents($icon[url], false, $context);
 									echo '</div>';
 									echo '<div class="card-content">';
 										echo '<h4>' . get_the_title() . '</h4>';
