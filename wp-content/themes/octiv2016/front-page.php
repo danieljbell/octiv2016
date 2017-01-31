@@ -93,7 +93,6 @@ $context = stream_context_create(array(
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
 					<p>Document Workflows are defined as the steps, tasks, effort and information required to create any type of document - from sales quotes and proposals to NDAs and master services agreements. Documents can be authored in any environment such as Word, Excel or Google Docs. Octiv then translates the document to HTML5, integrates information and data, and enables online editing, collaboration, mark-up or redlining.</p>
-					<a href="#" class="btn-arrow">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -130,7 +129,7 @@ $context = stream_context_create(array(
 					<a href="/platform/integrations/finance/financialforce" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/file-storage/dropbox" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/dropbox.svg', false, $context); ?></a>
+					<a href="/platform/integrations/email/cirrus-insight" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
 					<a href="/platform/integrations/sso/okta" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
@@ -144,7 +143,7 @@ $context = stream_context_create(array(
 					<h2>Connect Systems, Data &amp; Teams</h2>
 					<p>Octiv APIs enable integrations with dozens of systems that leverage your current applications and data to create a unified workflow for generating documents.</p>
 					<p>Octiv workflows connect the systems, data and teams that are essential to the creation, collaboration and delivery of dozens of types of business documents. Octiv integrates with authoring tools such as Word, Excel and Google Docs; applications such as CRM, CPQ and ECM; and teams from across the enterprise that depend on business documents to get work done.</p>
-					<a href="#" class="btn-arrow">Learn More</a>
+					<a href="/platform/integrations" class="btn-arrow">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -162,7 +161,6 @@ $context = stream_context_create(array(
 				<div>
 					<h2>A Better End-User Experience</h2>
 					<p>Octiv reduces the friction for end users through ease of consumption, online editing, collaboration, mark-up or redlining. By streamlining workflows, Octiv reduces the number of time-consuming steps as well as interactions with technology and teams.</p>
-					<a href="#" class="btn-arrow">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -191,7 +189,7 @@ $context = stream_context_create(array(
 					<div class="badge-rfps"><a href="#"><span>RFPs</span></a></div>
 					<div class="badge-sows"><a href="#"><span>SOWs</span></a></div>
 					<div class="badge-ndas"><a href="#"><span>NDAs</span></a></div>
-					<div class="badge-ndas2"><a href="#"><span>Invoces</span></a></div>
+					<div class="badge-ndas2"><a href="#"><span>Invoices</span></a></div>
 					<div class="badge-msas"><a href="#"><span>MSAs</span></a></div>
 				</div>
 			</div>

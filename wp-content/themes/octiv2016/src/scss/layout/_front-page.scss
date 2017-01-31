@@ -556,11 +556,13 @@ CONNECTIONS SECTION
     }
   }
   svg {
-    max-width: 55%;
+    // max-width: 55%;
+    position: relative;
+    top: -4px;
     fill: #007ee5;
   }
   a:hover, a:focus {
-    background-color: #007ee5;
+    background-image: linear-gradient(#5587c6, #8f7cb9);
   }
 }
 
