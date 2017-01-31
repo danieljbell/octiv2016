@@ -427,8 +427,8 @@ CONNECTIONS SECTION
   a:hover, a:focus {
     outline: 0;
     transition: all 200ms ease-out;
-    svg {
-      fill: $white;
+    svg path {
+      fill: $white !important;
     }
   }
 }
@@ -514,10 +514,10 @@ CONNECTIONS SECTION
   }
   svg {
     max-width: 85%;
-    fill: #00a1e0;
+    fill: #ed1c24;
   }
   a:hover, a:focus {
-    background-color: #00a1e0;
+    background-color: #ed1c24;
   }
 }
 
@@ -566,6 +566,13 @@ CONNECTIONS SECTION
       transition-delay: 0ms;
       transform: translate(-180%, -180%);
     }
+  }
+  svg {
+    // max-width: 55%;
+    fill: #007dc1;
+  }
+  a:hover, a:focus {
+    background-color: #007dc1;
   }
 }
 

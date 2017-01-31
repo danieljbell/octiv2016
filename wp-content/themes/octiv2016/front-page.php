@@ -120,28 +120,28 @@ $context = stream_context_create(array(
 					<svg viewBox="0 0 126.1 126.1"><use xlink:href="#icon-octiv-mark"></svg>
 				</div>
 				<div class="top-badge">
-					<a href="/platform/integrations/crm/salesforce"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
+					<a href="/platform/integrations/crm/salesforce" title="Salesforce"><?php echo file_get_contents('./wp-content/uploads/2017/01/salesforce.svg', false, $context); ?></a>
 				</div>
 				<div class="top-right-badge">
-					<a href="/platform/integrations/file-storage/box"><svg viewBox="0 0 40 21.6"><use xlink:href="#icon-box"></svg></a>
+					<a href="/platform/integrations/file-storage/box" title="box.com"><?php echo file_get_contents('./wp-content/uploads/2017/01/box.svg', false, $context); ?></a>
 				</div>
 				<div class="right-badge">
-					<a href="/platform/integrations/esignature/docusign"><svg viewBox="0 0 364 103"><use xlink:href="#icon-docusign"></svg></a>
+					<a href="/platform/integrations/esignature/docusign" title="Docusign"><?php echo file_get_contents('./wp-content/uploads/2017/01/docusign.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-right-badge">
-					<a href="/platform/integrations/crm/microsoft-dynamics"><svg viewBox="0 0 37.9 11.8"><use xlink:href="#icon-dynamics"></svg></a>
+					<a href="/platform/integrations/crm/microsoft-dynamics" title="Microsoft Dynamics"><?php echo file_get_contents('./wp-content/uploads/2017/01/dynamics.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-badge">
-					<a href="/platform/integrations/cpq/salesforce-steelbrick"><svg viewBox="0 0 100 33.3"><use xlink:href="#icon-steelbrick"></svg></a>
+					<a href="/platform/integrations/cpq/oracle-cpq" title="Oracle CPQ"><?php echo file_get_contents('./wp-content/uploads/2017/01/oracle.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-left-badge">
-					<a href="/platform/integrations/finance/financialforce"><svg viewBox="0 0 36.8 36.9"><use xlink:href="#icon-financial-force"></svg></a>
+					<a href="/platform/integrations/finance/financialforce" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/file-storage/dropbox"><svg viewBox="0 0 42.4 39.5"><use xlink:href="#icon-dropbox"></svg></a>
+					<a href="/platform/integrations/file-storage/dropbox" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/dropbox.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
-					<a href="/platform/integrations/"><svg viewBox="0 0 255.74 179.01"><use xlink:href="#icon-salesforce"></svg></a>
+					<a href="/platform/integrations/sso/okta" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
 				</div>
 			</div>
 			<div class="connections-content">
