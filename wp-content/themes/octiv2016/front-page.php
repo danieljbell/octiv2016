@@ -203,7 +203,7 @@ $context = stream_context_create(array(
 					<div class="badge-rfps"><a href="#"><span>RFPs</span></a></div>
 					<div class="badge-sows"><a href="#"><span>SOWs</span></a></div>
 					<div class="badge-ndas"><a href="#"><span>NDAs</span></a></div>
-					<div class="badge-ndas2"><a href="#"><span>NDAs 2</span></a></div>
+					<div class="badge-ndas2"><a href="#"><span>Invoces</span></a></div>
 					<div class="badge-msas"><a href="#"><span>MSAs</span></a></div>
 				</div>
 			</div>
