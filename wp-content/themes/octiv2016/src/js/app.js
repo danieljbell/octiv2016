@@ -595,7 +595,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if ($('body').hasClass('home') || $('body').hasClass('single-integration')) {
+    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('page-template-contact')) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');
