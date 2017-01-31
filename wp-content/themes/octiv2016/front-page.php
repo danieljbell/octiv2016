@@ -94,9 +94,7 @@ $context = stream_context_create(array(
 			</div>
 			<div class="workflows-content">
 				<div>
-					<svg viewBox="0 0 86.9 74.1">
-						<use xlink:href="#icon-wrench">
-					</svg>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/wrench.svg', false, $context); ?>
 				</div>
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
@@ -146,9 +144,7 @@ $context = stream_context_create(array(
 			</div>
 			<div class="connections-content">
 				<div>
-					<svg viewBox="0 0 40 56">
-						<use xlink:href="#icon-plug">
-					</svg>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/plug.svg', false, $context); ?>
 				</div>
 				<div>
 					<h2>Connect Systems, Data &amp; Teams</h2>
@@ -167,9 +163,7 @@ $context = stream_context_create(array(
 			<div class="ux-visual"></div>
 			<div class="ux-content">
 				<div>
-					<svg viewBox="0 0 100 101.4">
-						<use xlink:href="#icon-user-experience">
-					</svg>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/signature.svg', false, $context); ?>
 				</div>
 				<div>
 					<h2>A Better End-User Experience</h2>
@@ -209,9 +203,7 @@ $context = stream_context_create(array(
 			</div>
 			<div class="documents-content">
 				<div>
-					<svg viewBox="0 0 40 56">
-						<use xlink:href="#icon-document">
-					</svg>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
 				</div>
 				<div>
 					<h2>Octiv Powers Your Documents</h2>
@@ -239,20 +231,6 @@ $context = stream_context_create(array(
 						endif;
 						wp_reset_query();
 						?>
-						<!-- <li>
-							<a href="/solutions/for-sales" style="display: flex; flex-direction: row;">
-								<div style="flex-shrink: 0; max-width: 35px; margin-right: 0.5rem;">
-									<svg viewBox="0 0 60 47.4" style="width: 100%;">
-										<use xlink:href="#icon-handshake">
-									</svg>
-								</div>
-								<div>For Sales</div>
-							</a>
-						</li>
-						<li>For Legal</li>
-						<li>For Finance</li>
-						<li>For HR</li>
-						<li>For IT</li> -->
 					</ul>
 				</div>
 			</div>
@@ -271,9 +249,7 @@ $context = stream_context_create(array(
 			</div>
 			<div class="productive-content">
 				<div>
-					<svg viewBox="0 0 50 50">
-						<use xlink:href="#icon-time-giver">
-					</svg>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/time-giver.svg', false, $context); ?>
 				</div>
 				<div>
 					<h2>More Productive Teams</h2>
