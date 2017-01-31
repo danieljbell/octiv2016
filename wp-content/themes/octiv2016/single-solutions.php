@@ -169,6 +169,7 @@
   .section-icon svg {
     width: 100%;
     max-width: 75px;
+    max-height: 75px;
     fill: #42b0d8;
   }
   /*main .half-stack,
