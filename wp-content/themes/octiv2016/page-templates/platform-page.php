@@ -47,9 +47,9 @@ $count = 0;
 			$overlay = get_sub_field('section_background_overlay');
 			if ($visual_type[0] === 'Background') {
 				if ($overlay != 1) {
-					echo '<section class="fat-section white-text" id="' . $section_title . '" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(' . get_sub_field('section_background') . ');">';
-				} else {
 					echo '<section class="fat-section white-text" id="' . $section_title . '" style="background-image: url(' . get_sub_field('section_background') . ');">';
+				} else {
+					echo '<section class="fat-section" id="' . $section_title . '" style="background-image: linear-gradient(to bottom, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 95%), linear-gradient(to right, rgba(255,255,255,0) 35%, rgba(255,255,255,0.85) 60%), url(' . get_sub_field('section_background') . '); background-size: cover; background-repeat: no-repeat;">';
 				}
 			} else {
 				echo '<section class="fat-section" id="' . $section_title . '">';
@@ -81,7 +81,7 @@ $count = 0;
 									if ($visual_type[0] != 'Background') {
 										echo '<a href="' . get_sub_field('section_call_to_action_link') . '" class="btn-arrow">' . get_sub_field('section_call_to_action_title') . '</a>';
 									} else {
-										echo '<a href="' . get_sub_field('section_call_to_action_link') . '" class="btn-arrow" style="color: #fff; text-shadow: none;">' . get_sub_field('section_call_to_action_title') . '</a>';
+										echo '<a href="' . get_sub_field('section_call_to_action_link') . '" class="btn-arrow">' . get_sub_field('section_call_to_action_title') . '</a>';
 									}
 								}
               echo '</div>';
@@ -142,7 +142,7 @@ $count = 0;
 
 	.fat-section.white-text {
 		background-size: cover;
-		background-position: center;
+		background-position: left center;
 		color: #fff;
 		margin-top: -1rem;
 	}
