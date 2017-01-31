@@ -71,23 +71,17 @@ $context = stream_context_create(array(
 				<div class="timeline">
 					<div class="build button">
 						<span class="centered">
-							<svg style="width: 100%; max-width: 65%;" fill="#42b0d8">
-								<use xlink:href="#icon-wrench">
-							</svg>
+							<?php echo file_get_contents('./wp-content/uploads/2017/01/wrench.svg', false, $context); ?>
 						</span>
 					</div>
 					<div class="integrate button">
 						<span class="centered">
-							<svg style="width: 100%; max-width: 40%;" fill="#33ab40">
-								<use xlink:href="#icon-plug">
-							</svg>
+							<?php echo file_get_contents('./wp-content/uploads/2017/01/plug.svg', false, $context); ?>
 						</span>
 					</div>
 					<div class="publish button">
 						<span class="centered">
-							<svg style="width: 100%; max-width: 45%;" fill="#ed4c06">
-								<use xlink:href="#icon-document">
-							</svg>
+							<?php echo file_get_contents('./wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
 						</span>
 					</div>
 				</div>

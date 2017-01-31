@@ -242,11 +242,11 @@ WORKFLOWS SECTION
       margin: auto;
     }
     svg {
+      width: 100%;
+      max-width: 75px;
+      max-height: 75px;
       position: relative;
-      top: -25px;
-      @include bp(md) {
-        top: -3px;
-      }
+      top: 0;
     }
   }
 }
@@ -255,6 +255,7 @@ WORKFLOWS SECTION
   transform: translateX(-150%) translateY(25px);
   z-index: 3;
   svg {
+    fill: $brand2;
     left: -2px;
   }
 }
@@ -263,11 +264,17 @@ WORKFLOWS SECTION
   transform: translateX(-275%) translateY(25px);
   z-index: 2;
   transition-duration: 600ms;
+  svg {
+    fill: $brand3;
+  }
 }
 
 .workflows-visual .publish.button {
   transform: translateX(-390%) translateY(25px);
   transition-duration: 700ms;
+  svg {
+    fill: $brand;
+  }
 }
 
 .workflows-visual .build:after,
