@@ -168,10 +168,10 @@ endif;
   color: #fff;
   margin-top: -1rem;
 }
-main .half-stack,
+/*main .half-stack,
 main .half {
   align-items: center;
-}
+}*/
 .section-icon svg {
   width: 100%;
   max-width: 75px;
@@ -186,17 +186,27 @@ main .half {
   }
 
 }
-.fat-section:nth-of-type(2) .section-icon svg {
-  fill: #33ab40;
+.section-icon svg {
+	width: 100%;
+	max-width: 75px;
+	max-height: 75px;
+	fill: #42b0d8;
 }
-.fat-section:nth-of-type(3) .section-icon svg {
-  fill: #b949f5;
+/*main .half-stack,
+main .half {
+	align-items: center;
+}*/
+.fat-section .section-content:nth-of-type(2) .section-icon svg {
+	fill: #33ab40;
 }
-.fat-section:nth-of-type(4) .section-icon svg {
-  fill: #ed4c06;
+.fat-section .section-content:nth-of-type(3) .section-icon svg {
+	fill: #b949f5;
 }
-.fat-section:nth-of-type(5) .section-icon svg {
-  fill: #fac500;
+.fat-section .section-content:nth-of-type(4) .section-icon svg {
+	fill: #ed4c06;
+}
+.fat-section .section-content:nth-of-type(5) .section-icon svg {
+	fill: #fac500;
 }
 
 .fixed-hero-section .two-third-only > div,
