@@ -657,7 +657,7 @@ add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_tra
 function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     global $post;
 
-    if ( is_singular( array('integration', 'catalog', 'use-cases') ) || is_post_type_archive( array('integration', 'catalog', 'use-cases') ) || is_tax('integration_type') ) {
+    if ( is_singular( array('integration', 'features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
 			// if ( is_singular( 'catalog' ) ) {
 	    //     $breadcrumb[] = array(
 			// 			'url' => site_url() . '/platform',
