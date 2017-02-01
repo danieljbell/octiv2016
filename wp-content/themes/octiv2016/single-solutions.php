@@ -153,10 +153,9 @@
   </div>
 </section>
 
+<?php get_template_part('partials/display', 'basic-contact-us'); ?>
+
 <style>
-  #site-footer .site-width:nth-of-type(1) {
-    border-top: 0;
-  }
   .fixed-hero-section {
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);
     background-repeat: no-repeat;
