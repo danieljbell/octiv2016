@@ -26,7 +26,7 @@ $context = stream_context_create(array(
 
 <section class="callout">
 	<div class="site-width">
-		<h2 class="centered">How Octiv unifies your document workflow</h2>
+		<h2 class="centered">Lorem ipsum dolor sit amet.</h2>
 		<div class="two-third-only" style="margin-bottom: 0;">
 			<div style="margin-bottom: 0;">
 				<p class="centered">Octiv is a cloud platform that streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
