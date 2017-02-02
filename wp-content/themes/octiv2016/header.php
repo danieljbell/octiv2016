@@ -80,6 +80,10 @@ if(is_404() && $_GET['ref']=="tb"){
         <ul>
           <li class="menu-item">
             <a href="/platform" title="Platform">Platform</a>
+            <ul class="sub-menu">
+              <li class="sub-menu-item"><a href="/platform/features">Features</a></li>
+              <li class="sub-menu-item"><a href="/platform/integrations">Integrations</a></li>
+            </ul>
             <?php
               // echo '
               // <button id="nav-platform">Platform</button>
