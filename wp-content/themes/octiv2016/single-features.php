@@ -91,6 +91,7 @@
 <style>
   p + ul {
     margin-top: -1rem;
+    margin-bottom: 1rem;
   }
   /*h3 ~ ul {
     margin-top: 0;
