@@ -68,8 +68,8 @@ $context = stream_context_create(array(
 						$slug = $custom_term->slug;
 						$slug = './wp-content/uploads/2017/01/' . $slug . '.svg';
             echo '<section style="padding-top: 0;">';
-						echo '<div style="display: flex;">';
-		          echo '<div style="width: 100%; max-height: 35px; max-width: 35px; margin-right: 0.5rem; fill: #ed4c06;">' . file_get_contents($slug, false, $context) . '</div>';
+						echo '<div class="section-title-container">';
+		          echo '<div>' . file_get_contents($slug, false, $context) . '</div>';
 	            echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
 						echo '</div>';
             echo '<div class="third">';
@@ -89,5 +89,20 @@ $context = stream_context_create(array(
     </div>
   </div>
 </section>
+
+<style>
+.section-title-container {
+	display: flex;
+}
+.section-title-container div {
+	margin-right: 0.5rem;
+}
+.section-title-container svg {
+	width: 100%;
+	max-height: 35px;
+	max-width: 35px;
+	fill: #ed4c06;	
+}
+</style>
 
 <?php get_footer(); ?>
