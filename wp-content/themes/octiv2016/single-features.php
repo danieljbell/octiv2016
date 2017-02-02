@@ -89,12 +89,12 @@
 </section>
 
 <style>
-  p ~ ul {
+  p + ul {
     margin-top: -1rem;
   }
-  h3 ~ ul {
+  /*h3 ~ ul {
     margin-top: 0;
-  }
+  }*/
   .slick-slide {
     box-shadow: none !important;
   }
