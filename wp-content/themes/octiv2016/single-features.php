@@ -93,6 +93,9 @@
     margin-top: -1rem;
     margin-bottom: 1rem;
   }
+  ul li {
+    padding-bottom: 0;
+  }
   /*h3 ~ ul {
     margin-top: 0;
   }*/
