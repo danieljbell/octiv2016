@@ -143,7 +143,7 @@ $context = stream_context_create(array(
 					<h2>Connect Systems, Data &amp; Teams</h2>
 					<p>Octiv APIs enable integrations with dozens of systems that leverage your current applications and data to create a unified workflow for generating documents.</p>
 					<p>Octiv workflows connect the systems, data and teams that are essential to the creation, collaboration and delivery of dozens of types of business documents. Octiv integrates with authoring tools such as Word, Excel and Google Docs; applications such as CRM, CPQ and ECM; and teams from across the enterprise that depend on business documents to get work done.</p>
-					<a href="/platform/integrations" class="btn-arrow">Learn More</a>
+					<a href="/platform/features/#integrations" class="btn-arrow">Learn More</a>
 				</div>
 			</div>
 		</div>

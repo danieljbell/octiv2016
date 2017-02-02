@@ -2,7 +2,11 @@ $(document).ready(function() {
 
   $('#documents .document-outputs a').on('click', function(e) {
     e.preventDefault();
-  })
+  });
+
+  $('#connections .connections-visual a').on('click', function(e) {
+    e.preventDefault();
+  });
 
 /*
 ==============================

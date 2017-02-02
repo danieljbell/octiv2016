@@ -65,13 +65,14 @@ $context = stream_context_create(array(
           $i++;
           if($loop->have_posts()) {
 						// echo file_get_contents('./wp-content/uploads/2017/01/wrench.svg', false, $context);
-						$slug = $custom_term->slug;
-						$slug = './wp-content/uploads/2017/01/' . $slug . '.svg';
+						// $slug = $custom_term->slug;
+						// $slug = './wp-content/uploads/2017/01/' . $slug . '.svg';
             echo '<section style="padding-top: 0;">';
-						echo '<div class="section-title-container">';
-		          echo '<div>' . file_get_contents($slug, false, $context) . '</div>';
-	            echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
-						echo '</div>';
+						// echo '<div class="section-title-container">';
+		        //   echo '<div>' . file_get_contents($slug, false, $context) . '</div>';
+	          //   echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
+						// echo '</div>';
+						  echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
             echo '<div class="card pos-rel">';
@@ -90,7 +91,7 @@ $context = stream_context_create(array(
   </div>
 </section>
 
-<style>
+<!--<style>
 .section-title-container {
 	display: flex;
 }
@@ -101,8 +102,8 @@ $context = stream_context_create(array(
 	width: 100%;
 	max-height: 35px;
 	max-width: 35px;
-	fill: #ed4c06;	
+	fill: #ed4c06;
 }
-</style>
+</style>-->
 
 <?php get_footer(); ?>
