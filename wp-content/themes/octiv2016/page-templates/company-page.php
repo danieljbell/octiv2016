@@ -115,7 +115,7 @@ get_header();
 	</div>
 </section>
 
-<section class="callout" id="board-of-directors">
+<section class="callout" id="board-of-directors" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
 	<div class="site-width">
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
 		<div class="third centered">

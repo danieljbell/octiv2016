@@ -92,7 +92,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
-					<p>From sales quotes and proposals to NDAs and master services agreements to offer letters and employment agreements - documents are time-consuming and require multiple interactions with people and technology. The Octiv platform transforms how you use documents - from paper-based workflows to digital-first documents.  Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage.  Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. collaboration, mark-up or redlining. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
+					<p>Sales quotes and proposals, NDAs and master services agreements, offer letters and employment agreements: documents are time-consuming and require multiple interactions with people and technology. The Octiv platform transforms how you use documents: from paper-based workflows to digital-first documents. Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage. Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
 				</div>
 			</div>
 		</div>
@@ -159,7 +159,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>A Better End-User Experience</h2>
-					<p>Documents are a collaborative effort. Octiv improves how users create documents, how they share with internal collaborators and how edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done and get time back in their day. Octiv eliminates or reduces steps and interactions with technology to create and publish business documents. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
+					<p>Octiv improves how users create documents, how they share with internal collaborators and how edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done. Octiv eliminates or reduces interactions with technology to create and publish business documents.</p>
 				</div>
 			</div>
 		</div>
