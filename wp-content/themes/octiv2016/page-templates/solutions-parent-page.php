@@ -89,7 +89,7 @@ $count = 0;
         echo '</div>';
       echo '</section>';
       if ($count < $total) :
-				if ($visual_type[0] != 'Background') {
+				if ($visual_type[0] = 'Background') {
 					echo '<div class="site-width"><hr></div>';
 				}
       endif;
