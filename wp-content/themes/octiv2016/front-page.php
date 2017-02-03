@@ -233,7 +233,7 @@ $context = stream_context_create(array(
 	<hr>
 </div>
 
-<section id="productive" style="background-image: linear-gradient(rgba(255,255,255,0.9) 10%, rgba(255,255,255,0), rgba(255,255,255,0.9) 90%), linear-gradient(to left, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0), rgba(255,255,255,0.9) 55%), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/UDW-BG.jpg); background-size: cover; background-position: center center;">
+<section id="productive" style="background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.9) 5%, rgba(255,255,255,0), rgba(255,255,255,0.9) 95%, rgba(255,255,255,1)), linear-gradient(to left, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0), rgba(255,255,255,0.9) 55%), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/UDW-BG.jpg); background-size: cover; background-position: center center;">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="productive-visual">
