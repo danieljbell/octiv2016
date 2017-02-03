@@ -16,6 +16,7 @@ header {
 #site-logo {
 	width: 100%;
 	max-width: 145px;
+	max-height: 41px;
 	transition: all 200ms ease-out;
 	@include bp(sm) {
 		max-width: 185px;
