@@ -26,10 +26,10 @@ $context = stream_context_create(array(
 
 <section class="callout">
 	<div class="site-width">
-		<h2 class="centered">Streamline document creation across your organization</h2>
+		<h2 class="centered">Less paper. More time.</h2>
 		<div class="two-third-only" style="margin-bottom: 0;">
 			<div style="margin-bottom: 0;">
-				<p class="centered">Octiv is a cloud platform that streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
+				<p class="centered">The Octiv platform streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
 			</div>
 		</div>
 		<br>
@@ -49,13 +49,13 @@ $context = stream_context_create(array(
 		position: relative;
 	}
 	.twentytwenty-wrapper:before {
-		content: 'Before';
+		content: 'Before Octiv';
 		position: absolute;
 		transform: translateY(-2rem);
 		font-size: 1.4rem;
 	}
 	.twentytwenty-wrapper:after {
-		content: 'After';
+		content: 'With Octiv';
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -92,7 +92,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
-					<p>Document Workflows are defined as the steps, tasks, effort and information required to create any type of document - from sales quotes and proposals to NDAs and master services agreements. Documents can be authored in any environment such as Word, Excel or Google Docs. Octiv then translates the document to HTML5, integrates information and data, and enables online editing, collaboration, mark-up or redlining.</p>
+					<p>From sales quotes and proposals to NDAs and master services agreements to offer letters and employment agreements - documents are time-consuming and require multiple interactions with people and technology. The Octiv platform transforms how you use documents - from paper-based workflows to digital-first documents.  Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage.  Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. collaboration, mark-up or redlining. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
 				</div>
 			</div>
 		</div>
@@ -141,8 +141,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>Connect Systems, Data &amp; Teams</h2>
-					<p>Octiv APIs enable integrations with dozens of systems that leverage your current applications and data to create a unified workflow for generating documents.</p>
-					<p>Octiv workflows connect the systems, data and teams that are essential to the creation, collaboration and delivery of dozens of types of business documents. Octiv integrates with authoring tools such as Word, Excel and Google Docs; applications such as CRM, CPQ and ECM; and teams from across the enterprise that depend on business documents to get work done.</p>
+					<p>Octiv connects the systems and data that your teams use every day - CRM, CPQ, ERP, ATS, HCM. By integrating these systems Octiv eliminates steps in the document workflow. Less “paper" steps means more time back to your teams. Octiv also improves how you collaborate in documents and how you deliver them to your recipient.</p>
 					<a href="/platform/features/#integrations" class="btn-arrow">Learn More</a>
 				</div>
 			</div>
@@ -160,7 +159,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>A Better End-User Experience</h2>
-					<p>Octiv reduces the friction for end users through ease of consumption, online editing, collaboration, mark-up or redlining. By streamlining workflows, Octiv reduces the number of time-consuming steps as well as interactions with technology and teams.</p>
+					<p>Documents are a collaborative effort. Octiv improves how users create documents, how they share with internal collaborators and how edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done and get time back in their day. Octiv eliminates or reduces steps and interactions with technology to create and publish business documents. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
 				</div>
 			</div>
 		</div>
@@ -234,7 +233,7 @@ $context = stream_context_create(array(
 	<hr>
 </div>
 
-<section id="productive">
+<section id="productive" style="background-image: linear-gradient(rgba(255,255,255,0.9) 10%, rgba(255,255,255,0), rgba(255,255,255,0.9) 90%), linear-gradient(to left, rgba(255,255,255,0.9), rgba(255,255,255,0) 25%, rgba(255,255,255,0.9)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/UDW-BG.jpg); background-size: cover; background-position: center center;">
 	<div class="site-width">
 		<div class="half-stack">
 			<div class="productive-visual">
@@ -245,7 +244,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>More Productive Teams</h2>
-					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv simplifies how your teams create, share and manage documents - giving them time back to be more productive.</p>
+					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv means less paper and more time for your teams to be more productive.</p>
 				</div>
 			</div>
 		</div>

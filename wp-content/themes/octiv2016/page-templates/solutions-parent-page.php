@@ -20,7 +20,7 @@ get_header();
 	<div class="site-width white-text centered pos-rel" style="z-index: 2;">
 		<div class="half">
 			<div style="margin-right: auto; margin-bottom: 0;">
-				<h1 style="margin-bottom: 0.5rem;">Streamline Document Workflows for a Range of Functional and Industry Use Cases</h1>
+				<h1 style="margin-bottom: 0.5rem;">Simplify the way your teams create documents. Less paper. More time.</h1>
 				<div class="fancy-links">
           <?php the_content(); ?>
         </div>
