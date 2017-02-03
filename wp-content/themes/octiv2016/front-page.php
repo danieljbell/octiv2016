@@ -140,7 +140,7 @@ $context = stream_context_create(array(
 					<?php echo file_get_contents('./wp-content/uploads/2017/01/plug.svg', false, $context); ?>
 				</div>
 				<div>
-					<h2>Connect Systems, Data &amp; Teams</h2>
+					<h2>Connect Systems &amp; Data</h2>
 					<p>Octiv connects the systems and data that your teams use every day - CRM, CPQ, ERP, ATS, HCM. By integrating these systems Octiv eliminates steps in the document workflow. Less “paper" steps means more time back to your teams. Octiv also improves how you collaborate in documents and how you deliver them to your recipient.</p>
 					<a href="/platform/features/#integrations" class="btn-arrow">Learn More</a>
 				</div>
@@ -166,9 +166,31 @@ $context = stream_context_create(array(
 	</div>
 </section>
 
-<section id="documents" class="fat-section">
+<section id="productive" class="fat-section">
 	<div class="site-width">
 		<div class="half">
+			<div class="productive-visual">
+			</div>
+			<div class="productive-content">
+				<div>
+					<?php echo file_get_contents('./wp-content/uploads/2017/01/time-giver.svg', false, $context); ?>
+				</div>
+				<div>
+					<h2>More Productive Teams</h2>
+					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv means less paper and more time for your teams to be more productive.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="site-width">
+	<hr>
+</div>
+
+<section id="documents" class="fat-section">
+	<div class="site-width">
+		<div class="half-stack">
 			<div class="documents-visual">
 				<div class="octiv-badge">
 					<svg viewBox="0 0 126.1 126.1"><use xlink:href="#icon-octiv-mark"></svg>
@@ -229,27 +251,9 @@ $context = stream_context_create(array(
 	</div>
 </section>
 
-<div class="site-width">
-	<hr>
-</div>
 
-<section id="productive" style="background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.9) 5%, rgba(255,255,255,0), rgba(255,255,255,0.9) 95%, rgba(255,255,255,1)), linear-gradient(to left, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0), rgba(255,255,255,0.9) 55%), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/UDW-BG.jpg); background-size: cover; background-position: center center;">
-	<div class="site-width">
-		<div class="half-stack">
-			<div class="productive-visual">
-			</div>
-			<div class="productive-content">
-				<div>
-					<?php echo file_get_contents('./wp-content/uploads/2017/01/time-giver.svg', false, $context); ?>
-				</div>
-				<div>
-					<h2>More Productive Teams</h2>
-					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv means less paper and more time for your teams to be more productive.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
+
 
 <?php // Commercial & Enterprise sections
 	// echo '

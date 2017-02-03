@@ -865,11 +865,32 @@ DOCUMENTS SECTION
 PRODUCTIVE CONTENT
 ==============================
 */
+
+#productive {
+  background-image: linear-gradient(rgba(255,255,255,0) 40%, rgba(255,255,255,0.95) 65%), url('../../../uploads/2017/02/UDW-BG-flipped.png');
+  background-position: top center;
+  // background-size: 100%;
+  @include bp(md) {
+    background-size: cover;
+    background-image:
+      linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.9) 5%, rgba(255,255,255,0), rgba(255,255,255,0.9) 95%, rgba(255,255,255,1)),
+      linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 45%, rgba(255,255,255,0.9) 50%),
+      url('../../../uploads/2017/02/UDW-BG-flipped.png');
+  }
+}
+
 .productive-content > div:first-child svg {
   width: 100%;
   max-width: 75px;
   max-height: 75px;
   fill: $brand5;
+}
+
+.productive-visual {
+  min-height: 200px;
+  @include bp(md) {
+    min-height: 250px;
+  }
 }
 
 /*
