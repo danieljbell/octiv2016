@@ -214,7 +214,7 @@ $context = stream_context_create(array(
 								$icon = get_field('page_icon', $post->ID, true);
 								echo '<li style="font-size: 0.8em;">';
 									echo '<a href="' . get_the_permalink() . '">';
-										echo '<div>' . file_get_contents($icon[url], false, $context) . '</div>';
+										echo '<div style="max-width: 35px; max-height: 35px;">' . file_get_contents($icon[url], false, $context) . '</div>';
 										echo '<span>' . get_the_title() . '</span>';
 									echo '</a>';
 								echo '</li>';
