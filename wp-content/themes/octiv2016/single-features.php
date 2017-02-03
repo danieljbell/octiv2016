@@ -89,14 +89,14 @@
 </section>
 
 <style>
-  p + ul {
+  main p + ul {
     margin-top: -1rem;
     margin-bottom: 1rem;
   }
-  ul {
+  main ul {
     margin-bottom: 1rem;
   }
-  ul li {
+  main ul li {
     padding-bottom: 0;
   }
   /*h3 ~ ul {
