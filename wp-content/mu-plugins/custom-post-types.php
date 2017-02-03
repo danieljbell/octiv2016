@@ -670,7 +670,7 @@ function register_use_case_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
-    // 'publicly_queryable' => false,
+    'publicly_queryable' => false,
     'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/use-cases' ),

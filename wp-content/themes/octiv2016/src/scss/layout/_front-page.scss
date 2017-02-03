@@ -110,8 +110,8 @@
 .home #workflows .half-stack,
 .home #connections .half,
 .home #user-experience .half-stack,
-.home #documents .half,
-.home #productive .half-stack {
+.home #documents .half-stack,
+.home #productive .half {
 // .home #commercial .half-stack,
 // .home #enterprise .half {
   > div {
@@ -185,7 +185,7 @@ DOCUMENT WORKFLOWS
 #connections .half,
 #user-experience .half-stack,
 #documents .half-stack,
-#productive .half-stack {
+#productive .half {
 // #commercial .half-stack,
 // #enterprise .half {
   align-items: center;
@@ -722,10 +722,10 @@ DOCUMENTS SECTION
   transform: translate(-50%,200%);
   box-shadow: none;
   @include bp(md) {
-    transform: translate(-50%,200%);
+    transform: translate(-50%,100%);
   }
   @include bp(lg) {
-    transform: translate(-50%,150%);
+    transform: translate(-50%,100%);
   }
 }
 
