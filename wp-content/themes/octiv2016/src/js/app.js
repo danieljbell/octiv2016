@@ -52,7 +52,7 @@ TWENTY TWENTY FOR HOMEPAGE
 if ($('.twentytwenty-container').length) {
   $(window).load(function() {
       $("#workflow-comparison").twentytwenty({
-        'default_offset_pct' : 0.95
+        'default_offset_pct' : 0.05
       });
     });
 }

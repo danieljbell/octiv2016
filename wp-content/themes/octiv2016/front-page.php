@@ -35,8 +35,8 @@ $context = stream_context_create(array(
 		<br>
 		<br>
 		<div id="workflow-comparison" class="twentytwenty-container">
-			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-before.png" alt="">
 			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-after.png" alt="">
+			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-before.png" alt="">
 		</div>
 	</div>
 </section>
@@ -48,7 +48,7 @@ $context = stream_context_create(array(
 	.twentytwenty-wrapper {
 		position: relative;
 	}
-	.twentytwenty-wrapper:before {
+	/*.twentytwenty-wrapper:before {
 		content: 'Before Octiv';
 		position: absolute;
 		transform: translateY(-2rem);
@@ -61,7 +61,7 @@ $context = stream_context_create(array(
 		right: 0;
 		transform: translateY(-2rem);
 		font-size: 1.4rem;
-	}
+	}*/
 </style>
 
 <section id="workflows" class="fat-section">
