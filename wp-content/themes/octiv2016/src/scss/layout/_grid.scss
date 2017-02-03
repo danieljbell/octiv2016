@@ -239,7 +239,7 @@ CENTERED GRID ELEMENTS
 	}
 }
 
-@include bp(sm) {
+@include bp(lg) {
 	.two-third-only > div {
 		width: calc((100% / 3) * 2);
 	}

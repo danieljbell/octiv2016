@@ -15,7 +15,7 @@
     > div {
       width: 100% !important;
       margin-right: 0;
-      @include bp(md) {
+      @include bp(lg) {
         width: 80% !important;
       }
       @include bp(xxl) {
@@ -647,11 +647,17 @@ DOCUMENTS SECTION
 }
 
 .documents-visual.in-view {
-  transform: translateY(-50%);
+  transform: translateY(-60%);
+  @include bp(sm) {
+    transform: translateY(-90%);
+  }
+  @include bp(xl) {
+    transform: translateY(-60%);
+  }
 }
 
 .documents-visual .document-inputs {
-  transform: translateY(-50%);
+  transform: translateY(-65%);
 }
 
 .documents-visual .document-inputs div {
