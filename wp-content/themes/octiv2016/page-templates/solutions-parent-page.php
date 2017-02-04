@@ -99,8 +99,8 @@ $count = 0;
 
 <section id="call-to-action" class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
   <div class="site-width">
-    <h2 class="centered">Octiv for Industry</h2>
-		<p class="centered">See how Octiv is driving compelling business cases for industry use cases.</p>
+    <h2 class="centered">Explore Octiv Use Cases</h2>
+		<p class="centered">See how Octiv supports a range of use cases by department and for industry.</p>
 		<br>
 		<br>
 		<?php
