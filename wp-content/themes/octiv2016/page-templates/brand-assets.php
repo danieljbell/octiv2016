@@ -137,7 +137,7 @@ get_header();
 		</div>
 		<div class="mar-y" style="margin-bottom: 0;">
 			<h2>Typography</h2>
-			<p>Typography is often the first part of a brand identity that goes out of style. With this in mind, we’ve moved to a typeface with enough idiosyncrasies to be interesting, but the right amount of restraint to stand the test of time Source Sans Pro. Its personality is a perfect complement to the Octiv logo. Source Sans Pro Black should be used as the headline text and to add emphasis, while Source Sans Pro Extra Ligh is used for body copy or large areas of text.</p>
+			<p>Typography is often the first part of a brand identity that goes out of style. With this in mind, we’ve moved to a typeface with enough idiosyncrasies to be interesting, but the right amount of restraint to stand the test of time Source Sans Pro. Its personality is a perfect complement to the Octiv logo. Source Sans Pro Black should be used as the headline text and to add emphasis, while Source Sans Pro Extra Light is used for body copy or large areas of text.</p>
 		</div>
 	</div>
 </section>
