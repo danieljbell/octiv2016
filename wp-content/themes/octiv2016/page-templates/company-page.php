@@ -143,6 +143,10 @@ get_header();
 				<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
 				<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 			</div>
+			<div>
+				<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
+				<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			</div>
 		</div>
 	</div>
 </section>
