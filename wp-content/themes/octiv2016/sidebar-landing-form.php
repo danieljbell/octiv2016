@@ -2,7 +2,7 @@
 	<h2><?php echo get_field('sidebar_title'); ?></h2>
 	<p><?php echo get_field('sidebar_description'); ?></p>
 	<?php
-		if ($page->ID === 1787) :
+		if ($post->ID === 1787) :
 			echo '<a href="https://cc.readytalk.com/r/4adm49bfrohw&eom" class="btn-primary">Register Here</a>';
 		else : ?>
 		<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
