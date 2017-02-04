@@ -106,10 +106,6 @@ get_header();
 					<p><img src="/wp-content/uploads/2016/10/joe-heth.jpg" alt="Joe" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Joe Heth</strong><br>Lead Architect</p>
 				</div>
 				<div class="career-slide">
-					<p>I feel humbled to work for such a great company right out of college. The people are encouraging and the product solves real problems!</p>
-					<p><img src="/wp-content/uploads/2016/10/shelby-couch.jpg" alt="Shelby" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Shelby Couch</strong><br>Office and Community Engagement Manager</p>
-				</div>
-				<div class="career-slide">
 					<p>Love working at Octiv because of the people. It's a fun experience coming into the office every day and getting to see my coworkers and team members.</p>
 					<p><img src="/wp-content/uploads/2016/10/tom-marvel.jpg" alt="Tom" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Tom Marvel</strong><br>Technical Consultant</p>
 				</div>
