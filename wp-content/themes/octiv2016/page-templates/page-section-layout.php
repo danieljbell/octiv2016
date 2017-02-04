@@ -24,7 +24,7 @@ $context = stream_context_create(array(
 				<div class="site-width white-text centered">
 					<div class="two-third-only">
 						<div class="font-bump">
-							<h1 style="margin-bottom: 0.5rem;">Clients Love Octiv. And It\'s Mutual</h1>
+							<h1 style="margin-bottom: 0.5rem;">Clients Love Octiv. And It\'s Mutual.</h1>
 							<div class="font-bump fancy-links">
 								' . get_the_content() . '
 							</div>
