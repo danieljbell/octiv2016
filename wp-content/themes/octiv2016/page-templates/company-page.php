@@ -120,9 +120,10 @@ get_header();
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
 		<div class="third">
 			<div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Scott-Dorsey.jpg" alt="Scott Dorsey" />
-				<p><strong>Scott Dorsey</strong><br />Chairman<br><a href="https://www.linkedin.com/pub/scott-dorsey/3/b39/96"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Scott-Dorsey.jpg" alt="Scott Dorsey" />
+					<p><strong>Scott Dorsey</strong><br />Chairman<br><a href="https://www.linkedin.com/pub/scott-dorsey/3/b39/96"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
 				<div class="centered">
