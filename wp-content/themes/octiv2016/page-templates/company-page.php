@@ -119,33 +119,46 @@ get_header();
 	<div class="site-width">
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
 		<div class="third">
+			<div>
 			<div class="centered">
 				<img src="/wp-content/uploads/2016/07/Scott-Dorsey.jpg" alt="Scott Dorsey" />
 				<p><strong>Scott Dorsey</strong><br />Chairman<br><a href="https://www.linkedin.com/pub/scott-dorsey/3/b39/96"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
-				<p><strong>Dustin Sapp</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
+					<p><strong>Dustin Sapp</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Kristian-Andersen.jpg" alt="Kristian Andersen" />
-				<p><strong>Kristian Andersen</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/kandersen1"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Kristian-Andersen.jpg" alt="Kristian Andersen" />
+					<p><strong>Kristian Andersen</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/kandersen1"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Mike-Fitzgerald.jpg" alt="Mike Fitzgerald" />
-				<p><strong>Mike Fitzgerald</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/mikesfitzgerald"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Mike-Fitzgerald.jpg" alt="Mike Fitzgerald" />
+					<p><strong>Mike Fitzgerald</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/mikesfitzgerald"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Don-Aquilano.png" alt="Don Aquilano" />
-				<p><strong>Don Aquilano</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/don-aquilano/4/712/232"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Don-Aquilano.png" alt="Don Aquilano" />
+					<p><strong>Don Aquilano</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/don-aquilano/4/712/232"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
-				<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
+					<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
-			<div class="centered">
-				<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
-				<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
+					<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 		</div>
 	</div>
