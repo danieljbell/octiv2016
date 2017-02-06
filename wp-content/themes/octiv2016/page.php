@@ -70,6 +70,12 @@
 			?>
 		</div>
 	</section>
+<?php else : ?>
+	<section>
+		<div class="site-width">
+			<?php the_content(); ?>
+		</div>
+	</section>
 <?php endif; ?>
 
 
