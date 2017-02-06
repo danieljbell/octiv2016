@@ -777,12 +777,12 @@ DOCUMENTS SECTION
 
 .documents-visual .document-outputs a {
   display: flex;
-  &:hover, &:focus {
-    background-color: $brand;
-    span {
-      color: $white;
-    }
-  }
+  // &:hover, &:focus {
+  //   background-color: $brand;
+  //   span {
+  //     color: $white;
+  //   }
+  // }
 }
 
 .documents-visual .document-outputs a span {
