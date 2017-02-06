@@ -221,7 +221,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>Octiv Powers Your Documents</h2>
 					<p>Business runs on information, and often that information is created, shared and used in a document. From presentations and proposals to contracts and invoices to offer letters and performance appraisals - Octiv makes the documents you use easier to create and better to use.</p>
-					<p style="margin-bottom: 0.25rem;"><strong>Explore Our Solutions:</strong></p>
+					<p style="margin-bottom: 0.5rem;"><strong>Explore Our Solutions:</strong></p>
 					<ul class="third" style="list-style-type: none; padding: 0;">
 						<?php
 						$args = array(
