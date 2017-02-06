@@ -159,7 +159,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>A Better End-User Experience</h2>
-					<p>Octiv improves how users create documents, how they share with internal collaborators and how edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done. Octiv eliminates or reduces interactions with technology to create and publish business documents.</p>
+					<p>Octiv improves how users create documents, how they share with internal collaborators and how they edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done. Octiv eliminates or reduces interactions with technology to create and publish business documents.</p>
 				</div>
 			</div>
 		</div>
