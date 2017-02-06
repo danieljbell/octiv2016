@@ -777,6 +777,7 @@ DOCUMENTS SECTION
 
 .documents-visual .document-outputs a {
   display: flex;
+  pointer-events: none;
   // &:hover, &:focus {
   //   background-color: $brand;
   //   span {
