@@ -170,3 +170,24 @@ HOME PAGE OVERRIDES
 .client-testimonials .slick-arrow {
   display: none !important;
 }
+
+.client-testimonials .slider-for .slick-arrow {
+  display: block !important;
+  border: 1px solid $white;
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  left: 50%;
+  color: $white;
+  border-radius: $radius;
+  &:hover, &:focus {
+    color: $gray;
+    background-color: $white;
+  }
+  &.slick-prev {
+    left: calc(50% - 1.5rem);
+  }
+  &.slick-next {
+    left: calc(50% + 1.5rem);
+  }
+}
