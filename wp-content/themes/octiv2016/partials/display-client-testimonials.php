@@ -34,7 +34,6 @@
 							'</div>' .
 							'<div>' .
 								'<h4>' . get_field('client_testimonial') . '</h4>' .
-								'<p><strong>' . get_field('client_testimonial_full_name') . '</strong>' . get_field('client_testimonial_job_title') . ' at ' . get_field('client_testimonial_company') . '</p>' .
 							'</div>' .
 						'</div>' .
 					'</div>';
