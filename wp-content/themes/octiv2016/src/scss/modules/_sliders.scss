@@ -107,23 +107,6 @@ HOME PAGE OVERRIDES
       font-size: 1.25em;
     }
   }
-  p {
-    margin-top: 1rem;
-    @include bp(md) {
-      font-size: 0.8em;
-    }
-    strong {
-      display: block;
-      @include bp(md) {
-        font-size: 1.3em;
-        display: inline;
-        &:after {
-          content: '|';
-          margin: 0 0.5rem;
-        }
-      }
-    }
-  }
   .site-width {
     display: flex;
     flex-direction: column;
@@ -187,4 +170,3 @@ HOME PAGE OVERRIDES
 .client-testimonials .slick-arrow {
   display: none !important;
 }
-
