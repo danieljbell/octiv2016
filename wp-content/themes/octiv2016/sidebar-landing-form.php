@@ -5,7 +5,7 @@
 		if ($post->ID === 1787) :
 			echo '<a href="https://cc.readytalk.com/r/4adm49bfrohw&eom" class="btn-primary">Register Here</a>';
 		elseif ($post->ID === 2279) :
-			echo '<div class="centered"><a href="#" class="btn-primary">Read Now</a></div>';
+			echo '<div class="centered"><a href="/wp-content/uploads/2017/02/Unified-Document-Workflows.pdf" class="btn-primary">Read Now</a></div>';
 		else : ?>
 		<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 		<form id="mktoForm_1041"></form>
