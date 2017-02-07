@@ -9,7 +9,7 @@
         </div>
         <div class="centered">
             <?php if (!is_single(1390)) : ?>
-            <p style="margin-bottom: 0px;"><a href="/press-releases/octiv-secures-strategic-investment-ge-ventures/">Octiv Secures Strategic Investment from GE Ventures. - <strong>Read More</strong></a></p>
+            <p style="margin-bottom: 0px;"><a href="/resources/whitepapers/unified-document-workflows">Octiv introduces Unified Document Workflows. - <strong>Read More</strong></a></p>
             <?php else : ?>
 
             <?php endif; ?>
