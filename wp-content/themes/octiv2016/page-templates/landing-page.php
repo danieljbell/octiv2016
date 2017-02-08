@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
+<div class="fixed-hero-section" style="background-color: #fff; background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
