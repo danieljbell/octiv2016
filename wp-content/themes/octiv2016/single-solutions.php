@@ -162,72 +162,83 @@
     background-size: cover;
   }
   .fixed-hero-section svg {
-    fill: #ffffff;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+  fill: #ffffff;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+          filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+}
+.section-icon svg {
+  width: 100%;
+  max-width: 75px;
+  max-height: 75px;
+  fill: #42b0d8;
+}
+/*main .half-stack,
+main .half {
+  align-items: center;
+}*/
+.fat-section .section-content:nth-of-type(2) .section-icon svg {
+  fill: #33ab40;
+}
+.fat-section .section-content:nth-of-type(3) .section-icon svg {
+  fill: #b949f5;
+}
+.fat-section .section-content:nth-of-type(4) .section-icon svg {
+  fill: #ed4c06;
+}
+@media screen and (max-width: 600px) {
+  .section-content  {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-icon {
+    margin-bottom: 0.5rem;
+    text-align: center;
   }
   .section-icon svg {
-    width: 100%;
-    max-width: 75px;
-    max-height: 75px;
-    fill: #42b0d8;
+    max-width: 125px;
   }
-  /*main .half-stack,
-	main .half {
-		align-items: center;
-	}*/
-  .fat-section .section-content:nth-of-type(2) .section-icon svg {
-    fill: #33ab40;
-  }
-  .fat-section .section-content:nth-of-type(3) .section-icon svg {
-    fill: #b949f5;
-  }
-  .fat-section .section-content:nth-of-type(4) .section-icon svg {
-    fill: #ed4c06;
-  }
-  @media screen and (max-width: 600px) {
-    .section-content  {
-      flex-direction: column;
-    }
-    .section-icon {
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .section-icon svg {
-      max-width: 125px;
-    }
-  }
+}
 
-  .solutions-container svg {
-    width: 100%;
-    fill: #000;
-    max-width: 35px;
-    max-height: 35px;
-    min-width: 35px;
-    margin-right: 0.5rem;
-  }
-  .solutions-container .card {
-    padding: 2rem;
-  }
-  .solutions-container a {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    color: #000;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .solutions-container .card:hover a,
-  .solutions-container .card a:focus {
-    color: #ffffff;
-    outline: none;
-    background-color: #ed4c06;
-  }
-  .solutions-container .card:hover svg,
-  .solutions-container .card a:focus svg {
-    fill: #ffffff;
-  }
+.solutions-container svg {
+  width: 100%;
+  fill: #000;
+  max-width: 35px;
+  max-height: 35px;
+  min-width: 35px;
+  margin-right: 0.5rem;
+}
+.solutions-container .card {
+  padding: 2rem;
+}
+.solutions-container a {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  color: #000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+.solutions-container .card:hover a,
+.solutions-container .card a:focus {
+  color: #ffffff;
+  outline: none;
+  background-color: #ed4c06;
+}
+.solutions-container .card:hover svg,
+.solutions-container .card a:focus svg {
+  fill: #ffffff;
+}
 </style>
 
 <script>

@@ -155,7 +155,8 @@ get_header();
   }
   .fixed-hero-section svg {
     fill: #ffffff;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+    -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
   }
   .section-icon svg {
     width: 100%;
@@ -177,7 +178,9 @@ get_header();
   }
   @media screen and (max-width: 600px) {
     .section-content  {
-      flex-direction: column;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
     }
     .section-icon {
       margin-bottom: 0.5rem;
@@ -187,41 +190,6 @@ get_header();
       max-width: 125px;
     }
   }
-
-  /*.solutions-container .card {
-		color: #fff;
-		text-shadow: 2px 2px 3px rgba(0,0,0,0.85);
-		background-size: cover;
-		background-position: center;
-		overflow: hidden;
-	}
-	.solutions-container svg {
-		width: 100%;
-		fill: #fff;
-		filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));
-		max-width: 75px;
-		max-height: 75px;
-	}
-	.solutions-container a,
-	.solutions-container a.btn-arrow {
-		color: #fff;
-	}
-	.solutions-container a.btn-arrow:hover {
-		text-shadow: none;
-	}
-	.solutions-container .card a > div {
-		padding: 2rem 1rem;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-	}
-	.solutions-container .card-icon {
-		margin-right: 1rem;
-	}
-	.solutions-container .card-content > div {
-		display: none;
-	}*/
 </style>
 
 <script>
