@@ -5,7 +5,7 @@
 		if ($post->ID === 1787) :
 			echo '<a href="https://cc.readytalk.com/r/4adm49bfrohw&eom" class="btn-primary">Register Here</a>';
 		elseif ($post->ID === 2279) :
-			echo '<div class="centered"><a  href="/wp-content/uploads/2017/02/Unified-Document-Workflows.pdf" class="btn-primary">Read Now</a></div>
+			echo '<div class="centered"><a onclick="ga(\'send\', \'event\', \'Downloads\', \'Click\', \'E-book downloaded\', \'0\');" href="/wp-content/uploads/2017/02/Unified-Document-Workflows.pdf" class="btn-primary">Read Now</a></div>
 			<style>
 				.newsletter-signup h2 {
 					text-align: center;
