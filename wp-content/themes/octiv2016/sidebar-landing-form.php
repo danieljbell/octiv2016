@@ -7,7 +7,7 @@
 		elseif ($post->ID === 2279) :
 			echo '<div class="centered"><a href="/wp-content/uploads/2017/02/Unified-Document-Workflows.pdf" class="btn-primary">Read Now</a></div>
 			<style>
-				.newsletter-signup {
+				.newsletter-signup h2 {
 					text-align: center;
 				}
 			</style>
