@@ -13,7 +13,7 @@ get_header();
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<p><?php the_excerpt(); ?></p>
+			<p class="font-bump"><?php echo get_field('short_description', $post->ID); ?></p>
 		</div>
 	</div>
 </div>
