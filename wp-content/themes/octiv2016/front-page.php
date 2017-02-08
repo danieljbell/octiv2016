@@ -209,9 +209,9 @@ $context = stream_context_create(array(
 					<div class="badge-quotes"><a href="#"><span>Quotes</span></a></div>
 					<div class="badge-rfps"><a href="#"><span>RFPs</span></a></div>
 					<div class="badge-sows"><a href="#"><span>SOWs</span></a></div>
-					<div class="badge-ndas"><a href="#"><span>NDAs</span></a></div>
+					<div class="badge-ndas"><a href="#"><span>Presentations</span></a></div>
 					<div class="badge-ndas2"><a href="#"><span>Invoices</span></a></div>
-					<div class="badge-msas"><a href="#"><span>MSAs</span></a></div>
+					<div class="badge-msas"><a href="#"><span>Contracts</span></a></div>
 				</div>
 			</div>
 			<div class="documents-content">
