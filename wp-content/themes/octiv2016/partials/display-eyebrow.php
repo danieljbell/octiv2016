@@ -8,7 +8,7 @@
             <p><a href="tel:317-550-0148">317.550.0148</a></p>
         </div>
         <div class="centered">
-            <p style="margin-bottom: 0px;"><a href="/resources/whitepapers/unified-document-workflows">Octiv Introduces Unified Document Workflows. - <strong>Read More</strong></a></p>
+            <p style="margin-bottom: 0px;"><a href="/resources/whitepapers/unified-document-workflows">Octiv Introduces Unified Document Workflows - <strong>Read More</strong></a></p>
         </div>
         <div class="eyebrow-nav">
             <ul>
