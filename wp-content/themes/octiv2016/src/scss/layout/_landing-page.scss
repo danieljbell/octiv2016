@@ -41,9 +41,10 @@
 
 .page-template-landing-page .content-container {
 	background-color: $white;
-	padding: 2rem;
 	border-radius: $radius;
+	padding-bottom: 1rem;
 	@include bp(md) {
+		padding: 2rem;
 		margin-top: -9rem;
 	}
 }
