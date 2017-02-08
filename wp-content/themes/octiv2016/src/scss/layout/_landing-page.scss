@@ -48,3 +48,10 @@
 		margin-top: -9rem;
 	}
 }
+
+.page-template-landing-page .fixed-hero-section .two-third-only div {
+	margin-bottom: 0;
+	@include bp(md) {
+		margin-bottom: 2rem;
+	}
+}

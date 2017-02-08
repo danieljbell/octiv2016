@@ -83,8 +83,10 @@ BLOG POST + INDUSTRY CONFERENCE STYLES
 }
 
 .page-template-landing-page .fixed-hero-section > .site-width {
-  padding: 0 0 1rem;
-  margin-top: -3rem;
+  @include bp(md) {
+    padding: 0 0 1rem;
+    margin-top: -3rem;  
+  }
 }
 
 

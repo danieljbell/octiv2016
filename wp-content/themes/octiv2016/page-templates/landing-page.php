@@ -13,7 +13,7 @@ get_header();
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<p class="font-bump"><?php echo get_field('short_description', $post->ID); ?></p>
+			<p class="font-bump" style="margin-bottom: 0;"><?php echo get_field('short_description', $post->ID); ?></p>
 		</div>
 	</div>
 </div>
@@ -24,7 +24,7 @@ get_header();
 	<div class="site-width">
 		<div class="two-third">
 			<div class="content-container">
-				<h2>About the <?php the_title(); ?></h2>
+				<h2>About <?php the_title(); ?></h2>
 				<hr>
 				<?php the_content(); ?>
 			</div>
