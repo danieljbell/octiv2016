@@ -141,15 +141,33 @@
 
 input[type='text'],
 input[type='email'],
-input[type='tel'] {
+input[type='tel'],
+textarea {
 	width: 100%;
 	padding: 0.5rem;
 	border-radius: $radius;
 	border: 1px solid #ccc;
+	color: $gray;
+}
+
+input[type='submit'] {
+	@extend .btn-primary;
+	border: 0;
+}
+
+input[type='checkbox'] {
+	margin-right: 0.5rem;
+}
+
+// support form specific
+.fsOptionLabel {
+	margin-right: 1rem;
 }
 
 select {
 	width: 100%;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
 	background-color: $white;
 	background-repeat: no-repeat;
 	background-position: 95%;
