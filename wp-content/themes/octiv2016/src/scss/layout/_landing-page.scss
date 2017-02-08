@@ -30,16 +30,20 @@
 	min-height: 615px;
 }
 
-// .page-template-landing-page aside {
-// 	@include bp(md) {
-// 		margin-top: -9rem;
-// 	}
-// }
-//
-// .page-template-landing-page .content-container {
-// 	background-color: $white;
-// 	padding: 2rem;
-// 	@include bp(md) {
-// 		margin-top: -9rem;
-// 	}
-// }
+.page-template-landing-page aside {
+	.newsletter-signup {
+		border-radius: $radius;
+	}
+	@include bp(md) {
+		margin-top: -9rem;
+	}
+}
+
+.page-template-landing-page .content-container {
+	background-color: $white;
+	padding: 2rem;
+	border-radius: $radius;
+	@include bp(md) {
+		margin-top: -9rem;
+	}
+}

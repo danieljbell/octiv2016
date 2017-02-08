@@ -66,19 +66,8 @@ HOME PAGE SPECIFIC STYLES
 BLOG POST + INDUSTRY CONFERENCE STYLES
 ==========================================
 */
-// .single-post .fixed-hero-section,
-// .page-template-landing-page .fixed-hero-section {
-//   background-repeat: no-repeat;
-//   background-size: 110%;
-//   padding: 0 0;
-//   @include bp(md) {
-//     background-position: center;
-//     background-size: cover;
-//     padding: 6rem 0;
-//   }
-// }
-
-.single-post .fixed-hero-section {
+.single-post .fixed-hero-section,
+.page-template-landing-page .fixed-hero-section {
   background-repeat: no-repeat;
   background-size: 110%;
   padding: 0 0;
@@ -93,9 +82,10 @@ BLOG POST + INDUSTRY CONFERENCE STYLES
   line-height: 1em;
 }
 
-// .page-template-landing-page .fixed-hero-section > .site-width {
-//   padding-top: 0;
-// }
+.page-template-landing-page .fixed-hero-section > .site-width {
+  padding: 0 0 1rem;
+  margin-top: -3rem;
+}
 
 
 /*
