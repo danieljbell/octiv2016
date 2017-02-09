@@ -22,7 +22,6 @@
 				          var emailElem = form.getFormElem().find("#Email");
 				          form.showErrorMessage("Must be Business email.", emailElem);
 				        } else{
-				          form.submitable(true);
 									// Get the form field values
 									var vals = form.vals();
 
@@ -34,6 +33,7 @@
 
 					        // Return false to prevent the submission handler continuing with its own processing
 					        return false;
+									form.submitable(true);
 				        }
 				      }
 
