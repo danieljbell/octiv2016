@@ -3,9 +3,9 @@
 <section id="site-footer" style="padding-bottom: 0;">
 	<div class="site-width">
 		<div class="two-third-reversed">
-			<div>
-				<a href="<?php echo site_url(); ?>"><svg viewBox="0 0 100 21.9" class="footer-logo"><use xlink:href="#icon-octiv-logo"></svg></a>
-				<p class="pad-t"><a href="tel:317-550-0148" style="color: inherit;">317.550.0148</a></p>
+			<div style="margin-bottom: 0;">
+				<a href="/" title="Homepage" class="site-logo footer-logo"></a>
+				<p><a href="tel:317-550-0148" style="color: inherit;">317.550.0148</a></p>
 				<p>54 Monument Circle, Suite 200<br>Indianapolis, IN 46204</p>
 			</div>
 			<div class="fourth">
@@ -74,9 +74,9 @@
 		<div class="half" style="padding-top: 0.5rem;">
 			<div style="margin-bottom: 0;">
 				<ul class="inline">
-					<li><a href="http://twitter.com/octivinc" target="_blank"><svg viewBox="0 0 10 10"><use xlink:href="#icon-twitter"></svg></a></li>
-					<li><a href="http://facebook.com/OctivInc" target="_blank"><svg viewBox="0 0 10 10"><use xlink:href="#icon-facebook"></svg></a></li>
-					<li><a href="http://linkedin.com/company/octiv" target="_blank"><svg viewBox="0 0 10 10"><use xlink:href="#icon-linkedin"></svg></a></li>
+					<li style="width: 100%; max-width: 25px;"><a href="http://twitter.com/octivinc" target="_blank" title="Twitter"><img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt=""></a></li>
+					<li style="width: 100%; max-width: 25px;"><a href="http://facebook.com/OctivInc" target="_blank" title="Facebook"><img src="./wp-content/themes/octiv2016/dist/img/facebook.svg" alt=""></a></li>
+					<li style="width: 100%; max-width: 25px;"><a href="http://linkedin.com/company/octiv" target="_blank" title="LinkedIn"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
 					<li><a href="/company/privacy">Privacy</a></li>
 					<li><a href="/company/terms-conditions">Terms &amp; Conditions</a></li>
 				</ul>

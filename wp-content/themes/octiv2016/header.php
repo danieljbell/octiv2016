@@ -66,13 +66,7 @@ if(is_404() && $_GET['ref']=="tb"){
 <?php get_template_part('partials/display', 'eyebrow'); ?>
   <header class="site-width" role="banner">
     <div class="logo-container">
-      <?php // Logo
-        if (is_front_page()) :
-          echo '<svg viewBox="0 0 100 21.9" id="site-logo"><use xlink:href="#icon-octiv-logo"></svg>';
-        else :
-          echo '<a href="/" title="Homepage"><svg viewBox="0 0 100 21.9" id="site-logo"><use xlink:href="#icon-octiv-logo"></svg></a>';
-        endif;
-      ?>
+      <a href="/" title="Homepage" class="site-logo"></a>
     </div>
     <button id="menu-toggle">Menu</button>
     <div class="site-navigation-container">

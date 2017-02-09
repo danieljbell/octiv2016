@@ -22,7 +22,7 @@
 
 .footer-logo {
 	max-width: 175px;
-	margin: 0 auto $spacing-unit;
+	// margin: 0 auto $spacing-unit;
 	@include bp(md) {
 		max-width: 125px;
 		margin: inherit;
@@ -60,8 +60,8 @@
 
 #site-footer li {
 	svg {
-		width: 15px;
-		height: 15px;
+		// width: 15px;
+		// height: 15px;
 		margin: auto;
 	}
 	a {
@@ -75,9 +75,12 @@
 #site-footer .inline li {
 	display: block;
 	text-align: center;
+	margin: 0 auto;
+	vertical-align: middle;
 	@include bp(sm) {
 		display: inline-block;
 		text-align: left;
+		margin: 0 0.5rem 0 0;
 	}
 }
 
@@ -85,51 +88,6 @@
 	text-align: center;
 	@include bp(sm) {
 		text-align: initial;
-	}
-}
-
-#site-footer .inline li {
-	&:first-of-type a,
-	&:nth-of-type(2) a,
-	&:nth-of-type(3) a {
-		height: 30px;
-		width: 30px;
-		border: 2px solid $gray;
-		padding: 4px;
-		border-radius: 50%;
-		display: inline-flex;
-		justify-content: center;
-		transition: all 200ms ease-out;
-	}
-	&:first-of-type a {
-		&:hover, &:focus {
-			border-color: #01abf0;
-			background-color: #01abf0;
-			outline: 0;
-			svg {
-				fill: $white;
-			}
-		}
-	}
-	&:nth-of-type(2) a {
-		&:hover, &:focus {
-			border-color: #017ab8;
-			background-color: #017ab8;
-			outline: 0;
-			svg {
-				fill: $white;
-			}
-		}
-	}
-	&:nth-of-type(3) a {
-		&:hover, &:focus {
-			border-color: #39579a;
-			background-color: #39579a;
-			outline: 0;
-			svg {
-				fill: $white;
-			}
-		}
 	}
 }
 
