@@ -229,7 +229,7 @@ $count = 0;
 	.solutions-container svg {
 		width: 100%;
 		fill: #fff;
-		filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));
+		/*filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.65));*/
 		max-width: 75px;
 		max-height: 75px;
 	}
