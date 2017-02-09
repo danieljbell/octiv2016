@@ -75,7 +75,6 @@
 						  }
 						}
 
-
 					});
 			});
 		</script>
@@ -83,3 +82,8 @@
 		endif;
 	?>
 </div>
+<?php
+	if ($post->post_name === 'top-17-sales-trends-for-2017') :
+		echo '<a href="/resources/whitepapers/top-17-sales-trends-for-2017/bonus" title="Read Bonus Content"><img src="/wp-content/uploads/2016/12/bonus-content-image.png" alt="Read Bonus Content!" style="margin-top: 2rem;"></a>';
+	endif;
+?>
