@@ -36,7 +36,7 @@ $first_name = $_GET['first_name'];
         if ($blog->have_posts()) :
           while ($blog->have_posts()) :
             $blog->the_post();
-            echo do_shortcode('[get_card thumb="true" excerpt="true"]');
+            echo do_shortcode('[get_card thumb="true" excerpt="true" tag="blog"]');
           endwhile;
         endif;
 
@@ -51,7 +51,13 @@ $first_name = $_GET['first_name'];
         if ($whitepaper->have_posts()) :
           while ($whitepaper->have_posts()) :
             $whitepaper->the_post();
-            echo do_shortcode('[get_card thumb="true" excerpt="custom"]');
+            if ($post->post_parent === 65) {
+              $tag = 'whitepapers';
+            }
+            if ($post->post_parent === 74) {
+              $tag = 'client-stories';
+            }
+            echo do_shortcode('[get_card thumb="true" excerpt="custom" tag="' . $tag . '"]');
           endwhile;
         endif;
 
