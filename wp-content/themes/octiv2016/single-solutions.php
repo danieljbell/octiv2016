@@ -18,7 +18,7 @@
       <?php
         $icon = get_field('page_icon', true);
         print_r($icon);
-        echo '<div style="max-width: 175px; margin-bottom: 1rem;">';
+        echo '<div class="hero-svg-container">';
           echo $page_icon;
         echo '</div>';
       ?>
@@ -161,10 +161,11 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .fixed-hero-section svg {
-  fill: #ffffff;
-  -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
-          filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.75));
+.hero-svg-container {
+  width: 100%;
+  max-width: 175px;
+  fill: #fff;
+  margin-bottom: 1rem;
 }
 .section-icon svg {
   width: 100%;
