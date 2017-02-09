@@ -8,19 +8,45 @@
 					<form id="mktoForm_1008"></form>
 				<script>
 					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+						// Blacklisted Email Domains
+						var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
+
 						//Add an onSuccess handler
-				    form.onSuccess(function(values, followUpUrl) {
-							// Get the form field values
-							var vals = form.vals();
+				    form.onValidate(function(values, followUpUrl) {
 
-							// Update the redirect url with form fields
-							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
+							// Verify Email is Business Domain
+							var email = form.vals().Email;
+				      if(email){
+				        if(!isEmailGood(email)) {
+				          form.submitable(false);
+				          var emailElem = form.getFormElem().find("#Email");
+				          form.showErrorMessage("Must be Business email.", emailElem);
+				        } else{
+				          form.submitable(true);
+									// Get the form field values
+									var vals = form.vals();
 
-							// Redirect the page with form field
-							location.href = followUpUrl;
+									// Update the redirect url with form fields
+									followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
 
-			        // Return false to prevent the submission handler continuing with its own processing
-			        return false;
+									// Redirect the page with form field
+									location.href = followUpUrl;
+
+					        // Return false to prevent the submission handler continuing with its own processing
+					        return false;
+				        }
+				      }
+
+						function isEmailGood(email) {
+					    for(var i=0; i < invalidDomains.length; i++) {
+					      var domain = invalidDomains[i];
+					      if (email.indexOf(domain) != -1) {
+					        return false;
+					      }
+					    }
+					    return true;
+					  }
+
 				    });
 					});
 				</script>
