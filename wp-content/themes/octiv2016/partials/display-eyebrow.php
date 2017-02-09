@@ -26,7 +26,7 @@
                     <a href="/support" title="Support">Support</a>
                 </li>
                 <li>
-                    <a href="#" id="search-button" title="Search"><svg viewBox="0 0 12 12"><use xlink:href="#icon-search"></svg></a>
+                    <a href="#" id="search-button" title="Search"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/search.svg" alt="Search Icon"></a>
                 </li>
             </ul>
         </div>
