@@ -225,7 +225,7 @@
 						<hr>
 						<div class="half">
 							<div>
-								<h4>Insights (beta)</h4>
+								<h4>Octiv Reporting</h4>
 								<ul style="padding-bottom: 0;">
 									<?php
 
