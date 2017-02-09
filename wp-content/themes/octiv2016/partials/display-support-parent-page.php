@@ -3,7 +3,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'Cloud Storage');
 						getThumbnail($queryArgs);
 					?>
@@ -12,8 +12,8 @@
 					<h3>Cloud Storage</h3>
 					<hr>
 					<ul class="half">
-						<?php 
-							$queryArgs = queryArgs(290); 
+						<?php
+							$queryArgs = queryArgs(290);
 							getListedItems($queryArgs);
 						?>
 					</ul>
@@ -25,7 +25,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'CPQ');
 						getThumbnail($queryArgs);
 					?>
@@ -49,7 +49,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'CRM');
 						getThumbnail($queryArgs);
 					?>
@@ -92,7 +92,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'DTM (eSig)');
 						getThumbnail($queryArgs);
 					?>
@@ -123,7 +123,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'Forms');
 						getThumbnail($queryArgs);
 					?>
@@ -138,12 +138,12 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section>
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'Online Meeting');
 						getThumbnail($queryArgs);
 					?>
@@ -165,7 +165,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'Social Network');
 						getThumbnail($queryArgs);
 					?>
@@ -187,7 +187,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(288,'SSO');
 						getThumbnail($queryArgs);
 					?>
@@ -215,7 +215,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Analytics');
 							getThumbnail($queryArgs);
 						?>
@@ -227,8 +227,8 @@
 							<div>
 								<h4>Insights (beta)</h4>
 								<ul style="padding-bottom: 0;">
-									<?php 
-									
+									<?php
+
 										$args = array(
 											'post_type' => 'support',
 											'post_parent' => 979,
@@ -236,52 +236,26 @@
 											'order' => 'ASC',
 											'post__not_in' => array(1030, 1035, 1045, 1008, 1020)
 										);
-									
+
 										$query = new WP_Query( $args );
-									
-										if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post() 
-									
+
+										if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post()
+
 									?>
 											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 									<?php	endwhile; endif; wp_reset_query(); ?>
 
-								</ul>
-								<p style="font-size: 0.85em;"><strong>Calculated Fields and Measures</strong></p>
-								<ul style="padding-bottom: 0;">
-									<?php postIDLogic(1030); ?>
-								</ul>
-								<p style="font-size: 0.85em;"><strong>Crosstabs</strong></p>
-								<ul style="padding-bottom: 0;">
-									<?php postIDLogic(1035); ?>
-								</ul>
-								<p style="font-size: 0.85em;"><strong>Filters and Input Controls</strong></p>
-								<ul style="padding-bottom: 0;">
-									<?php postIDLogic(1045); ?>
-								</ul>
-								<p style="font-size: 0.85em;"><strong>Tables</strong></p>
-								<ul style="padding-bottom: 0;">
-									<?php postIDLogic(1008); ?>
-								</ul>
-								<p style="font-size: 0.85em;"><strong>Charts</strong></p>
-								<ul style="padding-bottom: 0;">
-									<?php postIDLogic(1020); ?>
-								</ul>
-							</div>
-							<div>
-								<h4>Report Builder</h4>
-								<ul>
-									<?php postIDLogic(1065); ?>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			
+
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Assets');
 							getThumbnail($queryArgs);
 						?>
@@ -327,7 +301,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Dashboard');
 							getThumbnail($queryArgs);
 						?>
@@ -336,7 +310,7 @@
 						<h3>Dashboard</h3>
 						<hr>
 						<ul>
-							<?php 
+							<?php
 								$queryArgs = queryArgs(281);
 								getListedItems($queryArgs);
 							?>
@@ -347,7 +321,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Documents');
 							getThumbnail($queryArgs);
 						?>
@@ -418,7 +392,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Platform Administration');
 							getThumbnail($queryArgs);
 						?>
@@ -465,7 +439,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php 
+						<?php
 							$queryArgs = queryArgs(280,'Search Functionality');
 							getThumbnail($queryArgs);
 						?>
@@ -480,7 +454,7 @@
 				</div>
 			</section>
 
-			
+
 		</div>
 	</section>
 
@@ -495,7 +469,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(266,'Online Training');
 						getThumbnail($queryArgs);
 					?>
@@ -507,13 +481,13 @@
 						<div>
 							<h4>Platform</h4>
 							<ul>
-								<?php 
-									$queryArgs = queryArgs(1372); 
+								<?php
+									$queryArgs = queryArgs(1372);
 
 									$pres_query = new WP_Query($queryArgs);
 
 									if ( $pres_query->have_posts() ) : while ( $pres_query->have_posts() ) : $pres_query->the_post() ?>
-									<?php 
+									<?php
 										$link_location = get_field('external_link');
 									?>
 											<li><a href="<?php echo $link_location; ?>"><?php the_title(); ?></a></li>
@@ -523,13 +497,13 @@
 						<div>
 							<h4>Presentations</h4>
 							<ul>
-								<?php 
-									$queryArgs = queryArgs(270); 
+								<?php
+									$queryArgs = queryArgs(270);
 
 									$pres_query = new WP_Query($queryArgs);
 
 									if ( $pres_query->have_posts() ) : while ( $pres_query->have_posts() ) : $pres_query->the_post() ?>
-									<?php 
+									<?php
 										$link_location = get_field('external_link');
 									?>
 											<li><a href="<?php echo $link_location; ?>"><?php the_title(); ?></a></li>
@@ -539,13 +513,13 @@
 						<div>
 							<h4>Proposals</h4>
 							<ul>
-								<?php 
-									$queryArgs = queryArgs(271); 
+								<?php
+									$queryArgs = queryArgs(271);
 
 									$pres_query = new WP_Query($queryArgs);
 
 									if ( $pres_query->have_posts() ) : while ( $pres_query->have_posts() ) : $pres_query->the_post() ?>
-									<?php 
+									<?php
 										$link_location = get_field('external_link');
 									?>
 											<li><a href="<?php echo $link_location; ?>"><?php the_title(); ?></a></li>
@@ -555,13 +529,13 @@
 						<div>
 							<h4>Contracts</h4>
 							<ul>
-								<?php 
-									$queryArgs = queryArgs(272); 
+								<?php
+									$queryArgs = queryArgs(272);
 
 									$pres_query = new WP_Query($queryArgs);
 
 									if ( $pres_query->have_posts() ) : while ( $pres_query->have_posts() ) : $pres_query->the_post() ?>
-									<?php 
+									<?php
 										$link_location = get_field('external_link');
 									?>
 											<li><a href="<?php echo $link_location; ?>"><?php the_title(); ?></a></li>
@@ -577,7 +551,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php 
+					<?php
 						$queryArgs = queryArgs(266,'Video Tutorials');
 						getThumbnail($queryArgs);
 					?>
@@ -617,11 +591,11 @@
 	</section>
 <?php endif; ?>
 
-<?php /* FUNCTIONS */ 
+<?php /* FUNCTIONS */
 
 	function queryArgs($parent, $title = NULL) {
 		$args = array(
-			'post_type' => 'support', 
+			'post_type' => 'support',
 			'post_parent' => $parent,
 			'title' => $title,
 			'orderby' => 'title',
