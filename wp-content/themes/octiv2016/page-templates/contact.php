@@ -8,31 +8,48 @@ TEMPLATE NAME: Contact Us
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-  <div class="site-width white-text">
-    <h1>Contact Us</h1>
-  </div>
+<div class="fixed-hero-section" style="background-color: #fff; background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+	<div class="site-width centered white-text two-third-only">
+		<div>
+			<h1><?php the_title(); ?></h1>
+			<br class="hide-md">
+		</div>
+	</div>
 </div>
-
-<?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <section>
   <div class="site-width">
-    <div class="two-third-only">
-      <div style="margin-bottom: 0;">
-        <p class="font-bump centered" style="margin-bottom: 0;">Octiv gives hundreds of companies the ability to increase efficiency and improve the end-user experience for their customers. To learn more about how Octiv can streamline your company’s workflows, fill out the form to speak to one of our experts today.</p>
-      </div>
-    </div>
+    <div class="two-third">
+			<div class="content-container">
+				<?php echo the_content(); ?>
+				<a href="/support/?submitTicket=true" class="btn-primary">Need to contact support?</a>
+				<br>
+				<br>
+				<div class="video-outer">
+          <div class="video-inner">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCbBbYVFTyjh95bPIy_3BmXsU_h3YtBwzY&q=Octiv,Indianapolis+IN" allowfullscreen></iframe>
+          </div>
+        </div>
+			</div>
+			<div class="box">
+        <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+					<form id="mktoForm_1008"></form>
+				<script>
+					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+						var selectBoxes = form.getFormElem()[0].querySelectorAll('form select');
+						// selectBoxes[0].querySelectorAll('form select');
+						for (var i = 0; i < selectBoxes.length; i++) {
+							selectBoxes[i].classList.add('fancy');
+						}
+					});
+				</script>
+			</div>
+		</div>
   </div>
 </section>
 
-<div class="site-width">
-  <hr>
-</div>
-
-<section>
+<!-- <section>
   <div class="site-width">
-    <h2 class="centered">Who do you need to talk to?</h2>
     <br>
     <br>
     <div class="tabs">
@@ -73,9 +90,9 @@ TEMPLATE NAME: Contact Us
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<section style="background-image: url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+<!-- <section style="background-image: url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
   <div class="site-width white-text">
     <div class="half">
       <div>
@@ -103,16 +120,32 @@ TEMPLATE NAME: Contact Us
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <style>
-  #site-footer > .site-width:first-of-type {
-    border: 0;
+  .content-container,
+  .box {
+    margin-top: -6rem;
   }
-  .white-text a {
-    color: #fff;
-  }
+	.content-container {
+		background-color: #fff;
+		padding: 2rem;
+		border-radius: 5px;
+	}
+	@media screen and (max-width: 600px) {
+		.content-container,
+		.box {
+			margin-top: 0;
+		}
+		.content-container {
+			padding: 0;
+		}
+	}
 </style>
+
+<script>
+
+</script>
 
 
 <?php get_footer(); ?>
