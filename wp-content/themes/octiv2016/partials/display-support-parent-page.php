@@ -589,6 +589,49 @@
 			</div>
 		</div>
 	</section>
+	<section>
+		<div class="site-width">
+			<div class="two-third-reversed">
+				<div>
+					<?php
+						$queryArgs = queryArgs(266,'Video Tutorials');
+						getThumbnail($queryArgs);
+					?>
+				</div>
+				<div>
+					<h3>Webinars</h3>
+					<hr>
+					<div class="half">
+						<div>
+							<h4>Tips and Tricks </h4>
+							<ul>
+								<?php postIDLogic(2019); ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="site-width">
+			<div class="two-third-reversed">
+				<div>
+					<?php
+						$queryArgs = queryArgs(266,'Video Tutorials');
+						getThumbnail($queryArgs);
+					?>
+				</div>
+				<div>
+					<h3>Podcasts</h3>
+					<hr>
+					<ul>
+						<?php postIDLogic(2017); ?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 <?php endif; ?>
 
 <?php /* FUNCTIONS */

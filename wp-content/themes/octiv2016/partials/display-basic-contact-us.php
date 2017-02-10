@@ -11,7 +11,7 @@
 						// Blacklisted Email Domains
 						var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
 
-						//Add an onSuccess handler
+						//Add an onValidate handler
 				    form.onValidate(function(values, followUpUrl) {
 
 							// Verify Email is Business Domain
