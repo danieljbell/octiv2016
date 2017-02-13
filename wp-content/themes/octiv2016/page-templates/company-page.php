@@ -8,7 +8,7 @@ Template Name: Company Page
 get_header();
 ?>
 
-<section class="fixed-hero-section company-hero white-text">
+<div class="fixed-hero-section company-hero white-text">
 	<div class="site-width">
 		<div class="half-stack">
 			<div>
@@ -19,7 +19,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
@@ -35,9 +35,37 @@ get_header();
 				</div>
 			</div>
 			<div>
-        <p>Octiv was founded to provide sales teams a better way to create the assets they need to close deals. Since our inception, our team has led the industry by pioneering technologies that enable companies to use the information they have in CRM, CPQ, ERP and other systems to create, deliver and track sales materials online.</p>
-        <p>We’re passionate about bringing insight, analytics and automation to sales and have earned our position as an industry leader by empowering hundreds of companies around the world to replace static, offline PDFs, Word documents, PowerPoints and paper-based sales materials with online sales materials.</p>
+        <p>Since its founding in 2010, Octiv's team has been dedicated to providing sales teams a better way to create the documents they need to close deals. Today, Octiv streamlines document workflows for teams across organizations including finance, legal, HR and IT. Octiv's industry-leading technology enables companies to use the information they have in CRM, CPQ, ERP and other back-office systems to create, collaborate on and deliver documents online.</p>
+				<p>Octiv is passionate about giving time back to teams by connecting systems and data to deliver a better end-user experience. Awards and recognition of our market-leading product and teams include TechPoint Mira Awards, G2 Crowd, Glassdoor and Best Places to Work in Indiana. Through an HTML5-based platform, powerful integrations and world-class support and services teams, Octiv helps companies move at the speed of business.</p>
+				<p>Octiv is also passionate about community. Our company culture of hard work and commitment is evident in every interaction with our team, our product and in the community organizations and causes we support.</p>
       </div>
+		</div>
+		<div class="sixth centered">
+			<div>
+				<a href="http://www.indianachamber.com/index.php/media-center/press-releases/49-press-releases/2014-press-releases/2878-2014-best-places-to-work-in-indiana-companies-named-indiana-chamber-announces-rankings-may-1" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/best-places.jpg" alt="Best Place to Work"></a>
+			</div>
+			<div>
+				<a href="http://www.glassdoor.com/Reviews/TinderBox-Reviews-E663752.htm" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/glassdoor.jpg" alt="GlassDoor Reviews"></a>
+			</div>
+			<div>
+				<a href="https://www.g2crowd.com/products/tinderbox/reviews" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/g2-crowd.jpg" alt="G2 Crowd"></a>
+			</div>
+			<div>
+				<a href="http://techpoint.org/2015/05/tinderbox-wins-emerging-tech-company-year/" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/mura-awards.jpg" alt="Mira Awards"></a>
+			</div>
+			<div>
+				<a href="http://gettinderbox.com/tinderbox-became-breakthrough-docusign-partner/" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/docusign.jpg" alt="Docusign"></a>
+			</div>
+			<div>
+				<a href="http://www.topworkplaces.com/frontend.php/regional-list/company/indystar/tinderbox" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/indystar.jpg" alt="Indy Star"></a>
+			</div>
+		</div>
+		<div class="two-third-only centered">
+			<div>
+				<h2>Want to join our growing team?</h2>
+				<p>View our career oportunities now!</p>
+				<p><a href="/company/careers" class="btn-primary">View All Opportunities</a></p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -59,28 +87,12 @@ get_header();
 		</div>
 </section>
 
+
+
 <section id="leadership">
 	<div class="site-width">
 		<h2 class="centered">Leadership<br>&nbsp;</h2>
 		<div class="third">
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Adam-Becker.png" alt="Adam Becker" />
-					<p><strong>Adam Becker</strong><br />Account Management<br><a href="https://www.linkedin.com/in/becker3ww"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/shannon-bradley.png" alt="Shannon Bradley" />
-					<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
-					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
 			<div>
 				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
@@ -89,14 +101,8 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="Jesse Kurth" />
-					<p><strong>Jesse Kurth</strong><br />Professional Services<br><a href="https://www.linkedin.com/in/jessekurth"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
-					<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
+					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
@@ -109,6 +115,30 @@ get_header();
 				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/Jim-McIntosh.png" alt="Jim McIntosh" />
 					<p><strong>Jim McIntosh</strong><br />Product<br><a href="https://www.linkedin.com/in/mcintosh"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
+					<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/shannon-bradley.png" alt="Shannon Bradley" />
+					<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Adam-Becker.png" alt="Adam Becker" />
+					<p><strong>Adam Becker</strong><br />Account Management<br><a href="https://www.linkedin.com/in/becker3ww"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="Jesse Kurth" />
+					<p><strong>Jesse Kurth</strong><br />Professional Services<br><a href="https://www.linkedin.com/in/jessekurth"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 		</div>
@@ -127,14 +157,8 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
-					<p><strong>Dustin Sapp</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Kristian-Andersen.jpg" alt="Kristian Andersen" />
-					<p><strong>Kristian Andersen</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/kandersen1"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
+					<p><strong>David Kerr</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
@@ -157,62 +181,23 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
+					<img src="/wp-content/uploads/2017/02/Mark-Terbeek.jpg" alt="Mark Terbeek" />
+					<p><strong>Mark Terbeek</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
 					<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
 					<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-
-<section style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('http://octiv.com/wp-content/uploads/2016/07/community-bg4.jpg'); background-position: center;" id="company-community">
-	<div class="site-width" style="background-color: #fff; padding: 2rem; box-shadow: 0 0 25px rgba(0,0,0,0.75);">
-		<h2 class="centered">Community</h2>
-		<br>
-		<p>We love helping companies transform the way they sell, and we love our community. Our company culture of hard work, commitment and family is evident in every interaction with our team, our products, and in the community organizations and causes we support.</p>
-		<p>Every quarter, you’ll find us volunteering with local organizations who share our passion for helping – a tradition that creates a strong connection between our team and our community. It’s a tradition that not only builds a better community, it builds a better company.</p>
-	</div>
-	<style>
-		#company-community {
-			padding: 6rem 0;
-		}
-	</style>
-</section>
-
-<section>
-	<div class="site-width">
-		<h2 class="centered">Awards &amp; Recognition</h2>
-		<div class="sixth centered">
 			<div>
-				<a href="http://www.indianachamber.com/index.php/media-center/press-releases/49-press-releases/2014-press-releases/2878-2014-best-places-to-work-in-indiana-companies-named-indiana-chamber-announces-rankings-may-1" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/best-places.jpg" alt="Best Place to Work"></a>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
+					<p><strong>Dustin Sapp</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
 			</div>
 			<div>
-				<a href="http://www.glassdoor.com/Reviews/TinderBox-Reviews-E663752.htm" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/glassdoor.jpg" alt="GlassDoor Reviews"></a>
-			</div>
-			<div>
-				<a href="https://www.g2crowd.com/products/tinderbox/reviews" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/g2-crowd.jpg" alt="G2 Crowd"></a>
-			</div>
-			<div>
-				<a href="http://techpoint.org/2015/05/tinderbox-wins-emerging-tech-company-year/" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/mura-awards.jpg" alt="Mira Awards"></a>
-			</div>
-			<div>
-				<a href="http://gettinderbox.com/tinderbox-became-breakthrough-docusign-partner/" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/docusign.jpg" alt="Docusign"></a>
-			</div>
-			<div>
-				<a href="http://www.topworkplaces.com/frontend.php/regional-list/company/indystar/tinderbox" target="_blank" style="display: inline-block;"><img src="/wp-content/uploads/2016/07/indystar.jpg" alt="Indy Star"></a>
-			</div>
-		</div>
-	</div>
-</section>
-<div class="site-width">
-	<hr>
-</div>
-<section>
-	<div class="site-width">
-		<h2 class="centered">Careers<br>&nbsp;</h2>
-		<p>Octiv was founded to provide sales teams a better way to create the assets they need to close deals. We’re passionate about bringing insight, analytics and automation to sales and have earned our position as an industry leader by empowering hundreds of companies around the world to create, deliver and track sales materials online.</p>
-		<div class="centered">
-			<a href="/company/careers" class="btn-primary">View All Opportunities</a>
 		</div>
 	</div>
 </section>

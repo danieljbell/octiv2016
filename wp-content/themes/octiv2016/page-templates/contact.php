@@ -22,7 +22,7 @@ TEMPLATE NAME: Contact Us
     <div class="two-third">
 			<div class="content-container">
 				<?php echo the_content(); ?>
-				<a href="/support/?submitTicket=true" class="btn-primary">Need to contact support?</a>
+				<p>Need to contact <a href="/support/?submitTicket=true">support</a>?</p>
 				<br>
 				<br>
 				<div class="video-outer">
