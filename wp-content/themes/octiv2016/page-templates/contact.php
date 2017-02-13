@@ -22,8 +22,8 @@ TEMPLATE NAME: Contact Us
     <div class="two-third">
 			<div class="content-container">
 				<?php echo the_content(); ?>
-				<p>Press inquiries? Email us at <a href="mailto:press@octiv.com">press@octiv.com</a>.</p>
 				<p>Have a support issue? Access our <a href="/support/?submitTicket=true">support portal</a> now.</p>
+				<p>Press inquiries? Email us at <a href="mailto:press@octiv.com">press@octiv.com</a>.</p>
 				<br class="hide-md">
 				<div class="video-outer">
           <div class="video-inner">
