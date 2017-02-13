@@ -12,7 +12,7 @@ TEMPLATE NAME: Contact Us
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<br class="hide-md">
+			<p class="font-bump">317.550.0148</p>
 		</div>
 	</div>
 </div>
@@ -22,7 +22,8 @@ TEMPLATE NAME: Contact Us
     <div class="two-third">
 			<div class="content-container">
 				<?php echo the_content(); ?>
-				<p>Need to contact <a href="/support/?submitTicket=true">support</a>? Have a <a href="mailto:press@octiv.com">press inquiry</a>?</p>
+				<p>Press inquiries? Email us at <a href="mailto:press@octiv.com">press@octiv.com</a>.</p>
+				<p>Have a support issue? Access our <a href="/support/?submitTicket=true">support portal</a> now.</p>
 				<br class="hide-md">
 				<div class="video-outer">
           <div class="video-inner">
@@ -56,6 +57,9 @@ TEMPLATE NAME: Contact Us
 		padding: 2rem;
 		border-radius: 5px;
 	}
+	.fixed-hero-section .font-bump {
+		margin-bottom: 3rem;
+	}
 	@media screen and (max-width: 768px) {
 		.content-container .video-outer {
 			display: none;
@@ -66,6 +70,9 @@ TEMPLATE NAME: Contact Us
 		}
 		.content-container {
 			padding: 0;
+		}
+		.fixed-hero-section .font-bump {
+			margin-bottom: -2rem;
 		}
 	}
 </style>
