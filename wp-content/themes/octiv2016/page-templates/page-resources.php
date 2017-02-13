@@ -66,17 +66,17 @@ get_header();
 	</div>
 </section>
 
-<?php get_template_part('partials/display', 'newsletter-section'); ?>
+<?php // get_template_part('partials/display', 'newsletter-section'); ?>
 
 <section>
 	<div class="site-width">
 		<div class="tabs">
 			<h6>Blog</h6>
 			<div class="tabbody">
-				<?php 
+				<?php
 					$args = array( 'post_type' => 'post', 'posts_per_page' => 6 );
 					$query = new WP_Query( $args );
-					if ( $query->have_posts() ) : 
+					if ( $query->have_posts() ) :
 						echo '<div class="third">';
 						while ( $query->have_posts() ) :
 							$query->the_post();
@@ -89,15 +89,15 @@ get_header();
 							</div>
 						';
 					endif;
-					wp_reset_query();	
-				?>			
+					wp_reset_query();
+				?>
 			</div>
 			<h6>Client Stories</h6>
 			<div class="tabbody">
-				<?php 
+				<?php
 						$args = array( 'post_type' => 'page', 'post_parent' => 74, 'posts_per_page' => 6 );
 						$query = new WP_Query( $args );
-						if ( $query->have_posts() ) : 
+						if ( $query->have_posts() ) :
 							echo '<div class="third">';
 							while ( $query->have_posts() ) :
 								$query->the_post();
@@ -111,14 +111,14 @@ get_header();
 						';
 						endif;
 						wp_reset_query();
-					?>			
+					?>
 			</div>
 			<h6>Webinars</h6>
 			<div class="tabbody">
-				<?php 
+				<?php
 						$args = array( 'post_type' => 'page', 'post_parent' => 207, 'posts_per_page' => 6 );
 						$query = new WP_Query( $args );
-						if ( $query->have_posts() ) : 
+						if ( $query->have_posts() ) :
 							echo '<div class="third">';
 							while ( $query->have_posts() ) :
 								$query->the_post();
@@ -132,14 +132,14 @@ get_header();
 						';
 						endif;
 						wp_reset_query();
-					?>	
+					?>
 			</div>
 			<h6>Whitepapers</h6>
 			<div class="tabbody">
-				<?php 
+				<?php
 						$args = array( 'post_type' => 'page', 'post_parent' => 65, 'posts_per_page' => 6 );
 						$query = new WP_Query( $args );
-						if ( $query->have_posts() ) : 
+						if ( $query->have_posts() ) :
 							echo '<div class="third">';
 							while ( $query->have_posts() ) :
 								$query->the_post();
@@ -153,7 +153,7 @@ get_header();
 						';
 						endif;
 						wp_reset_query();
-					?>	
+					?>
 			</div>
 		</div>
 	</div>
