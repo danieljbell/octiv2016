@@ -1,11 +1,8 @@
-// .page-template-company-page .fixed-hero-section {
-// 	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://octiv.com/wp-content/uploads/2016/06/company-bg.jpg);
-// 	background-size: cover;
-// 	background-position: center -100px;
-// 	@include bp(md) {
-// 		background-position: center;
-// 	}
-// }
+.page-template-company-page .fixed-hero-section {
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://octiv.com/wp-content/uploads/2016/06/company-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
 
 
 .page-template-company-page #site-footer .site-width:first-of-type {
