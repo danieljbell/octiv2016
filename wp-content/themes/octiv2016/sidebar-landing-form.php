@@ -17,6 +17,9 @@
 		<form id="mktoForm_1041"></form>
 		<script>
 			MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+				var labelToRemove = document.querySelector('label[for="subscriptionNewsletter"]');
+				labelToRemove.querySelector('.mktoAsterix').remove();
+
 				// Blacklisted Email Domains
 				var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
 
@@ -77,7 +80,17 @@
 
 					});
 			});
+
 		</script>
+		<style>
+			label[for="subscriptionNewsletter"] {
+				padding-left: 1.25rem;
+			}
+			label[for="subscriptionNewsletter"] + div {
+				display: block;
+				margin-top: -1.4rem;
+			}
+		</style>
 		<?php
 		endif;
 	?>
