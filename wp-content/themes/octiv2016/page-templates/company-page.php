@@ -113,12 +113,6 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Jim-McIntosh.png" alt="Jim McIntosh" />
-					<p><strong>Jim McIntosh</strong><br />Product<br><a href="https://www.linkedin.com/in/mcintosh"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
 					<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
@@ -194,7 +188,7 @@ get_header();
 			<div>
 				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
-					<p><strong>Dustin Sapp</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<p><strong>Dustin Sapp</strong><br />Co-Founder &amp; Board Observer<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
