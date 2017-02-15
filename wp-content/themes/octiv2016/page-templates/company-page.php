@@ -182,7 +182,7 @@ get_header();
 			<div>
 				<div class="centered">
 					<img src="/wp-content/uploads/2017/02/Mark-Terbeek.jpg" alt="Mark Terbeek" />
-					<p><strong>Mark Terbeek</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<p><strong>Mark Terbeek</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markterbeek"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
