@@ -92,7 +92,6 @@
 
 <?php wp_footer(); ?>
 
-
 <!-- Google Analytics -->
 <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

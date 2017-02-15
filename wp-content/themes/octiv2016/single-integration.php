@@ -25,124 +25,79 @@
 
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
-<section>
-  <div class="site-width">
-    <div class="half">
-      <div>
-        <h1>Octiv + <?php echo get_the_title(); ?></h1>
-        <?php the_content(); ?>
-      </div>
-      <div>
-        <!-- This font needs to be written in css for responsiveness -->
-        <h4 style="font-size: 2em;">About <?php echo get_the_title(); ?></h4>
-        <?php echo get_field('integration_description'); ?>
-        <?php if (get_field('integration_link')) : ?>
-          <p><a href="<?php echo get_field('integration_link'); ?>" class="btn-arrow">Learn More</a></p>
-        <?php endif; ?>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section style="padding-bottom: 0;">
   <div class="site-width">
     <div class="fourth-3-fourth">
       <div class="sticky-sidebar" id="sticky-sidebar">
-        <h4>Events</h4>
+        <h4>Octiv + <?php echo get_the_title(); ?></h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
-          <li><a href="#triggers">Triggers</a></li>
-          <li><a href="#searches">Searches</a></li>
-          <li><a href="#actions">Actions</a></li>
+          <li><a href="#about-integration">About <?php echo get_the_title(); ?></a></li>
+          <li><a href="#key-capabilities">Key Capabilities</a></li>
+          <li><a href="#business-use-cases">Business Use Cases</a></li>
+          <li><a href="#technical-requirements">Technical Requirements</a></li>
         </ul>
       </div>
       <div class="sticky-listing">
-        <?php
-          echo '<h3 id="triggers" style="padding-bottom: 0.5rem;">Triggers <em>Watch for Events</em></h3>';
-          if (have_rows('trigger')) :
-            echo '<div class="third">';
-            while (have_rows('trigger')) :
-              the_row();
-              echo '<div class="card">';
-                echo '<div>';
-                  if (get_sub_field('trigger_link')) :
-                    echo '<h4><a href="' . get_sub_field('trigger_link') . '">' . get_sub_field('trigger_title') . '</a></h4>';
-                  else :
-                    echo '<h4>' . get_sub_field('trigger_title') . '</h4>';
-                  endif;
-                  echo '<p>' . get_sub_field('trigger_description') . '</p>';
-                  if (get_sub_field('trigger_link')) :
-                    echo '<a href="' . get_sub_field('trigger_link') . '" class="btn-arrow">Learn More</a>';
-                  endif;
-                echo '</div>';
-              echo '</div>';
-            endwhile;
-            echo '</div>';
-          else :
-            echo '<p>Sorry, we don\'t currently have any triggers for ' . get_the_title() . ' at this time.<p>';
-          endif;
-        ?>
-        <?php
-          echo '<h3 id="searches" style="padding-bottom: 0.5rem;">Searches <em>Look Up Existing Data</em></h3>';
-          if (have_rows('search')) :
-            echo '<div class="third">';
-            while (have_rows('search')) :
-              the_row();
-              echo '<div class="card">';
-                echo '<div>';
-                  if (get_sub_field('search_link')) :
-                    echo '<h4><a href="' . get_sub_field('search_link') . '">' . get_sub_field('search_title') . '</a></h4>';
-                  else :
-                    echo '<h4>' . get_sub_field('search_title') . '</h4>';
-                  endif;
-                  echo get_sub_field('search_description');
-                  if (get_sub_field('search_link')) :
-                    echo '<a href="' . get_sub_field('search_link') . '" class="btn-arrow">Learn More</a>';
-                  endif;
-                echo '</div>';
-              echo '</div>';
-            endwhile;
-            echo '</div>';
-          else :
-            echo '<p>Sorry, we don\'t currently have any searches for ' . get_the_title() . ' at this time.<p>';
-          endif;
-        ?>
-        <?php
-          echo '<h3 id="actions" style="padding-bottom: 0.5rem;">Actions <em>Create New Items</em></h3>';
-          if (have_rows('action')) :
-            echo '<div class="third">';
-            while (have_rows('action')) :
-              the_row();
-              echo '<div class="card">';
-                echo '<div>';
-                  if (get_sub_field('action_link')) :
-                    echo '<h4><a href="' . get_sub_field('action_link') . '">' . get_sub_field('action_title') . '</a></h4>';
-                  else :
-                    echo '<h4>' . get_sub_field('action_title') . '</h4>';
-                  endif;
-                  echo get_sub_field('action_description');
-                  if (get_sub_field('action_link')) :
-                    echo '<a href="' . get_sub_field('action_link') . '" class="btn-arrow">Learn More</a>';
-                  endif;
-                echo '</div>';
-              echo '</div>';
-            endwhile;
-            echo '</div>';
-          else :
-            echo '<p>Sorry, we don\'t currently have any actions for ' . get_the_title() . ' at this time.<p>';
-          endif;
-        ?>
+        <div>
+          <section style="padding-top: 0;">
+            <h3 id="about-integration" style="padding-bottom: 0.5rem;">About <?php echo get_the_title(); ?></h3>
+            <?php echo the_content(); ?>
+          </section>
+          <section style="padding-top: 0;">
+            <h3 id="key-capabilities" style="padding-bottom: 0.5rem;">Key Capabilities</h3>
+              <?php
+              if (have_rows('key_capabilities')) :
+                echo '<ul class="list-is-collapsed">';
+                while (have_rows('key_capabilities')) :
+                  the_row();
+                  echo '<li>' . get_sub_field('key_capability') . '</li>';
+                endwhile;
+              else :
+                echo 'No key capabilites have been identified at this time.';
+              endif;
+              ?>
+            </ul>
+          </section>
+          <section style="padding-top: 0;">
+            <h3 id="business-use-cases" style="padding-bottom: 0.5rem;">Business Use Cases</h3>
+            <?php
+            if (have_rows('business_use_cases')) :
+              echo '<ul class="list-is-collapsed">';
+              while (have_rows('business_use_cases')) :
+                the_row();
+                echo '<li>' . get_sub_field('business_use_case') . '</li>';
+              endwhile;
+            else :
+              echo 'No business use cases have been identified at this time.';
+            endif;
+            ?>
+          </section>
+          <section style="padding: 0;">
+            <h3 id="technical-requirements" style="padding-bottom: 0.5rem;">Technical Requirements</h3>
+            <?php
+            if (have_rows('technical_requirements')) :
+              echo '<ul class="list-is-collapsed">';
+              while (have_rows('technical_requirements')) :
+                the_row();
+                echo '<li>' . get_sub_field('technical_requirement') . '</li>';
+              endwhile;
+            else :
+              echo 'No technical requirements have been identified at this time.';
+            endif;
+            ?>
+          </section>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="site-width">
-  <hr>
-</div>
-
 <section>
   <div class="site-width">
+    <hr>
+    <br class="hide-md">
+    <br class="hide-md">
     <h2 class="centered">Other Integrations You Might Find Interesting</h2>
   </div>
     <br>
@@ -154,9 +109,7 @@
           'posts_per_page' => 10,
           'post__not_in' => array($post->ID)
         );
-
         $query = new WP_Query($args);
-
         if ($query->have_posts()) :
           while ($query->have_posts()) :
             $query->the_post();
@@ -175,7 +128,6 @@
           endwhile;
         endif;
         wp_reset_query();
-
       ?>
     </div>
     <div class="centered-slider-buttons"></div>
@@ -197,13 +149,10 @@
 				    form.onSuccess(function(values, followUpUrl) {
 							// Get the form field values
 							var vals = form.vals();
-
 							// Update the redirect url with form fields
 							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
-
 							// Redirect the page with form field
 							location.href = followUpUrl;
-
 			        // Return false to prevent the submission handler continuing with its own processing
 			        return false;
 				    });
@@ -216,10 +165,45 @@
 
 <style>
   .fixed-hero-section .btn-white-outline:hover {
-    color: <?php echo get_field('integration_color'); ?>;
+    color: <?php echo get_field('integration_color'); ?> !important;
   }
   #site-footer>.site-width:first-of-type {
     border-top: 0;
+  }
+  .list-toggle:before {
+    content: '';
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: -0.75rem;
+    position: relative;
+    /*z-index: -1;*/
+    margin-left: -1.25rem;
+    margin-top: -2.5rem;
+    padding-top: 1rem;
+    padding-left: 1.25rem;
+    height: 2rem;
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.9) 50%);
+  }
+  .list-toggle {
+    text-align: center;
+    list-style-type: none;
+    display: block;
+  }
+  .list-toggle span {
+    background-color: #fff;
+    padding: 0 1rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .list-toggle.less:before {
+    background-image: initial;
+  }
+  .list-toggle.less:before,
+  .list-toggle.less span {
+    transform: translateY(1rem);
+    margin-bottom: 0;
   }
 </style>
 
