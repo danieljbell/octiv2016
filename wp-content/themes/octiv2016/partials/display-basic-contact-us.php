@@ -8,6 +8,11 @@
 					<form id="mktoForm_1008"></form>
 				<script>
 					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+
+						// Select Newsletter Asterix and Remove it from the DOM
+						var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
+						newsletterBox.querySelector('.mktoAsterix').remove();
+
 						// Blacklisted Email Domains
 						var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
 
@@ -50,6 +55,17 @@
 				    });
 					});
 				</script>
+				<style>
+					label[for="subscriptionNewsletter"] {
+						padding-left: 1.25rem;
+						margin-top: 1rem;
+					}
+					label[for="subscriptionNewsletter"] + div {
+						display: block;
+						margin-top: -2.5rem;
+						margin-bottom: 1rem;
+					}
+				</style>
 			</div>
 			<div class="pos-rel">
 				<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/computer-frame.png" alt="computer" style="pointer-events: none; position: relative; z-index:2;">
