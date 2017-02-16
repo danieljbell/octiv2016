@@ -22,10 +22,10 @@
 				<div class="half" style="background-color: transparent;">
 					<div>
 						<h1>Need More Help?</h1>
-						<p>Click the button to submit a support ticket.</p>
+						<p>Click the button if you need assistance from Octiv.</p>
 					</div>
 					<div>
-			    	<button id="submit-ticket" class="btn-primary" style="padding: 1rem; box-shadow: 0 0 15px rgba(0,0,0,0.6); display: block; width: 100%;">Submit a Support Ticket</button>
+			    	<button id="submit-ticket" class="btn-primary" style="padding: 1rem; box-shadow: 0 0 15px rgba(0,0,0,0.6); display: block; width: 100%;">Submit a "Help Me" Ticket</button>
 					</div>
 				</div>
 			</div>
