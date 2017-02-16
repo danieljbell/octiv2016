@@ -53,7 +53,7 @@
 	  <div class="modal-dialog modal-lg">
 	  	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	    <div class="modal-content">
-	    	<h2>Submit a Support Ticket</h2>
+	    	<h2>Submit a "Help Me" ticket</h2>
 	    	<p>Please fill out the form below to submit a ticket to our support team.</p>
 	    	<?php get_template_part('partials/display', 'support-form'); ?>
 	    </div>
