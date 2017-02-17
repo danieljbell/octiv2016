@@ -145,6 +145,10 @@
 					<form id="mktoForm_1008"></form>
 				<script>
 					MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1008, function(form) {
+            // Select Newsletter Asterix and Remove it from the DOM
+						var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
+						newsletterBox.querySelector('.mktoAsterix').remove();
+
 						//Add an onSuccess handler
 				    form.onSuccess(function(values, followUpUrl) {
 							// Get the form field values
@@ -164,6 +168,18 @@
 </section>
 
 <style>
+  label[for="subscriptionNewsletter"] {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+  }
+  label[for="subscriptionNewsletter"] + div {
+    display: block;
+    margin-top: -2.5rem;
+    margin-bottom: 1rem;
+  }
+  select {
+    color: #000;
+  }
   .fixed-hero-section .btn-white-outline:hover {
     color: <?php echo get_field('integration_color'); ?> !important;
   }

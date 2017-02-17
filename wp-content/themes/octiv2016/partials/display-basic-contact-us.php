@@ -57,13 +57,21 @@
 				</script>
 				<style>
 					label[for="subscriptionNewsletter"] {
+						margin-top: 1.75rem;
 						padding-left: 1.25rem;
-						margin-top: 1rem;
 					}
 					label[for="subscriptionNewsletter"] + div {
-						display: block;
-						margin-top: -2.5rem;
-						margin-bottom: 1rem;
+						margin-top: -1.25rem;
+					}
+					@media screen and (min-width: 1280px) {
+						label[for="subscriptionNewsletter"] {
+							margin-top: 1rem;
+						}
+						label[for="subscriptionNewsletter"] + div {
+							display: block;
+							margin-top: -2.5rem;
+							margin-bottom: 1rem;
+						}
 					}
 				</style>
 			</div>
