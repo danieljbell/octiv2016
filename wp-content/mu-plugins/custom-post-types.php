@@ -629,7 +629,7 @@ function integration_init() {
             'label' => __( 'Integration Type' ),
             'rewrite' => array( 'slug' => 'platform/integrations' ),
             'hierarchical' => true,
-            'hasArchive' => true,
+            // 'hasArchive' => true,
             'show_ui' => true,
             'capabilities' => array(
                 'assign_terms' => 'edit_integration',
