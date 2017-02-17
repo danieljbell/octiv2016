@@ -593,22 +593,22 @@ function register_integration_post_type() {
     'delete_post'            => 'delete_integration',
 
     // primitive/meta caps
-    'create_posts'           => 'create_integration',
+    'create_posts'           => 'create_integrations',
 
     // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_integration',
-    'edit_others_posts'      => 'manage_integration',
-    'publish_posts'          => 'manage_integration',
+    'edit_posts'             => 'edit_integrations',
+    'edit_others_posts'      => 'manage_integrations',
+    'publish_posts'          => 'manage_integrations',
     'read_private_posts'     => 'read',
 
     // primitive caps used inside of map_meta_cap()
     'read'                   => 'read',
-    'delete_posts'           => 'manage_integration',
-    'delete_private_posts'   => 'manage_integration',
-    'delete_published_posts' => 'manage_integration',
-    'delete_others_posts'    => 'manage_integration',
-    'edit_private_posts'     => 'edit_integration',
-    'edit_published_posts'   => 'edit_integration'
+    'delete_posts'           => 'manage_integrations',
+    'delete_private_posts'   => 'manage_integrations',
+    'delete_published_posts' => 'manage_integrations',
+    'delete_others_posts'    => 'manage_integrations',
+    'edit_private_posts'     => 'edit_integrations',
+    'edit_published_posts'   => 'edit_integrations'
     ),
   );
 
