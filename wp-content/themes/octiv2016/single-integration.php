@@ -41,7 +41,7 @@
       <div class="sticky-listing">
         <div>
           <section style="padding-top: 0;">
-            <h3 id="about-integration" style="padding-bottom: 0.5rem;">About <?php echo get_the_title(); ?></h3>
+            <h3 id="about-integration" style="padding-bottom: 0.5rem;">Why Octiv + <?php echo get_the_title(); ?></h3>
             <?php echo the_content(); ?>
           </section>
           <section style="padding-top: 0;">
