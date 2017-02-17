@@ -17,7 +17,6 @@
         <div class="box"><img src="<?php echo get_field('integration_logo'); ?>" alt="<?php echo get_the_title(); ?>"></div>
       </div>
       <div>
-        <p class="font-bump"><?php echo get_the_excerpt(); ?></p>
         <a href="<?php echo get_the_permalink(); ?>#call-to-action" class="btn-white-outline">Let's Talk Octiv &amp; <?php echo get_the_title(); ?></a>
       </div>
     </div>
