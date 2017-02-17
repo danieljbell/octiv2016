@@ -168,24 +168,35 @@
 </section>
 
 <style>
+label[for="subscriptionNewsletter"] {
+  margin-top: 1.75rem;
+  padding-left: 1.25rem;
+}
+label[for="subscriptionNewsletter"] + div {
+  margin-top: -1.25rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 960px) {
   label[for="subscriptionNewsletter"] {
-    margin-top: 1.75rem;
-    padding-left: 1.25rem;
+    margin-top: 1.5rem;
   }
   label[for="subscriptionNewsletter"] + div {
+    display: block;
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  label[for="subscriptionNewsletter"] {
+    margin-top: 1.5rem;
+  }
+  label[for="subscriptionNewsletter"] + div {
+    display: block;
     margin-top: -1.25rem;
     margin-bottom: 1rem;
   }
-  @media screen and (min-width: 1280px) {
-    label[for="subscriptionNewsletter"] {
-      margin-top: 1rem;
-    }
-    label[for="subscriptionNewsletter"] + div {
-      display: block;
-      margin-top: -2.5rem;
-      margin-bottom: 1rem;
-    }
-  }
+}
   select {
     color: #000;
   }
