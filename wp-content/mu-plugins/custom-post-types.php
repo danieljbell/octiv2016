@@ -551,7 +551,7 @@ add_action( 'init', 'feature_init' );
 REGISTER INTEGRATIONS POST TYPE
 ==============================
 */
-add_action( 'init', 'register_integration_post_type' );
+// add_action( 'init', 'register_integration_post_type' );
 
 function register_integration_post_type() {
 
@@ -638,7 +638,7 @@ function integration_init() {
         )
     );
 }
-add_action( 'init', 'integration_init' );
+// add_action( 'init', 'integration_init' );
 
 
 
