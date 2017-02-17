@@ -579,7 +579,7 @@ function register_integration_post_type() {
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/integrations' ),
     'menu_icon'   => 'dashicons-admin-plugins',
-    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
     'capability_type' => 'integrations',
     'map_meta_cap' => true,
     // 'show_in_rest'       => true,
