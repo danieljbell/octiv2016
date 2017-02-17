@@ -551,7 +551,7 @@ add_action( 'init', 'feature_init' );
 REGISTER INTEGRATIONS POST TYPE
 ==============================
 */
-// add_action( 'init', 'register_integration_post_type' );
+add_action( 'init', 'register_integration_post_type' );
 
 function register_integration_post_type() {
 
@@ -612,7 +612,7 @@ function register_integration_post_type() {
     ),
   );
 
-  register_post_type( 'integration', $args );
+  register_post_type( 'integrations', $args );
 }
 
 /*
@@ -624,7 +624,7 @@ function integration_init() {
     // create a new taxonomy
     register_taxonomy(
         'integration_type',
-        'integration',
+        'integrations',
         array(
             'label' => __( 'Integration Type' ),
             'rewrite' => array( 'slug' => 'platform/integrations' ),
@@ -638,7 +638,7 @@ function integration_init() {
         )
     );
 }
-// add_action( 'init', 'integration_init' );
+add_action( 'init', 'integration_init' );
 
 
 
