@@ -62,6 +62,7 @@
 					}
 					label[for="subscriptionNewsletter"] + div {
 						margin-top: -1.25rem;
+						margin-bottom: 1rem;
 					}
 					@media screen and (min-width: 1280px) {
 						label[for="subscriptionNewsletter"] {
