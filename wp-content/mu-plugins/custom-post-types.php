@@ -16,7 +16,7 @@ function register_support_post_type() {
     'add_new_item'        => 'Add New Support Doc',
     'edit_item'           => 'Edit Support Doc',
     'new_item'            => 'New Support Doc',
-    'all_items'           => 'All Support Doc',
+    'all_items'           => 'All Support Docs',
     'view_item'           => 'View Support Doc',
     'search_items'        => 'Search Support Doc',
     'not_found'           => 'No support doc found',
@@ -85,7 +85,7 @@ function register_solutions_post_type() {
     'add_new_item'        => 'Add New Solution',
     'edit_item'           => 'Edit Solution',
     'new_item'            => 'New Solution',
-    'all_items'           => 'All Solution',
+    'all_items'           => 'All Solutions',
     'view_item'           => 'View Solutions',
     'search_items'        => 'Search Solutions',
     'not_found'           => 'No solutions found',
@@ -336,7 +336,7 @@ function register_release_post_type() {
     'add_new_item'        => 'Add New Product Release',
     'edit_item'           => 'Edit Product Release',
     'new_item'            => 'New Product Release',
-    'all_items'           => 'All Product Release',
+    'all_items'           => 'All Product Releases',
     'view_item'           => 'View Product Release',
     'search_items'        => 'Search Product Release',
     'not_found'           => 'No product release found',
@@ -467,7 +467,7 @@ function register_features_post_type() {
     'add_new_item'        => 'Add New Feature',
     'edit_item'           => 'Edit Feature',
     'new_item'            => 'New Feature',
-    'all_items'           => 'All Feature',
+    'all_items'           => 'All Features',
     'view_item'           => 'View Features',
     'search_items'        => 'Search Features',
     'not_found'           => 'No features found',
@@ -562,7 +562,7 @@ function register_integration_post_type() {
     'add_new_item'        => 'Add New Integration',
     'edit_item'           => 'Edit Integration',
     'new_item'            => 'New Integration',
-    'all_items'           => 'All Integration',
+    'all_items'           => 'All Integrations',
     'view_item'           => 'View Integration',
     'search_items'        => 'Search Integration',
     'not_found'           => 'No integration found',
@@ -593,22 +593,22 @@ function register_integration_post_type() {
     'delete_post'            => 'delete_integration',
 
     // primitive/meta caps
-    'create_posts'           => 'create_integrations',
+    'create_posts'           => 'create_integration',
 
     // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_integrations',
-    'edit_others_posts'      => 'manage_integrations',
-    'publish_posts'          => 'manage_integrations',
+    'edit_posts'             => 'edit_integration',
+    'edit_others_posts'      => 'manage_integration',
+    'publish_posts'          => 'manage_integration',
     'read_private_posts'     => 'read',
 
     // primitive caps used inside of map_meta_cap()
     'read'                   => 'read',
-    'delete_posts'           => 'manage_integrations',
-    'delete_private_posts'   => 'manage_integrations',
-    'delete_published_posts' => 'manage_integrations',
-    'delete_others_posts'    => 'manage_integrations',
-    'edit_private_posts'     => 'edit_integrations',
-    'edit_published_posts'   => 'edit_integrations'
+    'delete_posts'           => 'manage_integration',
+    'delete_private_posts'   => 'manage_integration',
+    'delete_published_posts' => 'manage_integration',
+    'delete_others_posts'    => 'manage_integration',
+    'edit_private_posts'     => 'edit_integration',
+    'edit_published_posts'   => 'edit_integration'
     ),
   );
 
