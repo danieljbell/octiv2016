@@ -195,7 +195,7 @@ $webinar_source = get_field('webinar_source', $queried_object);
 	</div>
 </section>
 
-<?php get_template_part('partials/display', 'newsletter-section'); ?>
+<?php // get_template_part('partials/display', 'newsletter-section'); ?>
 
 
 <?php get_footer(); ?>
