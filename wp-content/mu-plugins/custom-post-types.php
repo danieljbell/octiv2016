@@ -612,7 +612,7 @@ function register_integration_post_type() {
     ),
   );
 
-  register_post_type( 'integrations', $args );
+  register_post_type( 'integration', $args );
 }
 
 /*
@@ -624,7 +624,7 @@ function integration_init() {
     // create a new taxonomy
     register_taxonomy(
         'integration_type',
-        'integrations',
+        'integration',
         array(
             'label' => __( 'Integration Type' ),
             'rewrite' => array( 'slug' => 'platform/integrations' ),
