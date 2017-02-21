@@ -12,4 +12,7 @@ ul, ol {
 
 main ul {
 	margin-bottom: 1rem;
+	&.tabs-list {
+		margin-bottom: 0;
+	}
 }
