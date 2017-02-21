@@ -38,6 +38,11 @@
 								var vals = form.vals();
 
 								// Update the redirect url with form fields
+								if (window.location.pathname === '/resources/whitepapers/unified-document-workflows-sales/') {
+
+									followUpUrl = '/wp-content/uploads/2017/02/Unified-Document-Workflows-For-Sales.pdf';
+								}
+
 								if (window.location.pathname === '/resources/whitepapers/top-17-sales-trends-for-2017/') {
 
 									followUpUrl = 'http://go.octiv.com/proposals/create_and_view?api_key=08cd2775273e71f701f517da229a1006f1f143ac&amp;proposal[template_id]=32543&amp;proposal[name]=17%20Sales%20Trends%20for%202017%20for%20' + vals.Company + '&amp;first_name=' + vals.FirstName + '&amp;last_name=' + vals.LastName;
