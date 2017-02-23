@@ -122,28 +122,6 @@
 </script>
 <!-- Snowplow stop plowing -->
 
-<?php else : ?>
-<!-- Snowplow starts plowing -->
-<script type="text/javascript">
-
-    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-    p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-    };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-    n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d26x5ounzdjojj.cloudfront.net/2.5.3/sp.js","snowplow"));
-
-    window.snowplow('newTracker', 'co', 'collector.thebigwillow.work', {
-      appId: 'Leb67664e0dcdd62a',
-      platform: 'web',
-      contexts: {
-        webPage: true
-      }
-    });
-    window.snowplow('enableActivityTracking', 30, 30);
-    window.snowplow('enableLinkClickTracking');
-    window.snowplow('trackPageView');
-</script>
-<!-- Snowplow stop plowing -->
-
 <?php endif; ?>
 
 
@@ -362,29 +340,6 @@ $inline_script = get_field('script', $queried_object);
 		};
 </script>
 <?php endif; ?>
-
-<script type="text/javascript">
-(function() {
-  var didInit = false;
-  function initMunchkin() {
-    if(didInit === false) {
-      didInit = true;
-      Munchkin.init('625-MXY-689');
-    }
-  }
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//munchkin.marketo.net/munchkin.js';
-  s.onreadystatechange = function() {
-    if (this.readyState == 'complete' || this.readyState == 'loaded') {
-      initMunchkin();
-    }
-  };
-  s.onload = initMunchkin;
-  document.getElementsByTagName('head')[0].appendChild(s);
-})();
-</script>
 
 </body>
 </html>
