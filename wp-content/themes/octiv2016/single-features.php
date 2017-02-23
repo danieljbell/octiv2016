@@ -64,12 +64,12 @@
           wp_reset_query();
         ?>
       </div>
-      <div class="half">
-        <div>
-          <?php the_content(); ?>
-        </div>
-        <?php
-          if (have_rows('screenshots')) :
+      <?php
+        if (have_rows('screenshots')) :
+          echo '<div class="half">';
+            echo '<div>';
+              the_content();
+            echo '</div>';
             echo '<div>';
               echo '<div class="slider" id="catalog-screenshots">';
             while (have_rows('screenshots')) :
@@ -80,11 +80,14 @@
               echo '</div>';
             endwhile;
               echo '</div>';
-              echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
-            echo '</div>';
-          endif;
-        ?>
-      </div>
+            echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
+          echo '</div>';
+        else :
+          echo '<div>';
+            the_content();
+          echo '</div>';
+        endif;
+      ?>
   </div>
 </section>
 
