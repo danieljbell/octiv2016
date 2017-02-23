@@ -42,13 +42,13 @@ if(is_404() && $_GET['ref']=="tb"){
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Google Tag Manager
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-P7LZ6FP');</script>
-    End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
 
 
@@ -60,10 +60,10 @@ if(is_404() && $_GET['ref']=="tb"){
 
 </head>
 <body <?php body_class(); ?>>
-  <!-- Google Tag Manager (noscript)
+  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
 
   <?php get_template_part('partials/display', 'icons'); ?>
 
