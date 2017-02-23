@@ -27,17 +27,6 @@
 				          var emailElem = form.getFormElem().find("#Email");
 				          form.showErrorMessage("Must be Business email.", emailElem);
 				        } else{
-									// Get the form field values
-									var vals = form.vals();
-
-									// Update the redirect url with form fields
-									followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
-
-									// Redirect the page with form field
-									location.href = followUpUrl;
-
-					        // Return false to prevent the submission handler continuing with its own processing
-					        return false;
 									form.submitable(true);
 				        }
 				      }
@@ -53,6 +42,20 @@
 					  }
 
 				    });
+
+						form.onSuccess(function(values, followUpUrl) {
+							// Get the form field values
+							var vals = form.vals();
+
+							// Update the redirect url with form fields
+							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
+
+							// Redirect the page with form field
+							location.href = followUpUrl;
+
+							// Return false to prevent the submission handler continuing with its own processing
+							return false;
+						});
 					});
 				</script>
 				<style>
