@@ -62,14 +62,12 @@ TEMPLATE NAME: Contact Us
 	.fixed-hero-section .font-bump {
 		margin-bottom: 3rem;
 	}
-	label[for="subscriptionNewsletter"] {
-		padding-left: 1.25rem;
-		margin-top: 1rem;
+	.mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+		display: flex;
+		flex-direction: row;
 	}
-	label[for="subscriptionNewsletter"] + div {
-		display: block;
-		margin-top: -1.4rem;
-		margin-bottom: 1rem;
+	.mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap label{
+		order: 1;
 	}
 	@media screen and (max-width: 768px) {
 		.content-container .video-outer {

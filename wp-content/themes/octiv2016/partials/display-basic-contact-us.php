@@ -59,7 +59,14 @@
 					});
 				</script>
 				<style>
-					label[for="subscriptionNewsletter"] {
+					.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap {
+						display: flex;
+						flex-direction: row;
+					}
+					.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap label{
+						order: 1;
+					}
+					/*label[for="subscriptionNewsletter"] {
 						margin-top: 1.75rem;
 						padding-left: 1.25rem;
 					}
@@ -73,10 +80,10 @@
 						}
 						label[for="subscriptionNewsletter"] + div {
 							display: block;
-							margin-top: -2.5rem;
-							margin-bottom: 1rem;
+							margin-top: -3.5rem;
+							margin-bottom: 2.5rem;
 						}
-					}
+					}*/
 				</style>
 			</div>
 			<div class="pos-rel">

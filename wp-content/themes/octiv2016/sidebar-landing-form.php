@@ -92,12 +92,12 @@
 
 		</script>
 		<style>
-			label[for="subscriptionNewsletter"] {
-				padding-left: 1.25rem;
+			.mktoFormRow:nth-of-type(6) > div:last-child > .mktoFieldWrap {
+				display: flex;
+				flex-direction: row;
 			}
-			label[for="subscriptionNewsletter"] + div {
-				display: block;
-				margin-top: -1.4rem;
+			.mktoFormRow:nth-of-type(6) > div:last-child > .mktoFieldWrap label{
+				order: 1;
 			}
 		</style>
 		<?php
