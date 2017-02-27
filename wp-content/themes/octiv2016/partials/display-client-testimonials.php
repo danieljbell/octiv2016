@@ -26,7 +26,7 @@
 		echo '<div role="listitem" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/02/ge-slider-bg.jpg);">
 			<div class="site-width">
 				<div class="centered">
-					<img src="https://octiv.com/wp-content/uploads/2017/02/GE.png" alt="">
+					<img src="/wp-content/uploads/2017/02/GE.png" alt="">
 				</div>
 				<div>
 					<h4>Before Octiv, GE Global Operations had an inefficient contract creation workflow. With Octiv, they\'ve saved a year of man hours in just six months.</h4>
