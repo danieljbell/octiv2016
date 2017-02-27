@@ -714,18 +714,6 @@ setCookie();
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function setCookie() {
   var param = getParameterByName('ref');
   var now = new Date();
