@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  /*
+  ==============================
+  LAUNCH MODAL IF SUPPORT IS DOWN
+  ==============================
+  */
+  if ($('.post-type-archive-support')) {
+    $('.empty-modal .modal-content').html('<div class="half-only"><div class="centered"><h3>Status Alert</h3><p>Octiv is currently experiencing system issues. Our engineering team is actively engaged and expect the issue resolved shortly.</p></div></div>');
+    $('.empty-modal').modal();
+  }
+
+
   $('#documents .document-outputs a').on('click', function(e) {
     e.preventDefault();
   });
@@ -218,65 +229,6 @@ for (var i = 0; i < headerNavItems.length; i++) {
     this.parentElement.children[5].children[0].style.color = "#ffffff";
   });
 }
-
-
-
-
-/*
-==============================
-MEGA MENU NAVIGATION
-==============================
-*/
-// Clicking any button
-// $('.site-navigation-container nav button').on('click', function() {
-//   var $this = $(this);
-//
-//   if ($this.hasClass('active')) {
-//     $this.removeClass('active');
-//     $this.next().removeClass('active');
-//     if (window.innerWidth > 600) {
-//         document.body.classList.remove('menu-open');
-//     }
-//   } else {
-//     $this.parent().siblings().find('button').removeClass('active');
-//     $this.parent().siblings().find('.callout').removeClass('active');
-//     $this.next().addClass('active');
-//     $this.addClass('active');
-//     document.body.classList.add('menu-open');
-//   }
-// });
-//
-// // Clicking the menu toggle on smaller devices
-// $(document).on('click', '#menu-toggle', function() {
-//   document.body.classList.toggle('menu-open');
-//   if (!$('.site-navigation-container nav button').hasClass('active') && (window.innerWidth > 600)) {
-//     $('.site-navigation-container #nav-platform')
-//       .addClass('active')
-//       .next()
-//         .addClass('active');
-//   }
-// });
-//
-// $(document).on('keyup', function(e) {
-//   if (e.keyCode === 27) {
-//     closeNav();
-//   }
-// });
-//
-// function closeNav(elem) {
-//   var $this = $('.site-navigation-container nav button');
-//   if ($this.hasClass('active')) {
-//     $this.removeClass('active');
-//     $this.next().removeClass('active');
-//     if (window.innerWidth > 600) {
-//         document.body.classList.remove('menu-open');
-//     }
-//   }
-// }
-
-
-
-
 
 /*
 =====================================
