@@ -752,9 +752,9 @@ function register_alert_post_type() {
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
-    'edit_post'              => 'edit_alerts',
-    'read_post'              => 'read_alerts',
-    'delete_post'            => 'delete_alerts',
+    'edit_post'              => 'edit_alert',
+    'read_post'              => 'read_alert',
+    'delete_post'            => 'delete_alert',
 
     // primitive/meta caps
     'create_posts'           => 'create_alerts',
