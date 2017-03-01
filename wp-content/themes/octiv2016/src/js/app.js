@@ -1,16 +1,5 @@
 $(document).ready(function() {
 
-  /*
-  ==============================
-  LAUNCH MODAL IF SUPPORT IS DOWN
-  ==============================
-  */
-  if ($('.post-type-archive-support')) {
-    $('.empty-modal .modal-content').html('<div class="half-only"><div class="centered"><h3>Status Alert</h3><p>Octiv is currently experiencing system issues. Our engineering team is actively engaged and expect the issue resolved shortly.</p></div></div>');
-    $('.empty-modal').modal();
-  }
-
-
   $('#documents .document-outputs a').on('click', function(e) {
     e.preventDefault();
   });
