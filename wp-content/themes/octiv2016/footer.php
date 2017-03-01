@@ -243,8 +243,33 @@ $inline_script = get_field('script', $queried_object);
 			modalContent.modal();
 	    window.history.pushState( {} , 'bar', '/support' );
 		}
-
 	</script>
+
+	<?php
+		/*
+		==============================
+		MAJOR SYSTEM ALERT
+		==============================
+		*/
+		$args = array(
+			'post_type' => 'alerts'
+		);
+		$query = new WP_Query($args);
+		if ($query->have_posts()) :
+			while ($query->have_posts()) :
+				$query->the_post(); ?>
+
+				<script>
+					$('.empty-modal .modal-content').html('<?php echo "<div class=\"centered\"><div class=\"half-only\"><div style=\"margin-bottom: 0;\">" . "<h3>" . get_the_title() . "</h3>" . "<div>" . get_the_content() . "</div>" . "</div></div></div>"; ?>');
+					$('.empty-modal').modal();
+				</script>
+
+<?php endwhile;
+		endif;
+		wp_reset_query();
+	?>
+
+
 <?php endif; ?>
 
 <?php if ($post->post_parent === 144) : ?>

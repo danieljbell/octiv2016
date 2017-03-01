@@ -711,4 +711,76 @@ function register_use_case_post_type() {
   register_post_type( 'use-cases', $args );
 }
 
+
+/*
+==============================
+REGISTER ALERT POST TYPE
+==============================
+*/
+add_action( 'init', 'register_alert_post_type' );
+
+function register_alert_post_type() {
+
+  $labels = array(
+    'name'                => 'Alerts',
+    'singular_name'       => 'Alert',
+    'add_new'             => 'Add New Alert',
+    'add_new_item'        => 'Add New Alert',
+    'edit_item'           => 'Edit Alert',
+    'new_item'            => 'New Alert',
+    'all_items'           => 'All Alert',
+    'view_item'           => 'View Alert',
+    'search_items'        => 'Search Alert',
+    'not_found'           => 'No alerts found',
+    'not_found_in_trash'  => 'No alerts found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Alerts'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => false,
+    'has_archive' => false,
+    'show_ui' => true,
+    'show_in_nav_menus' => true,
+    'show_in_menu' => true,
+    'show_in_admin_bar' => true,
+    // 'hierarchical'  => true,
+    'menu_icon'   => 'dashicons-warning',
+    'supports'    => array( 'title', 'editor'),
+    'capability_type' => 'alerts',
+    'map_meta_cap' => true,
+    // 'show_in_rest'       => true,
+        // 'rest_base'          => 'support-api',
+        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_alerts',
+    'read_post'              => 'read_alerts',
+    'delete_post'            => 'delete_alerts',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_alerts',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_alerts',
+    'edit_others_posts'      => 'manage_alerts',
+    'publish_posts'          => 'manage_alerts',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_alerts',
+    'delete_private_posts'   => 'manage_alerts',
+    'delete_published_posts' => 'manage_alerts',
+    'delete_others_posts'    => 'manage_alerts',
+    'edit_private_posts'     => 'edit_alerts',
+    'edit_published_posts'   => 'edit_alerts'
+    ),
+  );
+
+  register_post_type( 'alerts', $args );
+}
+
 ?>
