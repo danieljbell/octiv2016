@@ -745,14 +745,10 @@ function register_alert_post_type() {
     'show_in_nav_menus' => true,
     'show_in_menu' => true,
     'show_in_admin_bar' => true,
-    // 'hierarchical'  => true,
     'menu_icon'   => 'dashicons-warning',
     'supports'    => array( 'title', 'editor'),
     'capability_type' => 'alerts',
     'map_meta_cap' => true,
-    // 'show_in_rest'       => true,
-        // 'rest_base'          => 'support-api',
-        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
