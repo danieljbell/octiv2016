@@ -612,27 +612,5 @@ if ($('.browser-window').length) {
   });
 }
 
-if ($('.list-is-collpased')) {
-  $('ul.list-is-collapsed').each(function(){
-    if( $(this).find('li').length > 4){
-      $('li', this).eq(3).nextAll().hide().addClass('toggleable');
-      $(this).append('<li class="list-toggle"><span>More</span></li>');
-      $('body').addClass('has-collapsed-lists').trigger('classChange');
-    }
-    $(this).on('click','.list-toggle', toggleShow);
-  });
-
-
-  function toggleShow(){
-    $('body').trigger('classUpdate');
-    var opened = $(this).hasClass('less');
-    $(this).html(opened ? '<span>More</span>' : '<span>Less</span>').toggleClass('less', !opened);
-    $(this).siblings('li.toggleable').slideToggle();
-  }
-}
-
-
-
-
 // end document.ready
 });
