@@ -32,9 +32,8 @@
         <h4>Octiv + <?php echo get_the_title(); ?></h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
-          <li><a href="#octiv-<?php echo strtolower(get_the_title()); ?>">Octiv + <?php echo get_the_title(); ?></a></li>
+          <li><a href="#octiv-<?php echo strtolower(get_the_title()); ?>">Why Octiv + <?php echo get_the_title(); ?></a></li>
           <li><a href="#key-capabilities">Key Capabilities</a></li>
-          <li><a href="#business-use-cases">Business Use Cases</a></li>
           <li><a href="#technical-requirements">Technical Requirements</a></li>
           <li><a href="#about-integration">About <?php echo get_the_title(); ?></a></li>
         </ul>
