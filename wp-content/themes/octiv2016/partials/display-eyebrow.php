@@ -5,7 +5,7 @@
             <div>
                 <img src="<?php echo get_template_directory_URI(); ?>/dist/img/phone.png" alt="Phone Number">
             </div>
-            <p><a href="tel:317-550-0148">317.550.0148</a></p>
+            <p><a href="tel:844-936-2848">844.936.2848</a></p>
         </div>
         <div class="centered">
             <p style="margin-bottom: 0px;"><a href="/resources/whitepapers/unified-document-workflows">Octiv Introduces Unified Document Workflows - <strong>Read More</strong></a></p>

@@ -12,7 +12,7 @@ TEMPLATE NAME: Contact Us
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<p class="font-bump">317.550.0148</p>
+			<p class="font-bump"><a href="tel:844-936-2848" style="color: #fff;">844.936.2848</a></p>
 		</div>
 	</div>
 </div>
