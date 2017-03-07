@@ -44,9 +44,24 @@
 }
 
 .parent-pageid-74 blockquote {
+	img {
+		max-width: 125px;
+		margin: 0 auto 1rem;
+	}
+	p:last-child {
+		line-height: 0.85;
+	}
+	span strong {
+		font-size: 1.25em;
+	}
   @include bp(md) {
     float: right;
     width: 40%;
     margin-left: 2rem;
+		img {
+			max-width: 85px;
+			float: left;
+			margin: 0 0.5rem 0 0;
+		}
   }
 }
