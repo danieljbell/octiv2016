@@ -181,6 +181,13 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
+					<img src="/wp-content/uploads/2016/06/tony-wells.jpg" alt="Tony Wells" />
+					<p><strong>Tony Wells</strong><br />Board Member<br><a href="
+https://www.linkedin.com/in/tonywells1/"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
 					<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
 					<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
