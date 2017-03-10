@@ -151,8 +151,8 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
-					<p><strong>David Kerr</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<img src="/wp-content/uploads/2016/07/Don-Aquilano.png" alt="Don Aquilano" />
+					<p><strong>Don Aquilano</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/don-aquilano/4/712/232"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
@@ -163,14 +163,14 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Don-Aquilano.png" alt="Don Aquilano" />
-					<p><strong>Don Aquilano</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/don-aquilano/4/712/232"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
+					<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
-					<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
+					<p><strong>David Kerr</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
