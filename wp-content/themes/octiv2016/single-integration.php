@@ -32,16 +32,16 @@
         <h4>Octiv + <?php echo get_the_title(); ?></h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
-          <li><a href="#about-integration">About <?php echo get_the_title(); ?></a></li>
+          <li><a href="#octiv-<?php echo strtolower(get_the_title()); ?>">Why Octiv + <?php echo get_the_title(); ?></a></li>
           <li><a href="#key-capabilities">Key Capabilities</a></li>
-          <li><a href="#business-use-cases">Business Use Cases</a></li>
           <li><a href="#technical-requirements">Technical Requirements</a></li>
+          <li><a href="#about-integration">About <?php echo get_the_title(); ?></a></li>
         </ul>
       </div>
       <div class="sticky-listing">
         <div>
           <section style="padding-top: 0;">
-            <h3 id="about-integration" style="padding-bottom: 0.5rem;">Why Octiv + <?php echo get_the_title(); ?></h3>
+            <h3 id="octiv-<?php echo strtolower(get_the_title()); ?>" style="padding-bottom: 0.5rem;">Why Octiv + <?php echo get_the_title(); ?></h3>
             <?php echo the_content(); ?>
           </section>
           <section style="padding-top: 0;">
@@ -60,20 +60,6 @@
             </ul>
           </section>
           <section style="padding-top: 0;">
-            <h3 id="business-use-cases" style="padding-bottom: 0.5rem;">Business Use Cases</h3>
-            <?php
-            if (have_rows('business_use_cases')) :
-              echo '<ul class="list-is-collapsed">';
-              while (have_rows('business_use_cases')) :
-                the_row();
-                echo '<li>' . get_sub_field('business_use_case') . '</li>';
-              endwhile;
-            else :
-              echo 'No business use cases have been identified at this time.';
-            endif;
-            ?>
-          </section>
-          <section style="padding: 0;">
             <h3 id="technical-requirements" style="padding-bottom: 0.5rem;">Technical Requirements</h3>
             <?php
             if (have_rows('technical_requirements')) :
@@ -86,6 +72,11 @@
               echo 'No technical requirements have been identified at this time.';
             endif;
             ?>
+          </section>
+          <section style="padding: 0;">
+            <h3 id="about-integration" style="padding-bottom: 0.5rem;">About <?php echo get_the_title(); ?></h3>
+            <p><?php echo get_field('integration_description'); ?></p>
+            <p>For more information about <?php echo get_the_title(); ?>, please visit their <a href="<?php echo get_field('integration_link'); ?>">website</a>.</p>
           </section>
         </div>
       </div>
@@ -205,41 +196,6 @@ label[for="subscriptionNewsletter"] + div {
   }
   #site-footer>.site-width:first-of-type {
     border-top: 0;
-  }
-  .list-toggle:before {
-    content: '';
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: -0.75rem;
-    position: relative;
-    /*z-index: -1;*/
-    margin-left: -1.25rem;
-    margin-top: -2.5rem;
-    padding-top: 1rem;
-    padding-left: 1.25rem;
-    height: 2rem;
-    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.9) 50%);
-  }
-  .list-toggle {
-    text-align: center;
-    list-style-type: none;
-    display: block;
-  }
-  .list-toggle span {
-    background-color: #fff;
-    padding: 0 1rem;
-    font-style: italic;
-    position: relative;
-    z-index: 1;
-  }
-  .list-toggle.less:before {
-    background-image: initial;
-  }
-  .list-toggle.less:before,
-  .list-toggle.less span {
-    transform: translateY(1rem);
-    margin-bottom: 0;
   }
 </style>
 
