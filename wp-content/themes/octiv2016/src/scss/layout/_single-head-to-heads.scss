@@ -5,24 +5,51 @@
     background-color: $mgray;
     margin-right: 1rem;
     padding: 0.25rem 0.5rem;
-    border-radius: 5px; 
+    border-radius: 5px;
     font-weight: bold;
     &:last-child {
       margin-right: 0;
     }
+    &:active, &:focus {
+      background-color: $brand !important;
+      color: $white !important;
+    }
   }
 }
-.head-to-head-slider .slick-slide {
-  margin: 0 3rem;
+.head-to-head-slider {
+  margin-bottom: 2rem;
 }
-.comparison-matrix * {
+.head-to-head-slider .slick-slide {
+  opacity: 0.5;
+  margin: 0 1rem;
+  transition: all 300ms ease-out;
+  transform: scale(0.9);
+}
+.head-to-head-slider .slick-slide.slick-active {
+  opacity: 1;
+  transform: scale(1);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.single-head-to-heads table * {
   text-align: left;
 }
-.comparison-matrix svg {
+.single-head-to-heads table svg {
   display: block;
   width: 100%;
   max-width: 100px;
   max-height: 22px;
+  fill: $white !important;
+}
+.single-head-to-heads table svg path,
+.single-head-to-heads table svg {
+  fill: $white !important;
 }
 .comparison-matrix-header {
   background-color: $brand2;

@@ -374,11 +374,20 @@ $('.head-to-head-slider').slick({
   centerMode: true,
   centerPadding: '15%',
   draggable: false,
+  adaptiveHeight : true,
   focusOnSelect: true,
   infinite: true,
   appendArrows : $('.head-to-head-slider-buttons'),
   prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
   nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        draggable: true
+      }
+    }
+  ]
 });
 
 /*

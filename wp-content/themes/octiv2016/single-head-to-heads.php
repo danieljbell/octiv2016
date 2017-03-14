@@ -25,75 +25,103 @@
       <h3>Headline</h3>
       <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
       <table>
-        <tr>
-          <th style="width: 50%;">Features</th>
-          <th>Octiv</th>
-          <th>Spring CM</th>
-        </tr>
-        <tr>
-          <td>Something</td>
-          <td>Octiv</td>
-          <td>Spring CM</td>
-        </tr>
-        <tr>
-          <td>Something</td>
-          <td>Octiv</td>
-          <td>Spring CM</td>
-        </tr>
-        <tr>
-          <td>Something</td>
-          <td>Octiv</td>
-          <td>Spring CM</td>
-        </tr>
+        <thead>
+          <tr>
+            <th style="width: 50%;">Feature</th>
+            <th>
+              <svg>
+                <use xlink:href="#icon-octiv-logo">
+              </svg>
+            </th>
+            <th>Spring CM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <div class="centered">
       <h3>Headline</h3>
       <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
-      <div class="comparison-matrix">
-        <div class="comparison-matrix-header half">
-          <div>
-            <h4>Features</h4>
-          </div>
-          <div class="half">
-            <div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 50%;">Feature</th>
+            <th>
               <svg>
                 <use xlink:href="#icon-octiv-logo">
               </svg>
-            </div>
-            <div>
-              Spring CM
-            </div>
-          </div>
-        </div>
-        <div class="comparison-matrix-content">
-
-        </div>
-      </div>
+            </th>
+            <th>Spring CM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="centered">
       <h3>Headline</h3>
       <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
-      <div class="comparison-matrix">
-        <div class="comparison-matrix-header half">
-          <div>
-            <h4>Features</h4>
-          </div>
-          <div class="half">
-            <div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 50%;">Feature</th>
+            <th>
               <svg>
                 <use xlink:href="#icon-octiv-logo">
               </svg>
-            </div>
-            <div>
-              Spring CM
-            </div>
-          </div>
-        </div>
-        <div class="comparison-matrix-content">
-
-        </div>
-      </div>
+            </th>
+            <th>Spring CM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+          <tr>
+            <td>Something</td>
+            <td>Octiv</td>
+            <td>Spring CM</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <div class="site-width">
@@ -106,7 +134,7 @@
   </div>
 </section>
 
-<section>
+<section style="padding-top: 0;">
   <div class="site-width">
     <hr>
   </div>
