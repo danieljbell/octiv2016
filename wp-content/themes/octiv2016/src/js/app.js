@@ -367,6 +367,12 @@ $('.centered-slider').slick({
   ]
 });
 
+$('.head-to-head-slider').slick({
+  slidesToShow: 3,
+  // centerMode: true,
+  infinite: true
+});
+
 /*
 ==============================
 FOCUS CARDS ANIMATION
@@ -563,7 +569,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('single-solutions')) {
+    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('single-solutions') || $('body').hasClass('single-head-to-heads')) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');

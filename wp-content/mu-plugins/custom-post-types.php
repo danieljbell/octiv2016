@@ -714,69 +714,70 @@ function register_use_case_post_type() {
 
 /*
 ==============================
-REGISTER ALERT POST TYPE
+REGISTER HEAD-TO-HEAD POST TYPE
 ==============================
 */
-add_action( 'init', 'register_alert_post_type' );
+add_action( 'init', 'register_head_to_head_post_type' );
 
-function register_alert_post_type() {
+function register_head_to_head_post_type() {
 
   $labels = array(
-    'name'                => 'Alerts',
-    'singular_name'       => 'Alert',
-    'add_new'             => 'Add New Alert',
-    'add_new_item'        => 'Add New Alert',
-    'edit_item'           => 'Edit Alert',
-    'new_item'            => 'New Alert',
-    'all_items'           => 'All Alert',
-    'view_item'           => 'View Alert',
-    'search_items'        => 'Search Alert',
-    'not_found'           => 'No alerts found',
-    'not_found_in_trash'  => 'No alerts found in Trash',
+    'name'                => 'Head-To-Heads',
+    'singular_name'       => 'Head-To-Head',
+    'add_new'             => 'Add New Head-To-Head',
+    'add_new_item'        => 'Add New Head-To-Head',
+    'edit_item'           => 'Edit Head-To-Head',
+    'new_item'            => 'New Head-To-Head',
+    'all_items'           => 'All Head-To-Head',
+    'view_item'           => 'View Head-To-Head',
+    'search_items'        => 'Search Head-To-Head',
+    'not_found'           => 'No head-to-heads found',
+    'not_found_in_trash'  => 'No head-to-heads found in Trash',
     'parent_item_colon'   => '',
-    'menu_name'           => 'Alerts'
+    'menu_name'           => 'Head-To-Heads'
   );
 
   $args = array(
     'labels'      => $labels,
-    'public'      => false,
+    'public'      => true,
     'has_archive' => false,
     'show_ui' => true,
     'show_in_nav_menus' => true,
     'show_in_menu' => true,
     'show_in_admin_bar' => true,
-    'menu_icon'   => 'dashicons-warning',
-    'supports'    => array( 'title', 'editor'),
-    'capability_type' => 'alerts',
+    'rewrite'            => array( 'slug' => 'why-octiv' ),
+    'menu_icon'   => 'dashicons-shield',
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'capability_type' => 'head-to-head',
     'map_meta_cap' => true,
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
-    'edit_post'              => 'edit_alert',
-    'read_post'              => 'read_alert',
-    'delete_post'            => 'delete_alert',
+    'edit_post'              => 'edit_head-to-head',
+    'read_post'              => 'read_head-to-head',
+    'delete_post'            => 'delete_head-to-head',
 
     // primitive/meta caps
-    'create_posts'           => 'create_alerts',
+    'create_posts'           => 'create_head-to-heads',
 
     // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_alerts',
-    'edit_others_posts'      => 'manage_alerts',
-    'publish_posts'          => 'manage_alerts',
+    'edit_posts'             => 'edit_head-to-heads',
+    'edit_others_posts'      => 'manage_head-to-heads',
+    'publish_posts'          => 'manage_head-to-heads',
     'read_private_posts'     => 'read',
 
     // primitive caps used inside of map_meta_cap()
     'read'                   => 'read',
-    'delete_posts'           => 'manage_alerts',
-    'delete_private_posts'   => 'manage_alerts',
-    'delete_published_posts' => 'manage_alerts',
-    'delete_others_posts'    => 'manage_alerts',
-    'edit_private_posts'     => 'edit_alerts',
-    'edit_published_posts'   => 'edit_alerts'
+    'delete_posts'           => 'manage_head-to-heads',
+    'delete_private_posts'   => 'manage_head-to-heads',
+    'delete_published_posts' => 'manage_head-to-heads',
+    'delete_others_posts'    => 'manage_head-to-heads',
+    'edit_private_posts'     => 'edit_head-to-heads',
+    'edit_published_posts'   => 'edit_head-to-heads'
     ),
   );
 
-  register_post_type( 'alerts', $args );
+  register_post_type( 'head-to-heads', $args );
 }
 
 ?>
