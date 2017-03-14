@@ -40,6 +40,50 @@ TEMPLATE NAME: Contact Us
 						}
 						var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
 						newsletterBox.querySelector('.mktoAsterix').remove();
+
+						// Blacklisted Email Domains
+						var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
+
+						//Add an onValidate handler
+				    form.onValidate(function(values, followUpUrl) {
+
+							// Verify Email is Business Domain
+							var email = form.vals().Email;
+				      if(email){
+				        if(!isEmailGood(email)) {
+				          form.submitable(false);
+				          var emailElem = form.getFormElem().find("#Email");
+				          form.showErrorMessage("Must be Business email.", emailElem);
+				        } else{
+									form.submitable(true);
+				        }
+				      }
+
+						function isEmailGood(email) {
+					    for(var i=0; i < invalidDomains.length; i++) {
+					      var domain = invalidDomains[i];
+					      if (email.indexOf(domain) != -1) {
+					        return false;
+					      }
+					    }
+					    return true;
+					  }
+
+				    });
+
+						form.onSuccess(function(values, followUpUrl) {
+							// Get the form field values
+							var vals = form.vals();
+
+							// Update the redirect url with form fields
+							followUpUrl = window.location.origin + '/thank-you/?first_name=' + vals.FirstName;
+
+							// Redirect the page with form field
+							location.href = followUpUrl;
+
+							// Return false to prevent the submission handler continuing with its own processing
+							return false;
+						});
 					});
 				</script>
 			</div>

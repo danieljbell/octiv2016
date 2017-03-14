@@ -573,7 +573,13 @@ if (window.MktoForms2) {
 
     // Send page URL to Marketo
     $('input[name="sourceURL"]').attr('value', pageURL);
-    $('input[name="LeadSource"]').attr('value', 'Web');
+    var cook = getCookie('ref');
+
+    if (cook) {
+      $('input[name="LeadSource"]').attr('value', cook);
+    } else {
+      $('input[name="LeadSource"]').attr('value', 'Web');
+    }
 
     function removeStyles(formObj) {
       $('#mktoForms2BaseStyle').remove();
@@ -587,6 +593,7 @@ if (window.MktoForms2) {
       formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
       formObj.find('.mktoInset').attr('style', '');
     }
+
   });
 }
 
@@ -610,6 +617,58 @@ if ($('.browser-window').length) {
     });
     $('.empty-modal').modal();
   });
+}
+
+/*
+==============================
+MARKETO COOKIES
+==============================
+*/
+setCookie();
+
+function setCookie() {
+  if (getParameterByName('ref')) {
+    var param = getParameterByName('ref');
+    var now = new Date();
+    now.setTime(now.getTime()+(30*24*60*60*1000));
+    var expires = "; expires=" + now.toGMTString() + ";";
+
+    if (param) {
+      document.cookie = "ref=" + param + expires + "path=/";
+    }
+  }
+}
+
+
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+  }
+  else
+  {
+      begin += 2;
+      var end = document.cookie.indexOf(";", begin);
+      if (end == -1) {
+      end = dc.length;
+      }
+  }
+  // because unescape has been deprecated, replaced with decodeURI
+  //return unescape(dc.substring(begin + prefix.length, end));
+  return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 // end document.ready
