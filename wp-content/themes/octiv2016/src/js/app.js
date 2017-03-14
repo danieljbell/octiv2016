@@ -286,6 +286,7 @@ $('.slider-for').slick({
   pauseOnHover : true,
   pauseOnFocus : true,
   pauseOnDotsHover : true,
+  draggable: false,
   prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
   nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
   // arrows: false,
@@ -297,6 +298,7 @@ $('.slider-nav').slick({
   slidesToScroll: 1,
   // autoplay : true,
   // autoplaySpeed : 1000,
+  draggable: false,
   pauseOnHover : true,
   pauseOnFocus : true,
   pauseOnDotsHover : true,
@@ -368,9 +370,15 @@ $('.centered-slider').slick({
 });
 
 $('.head-to-head-slider').slick({
-  slidesToShow: 3,
-  // centerMode: true,
-  infinite: true
+  slidesToShow: 1,
+  centerMode: true,
+  centerPadding: '15%',
+  draggable: false,
+  focusOnSelect: true,
+  infinite: true,
+  appendArrows : $('.head-to-head-slider-buttons'),
+  prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
+  nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
 });
 
 /*

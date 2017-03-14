@@ -1,0 +1,70 @@
+.head-to-head-slider-buttons {
+  text-align: center;
+  padding: 1rem 0;
+  button {
+    background-color: $mgray;
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px; 
+    font-weight: bold;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.head-to-head-slider .slick-slide {
+  margin: 0 3rem;
+}
+.comparison-matrix * {
+  text-align: left;
+}
+.comparison-matrix svg {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  max-height: 22px;
+}
+.comparison-matrix-header {
+  background-color: $brand2;
+  color: $white;
+  border-radius: 5px 5px 0 0;
+}
+.comparison-matrix-header h4 {
+  padding: 1rem;
+}
+.comparison-matrix-header .half > div:first-child {
+  border-left: 1px solid $white;
+  border-right: 1px solid $white;
+  margin-right: 0;
+  width: 50%;
+}
+.comparison-matrix-header .half > div:last-child {
+  text-align: center;
+  width: 50%;
+}
+.comparison-matrix-header.half > div,
+.comparison-matrix-header .half > div {
+  margin-bottom: 0;
+}
+.comparison-matrix-content {
+  border-left: 1px solid $mgray;
+  border-right: 1px solid $mgray;
+  border-bottom: 1px solid $mgray;
+  border-radius: 0 0 5px 5px;
+}
+.comparison-matrix-content.half > div {
+  padding: 0.5rem 1rem;
+}
+.comparison-matrix-content .half > div:first-child {
+  border-left: 1px solid $mgray;
+  border-right: 1px solid $mgray;
+  margin-right: 0;
+  text-align: center;
+  width: 50%;
+  // padding: 0.5rem 1rem;
+}
+.comparison-matrix-content .half > div:last-child {
+  text-align: center;
+  width: 50%;
+  // padding: 0.5rem 1rem;
+}

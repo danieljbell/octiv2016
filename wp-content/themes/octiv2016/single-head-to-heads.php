@@ -19,13 +19,82 @@
       <p>Octiv is so much better than Spring CM, just trust us ;)</p>
     </div>
   </div>
+  <div class="head-to-head-slider-buttons"></div>
   <div class="head-to-head-slider">
-    <div class="centered" style="border: 1px solid red; margin: 0 1rem;">
+    <div class="centered">
       <h3>Headline</h3>
       <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
+      <table>
+        <tr>
+          <th style="width: 50%;">Features</th>
+          <th>Octiv</th>
+          <th>Spring CM</th>
+        </tr>
+        <tr>
+          <td>Something</td>
+          <td>Octiv</td>
+          <td>Spring CM</td>
+        </tr>
+        <tr>
+          <td>Something</td>
+          <td>Octiv</td>
+          <td>Spring CM</td>
+        </tr>
+        <tr>
+          <td>Something</td>
+          <td>Octiv</td>
+          <td>Spring CM</td>
+        </tr>
+      </table>
     </div>
-    <div class="centered" style="border: 1px solid red; margin: 0 1rem;">slide 2</div>
-    <div class="centered" style="border: 1px solid red; margin: 0 1rem;">slide 3</div>
+    <div class="centered">
+      <h3>Headline</h3>
+      <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
+      <div class="comparison-matrix">
+        <div class="comparison-matrix-header half">
+          <div>
+            <h4>Features</h4>
+          </div>
+          <div class="half">
+            <div>
+              <svg>
+                <use xlink:href="#icon-octiv-logo">
+              </svg>
+            </div>
+            <div>
+              Spring CM
+            </div>
+          </div>
+        </div>
+        <div class="comparison-matrix-content">
+
+        </div>
+      </div>
+    </div>
+    <div class="centered">
+      <h3>Headline</h3>
+      <p>This is what Document Generation means. Here is how we are defining the term and what it means to you and your business. Some of the things you can accomplish with Document Generation are this, that and the other thing.</p>
+      <div class="comparison-matrix">
+        <div class="comparison-matrix-header half">
+          <div>
+            <h4>Features</h4>
+          </div>
+          <div class="half">
+            <div>
+              <svg>
+                <use xlink:href="#icon-octiv-logo">
+              </svg>
+            </div>
+            <div>
+              Spring CM
+            </div>
+          </div>
+        </div>
+        <div class="comparison-matrix-content">
+
+        </div>
+      </div>
+    </div>
   </div>
   <div class="site-width">
     <div class="centered">
