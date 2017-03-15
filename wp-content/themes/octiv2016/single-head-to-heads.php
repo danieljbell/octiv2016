@@ -3,11 +3,11 @@
 <?php $head_to_head_name = get_field('competitor_name'); ?>
 
 <section class="fixed-hero-section">
-  <div class="site-width white-text">
+  <div class="site-width">
     <div class="centered half-only">
       <div style="margin-bottom: 0;">
-        <h1><?php echo get_the_title(); ?></h1>
-        <p class="font-bump">I bet you are having a problem with doing this thing. Here’s how we’re better.</p>
+        <h1 class="white-text"><?php echo get_the_title(); ?></h1>
+        <p class="font-bump white-text">I bet you are having a problem with doing this thing. Here’s how we’re better.</p>
         <a href="#cta" class="btn-primary">HELP! Please save me from this slow hell.</a>
       </div>
     </div>
@@ -81,7 +81,7 @@
                 while ($query->have_posts()) :
                   $query->the_post();
                   echo '<tr>';
-                    echo '<td class="feature-container">' . get_the_title() . '<span><h4>' . get_the_title() . '</h4>' . get_the_excerpt() . '<a class="btn-arrow" href="' . get_the_permalink() . '">Learn More</a></span></td>';
+                    echo '<td class="feature-container" data-title="' . get_the_title() . '" data-description="' . get_the_excerpt() . '" data-link="' . get_the_permalink() . '">' . get_the_title() . '</td>';
                     echo '<td><svg style="fill: #ed4c06 !important;"><use xlink:href="#icon-checkmark"></svg></td>';
                     echo '<td>';
                       if (get_field('competitor_feature')) {

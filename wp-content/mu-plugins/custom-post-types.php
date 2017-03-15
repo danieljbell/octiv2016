@@ -487,9 +487,9 @@ function register_features_post_type() {
     'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
-    // 'show_in_rest'       => true,
-		// 'rest_base'          => 'support-api',
-		// 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'show_in_rest'       => true,
+		'rest_base'          => 'features',
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)

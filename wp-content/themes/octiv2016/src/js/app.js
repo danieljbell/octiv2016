@@ -718,8 +718,23 @@ function getParameterByName(name, url) {
 
 
 if ($('.single-head-to-heads')) {
-  $('.feature-container').on('mouseenter', function() {
-    $(this).toggleClass('is-hovered');
+  $('.head-to-head-slider').on('click', '.slick-active .feature-container', function() {
+    $this = $(this);
+    var featureTitle = $this.attr('data-title');
+    var featureDescription = $this.attr('data-description');
+    var featureLink = $this.attr('data-link');
+    var pageContent = $.ajax({
+      url: featureLink,
+      dataType: 'html'
+    }).done(function(data) {
+      console.log(data);
+    });
+    $('.empty-modal .modal-content').html(
+      '<h3>' + featureTitle + '</h3>' +
+      featureDescription +
+      '<a href="' + featureLink + '" class="btn-arrow">Learn More<a>'
+    );
+    $('.empty-modal').modal();
   });
 }
 
