@@ -20,25 +20,42 @@
   margin-bottom: 2rem;
 }
 .head-to-head-slider .slick-slide {
-  opacity: 0.5;
-  margin: 0 1rem;
+  opacity: 0.35;
+  margin: 0 0.5rem;
   transition: all 300ms ease-out;
   transform: scale(0.9);
+  @include bp(md) {
+    margin: 0 1rem;
+  }
 }
 .head-to-head-slider .slick-slide.slick-active {
   opacity: 1;
   transform: scale(1);
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
 }
-.single-head-to-heads table * {
+.single-head-to-heads table {
+  border-collapse: initial;
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+}
+.single-head-to-heads tr td {
+  border-top: 0;
+  border-bottom: 0;
+}
+.single-head-to-heads thead tr th:first-child,
+.single-head-to-heads tr td:first-child {
   text-align: left;
+}
+.single-head-to-heads tr td:nth-child(2) {
+  border-left: 0;
+  border-right: 0;
+}
+.single-head-to-heads tr:last-child td {
+  border-bottom: 1px solid $mgray;
+}
+.single-head-to-heads tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+.single-head-to-heads tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
 }
 .single-head-to-heads table svg {
   display: block;
@@ -51,47 +68,39 @@
 .single-head-to-heads table svg {
   fill: $white !important;
 }
-.comparison-matrix-header {
-  background-color: $brand2;
-  color: $white;
-  border-radius: 5px 5px 0 0;
+.single-head-to-heads table,
+.single-head-to-heads table th,
+.single-head-to-heads table thead tr {
+  border: 0;
 }
-.comparison-matrix-header h4 {
-  padding: 1rem;
-}
-.comparison-matrix-header .half > div:first-child {
-  border-left: 1px solid $white;
+.single-head-to-heads thead th:first-child {
+  border-radius: 5px 0 0 0;
   border-right: 1px solid $white;
-  margin-right: 0;
-  width: 50%;
 }
-.comparison-matrix-header .half > div:last-child {
-  text-align: center;
-  width: 50%;
+.single-head-to-heads thead th:last-child {
+  border-radius: 0 5px 0 0;
+  border-left: 1px solid $white;
 }
-.comparison-matrix-header.half > div,
-.comparison-matrix-header .half > div {
-  margin-bottom: 0;
+.single-head-to-heads .feature-container span {
+  width: map-get($breakpoints, sm);
+  opacity: 0;
+  position: absolute;
+  transform: translateY(1rem) translateX(1rem);
+  background-image: linear-gradient($white, $lgray);
+  border: 1px solid $mgray;
+  padding: 1rem;
+  font-size: 0.9em;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.25);
+  // color: #fff;
+  // text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+  transition: all 200ms ease-out;
 }
-.comparison-matrix-content {
-  border-left: 1px solid $mgray;
-  border-right: 1px solid $mgray;
-  border-bottom: 1px solid $mgray;
-  border-radius: 0 0 5px 5px;
+.single-head-to-heads .feature-container.is-hovered span {
+  @include bp(md) {
+    opacity: 1;
+  }
 }
-.comparison-matrix-content.half > div {
-  padding: 0.5rem 1rem;
-}
-.comparison-matrix-content .half > div:first-child {
-  border-left: 1px solid $mgray;
-  border-right: 1px solid $mgray;
-  margin-right: 0;
-  text-align: center;
-  width: 50%;
-  // padding: 0.5rem 1rem;
-}
-.comparison-matrix-content .half > div:last-child {
-  text-align: center;
-  width: 50%;
-  // padding: 0.5rem 1rem;
+.single-head-to-heads tr:last-child .feature-container span {
+  transform: translateY(-3rem) translateX(1rem);
 }

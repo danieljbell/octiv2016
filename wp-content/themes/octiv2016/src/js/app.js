@@ -371,10 +371,11 @@ $('.centered-slider').slick({
 
 $('.head-to-head-slider').slick({
   slidesToShow: 1,
+  initialSlide: 2,
   centerMode: true,
-  centerPadding: '15%',
+  centerPadding: '25%',
   draggable: false,
-  adaptiveHeight : true,
+  // adaptiveHeight : true,
   focusOnSelect: true,
   infinite: true,
   appendArrows : $('.head-to-head-slider-buttons'),
@@ -384,7 +385,8 @@ $('.head-to-head-slider').slick({
     {
       breakpoint: 768,
       settings: {
-        draggable: true
+        draggable: true,
+        centerPadding: '12%',
       }
     }
   ]
@@ -715,7 +717,11 @@ function getParameterByName(name, url) {
 }
 
 
-
+if ($('.single-head-to-heads')) {
+  $('.feature-container').on('mouseenter', function() {
+    $(this).toggleClass('is-hovered');
+  });
+}
 
 
 // end document.ready
