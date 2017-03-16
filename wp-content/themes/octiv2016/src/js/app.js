@@ -718,23 +718,32 @@ function getParameterByName(name, url) {
 
 
 if ($('.single-head-to-heads')) {
-  $('.head-to-head-slider').on('click', '.slick-active .feature-container', function() {
+  // $('.head-to-head-slider').on('click', '.slick-active .feature-container', function() {
+  //   $this = $(this);
+  //   var featureTitle = $this.attr('data-title');
+  //   var featureDescription = $this.attr('data-description');
+  //   var featureLink = $this.attr('data-link');
+  //   var pageContent = $.ajax({
+  //     url: featureLink,
+  //     dataType: 'html'
+  //   }).done(function(data) {
+  //     console.log(data);
+  //   });
+  //   $('.empty-modal .modal-content').html(
+  //     '<h3>' + featureTitle + '</h3>' +
+  //     featureDescription +
+  //     '<a href="' + featureLink + '" class="btn-arrow">Learn More<a>'
+  //   );
+  //   // $('.empty-modal').modal();
+  // });
+  $('.head-to-head-slider').on('mouseenter', '.slick-active .feature-container', function() {
     $this = $(this);
-    var featureTitle = $this.attr('data-title');
-    var featureDescription = $this.attr('data-description');
-    var featureLink = $this.attr('data-link');
-    var pageContent = $.ajax({
-      url: featureLink,
-      dataType: 'html'
-    }).done(function(data) {
-      console.log(data);
-    });
-    $('.empty-modal .modal-content').html(
-      '<h3>' + featureTitle + '</h3>' +
-      featureDescription +
-      '<a href="' + featureLink + '" class="btn-arrow">Learn More<a>'
-    );
-    $('.empty-modal').modal();
+    var html;
+    html = '<h2>' + $this.attr('data-title') + '</h2>';
+    $this.append(html);
+  }).on('mouseleave', '.slick-active .feature-container', function() {
+    $this = $(this).children('h2');
+    $this.remove();
   });
 }
 
