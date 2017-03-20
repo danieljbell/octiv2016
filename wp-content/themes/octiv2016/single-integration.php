@@ -112,7 +112,7 @@
                 echo '</div>';
                 echo '<span class="card-tag-whitepapers">' . $thing[0]->name . '</span>';
                 echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
-                echo '<p>' . get_field('integration_description', $post->ID, false) . '</p>';
+                echo '<p>' . the_excerpt() . '</p>';
                 echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="btn-arrow">Learn More</a>';
               echo '</div>';
             echo '</div>';
