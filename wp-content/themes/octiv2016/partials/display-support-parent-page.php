@@ -3,10 +3,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'Cloud Storage');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-CloudStorage.jpg" alt="">
 				</div>
 				<div>
 					<h3>Cloud Storage</h3>
@@ -25,10 +22,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'CPQ');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/08/cpq.png" alt="">
 				</div>
 				<div>
 					<h3>CPQ</h3>
@@ -49,10 +43,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'CRM');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-CRM.jpg" alt="">
 				</div>
 				<div>
 					<h3>CRM</h3>
@@ -92,10 +83,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'DTM (eSig)');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-eSign.jpg" alt="">
 				</div>
 				<div>
 					<h3>DTM (eSig)</h3>
@@ -123,10 +111,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'Forms');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-Forms.jpg" alt="">
 				</div>
 				<div>
 					<h3>Forms</h3>
@@ -143,10 +128,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'Online Meeting');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-OnlineMeeting.jpg" alt="">
 				</div>
 				<div>
 					<h3>Online Meeting</h3>
@@ -165,10 +147,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'Social Network');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-SocialNetworking.jpg" alt="">
 				</div>
 				<div>
 					<h3>Social Network</h3>
@@ -187,10 +166,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(288,'SSO');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/Support-Integrations-SSO.jpg" alt="">
 				</div>
 				<div>
 					<h3>SSO</h3>
@@ -215,10 +191,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Analytics');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Analytics.jpg" alt="">
 					</div>
 					<div>
 						<h3>Analytics</h3>
@@ -255,10 +228,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Assets');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Assets-1.jpg" alt="">
 					</div>
 					<div>
 						<h3>Assets</h3>
@@ -301,10 +271,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Dashboard');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Dashboard-1.jpg" alt="">
 					</div>
 					<div>
 						<h3>Dashboard</h3>
@@ -321,10 +288,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Documents');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/06/documents-1.png" alt="">
 					</div>
 					<div>
 						<h3>Documents</h3>
@@ -392,10 +356,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Platform Administration');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/08/administraion-1.png" alt="">
 					</div>
 					<div>
 						<h3>Platform Administration</h3>
@@ -439,10 +400,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<?php
-							$queryArgs = queryArgs(280,'Search Functionality');
-							getThumbnail($queryArgs);
-						?>
+						<img src="/wp-content/uploads/2016/09/search-functionality-1.jpg" alt="">
 					</div>
 					<div>
 						<h3>Search Functionality</h3>
@@ -469,10 +427,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(266,'Online Training');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/online-traning-1.png" alt="">
 				</div>
 				<div>
 					<h3>Online Training</h3>
@@ -551,10 +506,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<?php
-						$queryArgs = queryArgs(266,'Video Tutorials');
-						getThumbnail($queryArgs);
-					?>
+					<img src="/wp-content/uploads/2016/06/video-tutorials-1.png" alt="">
 				</div>
 				<div>
 					<h3>Video Tutorials</h3>
