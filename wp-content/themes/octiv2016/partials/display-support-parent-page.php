@@ -228,7 +228,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Assets-1.jpg" alt="">
+						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Assets.jpg" alt="">
 					</div>
 					<div>
 						<h3>Assets</h3>
@@ -271,7 +271,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Dashboard-1.jpg" alt="">
+						<img src="/wp-content/uploads/2016/06/Support-AdminDoc-Dashboard.jpg" alt="">
 					</div>
 					<div>
 						<h3>Dashboard</h3>
@@ -288,7 +288,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<img src="/wp-content/uploads/2016/06/documents-1.png" alt="">
+						<img src="/wp-content/uploads/2016/06/documents.png" alt="">
 					</div>
 					<div>
 						<h3>Documents</h3>
@@ -356,7 +356,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<img src="/wp-content/uploads/2016/08/administraion-1.png" alt="">
+						<img src="/wp-content/uploads/2016/08/administraion.png" alt="">
 					</div>
 					<div>
 						<h3>Platform Administration</h3>
@@ -400,7 +400,7 @@
 			<section>
 				<div class="two-third-reversed">
 					<div>
-						<img src="/wp-content/uploads/2016/09/search-functionality-1.jpg" alt="">
+						<img src="/wp-content/uploads/2016/09/search-functionality.jpg" alt="">
 					</div>
 					<div>
 						<h3>Search Functionality</h3>
@@ -427,7 +427,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<img src="/wp-content/uploads/2016/06/online-traning-1.png" alt="">
+					<img src="/wp-content/uploads/2016/06/online-traning.png" alt="">
 				</div>
 				<div>
 					<h3>Online Training</h3>
@@ -506,7 +506,7 @@
 		<div class="site-width">
 			<div class="two-third-reversed">
 				<div>
-					<img src="/wp-content/uploads/2016/06/video-tutorials-1.png" alt="">
+					<img src="/wp-content/uploads/2016/06/video-tutorials.png" alt="">
 				</div>
 				<div>
 					<h3>Video Tutorials</h3>
