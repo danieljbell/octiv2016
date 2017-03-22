@@ -383,7 +383,7 @@ $('.head-to-head-slider').slick({
   nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1281,
       settings: {
         draggable: true,
         centerPadding: '12%',
@@ -739,10 +739,11 @@ if ($('.single-head-to-heads')) {
   $('.head-to-head-slider').on('mouseenter', '.slick-active .feature-container', function() {
     $this = $(this);
     var html;
-    html = '<h2>' + $this.attr('data-title') + '</h2>';
+    html = '<p>' + $this.attr('data-description') + '</p>';
+    html += '<p><a class="btn-arrow" href="' + $this.attr('data-link') + '">Learn More</a></p>';
     $this.append(html);
   }).on('mouseleave', '.slick-active .feature-container', function() {
-    $this = $(this).children('h2');
+    $this = $(this).children();
     $this.remove();
   });
 }
