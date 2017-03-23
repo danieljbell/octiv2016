@@ -6,9 +6,7 @@
       <div class="third" style="align-items: center;">
         <div>
           <div class="box">
-            <svg style="max-height: 50px;">
-              <use xlink:href="#icon-octiv-logo">
-            </svg>
+            <img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv">
           </div>
         </div>
         <div>
