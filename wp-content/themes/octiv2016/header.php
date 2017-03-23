@@ -194,7 +194,7 @@ if(is_404() && $_GET['ref']=="tb"){
     							echo '<ul class="sub-menu">';
     							while ($solutions_query->have_posts()) :
     								$solutions_query->the_post();
-    								echo '<li class="sub-menu-item"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+    								echo '<li class="sub-menu-item"><a href="' . get_the_permalink() . '" title="Solutions ' . get_the_title() . '">' . get_the_title() . '</a></li>';
     							endwhile;
     							echo '</ul>';
     						endif;
@@ -348,10 +348,10 @@ if(is_404() && $_GET['ref']=="tb"){
           <li class="menu-item">
             <a href="/resources" title="Resources">Resources</a>
             <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/resources/blog">Blog</a></li>
-              <li class="sub-menu-item"><a href="/resources/client-stories">Client Stories</a></li>
-              <li class="sub-menu-item"><a href="/resources/webinars">Webinars</a></li>
-              <li class="sub-menu-item"><a href="/resources/whitepapers">Whitepapers</a></li>
+              <li class="sub-menu-item"><a href="/resources/blog" title="Blog">Blog</a></li>
+              <li class="sub-menu-item"><a href="/resources/client-stories" title="Client Stories">Client Stories</a></li>
+              <li class="sub-menu-item"><a href="/resources/webinars" title="Webinars">Webinars</a></li>
+              <li class="sub-menu-item"><a href="/resources/whitepapers" title="Whitepapers">Whitepapers</a></li>
             </ul>
             <?php
               // echo '
@@ -467,11 +467,11 @@ if(is_404() && $_GET['ref']=="tb"){
           <li class="menu-item">
             <a href="/company" class="active" title="Company">Company</a>
             <ul class="sub-menu">
-              <li class="sub-menu-item"><a href="/company/#leadership">Leadership</a></li>
-              <li class="sub-menu-item"><a href="/company/#board-of-directors">Board of Directors</a></li>
-              <li class="sub-menu-item"><a href="/company/careers">Careers</a></li>
-              <li class="sub-menu-item"><a href="/press-releases">Press</a></li>
-              <li class="sub-menu-item"><a href="/brand-assets">Brand Assets</a></li>
+              <li class="sub-menu-item"><a href="/company/#leadership" title="Leadership">Leadership</a></li>
+              <li class="sub-menu-item"><a href="/company/#board-of-directors" title="Board of Directors">Board of Directors</a></li>
+              <li class="sub-menu-item"><a href="/company/careers" title="Careers">Careers</a></li>
+              <li class="sub-menu-item"><a href="/press-releases" title="Press">Press</a></li>
+              <li class="sub-menu-item"><a href="/brand-assets" title="Brand Assets">Brand Assets</a></li>
             </ul>
             <?php
               // echo '

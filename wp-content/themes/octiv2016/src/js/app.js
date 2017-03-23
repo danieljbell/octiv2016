@@ -174,7 +174,7 @@ $('#global-search-form').submit(function(e) {
 RIGHT CLICK ON THE LOGO
 ==============================
 */
-$('#site-logo').on('contextmenu', function(e) {
+$('.site-logo').on('contextmenu', function(e) {
   $('.need-logo').modal();
   e.preventDefault();
 });
