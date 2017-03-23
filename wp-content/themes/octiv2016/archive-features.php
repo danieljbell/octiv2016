@@ -10,9 +10,18 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<style>
+.hero-svg-container {
+	width: 100%;
+	max-width: 175px;
+	fill: #fff;
+	margin-bottom: 1rem;
+}
+</style>
+
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
-    <div style="fill: #fff; max-width: 125px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(0,0,0,0.75));"><?php echo file_get_contents('./wp-content/uploads/2017/01/building-blocks.svg', false, $context); ?></div>
+    <div class="hero-svg-container"><?php echo file_get_contents('./wp-content/uploads/2017/01/building-blocks.svg', false, $context); ?></div>
     <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
     <div class="two-third-only">
       <div>
@@ -90,5 +99,7 @@ $context = stream_context_create(array(
     </div>
   </div>
 </section>
+
+
 
 <?php get_footer(); ?>

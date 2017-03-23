@@ -481,6 +481,7 @@ if ($('.sticky-sidebar').length) {
 
     // Scroll past sibling container transform element by scrolling
     if (scrollY > (nextElemOffset - stickyHeight - (18 * 8))) {
+      console.log(elem[0]);
       elem.css({
         'transform' : 'translateY(-' + (scrollY - (nextElemOffset - elem[0].offsetHeight - elem[0].offsetTop)) + 'px)'
       });
@@ -496,6 +497,9 @@ if ($('.sticky-sidebar').length) {
     // Remove sticky if scroll above breadcrumb
     if (scrollY < (elemTop - 54)) {
       elem.removeClass('sticky');
+      elem.css({
+        'transform' : 'translateY(0px)'
+      });
     }
 
 
