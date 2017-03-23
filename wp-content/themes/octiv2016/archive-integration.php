@@ -85,8 +85,8 @@ $context = stream_context_create(array(
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
             echo '<div class="card pos-rel">';
-              echo '<div style="padding: 4rem;">';
-                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75%; max-height: 50%; height: 20%;"><img src="' . get_field('integration_logo') . '" alt="' . get_the_title() . '"></a>';
+              echo '<div style="padding: 4rem; background-image: url(' . get_field('integration_logo') . ')">';
+                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></a>';
               echo '</div>';
             echo '</div>';
           ?>
