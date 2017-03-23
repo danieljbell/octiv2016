@@ -72,6 +72,17 @@ button {
 	}
 }
 
+.btn-outline {
+	@extend %button;
+	border: 1px solid $brand;
+	color: $brand !important;
+	&:hover {
+		background-color: $brand;
+		color: $white !important;
+		text-decoration: none !important;
+	}
+}
+
 .btn-secondary-outline {
 	@extend %button;
 	border: 1px solid $gray;
