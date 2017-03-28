@@ -148,7 +148,7 @@ $inline_script = get_field('script', $queried_object);
 
 	var ref = getParameterByName('ref');
 
-		if (ref === 'tb') {
+		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
 			window.history.pushState( {} , 'bar', '/product' );
@@ -171,7 +171,7 @@ $inline_script = get_field('script', $queried_object);
 		}
 		var ref = getParameterByName('ref');
 
-		if (ref === 'tb') {
+		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
 		};
@@ -193,7 +193,7 @@ $inline_script = get_field('script', $queried_object);
 		}
 		var ref = getParameterByName('ref');
 
-		if (ref === 'tb') {
+		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
 			window.history.pushState( {} , 'bar', '' );
@@ -215,7 +215,7 @@ $inline_script = get_field('script', $queried_object);
 		}
 		var ref = getParameterByName('ref');
 
-		if (ref === 'tb') {
+		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
 		};
