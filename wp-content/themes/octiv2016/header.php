@@ -1,6 +1,6 @@
 <?
 // Redirect deleted blog pages to the resource pages
-if(is_404() && $_GET['ref']=="tb"){
+if(is_404() && $_GET['ref']=="tinderbox"){
     $postid = get_ID_by_slug(get_requested_slug());
     if($postid!=null) {
     	$newpageurl = get_permalink($postid);
