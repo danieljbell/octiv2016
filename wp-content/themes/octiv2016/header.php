@@ -5,7 +5,7 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     if($postid!=null) {
     	$newpageurl = get_permalink($postid);
     } else {
-    	$newpageurl = "https://octiv.com/resources/?ref=tb";
+    	$newpageurl = "https://octiv.com/resources/?ref=tinderbox";
     }
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: ".$newpageurl);
