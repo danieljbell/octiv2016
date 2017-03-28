@@ -581,8 +581,10 @@ if (window.MktoForms2) {
 
     if (cook) {
       $('input[name="LeadSource"]').attr('value', cook);
+      $('input[name="Secondary_Lead_Source__c"]').attr('value', cook);
     } else {
       $('input[name="LeadSource"]').attr('value', 'Web');
+      $('input[name="Secondary_Lead_Source__c"]').attr('value', 'Web');
     }
 
     function removeStyles(formObj) {
