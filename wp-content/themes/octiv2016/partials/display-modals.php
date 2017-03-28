@@ -36,7 +36,7 @@
 </div>
 
 <?php if ( is_page_template( 'page-templates/product-page.php' ) || is_page_template( 'page-templates/page-resources.php' ) || is_front_page() || is_post_type_archive('press-releases') ) : ?>
-	<?php if ( $_GET['ref'] === 'tb' ) : ?>
+	<?php if ( $_GET['ref'] === 'tinderbox' ) : ?>
 		<div class="modal fade letter-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 		  <div class="modal-dialog modal-lg">
 		  	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
