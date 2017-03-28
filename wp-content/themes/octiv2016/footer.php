@@ -151,7 +151,6 @@ $inline_script = get_field('script', $queried_object);
 		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
-			window.history.pushState( {} , 'bar', '/product' );
 		};
 
 	</script>
@@ -175,8 +174,6 @@ $inline_script = get_field('script', $queried_object);
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
 		};
-
-		window.history.pushState( {} , 'bar', '/resources' );
 	</script>
 <?php endif; ?>
 
@@ -196,7 +193,6 @@ $inline_script = get_field('script', $queried_object);
 		if (ref === 'tinderbox') {
 			var modalContent = $('.letter-modal');
 			modalContent.modal();
-			window.history.pushState( {} , 'bar', '' );
 		};
 
 	</script>
@@ -220,7 +216,6 @@ $inline_script = get_field('script', $queried_object);
 			modalContent.modal();
 		};
 
-		window.history.pushState( {} , 'bar', '/press-releases' );
 	</script>
 <?php endif; ?>
 
