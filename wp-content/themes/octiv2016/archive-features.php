@@ -10,6 +10,23 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<?php
+	// get the term
+	$categories = get_categories('taxonomy=feature_type');
+
+	// create and empty array to fill with the acf order
+	$sorted_cats = array();
+
+	// loop through each term and push to the $sorted_cats array
+	foreach($categories as $cat){
+		$ordr = get_field( 'order', $cat );
+		$sorted_cats[$ordr] = $cat;
+	}
+
+	// sort the cats ASC
+	ksort($sorted_cats);
+?>
+
 <style>
 .hero-svg-container {
 	width: 100%;
@@ -40,28 +57,17 @@ $context = stream_context_create(array(
         <h4><?php echo str_replace('Archives: ', '', get_the_archive_title()); ?></h4>
         <hr>
         <?php
-          $terms = get_terms( array(
-              'taxonomy' => 'feature_type',
-              'orderby' => 'id',
-              'hide_empty' => false,
-          ) );
-          if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-              echo '<ul class="nav sidebar-links" id="sidebar-links">';
-              foreach ( $terms as $term ) {
-                  echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
-              }
-              echo '</ul>';
+          echo '<ul class="nav sidebar-links" id="sidebar-links">';
+          foreach($sorted_cats as $term) {
+              echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
           }
+          echo '</ul>';
         ?>
       </div>
       <div class="sticky-listing">
         <?php
-          $custom_terms = get_terms( array(
-            'taxonomy' => 'feature_type',
-            'orderby' => 'id'
-          ) );
           $i = 0;
-          foreach($custom_terms as $custom_term) {
+          foreach($sorted_cats as $custom_term) {
             wp_reset_query();
             $args = array(
               'post_type' => 'features',
@@ -78,7 +84,8 @@ $context = stream_context_create(array(
           $i++;
           if($loop->have_posts()) {
             echo '<section style="padding-top: 0;">';
-            echo '<h3 id="' . $custom_term->slug . '" style="padding-bottom: 0.5rem;">' . $custom_term->name . '</h3>';
+            echo '<h3 id="' . $custom_term->slug . '">' . $custom_term->name . '</h3>';
+						// echo '<p>' . $custom_term->description . '</p>';
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
             $tag = get_field('status');
@@ -89,8 +96,7 @@ $context = stream_context_create(array(
               $tag = 'beta';
             }
             echo do_shortcode('[get_card excerpt="true" tag="' . $tag . '"]');
-          ?>
-    <?php endwhile;
+          endwhile;
             echo '</div>';
          }
             echo '</section>';
