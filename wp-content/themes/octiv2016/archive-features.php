@@ -11,7 +11,7 @@ $context = stream_context_create(array(
 <?php get_header(); ?>
 
 <?php
-	// get the term
+	// get the terms
 	$categories = get_categories('taxonomy=feature_type');
 
 	// create and empty array to fill with the acf order
