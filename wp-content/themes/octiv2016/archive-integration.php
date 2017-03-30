@@ -42,6 +42,8 @@ $context = stream_context_create(array(
         <?php
           $terms = get_terms( array(
               'taxonomy' => 'integration_type',
+							'orderby' => 'term_id',
+							'order' => 'DESC',
               'hide_empty' => false,
           ) );
           if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
