@@ -10,6 +10,25 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<?php get_header(); ?>
+
+<?php
+	// get the terms
+	$categories = get_categories('taxonomy=integration_type');
+
+	// create and empty array to fill with the acf order
+	$sorted_cats = array();
+
+	// loop through each term and push to the $sorted_cats array
+	foreach($categories as $cat){
+		$ordr = get_field( 'order', $cat );
+		$sorted_cats[$ordr] = $cat;
+	}
+
+	// sort the cats ASC
+	ksort($sorted_cats);
+?>
+
 <style>
 .hero-svg-container {
 	width: 100%;
@@ -40,30 +59,23 @@ $context = stream_context_create(array(
         <h4>Integrations</h4>
         <hr>
         <?php
-          $terms = get_terms( array(
-              'taxonomy' => 'integration_type',
-							'orderby' => 'term_id',
-							'order' => 'DESC',
-              'hide_empty' => false,
-          ) );
-          if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-              echo '<ul class="nav sidebar-links" id="sidebar-links">';
-              foreach ( $terms as $term ) {
-                  echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
-              }
-              echo '</ul>';
+          echo '<ul class="nav sidebar-links" id="sidebar-links">';
+          foreach($sorted_cats as $term) {
+            echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
           }
+          echo '</ul>';
         ?>
       </div>
       <div class="sticky-listing">
         <?php
-          $custom_terms = get_terms('integration_type');
           $i = 0;
-          foreach($custom_terms as $custom_term) {
+          foreach($sorted_cats as $custom_term) {
             wp_reset_query();
             $args = array(
               'post_type' => 'integration',
               'posts_per_page' => -1,
+							'orderby' => 'menu_order',
+							'order' => 'ASC',
               'tax_query' => array(
                 array(
                   'taxonomy' => 'integration_type',

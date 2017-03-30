@@ -15,7 +15,7 @@
         <div class="box"><img src="<?php echo get_field('integration_logo'); ?>" alt="<?php echo get_the_title(); ?>"></div>
       </div>
       <div>
-        <a href="<?php echo get_the_permalink(); ?>#call-to-action" class="btn-white-outline">Let's Talk <?php echo get_the_title(); ?></a>
+        <a href="<?php echo get_the_permalink(); ?>#call-to-action" class="btn-white-outline">Contact Us To Learn More</a>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
           <li><a href="#key-capabilities">Key Capabilities</a></li>
           <li><a href="#technical-requirements">Technical Requirements</a></li>
           <li><a href="#about-integration">About <?php echo get_the_title(); ?></a></li>
-          <li style="margin-top: 1rem;"><a href="#call-to-action" class="btn-outline" style="display: block;">Let's Talk <?php echo get_the_title() ?></a></li>
+          <li style="margin-top: 1rem;"><a href="#call-to-action" class="btn-outline" style="display: block;">Contact Us To Learn More</a></li>
         </ul>
       </div>
       <div class="sticky-listing">
