@@ -68,7 +68,7 @@ $context = stream_context_create(array(
         <?php
           $i = 0;
           foreach($sorted_cats as $custom_term) {
-            wp_reset_query();
+            // wp_reset_query();
             $args = array(
               'post_type' => 'features',
               'posts_per_page' => -1,
