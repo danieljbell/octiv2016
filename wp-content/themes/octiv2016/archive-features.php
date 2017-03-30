@@ -85,7 +85,7 @@ $context = stream_context_create(array(
           if($loop->have_posts()) {
             echo '<section style="padding-top: 0;">';
             echo '<h3 id="' . $custom_term->slug . '">' . $custom_term->name . '</h3>';
-						// echo '<p>' . $custom_term->description . '</p>';
+						echo '<p>' . $custom_term->description . '</p>';
             echo '<div class="third">';
           while($loop->have_posts()) : $loop->the_post();
             $tag = get_field('status');
