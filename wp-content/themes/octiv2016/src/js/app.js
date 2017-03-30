@@ -677,5 +677,14 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+if ($('body').hasClass('home')) {
+  var videoModal = $('.empty-modal');
+  $('.fixed-hero-section .btn-primary').on('click', function() {
+    var initialHTML = videoModal.find('.modal-content').html();
+    videoModal.find('.modal-content').html('<div class="two-third"><div><div class="video-outer"><div class="video-inner"><iframe style="width: 100% !important; height: 100% !important;" src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=false&smallPlayButton=false&volumeControl=false&fullscreenButton=false&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div></div><div class="box">Bell</div></div>');
+    videoModal.modal();
+  });
+}
+
 // end document.ready
 });

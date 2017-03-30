@@ -103,6 +103,10 @@
   }
 }
 
+.home .fixed-hero-section .btn-primary {
+  margin-top: 1rem;
+}
+
 .twentytwenty-container {
   box-shadow: 0 10px 25px rgba(black, 0.25);
 }
@@ -1193,11 +1197,13 @@ REVAMP CTA
 */
 #revamp {
   @include bp(xl) {
-    padding-bottom: 0;
     .half > div,
     input[type="submit"] {
       margin-bottom: 0;
     }
+  }
+  .centered label {
+    text-align: left;
   }
 }
 
@@ -1217,19 +1223,6 @@ REVAMP CTA
     }
   }
 }
-
-// .home #revamp.fixed {
-//   transform: translateY(0%);
-//   transition: all 300ms ease-out;
-//   position: fixed;
-//   z-index: 999;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   padding: 1rem 0 0;
-//   background-color: $brand;
-//   color: $white;
-// }
 
 
 
