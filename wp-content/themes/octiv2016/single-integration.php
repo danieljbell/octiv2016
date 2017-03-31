@@ -158,7 +158,15 @@
 </section>
 
 <style>
-label[for="subscriptionNewsletter"] {
+.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap label{
+  order: 1;
+}
+/*label[for="subscriptionNewsletter"] {
   margin-top: 1.75rem;
   padding-left: 1.25rem;
 }
@@ -195,7 +203,7 @@ label[for="subscriptionNewsletter"] + div {
   }
   #site-footer>.site-width:first-of-type {
     border-top: 0;
-  }
+  }*/
 </style>
 
 <?php get_footer(); ?>
