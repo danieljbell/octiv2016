@@ -100,7 +100,7 @@ $context = stream_context_create(array(
           while($loop->have_posts()) : $loop->the_post();
             echo '<div class="card pos-rel">';
               echo '<div style="padding: 4rem; background-image: url(' . get_field('integration_logo') . '); background-repeat: no-repeat; background-position: center; background-size: 65% 65%;">';
-                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" title="' . get_the_title() . '"></a>';
               echo '</div>';
             echo '</div>';
           ?>
