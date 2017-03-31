@@ -4,10 +4,6 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  $('#connections .connections-visual a').on('click', function(e) {
-    e.preventDefault();
-  });
-
 /*
 ==============================
 COMMERCIAL FLOW SWITCHING
