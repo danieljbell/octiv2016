@@ -681,10 +681,26 @@ if ($('body').hasClass('home')) {
   var videoModal = $('.empty-modal');
   $('.fixed-hero-section .btn-primary').on('click', function() {
     var initialHTML = videoModal.find('.modal-content').html();
-    videoModal.find('.modal-content').html('<div class="two-third"><div><div class="video-outer"><div class="video-inner"><iframe style="width: 100% !important; height: 100% !important;" src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=false&smallPlayButton=false&volumeControl=false&fullscreenButton=false&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div></div><div class="box">Bell</div></div>');
+    videoModal.find('.modal-content').html('<iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=false&smallPlayButton=false&volumeControl=false&fullscreenButton=false&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>');
     videoModal.modal();
   });
+  $('.modal .close').on('click', function() {
+    $(this).parent().find('iframe').attr('src', '');
+  });
 }
+
+if (getParameterByName('play')) {
+  var paramValue = getParameterByName('play');
+  if (paramValue === 'true') {
+    $('.empty-modal').find('.modal-content').html('<iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=false&smallPlayButton=false&volumeControl=false&fullscreenButton=false&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>').parents('.empty-modal').modal();
+  }
+}
+
+$('body').on('keydown', function(e) {
+  if (e.keyCode === 27) {
+    $('.empty-modal').find('iframe').attr('src', '');
+  };
+}); 
 
 // end document.ready
 });
