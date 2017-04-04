@@ -44,7 +44,7 @@ $context = stream_context_create(array(
     <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
     <div class="two-third-only">
       <div>
-        <p class="font-bump">The Octiv API enables seamless integrations with CRM, CPQ, ERP, ECM, HRIS and another systems. This allows Octiv to pull data from various systems and assemble accurate, personalized documents.</p>
+        <p class="font-bump">The Octiv API enables seamless integrations with CRM, CPQ, ERP, ECM, HRIS and other systems. This allows Octiv to pull data from various systems and assemble accurate, personalized documents.</p>
       </div>
     </div>
   </div>
