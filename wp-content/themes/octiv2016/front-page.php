@@ -112,28 +112,28 @@ $context = stream_context_create(array(
 					<svg viewBox="0 0 126.1 126.1"><use xlink:href="#icon-octiv-mark"></svg>
 				</div>
 				<div class="top-badge">
-					<a href="/platform/integrations/crm/salesforce" title="Salesforce"><?php echo file_get_contents('./wp-content/uploads/2017/01/salesforce.svg', false, $context); ?></a>
+					<a href="/platform/integrations/salesforce-crm/" title="Salesforce"><?php echo file_get_contents('./wp-content/uploads/2017/01/salesforce.svg', false, $context); ?></a>
 				</div>
 				<div class="top-right-badge">
-					<a href="/platform/integrations/file-storage/box" title="box.com"><?php echo file_get_contents('./wp-content/uploads/2017/01/box.svg', false, $context); ?></a>
+					<a href="/platform/integrations/box-file-storage/" title="box.com"><?php echo file_get_contents('./wp-content/uploads/2017/01/box.svg', false, $context); ?></a>
 				</div>
 				<div class="right-badge">
-					<a href="/platform/integrations/esignature/docusign" title="Docusign"><?php echo file_get_contents('./wp-content/uploads/2017/01/docusign.svg', false, $context); ?></a>
+					<a href="/platform/integrations/docusign-esignature/" title="Docusign"><?php echo file_get_contents('./wp-content/uploads/2017/01/docusign.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-right-badge">
-					<a href="/platform/integrations/crm/microsoft-dynamics" title="Microsoft Dynamics"><?php echo file_get_contents('./wp-content/uploads/2017/01/dynamics.svg', false, $context); ?></a>
+					<a href="/platform/integrations/microsoft-dynamics-crm/" title="Microsoft Dynamics"><?php echo file_get_contents('./wp-content/uploads/2017/01/dynamics.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-badge">
-					<a href="/platform/integrations/cpq/oracle-cpq" title="Oracle CPQ"><?php echo file_get_contents('./wp-content/uploads/2017/01/oracle.svg', false, $context); ?></a>
+					<a href="/platform/integrations/oracle-cpq-cloud/" title="Oracle CPQ"><?php echo file_get_contents('./wp-content/uploads/2017/01/oracle.svg', false, $context); ?></a>
 				</div>
 				<div class="bottom-left-badge">
-					<a href="/platform/integrations/finance/financialforce" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
+					<a href="/platform/integrations/financial-force-finance/" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/email/cirrus-insight" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
+					<a href="/platform/integrations/cirrus-insight-email/" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
-					<a href="/platform/integrations/sso/okta" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
+					<a href="/platform/integrations/okta-sso/" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
 				</div>
 			</div>
 			<div class="connections-content">

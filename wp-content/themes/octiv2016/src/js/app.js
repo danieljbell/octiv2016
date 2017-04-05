@@ -4,10 +4,6 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  $('#connections .connections-visual a').on('click', function(e) {
-    e.preventDefault();
-  });
-
 /*
 ==============================
 COMMERCIAL FLOW SWITCHING
@@ -177,6 +173,16 @@ RIGHT CLICK ON THE LOGO
 $('.site-logo').on('contextmenu', function(e) {
   $('.need-logo').modal();
   e.preventDefault();
+});
+
+
+/*
+==============================
+RAD MODAL
+==============================
+*/
+$('.rad-modal-button').on('click', function() {
+  $('.rad-modal').modal();
 });
 
 
@@ -693,6 +699,17 @@ if (getParameterByName('play')) {
   var paramValue = getParameterByName('play');
   if (paramValue === 'true') {
     $('.empty-modal').find('.modal-content').html('<iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=false&smallPlayButton=false&volumeControl=false&fullscreenButton=false&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>').parents('.empty-modal').modal();
+    var originalURL = document.location.pathname;
+    window.history.replaceState( {} , 'bar', originalURL );
+  }
+}
+
+if (getParameterByName('rad')) {
+  var paramValue = getParameterByName('rad');
+  if (paramValue === 'true') {
+    $('.rad-modal').modal();
+    var originalURL = document.location.pathname;
+    window.history.replaceState( {} , 'bar', originalURL );
   }
 }
 
@@ -700,7 +717,7 @@ $('body').on('keydown', function(e) {
   if (e.keyCode === 27) {
     $('.empty-modal').find('iframe').attr('src', '');
   };
-}); 
+});
 
 // end document.ready
 });

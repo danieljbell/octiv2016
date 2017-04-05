@@ -1,4 +1,14 @@
 <!-- START MODAL CONTENT -->
+<div class="modal fade rad-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+  	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div class="modal-content">
+      <h2>Request A Demo</h2>
+  		<p>Something</p>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade need-logo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
   	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>

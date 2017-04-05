@@ -125,38 +125,6 @@ $inline_script = get_field('script', $queried_object);
 	endif;
 ?>
 
-<?php if ( is_page_template( 'page-templates/product-page.php' ) ) : ?>
-
-	<script>
-		function getParameterByName(name, url) {
-	    if (!url) url = window.location.href;
-	    name = name.replace(/[\[\]]/g, "\\$&");
-	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	        results = regex.exec(url);
-	    if (!results) return null;
-	    if (!results[2]) return '';
-	    return decodeURIComponent(results[2].replace(/\+/g, " "));
-		}
-
-		var play = getParameterByName('play');
-
-	if (play === 'true') {
-		var modalContent = $('.empty-modal');
-		modalContent.modal();
-		sourceReplace(modalContent, 'iframe', 'https://fast.wistia.net/embed/iframe/w7po4co3cx?autoplay=true')
-	};
-
-	var ref = getParameterByName('ref');
-
-		if (ref === 'tinderbox') {
-			var modalContent = $('.letter-modal');
-			modalContent.modal();
-		};
-
-	</script>
-
-<?php endif; ?>
-
 <?php if ( is_page_template( 'page-templates/page-resources.php' ) ) : ?>
 	<script>
 		function getParameterByName(name, url) {
