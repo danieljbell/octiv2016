@@ -24,46 +24,19 @@ $context = stream_context_create(array(
 	</div>
 </div>
 
-
-<section class="callout">
-	<div class="site-width">
-		<h2 class="centered">Less paper. More time.</h2>
-		<div class="two-third-only" style="margin-bottom: 0;">
-			<div style="margin-bottom: 0;">
-				<p class="centered">The Octiv platform streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
+<div class="brand-video site-width box centered">
+	<h2>Meet Sara</h2>
+	<p>Her proposal is due by 5. Something else if we wanted to keep setting up Sara’s story with a bit more context.</p>
+	<div class="two-third-only">
+		<div>
+			<div class="video-outer">
+				<div class="video-inner">
+					<iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=true&smallPlayButton=false&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+				</div>
 			</div>
 		</div>
-		<br>
-		<br>
-		<div id="workflow-comparison" class="twentytwenty-container">
-			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-after.png" alt="">
-			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-before.png" alt="">
-		</div>
 	</div>
-</section>
-
-<style>
-	.twentytwenty-handle {
-		background-color: #ed4c06;
-	}
-	.twentytwenty-wrapper {
-		position: relative;
-	}
-	/*.twentytwenty-wrapper:before {
-		content: 'Before Octiv';
-		position: absolute;
-		transform: translateY(-2rem);
-		font-size: 1.4rem;
-	}
-	.twentytwenty-wrapper:after {
-		content: 'With Octiv';
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translateY(-2rem);
-		font-size: 1.4rem;
-	}*/
-</style>
+</div>
 
 <section id="workflows" class="fat-section">
 	<div class="site-width">
@@ -251,66 +224,6 @@ $context = stream_context_create(array(
 		</div>
 	</div>
 </section>
-
-
-
-
-
-<?php // Commercial & Enterprise sections
-	// echo '
-	// <section id="commercial" style="overflow-x: hidden;" class="fat-section">
-	// 	<div class="site-width">
-	// 		<div class="half-stack">
-	// 			<div class="pos-rel commercial-visual flow-1">
-	// 				<div class="step-1 workflow-box workflow-brand"><hr><hr></div>
-	// 				<div class="step-2 workflow-box workflow-brand-5"><hr><hr></div>
-	// 				<div class="step-3 workflow-box workflow-brand-3"><hr><hr></div>
-	// 				<div class="step-4 workflow-circle workflow-brand-2"><hr></div>
-	// 				<div class="step-5 workflow-box rotated workflow-brand-4"><hr><hr></div>
-	// 				<div class="step-6 workflow-circle callout"></div>
-	// 				<div class="step-6 workflow-box callout"><hr></div>
-	// 			</div>
-	// 			<div class="commercial-content">
-	// 				<div>
-	// 					<svg viewBox="0 0 100 108.3">
-	// 						<use xlink:href="#icon-commercial">
-	// 					</svg>
-	// 				</div>
-	// 				<div>
-	// 					<h2>Commercial Teams</h2>
-	// 					<p>Octiv simplifies the experience for commercial teams. Octiv supports high-volume, transactional workflows, complex, long-cycle workflows and channel/distributor workflows.</p>
-	// 					<a href="#" class="btn-arrow">Learn More</a>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// </section>
-	//
-	// <div class="site-width">
-	// 	<hr>
-	// </div>
-	//
-	// <section id="enterprise" class="fat-section">
-	// 	<div class="site-width">
-	// 		<div class="half">
-	// 			<div class="enterprise-visual"></div>
-	// 			<div class="enterprise-content">
-	// 				<div>
-	// 					<svg viewBox="0 0 100 99.7">
-	// 						<use xlink:href="#icon-enterprise">
-	// 					</svg>
-	// 				</div>
-	// 				<div>
-	// 					<h2>Enterprise Teams</h2>
-	// 					<p>Octiv is enterprise-ready. Enterprise document workflows often span multiple applications and repositories and can also span numerous teams, geographies and languages. Octiv offers enterprises a way to unify and standardize document workflows that maximize existing IT investments while enhancing interoperability. Eliminate process steps, save time and create new efficiencies with Octiv.</p>
-	// 					<a href="#" class="btn-arrow">Learn More</a>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// </section>
-	// ';
-?>
 
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 
