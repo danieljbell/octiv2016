@@ -10,6 +10,25 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<?php get_header(); ?>
+
+<?php
+	// get the terms
+	$categories = get_categories('taxonomy=integration_type');
+
+	// create and empty array to fill with the acf order
+	$sorted_cats = array();
+
+	// loop through each term and push to the $sorted_cats array
+	foreach($categories as $cat){
+		$ordr = get_field( 'order', $cat );
+		$sorted_cats[$ordr] = $cat;
+	}
+
+	// sort the cats ASC
+	ksort($sorted_cats);
+?>
+
 <style>
 .hero-svg-container {
 	width: 100%;
@@ -25,7 +44,7 @@ $context = stream_context_create(array(
     <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
     <div class="two-third-only">
       <div>
-        <p class="font-bump">The Octiv API enables seamless integrations with CRM, CPQ, ERP, ECM, HRIS and another systems. This allows Octiv to pull data from various systems and assemble accurate, personalized documents.</p>
+        <p class="font-bump">The Octiv API enables seamless integrations with CRM, CPQ, ERP, ECM, HRIS and other systems. This allows Octiv to pull data from various systems and assemble accurate, personalized documents.</p>
       </div>
     </div>
   </div>
@@ -40,28 +59,23 @@ $context = stream_context_create(array(
         <h4>Integrations</h4>
         <hr>
         <?php
-          $terms = get_terms( array(
-              'taxonomy' => 'integration_type',
-              'hide_empty' => false,
-          ) );
-          if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-              echo '<ul class="nav sidebar-links" id="sidebar-links">';
-              foreach ( $terms as $term ) {
-                  echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
-              }
-              echo '</ul>';
+          echo '<ul class="nav sidebar-links" id="sidebar-links">';
+          foreach($sorted_cats as $term) {
+            echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
           }
+          echo '</ul>';
         ?>
       </div>
       <div class="sticky-listing">
         <?php
-          $custom_terms = get_terms('integration_type');
           $i = 0;
-          foreach($custom_terms as $custom_term) {
+          foreach($sorted_cats as $custom_term) {
             wp_reset_query();
             $args = array(
               'post_type' => 'integration',
               'posts_per_page' => -1,
+							'orderby' => 'menu_order',
+							'order' => 'ASC',
               'tax_query' => array(
                 array(
                   'taxonomy' => 'integration_type',
@@ -86,7 +100,7 @@ $context = stream_context_create(array(
           while($loop->have_posts()) : $loop->the_post();
             echo '<div class="card pos-rel">';
               echo '<div style="padding: 4rem; background-image: url(' . get_field('integration_logo') . '); background-repeat: no-repeat; background-position: center; background-size: 65% 65%;">';
-                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" title="' . get_the_title() . '"></a>';
               echo '</div>';
             echo '</div>';
           ?>

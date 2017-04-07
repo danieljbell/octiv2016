@@ -107,7 +107,7 @@ $context = stream_context_create(array(
 					<a href="/platform/integrations/financial-force-finance/" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/cirrus-insight-email/" title="Dropbox"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
+          <a href="/platform/integrations/cirrus-insight-email/" title="Cirrus Insight"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
 					<a href="/platform/integrations/okta-sso/" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
@@ -120,7 +120,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>Connect Systems &amp; Data</h2>
 					<p>Octiv connects the systems and data that your teams use every day - CRM, CPQ, ERP, ATS, HCM. By integrating these systems Octiv eliminates steps in the document workflow. Less “paper" steps means more time back to your teams. Octiv also improves how you collaborate in documents and how you deliver them to your recipient.</p>
-					<a href="/platform/features/#integrations" class="btn-arrow">Learn More</a>
+					<a href="/platform/integrations" class="btn-arrow">View Our Integrations</a>
 				</div>
 			</div>
 		</div>
