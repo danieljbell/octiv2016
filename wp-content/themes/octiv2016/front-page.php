@@ -26,12 +26,16 @@ $context = stream_context_create(array(
 
 <div class="brand-video site-width box centered">
 	<h2>Meet Sara</h2>
-	<p>Her proposal is due by 5. Something else if we wanted to keep setting up Sara’s story with a bit more context.</p>
 	<div class="two-third-only">
 		<div>
+			<div class="two-third-only">
+				<div>
+					<p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p>
+				</div>
+			</div>
 			<div class="video-outer">
 				<div class="video-inner">
-					<iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=true&smallPlayButton=false&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+					<iframe src="http://fast.wistia.net/embed/iframe/hjy779ahf2?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
 				</div>
 			</div>
 		</div>

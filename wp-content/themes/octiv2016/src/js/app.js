@@ -687,7 +687,7 @@ if ($('body').hasClass('home')) {
   var videoModal = $('.empty-modal');
   $('.fixed-hero-section .btn-primary').on('click', function() {
     var initialHTML = videoModal.find('.modal-content').html();
-    videoModal.find('.modal-content').html('<div class="video-outer"><div class="video-inner"><iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=true&smallPlayButton=false&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>');
+    videoModal.find('.modal-content').html('<div class="centered third-only"><div><h2>Meet Sara</h2><p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p></div></div><div class="video-outer"><div class="video-inner"><iframe class="brand-video-frame" src="http://fast.wistia.net/embed/iframe/858lahq4et?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>');
     videoModal.modal();
   });
   $('.modal .close').on('click', function() {
@@ -698,7 +698,7 @@ if ($('body').hasClass('home')) {
 if (getParameterByName('play')) {
   var paramValue = getParameterByName('play');
   if (paramValue === 'true') {
-    $('.empty-modal').find('.modal-content').html('<div class="video-outer"><div class="video-inner"><iframe src="http://fast.wistia.net/embed/iframe/vmlhujsh3f?playbar=true&smallPlayButton=false&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>').parents('.empty-modal').modal();
+    $('.empty-modal').find('.modal-content').html('<div class="centered third-only"><div><h2>Meet Sara</h2><p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p></div></div><div class="video-outer"><div class="video-inner"><iframe class="brand-video-frame" src="http://fast.wistia.net/embed/iframe/858lahq4et?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>').parents('.empty-modal').modal();
     var originalURL = document.location.pathname;
     window.history.replaceState( {} , 'bar', originalURL );
   }
