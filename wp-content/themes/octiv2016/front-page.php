@@ -129,7 +129,7 @@ $context = stream_context_create(array(
 					<a href="/platform/integrations/financial-force-finance/" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/email/cirrus-insight-email/" title="Cirrus Insight"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
+					<a href="/platform/integrations/cirrus-insight-email/" title="Cirrus Insight"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
 					<a href="/platform/integrations/okta-sso/" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
