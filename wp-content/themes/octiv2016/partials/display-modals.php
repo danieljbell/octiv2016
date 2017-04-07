@@ -14,7 +14,7 @@
               selectBoxes[i].classList.add('fancy');
             }
             var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
-            console.dir(newsletterBox.parentElement.classList.add('mktoFlexWrap'));
+            newsletterBox.parentElement.classList.add('mktoFlexWrap');
             newsletterBox.querySelector('.mktoAsterix').remove();
 
             // Blacklisted Email Domains
