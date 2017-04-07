@@ -215,3 +215,9 @@ select {
 .mktoErrorDetail {
 	font-style: italic;
 }
+
+.mktoFlexWrap {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row-reverse;
+}

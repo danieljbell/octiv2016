@@ -4,6 +4,10 @@
   position: relative;
   box-shadow: inset 0 0 35px rgba(black, 0.75);
   color: $white;
+  padding-bottom: 3rem;
+  @include bp(md) {
+    padding-bottom: 6rem;
+  }
   a {
     color: $white;
     text-shadow: none;
@@ -103,8 +107,34 @@
   }
 }
 
-.twentytwenty-container {
-  box-shadow: 0 10px 25px rgba(black, 0.25);
+.home .fixed-hero-section .btn-primary {
+  margin-top: 1rem;
+}
+
+.home .brand-video {
+  margin-top: -3rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  @include bp(md) {
+    margin-top: -6rem;
+    padding: 3rem;
+  }
+}
+
+.home .brand-video .two-third-only > div {
+  margin-bottom: 0;
+}
+
+.home .brand-video .video-outer {
+  @include bp(md) {
+    margin-top: 2rem;
+  }
+}
+
+.home .brand-video iframe {
+  border: 1px solid $mgray;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
 }
 
 .home #workflows .half-stack,
@@ -1193,11 +1223,13 @@ REVAMP CTA
 */
 #revamp {
   @include bp(xl) {
-    padding-bottom: 0;
     .half > div,
     input[type="submit"] {
       margin-bottom: 0;
     }
+  }
+  .centered label {
+    text-align: left;
   }
 }
 
@@ -1217,19 +1249,6 @@ REVAMP CTA
     }
   }
 }
-
-// .home #revamp.fixed {
-//   transform: translateY(0%);
-//   transition: all 300ms ease-out;
-//   position: fixed;
-//   z-index: 999;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   padding: 1rem 0 0;
-//   background-color: $brand;
-//   color: $white;
-// }
 
 
 

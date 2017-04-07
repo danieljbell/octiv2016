@@ -18,51 +18,29 @@ $context = stream_context_create(array(
 	        <div>
 	            <h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
 	            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+							<button id="play-video" class="btn-primary">See How Octiv Powers Documents</button>
 	        </div>
 	    </div>
 	</div>
 </div>
 
-
-<section class="callout">
-	<div class="site-width">
-		<h2 class="centered">Less paper. More time.</h2>
-		<div class="two-third-only" style="margin-bottom: 0;">
-			<div style="margin-bottom: 0;">
-				<p class="centered">The Octiv platform streamlines the creation, collaboration and delivery of mobile-responsive, online documents. Document workflows can be automated to eliminate time-consuming, manual steps and interactions with multiple source data systems.</p>
+<div class="brand-video site-width box centered">
+	<h2>Meet Sara</h2>
+	<div class="two-third-only">
+		<div>
+			<div class="two-third-only">
+				<div>
+					<p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p>
+				</div>
+			</div>
+			<div class="video-outer">
+				<div class="video-inner">
+					<iframe src="http://fast.wistia.net/embed/iframe/hjy779ahf2?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+				</div>
 			</div>
 		</div>
-		<br>
-		<br>
-		<div id="workflow-comparison" class="twentytwenty-container">
-			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-after.png" alt="">
-			<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/comparison-before.png" alt="">
-		</div>
 	</div>
-</section>
-
-<style>
-	.twentytwenty-handle {
-		background-color: #ed4c06;
-	}
-	.twentytwenty-wrapper {
-		position: relative;
-	}
-	/*.twentytwenty-wrapper:before {
-		content: 'Before Octiv';
-		position: absolute;
-		transform: translateY(-2rem);
-		font-size: 1.4rem;
-	}
-	.twentytwenty-wrapper:after {
-		content: 'With Octiv';
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translateY(-2rem);
-		font-size: 1.4rem;
-	}*/
-</style>
+</div>
 
 <section id="workflows" class="fat-section">
 	<div class="site-width">
@@ -129,7 +107,7 @@ $context = stream_context_create(array(
 					<a href="/platform/integrations/financial-force-finance/" title="FinancialForce"><?php echo file_get_contents('./wp-content/uploads/2017/01/FinancialForce-Mark.svg', false, $context); ?></a>
 				</div>
 				<div class="left-badge">
-					<a href="/platform/integrations/cirrus-insight-email/" title="Cirrus Insight"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
+          <a href="/platform/integrations/cirrus-insight-email/" title="Cirrus Insight"><?php echo file_get_contents('./wp-content/uploads/2017/01/cirrus-insight.svg', false, $context); ?></a>
 				</div>
 				<div class="top-left-badge">
 					<a href="/platform/integrations/okta-sso/" title="Okta"><?php echo file_get_contents('./wp-content/uploads/2017/01/okta.svg', false, $context); ?></a>
@@ -250,66 +228,6 @@ $context = stream_context_create(array(
 		</div>
 	</div>
 </section>
-
-
-
-
-
-<?php // Commercial & Enterprise sections
-	// echo '
-	// <section id="commercial" style="overflow-x: hidden;" class="fat-section">
-	// 	<div class="site-width">
-	// 		<div class="half-stack">
-	// 			<div class="pos-rel commercial-visual flow-1">
-	// 				<div class="step-1 workflow-box workflow-brand"><hr><hr></div>
-	// 				<div class="step-2 workflow-box workflow-brand-5"><hr><hr></div>
-	// 				<div class="step-3 workflow-box workflow-brand-3"><hr><hr></div>
-	// 				<div class="step-4 workflow-circle workflow-brand-2"><hr></div>
-	// 				<div class="step-5 workflow-box rotated workflow-brand-4"><hr><hr></div>
-	// 				<div class="step-6 workflow-circle callout"></div>
-	// 				<div class="step-6 workflow-box callout"><hr></div>
-	// 			</div>
-	// 			<div class="commercial-content">
-	// 				<div>
-	// 					<svg viewBox="0 0 100 108.3">
-	// 						<use xlink:href="#icon-commercial">
-	// 					</svg>
-	// 				</div>
-	// 				<div>
-	// 					<h2>Commercial Teams</h2>
-	// 					<p>Octiv simplifies the experience for commercial teams. Octiv supports high-volume, transactional workflows, complex, long-cycle workflows and channel/distributor workflows.</p>
-	// 					<a href="#" class="btn-arrow">Learn More</a>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// </section>
-	//
-	// <div class="site-width">
-	// 	<hr>
-	// </div>
-	//
-	// <section id="enterprise" class="fat-section">
-	// 	<div class="site-width">
-	// 		<div class="half">
-	// 			<div class="enterprise-visual"></div>
-	// 			<div class="enterprise-content">
-	// 				<div>
-	// 					<svg viewBox="0 0 100 99.7">
-	// 						<use xlink:href="#icon-enterprise">
-	// 					</svg>
-	// 				</div>
-	// 				<div>
-	// 					<h2>Enterprise Teams</h2>
-	// 					<p>Octiv is enterprise-ready. Enterprise document workflows often span multiple applications and repositories and can also span numerous teams, geographies and languages. Octiv offers enterprises a way to unify and standardize document workflows that maximize existing IT investments while enhancing interoperability. Eliminate process steps, save time and create new efficiencies with Octiv.</p>
-	// 					<a href="#" class="btn-arrow">Learn More</a>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// </section>
-	// ';
-?>
 
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 

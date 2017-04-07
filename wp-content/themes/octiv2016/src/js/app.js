@@ -178,6 +178,16 @@ $('.site-logo').on('contextmenu', function(e) {
 
 /*
 ==============================
+RAD MODAL
+==============================
+*/
+$('.rad-modal-button').on('click', function() {
+  $('.rad-modal').modal();
+});
+
+
+/*
+==============================
 NAVIGATION
 ==============================
 */
@@ -672,6 +682,42 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+if ($('body').hasClass('home')) {
+  var videoModal = $('.empty-modal');
+  $('.fixed-hero-section .btn-primary').on('click', function() {
+    var initialHTML = videoModal.find('.modal-content').html();
+    videoModal.find('.modal-content').html('<div class="centered third-only"><div><h2>Meet Sara</h2><p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p></div></div><div class="video-outer"><div class="video-inner"><iframe class="brand-video-frame" src="http://fast.wistia.net/embed/iframe/858lahq4et?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>');
+    videoModal.modal();
+  });
+  $('.modal .close').on('click', function() {
+    $(this).parent().find('iframe').attr('src', '');
+  });
+}
+
+if (getParameterByName('play')) {
+  var paramValue = getParameterByName('play');
+  if (paramValue === 'true') {
+    $('.empty-modal').find('.modal-content').html('<div class="centered third-only"><div><h2>Meet Sara</h2><p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p></div></div><div class="video-outer"><div class="video-inner"><iframe class="brand-video-frame" src="http://fast.wistia.net/embed/iframe/858lahq4et?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>').parents('.empty-modal').modal();
+    var originalURL = document.location.pathname;
+    window.history.replaceState( {} , 'bar', originalURL );
+  }
+}
+
+if (getParameterByName('rad')) {
+  var paramValue = getParameterByName('rad');
+  if (paramValue === 'true') {
+    $('.rad-modal').modal();
+    var originalURL = document.location.pathname;
+    window.history.replaceState( {} , 'bar', originalURL );
+  }
+}
+
+$('body').on('keydown', function(e) {
+  if (e.keyCode === 27) {
+    $('.empty-modal').find('iframe').attr('src', '');
+  };
+});
 
 // end document.ready
 });
