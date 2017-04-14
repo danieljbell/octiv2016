@@ -719,5 +719,21 @@ $('body').on('keydown', function(e) {
   };
 });
 
+/*
+================================
+OPEN RELEASE SCREENSHOT IN MODAL
+================================
+*/
+if ($('body').hasClass('single-releases')) {
+  $('.accordian button').on('click', function() {
+    var modal = $('.empty-modal');
+    var $this = $(this);
+    var imgSRC = $this.data('img');
+    var imgText = $this.data('img-text');
+    modal.find('.modal-content').html('<h3 class="centered">' + imgText + '</h3><img src="' + imgSRC + '">');
+    modal.modal();
+  });
+}
+
 // end document.ready
 });

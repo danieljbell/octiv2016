@@ -97,9 +97,6 @@ $webinar_source = get_field('webinar_source', $queried_object);
 									while ( have_rows('launched') ) : the_row();
 										echo '<dt><h4>' . get_sub_field('launched_feature') . '</h4></dt>';
 										echo '<dd>';
-										if (get_sub_field('feature_image')) :
-											echo '<img src="' . get_sub_field('feature_image') . '" alt="Product Screenshot">';
-										endif;
 										echo '<p>' . get_sub_field('launched_description') . '</p>';
 										if (get_sub_field('feature_released')) :
 											echo '<p><strong>Released on: </strong><br>' . get_sub_field('feature_released') . '</p>';
@@ -108,6 +105,13 @@ $webinar_source = get_field('webinar_source', $queried_object);
 										echo '<p><strong>Available Plan:</strong><br>' . get_sub_field('available') . '</p>';
 										if (get_sub_field('link_source')) :
 											echo '<a href="' . get_sub_field('link_source') . '" class="btn-primary" style="margin-top: 1rem;">Learn More</a>';
+											if (get_sub_field('feature_image')) :
+												echo '<button class="mar-l btn-arrow" data-img-text="' . get_sub_field('launched_feature') . '" data-img="' . get_sub_field('feature_image') . '">View Screenshot</button>';
+											endif;
+											else :
+												if (get_sub_field('feature_image')) :
+													echo '<button class="btn-arrow" data-img-text="' . get_sub_field('launched_feature') . '" data-img="' . get_sub_field('feature_image') . '">View Screenshot</button>';
+												endif;
 										endif;
 										echo '</dd>';
 									endwhile;
