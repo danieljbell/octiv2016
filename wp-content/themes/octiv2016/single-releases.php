@@ -70,8 +70,12 @@ $webinar_source = get_field('webinar_source', $queried_object);
 							<h2><?php echo ucwords(get_field( 'resource_type' )); ?> Details</h2>
 							<?php the_content(); ?>
 						</div>
-						<div>
-							<?php get_sidebar( 'landing-form' ); ?>
+						<div class="box">
+							<?php
+								echo '<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>';
+								echo '<form id="mktoForm_' . get_field('form_source') . '"></form>';
+								echo '<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", ' . get_field('form_source') . ');</script>';
+							?>
 						</div>
 				<?php endif; ?>
 
