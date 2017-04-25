@@ -487,7 +487,6 @@ if ($('.sticky-sidebar').length) {
 
     // Scroll past sibling container transform element by scrolling
     if (scrollY > (nextElemOffset - stickyHeight - (18 * 8))) {
-      console.log(elem[0]);
       elem.css({
         'transform' : 'translateY(-' + (scrollY - (nextElemOffset - elem[0].offsetHeight - elem[0].offsetTop)) + 'px)'
       });

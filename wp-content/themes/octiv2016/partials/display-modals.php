@@ -1,4 +1,4 @@
-<?php if ($post->ID != 219) : ?>
+<?php if (is_home()) : ?>
 <!-- START MODAL CONTENT -->
 <div class="modal fade rad-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
