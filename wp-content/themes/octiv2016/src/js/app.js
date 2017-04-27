@@ -572,7 +572,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('single-solutions')) {
+    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('single-solutions') || $('body').hasClass('parent-pageid-74')) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');

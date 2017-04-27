@@ -70,6 +70,12 @@
 			?>
 		</div>
 	</section>
+	<?php
+		if ($post->post_parent === 74) {
+			echo '<div class="site-width"><hr></div>';
+			get_template_part('partials/display', 'basic-contact-us');
+		}
+	?>
 <?php else : ?>
 	<section>
 		<div class="site-width">

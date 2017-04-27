@@ -1,4 +1,4 @@
-<?php if (is_home()) : ?>
+<?php if (is_home() || (is_page() && $post->post_parent === 74)) : ?>
 <!-- START MODAL CONTENT -->
 <div class="modal fade rad-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
