@@ -226,7 +226,9 @@ $inline_script = get_field('script', $queried_object);
 
 <?php endif; ?>
 
-<?php if ($post->post_parent === 144) : ?>
+<?php
+	$greenhouse_page = parse_str($_SERVER['gh_jid']);
+  if ($post->ID === 148 || $greenhouse_page) : ?>
 	<script src="https://boards.greenhouse.io/embed/job_board/js?for=octiv"></script>
 <?php endif; ?>
 

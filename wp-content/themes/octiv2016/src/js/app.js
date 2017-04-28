@@ -181,11 +181,7 @@ $('.site-logo').on('contextmenu', function(e) {
 RAD MODAL
 ==============================
 */
-$('.rad-modal-button').on('click', function() {
-  $('.rad-modal').modal();
-});
-
-$('a[href*="contact"]').on('click', function(e) {
+$('.rad-modal-button').on('click', function(e) {
   e.preventDefault();
   $('.rad-modal').modal();
 });
@@ -214,7 +210,7 @@ for (var i = 0; i < headerNavItems.length; i++) {
         this.children[1].style.display = "block";
       }
     }
-    if (this.computedName !== "Contact Us") {
+    if (this.computedName !== "Request A Demo") {
       this.parentElement.children[5].children[0].style.backgroundColor = "transparent";
       this.parentElement.children[5].children[0].style.color = "#000000";
     }
@@ -598,8 +594,12 @@ if (window.MktoForms2) {
     }
 
     function removeStyles(formObj) {
-      $('#mktoForms2BaseStyle').remove();
-      $('#mktoForms2ThemeStyle').remove();
+      if ($('#mktoForms2BaseStyle')) {
+        $('#mktoForms2BaseStyle').remove();
+      }
+      if ($('#mktoForms2ThemeStyle')) {
+        $('#mktoForms2ThemeStyle').remove();
+      }
       formObj.find('.mktoOffset').remove();
       formObj.find('.mktoGutter').remove();
       formObj.find('.mktoClear').remove();

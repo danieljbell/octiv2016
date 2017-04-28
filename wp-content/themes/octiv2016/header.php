@@ -128,12 +128,13 @@ if(is_404() && $_GET['ref']=="tinderbox"){
               <li class="sub-menu-item"><a href="/company/#leadership" title="Leadership">Leadership</a></li>
               <li class="sub-menu-item"><a href="/company/#board-of-directors" title="Board of Directors">Board of Directors</a></li>
               <li class="sub-menu-item"><a href="/company/careers" title="Careers">Careers</a></li>
+              <li class="sub-menu-item"><a href="/company/contact-us" title="Contact Us">Contact Us</a></li>
               <li class="sub-menu-item"><a href="/press-releases" title="Press">Press</a></li>
               <li class="sub-menu-item"><a href="/brand-assets" title="Brand Assets">Brand Assets</a></li>
             </ul>
           </li>
           <li class="menu-item">
-            <a href="/contact-us" title="Contact Us">Contact Us</a>
+            <a href="#0" title="Contact Us" class="rad-modal-button">Request A Demo</a>
           </li>
         </ul>
       </nav>

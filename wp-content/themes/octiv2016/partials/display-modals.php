@@ -15,7 +15,7 @@
             }
             var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
             newsletterBox.parentElement.classList.add('mktoFlexWrap');
-            newsletterBox.querySelector('.mktoAsterix').remove();
+            // newsletterBox.querySelector('.mktoAsterix').remove();
 
             // Blacklisted Email Domains
             var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
