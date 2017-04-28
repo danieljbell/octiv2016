@@ -185,6 +185,11 @@ $('.rad-modal-button').on('click', function() {
   $('.rad-modal').modal();
 });
 
+$('a[href*="contact"]').on('click', function(e) {
+  e.preventDefault();
+  $('.rad-modal').modal();
+});
+
 
 /*
 ==============================
@@ -572,7 +577,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if ($('body').hasClass('home') || $('body').hasClass('single-integration') || $('body').hasClass('single-solutions') || $('body').hasClass('parent-pageid-74')) {
+    if (!$('body').hasClass('parent-pageid-65')) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');

@@ -38,15 +38,6 @@
 						wp_reset_query();
 					?>
 				</div>
-				<!-- <div>
-					<h5>Why Octiv</h5>
-					<ul>
-						<li><a href="/why-octiv">Overview</a></li>
-						<li><a href="#">Vs. Savo</a></li>
-						<li><a href="#">Vs. Qvidian</a></li>
-						<li><a href="#">Vs. Seismic</a></li>
-					</ul>
-				</div> -->
 				<div>
 					<h5><a href="/resources" style="color: #555;">Resources</a></h5>
 					<ul>
@@ -63,7 +54,7 @@
 						<li><a href="/company/#board-of-directors">Board of Directors</a></li>
 						<li><a href="/company/careers">Careers</a></li>
 						<li><a href="/press-releases">Press</a></li>
-						<li><a href="/contact-us">Contact Us</a></li>
+						<li><a href="/company/contact-us">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
