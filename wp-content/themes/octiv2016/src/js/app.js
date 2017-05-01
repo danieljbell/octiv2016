@@ -4,24 +4,6 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-/*
-==============================
-COMMERCIAL FLOW SWITCHING
-==============================
-*/
-if ($('#commercial .commercial-visual').length) {
-  var commercialVisual = $('.commercial-visual');
-  setInterval(function(){
-    if (commercialVisual.hasClass('flow-1')) {
-      commercialVisual.removeClass('flow-1').addClass('flow-2');
-    } else if (commercialVisual.hasClass('flow-2')) {
-      commercialVisual.removeClass('flow-2').addClass('flow-3');
-    } else {
-      commercialVisual.removeClass('flow-3').addClass('flow-1');
-    }
-  }, 3300);
-}
-
 
 /*
 ==============================
@@ -38,19 +20,6 @@ if ($('.typed').length) {
     loop: true,
     loopCount: false
   });
-}
-
-/*
-==============================
-TWENTY TWENTY FOR HOMEPAGE
-==============================
-*/
-if ($('.twentytwenty-container').length) {
-  $(window).load(function() {
-      $("#workflow-comparison").twentytwenty({
-        'default_offset_pct' : 0.05
-      });
-    });
 }
 
 /*
@@ -687,18 +656,6 @@ function getParameterByName(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-if ($('body').hasClass('home')) {
-  var videoModal = $('.empty-modal');
-  $('.fixed-hero-section .btn-primary').on('click', function() {
-    var initialHTML = videoModal.find('.modal-content').html();
-    videoModal.find('.modal-content').html('<div class="centered third-only"><div><h2>Meet Sara</h2><p>Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p></div></div><div class="video-outer"><div class="video-inner"><iframe class="brand-video-frame" src="https://fast.wistia.net/embed/iframe/858lahq4et?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false&autoplay=true" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div></div>');
-    videoModal.modal();
-  });
-  $('.modal .close').on('click', function() {
-    $(this).parent().find('iframe').attr('src', '');
-  });
 }
 
 if (getParameterByName('play')) {
