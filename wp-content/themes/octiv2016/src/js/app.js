@@ -574,9 +574,11 @@ if (window.MktoForms2) {
 
     // Add styles
     if (!$('body').hasClass('parent-pageid-65')) {
-      formObj.find('.mktoFormRow').addClass('third');
-      formObj.find('select').addClass('fancy');
-      formObj.find('.mktoButtonRow').addClass('centered');
+      if (!$('body').hasClass('page-id-219')) {
+        formObj.find('.mktoFormRow').addClass('third');
+        formObj.find('select').addClass('fancy');
+        formObj.find('.mktoButtonRow').addClass('centered');
+      }
     }
 
     formObj.find('.mktoButton').addClass('btn-primary');

@@ -13,9 +13,11 @@
             for (var i = 0; i < selectBoxes.length; i++) {
               selectBoxes[i].classList.add('fancy');
             }
-            var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
-            newsletterBox.parentElement.classList.add('mktoFlexWrap');
-            // newsletterBox.querySelector('.mktoAsterix').remove();
+            var modalNewsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
+            if (modalNewsletterBox) {
+              modalNewsletterBox.parentElement.classList.add('mktoFlexWrap');
+              modalNewsletterBox.querySelector('.mktoAsterix').remove();
+            }
 
             // Blacklisted Email Domains
             var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];

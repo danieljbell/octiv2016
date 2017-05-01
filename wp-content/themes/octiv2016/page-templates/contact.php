@@ -39,7 +39,9 @@ TEMPLATE NAME: Contact Us
 							selectBoxes[i].classList.add('fancy');
 						}
 						var newsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
-						newsletterBox.querySelector('.mktoAsterix').remove();
+						if (newsletterBox) {
+							newsletterBox.querySelector('.mktoAsterix').remove();
+						}
 
 						// Blacklisted Email Domains
 						var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
