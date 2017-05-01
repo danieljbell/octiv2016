@@ -542,12 +542,10 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if (!$('body').hasClass('parent-pageid-65')) {
-      if (!$('body').hasClass('page-id-219')) {
-        formObj.find('.mktoFormRow').addClass('third');
-        formObj.find('select').addClass('fancy');
-        formObj.find('.mktoButtonRow').addClass('centered');
-      }
+    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases/)) {
+      formObj.find('.mktoFormRow').addClass('third');
+      formObj.find('select').addClass('fancy');
+      formObj.find('.mktoButtonRow').addClass('centered');
     }
 
     formObj.find('.mktoButton').addClass('btn-primary');
