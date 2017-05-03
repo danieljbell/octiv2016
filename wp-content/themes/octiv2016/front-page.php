@@ -12,6 +12,32 @@ $context = stream_context_create(array(
 
 <div class="fixed-hero-section">
 	<div class="slider">
+		<div style="position: relative; background-image: url(/wp-content/themes/octiv2016//dist/img/home-video-hero.jpg);">
+			<section>
+				<div class="video-overlay"></div>
+				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
+				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
+					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
+          <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+					<button class="rad-modal-button btn-primary">Learn How</button>
+				</div>
+			</section>
+		</div>
+		<div style="background-image: url(//unsplash.it/1920/800);">
+			<section>
+				<div class="site-width">slide 2</div>
+			</section>
+		</div>
+		<div style="background-image: url(//unsplash.it/1920/800);">
+			<section>
+				<div class="site-width">slide 3</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="fixed-hero-section">
+	<div class="slider">
 		<div>
 			<div class="video-overlay"></div>
 			<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
@@ -28,7 +54,7 @@ $context = stream_context_create(array(
 		<div>Slide Two</div>
 		<div>Slide Three</div>
 	</div>
-</div>
+</div> -->
 
 <div class="brand-video site-width box centered">
 	<h2>Meet Sara</h2>
@@ -238,16 +264,5 @@ $context = stream_context_create(array(
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 
 <?php get_template_part('partials/display', 'basic-contact-us'); ?>
-
-
-
-<style>
-
-@media screen and (max-width: 767px) {
-	.home .fixed-hero-section .half > div:first-child {
-		width: 100%;
-	}
-}
-</style>
 
 <?php get_footer(); ?>

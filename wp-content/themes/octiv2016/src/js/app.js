@@ -22,6 +22,7 @@ if ($('.typed').length) {
   });
 }
 
+
 /*
 ==============================
 SCROLLING EVENTS FOR HOMEPAGE
@@ -219,15 +220,18 @@ SLIDERS
 */
 // BASIC FULL WIDTH SLIDER
 $('.slider').slick({
-  autoplay : true,
-  autoplaySpeed : 2000,
-  // adaptiveHeight : true,
-  arrows : true,
-  prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
-  nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
-  appendArrows : $('.slider-buttons'),
+  // autoplay : true,
+  // autoplaySpeed : 2000,
+  adaptiveHeight : true,
+  // initialSlide: 1,
+  arrows : false,
   dots : true,
   mobileFirst : true
+});
+$('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
+  if (nextSlide === 2) {
+    document.querySelector('.hero-video').play();
+  }
 });
 // SLIDER FOR MULTIPLE ELEMENTS AT LARGER BREAKPOINTS
 $('.multi-slider').slick({
