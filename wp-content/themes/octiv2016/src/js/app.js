@@ -219,8 +219,8 @@ SLIDERS
 */
 // BASIC FULL WIDTH SLIDER
 $('.slider').slick({
-  // autoplay : true,
-  // autoplaySpeed : 8000,
+  autoplay : true,
+  autoplaySpeed : 2000,
   // adaptiveHeight : true,
   arrows : true,
   prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
