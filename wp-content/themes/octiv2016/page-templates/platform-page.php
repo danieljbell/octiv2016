@@ -21,9 +21,12 @@ $context = stream_context_create(array(
 	<div class="site-width white-text centered pos-rel" style="z-index: 2;">
 		<div class="half">
 			<div style="margin-right: auto; margin-bottom: 0;">
-				<h1 style="margin-bottom: 0.5rem;">The Octiv Platform Powers Document Workflows for a Range of Use Cases</h1>
+				<h1 style="margin-bottom: 0.5rem;">Power Your Document Workflows</h1>
 				<div class="fancy-links">
           <?php the_content(); ?>
+        </div>
+        <div class="mar-t">
+          <button class="rad-modal-button btn-primary">Learn How</button>
         </div>
 			</div>
 		</div>
