@@ -225,8 +225,8 @@ if ($('body').hasClass('home')) {
   });
 }
 $('.slider').slick({
-  // autoplay : true,
-  // autoplaySpeed : 2000,
+  autoplay : true,
+  autoplaySpeed : 5000,
   adaptiveHeight : true,
   // initialSlide: 1,
   arrows : false,
@@ -235,7 +235,7 @@ $('.slider').slick({
 });
 // $('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
 //   if (nextSlide === 1) {
-    
+
 //   }
 // });
 // SLIDER FOR MULTIPLE ELEMENTS AT LARGER BREAKPOINTS
