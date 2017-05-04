@@ -219,6 +219,11 @@ SLIDERS
 ==============================
 */
 // BASIC FULL WIDTH SLIDER
+if ($('body').hasClass('home')) {
+  $('.slider').on('init', function() {
+    document.querySelector('.hero-video').play();
+  });
+}
 $('.slider').slick({
   // autoplay : true,
   // autoplaySpeed : 2000,
@@ -228,11 +233,11 @@ $('.slider').slick({
   dots : true,
   mobileFirst : true
 });
-$('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
-  if (nextSlide === 2) {
-    document.querySelector('.hero-video').play();
-  }
-});
+// $('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
+//   if (nextSlide === 1) {
+    
+//   }
+// });
 // SLIDER FOR MULTIPLE ELEMENTS AT LARGER BREAKPOINTS
 $('.multi-slider').slick({
   autoplay : true,

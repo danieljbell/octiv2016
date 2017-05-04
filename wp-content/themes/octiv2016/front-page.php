@@ -16,9 +16,13 @@ $context = stream_context_create(array(
 			<section>
 				<div class="video-overlay"></div>
 				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
+				<div class="site-width centered white-text font-bump" style="position: relative; z-index: 5;">
 					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-          <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+					<div class="two-third-only">
+						<div class="font-bump">
+							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+						</div>
+					</div>
 					<button class="rad-modal-button btn-primary">Learn How</button>
 				</div>
 			</section>

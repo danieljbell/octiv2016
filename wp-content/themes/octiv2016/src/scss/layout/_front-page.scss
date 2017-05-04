@@ -5,11 +5,16 @@
   padding-bottom: 0;
   .slick-slide {
     color: $gray;
-    padding-bottom: 16rem;
+    @include bp(sm) {
+      padding-bottom: 8rem;
+    }
   }
   .slick-dots {
-    margin-top: -9rem;
-    padding-bottom: 7rem;
+    padding-left: 0;
+    @include bp(sm) {
+      margin-top: -9rem;
+      padding-bottom: 7rem;
+    }
   }
 }
 
@@ -35,20 +40,13 @@
   width: 100%;
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: #000;
-  opacity: 0.4
+  opacity: 0.6;
 }
 
 .home h1 {
   font-size: 1.4rem;
   line-height: 1.1em;
   margin-bottom: 1rem;
-  span.typed {
-    font-size: 0.9em;
-    line-height: 1.1em;
-    font-style: italic;
-    color: $brand;
-    font-weight: lighter;
-  }
   @include bp(sm) {
     font-size: 2rem;
   }
@@ -63,22 +61,30 @@
   }
 }
 
-.home .fixed-hero-section p {
-  font-size: 1.2em;
-  @include bp(sm) {
-    font-size: 1.4em;
-  }
-  @include bp(md) {
-    font-size: 1.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  @include bp(xxl) {
-    font-size: 1.7em;
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+span.typed {
+  font-size: 0.9em;
+  line-height: 1.1em;
+  font-style: italic;
+  color: $brand;
+  font-weight: lighter;
 }
+
+// .home .fixed-hero-section p {
+//   font-size: 1.2em;
+//   @include bp(sm) {
+//     font-size: 1.4em;
+//   }
+//   @include bp(md) {
+//     font-size: 1.5em;
+//     padding-left: 1em;
+//     padding-right: 1em;
+//   }
+//   @include bp(xxl) {
+//     font-size: 1.7em;
+//     padding-left: 2em;
+//     padding-right: 2em;
+//   }
+// }
 
 .home .brand-video {
   margin-top: -3rem;
