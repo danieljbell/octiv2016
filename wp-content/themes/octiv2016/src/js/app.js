@@ -158,6 +158,22 @@ $('.rad-modal-button').on('click', function(e) {
 
 /*
 ==============================
+DATASHEET MODAL
+==============================
+*/
+if ($('body').hasClass('single-features')) {
+  var modalContainer = $('.empty-modal');
+
+  $('.datasheet-modal-button').on('click', function(e) {
+    e.preventDefault();
+    modalContainer.modal();
+  });
+}
+
+
+
+/*
+==============================
 NAVIGATION
 ==============================
 */
