@@ -390,7 +390,7 @@ $('#submit-ticket').on('click', function(e){
 GET TH TEXT FOR ARIA-LABELS
 ==============================
 */
-if (!$('body').hasClass('postid-2669')) {
+if (!$('body').hasClass('postid-2731')) {
   var colHeads;
 
   $('thead').each(function(i, obj) {
