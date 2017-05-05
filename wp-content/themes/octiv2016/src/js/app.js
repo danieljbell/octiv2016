@@ -390,19 +390,21 @@ $('#submit-ticket').on('click', function(e){
 GET TH TEXT FOR ARIA-LABELS
 ==============================
 */
-var colHeads;
+if (!$('body').hasClass('postid-2669')) {
+  var colHeads;
 
-$('thead').each(function(i, obj) {
-  colHeads = $(this).find('tr th');
-});
+  $('thead').each(function(i, obj) {
+    colHeads = $(this).find('tr th');
+  });
 
-$('tbody').each(function() {
-  $(this).find('tr').each(function() {
-    $(this).find('td').each(function(i) {
-      $(this).attr('aria-label', colHeads[i%4].innerText);
+  $('tbody').each(function() {
+    $(this).find('tr').each(function() {
+      $(this).find('td').each(function(i) {
+        $(this).attr('aria-label', colHeads[i%4].innerText);
+      })
     })
-  })
-});
+  });
+}
 
 
 /*
@@ -533,10 +535,12 @@ if ($('.single-integration').length || $('.single-solutions').length || $('.page
 SCROLLSPY FOR SIDEBAR
 ==============================
 */
-$('body').scrollspy({
-  target: '.sticky-sidebar',
-  offset: 54
-});
+if (!$('body').hasClass('single-post')) {
+  $('body').scrollspy({
+    target: '.sticky-sidebar',
+    offset: 54
+  });
+}
 
 
 

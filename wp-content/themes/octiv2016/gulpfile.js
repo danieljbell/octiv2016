@@ -35,15 +35,15 @@ gulp.task('js', function () {
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/jquery-accessible-tabs/js/jquery.tabs.js',
       'bower_components/slick-carousel/slick/slick.js',
-      'bower_components/twentytwenty/js/jquery.event.move.js',
-      'bower_components/twentytwenty/js/jquery.twentytwenty.js',
       'bower_components/typed.js/js/typed.js',
       'bower_components/waypoints/lib/jquery.waypoints.js',
       'bower_components/waypoints/lib/shortcuts/inview.js',
       'src/js/app.js'
     ])
+    // .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(uglify())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 });

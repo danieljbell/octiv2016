@@ -30,6 +30,49 @@ $upload_dir = wp_upload_dir(); ?>
 			<div class="two-third">
 				<div class="post-main">
 					<?php the_content(); ?>
+					<?php
+						if (get_field('need_form')) :
+							echo '<div class="box custom-post-form"><div class="two-third-only"><div class="centered">';
+							echo '<div>';
+								echo '<h3>' . get_field('form_headline') . '</h3>';
+								echo '<p>' . get_field('form_copy') . '</p>';
+							?>
+								<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+								<form id="mktoForm_1041"></form>
+								<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+								  var allWidth = document.querySelectorAll('.post-main .mktoHasWidth');
+								  for (var i = 0; i < allWidth.length; i++) {
+								    allWidth[i].style.width = '100%';
+								  }
+								  var allCol = document.querySelectorAll('.post-main .mktoFormCol');
+								  for (var i = 0; i < allCol.length; i++) {
+								    allCol[i].style.width = '100%';
+								  }
+
+									var allLabel = document.querySelectorAll('.post-main label');
+									for (var i = 0; i < allLabel.length; i++) {
+										console.dir(allLabel[i].style);
+									}
+
+								  form.onSuccess(function(values, followUpUrl) {;
+										form.getFormElem().hide();
+								    // Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl
+								    location.href = "<?php echo get_field('redirect_url'); ?>";
+								    // Return false to prevent the submission handler continuing with its own processing
+								    return false;
+								  });
+
+								});</script>
+					<?php
+						echo '</div></div></div></div>'; ?>
+						<style>
+							.post-main label,
+							.post-main input {
+								text-align: left !important;
+							}
+						</style>
+					<?php endif;
+					?>
 					<?php // get_template_part('partials/display', 'advertisement'); ?>
 					<div class="post-sharing">
 						<h4>Share this Article:</h4>
