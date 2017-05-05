@@ -35,7 +35,7 @@ $context = stream_context_create(array(
 			</div>
 			<div class="video-outer">
 				<div class="video-inner">
-					<iframe src="https://fast.wistia.net/embed/iframe/hjy779ahf2?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+					<iframe src="//www.youtube.com/embed/Gr6n4yMvTSg?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;vq=hd720" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
 				</div>
 			</div>
 		</div>
