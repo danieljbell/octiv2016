@@ -226,18 +226,28 @@ if ($('body').hasClass('home')) {
 }
 $('.slider').slick({
   autoplay : true,
-  autoplaySpeed : 5000,
+  autoplaySpeed : 6000,
   adaptiveHeight : true,
   // initialSlide: 1,
   arrows : false,
   dots : true,
-  mobileFirst : true
+  mobileFirst : true,
+  draggable: true,
+  responsive : [
+    {
+      breakpoint: 768,
+      settings: {
+        draggable: false,
+        focusOnSelect: true
+      }
+    }
+  ]
 });
-// $('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
-//   if (nextSlide === 1) {
-
-//   }
-// });
+$('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
+  if (nextSlide === 1) {
+    document.querySelector('.hero-video').play();
+  }
+});
 // SLIDER FOR MULTIPLE ELEMENTS AT LARGER BREAKPOINTS
 $('.multi-slider').slick({
   autoplay : true,
