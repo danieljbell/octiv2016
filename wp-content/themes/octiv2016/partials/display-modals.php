@@ -96,8 +96,8 @@
   	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <div class="modal-content">
       <?php if (is_singular('features')) : ?>
-      <h2>Some Headline</h2>
-      <p>Some SubHeadline</p>
+      <h2><?php echo get_field('datasheet_headline'); ?></h2>
+      <p><?php echo get_field('datasheet_headline'); ?></p>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_1145"></form>
         <script>

@@ -98,8 +98,8 @@
   <section class="fat-section">
     <div class="site-width">
       <div class="centered">
-        <h2>Some Headline</h2>
-        <p>Some subhead</p>
+        <h2><?php echo get_field('datasheet_headline'); ?></h2>
+        <p><?php echo get_field('datasheet_headline'); ?></p>
         <button class="datasheet-modal-button btn-primary">Get the Full Datasheet</button>
       </div>
     </div>
