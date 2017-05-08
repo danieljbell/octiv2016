@@ -96,6 +96,8 @@
   	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <div class="modal-content">
       <?php if (is_singular('features')) : ?>
+      <h2>Some Headline</h2>
+      <p>Some SubHeadline</p>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_1145"></form>
         <script>
@@ -113,6 +115,20 @@
             });
           });
         </script>
+        <style>
+        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+          display: flex;
+          flex-direction: row;
+        }
+        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap label{
+          order: 1;
+        }
+        @media screen and (min-width: 767px) {
+          .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+            margin-top: 1rem;
+          }
+        }
+        </style>
       <?php endif; ?>
     </div>
   </div>
