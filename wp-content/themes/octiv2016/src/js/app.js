@@ -589,14 +589,28 @@ if (window.MktoForms2) {
       if ($('#mktoForms2ThemeStyle')) {
         $('#mktoForms2ThemeStyle').remove();
       }
-      formObj.find('.mktoOffset').remove();
-      formObj.find('.mktoGutter').remove();
-      formObj.find('.mktoClear').remove();
+      if (formObj.find('.mktoOffset')) {
+        formObj.find('.mktoOffset').remove();
+      }
+      if (formObj.find('.mktoGutter')) {
+        formObj.find('.mktoGutter').remove();
+      }
+      if (formObj.find('.mktoClear')) {
+        formObj.find('.mktoClear').remove();
+      }
+      if (formObj.find('style')) {
+        formObj.find('style').remove();
+      }
+      if (formObj.find('.mktoHasWidth')) {
+        formObj.find('.mktoHasWidth').attr('style', '');
+      }
+      if (formObj.find('.mktoButtonWrap')) {
+          formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
+      }
+      if (formObj.find('.mktoInset')) {
+        formObj.find('.mktoInset').attr('style', '');
+      }
       formObj.attr('style', '');
-      formObj.find('style').remove();
-      formObj.find('.mktoHasWidth').attr('style', '');
-      formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
-      formObj.find('.mktoInset').attr('style', '');
     }
 
   });

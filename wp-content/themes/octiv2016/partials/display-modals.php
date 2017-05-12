@@ -13,10 +13,15 @@
             for (var i = 0; i < selectBoxes.length; i++) {
               selectBoxes[i].classList.add('fancy');
             }
-            var modalNewsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
-            if (modalNewsletterBox) {
-              modalNewsletterBox.parentElement.classList.add('mktoFlexWrap');
-              modalNewsletterBox.querySelector('.mktoAsterix').remove();
+            var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
+            for (var i = 0; i < modalNewsletterBox.length; i++) {
+              modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
+              var ast = modalNewsletterBox[i].querySelectorAll('.mktoAsterix');
+              if (ast) {
+                for (var i = 0; i < ast.length; i++) {
+                  ast[i].remove();
+                }
+              }
             }
 
             // Blacklisted Email Domains
