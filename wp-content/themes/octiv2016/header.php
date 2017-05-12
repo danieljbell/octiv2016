@@ -119,7 +119,7 @@ if(is_404() && $_GET['ref']=="tinderbox"){
               <li class="sub-menu-item"><a href="/resources/blog" title="Blog">Blog</a></li>
               <li class="sub-menu-item"><a href="/resources/client-stories" title="Client Stories">Client Stories</a></li>
               <li class="sub-menu-item"><a href="/resources/webinars" title="Webinars">Webinars</a></li>
-              <li class="sub-menu-item"><a href="/resources/whitepapers" title="Whitepapers">Whitepapers</a></li>
+              <li class="sub-menu-item"><a href="/resources/downloads" title="Downloads">Downloads</a></li>
             </ul>
           </li>
           <li class="menu-item">
