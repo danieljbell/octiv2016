@@ -40,7 +40,7 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://octiv.com/wp-content/uploads/2017/05/spring-17-bg.jpg);">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/05/spring-17-bg.jpg);">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only white-text">
