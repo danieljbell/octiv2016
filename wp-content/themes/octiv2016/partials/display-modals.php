@@ -18,8 +18,8 @@
               modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
               var ast = modalNewsletterBox[i].querySelectorAll('.mktoAsterix');
               if (ast) {
-                for (var i = 0; i < ast.length; i++) {
-                  ast[i].remove();
+                for (var j = 0; j < ast.length; j++) {
+                  ast[j].remove();
                 }
               }
             }
