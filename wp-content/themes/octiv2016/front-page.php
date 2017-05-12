@@ -45,7 +45,7 @@ $context = stream_context_create(array(
 				<div class="site-width centered">
 					<div class="white-text">
 						<div class="font-bump">
-							<h1>Octiv delivers Spring '17 Release</h1>
+							<h1>Octiv Delivers Spring Release</h1>
 							<div class="half-only">
 								<div>
 									<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
