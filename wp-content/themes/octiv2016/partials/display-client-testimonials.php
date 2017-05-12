@@ -6,7 +6,7 @@
 			'post_parent' => 74,
 			'posts_per_page' => -1,
 			'order' => 'DESC',
-			'order_by' => 'name',
+			'order_by' => 'menu_order',
 			'post_status'   => 'publish'
 		);
 
