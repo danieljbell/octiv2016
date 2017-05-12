@@ -275,6 +275,7 @@ $('.slider-for').slick({
   // autoplay : true,
   // autoplaySpeed : 1000,
   adaptiveHeight : true,
+  draggable : false,
   pauseOnHover : true,
   pauseOnFocus : true,
   pauseOnDotsHover : true,
