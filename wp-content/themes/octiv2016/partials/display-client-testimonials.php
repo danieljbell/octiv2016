@@ -5,7 +5,7 @@
 			'post_type' => 'page',
 			'post_parent' => 74,
 			'posts_per_page' => -1,
-			'order' => 'DESC',
+			'order' => 'ASC',
 			'order_by' => 'menu_order',
 			'post_status'   => 'publish'
 		);
