@@ -43,10 +43,14 @@ $context = stream_context_create(array(
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/05/spring-17-bg.jpg);">
 			<section>
 				<div class="site-width centered">
-					<div class="half-only white-text">
+					<div class="white-text">
 						<div class="font-bump">
 							<h1>Octiv delivers Spring '17 Release</h1>
-							<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
+							<div class="half-only">
+								<div>
+									<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 					<a href="/releases/spring-17" class="btn-primary">View the Release Notes</a>
