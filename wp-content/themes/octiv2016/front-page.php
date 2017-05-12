@@ -16,9 +16,9 @@ $context = stream_context_create(array(
 			<section>
 				<div class="video-overlay"></div>
 				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-				<div class="site-width centered white-text font-bump" style="position: relative; z-index: 5;">
+				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
 					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-					<div class="two-third-only">
+					<div class="two-third-only font-bump">
 						<div class="font-bump">
 							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
 						</div>
@@ -27,14 +27,30 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: url(//unsplash.it/1920/800);">
+		<div style="background-image: url(/wp-content/uploads/2017/05/home-page-bg.jpg)">
 			<section>
-				<div class="site-width">slide 2</div>
+				<div class="site-width centered">
+					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+						<div class="font-bump">
+							<h1>The Future of Work is Here</h1>
+							<p class="font-bump">From Here to Productivity is the first in a three-part series on the future of work. Want a glimpse into the future of productivity for you and your company?</p>
+						</div>
+					</div>
+					<a href="#0" class="btn-primary">Download the Infographic Now</a>
+				</div>
 			</section>
 		</div>
-		<div style="background-image: url(//unsplash.it/1920/800);">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://octiv.com/wp-content/uploads/2017/05/spring-17-bg.jpg);">
 			<section>
-				<div class="site-width">slide 3</div>
+				<div class="site-width centered">
+					<div class="half-only white-text">
+						<div class="font-bump">
+							<h1>Octiv delivers Spring '17 Release</h1>
+							<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
+						</div>
+					</div>
+					<a href="#0" class="btn-primary">View the Release Notes</a>
+				</div>
 			</section>
 		</div>
 	</div>
