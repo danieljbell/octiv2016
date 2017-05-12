@@ -56,30 +56,30 @@
 						var vals = form.vals();
 
 						// Update the redirect url with form fields
-						if (window.location.pathname === '/resources/whitepapers/unified-document-workflows-sales/') {
+						if (window.location.pathname === '/resources/downloads/unified-document-workflows-sales/') {
 
 							followUpUrl = 'https://octiv.com/wp-content/uploads/2017/02/Unified-Document-Workflows-For-Sales.pdf';
 						}
 
-						if (window.location.pathname === '/resources/whitepapers/top-17-sales-trends-for-2017/') {
+						if (window.location.pathname === '/resources/downloads/top-17-sales-trends-for-2017/') {
 
 							followUpUrl = 'http://go.octiv.com/proposals/create_and_view?api_key=08cd2775273e71f701f517da229a1006f1f143ac&amp;proposal[template_id]=32543&amp;proposal[name]=17%20Sales%20Trends%20for%202017%20for%20' + vals.Company + '&amp;first_name=' + vals.FirstName + '&amp;last_name=' + vals.LastName;
 						}
 
-						if (window.location.pathname === '/resources/whitepapers/2016-state-of-sales/') {
+						if (window.location.pathname === '/resources/downloads/2016-state-of-sales/') {
 							followUpUrl = 'http://go.octiv.com/proposals/create_and_view?api_key=08cd2775273e71f701f517da229a1006f1f143ac&amp;proposal[template_id]=28276&amp;proposal[name]=The%202016%20State%20of%20Sales%20for%20' + vals.Company + '&amp;first_name=' + vals.FirstName + '&amp;last_name=' + vals.LastName;
 						}
 
-						if (window.location.pathname === '/resources/whitepapers/4-essentials-building-better-sales-marketing-team/') {
+						if (window.location.pathname === '/resources/downloads/4-essentials-building-better-sales-marketing-team/') {
 							followUpUrl = 'http://go.octiv.com/proposals/create_and_view?api_key=08cd2775273e71f701f517da229a1006f1f143ac&amp;proposal[template_id]=28397&amp;proposal[name]=The%20Essentials%20of%20Building%20a%20Better%20Sales%20and Marketing%20Team%20for%20' + vals.Company + '&amp;first_name=' + vals.FirstName + '&amp;last_name=' + vals.LastName;
 						}
 
-						if (window.location.pathname === '/resources/whitepapers/9-top-sales-trends-2016/') {
+						if (window.location.pathname === '/resources/downloads/9-top-sales-trends-2016/') {
 							followUpUrl = 'http://go.octiv.com/proposals/create_and_view?api_key=08cd2775273e71f701f517da229a1006f1f143ac&amp;proposal[template_id]=28396&amp;proposal[name]=The%209%20Top%20Sales%20Trends%20for%202016%20for%20' + vals.Company + '&amp;first_name=' + vals.FirstName + '&amp;last_name=' + vals.LastName;
 						}
 
-						if (window.location.pathname === '/resources/whitepapers/saas-buyer-journey-timeline/') {
-							followUpUrl = '/resources/whitepapers/saas-buyer-journey-timeline/view';
+						if (window.location.pathname === '/resources/downloads/saas-buyer-journey-timeline/') {
+							followUpUrl = '/resources/downloads/saas-buyer-journey-timeline/view';
 						}
 
 						// Redirect the page with form field
@@ -106,6 +106,6 @@
 </div>
 <?php
 	if ($post->post_name === 'top-17-sales-trends-for-2017') :
-		echo '<a href="/resources/whitepapers/top-17-sales-trends-for-2017/bonus" title="Read Bonus Content"><img src="/wp-content/uploads/2016/12/bonus-content-image.png" alt="Read Bonus Content!" style="margin-top: 2rem;"></a>';
+		echo '<a href="/resources/downloads/top-17-sales-trends-for-2017/bonus" title="Read Bonus Content"><img src="/wp-content/uploads/2016/12/bonus-content-image.png" alt="Read Bonus Content!" style="margin-top: 2rem;"></a>';
 	endif;
 ?>
