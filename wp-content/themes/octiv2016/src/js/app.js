@@ -53,7 +53,7 @@ if ($('body').hasClass('home')) {
 
 
     // Smooth Scrolling
-    $('.home .fixed-hero-section a').on('click', function(e) {
+    $('.home .fixed-hero-section .fancy-links a').on('click', function(e) {
       e.preventDefault();
       var target = $(this.hash);
       $('html, body').animate({
