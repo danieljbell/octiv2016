@@ -24,8 +24,6 @@ get_header();
 	<div class="site-width">
 		<div class="two-third">
 			<div class="content-container">
-				<h2>About <?php the_title(); ?></h2>
-				<hr>
 				<?php the_content(); ?>
 			</div>
 			<aside>
