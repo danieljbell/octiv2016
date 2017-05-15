@@ -24,7 +24,7 @@
 
 		if ($whitepaper_ad->have_posts()) : while ($whitepaper_ad->have_posts()) : $whitepaper_ad->the_post(); ?>
 			<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('cover_image'); ?>" alt="<?php the_title(); ?>"></a>
-			<p><strong>Free Whitepaper:</strong><br><?php the_title(); ?></p>
-			<a href="<?php the_permalink(); ?>" class="btn-white-outline">Download the Book</a>
+			<p><strong>Free Download:</strong><br><?php the_title(); ?></p>
+			<a href="<?php the_permalink(); ?>" class="btn-white-outline">Download Now</a>
 		<?php endwhile; endif; wp_reset_query(); ?>
 </div>
