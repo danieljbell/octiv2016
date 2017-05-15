@@ -53,7 +53,7 @@ $context = stream_context_create(array(
 							</div>
 						</div>
 					</div>
-					<a href="/releases/spring-17" class="btn-primary">View the Release Notes</a>
+					<a href="/octiv-nation/first-look-octiv-spring-2017-release/" class="btn-primary">View the Blog Post</a>
 				</div>
 			</section>
 		</div>
