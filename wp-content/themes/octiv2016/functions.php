@@ -5,7 +5,7 @@ ADD GLOBAL CSS TO PAGE
 ==============================
 */
 function enqueue_global_css() {
-	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/style.css', array(), '2.0.2');
+	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/style.css', array(), '2.0.3');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
@@ -17,7 +17,7 @@ ADD GLOBAL JS TO PAGE
 ==============================
 */
 function enqueue_global_js() {
-	wp_enqueue_script('app', get_stylesheet_directory_URI() . '/dist/js/app.js', array(), '1.0.13', true);
+	wp_enqueue_script('app', get_stylesheet_directory_URI() . '/dist/js/app.js', array(), '1.0.21', true);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_global_js');

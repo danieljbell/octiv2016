@@ -13,10 +13,15 @@
             for (var i = 0; i < selectBoxes.length; i++) {
               selectBoxes[i].classList.add('fancy');
             }
-            var modalNewsletterBox = document.querySelector('label[for="subscriptionNewsletter"]');
-            if (modalNewsletterBox) {
-              modalNewsletterBox.parentElement.classList.add('mktoFlexWrap');
-              modalNewsletterBox.querySelector('.mktoAsterix').remove();
+            var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
+            for (var i = 0; i < modalNewsletterBox.length; i++) {
+              modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
+              var ast = modalNewsletterBox[i].querySelectorAll('.mktoAsterix');
+              if (ast) {
+                for (var j = 0; j < ast.length; j++) {
+                  ast[j].remove();
+                }
+              }
             }
 
             // Blacklisted Email Domains
@@ -95,11 +100,41 @@
   <div class="modal-dialog modal-lg">
   	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <div class="modal-content">
-  		<div class="video-outer">
-  			<div class="video-inner">
-  				<iframe style="width: 100% !important; height: 100% !important;" src="" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
-  			</div>
-	    </div>
+      <?php if (is_singular('features')) : ?>
+      <h2><?php echo get_field('datasheet_headline'); ?></h2>
+      <p><?php echo get_field('datasheet_headline'); ?></p>
+        <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+        <form id="mktoForm_1145"></form>
+        <script>
+          MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1145, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              // Update the redirect url with form fields
+              followUpUrl = <?php echo '\'' . get_field('datasheet_url') . '\''; ?>;
+
+              // Redirect the page with form field
+              location.href = followUpUrl;
+
+              // Return false to prevent the submission handler continuing with its own processing
+              return false;
+            });
+          });
+        </script>
+        <style>
+        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+          display: flex;
+          flex-direction: row;
+        }
+        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap label{
+          order: 1;
+        }
+        @media screen and (min-width: 767px) {
+          .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+            margin-top: 1rem;
+          }
+        }
+        </style>
+      <?php endif; ?>
     </div>
   </div>
 </div>

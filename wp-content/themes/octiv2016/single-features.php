@@ -91,7 +91,25 @@
   </div>
 </section>
 
+<?php if(get_field('has_datasheet')) : ?>
+  <div class="site-width">
+    <hr>
+  </div>
+  <section class="fat-section">
+    <div class="site-width">
+      <div class="centered">
+        <h2><?php echo get_field('datasheet_headline'); ?></h2>
+        <p><?php echo get_field('datasheet_subheadline'); ?></p>
+        <button class="datasheet-modal-button btn-primary">Get the Full Datasheet</button>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
 <style>
+  label[for="subscriptionNewsletter"] .mktoAsterix {
+    display: none;
+  }
   main p + ul {
     margin-top: -1rem;
     margin-bottom: 1rem;

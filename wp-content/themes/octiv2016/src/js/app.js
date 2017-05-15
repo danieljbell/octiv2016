@@ -159,6 +159,22 @@ $('.rad-modal-button').on('click', function(e) {
 
 /*
 ==============================
+DATASHEET MODAL
+==============================
+*/
+if ($('body').hasClass('single-features')) {
+  var modalContainer = $('.empty-modal');
+
+  $('.datasheet-modal-button').on('click', function(e) {
+    e.preventDefault();
+    modalContainer.modal();
+  });
+}
+
+
+
+/*
+==============================
 NAVIGATION
 ==============================
 */
@@ -278,6 +294,7 @@ $('.slider-for').slick({
   // autoplay : true,
   // autoplaySpeed : 1000,
   adaptiveHeight : true,
+  draggable : false,
   pauseOnHover : true,
   pauseOnFocus : true,
   pauseOnDotsHover : true,
@@ -393,19 +410,21 @@ $('#submit-ticket').on('click', function(e){
 GET TH TEXT FOR ARIA-LABELS
 ==============================
 */
-var colHeads;
+if (!$('body').hasClass('postid-2731')) {
+  var colHeads;
 
-$('thead').each(function(i, obj) {
-  colHeads = $(this).find('tr th');
-});
+  $('thead').each(function(i, obj) {
+    colHeads = $(this).find('tr th');
+  });
 
-$('tbody').each(function() {
-  $(this).find('tr').each(function() {
-    $(this).find('td').each(function(i) {
-      $(this).attr('aria-label', colHeads[i%4].innerText);
+  $('tbody').each(function() {
+    $(this).find('tr').each(function() {
+      $(this).find('td').each(function(i) {
+        $(this).attr('aria-label', colHeads[i%4].innerText);
+      })
     })
-  })
-});
+  });
+}
 
 
 /*
@@ -536,10 +555,12 @@ if ($('.single-integration').length || $('.single-solutions').length || $('.page
 SCROLLSPY FOR SIDEBAR
 ==============================
 */
-$('body').scrollspy({
-  target: '.sticky-sidebar',
-  offset: 54
-});
+if (!$('body').hasClass('single-post')) {
+  $('body').scrollspy({
+    target: '.sticky-sidebar',
+    offset: 54
+  });
+}
 
 
 
@@ -588,14 +609,28 @@ if (window.MktoForms2) {
       if ($('#mktoForms2ThemeStyle')) {
         $('#mktoForms2ThemeStyle').remove();
       }
-      formObj.find('.mktoOffset').remove();
-      formObj.find('.mktoGutter').remove();
-      formObj.find('.mktoClear').remove();
+      if (formObj.find('.mktoOffset')) {
+        formObj.find('.mktoOffset').remove();
+      }
+      if (formObj.find('.mktoGutter')) {
+        formObj.find('.mktoGutter').remove();
+      }
+      if (formObj.find('.mktoClear')) {
+        formObj.find('.mktoClear').remove();
+      }
+      if (formObj.find('style')) {
+        formObj.find('style').remove();
+      }
+      if (formObj.find('.mktoHasWidth')) {
+        formObj.find('.mktoHasWidth').attr('style', '');
+      }
+      if (formObj.find('.mktoButtonWrap')) {
+          formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
+      }
+      if (formObj.find('.mktoInset')) {
+        formObj.find('.mktoInset').attr('style', '');
+      }
       formObj.attr('style', '');
-      formObj.find('style').remove();
-      formObj.find('.mktoHasWidth').attr('style', '');
-      formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
-      formObj.find('.mktoInset').attr('style', '');
     }
 
   });

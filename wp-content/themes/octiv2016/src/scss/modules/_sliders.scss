@@ -124,6 +124,20 @@ HOME PAGE OVERRIDES
 ==============================
 */
 .client-testimonials .slider-for {
+  &.slick-slider {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+  .slick-list.draggable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   @include bp(sm) {
     font-size: 1.4em;
     line-height: 1;
