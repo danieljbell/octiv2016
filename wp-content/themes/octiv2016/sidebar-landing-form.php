@@ -56,6 +56,10 @@
 						var vals = form.vals();
 
 						// Update the redirect url with form fields
+						if (window.location.pathname === '/resources/downloads/future-work-productivity/') {
+							followUpUrl = '/wp-content/uploads/2017/05/FOW-Productivity.jpg';
+						}
+
 						if (window.location.pathname === '/resources/downloads/unified-document-workflows-sales/') {
 
 							followUpUrl = 'https://octiv.com/wp-content/uploads/2017/02/Unified-Document-Workflows-For-Sales.pdf';
