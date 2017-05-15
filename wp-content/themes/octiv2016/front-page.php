@@ -36,7 +36,7 @@ $context = stream_context_create(array(
 							<p class="font-bump">From Here to Productivity is the first in a three-part series on the future of work. Want a glimpse into the future of productivity for you and your company?</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/the-future-of-work-from-here-to-productivity" class="btn-primary">Download the Infographic Now</a>
+					<a href="/resources/downloads/future-work-productivity" class="btn-primary">Download the Infographic Now</a>
 				</div>
 			</section>
 		</div>
