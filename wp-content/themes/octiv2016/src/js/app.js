@@ -22,6 +22,7 @@ if ($('.typed').length) {
   });
 }
 
+
 /*
 ==============================
 SCROLLING EVENTS FOR HOMEPAGE
@@ -52,7 +53,7 @@ if ($('body').hasClass('home')) {
 
 
     // Smooth Scrolling
-    $('.home .fixed-hero-section a').on('click', function(e) {
+    $('.home .fixed-hero-section .fancy-links a').on('click', function(e) {
       e.preventDefault();
       var target = $(this.hash);
       $('html, body').animate({
@@ -234,16 +235,34 @@ SLIDERS
 ==============================
 */
 // BASIC FULL WIDTH SLIDER
+if ($('body').hasClass('home')) {
+  $('.slider').on('init', function() {
+    document.querySelector('.hero-video').play();
+  });
+}
 $('.slider').slick({
-  // autoplay : true,
-  // autoplaySpeed : 8000,
-  // adaptiveHeight : true,
-  arrows : true,
-  prevArrow : '<button type="button" class="slick-prev slick-arrow">&lt;</button>',
-  nextArrow : '<button type="button" class="slick-next slick-arrow">&gt;</button>',
-  appendArrows : $('.slider-buttons'),
+  autoplay : true,
+  autoplaySpeed : 6000,
+  adaptiveHeight : true,
+  // initialSlide: 1,
+  arrows : false,
   dots : true,
-  mobileFirst : true
+  mobileFirst : true,
+  draggable: true,
+  responsive : [
+    {
+      breakpoint: 768,
+      settings: {
+        draggable: false,
+        focusOnSelect: true
+      }
+    }
+  ]
+});
+$('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
+  if (nextSlide === 1) {
+    document.querySelector('.hero-video').play();
+  }
 });
 // SLIDER FOR MULTIPLE ELEMENTS AT LARGER BREAKPOINTS
 $('.multi-slider').slick({

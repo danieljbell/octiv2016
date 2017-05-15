@@ -11,18 +11,74 @@ $context = stream_context_create(array(
 <?php get_header(); ?>
 
 <div class="fixed-hero-section">
-	<div class="video-overlay"></div>
-	<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-	<div class="site-width pos-rel" style="z-index: 2;">
-	    <div class="half white-text">
-	        <div>
-	            <h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-	            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
-							<button class="rad-modal-button btn-primary">Learn How</button>
-	        </div>
-	    </div>
+	<div class="slider">
+		<div style="position: relative; background-image: url(/wp-content/themes/octiv2016//dist/img/home-video-hero.jpg);">
+			<section>
+				<div class="video-overlay"></div>
+				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
+				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
+					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
+					<div class="two-third-only font-bump">
+						<div class="font-bump">
+							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+						</div>
+					</div>
+					<button class="rad-modal-button btn-primary">Learn How</button>
+				</div>
+			</section>
+		</div>
+		<div style="background-image: url(/wp-content/uploads/2017/05/home-page-bg.jpg)">
+			<section>
+				<div class="site-width centered">
+					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+						<div class="font-bump">
+							<h1>The Future of Work is Here</h1>
+							<p class="font-bump">From Here to Productivity is the first in a three-part series on the future of work. Want a glimpse into the future of productivity for you and your company?</p>
+						</div>
+					</div>
+					<a href="/resources/downloads/the-future-of-work-from-here-to-productivity" class="btn-primary">Download the Infographic Now</a>
+				</div>
+			</section>
+		</div>
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/05/spring-17-bg.jpg);">
+			<section>
+				<div class="site-width centered">
+					<div class="white-text">
+						<div class="font-bump">
+							<h1>Octiv Delivers Spring Release</h1>
+							<div class="half-only">
+								<div>
+									<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="/releases/spring-17" class="btn-primary">View the Release Notes</a>
+				</div>
+			</section>
+		</div>
 	</div>
 </div>
+
+<!-- <div class="fixed-hero-section">
+	<div class="slider">
+		<div>
+			<div class="video-overlay"></div>
+			<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
+			<div class="site-width pos-rel" style="z-index: 2;">
+			    <div class="half white-text">
+			        <div>
+			            <h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
+			            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+									<button class="rad-modal-button btn-primary">Learn How</button>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div>Slide Two</div>
+		<div>Slide Three</div>
+	</div>
+</div> -->
 
 <div class="brand-video site-width box centered">
 	<h2>Meet Sara</h2>
@@ -232,16 +288,5 @@ $context = stream_context_create(array(
 <?php get_template_part('partials/display', 'client-testimonials'); ?>
 
 <?php get_template_part('partials/display', 'basic-contact-us'); ?>
-
-
-
-<style>
-
-@media screen and (max-width: 767px) {
-	.home .fixed-hero-section .half > div:first-child {
-		width: 100%;
-	}
-}
-</style>
 
 <?php get_footer(); ?>
