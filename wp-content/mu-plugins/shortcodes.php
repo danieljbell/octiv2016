@@ -9,10 +9,11 @@ add_shortcode('get_card', function($atts) {
     array(
       'thumb' => 'false',
       'excerpt' => 'false',
+      'class' => '',
       'tag' => '',
     ), $atts));
     ob_start(); ?>
-      <div class="card">
+      <div class="card <?php if ($class) {echo $class;} ?> ">
         <?php if ($thumb === 'true') : ?>
           <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb"></a>
         <?php endif; ?>
@@ -22,7 +23,7 @@ add_shortcode('get_card', function($atts) {
               echo '<p class="card-tag-webinars float-r-a">Beta</p>';
             endif;
             if ($tag === 'past') :
-              echo '<p class="card-tag-webinars float-r-a">Past Event</p>';
+              echo '<p class="card-tag-webinars">Past Event</p>';
             endif;
             if ($tag === 'roadmap') :
               echo '<p class="card-tag-blog float-r-a">Roadmap</p>';
@@ -48,10 +49,29 @@ add_shortcode('get_card', function($atts) {
             elseif ($excerpt === 'date') :
               $event_start = get_field('event_start_date');
               $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
-              $date = date_create($event_start);
-              $date = date_format($date,"F d, Y");
+              $start_date = date_create($event_start);
+              $start_date_year = date_format($start_date,"Y");
+              $start_date_month = date_format($start_date,"F");
+              $start_date_day = date_format($start_date,"j");
+              if (get_field('event_end_date')) {
+                $event_end = get_field('event_end_date');
+                $event_end = substr($event_end, 0, 4) . '-'. substr($event_end, 4, 2) . '-' . substr($event_end, 6);
+                $end_date = date_create($event_end);
+                $end_date_day = date_format($end_date,"j");
+              }
+              // echo '<p>End Date: ' . $event_end . '</p>';
               echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-              echo '<p>' . $date . '</p>';
+              echo '<p>';
+                echo $start_date_month;
+                echo ' ';
+                echo $start_date_day;
+                if ($start_date_day = $end_date_day) {
+                  echo '-';
+                  echo $end_date_day;
+                }
+                echo ', ';
+                echo $start_date_year;
+                echo '</p>';
             else :
               echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
             endif;

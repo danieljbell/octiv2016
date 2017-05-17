@@ -181,7 +181,7 @@ add_action( 'init', 'register_event_post_type' );
 function register_event_post_type() {
 
   $labels = array(
-    'name'                => 'Events',
+    'name'                => 'Events & Webinars',
     'singular_name'       => 'Event',
     'add_new'             => 'Add New Event',
     'add_new_item'        => 'Add New Event',
@@ -198,8 +198,10 @@ function register_event_post_type() {
 
   $args = array(
     'labels'      => $labels,
+    'description' => 'Octiv is out and about and even in your computer!',
     'public'      => true,
     'has_archive' => true,
+    'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
     'supports'    => array( 'title', 'editor', 'thumbnail' ),
     'capabilities' => array(
@@ -244,7 +246,7 @@ function events_init() {
         'events',
         array(
             'label' => __( 'Event Type' ),
-            'rewrite' => array( 'slug' => 'events' ),
+            'rewrite' => array( 'slug' => 'resources/events' ),
             'hierarchical' => true,
             'hasArchive' => true,
             'show_ui' => true,

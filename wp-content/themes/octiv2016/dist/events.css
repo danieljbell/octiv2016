@@ -1,0 +1,40 @@
+.filter-container {
+  display: none;
+}
+
+.is-open + .filter-container {
+  display: block;
+}
+
+.filter-toggle {
+  cursor: pointer;
+}
+
+.filter-container ul {
+  padding-left: 0;
+}
+
+.section-menu *::selection {
+  background-color: transparent;
+}
+
+.no-upcoming .upcoming,
+.no-past .past,
+.no-thought-leadership .thought-leadership,
+.no-product .product,
+.no-client .client {
+  display: none;
+}
+
+.card div {
+  position: relative;
+}
+
+.card-tag-webinars + h4 {
+  margin-top: 1rem;
+}
+
+.card-tag-webinars {
+  position: absolute;
+  top: 0.5rem;
+}
