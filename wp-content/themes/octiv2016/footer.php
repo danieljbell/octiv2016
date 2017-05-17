@@ -43,8 +43,8 @@
 					<ul>
 						<li><a href="/resources/blog">Blog</a></li>
 						<li><a href="/resources/client-stories">Client Stories</a></li>
+						<li><a href="/resources/downloads">Downloads</a></li>
 						<li><a href="/resources/webinars">Webinars</a></li>
-						<li><a href="/resources/whitepapers">Whitepapers</a></li>
 					</ul>
 				</div>
 				<div>
