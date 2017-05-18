@@ -1,198 +1,115 @@
 <?php get_header(); ?>
-<?php // CONFERENCE LAYOUT ?>
-  <?php
-    // test for industry conference in term slug
-    $term = get_the_terms($post->ID, 'event_type');
-    if ($term[0]->slug === 'industry-conferences') :
-  ?>
 
+<?php
+  // gemme dem URL params
+  $has_reg = $_GET['reg'];
+  $has_first_name = $_GET['first_name'];
+?>
+
+<?php if (get_field('webinar_type')) : ?>
   <div class="fixed-hero-section">
-    <div class="site-width white-text centered">
-      <h1><?php the_title(); ?></h1>
+    <div class="site-width white-text">
+      <h1><?php echo get_the_title(); ?></h1>
     </div>
   </div>
 
   <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
+  <section>
+    <div class="site-width">
+      <div class="two-third">
+        <div>
+          <?php if ($has_reg) : ?>
+            <div class="video-outer">
+              <div class="video-inner">
+                <iframe src="https://www.youtube.com/embed/9F5ByZqkscE?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%"></iframe>
+              </div>
+            </div>
+          <?php endif; ?>
+          <h4>Overview</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ea quasi, enim delectus? Tempora, assumenda.</p>
+          <br>
+          <h4>Date &amp; Time</h4>
+          <p>Something</p>
+          <br>
+          <h4>Speakers</h4>
+          <ul class="half no-bul speakers">
+            <li class="speaker">
+              <div>
+                <img src="//fillmurray.com/100/100" alt="" class="speaker-headshot">
+              </div>
+              <div>
+                <div>
+                  <h5>Tom Marvel</h5>
+                  <p><em>Product Manager</em>Octiv</p>
+                </div>
+                <ul class="speaker-social no-bull">
+                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt=""></a></li>
+                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="speaker">
+              <div>
+                <img src="//placecage.com/100/100" alt="" class="speaker-headshot">
+              </div>
+              <div>
+                <div>
+                  <h5>Amanda Lester</h5>
+                  <p><em>Product Marketing Manager</em>Octiv</p>
+                </div>
+                <ul class="speaker-social no-bull">
+                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt=""></a></li>
+                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <?php if ($has_reg) :  // testing for webinar id for post event ?>
+            <div class="question-answer">
+              <h4>Q&amp;A</h4>
+              <dl class="accordian">
+    						<dt>some question</dt>
+    						<dd>some answer</dd>
+                <dt>some question</dt>
+    						<dd>some answer</dd>
+                <dt>some question</dt>
+    						<dd>some answer</dd>
+              </dl>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div>
+          <div class="box">
+            <?php if ($has_reg) : ?>
+              Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!
+            <?php else : ?>
+              <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+              <form id="mktoForm_1041"></form>
+              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+                form.onSuccess(function(values, followUpUrl) {
+      						// Get the form field values
+      						var vals = form.vals();
 
+      						// Update the redirect url with form fields
+    							followUpUrl = location.href + '?reg=true&first_name=' + vals.FirstName;
 
-  <?php
-  $schedule_heading = get_field('schedule_heading');
-    if (have_rows('schedule')) :
-      echo '<section><div class="site-width">';
-      if ($schedule_heading) :
-        echo '<h2 style="padding: 1rem 0 2rem;" class="centered">' . $schedule_heading . '</h2>';
-      endif;
-      echo '<div class="slider">';
-      while (have_rows('schedule')) :
-        echo '<div>';
-        the_row();
-        echo '<h3>' . get_sub_field('event_title') . '</h3>';
-        echo '<h4>' . get_sub_field('event_location') . '</h4>';
-        echo '<p>' . get_sub_field('event_description') . '<p>';
-        if (have_rows('day')) :
-          echo '<div class="fourth-3-fourth">';
-          while (have_rows('day')) :
-            the_row();
-                echo '<div>time';
-                echo '</div>';
-                echo '<div>';
-                  echo '<h3>' . get_sub_field('event_title') . '</h3>';
-                  echo '<h4>' . get_sub_field('event_location') . '</h4>';
-                  echo '<p>' . get_sub_field('event_description') . '<p>';
-                echo '</div>';
-          endwhile;
-          echo '</div>';
-        endif;
-        echo '</div>';
-      endwhile;
-      echo '</div></div></section>';
-    endif;
-  ?>
+      						// Redirect the page with form field
+      						location.href = followUpUrl;
 
-  <?php
-  $count = 0;
-    if (have_rows('page_section')) :
-      while (have_rows('page_section')) :
-        $count++;
-        the_row();
-          echo '<section class="dark-callout"';
-            if (get_sub_field('page_section_background')) :
-              echo 'style="background-image: url(' . get_sub_field('page_section_image') . ');"';
-            endif;
-          echo '>';
-            echo '<div class="site-width">';
-              if ($count % 2 == 0) {
-                echo '<div class="half">';
-              } else {
-                echo '<div class="half-stack">';
-              }
-                echo '<div class="white-text">';
-                  echo '<h2>' . get_sub_field('section_title') . '</h2>';
-                  echo '<p>' . get_sub_field('page_section_location') . '&nbsp;|&nbsp;' . get_sub_field('page_section_date') . '&nbsp;|&nbsp;' . get_sub_field('page_section_time') . '</p>';
-                  echo '<p>' . get_sub_field('page_section_description') . '</p>';
-                echo '</div>';
-                echo '<div class="box" style="color: #000;">';
-                  echo '<iframe src="' . get_sub_field('page_section_form') . '" width="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
-                echo '</div>';
-              echo '</div>';
-            echo '</div>';
-          echo '</section>';
-      endwhile;
-    endif;
-  ?>
-
-  <?php
-    if (get_field('cta_title')) :
-      echo '<section class="callout" style="border-top: 1px solid #ccc;">';
-        echo '<div class="site-width centered">';
-          echo '<h2>' . get_field('cta_title') . '</h2>';
-          echo '<p>' . get_field('cta_subtitle') . '</p>';
-          echo '<a href="' . get_field('cta_subtitle') . '" class="btn-primary">' . get_field('cta_button_text') . '</a>';
-        echo '</div>';
-      echo '</section>';
-    endif;
-  ?>
-
-  <style>
-    .fixed-hero-section {
-      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);
-      background-repeat: no-repeat;
-      background-size: 110%;
-      padding: 0 0;
-    }
-    @media screen and (min-width: 767px) {
-      .fixed-hero-section {
-        background-position: center;
-        background-size: cover;
-        padding: 6rem 0;
-      }
-    }
-
-    .slider .slick-slide {
-      box-shadow: none;
-      color: #000;
-    }
-    .slider p {
-      font-size: 1rem;
-    }
-    .slider .slick-slide h4 {
-      font-size: 1.4rem;
-      margin-bottom: 0;
-    }
-  </style>
-
-
-  <?php endif; ?>
-
-<?php // CLIENT WEBINAR LAYOUT ?>
-  <?php
-    // test for webinar in term slug
-    $term = get_the_terms($post->ID, 'event_type');
-    if ($term[0]->slug === 'webinars') :
-    $webinar_source = get_field('webinar_source', $queried_object);
-  ?>
-    <div class="fixed-hero-section">
-      <div class="site-width white-text">
-        <h1><?php the_title(); ?></h1>
+      						// Return false to prevent the submission handler continuing with its own processing
+      						return false;
+      					});
+              });</script>
+            <?php endif; ?>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <?php get_template_part('partials/display', 'breadcrumbs'); ?>
-
-
-
-    <?php if ($webinar_source) : ?>
-      <section>
-        <div class="site-width">
-          <div class="fourth-3-fourth">
-            <div class="sticky-sidebar">
-              <h4>Webinars</h4>
-              <hr>
-              <?php
-                $args = array(
-                  'post_type' => 'events',
-                  'posts_per_page' => 3,
-                  'post__not_in' => array($post->ID)
-                );
-                if ( have_posts() ) :
-                  while ( have_posts() ) :
-                    the_post();
-                      echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
-                  endwhile;
-                endif;
-                wp_reset_query();
-              ?>
-            </div>
-            <div>
-              <div class="video-outer">
-                <div class="video-inner">
-                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo $webinar_source?>?rel=0&showinfo=0&modestbranding=1&autohide=1&vq=hd720" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <br>
-              <?php the_content(); ?>
-            </div>
-          </div>
-        </div>
-      </section>
-    <?php else : ?>
-      <section>
-        <div class="site-width">
-          <div class="two-third">
-            <div>
-              <?php the_post_thumbnail(); ?>
-              <br>
-              <?php the_content(); ?>
-            </div>
-            <div>
-              <?php get_sidebar('landing-form'); ?>
-            </div>
-          </div>
-        </div>
-      </section>
-    <?php endif; ?>
-
-  <?php endif; ?>
+<?php else : ?>
+  I'm an event
+<?php endif ; ?>
 
 <?php get_footer(); ?>
