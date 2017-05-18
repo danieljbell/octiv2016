@@ -181,7 +181,7 @@ add_action( 'init', 'register_event_post_type' );
 function register_event_post_type() {
 
   $labels = array(
-    'name'                => 'Events & Webinars',
+    'name'                => 'Events',
     'singular_name'       => 'Event',
     'add_new'             => 'Add New Event',
     'add_new_item'        => 'Add New Event',
@@ -203,7 +203,7 @@ function register_event_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'editor', 'thumbnail' ),
+    'supports'    => array( 'title', 'thumbnail' ),
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -247,6 +247,7 @@ function events_init() {
         array(
             'label' => __( 'Event Type' ),
             'rewrite' => array( 'slug' => 'resources/events' ),
+            'with_front' => false,
             'hierarchical' => true,
             'hasArchive' => true,
             'show_ui' => true,

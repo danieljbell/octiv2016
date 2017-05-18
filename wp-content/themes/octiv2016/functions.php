@@ -513,7 +513,7 @@ function global_search() {
         <option value="page" data-parent="74">Client Stories</option>
         <option value="page" data-parent="207">Webinars</option>
         <option value="press-releases">Press Releases</option>
-        <option value="catalog">Product Features</option>
+        <option value="features">Product Features</option>
         <option value="releases">Product Releases</option>
         <option value="support">Support Documentation</option>
         <option value="events">Events</option>
@@ -574,31 +574,6 @@ function global_search_callback() {
 				'relation' => 'OR',
 				array(
 					'key' => 'launched_%_launched_feature',
-					'value' => $term,
-					'compare' => 'LIKE'
-				)
-			)
-		);
-	}
-
-	if ($type === 'catalog') {
-		// custom filter to replace '=' with 'LIKE'
-		function my_posts_where( $where )
-		{
-			$where = str_replace("meta_key = 'catalog_features_%_feature_description'", "meta_key LIKE 'catalog_features_%_feature_description'", $where);
-
-			return $where;
-		}
-
-		add_filter('posts_where', 'my_posts_where');
-
-		$args = array(
-			'post_type'	=> 'catalog',
-			// 's' => $term,
-			'meta_query' => array(
-				'relation' => 'OR',
-				array(
-					'key' => 'catalog_features_%_feature_description',
 					'value' => $term,
 					'compare' => 'LIKE'
 				)
@@ -701,10 +676,10 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
         array_splice( $links, 1, 0, $breadcrumb );
     }
 
-		if ( is_tax( 'event_type' ) ) {
+		if ( is_tax( 'event_type' ) || is_post_type_archive('events') || is_singular('events') ) {
         $breadcrumb[] = array(
-					'url' => '/events',
-          'text' => 'Events',
+					'url' => '/resources',
+          'text' => 'Resources',
         );
         array_splice( $links, 1, 0, $breadcrumb );
     }

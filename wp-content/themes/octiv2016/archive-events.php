@@ -83,7 +83,7 @@
                 echo do_shortcode('[get_card thumb="true" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
               endwhile;
                 echo '</div>';
-                echo '<div class="centered"><a href="' . get_term_link($term) . '" class="btn-outline">View All ' . $term->name . '</a></div>';
+                echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline">View All ' . $term->name . '</a></div>';
               echo '</section>';
             endif;
             wp_reset_query();

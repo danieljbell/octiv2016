@@ -24,6 +24,7 @@
       <div class="sticky-listing">
         <section style="padding-top: 0;">
           <h3 id="upcoming">Upcoming <?php echo $tax_title; ?></h3>
+          <?php post_type_archive_title(); ?>
           <?php
       			// global date param
       			$today = date('Ymd');
