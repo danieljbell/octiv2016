@@ -503,7 +503,7 @@ function global_search() {
       <select name="search_type" id="search_type" class="fancy">
         <option value="any">All</option>
         <option value="post">Blog</option>
-        <option value="page" data-parent="65">Whitepapers</option>
+        <option value="page" data-parent="65">Downloads</option>
         <option value="page" data-parent="74">Client Stories</option>
         <option value="page" data-parent="207">Webinars</option>
         <option value="press-releases">Press Releases</option>
