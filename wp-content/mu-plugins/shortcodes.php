@@ -15,7 +15,7 @@ add_shortcode('get_card', function($atts) {
     ob_start(); ?>
       <div class="card <?php if ($class) {echo $class;} ?> ">
         <?php if ($thumb === 'true') : ?>
-          <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb"></a>
+          <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb" title="<?php echo get_the_title(); ?>"></a>
         <?php endif; ?>
         <div>
           <?php
@@ -41,7 +41,7 @@ add_shortcode('get_card', function($atts) {
               echo '<p class="card-tag-webinars"><svg viewBox="0 0 16 11"><use xlink:href="#icon-webinar"></svg><span>webinars</span></p>';
             endif;
             if ($excerpt === 'true') :
-              echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
               the_excerpt();
             elseif ($excerpt === 'custom') :
               echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
@@ -59,8 +59,7 @@ add_shortcode('get_card', function($atts) {
                 $end_date = date_create($event_end);
                 $end_date_day = date_format($end_date,"j");
               }
-              // echo '<p>End Date: ' . $event_end . '</p>';
-              echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
               echo '<p>';
                 echo $start_date_month;
                 echo ' ';
@@ -73,10 +72,10 @@ add_shortcode('get_card', function($atts) {
                 echo $start_date_year;
                 echo '</p>';
             else :
-              echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
             endif;
           ?>
-          <p><a href="<?php the_permalink(); ?>" class="btn-arrow">Learn More</a></p>
+          <p><a href="<?php the_permalink(); ?>" class="btn-arrow" title="<?php echo get_the_title(); ?>">Learn More</a></p>
         </div>
       </div>
 <?php

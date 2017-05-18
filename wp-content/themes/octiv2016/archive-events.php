@@ -31,12 +31,22 @@
               echo '</ul>';
           }
         ?>
+        <div class="mar-t"></div>
+        <h4>Filters</h4>
+        <hr>
+        <ul class="no-bull filter-container">
+          <li><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
+          <li><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
+        </ul>
       </div>
       <div class="sticky-listing">
         <?php
           foreach ($terms as $term) {
             $local_args = array(
               'post_type' => 'events',
+              'order' => 'DESC',
+              'orderby' => 'meta_value',
+              'meta_key' => 'event_start_date',
               'tax_query' => array(
                 array(
                   'taxonomy' => 'event_type',
@@ -50,28 +60,23 @@
               echo '<section style="padding-top: 0;">';
                 echo '<div class="section-menu">';
                   echo '<h3 id="' . $term->slug . '" class="inline">' . $term->name . '</h3>';
-                  echo '<p class="inline filter-toggle" style="margin-left: 1rem; font-size: 0.85em;">Show Filters</p>';
-                  echo '<div class="filter-container">';
-                    echo '<ul class="inline" style="font-size: 0.8em;">';
-                    if ($term->name === 'Events') {
-                      echo '<li><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>';
-                      echo '<li><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>';
-                    } else {
-                      echo '<li><input type="checkbox" id="thought-leadership" checked><label for="thought-leadership">Thought Leadership</label></li>';
-                      echo '<li><input type="checkbox" id="product" checked><label for="product">Product</label></li>';
-                      echo '<li><input type="checkbox" id="client" checked><label for="client">Client</label></li>';
-                    }
-                    echo '</ul>';
-                  echo '</div>';
                 echo '</div>';
                 echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($local_query->have_posts()) :
                 $local_query->the_post();
                 $today = date('Ymd');
-                if ($today <= get_field('event_end_date')) {
-                  $class = 'upcoming';
+                if (!get_field('event_end_date')) {
+                  if ($today <= get_field('event_start_date')) {
+                    $class = 'upcoming';
+                  } else {
+                    $class = 'past';
+                  }
                 } else {
-                  $class = 'past';
+                  if ($today <= get_field('event_end_date')) {
+                    $class = 'upcoming';
+                  } else {
+                    $class = 'past';
+                  }
                 }
                 if (get_field('webinar_type') === 'thought-leadership') {
                   $webinar_type = 'thought-leadership';
@@ -83,7 +88,7 @@
                 echo do_shortcode('[get_card thumb="true" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
               endwhile;
                 echo '</div>';
-                echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline">View All ' . $term->name . '</a></div>';
+                echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline" title="View All ' . $term->name . ' Events">View All ' . $term->name . ' Events</a></div>';
               echo '</section>';
             endif;
             wp_reset_query();

@@ -1,16 +1,4 @@
 .filter-container {
-  display: none;
-}
-
-.is-open + .filter-container {
-  display: block;
-}
-
-.filter-toggle {
-  cursor: pointer;
-}
-
-.filter-container ul {
   padding-left: 0;
 }
 
@@ -37,4 +25,12 @@
 .card-tag-webinars {
   position: absolute;
   top: 0.5rem;
+}
+
+.sticky-sidebar label {
+  font-size: 0.85em;
+}
+
+.sticky-sidebar .filter-container li {
+  padding-bottom: 0;
 }
