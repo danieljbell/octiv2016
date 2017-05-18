@@ -6,12 +6,15 @@
   .slick-slide {
     background-size: cover;
     color: $gray;
+    padding-bottom: 3rem;
     @include bp(sm) {
       padding-bottom: 8rem;
     }
   }
   .slick-dots {
     padding-left: 0;
+    margin-top: -5rem;
+    padding-bottom: 3rem;
     @include bp(sm) {
       margin-top: -9rem;
       padding-bottom: 7rem;
