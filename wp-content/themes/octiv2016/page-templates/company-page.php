@@ -35,7 +35,7 @@ get_header();
 				</div>
 			</div>
 			<div>
-        <p>Since its founding in 2010, Octiv's team has been dedicated to providing sales teams a better way to create the documents they need to close deals. Today, Octiv streamlines document workflows for teams across organizations including finance, legal, HR and IT. Octiv's industry-leading technology enables companies to use the information they have in CRM, CPQ, ERP and other back-office systems to create, collaborate on and deliver documents online.</p>
+        <p>Since its founding in 2010, Octiv's team has been dedicated to providing sales teams a better way to create the documents they need to close deals. Today, Octiv streamlines document workflows for teams across organizations including sales, legal and information technology. Octiv's industry-leading technology enables companies to use the information they have in CRM, CPQ, ERP and other back-office systems to create, collaborate on and deliver documents online.</p>
 				<p>Octiv is passionate about giving time back to teams by connecting systems and data to deliver a better end-user experience. Awards and recognition of our market-leading product and teams include TechPoint Mira Awards, G2 Crowd, Glassdoor and Best Places to Work in Indiana. Through an HTML5-based platform, powerful integrations and world-class support and services teams, Octiv helps companies move at the speed of business.</p>
 				<p>Octiv is also passionate about community. Our company culture of hard work and commitment is evident in every interaction with our team, our product and in the community organizations and causes we support.</p>
       </div>
@@ -101,12 +101,6 @@ get_header();
 			</div>
 			<div>
 				<div class="centered">
-					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
-					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/john-ludwig.png" alt="John Ludwig" />
 					<p><strong>John Ludwig</strong><br />CFO<br><a href="https://www.linkedin.com/in/john-ludwig-987bb64b" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
 				</div>
@@ -114,7 +108,19 @@ get_header();
 			<div>
 				<div class="centered">
 					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
-					<p><strong>John Kwiatkowski</strong><br />Enterprise Sales<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+					<p><strong>John Kwiatkowski</strong><br />CRO<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
+					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
+				</div>
+			</div>
+			<div>
+				<div class="centered">
+					<img src="/wp-content/uploads/2017/05/Rachel-Clark.png" alt="Rachel Clark" />
+					<p><strong>Rachel Clark</strong><br />Product<br><a href="https://www.linkedin.com/in/rachelsauerclark/"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
 				</div>
 			</div>
 			<div>
