@@ -114,7 +114,7 @@ $count = 0;
       );
       $solutions_query = new WP_Query($args);
       if ($solutions_query->have_posts()) :
-        echo '<div class="half">';
+        echo '<div class="fourth">';
         while ($solutions_query->have_posts()) :
           $solutions_query->the_post();
           $icon = get_field('page_icon', $post->ID, true);
