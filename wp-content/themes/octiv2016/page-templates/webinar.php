@@ -25,7 +25,7 @@ Template Name: Webinar
 		<h1><?php the_title(); ?></h1>
 		<div class="two-third-only">
 			<div>
-				<p class="font-bump"><?php echo get_field('short_description'); ?></p>
+				<p class="font-bump" style="margin-bottom: 0;"><?php echo get_field('short_description'); ?></p>
 			</div>
 		</div>
 	</div>
