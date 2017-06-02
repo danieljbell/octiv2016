@@ -24,7 +24,7 @@ Template Name: Webinar
 	<div class="site-width white-text centered">
 		<h1><?php the_title(); ?></h1>
 		<div class="two-third-only">
-			<div>
+			<div style="margin-bottom: 0;">
 				<p class="font-bump" style="margin-bottom: 0;"><?php echo get_field('short_description'); ?></p>
 			</div>
 		</div>
