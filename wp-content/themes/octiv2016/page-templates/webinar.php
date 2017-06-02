@@ -23,6 +23,7 @@ Template Name: Webinar
 	?>
 	<div class="site-width white-text centered">
 		<h1><?php the_title(); ?></h1>
+		<p><?php echo get_field('short_description'); ?></p>
 	</div>
 </div>
 
