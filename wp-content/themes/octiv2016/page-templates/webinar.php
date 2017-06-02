@@ -53,7 +53,16 @@ if ($webinar_date > $today) : ?>
 					<div class="box">
 						<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
 						<form id="mktoForm_<?php echo get_field('form_source'); ?>"></form>
-						<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('form_source'); ?>);</script>
+						<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('form_source'); ?>, function(form) {
+							form.onSuccess(function(values, followUpUrl) {
+								var vals = form.vals();
+								form.getFormElem().hide();
+								var formContainer = document.querySelector('aside > .box');
+								formContainer.classList.add('centered');
+								formContainer.innerHTML = '<h2>Thanks ' + vals.FirstName + ' for Registering!</h2><p>You will be recieving a confirmation email soon.</p>';
+								return false;
+							});
+						});</script>
 					</div>
 				</aside>
 			</div>
