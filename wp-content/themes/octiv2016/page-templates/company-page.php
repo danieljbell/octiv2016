@@ -63,7 +63,7 @@ get_header();
 		<div class="two-third-only centered">
 			<div>
 				<h2>Want to join our growing team?</h2>
-				<p>View our career oportunities now!</p>
+				<p>View our career opportunities now!</p>
 				<p><a href="/company/careers" class="btn-primary">View All Opportunities</a></p>
 			</div>
 		</div>
