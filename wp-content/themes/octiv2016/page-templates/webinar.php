@@ -18,12 +18,16 @@ Template Name: Webinar
 		if (!$featured_img) {
 			echo '<div class="fixed-hero-section">';
 		} else {
-			echo '<div class="fixed-hero-section" style="background-image: url(' . $featured_img . '); background-size: cover;">';
+			echo '<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(' . $featured_img . '); background-size: cover;">';
 		}
 	?>
 	<div class="site-width white-text centered">
 		<h1><?php the_title(); ?></h1>
-		<p><?php echo get_field('short_description'); ?></p>
+		<div class="two-third-only">
+			<div>
+				<p class="font-bump"><?php echo get_field('short_description'); ?></p>
+			</div>
+		</div>
 	</div>
 </div>
 
