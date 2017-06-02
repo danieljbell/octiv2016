@@ -27,11 +27,20 @@ if ($webinar_date > $today) : ?>
 <section>
 	<div class="site-width">
 		<div class="two-third">
-			<main role="main">
-				<?php the_post_thumbnail(full, array('class' => 'pad-b')); ?>
-				<?php the_content(); ?>
-			</main>
-			<aside><?php get_sidebar('landing-form'); ?></aside>
+			<div>
+				<main role="main">
+					<?php the_content(); ?>
+				</main>
+			</div>
+			<div>
+				<aside>
+					<div class="box">
+						<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+						<form id="mktoForm_<?php echo get_field('form_source'); ?>"></form>
+						<script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('form_source'); ?>);</script>
+					</div>
+				</aside>
+			</div>
 		</div>
 	</div>
 </section>

@@ -40,6 +40,19 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/06/G2-Crowd-bg.jpg)">
+			<section>
+				<div class="site-width centered">
+					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+						<div class="font-bump">
+							<h1>Octiv Named High Performer by G2 Crowd</h1>
+							<p class="font-bump">The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
+						</div>
+					</div>
+					<a href="http://lp.octiv.com/WC-2017-06-01-G2-Crowd-Campaign_Get-Report.html" class="btn-primary">Get the Report</a>
+				</div>
+			</section>
+		</div>
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/05/spring-17-bg.jpg);">
 			<section>
 				<div class="site-width centered">
