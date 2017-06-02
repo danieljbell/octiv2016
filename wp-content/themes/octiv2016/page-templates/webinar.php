@@ -9,8 +9,19 @@ Template Name: Webinar
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-	<div class="site-width white-text">
+<?php if (get_the_post_thumbnail()) {
+	$featured_img = wp_get_attachment_url( get_post_thumbnail_id() );
+} ?>
+
+
+	<?php
+		if (!$featured_img) {
+			echo '<div class="fixed-hero-section">';
+		} else {
+			echo '<div class="fixed-hero-section" style="background-image: url(' . $featured_img . '); background-size: cover;">';
+		}
+	?>
+	<div class="site-width white-text centered">
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>
