@@ -27,16 +27,16 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: url(/wp-content/uploads/2017/05/home-page-bg.jpg)">
+		<div style="background-image: radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.png)">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
-							<h1>The Future of Work is Here</h1>
-							<p class="font-bump">From Here to Productivity is the first in a three-part series on the future of work. Want a glimpse into the future of productivity for you and your company?</p>
+							<h1>The Future of Mobility is Here</h1>
+							<p class="font-bump">From Here to Mobility is the second in a three-part series on the future of work. Want a glimpse into the future of mobility for you and your company?</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/future-work-productivity" class="btn-primary">Download the Infographic Now</a>
+					<a href="/resources/downloads/future-work-mobility" class="btn-primary">Download the Infographic Now</a>
 				</div>
 			</section>
 		</div>
