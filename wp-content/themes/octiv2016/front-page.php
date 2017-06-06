@@ -27,7 +27,7 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.png)">
+		<div style="background-image: radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.jpg)">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
@@ -50,25 +50,25 @@ $context = stream_context_create(array(
 								<p class="font-bump">Register for our live webinar and learn how to future-proof your business.</p>
 								<ul class="webinar-speakers">
 									<li class="speaker">
-										<img src="https://octiv.com/wp-content/uploads/2016/10/david-kerr.jpg" alt="">
+										<img src="/wp-content/uploads/2016/10/david-kerr.jpg" alt="">
 										<div class="person-info">
 											<strong>David Kerr</strong>Octiv
 										</div>
 									</li>
 									<li class="speaker">
-										<img src="https://octiv.com/wp-content/uploads/2017/06/matt-reid.jpg" alt="">
+										<img src="/wp-content/uploads/2017/06/matt-reid.jpg" alt="">
 										<div class="person-info">
 											<strong>Matt Reid</strong>Velocify
 										</div>
 									</li>
 									<li class="speaker">
-										<img src="https://octiv.com/wp-content/uploads/2017/06/david-ball.jpg" alt="">
+										<img src="/wp-content/uploads/2017/06/david-ball.jpg" alt="">
 										<div class="person-info">
 											<strong>David Ball</strong>DocuSign
 										</div>
 									</li>
 									<li class="speaker">
-										<img src="https://octiv.com/wp-content/uploads/2017/06/mt-ray.jpg" alt="">
+										<img src="/wp-content/uploads/2017/06/mt-ray.jpg" alt="">
 										<div class="person-info">
 											<strong>MT Ray</strong>High Alpha
 										</div>
