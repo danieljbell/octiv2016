@@ -27,7 +27,7 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.jpg)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(https://octiv.com/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.jpg)">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
