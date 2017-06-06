@@ -67,24 +67,29 @@ $context = stream_context_create(array(
 											<strong>David Ball</strong>DocuSign
 										</div>
 									</li>
+									<li class="speaker">
+										<img src="https://octiv.com/wp-content/uploads/2017/06/mt-ray.jpg" alt="">
+										<div class="person-info">
+											<strong>MT Ray</strong>High Alpha
+										</div>
+									</li>
 								</ul>
 								<style>
 									.webinar-speakers {
 										list-style-type: none;
 										padding-left: 0;
-									}
-									.speaker {
-										display: inline-block;
-										margin-right: 5rem;
-									}
-									.speaker:last-child {
-										margin-right: 0;
+										display: flex;
+										flex-wrap: wrap;
+										justify-content: space-around;
 									}
 									.webinar-speakers img {
 										max-width: 85px;
 										border-radius: 50%;
 										border: 3px solid #fff;
 										box-shadow: 0 0 15px rgba(0,0,0,0.5);
+									}
+									.speaker {
+										margin: 0 1rem;
 									}
 									.person-info {
 										margin-top: 0.5rem;
