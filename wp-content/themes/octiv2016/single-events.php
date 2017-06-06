@@ -27,14 +27,57 @@
             </div>
           <?php endif; ?>
           <h4>Overview</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ea quasi, enim delectus? Tempora, assumenda.</p>
+          <?php echo get_field('overview'); ?>
           <br>
           <h4>Date &amp; Time</h4>
-          <p>Something</p>
+          <?php $event_start = get_field('event_start_date');
+              $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+              $start_date = date_create($event_start);
+              $start_date_year = date_format($start_date,"Y");
+              $start_date_month = date_format($start_date,"F");
+              $start_date_day = date_format($start_date,"j"); ?>
+          <p><?php echo $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year; ?></p>
           <br>
           <h4>Speakers</h4>
           <ul class="half no-bul speakers">
-            <li class="speaker">
+            <?php
+              if (have_rows('speakers')) :
+                while (have_rows('speakers')) :
+                  the_row(); ?>
+                <li class="speaker">
+                  <div>
+                    <img src="<?php print_r(the_sub_field('speaker_headshot')); ?>" alt="<?php echo the_sub_field('speaker_name'); ?>'s Headshot" class="speaker-headshot">
+                  </div>
+                  <div>
+                    <div>
+                      <h5><?php echo the_sub_field('speaker_name'); ?></h5>
+                      <p><em><?php echo the_sub_field('speaker_title'); ?></em></p>
+                    </div>
+                    <?php if (get_sub_field('speaker_twitter') || get_sub_field('speaker_linkedin')) : ?>
+                      <ul class="speaker-social no-bull">
+                        <?php if (get_sub_field('speaker_twitter')) : ?>
+                          <li>
+                            <a href="<?php echo the_sub_field('speaker_twitter'); ?>" title="<?php echo the_sub_field('speaker_name'); ?>'s Twitter">
+                              <img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt="Twitter">
+                            </a>
+                          </li>
+                        <?php endif; ?>
+                        <?php if (get_sub_field('speaker_linkedin')) : ?>
+                          <li>
+                            <a href="<?php echo the_sub_field('speaker_linkedin'); ?>" title="<?php echo the_sub_field('speaker_name'); ?>'s LinkedIn">
+                              <img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt="LinkedIn">
+                            </a>
+                          </li>
+                        <?php endif; ?>
+                      </ul>
+                    <?php endif; ?>
+                  </div>
+                </li>
+            <?php
+                endwhile;
+              endif;
+            ?>
+            <!-- <li class="speaker">
               <div>
                 <img src="//fillmurray.com/100/100" alt="" class="speaker-headshot">
               </div>
@@ -63,7 +106,7 @@
                   <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
                 </ul>
               </div>
-            </li>
+            </li> -->
           </ul>
           <?php if ($has_reg) :  // testing for webinar id for post event ?>
             <div class="question-answer">
@@ -80,9 +123,14 @@
           <?php endif; ?>
         </div>
         <div>
-          <div class="box">
-            <?php if ($has_reg) : ?>
-              Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!
+          <?php if ($has_reg) : ?>
+            <div class="box centered">
+          <?php else : ?>
+            <div class="box">
+          <?php endif; ?>
+          <?php if ($has_reg) : ?>
+              <h2>Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
+              <p>We hope you enjoy the webinar!</p>
             <?php else : ?>
               <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
               <form id="mktoForm_1041"></form>
