@@ -7,9 +7,22 @@
 ?>
 
 <?php if (get_field('webinar_type')) : ?>
-  <div class="fixed-hero-section">
-    <div class="site-width white-text">
-      <h1><?php echo get_the_title(); ?></h1>
+  <?php if (has_post_thumbnail()) : ?>
+    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), url(<?php echo the_post_thumbnail_url(); ?>);">
+  <?php else : ?>
+    <div class="fixed-hero-section">
+  <?php endif; ?>
+    <div class="site-width white-text centered">
+      <section>
+        <div class="two-third-only">
+          <div>
+            <h1><?php echo get_the_title(); ?></h1>
+            <?php if (get_the_excerpt()) {
+              echo '<p class="font-bump" style="margin-bottom: 0;">' . wp_strip_all_tags(get_the_excerpt(), true) . '</p>';
+            } ?>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
@@ -77,39 +90,22 @@
                 endwhile;
               endif;
             ?>
-            <!-- <li class="speaker">
-              <div>
-                <img src="//fillmurray.com/100/100" alt="" class="speaker-headshot">
-              </div>
-              <div>
-                <div>
-                  <h5>Tom Marvel</h5>
-                  <p><em>Product Manager</em>Octiv</p>
-                </div>
-                <ul class="speaker-social no-bull">
-                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt=""></a></li>
-                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="speaker">
-              <div>
-                <img src="//placecage.com/100/100" alt="" class="speaker-headshot">
-              </div>
-              <div>
-                <div>
-                  <h5>Amanda Lester</h5>
-                  <p><em>Product Marketing Manager</em>Octiv</p>
-                </div>
-                <ul class="speaker-social no-bull">
-                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/twitter.svg" alt=""></a></li>
-                  <li><a href="#0"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
-                </ul>
-              </div>
-            </li> -->
           </ul>
           <?php if ($has_reg) :  // testing for webinar id for post event ?>
-            <div class="question-answer">
+          <?php
+            if (have_rows('q&a')) :
+              echo '<div class="question-answer"><h4>Q&amp;A</h4><dl class="accordian">';
+              while (have_rows('q&a')) :
+                the_row();
+          ?>
+          <dt><?php echo get_sub_field('question'); ?></dt>
+          <dd><?php echo get_sub_field('answer'); ?></dd>
+          <?php
+              endwhile;
+              echo '</dl></div>';
+            endif;
+          ?>
+            <!-- <div class="question-answer">
               <h4>Q&amp;A</h4>
               <dl class="accordian">
     						<dt>some question</dt>
@@ -119,7 +115,7 @@
                 <dt>some question</dt>
     						<dd>some answer</dd>
               </dl>
-            </div>
+            </div> -->
           <?php endif; ?>
         </div>
         <div>

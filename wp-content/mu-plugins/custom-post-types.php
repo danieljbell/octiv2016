@@ -203,7 +203,7 @@ function register_event_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'thumbnail' ),
+    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'revisions' ),
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)

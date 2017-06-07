@@ -40,6 +40,12 @@
 SINGLE
 ==============================
 */
+.single-events .fixed-hero-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: initial;
+}
+
 .video-outer {
   margin-bottom: 1rem;
 }
@@ -104,4 +110,8 @@ SINGLE
 .accordian dd {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.accordian dd p:last-child {
+  margin-bottom: 0;
 }
