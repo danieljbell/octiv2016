@@ -4,6 +4,7 @@
   // gemme dem URL params
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
+  $terms = wp_get_post_terms($post->ID, 'event_type');
 ?>
 
 <?php if (get_field('webinar_type')) : ?>
@@ -43,12 +44,14 @@
           <?php echo get_field('overview'); ?>
           <br>
           <h4>Date &amp; Time</h4>
-          <?php $event_start = get_field('event_start_date');
-              $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
-              $start_date = date_create($event_start);
-              $start_date_year = date_format($start_date,"Y");
-              $start_date_month = date_format($start_date,"F");
-              $start_date_day = date_format($start_date,"j"); ?>
+          <?php
+            $event_start = get_field('event_start_date');
+            $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+            $start_date = date_create($event_start);
+            $start_date_year = date_format($start_date,"Y");
+            $start_date_month = date_format($start_date,"F");
+            $start_date_day = date_format($start_date,"j");
+          ?>
           <p><?php echo $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year; ?></p>
           <br>
           <h4>Speakers</h4>
@@ -108,14 +111,12 @@
           <?php endif; ?>
         </div>
         <div>
+          <div class="box">
           <?php if ($has_reg) : ?>
-            <div class="box centered">
-          <?php else : ?>
-            <div class="box">
-          <?php endif; ?>
-          <?php if ($has_reg) : ?>
+            <div class="centered">
               <h2>Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
               <p>We hope you enjoy the webinar!</p>
+            </div>
             <?php else : ?>
               <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
               <form id="mktoForm_1041"></form>
