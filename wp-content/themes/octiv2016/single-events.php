@@ -92,30 +92,19 @@
             ?>
           </ul>
           <?php if ($has_reg) :  // testing for webinar id for post event ?>
-          <?php
-            if (have_rows('q&a')) :
-              echo '<div class="question-answer"><h4>Q&amp;A</h4><dl class="accordian">';
-              while (have_rows('q&a')) :
-                the_row();
-          ?>
-          <dt><?php echo get_sub_field('question'); ?></dt>
-          <dd><?php echo get_sub_field('answer'); ?></dd>
-          <?php
-              endwhile;
-              echo '</dl></div>';
-            endif;
-          ?>
-            <!-- <div class="question-answer">
-              <h4>Q&amp;A</h4>
-              <dl class="accordian">
-    						<dt>some question</dt>
-    						<dd>some answer</dd>
-                <dt>some question</dt>
-    						<dd>some answer</dd>
-                <dt>some question</dt>
-    						<dd>some answer</dd>
-              </dl>
-            </div> -->
+            <?php
+              if (have_rows('q&a')) :
+                echo '<div class="question-answer"><h4>Q&amp;A</h4><dl class="accordian">';
+                while (have_rows('q&a')) :
+                  the_row();
+            ?>
+            <dt><?php echo get_sub_field('question'); ?></dt>
+            <dd><?php echo get_sub_field('answer'); ?></dd>
+            <?php
+                endwhile;
+                echo '</dl></div>';
+              endif;
+            ?>
           <?php endif; ?>
         </div>
         <div>
