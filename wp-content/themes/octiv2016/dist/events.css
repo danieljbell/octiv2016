@@ -46,6 +46,14 @@ SINGLE
   background-attachment: initial;
 }
 
+.single-events .fixed-hero-section .two-third-only > div {
+  margin-bottom: 0;
+}
+
+.single-events .fixed-hero-section p {
+  margin-bottom: 0;
+}
+
 .video-outer {
   margin-bottom: 1rem;
 }

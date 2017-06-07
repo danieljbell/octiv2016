@@ -143,7 +143,65 @@
   </section>
 
 <?php else : ?>
-  I'm an event
+  
+  <?php if (has_post_thumbnail()) : ?>
+    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(<?php echo the_post_thumbnail_url(); ?>);">
+  <?php else : ?>
+    <div class="fixed-hero-section">
+  <?php endif; ?>
+    <div class="site-width white-text centered">
+      <section>
+        <div class="two-third-only">
+          <div>
+            <h1><?php echo get_the_title(); ?></h1>
+            <?php
+              $event_start = get_field('event_start_date');
+              $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
+              $start_date = date_create($event_start);
+              $start_date_year = date_format($start_date,"Y");
+              $start_date_month = date_format($start_date,"F");
+              $start_date_day = date_format($start_date,"j");
+              if (get_field('event_end_date')) {
+                $event_end = get_field('event_end_date');
+                $event_end = substr($event_end, 0, 4) . '-'. substr($event_end, 4, 2) . '-' . substr($event_end, 6);
+                $end_date = date_create($event_end);
+                $end_date_day = date_format($end_date,"j");
+              }
+              echo '<p class="font-bump">' . $start_date_month . ' ' . $start_date_day . '-' . $end_date_day . ', ' . $start_date_year . '</p>';
+            ?>
+            <?php
+              if (get_field('event_venue')) :
+                echo '<p class="font-bump">' . get_field('event_venue') . '</p>';
+              endif;
+            ?>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <?php get_template_part('partials/display', 'breadcrumbs'); ?>
+
+  <section class="fat-section">
+    <div class="site-width centered">
+      <h2>Agenda</h2>
+      <p>Here's a little about what's going on </p>
+      <?php
+        if (have_rows('schedule')) :
+          while (have_rows('schedule')) :
+            the_row();
+            if (have_rows('event_date')) :
+              while (have_rows('event_date')) :
+                the_row();  
+                echo 'daniel';
+              endwhile;
+            endif;
+          endwhile;
+        endif;
+      ?>
+    </div>
+  </section>
+
 <?php endif ; ?>
 
 <?php get_footer(); ?>
