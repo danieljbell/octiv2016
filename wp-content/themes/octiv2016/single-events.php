@@ -40,7 +40,7 @@
               <p>We hope you enjoy the webinar!</p>
               <?php
                 if (!get_field('webinar_id')) {
-                  echo '<p>You will receive a confirmation shortly and a reminder to attend the day of the event.</p>';
+                  echo '<p>You will receive a confirmation email shortly and a reminder to attend email the day of the event.</p>';
                 }
               ?>
             </div>
@@ -48,6 +48,8 @@
               <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
               <form id="mktoForm_1041"></form>
               <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+                var thing = document.querySelector('label[for="subscriptionNewsletter"]');
+                thing.parentElement.classList.add('checkbox-wrap');
                 form.onSuccess(function(values, followUpUrl) {
                   // Get the form field values
                   var vals = form.vals();

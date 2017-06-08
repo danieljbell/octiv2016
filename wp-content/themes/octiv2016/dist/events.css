@@ -183,3 +183,13 @@ SINGLE
 .event-item .btn-arrow {
   font-size: 0.85em;
 }
+
+/*
+==============================
+MARKETO FORM STYLING
+==============================
+*/
+.checkbox-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
