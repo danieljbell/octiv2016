@@ -184,6 +184,16 @@ SINGLE
   font-size: 0.85em;
 }
 
+li[class*="day-"] > h2 {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  li[class*="day-"] > h2 {
+    text-align: left;
+  }  
+}
+
 /*
 ==============================
 MARKETO FORM STYLING
