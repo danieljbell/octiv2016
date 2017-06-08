@@ -66,7 +66,7 @@
             $upcoming_query = new WP_Query($upcoming_args);
 
             if ($upcoming_query->have_posts()) :
-              echo '<div class="third">';
+              echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($upcoming_query->have_posts()) :
                 $upcoming_query->the_post();
                 if (get_field('webinar_type') === 'thought-leadership') {
@@ -80,7 +80,7 @@
               endwhile;
               echo '</div>';
               else :
-                echo 'Sorry, there are no ' . $tax_title . ' currently planned at this time.';
+                echo '<div>Sorry, there are no ' . $tax_title . ' currently planned at this time.</div>';
             endif;
 
     			?>
@@ -116,7 +116,7 @@
             $past_query = new WP_Query($past_args);
 
             if ($past_query->have_posts()) :
-              echo '<div class="third">';
+              echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($past_query->have_posts()) :
                 $past_query->the_post();
                 if (get_field('webinar_type') === 'thought-leadership') {
@@ -130,7 +130,7 @@
               endwhile;
               echo '</div>';
               else :
-                echo 'Sorry, there are no past ' . str_replace('Event Type: ', '', get_the_archive_title()) . ' at this time.';
+                echo '<div>Sorry, there are no past ' . str_replace('Event Type: ', '', get_the_archive_title()) . ' at this time.</div>';
             endif;
 
     			?>
