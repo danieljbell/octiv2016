@@ -11,6 +11,6 @@
     window.history.replaceState( null , null, window.location.pathname );
   }
 
-  $('.event-agenda').slick();
+  // $('.event-agenda').slick();
 
 })();

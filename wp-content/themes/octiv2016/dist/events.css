@@ -10,7 +10,10 @@
 .no-past .past,
 .no-thought-leadership .thought-leadership,
 .no-product .product,
-.no-client .client {
+.no-client .client,
+.no-day-1 .day-1,
+.no-day-2 .day-2,
+.no-day-3 .day-3 {
   display: none;
 }
 
@@ -126,4 +129,31 @@ SINGLE
 
 .upcoming-event-item .two-third-reversed > div:first-child {
   margin-right: 1rem;
+}
+
+.day-selector-container {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.event-time {
+  font-weight: bold;
+}
+
+.event-day-list,
+.event-day-list > li > ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.event-item {
+  margin-bottom: 3rem;
+}
+
+.event-item p {
+  margin-bottom: 0;
+}
+
+.event-item .btn-arrow {
+  font-size: 0.85em;
 }

@@ -183,21 +183,66 @@
   <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
   <section class="fat-section">
-    <div class="site-width centered">
-      <h2>Agenda</h2>
-      <p>Here's a little about what's going on </p>
+    <div class="site-width">
+      <div class="fourth-3-fourth">
+        <div class="sticky-sidebar" id="sticky-sidebar">
+          <h4>Agenda By Day</h4>
+          <hr>
+          <ul class="day-selector-container">
+          <?php
+            $i = 0;
+            if (have_rows('schedule')) {
+              while (have_rows('schedule')) {
+                $i++;
+                the_row();
+                echo '<li>';
+                  echo '<input type="checkbox" id="day-' . $i . '" checked>';
+                  echo '<label for="day-' . $i . '">Day ' . $i . '</label>';
+                echo '</li>';
+              }
+            }
+          ?>
+          </ul>
+        </div>
+        <div class="sticky-listing">
+          <ul class="event-day-list">
+            <?php
+              $i = 0;
+              if (have_rows('schedule')) {
+                while (have_rows('schedule')) {
+                  $i++;
+                  the_row();
+                  echo '<h2>Day ' . $i . '</h2>';
+                }
+              }
+            ?>
+            <!-- <li class="day-1">
+              <h2>Day One</h2>
+              <ul class="day-1-event-list">
+                <li class="event-item">
+                  <h3>D1 Some Title for An Event</h3>
+                  <p class="event-time">8:00 a.m. - 9:00 a.m.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, laborum.</p>
+                  <a href="#0" class="btn-arrow">Link to A Thing</a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
       <?php
-        if (have_rows('schedule')) :
-          while (have_rows('schedule')) :
-            the_row();
-            if (have_rows('event_date')) :
-              while (have_rows('event_date')) :
-                the_row();  
-                echo 'daniel';
-              endwhile;
-            endif;
-          endwhile;
-        endif;
+        // if (have_rows('schedule')) :
+        //   while (have_rows('schedule')) :
+        //     the_row();
+        //     echo the_sub_field('event_day') . '</br>';
+        //     if (have_rows('event_agenda')) :
+        //       while (have_rows('event_agenda')) :
+        //         the_row();  
+        //         // echo 'daniel';
+        //       endwhile;
+        //     endif;
+        //   endwhile;
+        // endif;
       ?>
     </div>
   </section>
