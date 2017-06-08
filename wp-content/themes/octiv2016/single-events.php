@@ -212,38 +212,30 @@
                 while (have_rows('schedule')) {
                   $i++;
                   the_row();
-                  echo '<h2>Day ' . $i . '</h2>';
+                  echo '<li class="day-' . $i . '">';
+                    echo '<h2>Day ' . $i . '<span class="event-day-date">' . get_sub_field('event_day') . '</span></h2>';
+                    if (have_rows('event_agenda')) {
+                      echo '<ul class="day-' . $i . '-event-list">';
+                        while (have_rows('event_agenda')) {
+                          the_row();
+                          echo '<li class="event-item">';
+                            echo '<h3>' . get_sub_field('event_title') . '</h3>';
+                            echo '<p class="event-time">' . get_sub_field('event_start') . ' - ' . get_sub_field('event_end') . '</p>';
+                            echo '<p>' . get_sub_field('event_description') . '</p>';
+                            if (get_sub_field('event_link')) {
+                              echo '<a href="' . get_sub_field('event_link') . '" title="Learn More About ' . get_sub_field('event_title') . '" class="btn-arrow">Learn More</a>';
+                            }
+                          echo '</li>';
+                        }
+                      echo '</ul>';
+                    }
+                  echo '</li>';
                 }
               }
             ?>
-            <!-- <li class="day-1">
-              <h2>Day One</h2>
-              <ul class="day-1-event-list">
-                <li class="event-item">
-                  <h3>D1 Some Title for An Event</h3>
-                  <p class="event-time">8:00 a.m. - 9:00 a.m.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, laborum.</p>
-                  <a href="#0" class="btn-arrow">Link to A Thing</a>
-                </li>
-              </ul>
-            </li> -->
           </ul>
         </div>
       </div>
-      <?php
-        // if (have_rows('schedule')) :
-        //   while (have_rows('schedule')) :
-        //     the_row();
-        //     echo the_sub_field('event_day') . '</br>';
-        //     if (have_rows('event_agenda')) :
-        //       while (have_rows('event_agenda')) :
-        //         the_row();  
-        //         // echo 'daniel';
-        //       endwhile;
-        //     endif;
-        //   endwhile;
-        // endif;
-      ?>
     </div>
   </section>
 

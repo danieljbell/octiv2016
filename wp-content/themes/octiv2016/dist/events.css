@@ -146,6 +146,32 @@ SINGLE
   list-style-type: none;
 }
 
+.event-day-list > li {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+}
+
+.event-day-list > li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0rem;
+}
+
+.event-day-date {
+  display: inline-block;
+  text-transform: none;
+  font-size: 0.65em;
+  font-weight: initial;
+  position: relative;
+  top: -4px;
+}
+
+.event-day-date:before {
+  content: '|';
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .event-item {
   margin-bottom: 3rem;
 }
