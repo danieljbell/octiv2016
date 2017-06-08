@@ -182,7 +182,7 @@
 
   <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
-  <section class="fat-section">
+  <section class="fat-section" id="event-agenda">
     <div class="site-width">
       <div class="fourth-3-fourth">
         <div class="sticky-sidebar" id="sticky-sidebar">
@@ -221,7 +221,9 @@
                           echo '<li class="event-item">';
                             echo '<h3>' . get_sub_field('event_title') . '</h3>';
                             echo '<p class="event-time">' . get_sub_field('event_start') . ' - ' . get_sub_field('event_end') . '</p>';
-                            echo '<p>' . get_sub_field('event_description') . '</p>';
+                            if (get_sub_field('event_description')) {
+                              echo '<p>' . get_sub_field('event_description') . '</p>';
+                            }
                             if (get_sub_field('event_link')) {
                               echo '<a href="' . get_sub_field('event_link') . '" title="Learn More About ' . get_sub_field('event_title') . '" class="btn-arrow">Learn More</a>';
                             }
@@ -236,6 +238,12 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="fat-section brand-callout">
+    <div class="site-width">
+      <div style="height: 3000px;">asdfdsa</div>
     </div>
   </section>
 
