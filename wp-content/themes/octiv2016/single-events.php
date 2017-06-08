@@ -67,7 +67,7 @@
         </div>
         <div>
           <?php if ($has_reg && get_field('webinar_id')) : ?>
-            <div class="video-outer">
+            <div class="video-outer" style="margin-bottom: 2rem;">
               <div class="video-inner">
                 <?php
                   if (get_field('webinar_source') === 'youtube') {
