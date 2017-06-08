@@ -80,7 +80,7 @@
               endwhile;
               echo '</div>';
               else :
-                echo '<div>Sorry, there are no ' . $tax_title . ' currently planned at this time.</div>';
+                echo '<div>Sorry, there are no Upcoming ' . $tax_title . ' Events currently planned at this time.</div>';
             endif;
 
     			?>
@@ -130,7 +130,7 @@
               endwhile;
               echo '</div>';
               else :
-                echo '<div>Sorry, there are no past ' . str_replace('Event Type: ', '', get_the_archive_title()) . ' at this time.</div>';
+                echo '<div>Sorry, there are no Past ' . str_replace('Event Type: ', '', get_the_archive_title()) . ' Events at this time.</div>';
             endif;
 
     			?>
