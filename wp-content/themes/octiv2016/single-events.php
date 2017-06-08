@@ -31,12 +31,53 @@
 
   <section>
     <div class="site-width">
-      <div class="two-third">
+      <div class="two-third-reversed-stack">
         <div>
+          <div class="box">
           <?php if ($has_reg) : ?>
+            <div class="centered">
+              <h2>Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
+              <p>We hope you enjoy the webinar!</p>
+              <?php
+                if (!get_field('webinar_id')) {
+                  echo '<p>You will receive a confirmation shortly and a reminder to attend the day of the event.</p>';
+                }
+              ?>
+            </div>
+            <?php else : ?>
+              <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+              <form id="mktoForm_1041"></form>
+              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+                form.onSuccess(function(values, followUpUrl) {
+                  // Get the form field values
+                  var vals = form.vals();
+
+                  // Update the redirect url with form fields
+                  followUpUrl = location.href + '?reg=true&first_name=' + vals.FirstName;
+
+                  // Redirect the page with form field
+                  location.href = followUpUrl;
+
+                  // Return false to prevent the submission handler continuing with its own processing
+                  return false;
+                });
+              });</script>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div>
+          <?php if ($has_reg && get_field('webinar_id')) : ?>
             <div class="video-outer">
               <div class="video-inner">
-                <iframe src="https://www.youtube.com/embed/9F5ByZqkscE?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%"></iframe>
+                <?php
+                  if (get_field('webinar_source') === 'youtube') {
+                    echo '<iframe src="https://www.youtube.com/embed/' . get_field('webinar_id') . '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
+                  } else {
+                    echo '<iframe src="//fast.wistia.net/embed/iframe/' . get_field('webinar_id') . '?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
+                  }
+                ?>
+                <!-- <iframe src="https://www.youtube.com/embed/9F5ByZqkscE?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%"></iframe> -->
+                <!-- <iframe src="//fast.wistia.net/embed/iframe/' . $video_source . '?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe> -->
               </div>
             </div>
           <?php endif; ?>
@@ -109,35 +150,7 @@
               endif;
             ?>
           <?php endif; ?>
-        </div>
-        <div>
-          <div class="box">
-          <?php if ($has_reg) : ?>
-            <div class="centered">
-              <h2>Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
-              <p>We hope you enjoy the webinar!</p>
-            </div>
-            <?php else : ?>
-              <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-              <form id="mktoForm_1041"></form>
-              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
-                form.onSuccess(function(values, followUpUrl) {
-      						// Get the form field values
-      						var vals = form.vals();
-
-      						// Update the redirect url with form fields
-    							followUpUrl = location.href + '?reg=true&first_name=' + vals.FirstName;
-
-      						// Redirect the page with form field
-      						location.href = followUpUrl;
-
-      						// Return false to prevent the submission handler continuing with its own processing
-      						return false;
-      					});
-              });</script>
-            <?php endif; ?>
-          </div>
-        </div>
+        </div>   
       </div>
     </div>
   </section>
