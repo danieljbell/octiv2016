@@ -7,7 +7,7 @@
   $terms = wp_get_post_terms($post->ID, 'event_type');
 ?>
 
-<?php if (get_field('webinar_type')) : ?>
+<?php if ($terms[0]->slug === 'online') : ?>
   <?php if (has_post_thumbnail()) : ?>
     <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), url(<?php echo the_post_thumbnail_url(); ?>);">
   <?php else : ?>
@@ -50,6 +50,7 @@
               <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
                 var thing = document.querySelector('label[for="subscriptionNewsletter"]');
                 thing.parentElement.classList.add('checkbox-wrap');
+
                 form.onSuccess(function(values, followUpUrl) {
                   // Get the form field values
                   var vals = form.vals();
@@ -78,8 +79,6 @@
                     echo '<iframe src="//fast.wistia.net/embed/iframe/' . get_field('webinar_id') . '?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
                   }
                 ?>
-                <!-- <iframe src="https://www.youtube.com/embed/9F5ByZqkscE?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%"></iframe> -->
-                <!-- <iframe src="//fast.wistia.net/embed/iframe/' . $video_source . '?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe> -->
               </div>
             </div>
           <?php endif; ?>
@@ -95,7 +94,7 @@
             $start_date_month = date_format($start_date,"F");
             $start_date_day = date_format($start_date,"j");
           ?>
-          <p><?php echo $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year; ?></p>
+          <p><?php echo $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year; ?><br><?php echo get_field('event_start_time') . ' - ' . get_field('event_end_time'); ?></p>
           <br>
           <h4>Speakers</h4>
           <ul class="half no-bul speakers">
@@ -258,7 +257,7 @@
 
   <section class="fat-section brand-callout">
     <div class="site-width">
-      <div style="height: 3000px;">asdfdsa</div>
+      <div>asdfdsa</div>
     </div>
   </section>
 

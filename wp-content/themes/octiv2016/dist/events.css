@@ -203,3 +203,12 @@ MARKETO FORM STYLING
   display: flex;
   flex-direction: row-reverse;
 }
+
+.checkbox-wrap .mktoFlexWrap {
+  margin-top: 0;
+}
+
+.checkbox-wrap label {
+  position: relative;
+  top: -5px;
+}

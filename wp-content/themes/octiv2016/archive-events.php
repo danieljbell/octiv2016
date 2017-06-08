@@ -44,6 +44,7 @@
           foreach ($terms as $term) {
             $local_args = array(
               'post_type' => 'events',
+              'posts_per_page' => 6,
               'order' => 'DESC',
               'orderby' => 'meta_value',
               'meta_key' => 'event_start_date',
