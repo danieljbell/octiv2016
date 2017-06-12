@@ -33,7 +33,7 @@ $context = stream_context_create(array(
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
 							<h1>From Here to Mobility</h1>
-							<p class="font-bump">This the second in a three-part series on the future of work. Want a glimpse into the future of mobility for you and your company?</p>
+							<p class="font-bump">This is the second in a three-part series on the future of work. Want a glimpse into the future of mobility for you and your company?</p>
 						</div>
 					</div>
 					<a href="/resources/downloads/future-work-mobility" class="btn-primary">Download the Infographic Now</a>
