@@ -582,7 +582,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar/)) {
+    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar|single-events/)) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');

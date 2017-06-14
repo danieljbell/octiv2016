@@ -1,0 +1,221 @@
+.filter-container {
+  padding-left: 0;
+}
+
+.section-menu *::selection {
+  background-color: transparent;
+}
+
+.no-upcoming .upcoming,
+.no-past .past,
+.no-thought-leadership .thought-leadership,
+.no-product .product,
+.no-client .client,
+.no-day-1 .day-1,
+.no-day-2 .day-2,
+.no-day-3 .day-3 {
+  display: none;
+}
+
+.card div {
+  position: relative;
+}
+
+.card-tag-webinars + h4 {
+  margin-top: 1rem;
+}
+
+.card-tag-webinars {
+  position: absolute;
+  top: 0.5rem;
+}
+
+.sticky-sidebar label {
+  font-size: 0.85em;
+}
+
+.sticky-sidebar .filter-container li {
+  padding-bottom: 0;
+}
+
+/*.product .card-tb,
+.thought-leadership .card-tb,
+.client .card-tb {
+  background-size: 125px, cover, cover;
+  background-repeat: no-repeat;
+}*/
+
+/*
+==============================
+SINGLE
+==============================
+*/
+.single-events .fixed-hero-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: initial;
+}
+
+.single-events .fixed-hero-section .two-third-only > div {
+  margin-bottom: 0;
+}
+
+.single-events .fixed-hero-section p {
+  margin-bottom: 0;
+}
+
+.video-outer {
+  margin-bottom: 1rem;
+}
+
+.speakers {
+  margin-top: 0.5rem;
+}
+
+.speaker-headshot {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.25);
+}
+
+.speakers li {
+  display: flex;
+}
+
+.speaker em {
+  display: block;
+  margin-bottom: -0.15rem;
+}
+
+.speakers h5 {
+  text-transform: uppercase;
+  color: #ed4c06;
+}
+
+.speakers p {
+  margin-bottom: 0;
+}
+
+.speakers li > div {
+  flex: 1;
+}
+
+.speakers li > div:first-child {
+  max-width: 100px;
+  margin-right: 1rem;
+}
+
+.speaker-social {
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.speaker-social li {
+  display: inline;
+}
+
+.speaker-social img {
+  display: initial;
+  width: 100%;
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.accordian {
+  margin-top: 0.5rem;
+}
+
+.accordian dd {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.accordian dd p:last-child {
+  margin-bottom: 0;
+}
+
+.upcoming-event-item .two-third-reversed > div:first-child {
+  margin-right: 1rem;
+}
+
+.day-selector-container {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.event-time {
+  font-weight: bold;
+}
+
+.event-day-list,
+.event-day-list > li > ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.event-day-list > li {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+}
+
+.event-day-list > li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0rem;
+}
+
+.event-day-date {
+  display: inline-block;
+  text-transform: none;
+  font-size: 0.65em;
+  font-weight: initial;
+  position: relative;
+  top: -4px;
+}
+
+.event-day-date:before {
+  content: '|';
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.event-item {
+  margin-bottom: 3rem;
+}
+
+.event-item p {
+  margin-bottom: 0;
+}
+
+.event-item .btn-arrow {
+  font-size: 0.85em;
+}
+
+li[class*="day-"] > h2 {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  li[class*="day-"] > h2 {
+    text-align: left;
+  }  
+}
+
+/*
+==============================
+MARKETO FORM STYLING
+==============================
+*/
+.checkbox-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.checkbox-wrap .mktoFlexWrap {
+  margin-top: 0;
+}
+
+.checkbox-wrap label {
+  position: relative;
+  top: -5px;
+}

@@ -198,10 +198,12 @@ function register_event_post_type() {
 
   $args = array(
     'labels'      => $labels,
+    'description' => 'Octiv is out and about and even in your computer!',
     'public'      => true,
     'has_archive' => true,
+    'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'editor', 'thumbnail' ),
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'show_in_rest'       => true,
     'rest_base'          => 'events',
     'rest_controller_class' => 'WP_REST_Posts_Controller',
@@ -247,7 +249,8 @@ function events_init() {
         'events',
         array(
             'label' => __( 'Event Type' ),
-            'rewrite' => array( 'slug' => 'events' ),
+            'rewrite' => array( 'slug' => 'resources/events' ),
+            'with_front' => false,
             'hierarchical' => true,
             'hasArchive' => true,
             'show_ui' => true,

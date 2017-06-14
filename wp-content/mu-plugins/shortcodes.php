@@ -8,21 +8,37 @@ add_shortcode('get_card', function($atts) {
   extract(shortcode_atts(
     array(
       'thumb' => 'false',
+      'thumb_modifier' => '',
       'excerpt' => 'false',
+      'class' => '',
       'tag' => '',
     ), $atts));
     ob_start(); ?>
-      <div class="card">
-        <?php if ($thumb === 'true') : ?>
-          <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb"></a>
-        <?php endif; ?>
+      <div class="card <?php if ($class) {echo $class;} ?> ">
+        <?php //if ($thumb_modifier) : ?>
+          <!-- <a href="<?php the_permalink(); ?>" style="background-image: url(<?php 
+          if ($thumb_modifier === 'product') {
+            echo '/wp-content/uploads/2017/06/graduate-cap.svg), linear-gradient(rgba(66,176,216,0.75),rgba(66,176,216,0.75)),';
+          }
+          if ($thumb_modifier === 'thought-leadership') {
+            echo '//fillmurray.com/100/100), linear-gradient(rgba(51,171,64,0.75),rgba(51,171,64,0.75)),';
+          }
+          if ($thumb_modifier === 'client') {
+            echo '//fillmurray.com/100/100), linear-gradient(rgba(185,73,245,0.75),rgba(185,73,245,0.75)),';
+          }
+          ?> url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>)" class="card-tb" title="<?php echo get_the_title(); ?>"></a> -->
+        <?php //else : ?>
+          <?php if ($thumb === 'true') : ?>
+            <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb" title="<?php echo get_the_title(); ?>"></a>
+          <?php endif; ?>
+        <?php // endif; ?>
         <div>
           <?php
             if ($tag === 'beta') :
               echo '<p class="card-tag-webinars float-r-a">Beta</p>';
             endif;
             if ($tag === 'past') :
-              echo '<p class="card-tag-webinars float-r-a">Past Event</p>';
+              echo '<p class="card-tag-webinars">Past Event</p>';
             endif;
             if ($tag === 'roadmap') :
               echo '<p class="card-tag-blog float-r-a">Roadmap</p>';
@@ -40,7 +56,7 @@ add_shortcode('get_card', function($atts) {
               echo '<p class="card-tag-webinars"><svg viewBox="0 0 16 11"><use xlink:href="#icon-webinar"></svg><span>webinars</span></p>';
             endif;
             if ($excerpt === 'true') :
-              echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
               the_excerpt();
             elseif ($excerpt === 'custom') :
               echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
@@ -48,15 +64,33 @@ add_shortcode('get_card', function($atts) {
             elseif ($excerpt === 'date') :
               $event_start = get_field('event_start_date');
               $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
-              $date = date_create($event_start);
-              $date = date_format($date,"F d, Y");
-              echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-              echo '<p>' . $date . '</p>';
+              $start_date = date_create($event_start);
+              $start_date_year = date_format($start_date,"Y");
+              $start_date_month = date_format($start_date,"F");
+              $start_date_day = date_format($start_date,"j");
+              if (get_field('event_end_date')) {
+                $event_end = get_field('event_end_date');
+                $event_end = substr($event_end, 0, 4) . '-'. substr($event_end, 4, 2) . '-' . substr($event_end, 6);
+                $end_date = date_create($event_end);
+                $end_date_day = date_format($end_date,"j");
+              }
+              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
+              echo '<p>';
+                echo $start_date_month;
+                echo ' ';
+                echo $start_date_day;
+                if ($start_date_day = $end_date_day) {
+                  echo '-';
+                  echo $end_date_day;
+                }
+                echo ', ';
+                echo $start_date_year;
+                echo '</p>';
             else :
-              echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+              echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
             endif;
           ?>
-          <p><a href="<?php the_permalink(); ?>" class="btn-arrow">Learn More</a></p>
+          <p><a href="<?php the_permalink(); ?>" class="btn-arrow" title="<?php echo get_the_title(); ?>">Learn More</a></p>
         </div>
       </div>
 <?php
