@@ -7,8 +7,8 @@
     });
   }
 
-  // if (document.querySelector('body').classList.contains('single')) {
-  //   window.history.replaceState( null , null, window.location.pathname );
-  // }
+  if (document.querySelector('body').classList.contains('single')) {
+    window.history.replaceState( null , null, window.location.pathname );
+  }
 
 })();
