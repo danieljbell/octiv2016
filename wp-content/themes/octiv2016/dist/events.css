@@ -38,6 +38,13 @@
   padding-bottom: 0;
 }
 
+/*.product .card-tb,
+.thought-leadership .card-tb,
+.client .card-tb {
+  background-size: 125px, cover, cover;
+  background-repeat: no-repeat;
+}*/
+
 /*
 ==============================
 SINGLE

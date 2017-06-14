@@ -86,7 +86,7 @@
                 } else if (get_field('webinar_type') === 'client') {
                   $webinar_type = 'client';
                 }
-                echo do_shortcode('[get_card thumb="true" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
+                echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
               endwhile;
                 echo '</div>';
                 echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline" title="View All ' . $term->name . ' Events">View All ' . $term->name . ' Events</a></div>';
