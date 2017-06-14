@@ -20,40 +20,106 @@ $context = stream_context_create(array(
 					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
 					<div class="two-third-only font-bump">
 						<div class="font-bump">
-							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
+							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales and legal - freeing your teams to be <a href="#productive">more productive</a>.</p>
 						</div>
 					</div>
 					<button class="rad-modal-button btn-primary">Learn How</button>
 				</div>
 			</section>
 		</div>
-		<div style="background-image: url(/wp-content/uploads/2017/05/home-page-bg.jpg)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(https://octiv.com/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.jpg)">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
-							<h1>The Future of Work is Here</h1>
-							<p class="font-bump">From Here to Productivity is the first in a three-part series on the future of work. Want a glimpse into the future of productivity for you and your company?</p>
+							<h1>From Here to Mobility</h1>
+							<p class="font-bump">This is the second in a three-part series on the future of work. Want a glimpse into the future of mobility for you and your company?</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/future-work-productivity" class="btn-primary">Download the Infographic Now</a>
+					<a href="/resources/downloads/future-work-mobility" class="btn-primary">Download the Infographic Now</a>
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/05/spring-17-bg.jpg);">
+		<div style="background-image: radial-gradient(rgba(66,176,216,0.5),rgba(66,176,216,0)), url(/wp-content/uploads/2017/05/home-page-bg.jpg);">
 			<section>
 				<div class="site-width centered">
-					<div class="white-text">
-						<div class="font-bump">
-							<h1>Octiv Delivers Spring Release</h1>
-							<div class="half-only">
-								<div>
-									<p class="font-bump">The Spring '17 product release brings improved document editing, collaboration, and reporting.</p>
-								</div>
+					<div class="font-bump">
+						<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+							<h1>The Future of Work is Here</h1>
+							<div style="margin-bottom: 1rem;">
+								<p class="font-bump">Register for our live webinar and learn how to future-proof your business.</p>
+								<ul class="webinar-speakers">
+									<li class="speaker">
+										<img src="/wp-content/uploads/2016/10/david-kerr.jpg" alt="">
+										<div class="person-info">
+											<strong>David Kerr</strong>Octiv
+										</div>
+									</li>
+									<li class="speaker">
+										<img src="/wp-content/uploads/2017/06/matt-reid.jpg" alt="">
+										<div class="person-info">
+											<strong>Matt Reid</strong>Velocify
+										</div>
+									</li>
+									<li class="speaker">
+										<img src="/wp-content/uploads/2017/06/david-ball.jpg" alt="">
+										<div class="person-info">
+											<strong>David Ball</strong>DocuSign
+										</div>
+									</li>
+									<li class="speaker">
+										<img src="/wp-content/uploads/2017/06/mt-ray.jpg" alt="">
+										<div class="person-info">
+											<strong>MT Ray</strong>High Alpha
+										</div>
+									</li>
+								</ul>
+								<style>
+									.webinar-speakers {
+										list-style-type: none;
+										padding-left: 0;
+										display: flex;
+										flex-wrap: wrap;
+										justify-content: space-around;
+									}
+									.webinar-speakers img {
+										max-width: 85px;
+										border-radius: 50%;
+										border: 3px solid #fff;
+										box-shadow: 0 0 15px rgba(0,0,0,0.5);
+									}
+									.speaker {
+										margin: 0 1rem;
+									}
+									.person-info {
+										margin-top: 0.5rem;
+										font-size: 0.75em;
+									}
+									.person-info strong {
+										text-transform: uppercase;
+										display: block;
+										font-size: 1.2em;
+										line-height: 1;
+									}
+								</style>
 							</div>
 						</div>
 					</div>
-					<a href="/octiv-nation/first-look-octiv-spring-2017-release/" class="btn-primary">View the Blog Post</a>
+					<a href="/resources/webinars/future-of-work/" class="btn-primary">Register Now</a>
+				</div>
+			</section>
+		</div>
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/g2-high-performer-bg.jpg)">
+			<section>
+				<div class="site-width centered">
+					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+						<div class="font-bump">
+							<h1>Octiv Named High Performer by G2 Crowd</h1>
+							<p class="font-bump">The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
+							<img src="https://octiv.com/wp-content/uploads/2017/06/g2-high-performer-badge.png" alt="g2-badge" style="max-width: 150px;">
+						</div>
+					</div>
+					<a href="http://lp.octiv.com/WC-2017-06-01-G2-Crowd-Campaign_Get-Report.html" class="btn-primary">Get the Report</a>
 				</div>
 			</section>
 		</div>

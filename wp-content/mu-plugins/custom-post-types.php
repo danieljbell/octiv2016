@@ -36,7 +36,7 @@ function register_support_post_type() {
     'capability_type' => 'support',
     'map_meta_cap' => true,
     'show_in_rest'       => true,
-		'rest_base'          => 'support-api',
+		'rest_base'          => 'support',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
@@ -106,8 +106,8 @@ function register_solutions_post_type() {
     'capability_type' => 'support',
     'map_meta_cap' => true,
     'show_in_rest'       => true,
-		'rest_base'          => 'support-api',
-		'rest_controller_class' => 'WP_REST_Posts_Controller',
+	'rest_base'          => 'solutions',
+	'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -203,7 +203,10 @@ function register_event_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'revisions' ),
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'show_in_rest'       => true,
+    'rest_base'          => 'events',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -292,6 +295,9 @@ function register_press_release_post_type() {
     'has_archive' => true,
     'menu_icon'   => 'dashicons-megaphone',
     'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'show_in_rest'       => true,
+    'rest_base'          => 'press-releases',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -357,6 +363,9 @@ function register_release_post_type() {
     'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
     'capability_type' => 'support',
     'map_meta_cap' => true,
+    'show_in_rest'       => true,
+    'rest_base'          => 'releases',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -490,9 +499,9 @@ function register_features_post_type() {
     'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
-    // 'show_in_rest'       => true,
-		// 'rest_base'          => 'support-api',
-		// 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'show_in_rest'       => true,
+    'rest_base'          => 'features',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -585,9 +594,9 @@ function register_integration_post_type() {
     'supports'    => array( 'title', 'editor', 'excerpt', 'page-attributes' ),
     'capability_type' => 'integrations',
     'map_meta_cap' => true,
-    // 'show_in_rest'       => true,
-        // 'rest_base'          => 'support-api',
-        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
+    'show_in_rest'       => true,
+    'rest_base'          => 'integrations',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)

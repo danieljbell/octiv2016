@@ -34,8 +34,10 @@ header {
 	height: 100px;
 	max-width: 145px;
 	max-height: 41px;
+	margin-bottom: -1rem;
 	@include bp(sm) {
 		max-width: 185px;
+		margin-bottom: 0;
 	}
 }
 

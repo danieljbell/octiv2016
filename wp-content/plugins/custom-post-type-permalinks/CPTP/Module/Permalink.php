@@ -45,9 +45,9 @@ class CPTP_Module_Permalink extends CPTP_Module {
 	 *
 	 * Fix permalinks output.
 	 *
-	 * @param String $post_link
+	 * @param String  $post_link
 	 * @param WP_Post $post
-	 * @param String $leavename for edit.php
+	 * @param String  $leavename for edit.php
 	 *
 	 * @version 2.0
 	 *
@@ -127,7 +127,8 @@ class CPTP_Module_Permalink extends CPTP_Module {
 		if ( false !== strpos( $permalink, '%category%' ) ) {
 			$categories = get_the_category( $post->ID );
 			if ( $categories ) {
-				usort( $categories, '_usort_terms_by_ID' ); // order by ID
+				$categories = CPTP_Util::sort_terms( $categories );
+
 				$category_object = apply_filters( 'post_link_category', $categories[0], $categories, $post );
 				$category_object = get_term( $category_object, 'category' );
 				$category        = $category_object->slug;
@@ -314,7 +315,7 @@ class CPTP_Module_Permalink extends CPTP_Module {
 			return $termlink;
 		}
 
-		if ( get_option( 'no_taxonomy_structure' ) ) {
+		if ( CPTP_Util::get_no_taxonomy_structure() ) {
 			return $termlink;
 		}
 

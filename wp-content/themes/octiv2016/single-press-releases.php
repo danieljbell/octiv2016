@@ -20,7 +20,7 @@
 		<?php the_content(); ?>
 		<p class="pad-y centered">-30-</p>
 		<h3>About <?php bloginfo( 'name' ); ?></h3>
-		<p>Octiv provides a document workflows platform designed to create efficiencies in generating documents like proposals, quotes, contracts, presentations and more. Octiv integrates data from back-office systems to streamline workflows, save time and accelerate the document creation and delivery process. Founded in 2010, Octiv services more than 400 organizations including enterprises such as General Electric and Siemens, and high-growth companies such as Lindamood-Bell and G/O Digital. To learn more, visit <a href="/">octiv.com</a>.</p>
+		<p>Octiv provides a document generation platform designed to create efficiencies in creating documents like proposals, quotes, contracts, presentations and more. Octiv integrates data from back-office systems to streamline workflows, save time and accelerate the document creation and delivery process. Founded in 2010, Octiv services more than 400 organizations including enterprises such as General Electric and Siemens, and high-growth companies such as Lindamood-Bell and G/O Digital. To learn more, visit <a href="/">octiv.com</a>.</p>
 		<?php
 			if ( have_rows('additional_boilerplate') ) :
 			while ( have_rows('additional_boilerplate') ) : the_row();
