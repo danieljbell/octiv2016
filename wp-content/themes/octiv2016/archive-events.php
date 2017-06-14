@@ -3,10 +3,6 @@
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
     <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
-    <?php
-      $local_post_type = get_post_type_object('events');
-      echo '<p class="font-bump">' . $local_post_type->description . '</p>';
-    ?>
   </div>
 </div>
 
