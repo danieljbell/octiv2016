@@ -76,7 +76,7 @@
                 } else if (get_field('webinar_type') === 'client') {
                   $webinar_type = 'client';
                 }
-                echo do_shortcode('[get_card thumb="true" class="' . $webinar_type . '" excerpt="date"]');
+                echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" class="' . $webinar_type . '" excerpt="date"]');
               endwhile;
               echo '</div>';
               else :

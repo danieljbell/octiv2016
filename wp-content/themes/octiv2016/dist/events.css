@@ -21,11 +21,37 @@
   position: relative;
 }
 
-.card-tag-webinars + h4 {
+.card-tb {
+  position: relative;
+}
+
+.past .card-tb:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.past .card-tb:after {
+  content: 'Past Event';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
+  font-weight: bold;
+  color: #fff;
+}
+
+[class*="card-tag"] + h4 {
   margin-top: 1rem;
 }
 
-.card-tag-webinars {
+[class*="card-tag"] {
   position: absolute;
   top: 0.5rem;
 }

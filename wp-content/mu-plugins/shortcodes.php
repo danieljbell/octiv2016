@@ -15,30 +15,22 @@ add_shortcode('get_card', function($atts) {
     ), $atts));
     ob_start(); ?>
       <div class="card <?php if ($class) {echo $class;} ?> ">
-        <?php //if ($thumb_modifier) : ?>
-          <!-- <a href="<?php the_permalink(); ?>" style="background-image: url(<?php 
-          if ($thumb_modifier === 'product') {
-            echo '/wp-content/uploads/2017/06/graduate-cap.svg), linear-gradient(rgba(66,176,216,0.75),rgba(66,176,216,0.75)),';
-          }
-          if ($thumb_modifier === 'thought-leadership') {
-            echo '//fillmurray.com/100/100), linear-gradient(rgba(51,171,64,0.75),rgba(51,171,64,0.75)),';
-          }
-          if ($thumb_modifier === 'client') {
-            echo '//fillmurray.com/100/100), linear-gradient(rgba(185,73,245,0.75),rgba(185,73,245,0.75)),';
-          }
-          ?> url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>)" class="card-tb" title="<?php echo get_the_title(); ?>"></a> -->
-        <?php //else : ?>
-          <?php if ($thumb === 'true') : ?>
-            <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb" title="<?php echo get_the_title(); ?>"></a>
-          <?php endif; ?>
-        <?php // endif; ?>
+        <?php if ($thumb === 'true') : ?>
+          <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb" title="<?php echo get_the_title(); ?>"></a>
+        <?php endif; ?>
         <div>
           <?php
             if ($tag === 'beta') :
               echo '<p class="card-tag-webinars float-r-a">Beta</p>';
             endif;
-            if ($tag === 'past') :
-              echo '<p class="card-tag-webinars">Past Event</p>';
+            if ($thumb_modifier === 'thought-leadership') :
+              echo '<p class="card-tag-webinars">Thought Leadership</p>';
+            endif;
+            if ($thumb_modifier === 'product') :
+              echo '<p class="card-tag-blog">Product</p>';
+            endif;
+            if ($thumb_modifier === 'client') :
+              echo '<p class="card-tag-client-stories">Client</p>';
             endif;
             if ($tag === 'roadmap') :
               echo '<p class="card-tag-blog float-r-a">Roadmap</p>';
