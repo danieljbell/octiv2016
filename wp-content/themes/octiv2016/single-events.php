@@ -46,8 +46,8 @@
             </div>
             <?php else : ?>
               <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-              <form id="mktoForm_1041"></form>
-              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1041, function(form) {
+              <form id="mktoForm_<?php echo get_field('marketo_form_id'); ?>"></form>
+              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('marketo_form_id'); ?>, function(form) {
                 var thing = document.querySelector('label[for="subscriptionNewsletter"]');
                 thing.parentElement.classList.add('checkbox-wrap');
 
