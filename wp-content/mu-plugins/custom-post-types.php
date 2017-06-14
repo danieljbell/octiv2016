@@ -198,7 +198,7 @@ function register_event_post_type() {
 
   $args = array(
     'labels'      => $labels,
-    'description' => 'Octiv is out and about and even in your computer!',
+    'description' => '',
     'public'      => true,
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/events' ),
