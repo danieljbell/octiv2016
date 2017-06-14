@@ -112,6 +112,7 @@
                     <div>
                       <h5><?php echo the_sub_field('speaker_name'); ?></h5>
                       <p><em><?php echo the_sub_field('speaker_title'); ?></em></p>
+                      <p><?php echo the_sub_field('speaker_company'); ?></p>
                     </div>
                     <?php if (get_sub_field('speaker_twitter') || get_sub_field('speaker_linkedin')) : ?>
                       <ul class="speaker-social no-bull">
