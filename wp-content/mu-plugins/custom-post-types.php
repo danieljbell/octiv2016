@@ -203,7 +203,7 @@ function register_event_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+    'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
     'show_in_rest'       => true,
     'rest_base'          => 'events',
     'rest_controller_class' => 'WP_REST_Posts_Controller',
