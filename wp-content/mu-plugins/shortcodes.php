@@ -16,7 +16,13 @@ add_shortcode('get_card', function($atts) {
     ob_start(); ?>
       <div class="card <?php if ($class) {echo $class;} ?> ">
         <?php if ($thumb === 'true') : ?>
-          <a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);" class="card-tb" title="<?php echo get_the_title(); ?>"></a>
+          <?php
+            if (!get_post_thumbnail_id($post->ID)) :
+              echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(237,76,6,1), rgba(237,76,6,1));" class="card-tb" title="' . get_the_title() . '"></a>';
+            else :
+              echo '<a href="' . get_the_permalink() . '" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
+            endif;
+          ?>
         <?php endif; ?>
         <div>
           <?php
