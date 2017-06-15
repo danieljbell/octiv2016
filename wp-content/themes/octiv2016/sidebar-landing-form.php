@@ -56,6 +56,10 @@
 						var vals = form.vals();
 
 						// Update the redirect url with form fields
+						if (window.location.pathname === '/resources/downloads/future-work-bottom-line/') {
+							followUpUrl = '/wp-content/uploads/2017/06/FOW-bottom-line.png';
+						}
+
 						if (window.location.pathname === '/resources/downloads/future-work-mobility/') {
 							followUpUrl = '/wp-content/uploads/2017/05/FOW-Mobility.png';
 						}
