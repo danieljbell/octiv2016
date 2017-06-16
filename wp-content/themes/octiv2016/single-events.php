@@ -74,7 +74,7 @@
               <div class="video-inner">
                 <?php
                   if (get_field('webinar_source') === 'youtube') {
-                    echo '<iframe src="https://www.youtube.com/embed/' . get_field('webinar_id') . '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1&amp;VQ=HD720" frameborder="0" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
+                    echo '<iframe src="https://www.youtube.com/embed/' . get_field('webinar_id') . '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
                   } else if (get_field('webinar_source') === 'wistia') {
                     echo '<iframe src="//fast.wistia.net/embed/iframe/' . get_field('webinar_id') . '?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
                   } else {
