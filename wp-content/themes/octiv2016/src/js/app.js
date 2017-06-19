@@ -163,7 +163,7 @@ DATASHEET MODAL
 ==============================
 */
 if ($('body').hasClass('single-features')) {
-  var modalContainer = $('.empty-modal');
+  var modalContainer = $('.datasheet-modal');
 
   $('.datasheet-modal-button').on('click', function(e) {
     e.preventDefault();

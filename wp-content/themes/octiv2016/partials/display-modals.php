@@ -99,8 +99,16 @@
 <div class="modal fade empty-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
   	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div class="modal-content">  
+    </div>
+  </div>
+</div>
+
+<?php if (is_singular('features')) : ?>
+<div class="modal fade datasheet-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <div class="modal-content">
-      <?php if (is_singular('features')) : ?>
       <h2><?php echo get_field('datasheet_headline'); ?></h2>
       <p><?php echo get_field('datasheet_headline'); ?></p>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
@@ -134,10 +142,10 @@
           }
         }
         </style>
-      <?php endif; ?>
     </div>
   </div>
 </div>
+      <?php endif; ?>
 
 <?php if ( is_page_template( 'page-templates/product-page.php' ) || is_page_template( 'page-templates/page-resources.php' ) || is_front_page() || is_post_type_archive('press-releases') ) : ?>
 	<?php if ( $_GET['ref'] === 'tinderbox' ) : ?>

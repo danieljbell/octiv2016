@@ -27,16 +27,16 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(51,171,64,1),rgba(51,171,64,0)), url(https://octiv.com/wp-content/uploads/2017/06/FOW-Mobility-homepage-bg.jpg)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(185,73,245,1) 10%,rgba(185,73,245,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530.png)">
 			<section>
 				<div class="site-width centered">
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
-							<h1>From Here to Mobility</h1>
-							<p class="font-bump">This is the second in a three-part series on the future of work. Want a glimpse into the future of mobility for you and your company?</p>
+							<h1>From Here to the Bottom Line</h1>
+							<p class="font-bump">This is the third in a three-part series on the future of work. Your approach to the future of work could impact your bottom line. Are you ready?</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/future-work-mobility" class="btn-primary">Download the Infographic Now</a>
+					<a href="/resources/downloads/future-work-bottom-line" class="btn-primary">Download the Infographic Now</a>
 				</div>
 			</section>
 		</div>
