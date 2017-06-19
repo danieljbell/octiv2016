@@ -15,6 +15,12 @@ BASE SLIDER STYLES
   position: relative;
   z-index: 1;
   margin-bottom: 0;
+  .single-features & {
+    margin-top: 1rem;
+    & button:before {
+      color: #ccc;
+    }
+  }
 }
 
 .slick-dots li {
