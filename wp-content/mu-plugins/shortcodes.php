@@ -122,7 +122,8 @@ add_shortcode('get_hero', function($atts) {
   extract(shortcode_atts(
     array(
       'title' => single_post_title('', false),
-      'img' => ''
+      'img' => '',
+      'text_align' => '',
     ), $atts));
     ob_start(); ?>
 <div class="fixed-hero-section"
@@ -132,7 +133,7 @@ add_shortcode('get_hero', function($atts) {
       background-size: cover;
     "
   <?php endif; ?>>
-  <div class="site-width white-text">
+  <div class="site-width white-text <?php if ($text_align) { echo 'centered'; } ?>">
     <h1><?php echo $title; ?></h1>
   </div>
 </div>
