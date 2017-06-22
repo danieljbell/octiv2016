@@ -56,6 +56,10 @@
 						var vals = form.vals();
 
 						// Update the redirect url with form fields
+						if (window.location.pathname === '/resources/downloads/the-case-for-digital-document-generation/') {
+							followUpUrl = '/wp-content/uploads/2017/06/The-Case-For-Digital-Document-Generation.pdf';
+						}
+
 						if (window.location.pathname === '/resources/downloads/future-work-bottom-line/') {
 							followUpUrl = '/wp-content/uploads/2017/06/FOW-bottom-line.png';
 						}
