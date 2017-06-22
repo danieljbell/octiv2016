@@ -55,3 +55,15 @@
 		margin-bottom: 2rem;
 	}
 }
+
+.content-cover {
+	display: none;
+	@include bp(lg) {
+		display: block;
+		float: right;
+		max-width: 300px;
+		margin-left: 2rem;
+		border: 1px solid $mgray;
+		box-shadow: 0 0 15px rgba(0,0,0,0.1);
+	}
+}
