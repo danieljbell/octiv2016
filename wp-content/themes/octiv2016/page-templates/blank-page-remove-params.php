@@ -24,6 +24,6 @@ if (!$has_reg || $has_reg != 'true') {
   window.onload = getStarted();
 
   function getStarted() {
-    // window.history.replaceState( null , null, window.location.pathname );
+    window.history.replaceState( null , null, window.location.pathname );
   }
 </script>
