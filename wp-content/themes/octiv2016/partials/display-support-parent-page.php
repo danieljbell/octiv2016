@@ -555,9 +555,43 @@
 					<hr>
 					<div class="half">
 						<div>
-							<h4>Tips and Tricks </h4>
+							<h4>Tips and Tricks</h4>
 							<ul>
-								<?php postIDLogic(2019); ?>
+								<?php 
+								
+									$args = array(
+										'post_type' => 'events',
+										'meta_key' => get_field('webinar_type'),
+										'meta_value' => 'client'
+									);
+								
+									$query = new WP_Query( $args );
+								
+									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post() 
+								
+								?>
+										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+								<?php	endwhile; endif; wp_reset_query(); ?>		
+							</ul>
+						</div>
+						<div>
+							<h4>Releases</h4>
+							<ul>
+								<?php 
+								
+									$args = array(
+										'post_type' => 'events',
+										'meta_key' => get_field('webinar_type'),
+										'meta_value' => 'product'
+									);
+								
+									$query = new WP_Query( $args );
+								
+									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post() 
+								
+								?>
+										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+								<?php	endwhile; endif; wp_reset_query(); ?>	
 							</ul>
 						</div>
 					</div>
