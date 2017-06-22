@@ -190,6 +190,8 @@ $webinar_source = get_field('webinar_source', $queried_object);
 									endif;
 									wp_reset_query();
 							endwhile;
+							else :
+								echo 'Resources are coming soon, stay tuned!';
 						endif;
 					?>
 				</div>
