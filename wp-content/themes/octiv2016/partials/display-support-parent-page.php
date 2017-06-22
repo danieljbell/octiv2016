@@ -568,7 +568,8 @@
 								
 									$query = new WP_Query( $args );
 								
-									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post() 
+									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+									print_r(get_field('event_start_date'));
 								
 								?>
 										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
@@ -589,7 +590,8 @@
 								
 									$query = new WP_Query( $args );
 								
-									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post() 
+									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+									print_r(get_field('event_start_date'));
 								
 								?>
 										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
