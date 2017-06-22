@@ -562,7 +562,8 @@
 									$args = array(
 										'post_type' => 'events',
 										'meta_key' => get_field('webinar_type'),
-										'meta_value' => 'client'
+										'meta_value' => 'client',
+										'orderby' => get_field('event_start_date')
 									);
 								
 									$query = new WP_Query( $args );
@@ -582,7 +583,8 @@
 									$args = array(
 										'post_type' => 'events',
 										'meta_key' => get_field('webinar_type'),
-										'meta_value' => 'product'
+										'meta_value' => 'product',
+										'orderby' => get_field('event_start_date')
 									);
 								
 									$query = new WP_Query( $args );
