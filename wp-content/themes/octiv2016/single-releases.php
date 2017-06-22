@@ -166,41 +166,31 @@ $webinar_source = get_field('webinar_source', $queried_object);
 				<div>
 					<h2>Release Resources</h2>
 					<?php
-						$args = array(
-							'post_type' => 'releases',
-							'post_parent' => $post->ID,
-							'order'	=> 'ASC',
-						);
-						$query_children = new WP_Query( $args );
-						if ($query_children->have_posts()) :
-						while ($query_children->have_posts()) :
-						$query_children->the_post();
-					?>
-						<div class="card sidebar-card">
-							<a href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);"></a>
-							<div>
-								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-								<p><br><a href="<?php the_permalink(); ?>" class="btn-arrow">
-									<?php
-										if (get_field( 'resource_type' ) === 'faq') :
-											echo 'Read FAQ';
-										else :
-											if (get_field( 'webinar_source' ) === '')  :
-												echo 'Register Now';
-											else :
-												echo 'Watch Webinar';
-											endif;
-										endif;
-									?>
-								</a></p>
-							</div>
-						</div>
-					<?php
-						endwhile;
-						else :
-							echo 'Resources are coming soon, stay tuned!';
+						if (have_rows('linked_pages')) :
+							while (have_rows('linked_pages')) :
+								the_row();
+									$linked_page = get_sub_field('event_page');
+								
+									$args = array(
+										'post_type' => 'any', 
+										'page_id' => $linked_page
+									);
+								
+									$query = new WP_Query( $args );
+								
+									if ( $query->have_posts() ) : 
+										while ( $query->have_posts() ) :
+											$query->the_post();
+												$excerpt = '';
+												if ($post->post_type === 'events') :
+													$excerpt = 'date';
+												endif;
+												echo do_shortcode('[get_card thumb="true" class="sidebar-card" excerpt="' . $excerpt . '"]');
+										endwhile;
+									endif;
+									wp_reset_query();
+							endwhile;
 						endif;
-						wp_reset_query();
 					?>
 				</div>
 			<?php endif; ?>
