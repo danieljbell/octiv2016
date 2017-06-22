@@ -561,15 +561,20 @@
 								
 									$args = array(
 										'post_type' => 'events',
-										'meta_key' => get_field('webinar_type'),
-										'meta_value' => 'client',
-										'orderby' => 'meta_value'
+										'meta_key' => 'event_start_date',
+										'orderby' => 'event_start_date',
+										'meta_query' => array(
+											array(
+												'key'     => 'webinar_type',
+												'value' => 'client',
+												'compare' => '='
+											),
+										),
 									);
 								
 									$query = new WP_Query( $args );
 								
 									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-									print_r(get_field('event_start_date'));
 								
 								?>
 										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
@@ -583,15 +588,20 @@
 								
 									$args = array(
 										'post_type' => 'events',
-										'meta_key' => get_field('webinar_type'),
-										'meta_value' => 'product',
-										'orderby' => 'meta_value'
+										'meta_key' => 'event_start_date',
+										'orderby' => 'event_start_date',
+										'meta_query' => array(
+											array(
+												'key'     => 'webinar_type',
+												'value' => 'product',
+												'compare' => '='
+											),
+										),
 									);
 								
 									$query = new WP_Query( $args );
 								
 									if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-									print_r(get_field('event_start_date'));
 								
 								?>
 										<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
