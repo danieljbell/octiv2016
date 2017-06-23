@@ -71,7 +71,7 @@
   <?php get_template_part('partials/display', 'client-testimonial'); ?>  
 </div>
 
-<section class="solutions-container">
+<section class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
   <div class="site-width">
     <h2 class="centered">Explore Octiv’s Platform Components</h2>
     <br>
@@ -93,9 +93,7 @@
   </div>
 </section>
 
-<div class="brand-callout">
-  <?php get_template_part('partials/display', 'basic-contact-us'); ?>
-</div>
+<?php get_template_part('partials/display', 'basic-contact-us'); ?>
 
 <style>
   .fixed-hero-section {
