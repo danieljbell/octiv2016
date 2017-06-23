@@ -36,7 +36,7 @@
 <?php
   if (have_rows('page_section')) :
     echo '
-      <section class="fat-section">
+      <section class="fat-section" style="padding-bottom: 3rem;">
         <div class="site-width">
           <div class="half">
     ';
@@ -68,7 +68,7 @@
 ?>
 
 <div class="client-testimonial">
-  <?php get_template_part('partials/display', 'client-testimonial'); ?>  
+  <?php get_template_part('partials/display', 'client-testimonial'); ?>
 </div>
 
 <section class="callout solutions-container" style="background-color: #f0f0f0; background-image: linear-gradient(#f0f0f0, #eee);">
