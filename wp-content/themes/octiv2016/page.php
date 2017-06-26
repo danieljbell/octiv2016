@@ -31,7 +31,8 @@
 						$args = array(
 							'post_type'		=> array('page','post'),
 							// 'posts_per_page' => -1,
-							'post_parent' => $post->ID
+							'post_parent' => $post->ID,
+							'post__not_in' => array( 3025 )
 						);
 					endif;
 				?>
