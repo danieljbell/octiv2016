@@ -21,7 +21,7 @@ add_shortcode('get_card', function($atts) {
               echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(237,76,6,1), rgba(237,76,6,1));" class="card-tb" title="' . get_the_title() . '"></a>';
             else :
               if ($thumb_modifier === 'product') {
-                echo '<a href="' . get_the_permalink() . '" style="background-image: url(http://localhost:1337/wp-content/uploads/2017/06/WHITE-online-meetings.png), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-online-meetings.png), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } else {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
               }
