@@ -57,7 +57,7 @@
       			    'meta_query' => array(
       					array(
   				        'key'		=> 'event_start_date',
-  				        'compare'	=> '>',
+  				        'compare'	=> '>=',
   				        'value'		=> $today,
     				    )
     			    ),
