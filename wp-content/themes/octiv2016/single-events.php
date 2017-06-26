@@ -9,9 +9,20 @@
 
 <?php if ($terms[0]->slug === 'online') : ?>
   <?php if (has_post_thumbnail()) : ?>
+  <?php if (get_field('webinar_type') === 'product') : ?>
+    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(<?php echo the_post_thumbnail_url(); ?>);">
+  <?php elseif (get_field('webinar_type') === 'thought-leadership') : ?>
+    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(<?php echo the_post_thumbnail_url(); ?>);">
+  <?php else : ?> 
     <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), url(<?php echo the_post_thumbnail_url(); ?>);">
+  <?php endif; ?>
+    
+  <?php else : ?>
+  <?php if (get_field('webinar_type') === 'client') : ?>
+    <div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), linear-gradient(rgba(185,73,245,0.6),rgba(185,73,245,0.6)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg); background-size: cover, cover, 300px;">
   <?php else : ?>
     <div class="fixed-hero-section">
+  <?php endif; ?>
   <?php endif; ?>
     <div class="site-width white-text centered">
       <section>
