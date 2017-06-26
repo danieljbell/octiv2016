@@ -6,7 +6,7 @@
   ) );
 ?>
 
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/events-archive-bg.jpg);">
   <div class="site-width white-text centered">
     <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?> &amp; Webinars</h1>
   </div>
