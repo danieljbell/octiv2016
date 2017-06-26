@@ -40,75 +40,6 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(66,176,216,0.5),rgba(66,176,216,0)), url(/wp-content/uploads/2017/05/home-page-bg.jpg);">
-			<section>
-				<div class="site-width centered">
-					<div class="font-bump">
-						<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
-							<h1>The Future of Work is Here</h1>
-							<div style="margin-bottom: 1rem;">
-								<p class="font-bump">Register for our live webinar and learn how to future-proof your business.</p>
-								<ul class="webinar-speakers">
-									<li class="speaker">
-										<img src="/wp-content/uploads/2016/10/david-kerr.jpg" alt="">
-										<div class="person-info">
-											<strong>David Kerr</strong>Octiv
-										</div>
-									</li>
-									<li class="speaker">
-										<img src="/wp-content/uploads/2017/06/matt-reid.jpg" alt="">
-										<div class="person-info">
-											<strong>Matt Reid</strong>Velocify
-										</div>
-									</li>
-									<li class="speaker">
-										<img src="/wp-content/uploads/2017/06/david-ball.jpg" alt="">
-										<div class="person-info">
-											<strong>David Ball</strong>DocuSign
-										</div>
-									</li>
-									<li class="speaker">
-										<img src="/wp-content/uploads/2017/06/mt-ray.jpg" alt="">
-										<div class="person-info">
-											<strong>MT Ray</strong>High Alpha
-										</div>
-									</li>
-								</ul>
-								<style>
-									.webinar-speakers {
-										list-style-type: none;
-										padding-left: 0;
-										display: flex;
-										flex-wrap: wrap;
-										justify-content: space-around;
-									}
-									.webinar-speakers img {
-										max-width: 85px;
-										border-radius: 50%;
-										border: 3px solid #fff;
-										box-shadow: 0 0 15px rgba(0,0,0,0.5);
-									}
-									.speaker {
-										margin: 0 1rem;
-									}
-									.person-info {
-										margin-top: 0.5rem;
-										font-size: 0.75em;
-									}
-									.person-info strong {
-										text-transform: uppercase;
-										display: block;
-										font-size: 1.2em;
-										line-height: 1;
-									}
-								</style>
-							</div>
-						</div>
-					</div>
-					<a href="/resources/webinars/future-of-work/" class="btn-primary">Register Now</a>
-				</div>
-			</section>
-		</div>
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/g2-high-performer-bg.jpg)">
 			<section>
 				<div class="site-width centered">
@@ -125,26 +56,6 @@ $context = stream_context_create(array(
 		</div>
 	</div>
 </div>
-
-<!-- <div class="fixed-hero-section">
-	<div class="slider">
-		<div>
-			<div class="video-overlay"></div>
-			<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-			<div class="site-width pos-rel" style="z-index: 2;">
-			    <div class="half white-text">
-			        <div>
-			            <h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-			            <p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales, legal, finance &amp; human resources - freeing your teams to be <a href="#productive">more productive</a>.</p>
-									<button class="rad-modal-button btn-primary">Learn How</button>
-			        </div>
-			    </div>
-			</div>
-		</div>
-		<div>Slide Two</div>
-		<div>Slide Three</div>
-	</div>
-</div> -->
 
 <div class="brand-video site-width box centered">
 	<h2>Meet Sara</h2>
