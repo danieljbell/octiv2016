@@ -38,7 +38,7 @@ Template Name: Webinar
 $today = date('Ymd');
 $webinar_date = get_field('webinar_date');
 
-if ($webinar_date > $today) : ?>
+if ($webinar_date >= $today) : ?>
 	
 <section>
 	<div class="site-width">
