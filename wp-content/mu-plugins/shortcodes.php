@@ -19,15 +19,15 @@ add_shortcode('get_card', function($atts) {
           <?php
             if (!get_post_thumbnail_id($post->ID)) :
               if ($thumb_modifier === 'client') {
-                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-megaphone.png), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(185,73,245,1),rgba(185,73,245,1)); background-size: 125px, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="url(/wp-content/uploads/2017/06/WHITE-megaphone.png), radial-gradient(rgba(0,0,0,0.3) 20%,rgba(0,0,0,0)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(185,73,245,1),rgba(185,73,245,1)); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } else {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(237,76,6,1), rgba(237,76,6,1));" class="card-tb" title="' . get_the_title() . '"></a>';
               }
             else :
               if ($thumb_modifier === 'thought-leadership') {
-                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), radial-gradient(rgba(0,0,0,0.3) 20%,rgba(0,0,0,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } elseif ($thumb_modifier === 'product') {
-                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-online-meetings.png), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-online-meetings.png), radial-gradient(rgba(0,0,0,0.3) 20%,rgba(0,0,0,0)), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } else {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
               }
