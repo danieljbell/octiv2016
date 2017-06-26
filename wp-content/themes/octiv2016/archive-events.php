@@ -30,15 +30,15 @@
           <ul class="no-bull" style="padding-left: 0;">
             <li class="pos-rel">
               <p class="card-tag-webinars" style="margin-bottom: 0;">Thought Leadership</p>
-              <p>Get info you need straight from the experts.</p>
+              <p style="font-size: 0.85em;">Get info you need straight from the experts.</p>
             </li>
             <li class="pos-rel">
               <p class="card-tag-blog" style="margin-bottom: 0;">Product</p>
-              <p>See the latest updates to the Octiv platform.</p>
+              <p style="font-size: 0.85em;">See the latest updates to the Octiv platform.</p>
             </li>
             <li class="pos-rel">
               <p class="card-tag-client-stories" style="margin-bottom: 0;">Client</p>
-              <p>Learn how to get the most out of Octiv.</p>
+              <p style="font-size: 0.85em;">Learn how to get the most out of Octiv.</p>
             </li>
           </ul>
       </div>
