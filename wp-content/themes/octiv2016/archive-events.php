@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+  get_header();
+  $terms = get_terms( array(
+    'taxonomy' => 'event_type',
+    'hide_empty' => false,
+  ) );
+?>
 
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
@@ -12,22 +18,6 @@
   <div class="site-width">
     <div class="fourth-3-fourth">
       <div class="sticky-sidebar" id="sticky-sidebar">
-        <h4><?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h4>
-        <hr>
-        <?php
-          $terms = get_terms( array(
-              'taxonomy' => 'event_type',
-              'hide_empty' => false,
-          ) );
-          if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-              echo '<ul class="nav sidebar-links" id="sidebar-links">';
-              foreach ( $terms as $term ) {
-                  echo '<li><a href="#' . $term->slug . '">' . $term->name . '</a></li>';
-              }
-              echo '</ul>';
-          }
-        ?>
-        <div class="mar-t"></div>
         <h4>Filters</h4>
         <hr>
         <ul class="no-bull filter-container">
