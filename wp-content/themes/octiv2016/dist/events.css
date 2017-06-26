@@ -50,7 +50,7 @@
   margin-top: 1rem;
 }
 
-[class*="card-tag"] {
+.sticky-listing [class*="card-tag"] {
   position: absolute;
   top: 0.5rem;
 }

@@ -32,6 +32,23 @@
             <li><input type="checkbox" id="product" checked><label for="product">Product</label></li>
             <li><input type="checkbox" id="client" checked><label for="client">Client</label></li>
           </ul>
+          <div class="mar-t"></div>
+          <h4>Legend</h4>
+          <hr>
+          <ul class="no-bull" style="padding-left: 0;">
+            <li class="pos-rel">
+              <p class="card-tag-webinars" style="margin-bottom: 0;">Thought Leadership</p>
+              <p>asdf</p>
+            </li>
+            <li class="pos-rel">
+              <p class="card-tag-blog" style="margin-bottom: 0;">Product</p>
+              <p>asdf</p>
+            </li>
+            <li class="pos-rel">
+              <p class="card-tag-client-stories" style="margin-bottom: 0;">Client</p>
+              <p>asdf</p>
+            </li>
+          </ul>
         <?php endif; ?>
       </div>
       <div class="sticky-listing">

@@ -2,7 +2,7 @@
 
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
-    <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+    <h1><?php echo str_replace('Archives: ','',get_the_archive_title()); ?> & Webinars</h1>
   </div>
 </div>
 
@@ -34,6 +34,23 @@
           <li><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
           <li><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
         </ul>
+        <div class="mar-t"></div>
+          <h4>Legend</h4>
+          <hr>
+          <ul class="no-bull" style="padding-left: 0;">
+            <li class="pos-rel">
+              <p class="card-tag-webinars" style="margin-bottom: 0;">Thought Leadership</p>
+              <p>asdf</p>
+            </li>
+            <li class="pos-rel">
+              <p class="card-tag-blog" style="margin-bottom: 0;">Product</p>
+              <p>asdf</p>
+            </li>
+            <li class="pos-rel">
+              <p class="card-tag-client-stories" style="margin-bottom: 0;">Client</p>
+              <p>asdf</p>
+            </li>
+          </ul>
       </div>
       <div class="sticky-listing">
         <?php
