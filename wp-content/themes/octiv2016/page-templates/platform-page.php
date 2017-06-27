@@ -15,25 +15,19 @@ $context = stream_context_create(array(
 ));
 ?>
 
-<div class="fixed-hero-section">
-	<div class="video-overlay"></div>
-	<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/platform-video.mp4" autoplay loop></video>
-	<div class="site-width white-text centered pos-rel" style="z-index: 2;">
-		<div class="half">
-			<div style="margin-right: auto; margin-bottom: 0;">
-				<h1 style="margin-bottom: 0.5rem;">Power Your Document Workflows</h1>
-				<div class="fancy-links">
-          <?php the_content(); ?>
-        </div>
-        <div class="mar-t">
-          <button class="rad-modal-button btn-primary">Learn How</button>
-        </div>
+<div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/platform.jpg);">
+	<div class="site-width centered pos-rel" style="z-index: 2;">
+		<h1 class="white-text">Power Your Documents with Octiv</h1>
+		<div class="two-third-only white-text">
+			<div class="font-bump">
+				<p>Get more out of your existing tech stack with Octiv. Automate document generation, track engagement and manage documents with secure storage and advanced search. Build a document workflow that grows with you.</p>
 			</div>
 		</div>
+		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>
 	</div>
 </div>
 
-<?php // get_template_part('partials/display', 'breadcrumbs'); ?>
+<?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <?php
 $count = 0;
@@ -139,10 +133,6 @@ $count = 0;
 </section>
 
 <style>
-.fixed-hero-section {
-	padding: 2rem 0;
-}
-
 .fat-section.white-text {
 	background-size: cover;
 	background-position: left center;
@@ -161,18 +151,11 @@ main .half {
 	fill: #42b0d8;
 }
 @media screen and (max-width: 600px) {
-	.fixed-hero-section {
-		padding: 0;
-	}
 	.section-icon {
 		display: none;
 	}
 }
 
-.fixed-hero-section .two-third-only > div,
-.fixed-hero-section .two-third-only > div p {
-	margin-bottom: 0;
-}
 .solutions-container .card {
 	color: #fff;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.85);

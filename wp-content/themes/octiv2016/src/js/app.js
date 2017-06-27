@@ -7,24 +7,6 @@ $(document).ready(function() {
 
 /*
 ==============================
-TYPED FOR HOMEPAGE
-==============================
-*/
-if ($('.typed').length) {
-  $(".typed").typed({
-    strings: ["Publishing Moguls", "Tech Innovators", "Market Makers", "Real Estate Titans", "Global Leaders"],
-    typeSpeed: 30,
-    backSpeed: 15,
-    startDelay: 2000,
-    backDelay: 3000,
-    loop: true,
-    loopCount: false
-  });
-}
-
-
-/*
-==============================
 SCROLLING EVENTS FOR HOMEPAGE
 ==============================
 */
@@ -50,16 +32,6 @@ if ($('body').hasClass('home')) {
     },
     offset: '65%'
   });
-
-
-    // Smooth Scrolling
-    $('.home .fixed-hero-section .fancy-links a').on('click', function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      $('html, body').animate({
-          scrollTop: target.offset().top
-      }, 300);
-    });
 }
 
 /*
@@ -235,16 +207,6 @@ SLIDERS
 ==============================
 */
 // BASIC FULL WIDTH SLIDER
-if ($('body').hasClass('home')) {
-  $('.slider').on('init', function() {
-    document.querySelector('.hero-video').play();
-  });
-  $('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
-    if (nextSlide === 1) {
-      document.querySelector('.hero-video').play();
-    }
-  });
-}
 $('.slider').slick({
   autoplay : true,
   autoplaySpeed : 6000,

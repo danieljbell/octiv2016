@@ -12,18 +12,29 @@ $context = stream_context_create(array(
 
 <div class="fixed-hero-section">
 	<div class="slider">
-		<div style="position: relative; background-image: url(/wp-content/themes/octiv2016//dist/img/home-video-hero.jpg);">
+		<div style="position: relative; background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/homepage.jpg);">
 			<section>
-				<div class="video-overlay"></div>
-				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
-					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-					<div class="two-third-only font-bump">
-						<div class="font-bump">
-							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales and legal - freeing your teams to be <a href="#productive">more productive</a>.</p>
+				<div class="site-width centered" style="position: relative; z-index: 5;">
+					<h1 class="white-text">Documents at the Speed of Business</h1>
+					<div class="white-text two-third-only font-bump">
+						<div>
+							<p class="fancy-links">Take control of your document generation workflow. Create digital documents in minutes, share them online, sign from anywhere and store your documents securely in the cloud. Save more time and boost productivity.</p>
 						</div>
 					</div>
-					<button class="rad-modal-button btn-primary">Learn How</button>
+					<button class="rad-modal-button btn-primary">See How Octiv Powers Documents</button>
+				</div>
+			</section>
+		</div>
+		<div>
+			<section>
+				<div class="site-width centered">
+					<h1 class="white-text">Take a Tour of the Octiv Platform</h1>
+					<div class="white-text two-third-only font-bump">
+						<div>
+							<p>Experience the elements that make Octiv a document generation industry leader. </p>
+						</div>
+					</div>
+					<a href="/tour" class="btn-primary">Take the Tour Now</a>
 				</div>
 			</section>
 		</div>
@@ -33,7 +44,7 @@ $context = stream_context_create(array(
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
 							<h1>From Here to the Bottom Line</h1>
-							<p class="font-bump">This is the third in a three-part series on the future of work. Your approach to the future of work could impact your bottom line. Are you ready?</p>
+							<p>This is the third in a three-part series on the future of work. Your approach to the future of work could impact your bottom line. Are you ready?</p>
 						</div>
 					</div>
 					<a href="/resources/downloads/future-work-bottom-line" class="btn-primary">Download the Infographic Now</a>
@@ -46,7 +57,7 @@ $context = stream_context_create(array(
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
 							<h1>Octiv Named High Performer by G2 Crowd</h1>
-							<p class="font-bump">The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
+							<p>The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
 							<img src="https://octiv.com/wp-content/uploads/2017/06/g2-high-performer-badge.png" alt="g2-badge" style="max-width: 150px;">
 						</div>
 					</div>

@@ -8,16 +8,15 @@ Template Name: Company Page
 get_header();
 ?>
 
-<div class="fixed-hero-section company-hero white-text">
-	<div class="site-width">
-		<div class="half-stack">
-			<div>
-				<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/logo-mark.svg" alt="">
-			</div>
-			<div>
-				<h1>Company Overview</h1>
+<div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/platform.jpg);">
+	<div class="site-width centered pos-rel" style="z-index: 2;">
+		<h1 class="white-text">Learn More About the People Behind the Product</h1>
+		<div class="two-third-only white-text">
+			<div class="font-bump">
+				<p>Take a look around and meet some of our people, browse our job openings and more.</p>
 			</div>
 		</div>
+		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>
 	</div>
 </div>
 
