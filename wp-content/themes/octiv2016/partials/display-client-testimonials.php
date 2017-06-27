@@ -50,7 +50,7 @@
 							<div class="centered">
 								<img src="' . get_field('client_logo') . '" alt="' . get_field('client_testimonial_company') . '">
 								<br>
-								<a href="' . get_the_permalink() . '" class="btn-white-outline">Read Case Study</a>
+								<a href="' . get_the_permalink() . '" class="btn-white-outline">Read Client Story</a>
 							</div>
 							<div>
 								<h4>' . get_field('client_testimonial') . '</h4>
@@ -67,7 +67,7 @@
 							<div class="centered">
 								<img src="' . get_field('client_logo') . '" alt="' . get_field('client_testimonial_company') . '">
 								<br>
-								<a href="' . get_the_permalink() . '" class="btn-white-outline">Read Case Study</a>
+								<a href="' . get_the_permalink() . '" class="btn-white-outline">Read Client Story</a>
 							</div>
 							<div>
 								<h4>' . get_field('client_testimonial') . '</h4>

@@ -18,7 +18,7 @@ if (have_rows('client_stories')) :
           <div class="fourth-3-fourth">
             <div class="centered">
               <img src="<?php echo get_field('client_logo'); ?>" alt="<?php echo get_field('client_testimonial_company'); ?>" class="client-logo">
-              <a href="<?php echo get_the_permalink(); ?>" class="btn-white-outline">View Case Study</a>
+              <a href="<?php echo get_the_permalink(); ?>" class="btn-white-outline">View Client Story</a>
             </div>
             <div class="white-text">
               <?php
