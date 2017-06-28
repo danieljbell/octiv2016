@@ -15,19 +15,12 @@
 
 <div class="fixed-hero-section">
   <div class="site-width white-text centered">
-      <?php
-        $icon = get_field('page_icon', true);
-        print_r($icon);
-        echo '<div class="hero-svg-container">';
-          echo $page_icon;
-        echo '</div>';
-      ?>
-      <h1><?php echo the_title(); ?></h1>
-      <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
-        <div class="font-bump fancy-links">
-          <?php the_content(); ?>
-        </div>
+    <h1><?php echo the_title(); ?></h1>
+    <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
+      <div class="font-bump fancy-links">
+        <?php the_content(); ?>
       </div>
+    </div>
   </div>
 </div>
 
