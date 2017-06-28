@@ -15,7 +15,7 @@ $context = stream_context_create(array(
 ));
 ?>
 
-<div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/platform.jpg);">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/platform.jpg);">
 	<div class="site-width centered pos-rel" style="z-index: 2;">
 		<h1 class="white-text">Power Your Documents with Octiv</h1>
 		<div class="two-third-only white-text">

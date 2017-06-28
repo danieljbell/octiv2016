@@ -13,7 +13,7 @@
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
   <div class="site-width white-text centered">
     <h1><?php echo the_title(); ?></h1>
     <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
@@ -89,27 +89,12 @@
 <?php get_template_part('partials/display', 'basic-contact-us'); ?>
 
 <style>
-  .fixed-hero-section {
-    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-.hero-svg-container {
-  width: 100%;
-  max-width: 175px;
-  fill: #fff;
-  margin-bottom: 1rem;
-}
 .section-icon svg {
   width: 100%;
   max-width: 75px;
   max-height: 75px;
   fill: #42b0d8;
 }
-/*main .half-stack,
-main .half {
-  align-items: center;
-}*/
 .fat-section .section-content:nth-of-type(2) .section-icon svg {
   fill: #33ab40;
 }

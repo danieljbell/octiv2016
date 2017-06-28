@@ -6,8 +6,10 @@
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-	<div class="site-width white-text">
+<div class="fixed-hero-section" <?php if (get_post_thumbnail_id()) {
+	echo 'style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(' . wp_get_attachment_url( get_post_thumbnail_id() ) . ');"';
+} ?>>
+	<div class="centered site-width white-text">
 		<?php if ($post->post_parent === 74) : ?>
 			<h1><?php echo rtrim(get_field('short_description'), '.'); ?></h1>
 		<?php else : ?>

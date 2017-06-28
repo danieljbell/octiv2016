@@ -25,20 +25,12 @@ $context = stream_context_create(array(
 
 	// sort the cats ASC
 	ksort($sorted_cats);
+
+  $rand_num = mt_rand(1,4);
 ?>
 
-<style>
-.hero-svg-container {
-	width: 100%;
-	max-width: 175px;
-	fill: #fff;
-	margin-bottom: 1rem;
-}
-</style>
-
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
   <div class="site-width white-text centered">
-    <div class="hero-svg-container"><?php echo file_get_contents('./wp-content/uploads/2017/01/building-blocks.svg', false, $context); ?></div>
     <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
     <div class="two-third-only">
       <div>
