@@ -4,11 +4,13 @@
 TEMPLATE NAME: Contact Us
 ==============================
 */
+
+$rand_num = mt_rand(1,4);
 ?>
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section" style="background-color: #fff; background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2016/06/company-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
 	<div class="site-width centered white-text two-third-only">
 		<div>
 			<h1><?php the_title(); ?></h1>
