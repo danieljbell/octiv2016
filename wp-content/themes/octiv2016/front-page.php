@@ -182,6 +182,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>A Better End-User Experience</h2>
 					<p>Octiv improves how users create documents, how they share with internal collaborators and how they edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done. Octiv eliminates or reduces interactions with technology to create and publish business documents.</p>
+					<a href="/tour" class="btn-arrow">See How Octiv Works</a>
 				</div>
 			</div>
 		</div>
@@ -200,6 +201,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>More Productive Teams</h2>
 					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv means less paper and more time for your teams to be more productive.</p>
+					<a href="/tour" class="btn-arrow">See How Octiv Boosts Productivity</a>
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/events-archive-bg.jpg);">
-  <div class="site-width white-text">
+  <div class="site-width centered white-text">
     <h1><?php echo $tax_title; ?> Events</h1>
   </div>
 </div>

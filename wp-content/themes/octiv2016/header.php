@@ -111,9 +111,6 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     					?>
           </li>
           <li class="menu-item">
-            <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
-          </li>
-          <li class="menu-item">
             <a href="/resources" title="Resources">Resources</a>
             <ul class="sub-menu">
               <li class="sub-menu-item"><a href="/resources/blog" title="Blog">Blog</a></li>

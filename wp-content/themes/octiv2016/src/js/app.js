@@ -169,8 +169,8 @@ for (var i = 0; i < headerNavItems.length; i++) {
       }
     }
     if (this.computedName !== "Request A Demo") {
-      this.parentElement.children[5].children[0].style.backgroundColor = "transparent";
-      this.parentElement.children[5].children[0].style.color = "#000000";
+      this.parentElement.children[4].children[0].style.backgroundColor = "transparent";
+      this.parentElement.children[4].children[0].style.color = "#000000";
     }
   });
   headerNavItems[i].addEventListener('mouseleave', function() {
@@ -179,8 +179,8 @@ for (var i = 0; i < headerNavItems.length; i++) {
         this.children[1].style.display = "none";
       }
     }
-    this.parentElement.children[5].children[0].style.backgroundColor = "#ed4c06";
-    this.parentElement.children[5].children[0].style.color = "#ffffff";
+    this.parentElement.children[4].children[0].style.backgroundColor = "#ed4c06";
+    this.parentElement.children[4].children[0].style.color = "#ffffff";
   });
 }
 
