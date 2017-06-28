@@ -19,7 +19,7 @@ get_header();
     <h1 class="white-text">Power Your Productivity</h1>
     <div class="two-third-only white-text">
       <div class="font-bump">
-        <p>Create documents faster, share them online, sign electronically and collaborate in real time. and Store documents and access them wherever you are.</p>
+        <p>Create documents faster, share them online, sign electronically and collaborate in real time. Store documents and access them wherever you are.</p>
       </div>
     </div>
     <a href="/tour" class="btn-primary mar-t">Watch Octiv in Action</a>
