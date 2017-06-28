@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-	<div class="site-width white-text">
+<?php $rand_num = mt_rand(1,4); ?>
+
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
+	<div class="site-width white-text centered">
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>
