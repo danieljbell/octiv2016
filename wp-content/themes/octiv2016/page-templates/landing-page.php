@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<div class="fixed-hero-section" style="background-color: #fff; background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php
 	if (get_field('hero_background')) {
 		echo get_field('hero_background');
 	} else {
@@ -17,14 +17,12 @@ get_header();
 	}
 ?>);">
 	<div class="site-width centered white-text two-third-only">
-		<div>
+		<div style="margin-bottom: 0;">
 			<h1><?php the_title(); ?></h1>
 			<p class="font-bump" style="margin-bottom: 0;"><?php echo get_field('short_description', $post->ID); ?></p>
 		</div>
 	</div>
 </div>
-
-<?php // get_template_part('partials/display', 'breadcrumbs'); ?>
 
 <section class="page-content">
 	<div class="site-width">
