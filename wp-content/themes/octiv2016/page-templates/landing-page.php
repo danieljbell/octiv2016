@@ -16,10 +16,12 @@ get_header();
 		echo wp_get_attachment_url( get_post_thumbnail_id() );
 	}
 ?>);">
-	<div class="site-width centered white-text two-third-only">
-		<div style="margin-bottom: 0;">
-			<h1><?php the_title(); ?></h1>
+	<div class="site-width centered white-text">
+		<h1><?php the_title(); ?></h1>
+		<div class="two-third-only">
+			<div style="margin-bottom: 0;">
 			<p class="font-bump" style="margin-bottom: 0;"><?php echo get_field('short_description', $post->ID); ?></p>
+		</div>
 		</div>
 	</div>
 </div>
