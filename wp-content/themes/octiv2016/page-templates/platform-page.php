@@ -16,14 +16,14 @@ $context = stream_context_create(array(
 ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/platform.jpg);">
-	<div class="site-width centered pos-rel" style="z-index: 2;">
+	<div class="site-width centered">
 		<h1 class="white-text">Power Your Documents with Octiv</h1>
 		<div class="two-third-only white-text">
-			<div class="font-bump">
-				<p>Automate document generation, track engagement and manage documents with secure storage and advanced search. Build a document workflow that grows with you.</p>
+			<div>
+				<p class="font-bump">Automate document generation, track engagement and manage documents with secure storage and advanced search. Build a document workflow that grows with you.</p>
 			</div>
 		</div>
-		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>
+		<a href="/tour" class="btn-primary mar-t">Take A Guided Tour Now</a>
 	</div>
 </div>
 
