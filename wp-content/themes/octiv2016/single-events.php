@@ -60,7 +60,9 @@
               <form id="mktoForm_<?php echo get_field('marketo_form_id'); ?>"></form>
               <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('marketo_form_id'); ?>, function(form) {
                 var thing = document.querySelector('label[for="subscriptionNewsletter"]');
-                thing.parentElement.classList.add('checkbox-wrap');
+                if (thing) {
+                  thing.parentElement.classList.add('checkbox-wrap');
+                }
 
                 form.onSuccess(function(values, followUpUrl) {
                   // Get the form field values
