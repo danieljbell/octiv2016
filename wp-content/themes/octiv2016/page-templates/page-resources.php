@@ -12,13 +12,12 @@ get_header();
 
 <div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/resources.jpg);">
 	<div class="site-width centered pos-rel" style="z-index: 2;">
-		<h1 class="white-text">We've Got the Resources You Need to Boost Your Bottom Line</h1>
+		<h1 class="white-text">Resources to Boost Your Bottom Line</h1>
 		<div class="two-third-only white-text">
 			<div class="font-bump">
 				<p>Browse our webinars, whitepapers and more to learn about how digital document generation can boost productivity.</p>
 			</div>
 		</div>
-		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>
 	</div>
 </div>
 

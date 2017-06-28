@@ -15,23 +15,23 @@ $context = stream_context_create(array(
 		<div style="position: relative; background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/homepage.jpg);">
 			<section>
 				<div class="site-width centered" style="position: relative; z-index: 5;">
-					<h1 class="white-text">Documents at the Speed of Business</h1>
+					<h1 class="white-text">Octiv Powers Documents</h1>
 					<div class="white-text two-third-only font-bump">
 						<div>
-							<p class="fancy-links">Take control of your document generation workflow. Create digital documents in minutes, share them online, sign from anywhere and store your documents securely in the cloud. Save more time and boost productivity.</p>
+							<p class="fancy-links">Create digital documents in minutes, share them online, sign from anywhere and store your documents securely in the cloud. Save more time and boost productivity.</p>
 						</div>
 					</div>
-					<button class="rad-modal-button btn-primary">See How Octiv Powers Documents</button>
+					<button class="rad-modal-button btn-primary">Learn How</button>
 				</div>
 			</section>
 		</div>
 		<div>
 			<section>
 				<div class="site-width centered">
-					<h1 class="white-text">Take a Tour of the Octiv Platform</h1>
+					<h1 class="white-text">See How Octiv Works</h1>
 					<div class="white-text two-third-only font-bump">
 						<div>
-							<p>Experience the elements that make Octiv a document generation industry leader. </p>
+							<p>Take our guided tour to see what makes Octiv a document generation industry leader.</p>
 						</div>
 					</div>
 					<a href="/tour" class="btn-primary">Take the Tour Now</a>
@@ -41,9 +41,9 @@ $context = stream_context_create(array(
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(185,73,245,1) 10%,rgba(185,73,245,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530.png)">
 			<section>
 				<div class="site-width centered">
+					<h1 class="white-text">From Here to the Bottom Line</h1>
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
-							<h1>From Here to the Bottom Line</h1>
 							<p>This is the third in a three-part series on the future of work. Your approach to the future of work could impact your bottom line. Are you ready?</p>
 						</div>
 					</div>
@@ -54,9 +54,9 @@ $context = stream_context_create(array(
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/g2-high-performer-bg.jpg)">
 			<section>
 				<div class="site-width centered">
+					<h1 class="white-text">Octiv Named High Performer by G2 Crowd</h1>
 					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
 						<div class="font-bump">
-							<h1>Octiv Named High Performer by G2 Crowd</h1>
 							<p>The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
 							<img src="https://octiv.com/wp-content/uploads/2017/06/g2-high-performer-badge.png" alt="g2-badge" style="max-width: 150px;">
 						</div>

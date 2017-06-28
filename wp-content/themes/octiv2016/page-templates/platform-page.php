@@ -20,7 +20,7 @@ $context = stream_context_create(array(
 		<h1 class="white-text">Power Your Documents with Octiv</h1>
 		<div class="two-third-only white-text">
 			<div class="font-bump">
-				<p>Get more out of your existing tech stack with Octiv. Automate document generation, track engagement and manage documents with secure storage and advanced search. Build a document workflow that grows with you.</p>
+				<p>Automate document generation, track engagement and manage documents with secure storage and advanced search. Build a document workflow that grows with you.</p>
 			</div>
 		</div>
 		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>

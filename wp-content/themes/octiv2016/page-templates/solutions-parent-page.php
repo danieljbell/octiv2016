@@ -16,10 +16,10 @@ get_header();
 
 <div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/solutions.jpg);">
   <div class="site-width centered pos-rel" style="z-index: 2;">
-    <h1 class="white-text">Accelerate Document Generation &amp; Drive Productivity</h1>
+    <h1 class="white-text">Power Your Productivity</h1>
     <div class="two-third-only white-text">
       <div class="font-bump">
-        <p>Create, share, sign and store documents faster, wherever you are. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla adipisci numquam amet quidem perspiciatis qui magni. Soluta repellat impedit earum optio libero quos nesciunt. Eveniet.</p>
+        <p>Create documents faster, share them online, sign electronically and collaborate in real time. and Store documents and access them wherever you are.</p>
       </div>
     </div>
     <a href="/tour" class="btn-primary">Watch Octiv in Action</a>

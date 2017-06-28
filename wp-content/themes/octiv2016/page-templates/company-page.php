@@ -10,13 +10,12 @@ get_header();
 
 <div class="fixed-hero-section" style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/platform.jpg);">
 	<div class="site-width centered pos-rel" style="z-index: 2;">
-		<h1 class="white-text">Learn More About the People Behind the Product</h1>
+		<h1 class="white-text">The People Behind the Platform</h1>
 		<div class="two-third-only white-text">
 			<div class="font-bump">
-				<p>Take a look around and meet some of our people, browse our job openings and more.</p>
+				<p>Take a look around and meet some of our people, browse our job openings and learn more about Octiv.</p>
 			</div>
 		</div>
-		<a href="/tour" class="btn-primary">Take A Guided Tour Now</a>
 	</div>
 </div>
 
