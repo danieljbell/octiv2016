@@ -5,6 +5,7 @@
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
   $terms = wp_get_post_terms($post->ID, 'event_type');
+  $today = date('Ymd');
 ?>
 
 <?php if ($terms[0]->slug === 'online') : ?>
@@ -100,7 +101,13 @@
           <h4>Overview</h4>
           <?php echo get_field('overview'); ?>
           <br>
-          <h4>Date &amp; Time</h4>
+          <?php
+            if (get_field('event_start_date') < $today) {
+              echo '<h4>Date Recorded</h4>';
+            } else {
+              echo '<h4>Date &amp; Time</h4>';
+            }
+          ?>
           <?php
             $event_start = get_field('event_start_date');
             $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
