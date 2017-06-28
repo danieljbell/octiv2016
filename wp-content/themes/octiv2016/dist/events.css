@@ -1,17 +1,3 @@
-.post-type-archive .fixed-hero-section {
-  background-size: cover;
-  background-attachment: initial;
-  background-position: center;
-  background-size: cover, 300px, cover;
-}
-
-@media screen and (min-width: 767px) {
-  .post-type-archive .fixed-hero-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
 .filter-container {
   padding-left: 0;
 }
