@@ -1,4 +1,5 @@
 <?php
+// useless comment to commit
   get_header();
   $terms = get_terms( array(
     'taxonomy' => 'event_type',
