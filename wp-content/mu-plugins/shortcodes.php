@@ -55,7 +55,7 @@ add_shortcode('get_card', function($atts) {
               echo '<p class="card-tag-blog"><svg viewBox="0 0 11.5 11.5"><use xlink:href="#icon-blog"></svg><span>Blog</span></p>';
             endif;
             if ($tag === 'whitepapers') :
-              echo '<p class="card-tag-whitepapers"><svg viewBox="0 0 16.2 11"><use xlink:href="#icon-whitepapers"></svg><span>whitepapers</span></p>';
+              echo '<p class="card-tag-whitepapers"><svg viewBox="0 0 16.2 11"><use xlink:href="#icon-whitepapers"></svg><span>downloads</span></p>';
             endif;
             if ($tag === 'client-stories') :
               echo '<p class="card-tag-client-stories"><svg viewBox="0 0 12.8 12.6"><use xlink:href="#icon-client-story"></svg><span>client stories</span></p>';
