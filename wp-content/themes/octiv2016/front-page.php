@@ -100,7 +100,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
-					<p>Sales quotes and proposals, NDAs and master services agreements, offer letters and employment agreements: documents are time-consuming and require multiple interactions with people and technology. The Octiv platform transforms how you use documents: from paper-based workflows to digital-first documents. Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage. Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
+					<p>The Octiv platform transforms how you use documents: from paper-based workflows to digital-first documents. Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage. Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
 				</div>
 			</div>
 		</div>
