@@ -9,7 +9,7 @@
 .no-upcoming .upcoming,
 .no-past .past,
 .no-thought-leadership .thought-leadership,
-.no-product .product,
+.no-platform .platform,
 .no-client .client,
 .no-day-1 .day-1,
 .no-day-2 .day-2,
@@ -63,7 +63,7 @@
   padding-bottom: 0;
 }
 
-/*.product .card-tb,
+/*.platform .card-tb,
 .thought-leadership .card-tb,
 .client .card-tb {
   background-size: 125px, cover, cover;

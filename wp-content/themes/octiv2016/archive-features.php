@@ -30,14 +30,14 @@ $context = stream_context_create(array(
 ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
-  <div class="site-width white-text centered">
-    <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+  <div class="site-width centered">
+    <h1 class="white-text">Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
     <div class="two-third-only">
-      <div>
+      <div class="white-text">
         <p class="font-bump">Explore Octiv’s products and services by category, function, and utility. You can combine multiple components of the platform to solve for your business use cases.</p>
       </div>
     </div>
-    <button class="rad-modal-button btn-primary">Talk To Us</button>
+    <a href="/tour" class="rad-modal-button btn-primary">See How Octiv Works</a>
   </div>
 </div>
 

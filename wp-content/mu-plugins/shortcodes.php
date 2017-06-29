@@ -26,7 +26,7 @@ add_shortcode('get_card', function($atts) {
             else :
               if ($thumb_modifier === 'thought-leadership') {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), radial-gradient(rgba(66,176,216,0.75) 20%, rgba(66,176,216,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
-              } elseif ($thumb_modifier === 'product') {
+              } elseif ($thumb_modifier === 'platform') {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-online-meetings.png), radial-gradient(rgba(51,171,64,0.75) 20%,rgba(51,171,64,0)), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } else {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
@@ -42,8 +42,8 @@ add_shortcode('get_card', function($atts) {
             if ($thumb_modifier === 'thought-leadership') :
               echo '<p class="card-tag-webinars">Thought Leadership</p>';
             endif;
-            if ($thumb_modifier === 'product') :
-              echo '<p class="card-tag-blog">Product</p>';
+            if ($thumb_modifier === 'platform') :
+              echo '<p class="card-tag-blog">Platform</p>';
             endif;
             if ($thumb_modifier === 'client') :
               echo '<p class="card-tag-client-stories">Client</p>';
