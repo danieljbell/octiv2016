@@ -38,11 +38,11 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(0,0,0,1) 10%,rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,1) 10%,rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
 			<section>
 				<div class="site-width centered">
 					<h1 class="white-text">The Case for Digital Document Generation</h1>
-					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+					<div class="half-only white-text">
 						<div class="font-bump">
 							<p>See why digital document generation is helping sales teams meet their clients’ needs with speed and accuracy.</p>
 						</div>
