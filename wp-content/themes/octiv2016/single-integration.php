@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="fixed-hero-section" style="background-image: url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), linear-gradient(<?php echo get_field('integration_color'); ?>, <?php echo get_field('integration_color'); ?>);">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), linear-gradient(<?php echo get_field('integration_color'); ?>, <?php echo get_field('integration_color'); ?>);">
   <div class="site-width centered">
     <div class="two-third-only">
       <div class="third" style="align-items: center;">
@@ -166,6 +166,9 @@
 .mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap label{
   order: 1;
 }
+.fixed-hero-section .btn-white-outline:hover {
+  color: <?php echo get_field('integration_color'); ?> !important;
+}
 /*label[for="subscriptionNewsletter"] {
   margin-top: 1.75rem;
   padding-left: 1.25rem;
@@ -198,9 +201,7 @@ label[for="subscriptionNewsletter"] + div {
   select {
     color: #000;
   }
-  .fixed-hero-section .btn-white-outline:hover {
-    color: <?php echo get_field('integration_color'); ?> !important;
-  }
+  
   #site-footer>.site-width:first-of-type {
     border-top: 0;
   }*/
