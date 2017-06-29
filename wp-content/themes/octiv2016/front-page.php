@@ -25,7 +25,7 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div>
+		<div style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(/wp-content/uploads/2017/06/guided-tour.jpg);">
 			<section>
 				<div class="site-width centered">
 					<h1 class="white-text">See How Octiv Works</h1>
