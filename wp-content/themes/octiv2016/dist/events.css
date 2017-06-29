@@ -46,7 +46,7 @@
   text-transform: uppercase;
 }
 
-[class*="card-tag"] + h4 {
+.archive [class*="card-tag"] + h4 {
   margin-top: 1rem;
 }
 

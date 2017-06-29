@@ -170,6 +170,13 @@
     </div>
   </section>
 
+  <?php
+    if ($has_reg) :
+      echo '<div class="site-width"><hr></div>';
+      get_template_part('partials/display', 'recent-resources');
+    endif;
+  ?>
+
 <?php else : ?>
   
   <?php if (has_post_thumbnail()) : ?>
