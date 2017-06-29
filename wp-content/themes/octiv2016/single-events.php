@@ -9,7 +9,7 @@
 
 <?php if ($terms[0]->slug === 'online') : ?>
   <?php if (has_post_thumbnail()) : ?>
-  <?php if (get_field('webinar_type') === 'product') : ?>
+  <?php if (get_field('webinar_type') === 'platform') : ?>
     <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(<?php echo the_post_thumbnail_url(); ?>);">
   <?php elseif (get_field('webinar_type') === 'thought-leadership') : ?>
     <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(<?php echo the_post_thumbnail_url(); ?>);">
