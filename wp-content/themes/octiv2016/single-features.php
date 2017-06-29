@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <?php
+  $rand_num = mt_rand(1,4);
   $feature_status = get_field('status');
 ?>
 
@@ -19,7 +20,7 @@
     </div>
   </div>
 <?php else : ?>
-  <div class="fixed-hero-section">
+  <div class="fixed-hero-section centered" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
     <div class="site-width white-text">
       <h1><?php the_title(); ?></h1>
     </div>
@@ -104,6 +105,11 @@
       </div>
     </div>
   </section>
+<?php else : ?>
+  <div class="site-width">
+    <hr>
+  </div>
+  <?php get_template_part('partials/display', 'recent-resources'); ?>
 <?php endif; ?>
 
 <style>
