@@ -1,3 +1,11 @@
+<?php
+$context = stream_context_create(array(
+  'http' => array(
+    'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+  )
+));
+?>
+
 <section>
   <div class="site-width">
     <div class="centered">
@@ -40,6 +48,7 @@
       <div class="card">
         <a href="/tour" class="card-tb" title="Octiv Guided Tour" style="background-image: url(/wp-content/uploads/2017/06/guided-tour-hero.jpg);"></a>
         <div>
+          <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Tour</p>
           <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Octiv Guided Tour</a></h4>
           <p><a href="/tour" class="btn-arrow">Take the Tour Now</a></p>
         </div>
