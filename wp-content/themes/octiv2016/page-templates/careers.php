@@ -10,34 +10,12 @@ get_header();
 
 <?php if (!isset($_GET['gh_jid'])) : ?>
 
-	<div class="slider">
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/stock-car.jpg);">
-			<div class="site-width white-text">
-				<p>Be Extraordinary</p>
-				<h4>Performance</h4>
-				<p>We believe in hard work. Our customers are our focus, and we strive to deliver the best, most extraordinary products and services in the world.</p>
-			</div>
-		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('<?php echo get_stylesheet_directory_uri(); ?>/dist/img/holiday-party-2015.jpg');">
-			<div class="site-width white-text">
-				<div>
-					<p>Be Extraordinary</p>
-					<h4>Celebration</h4>
-					<p>We believe in celebrating the successes of our customers and our teamates, and the successes of the Indianapolis tech community.</p>
-				</div>
-			</div>
-		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('<?php echo get_stylesheet_directory_uri(); ?>/dist/img/indy-skyline.jpg');">
-			<div class="site-width white-text">
-				<div>
-					<p>Be Extraordinary</p>
-					<h4>Community</h4>
-					<p>We believe in making our community even more extraordinary. Our commitment to our community is strong, and it fuels everything we do.</p>
-				</div>
-			</div>
+	<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url('/wp-content/themes/octiv2016/dist/img/indy-skyline.jpg');">
+		<div class="site-width centered white-text">
+			<h1>Join Us</h1>
+			<p class="font-bump">At Octiv, our customers is our top priority.</p>
 		</div>
 	</div>
-	<div class="site-width pos-rel slider-buttons"></div>
 
 	<?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
