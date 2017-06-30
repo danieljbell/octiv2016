@@ -9,7 +9,7 @@ $context = stream_context_create(array(
 <section>
   <div class="site-width">
     <div class="centered">
-      <h2>Fresh Productivity Resources from Octiv</h2>
+      <h2>Resources to Boost Your Bottom Line</h2>
       <br>
       <br>
     </div>
