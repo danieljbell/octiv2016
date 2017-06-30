@@ -16,7 +16,7 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div class="sticky-sidebar" id="sticky-sidebar">
+      <div>
         <h4><?php echo $tax_title; ?> Events</h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
@@ -28,9 +28,9 @@
           <h4>Filters</h4>
           <hr>
           <ul class="no-bull filter-container">
-            <li><input type="checkbox" id="thought-leadership" checked><label for="thought-leadership">Thought Leadership</label></li>
-            <li><input type="checkbox" id="platform" checked><label for="platform">Platform</label></li>
-            <li><input type="checkbox" id="client" checked><label for="client">Client</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="thought-leadership" checked><label for="thought-leadership">Thought Leadership</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="platform" checked><label for="platform">Platform</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="client" checked><label for="client">Client</label></li>
           </ul>
           <div class="mar-t"></div>
           <h4>Legend</h4>

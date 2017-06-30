@@ -408,6 +408,7 @@ $(".tabs").accessibleTabs({
 STICKY SIDEBAR
 ==============================
 */
+console.log($('.sticky-sidebar').length);
 if ($('.sticky-sidebar').length) {
   (function($) {
 

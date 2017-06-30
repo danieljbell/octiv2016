@@ -18,12 +18,12 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div class="sticky-sidebar" id="sticky-sidebar">
+      <div>
         <h4>Filters</h4>
         <hr>
         <ul class="no-bull filter-container">
-          <li><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
-          <li><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
+          <li style="font-size: 0.85em;"><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
+          <li style="font-size: 0.85em;"><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
         </ul>
         <div class="mar-t"></div>
           <h4>Legend</h4>
