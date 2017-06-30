@@ -12,8 +12,12 @@ get_header();
 
 	<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url('/wp-content/themes/octiv2016/dist/img/indy-skyline.jpg');">
 		<div class="site-width centered white-text">
-			<h1>Join Us</h1>
-			<p class="font-bump">At Octiv, our customers is our top priority.</p>
+			<div class="two-third-only">
+				<div>
+					<h1>Careers</h1>
+					<p class="font-bump">At Octiv, our customers are our top priority. Join us to serve some of the most innovative companies in the world.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
