@@ -10,10 +10,10 @@ TEMPLATE NAME: Thank You
 
 get_header();
 $first_name = $_GET['first_name'];
-
+$rand_num = mt_rand(1,4);
 ?>
 
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
   <div class="site-width centered white-text">
     <h1>Thanks<?php if (isset($first_name)) { echo ' ' . $first_name; } ?>! We'll be in touch.</h1>
     <p style="margin-bottom: 0;" class="font-bump">In the meantime, check out these resources below.</p>
