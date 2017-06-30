@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
+<?php $rand_num = mt_rand(1,4); ?>
+
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
 	<div class="site-width white-text centered">
-		<section>
-			<div class="two-third-only">
-				<div style="margin-bottom: 0;">
-					<h1>Get ready for the next release</h1>
-					<p class="font-bump" style="margin-bottom: 0;">If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.</p>
-				</div>
+		<div class="two-third-only">
+			<div style="margin-bottom: 0;">
+				<h1>Get ready for the next release</h1>
+				<p class="font-bump" style="margin-bottom: 0;">If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.</p>
 			</div>
-		</section>
+		</div>
 	</div>
 </div>
 

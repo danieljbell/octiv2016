@@ -12,45 +12,42 @@ $context = stream_context_create(array(
 
 <div class="fixed-hero-section">
 	<div class="slider">
-		<div style="position: relative; background-image: url(/wp-content/themes/octiv2016//dist/img/home-video-hero.jpg);">
+		<div style="position: relative; background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/homepage.jpg);">
 			<section>
-				<div class="video-overlay"></div>
-				<video class="hero-video" src="<?php echo get_stylesheet_directory_URI(); ?>/dist/video/hero-video.mp4" autoplay loop></video>
-				<div class="site-width centered white-text" style="position: relative; z-index: 5;">
-					<h1><span style="display: block;">Octiv Powers Documents</span> <span style="color: #ed4c06; font-weight: normal; font-style: italic;">for</span> <span class="typed">Global Leaders</span></h1>
-					<div class="two-third-only font-bump">
-						<div class="font-bump">
-							<p class="fancy-links">Streamline and automate <a href="#workflows">document workflows</a> that connect <a href="#connections">systems and data</a> for a better <a href="#user-experience">end-user experience</a>. Octiv powers <a href="#documents">documents</a> for sales and legal - freeing your teams to be <a href="#productive">more productive</a>.</p>
+				<div class="site-width centered" style="position: relative; z-index: 5;">
+					<h1 class="white-text">Octiv Powers Documents</h1>
+					<div class="white-text two-third-only font-bump">
+						<div>
+							<p class="fancy-links">Create digital documents in minutes, share them online, sign from anywhere and store your documents securely in the cloud. Save more time and boost productivity.</p>
 						</div>
 					</div>
 					<button class="rad-modal-button btn-primary">Learn How</button>
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), radial-gradient(rgba(185,73,245,1) 10%,rgba(185,73,245,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530.png)">
+		<div style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(/wp-content/uploads/2017/06/guided-tour.jpg);">
 			<section>
 				<div class="site-width centered">
-					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
-						<div class="font-bump">
-							<h1>From Here to the Bottom Line</h1>
-							<p class="font-bump">This is the third in a three-part series on the future of work. Your approach to the future of work could impact your bottom line. Are you ready?</p>
+					<h1 class="white-text">See How Octiv Works</h1>
+					<div class="white-text two-third-only font-bump">
+						<div>
+							<p>Take our guided tour to see what makes Octiv a document generation industry leader.</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/future-work-bottom-line" class="btn-primary">Download the Infographic Now</a>
+					<a href="/tour" class="btn-primary">Take the Tour Now</a>
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/g2-high-performer-bg.jpg)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
 			<section>
 				<div class="site-width centered">
-					<div class="half-only" style="color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.15);">
+					<h1 class="white-text">The Case for Digital Document Generation</h1>
+					<div class="half-only white-text">
 						<div class="font-bump">
-							<h1>Octiv Named High Performer by G2 Crowd</h1>
-							<p class="font-bump">The Summer 2017 Grid Report in Proposal Software is out now - see where Octiv topped the charts!</p>
-							<img src="https://octiv.com/wp-content/uploads/2017/06/g2-high-performer-badge.png" alt="g2-badge" style="max-width: 150px;">
+							<p>See why digital document generation is helping sales teams meet their clients’ needs with speed and accuracy.</p>
 						</div>
 					</div>
-					<a href="http://lp.octiv.com/WC-2017-06-01-G2-Crowd-Campaign_Get-Report.html" class="btn-primary">Get the Report</a>
+					<a href="/resources/downloads/case-digital-document-generation" class="btn-primary">Download Now</a>
 				</div>
 			</section>
 		</div>
@@ -103,7 +100,7 @@ $context = stream_context_create(array(
 				</div>
 				<div>
 					<h2>Build &amp; Automate Document Workflows</h2>
-					<p>Sales quotes and proposals, NDAs and master services agreements, offer letters and employment agreements: documents are time-consuming and require multiple interactions with people and technology. The Octiv platform transforms how you use documents: from paper-based workflows to digital-first documents. Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage. Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
+					<p>The Octiv platform transforms how you use documents: from paper-based workflows to digital-first documents. Digital documents are easier to create, easier to edit, easier to share, easier to sign and manage. Octiv streamlines document workflows with dynamic HTML5 templates, integrations with source systems, and online document collaboration. Documents requiring a signature can be signed using our native integration with DocuSign.</p>
 				</div>
 			</div>
 		</div>
@@ -171,6 +168,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>A Better End-User Experience</h2>
 					<p>Octiv improves how users create documents, how they share with internal collaborators and how they edit and approve documents for publishing. By reducing time and effort to work with documents, users get more work done. Octiv eliminates or reduces interactions with technology to create and publish business documents.</p>
+					<a href="/tour" class="btn-arrow">See How Octiv Works</a>
 				</div>
 			</div>
 		</div>
@@ -189,6 +187,7 @@ $context = stream_context_create(array(
 				<div>
 					<h2>More Productive Teams</h2>
 					<p>Your teams use dozens of types of documents and create thousands of documents per year. That can mean hundreds of thousands of hours and millions of dollars in man hours - on documents. Octiv means less paper and more time for your teams to be more productive.</p>
+					<a href="/tour" class="btn-arrow">See How Octiv Boosts Productivity</a>
 				</div>
 			</div>
 		</div>

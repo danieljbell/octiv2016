@@ -1,4 +1,5 @@
 <?php
+// useless comment to commit
   get_header();
   $terms = get_terms( array(
     'taxonomy' => 'event_type',
@@ -17,12 +18,12 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div class="sticky-sidebar" id="sticky-sidebar">
+      <div>
         <h4>Filters</h4>
         <hr>
         <ul class="no-bull filter-container">
-          <li><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
-          <li><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
+          <li style="font-size: 0.85em;"><input type="checkbox" id="upcoming" checked><label for="upcoming">Upcoming Events</label></li>
+          <li style="font-size: 0.85em;"><input type="checkbox" id="past" checked><label for="past">Past Events</label></li>
         </ul>
         <div class="mar-t"></div>
           <h4>Legend</h4>
@@ -33,7 +34,7 @@
               <p style="font-size: 0.85em;">Get info you need straight from the experts.</p>
             </li>
             <li class="pos-rel">
-              <p class="card-tag-blog" style="margin-bottom: 0;">Product</p>
+              <p class="card-tag-blog" style="margin-bottom: 0;">Platform</p>
               <p style="font-size: 0.85em;">See the latest updates to the Octiv platform.</p>
             </li>
             <li class="pos-rel">
@@ -63,7 +64,13 @@
             if ($local_query->have_posts()) :
               echo '<section style="padding-top: 0;">';
                 echo '<div class="section-menu">';
-                  echo '<h3 id="' . $term->slug . '" class="inline">' . $term->name . '</h3>';
+                  echo '<h3 id="' . $term->slug . '" class="inline">';
+                    if ($term->slug != 'online') {
+                      echo $term->name;
+                    } else {
+                      echo 'Webinars';
+                    }
+                  echo '</h3>';
                 echo '</div>';
                 echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($local_query->have_posts()) :
@@ -84,15 +91,21 @@
                 }
                 if (get_field('webinar_type') === 'thought-leadership') {
                   $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'product') {
-                  $webinar_type = 'product';
+                } else if (get_field('webinar_type') === 'platform') {
+                  $webinar_type = 'platform';
                 } else if (get_field('webinar_type') === 'client') {
                   $webinar_type = 'client';
                 }
                 echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
               endwhile;
                 echo '</div>';
-                echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline" title="View All ' . $term->name . ' Events">View All ' . $term->name . ' Events</a></div>';
+                echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline" title="View All ' . $term->name . ' Events">View All ';
+                if ($term->slug != 'online') {
+                  echo $term->name . ' Events';
+                } else {
+                  echo 'Webinars';
+                }
+                echo '</a></div>';
               echo '</section>';
             endif;
             wp_reset_query();

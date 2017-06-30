@@ -58,6 +58,31 @@ if(is_404() && $_GET['ref']=="tinderbox"){
         <meta property="og:image:height" content="466" />
     <?php endif; ?>
 
+    <?php
+      // QUERY MARKETO BASED ON COOKIE FOR THE LEAD
+      $encoded_cookie = str_replace("&","%26",$_COOKIE["_mkto_trk"]);
+      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=973fa045-d016-4cf9-ab2e-b4663648ff52:sj";
+      $json = file_get_contents($url);
+      $json_data = json_decode($json, true);
+    ?>
+    <script>
+      var mktoLead = {  
+        "requestId":"<?php echo $json_data[requestId]; ?>",
+        "success":true,
+        "result":[  
+          {  
+            "id":1085573,
+            "firstName":"<?php echo $json_data[result][0][firstName]; ?>",
+            "lastName":"<?php echo $json_data[result][0][lastName]; ?>",
+            "email":"<?php echo $json_data[result][0][email]; ?>",
+            "company":"<?php echo $json_data[result][0][company]; ?>",
+            "phone":"<?php echo $json_data[result][0][phone]; ?>",
+            "state":"<?php echo $json_data[result][0][state]; ?>",
+            "LinkedIn_Company_Size__c":"<?php echo $json_data[result][0][LinkedIn_Company_Size__c]; ?>"
+          }
+        ]
+      }
+    </script>
 </head>
 <body <?php body_class(); ?>>
   <!-- Google Tag Manager (noscript) -->
@@ -72,7 +97,6 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     echo '<a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a>';
     echo '</div>';
     endif; ?>
-
 
 <?php get_template_part('partials/display', 'eyebrow'); ?>
   <header class="site-width" role="banner">
@@ -111,15 +135,12 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     					?>
           </li>
           <li class="menu-item">
-            <a href="/why-octiv" title="Why Octiv">Why Octiv</a>
-          </li>
-          <li class="menu-item">
             <a href="/resources" title="Resources">Resources</a>
             <ul class="sub-menu">
               <li class="sub-menu-item"><a href="/resources/blog" title="Blog">Blog</a></li>
               <li class="sub-menu-item"><a href="/resources/client-stories" title="Client Stories">Client Stories</a></li>
               <li class="sub-menu-item"><a href="/resources/downloads" title="Downloads">Downloads</a></li>
-              <li class="sub-menu-item"><a href="/resources/webinars" title="Webinars">Webinars</a></li>
+              <li class="sub-menu-item"><a href="/resources/events" title="Events &amp; Webinars">Events &amp; Webinars</a></li>
             </ul>
           </li>
           <li class="menu-item">

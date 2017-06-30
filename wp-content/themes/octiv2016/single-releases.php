@@ -18,11 +18,15 @@ $term_id = $queried_object->term_id;
 
 $webinar_source = get_field('webinar_source', $queried_object);
 
-
+$rand_num = mt_rand(1,4);
 
 ?>
 
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" <?php if (get_post_thumbnail_id()) {
+	echo 'style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(' . wp_get_attachment_url( get_post_thumbnail_id() ) . ');"';
+} else {
+	echo 'style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg);"';
+} ?>>
 	<div class="site-width centered">
 		<h1 class="white-text">
 			<?php if($post->post_parent > 0) :

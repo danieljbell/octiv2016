@@ -1,33 +1,7 @@
-.page-template-landing-page .page-content .two-third,
-.single-lp .page-content .two-third {
-	> * {
-		&:first-child {
-			width: 100%;
-			margin-right: 0;
-			@include bp(md) {
-				width: calc((100% / 5) * 3 - 1rem);
-				margin-right: 2rem;
-			}
-			@include bp(lg) {
-				width: calc((100% / 3) * 2 - 1rem);
-				margin-right: 2rem;
-			}
-		}
-		&:last-child {
-			width: 100%;
-			@include bp(md) {
-				width: calc((100% / 5) * 2 - 1rem);
-			}
-			@include bp(lg) {
-				width: calc((100% / 3) - 1rem);
-			}
-		}
+.page-template-landing-page .fixed-hero-section {
+	@include bp(md) {
+		padding-bottom: 6rem;
 	}
-}
-
-.page-template-landing-page .page-content .two-third iframe,
-.single-lp .page-content .two-third iframe {
-	min-height: 615px;
 }
 
 .page-template-landing-page aside {
@@ -35,24 +9,16 @@
 		border-radius: $radius;
 	}
 	@include bp(md) {
-		margin-top: -9rem;
+		margin-top: -6rem;
 	}
 }
 
 .page-template-landing-page .content-container {
 	background-color: $white;
 	border-radius: $radius;
-	// padding-bottom: 1rem;
 	@include bp(md) {
 		padding: 2rem;
-		margin-top: -9rem;
-	}
-}
-
-.page-template-landing-page .fixed-hero-section .two-third-only div {
-	margin-bottom: 0;
-	@include bp(md) {
-		margin-bottom: 2rem;
+		margin-top: -6rem;
 	}
 }
 

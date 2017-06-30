@@ -5,8 +5,8 @@
   $queried_object = get_queried_object();
 ?>
 
-<div class="fixed-hero-section">
-  <div class="site-width white-text">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/events-archive-bg.jpg);">
+  <div class="site-width centered white-text">
     <h1><?php echo $tax_title; ?> Events</h1>
   </div>
 </div>
@@ -16,7 +16,7 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div class="sticky-sidebar" id="sticky-sidebar">
+      <div>
         <h4><?php echo $tax_title; ?> Events</h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">
@@ -28,9 +28,9 @@
           <h4>Filters</h4>
           <hr>
           <ul class="no-bull filter-container">
-            <li><input type="checkbox" id="thought-leadership" checked><label for="thought-leadership">Thought Leadership</label></li>
-            <li><input type="checkbox" id="product" checked><label for="product">Product</label></li>
-            <li><input type="checkbox" id="client" checked><label for="client">Client</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="thought-leadership" checked><label for="thought-leadership">Thought Leadership</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="platform" checked><label for="platform">Platform</label></li>
+            <li style="font-size: 0.85em;"><input type="checkbox" id="client" checked><label for="client">Client</label></li>
           </ul>
           <div class="mar-t"></div>
           <h4>Legend</h4>
@@ -41,7 +41,7 @@
               <p style="font-size: 0.85em;">Get info you need straight from the experts.</p>
             </li>
             <li class="pos-rel">
-              <p class="card-tag-blog" style="margin-bottom: 0;">Product</p>
+              <p class="card-tag-blog" style="margin-bottom: 0;">Platform</p>
               <p style="font-size: 0.85em;">See the latest updates to the Octiv platform.</p>
             </li>
             <li class="pos-rel">
@@ -88,8 +88,8 @@
                 $upcoming_query->the_post();
                 if (get_field('webinar_type') === 'thought-leadership') {
                   $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'product') {
-                  $webinar_type = 'product';
+                } else if (get_field('webinar_type') === 'platform') {
+                  $webinar_type = 'platform';
                 } else if (get_field('webinar_type') === 'client') {
                   $webinar_type = 'client';
                 }
@@ -138,8 +138,8 @@
                 $past_query->the_post();
                 if (get_field('webinar_type') === 'thought-leadership') {
                   $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'product') {
-                  $webinar_type = 'product';
+                } else if (get_field('webinar_type') === 'platform') {
+                  $webinar_type = 'platform';
                 } else if (get_field('webinar_type') === 'client') {
                   $webinar_type = 'client';
                 }

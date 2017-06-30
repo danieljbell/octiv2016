@@ -7,24 +7,6 @@ $(document).ready(function() {
 
 /*
 ==============================
-TYPED FOR HOMEPAGE
-==============================
-*/
-if ($('.typed').length) {
-  $(".typed").typed({
-    strings: ["Publishing Moguls", "Tech Innovators", "Market Makers", "Real Estate Titans", "Global Leaders"],
-    typeSpeed: 30,
-    backSpeed: 15,
-    startDelay: 2000,
-    backDelay: 3000,
-    loop: true,
-    loopCount: false
-  });
-}
-
-
-/*
-==============================
 SCROLLING EVENTS FOR HOMEPAGE
 ==============================
 */
@@ -50,16 +32,6 @@ if ($('body').hasClass('home')) {
     },
     offset: '65%'
   });
-
-
-    // Smooth Scrolling
-    $('.home .fixed-hero-section .fancy-links a').on('click', function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      $('html, body').animate({
-          scrollTop: target.offset().top
-      }, 300);
-    });
 }
 
 /*
@@ -197,8 +169,8 @@ for (var i = 0; i < headerNavItems.length; i++) {
       }
     }
     if (this.computedName !== "Request A Demo") {
-      this.parentElement.children[5].children[0].style.backgroundColor = "transparent";
-      this.parentElement.children[5].children[0].style.color = "#000000";
+      this.parentElement.children[4].children[0].style.backgroundColor = "transparent";
+      this.parentElement.children[4].children[0].style.color = "#000000";
     }
   });
   headerNavItems[i].addEventListener('mouseleave', function() {
@@ -207,8 +179,8 @@ for (var i = 0; i < headerNavItems.length; i++) {
         this.children[1].style.display = "none";
       }
     }
-    this.parentElement.children[5].children[0].style.backgroundColor = "#ed4c06";
-    this.parentElement.children[5].children[0].style.color = "#ffffff";
+    this.parentElement.children[4].children[0].style.backgroundColor = "#ed4c06";
+    this.parentElement.children[4].children[0].style.color = "#ffffff";
   });
 }
 
@@ -235,16 +207,6 @@ SLIDERS
 ==============================
 */
 // BASIC FULL WIDTH SLIDER
-if ($('body').hasClass('home')) {
-  $('.slider').on('init', function() {
-    document.querySelector('.hero-video').play();
-  });
-  $('.slider').on('beforeChange', function(slick, currentSlide, nextSlide) {
-    if (nextSlide === 1) {
-      document.querySelector('.hero-video').play();
-    }
-  });
-}
 $('.slider').slick({
   autoplay : true,
   autoplaySpeed : 6000,
@@ -446,6 +408,7 @@ $(".tabs").accessibleTabs({
 STICKY SIDEBAR
 ==============================
 */
+console.log($('.sticky-sidebar').length);
 if ($('.sticky-sidebar').length) {
   (function($) {
 

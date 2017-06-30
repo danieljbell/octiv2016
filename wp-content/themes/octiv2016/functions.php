@@ -5,7 +5,7 @@ ADD GLOBAL CSS TO PAGE
 ==============================
 */
 function enqueue_global_css() {
-	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/style.css', array(), '2.0.12');
+	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/style.css', array(), '2.0.13');
 	if (is_post_type_archive('events') || is_tax('event_type') || is_singular('events')) {
 		wp_enqueue_style('events', get_stylesheet_directory_URI() . '/dist/events.css', array(), '1.0.0');
 	}

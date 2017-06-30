@@ -12,9 +12,10 @@ $article_name = $parsed_url[count($parsed_url)-2];
 $article_name_string = explode( '-', $article_name );
 
 get_header();
+$rand_num = mt_rand(1,4);
 $term_list = wp_get_post_terms($post->ID, 'type', array("fields" => "all")); ?>
-<div class="fixed-hero-section">
-	<div class="site-width white-text two-third">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
+	<div class="site-width white-text centered">
 		<div>
 			<h1><?php the_title(); ?></h1>
 		</div>

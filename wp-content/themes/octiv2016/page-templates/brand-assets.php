@@ -9,7 +9,7 @@ get_header();
 
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://octiv.com/wp-content/uploads/2016/07/Hero-BrandAssets.jpg); background-size: cover; padding: 5rem 0; background-position: center -4rem;">
-	<div class="site-width">
+	<div class="site-width centered">
 		<h1 class="white-text"><?php the_title(); ?></h1>
 		<p class="white-text">Below you'll find all of our brand assets and logos.</p>
 		<a href="<?php echo site_url(); ?>/wp-content/uploads/2016/07/Octiv-Brand-Assets.zip" class="btn-primary">Download .zip of Assets</a>

@@ -6,9 +6,9 @@ $context = stream_context_create(array(
 		'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
 	)
 ));
-?>
 
-<?php get_header(); ?>
+$rand_num = mt_rand(1,4);
+?>
 
 <?php get_header(); ?>
 
@@ -29,24 +29,17 @@ $context = stream_context_create(array(
 	ksort($sorted_cats);
 ?>
 
-<style>
-.hero-svg-container {
-	width: 100%;
-	max-width: 175px;
-	fill: #fff;
-	margin-bottom: 1rem;
-}
-</style>
 
-<div class="fixed-hero-section">
-  <div class="site-width white-text centered">
-    <div class="hero-svg-container"><?php echo file_get_contents('./wp-content/uploads/2017/01/integrations.svg', false, $context); ?></div>
-    <h1>Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
-    <div class="two-third-only">
+
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);">
+  <div class="site-width centered">
+    <h1 class="white-text">Platform <?php echo str_replace('Archives: ','',get_the_archive_title()); ?></h1>
+    <div class="two-third-only white-text">
       <div>
         <p class="font-bump">The Octiv API enables seamless integrations with CRM, CPQ, ERP, ECM, HRIS and other systems. This allows Octiv to pull data from various systems and assemble accurate, personalized documents.</p>
       </div>
     </div>
+    <a href="/tour" class="btn-primary">Tour the Platform</a>
   </div>
 </div>
 

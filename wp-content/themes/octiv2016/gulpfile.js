@@ -35,7 +35,6 @@ gulp.task('js', function () {
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/jquery-accessible-tabs/js/jquery.tabs.js',
       'bower_components/slick-carousel/slick/slick.js',
-      'bower_components/typed.js/js/typed.js',
       'bower_components/waypoints/lib/jquery.waypoints.js',
       'bower_components/waypoints/lib/shortcuts/inview.js',
       'src/js/app.js'

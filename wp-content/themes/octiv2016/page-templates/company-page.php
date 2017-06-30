@@ -6,16 +6,16 @@ Template Name: Company Page
 */
 
 get_header();
+
+$rand_num = mt_rand(1,4);
 ?>
 
-<div class="fixed-hero-section company-hero white-text">
-	<div class="site-width">
-		<div class="half-stack">
-			<div>
-				<img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/logo-mark.svg" alt="">
-			</div>
-			<div>
-				<h1>Company Overview</h1>
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url('/wp-content/themes/octiv2016/dist/img/indy-skyline.jpg');">
+	<div class="site-width centered pos-rel" style="z-index: 2;">
+		<h1 class="white-text">Company</h1>
+		<div class="two-third-only white-text">
+			<div class="font-bump">
+				<p>Meet the people behind the platform.</p>
 			</div>
 		</div>
 	</div>
@@ -25,16 +25,9 @@ get_header();
 
 <section>
 	<div class="site-width">
-		<h2>About Octiv</h2>
-		<div class="half-stack">
+		<div class="half-only">
 			<div>
-				<div class="video-outer">
-					<div class="video-inner">
-						<iframe style="width: 100% !important; height: 100% !important;" src="//fast.wistia.net/embed/iframe/vmlhujsh3f" name="wistia_embed" width="100%" height="" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
-					</div>
-				</div>
-			</div>
-			<div>
+				<h2>About Octiv</h2>
         <p>Since its founding in 2010, Octiv's team has been dedicated to providing sales teams a better way to create the documents they need to close deals. Today, Octiv streamlines document workflows for teams across organizations including sales, legal and information technology. Octiv's industry-leading technology enables companies to use the information they have in CRM, CPQ, ERP and other back-office systems to create, collaborate on and deliver documents online.</p>
 				<p>Octiv is passionate about giving time back to teams by connecting systems and data to deliver a better end-user experience. Awards and recognition of our market-leading product and teams include TechPoint Mira Awards, G2 Crowd, Glassdoor and Best Places to Work in Indiana. Through an HTML5-based platform, powerful integrations and world-class support and services teams, Octiv helps companies move at the speed of business.</p>
 				<p>Octiv is also passionate about community. Our company culture of hard work and commitment is evident in every interaction with our team, our product and in the community organizations and causes we support.</p>
