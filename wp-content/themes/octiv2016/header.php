@@ -61,7 +61,7 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     <?php
       // QUERY MARKETO BASED ON COOKIE FOR THE LEAD
       $encoded_cookie = str_replace("&","%26",$_COOKIE["_mkto_trk"]);
-      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company&access_token=243c8ba8-1660-4dfb-8b03-fe7ea8ef4854:sj";
+      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phoneNumber&access_token=243c8ba8-1660-4dfb-8b03-fe7ea8ef4854:sj";
       $json = file_get_contents($url);
       $json_data = json_decode($json, true);
     ?>
@@ -75,7 +75,8 @@ if(is_404() && $_GET['ref']=="tinderbox"){
             "firstName":"<?php echo $json_data[result][0][firstName]; ?>",
             "lastName":"<?php echo $json_data[result][0][lastName]; ?>",
             "email":"<?php echo $json_data[result][0][email]; ?>",
-            "company":"<?php echo $json_data[result][0][company]; ?>"
+            "company":"<?php echo $json_data[result][0][company]; ?>",
+            "phoneNumber":"<?php echo $json_data[result][0][phoneNumber]; ?>"
           }
         ]
       }

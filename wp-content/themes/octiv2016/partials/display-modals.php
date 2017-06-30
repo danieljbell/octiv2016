@@ -17,7 +17,8 @@
                 "Email" : mktoLeadFields.email,
                 "FirstName" : mktoLeadFields.firstName,
                 "LastName" : mktoLeadFields.lastName,
-                "Company" : mktoLeadFields.company
+                "Company" : mktoLeadFields.company,
+                "PhoneNumber" : mktoLeadFields.PhoneNumber
               };
               
               //pass our prefillFields objects into the form.vals method to fill our fields
