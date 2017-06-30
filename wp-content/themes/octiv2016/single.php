@@ -16,7 +16,7 @@ the_post();
 
 $upload_dir = wp_upload_dir(); ?>
 
-<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
 	<div class="site-width centered white-text">
 		<h1><?php the_title(); ?></h1>
 	</div>
