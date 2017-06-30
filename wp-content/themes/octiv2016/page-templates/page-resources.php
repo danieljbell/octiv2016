@@ -42,7 +42,7 @@ get_header();
 				<?php endwhile; endif; wp_reset_query();?>
 			<div>
 				<?php
-					$args = array('post_type' => 'page', 'posts_per_page' => 1, 'post_parent' => 65);
+					$args = array('post_type' => 'page', 'posts_per_page' => 1, 'post_parent' => 65, 'post__not_in' => array( 3025 ));
 					$whitepaper_query = new WP_Query( $args );
 					if ( $whitepaper_query->have_posts() ) : while ( $whitepaper_query->have_posts() ) : $whitepaper_query->the_post();
 				?>
