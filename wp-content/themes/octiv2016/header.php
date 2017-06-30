@@ -17,7 +17,7 @@ if(is_404() && $_GET['ref']=="tinderbox"){
   $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=_mkto_trk&access_token=243c8ba8-1660-4dfb-8b03-fe7ea8ef4854:sj";
   $json = file_get_contents($url);
   $json_data = json_decode($json, true);
-  print_r($json_data);
+  // print_r($json_data);
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
