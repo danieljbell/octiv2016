@@ -18,7 +18,9 @@
 		<script>
 			MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php if (get_field('form_source')) : echo get_field('form_source'); else : echo '1041'; endif; ?>, function(form) {
 				var labelToRemove = document.querySelector('label[for="subscriptionNewsletter"]');
-				labelToRemove.querySelector('.mktoAsterix').remove();
+				if (labelToRemove.querySelector('.mktoAsterix')) {
+					labelToRemove.querySelector('.mktoAsterix').remove();
+				}
 
 				// Blacklisted Email Domains
 				var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];

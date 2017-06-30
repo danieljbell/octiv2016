@@ -408,7 +408,6 @@ $(".tabs").accessibleTabs({
 STICKY SIDEBAR
 ==============================
 */
-console.log($('.sticky-sidebar').length);
 if ($('.sticky-sidebar').length) {
   (function($) {
 
@@ -535,6 +534,23 @@ REMOVE STYLES FOR CONTACT FORM
 
 if (window.MktoForms2) {
   MktoForms2.whenReady(function (form) {
+    //set the first result as local variable
+    var mktoLeadFields = mktoLead.result[0];
+    
+    //map your results from REST call to the corresponding field name on the form
+    var prefillFields = { 
+      "Email" : mktoLeadFields.email,
+      "FirstName" : mktoLeadFields.firstName,
+      "LastName" : mktoLeadFields.lastName,
+      "Company" : mktoLeadFields.company,
+      "Phone" : mktoLeadFields.phone,
+      "State" : mktoLeadFields.state,
+      "LinkedIn_Company_Size__c" : mktoLeadFields.LinkedIn_Company_Size__c
+    };
+    
+    //pass our prefillFields objects into the form.vals method to fill our fields
+    form.vals(prefillFields);
+
     var pageURL = document.documentURI;
     var formObj = $('.mktoForm');
 

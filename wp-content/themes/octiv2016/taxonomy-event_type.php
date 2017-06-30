@@ -16,7 +16,7 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div>
+      <div class="filter-sidebar">
         <h4><?php echo $tax_title; ?> Events</h4>
         <hr>
         <ul class="nav sidebar-links" id="sidebar-links">

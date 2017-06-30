@@ -18,7 +18,7 @@
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
-      <div>
+      <div class="filter-sidebar">
         <h4>Filters</h4>
         <hr>
         <ul class="no-bull filter-container">
