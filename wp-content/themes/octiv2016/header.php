@@ -12,13 +12,6 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     exit;
 }
 ?>
-
-<?php
-  $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=_mkto_trk&access_token=243c8ba8-1660-4dfb-8b03-fe7ea8ef4854:sj";
-  $json = file_get_contents($url);
-  $json_data = json_decode($json, true);
-  // print_r($json_data);
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -65,6 +58,28 @@ if(is_404() && $_GET['ref']=="tinderbox"){
         <meta property="og:image:height" content="466" />
     <?php endif; ?>
 
+    <?php
+      // QUERY MARKETO BASED ON COOKIE FOR THE LEAD
+      $encoded_cookie = str_replace("&","%26",$_COOKIE["_mkto_trk"]);
+      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company&access_token=243c8ba8-1660-4dfb-8b03-fe7ea8ef4854:sj";
+      $json = file_get_contents($url);
+      $json_data = json_decode($json, true);
+    ?>
+    <script>
+      var mktoLead = {  
+        "requestId":"<?php echo $json_data[requestId]; ?>",
+        "success":true,
+        "result":[  
+          {  
+            "id":1085573,
+            "firstName":"<?php echo $json_data[result][0][firstName]; ?>",
+            "lastName":"<?php echo $json_data[result][0][lastName]; ?>",
+            "email":"<?php echo $json_data[result][0][email]; ?>",
+            "company":"<?php echo $json_data[result][0][company]; ?>"
+          }
+        ]
+      }
+    </script>
 </head>
 <body <?php body_class(); ?>>
   <!-- Google Tag Manager (noscript) -->
@@ -79,7 +94,6 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     echo '<a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a>';
     echo '</div>';
     endif; ?>
-
 
 <?php get_template_part('partials/display', 'eyebrow'); ?>
   <header class="site-width" role="banner">
