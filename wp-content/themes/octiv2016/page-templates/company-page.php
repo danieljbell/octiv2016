@@ -12,10 +12,10 @@ $rand_num = mt_rand(1,4);
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url('/wp-content/themes/octiv2016/dist/img/indy-skyline.jpg');">
 	<div class="site-width centered pos-rel" style="z-index: 2;">
-		<h1 class="white-text">The People Behind the Platform</h1>
+		<h1 class="white-text">Company</h1>
 		<div class="two-third-only white-text">
 			<div class="font-bump">
-				<p>Take a look around and meet some of our people, browse our job openings and learn more about Octiv.</p>
+				<p>Meet the people behind the platform.</p>
 			</div>
 		</div>
 	</div>

@@ -22,7 +22,7 @@ get_header();
         <p>Create documents faster, share them online, sign electronically and collaborate in real time. Store documents and access them wherever you are.</p>
       </div>
     </div>
-    <a href="/tour" class="btn-primary mar-t">Watch Octiv in Action</a>
+    <a href="/tour" class="btn-primary mar-t">Tour the Platform</a>
   </div>
 </div>
 

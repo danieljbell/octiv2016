@@ -14,13 +14,22 @@
 <?php get_header(); ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
-  <div class="site-width white-text centered">
-    <h1><?php echo the_title(); ?></h1>
-    <div class="font-bump two-third-only" style="margin-top: 0.5rem;">
+  <div class="site-width centered">
+    <h1 class="white-text"><?php echo the_title(); ?></h1>
+    <div class="font-bump white-text two-third-only" style="margin-top: 0.5rem;">
       <div class="font-bump fancy-links">
         <?php the_content(); ?>
       </div>
     </div>
+    <a href="/tour" class="btn-primary"><?php
+      if ($post->post_name === 'for-sales') {
+        echo 'Take a Guided Tour';
+      } else if ($post->post_name === 'for-legal') {
+        echo 'See a Guided Tour';
+      } else {
+        echo 'Tour the Platform';
+      }
+    ?></a>
   </div>
 </div>
 
