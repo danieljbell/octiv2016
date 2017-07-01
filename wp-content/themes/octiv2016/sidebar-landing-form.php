@@ -17,10 +17,6 @@
 		<form <?php if (get_field('form_source')) : echo 'id="mktoForm_' . get_field('form_source') . '"'; else : echo 'id="mktoForm_1041"'; endif; ?>></form>
 		<script>
 			MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php if (get_field('form_source')) : echo get_field('form_source'); else : echo '1041'; endif; ?>, function(form) {
-				var labelToRemove = document.querySelector('label[for="subscriptionNewsletter"]');
-				if (labelToRemove.querySelector('.mktoAsterix')) {
-					labelToRemove.querySelector('.mktoAsterix').remove();
-				}
 
 				// Blacklisted Email Domains
 				var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
