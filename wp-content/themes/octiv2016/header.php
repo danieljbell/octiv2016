@@ -59,9 +59,25 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     <?php endif; ?>
 
     <?php
+      // CREATE MARKETO ACCESS TOKEN
+
+      // create a new cURL resource
+      $ch = curl_init();
+
+      // set URL and other appropriate options
+      curl_setopt($ch, CURLOPT_URL, "https://625-MXY-689.mktorest.com/identity/oauth/token?grant_type=client_credentials&client_id=e2cb2a4b-90fe-41ec-9be1-def88ede201e&client_secret=TLDIO2ZFFhbDnRBy051bWdlfjE0Tkhn4");
+      curl_setopt($ch, CURLOPT_HEADER, 0);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+      // grab URL and pass it to the browser and parse JSON as array
+      $mkto_resp = json_decode(curl_exec($ch), true);
+
+      // close cURL resource, and free up system resources
+      curl_close($ch);
+
       // QUERY MARKETO BASED ON COOKIE FOR THE LEAD
       $encoded_cookie = str_replace("&","%26",$_COOKIE["_mkto_trk"]);
-      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=c46a4943-238f-4f41-b50a-5f3f66fe0e73:sj";
+      $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=" . $mkto_resp[access_token];
       $json = file_get_contents($url);
       $json_data = json_decode($json, true);
     ?>
