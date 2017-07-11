@@ -24,6 +24,9 @@
 					//Add an onSuccess handler
 					form.onValidate(function(values, followUpUrl) {
 
+						// Blacklisted Email Domains
+            var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
+
 						// Verify Email is Business Domain
 						var email = form.vals().Email;
 						if(email){
