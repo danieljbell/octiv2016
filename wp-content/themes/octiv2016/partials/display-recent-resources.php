@@ -34,7 +34,6 @@ $context = stream_context_create(array(
         $args = array(
           'post_type' => 'page',
           'post_parent' => 65,
-          'post__not_in' => array( 3025 ),
           'posts_per_page' => 1
         );
         $query = new WP_Query( $args );
