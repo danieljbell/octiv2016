@@ -6,14 +6,17 @@ TEMPLATE NAME: Landing Page
 */
 
 get_header();
+$rand_num = mt_rand(1,4);
 
 ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(<?php
 	if (get_field('hero_background')) {
 		echo get_field('hero_background');
-	} else {
+	} elseif (get_post_thumbnail_id()) {
 		echo wp_get_attachment_url( get_post_thumbnail_id() );
+	} else {
+		echo '/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg';
 	}
 ?>);">
 	<div class="site-width centered white-text">
