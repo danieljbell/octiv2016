@@ -18,7 +18,6 @@
 			'post_type' => 'page',
 			'post_parent' => 65,
 			'posts_per_page' => 1,
-			'post__not_in' => array( 3025 )
 		);
 
 		$whitepaper_ad = new WP_Query( $args );

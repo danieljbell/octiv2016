@@ -44,7 +44,6 @@ $rand_num = mt_rand(1,4);
           'post_type' => 'page',
           'post_parent__in' => array(65,74),
           'posts_per_page' => 2,
-          'post__not_in' => array( 3025 )
         );
 
         $whitepaper = new WP_Query($args);
