@@ -70,6 +70,7 @@
 					<li style="width: 100%; max-width: 25px;"><a href="http://linkedin.com/company/octiv" target="_blank" title="LinkedIn"><img src="./wp-content/themes/octiv2016/dist/img/linkedin.svg" alt=""></a></li>
 					<li><a href="/company/privacy">Privacy</a></li>
 					<li><a href="/company/terms-conditions">Terms &amp; Conditions</a></li>
+					<li><a href="/sitemap">Sitemap</a></li>
 				</ul>
 			</div>
 			<div class="footer-copyright" style="margin-bottom: 0;">
