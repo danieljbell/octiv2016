@@ -57,6 +57,63 @@
 						var vals = form.vals();
 
 						// Update the redirect url with form fields
+						if (window.location.pathname === '/experience/') {
+							var vals = form.vals();
+              var hasIntegrations = 'false';
+              var isSalesforce = 'false';
+              var isDynamics = 'false';
+              var isNetsuite = 'false';
+              var isPipedrive = 'false';
+              var isDocusign = 'false';
+              var isSteelbrick = 'false';
+              var isOracleCPQ = 'false';
+              var isZuoraQuotes = 'false';
+              var hasFeatures = 'false';
+              var isDocGen = 'false';
+              var isESign = 'false';
+              var isRedlining = 'false';
+              if (vals.poweredCRM === 'salesforce') {
+                isSalesforce = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCRM === 'dynamics') {
+                isDynamics = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCRM === 'netsuite') {
+                isNetsuite = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCRM === 'pipedrive') {
+                isPipedrive = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredeSig === 'docusign') {
+                isDocusign = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCPQ === 'steelbrick') {
+                isSteelbrick = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCPQ === 'oraclecpq') {
+                isOracleCPQ = 'true';
+                hasIntegrations = 'true';
+              }
+              if (vals.poweredCPQ === 'zuoraquotes') {
+                isZuoraQuotes = 'true';
+                hasIntegrations = 'true';
+              }
+
+              if (vals.octivFeatureInterest) {
+                hasFeatures = 'true';
+              }
+
+
+              // Update the redirect url with form fields
+              followUpUrl = 'http://see.octiv.com/proposals/create_and_view?api_key=35d333a314d6a4a2ceec0a321c111408465d293c&proposal[template_id]=40064&proposal[name]=' + vals.Company + '%20Document\'s%20Powered%20By%20Octiv&first_name=' + vals.FirstName + '&last_name=' + vals.LastName + '&company_name=' + vals.Company + '&has_integrations=' + hasIntegrations + '&is_salesforce=' + isSalesforce + '&is_dynamics=' + isDynamics + '&is_docusign=' + isDocusign + '&is_steelbrick=' + isSteelbrick + '&is_netsuite=' + isNetsuite + '&is_pipedrive=' + isPipedrive + '&is_oraclecpq=' + isOracleCPQ + '&is_zuoraquotes=' + isZuoraQuotes + '&use_cases=' + vals.poweredUseCase + '&has_features=' + hasFeatures + '&feature_interest=' + vals.octivFeatureInterest;
+						}
+
 						if (window.location.pathname === '/resources/downloads/case-digital-document-generation/') {
 							followUpUrl = '/wp-content/uploads/2017/06/The-Case-For-Digital-Document-Generation.pdf';
 						}

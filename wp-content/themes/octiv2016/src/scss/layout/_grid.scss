@@ -102,7 +102,8 @@
 	}
 }
 
-.fourth > div {
+.fourth > div,
+.fourth > li {
 	@include bp(sm) {
 		width: calc(50% - 1rem);
 		margin-right: 2rem;
@@ -120,6 +121,10 @@
 			margin-right: 0;
 		}
 	}
+}
+
+.fourth > li {
+	margin-bottom: 0;
 }
 
 .fifth > div {
