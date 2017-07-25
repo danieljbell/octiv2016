@@ -2,10 +2,11 @@
 <div class="modal fade rad-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <div class="modal-content">
+    <div class="modal-content centered">
       <h2>Request A Demo</h2>
-      <p>Fill out the form below to schedule time to speak with one of our sales experts.</p>
-      <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+      <p>Shoot us an email at <a href="mailto:sales@octiv.com">sales@octiv.com</a> to set up a time to demo.</p>
+      <a href="mailto:sales@octiv.com" class="btn-primary">Contact Us</a>
+      <!--<script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
           <form id="mktoForm_1141"></form>
         <script>
           MktoForms2.whenReady( function(form) {
@@ -87,7 +88,7 @@
               return false;
             });
           });
-        </script>
+        </script>-->
     </div>
   </div>
 </div>
