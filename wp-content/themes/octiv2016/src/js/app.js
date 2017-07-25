@@ -532,88 +532,88 @@ REMOVE STYLES FOR CONTACT FORM
 ==============================
 */
 
-if (window.MktoForms2) {
-  MktoForms2.whenReady(function (form) {
-    //set the first result as local variable
-    var mktoLeadFields = mktoLead.result[0];
+// if (window.MktoForms2) {
+//   MktoForms2.whenReady(function (form) {
+//     //set the first result as local variable
+//     var mktoLeadFields = mktoLead.result[0];
     
-    //map your results from REST call to the corresponding field name on the form
-    var prefillFields = { 
-      "Email" : mktoLeadFields.email,
-      "FirstName" : mktoLeadFields.firstName,
-      "LastName" : mktoLeadFields.lastName,
-      "Company" : mktoLeadFields.company,
-      "Phone" : mktoLeadFields.phone,
-      "State" : mktoLeadFields.state,
-      "LinkedIn_Company_Size__c" : mktoLeadFields.LinkedIn_Company_Size__c
-    };
+//     //map your results from REST call to the corresponding field name on the form
+//     var prefillFields = { 
+//       "Email" : mktoLeadFields.email,
+//       "FirstName" : mktoLeadFields.firstName,
+//       "LastName" : mktoLeadFields.lastName,
+//       "Company" : mktoLeadFields.company,
+//       "Phone" : mktoLeadFields.phone,
+//       "State" : mktoLeadFields.state,
+//       "LinkedIn_Company_Size__c" : mktoLeadFields.LinkedIn_Company_Size__c
+//     };
     
-    //pass our prefillFields objects into the form.vals method to fill our fields
-    form.vals(prefillFields);
+//     //pass our prefillFields objects into the form.vals method to fill our fields
+//     form.vals(prefillFields);
 
-    var pageURL = document.documentURI;
-    var formObj = $('.mktoForm');
+//     var pageURL = document.documentURI;
+//     var formObj = $('.mktoForm');
 
-    // Remove styles
-    removeStyles(formObj);
-    $(window).resize(function(){
-      removeStyles(formObj);
-    });
+//     // Remove styles
+//     removeStyles(formObj);
+//     $(window).resize(function(){
+//       removeStyles(formObj);
+//     });
 
-    // Add styles
-    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar|single-events|page-template-landing-page/)) {
-      formObj.find('.mktoFormRow').addClass('third');
-      formObj.find('select').addClass('fancy');
-      formObj.find('.mktoButtonRow').addClass('centered');
-    }
+//     // Add styles
+//     if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar|single-events|page-template-landing-page/)) {
+//       formObj.find('.mktoFormRow').addClass('third');
+//       formObj.find('select').addClass('fancy');
+//       formObj.find('.mktoButtonRow').addClass('centered');
+//     }
 
-    formObj.find('.mktoButton').addClass('btn-primary');
+//     formObj.find('.mktoButton').addClass('btn-primary');
 
-    // Send page URL to Marketo
-    $('input[name="sourceURL"]').attr('value', pageURL);
-    var cook = getCookie('ref');
+//     // Send page URL to Marketo
+//     $('input[name="sourceURL"]').attr('value', pageURL);
+//     var cook = getCookie('ref');
 
-    if (cook) {
-      $('input[name="LeadSource"]').attr('value', cook);
-      $('input[name="Secondary_Lead_Source__c"]').attr('value', cook);
-    } else {
-      $('input[name="LeadSource"]').attr('value', 'Web');
-      $('input[name="Secondary_Lead_Source__c"]').attr('value', 'Web');
-    }
+//     if (cook) {
+//       $('input[name="LeadSource"]').attr('value', cook);
+//       $('input[name="Secondary_Lead_Source__c"]').attr('value', cook);
+//     } else {
+//       $('input[name="LeadSource"]').attr('value', 'Web');
+//       $('input[name="Secondary_Lead_Source__c"]').attr('value', 'Web');
+//     }
 
-    function removeStyles(formObj) {
-      if ($('#mktoForms2BaseStyle')) {
-        $('#mktoForms2BaseStyle').remove();
-      }
-      if ($('#mktoForms2ThemeStyle')) {
-        $('#mktoForms2ThemeStyle').remove();
-      }
-      if (formObj.find('.mktoOffset')) {
-        formObj.find('.mktoOffset').remove();
-      }
-      if (formObj.find('.mktoGutter')) {
-        formObj.find('.mktoGutter').remove();
-      }
-      if (formObj.find('.mktoClear')) {
-        formObj.find('.mktoClear').remove();
-      }
-      if (formObj.find('style')) {
-        formObj.find('style').remove();
-      }
-      if (formObj.find('.mktoHasWidth')) {
-        formObj.find('.mktoHasWidth').attr('style', '');
-      }
-      if (formObj.find('.mktoButtonWrap')) {
-          formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
-      }
-      if (formObj.find('.mktoInset')) {
-        formObj.find('.mktoInset').attr('style', '');
-      }
-      formObj.attr('style', '');
-    }
+//     function removeStyles(formObj) {
+//       if ($('#mktoForms2BaseStyle')) {
+//         $('#mktoForms2BaseStyle').remove();
+//       }
+//       if ($('#mktoForms2ThemeStyle')) {
+//         $('#mktoForms2ThemeStyle').remove();
+//       }
+//       if (formObj.find('.mktoOffset')) {
+//         formObj.find('.mktoOffset').remove();
+//       }
+//       if (formObj.find('.mktoGutter')) {
+//         formObj.find('.mktoGutter').remove();
+//       }
+//       if (formObj.find('.mktoClear')) {
+//         formObj.find('.mktoClear').remove();
+//       }
+//       if (formObj.find('style')) {
+//         formObj.find('style').remove();
+//       }
+//       if (formObj.find('.mktoHasWidth')) {
+//         formObj.find('.mktoHasWidth').attr('style', '');
+//       }
+//       if (formObj.find('.mktoButtonWrap')) {
+//           formObj.find('.mktoButtonWrap').attr('style', '').parent('.mktoButtonRow').addClass('centered');
+//       }
+//       if (formObj.find('.mktoInset')) {
+//         formObj.find('.mktoInset').attr('style', '');
+//       }
+//       formObj.attr('style', '');
+//     }
 
-  });
-}
+//   });
+// }
 
 if ($('#catalog-screenshots').length) {
   $('#catalog-screenshots').on('click', 'img', function() {
