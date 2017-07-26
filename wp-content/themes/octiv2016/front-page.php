@@ -10,6 +10,8 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<?php $rand_num = mt_rand(1,4); ?>
+
 <div class="fixed-hero-section">
 	<div class="slider">
 		<div style="position: relative; background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/06/homepage.jpg);">
@@ -22,6 +24,19 @@ $context = stream_context_create(array(
 						</div>
 					</div>
 					<button class="rad-modal-button btn-primary">Learn How</button>
+				</div>
+			</section>
+		</div>
+		<div style="background-image: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<?php echo '/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg' ?>);">
+			<section>
+				<div class="site-width centered">
+					<h1 class="white-text">Experience Octiv in Action</h1>
+					<div class="white-text two-third-only font-bump">
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores porro, est! Mollitia illum ducimus possimus facere nostrum fugit, eum ut.</p>
+						</div>
+					</div>
+					<a href="/experience" class="btn-primary">Create Document Now</a>
 				</div>
 			</section>
 		</div>

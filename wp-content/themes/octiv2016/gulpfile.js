@@ -39,10 +39,10 @@ gulp.task('js', function () {
       'bower_components/waypoints/lib/shortcuts/inview.js',
       'src/js/app.js'
     ])
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(uglify())
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 });
