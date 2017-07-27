@@ -31,7 +31,7 @@
 			endwhile;
 			endif;
 		?>
-		<p><strong>Media Contact</strong><br>Sharmin Kent<br>317-493-0743<br><a href="mailto:sharmin@octiv.com">Sharmin@Octiv.com</a></p>
+		<p><strong>Media Contact</strong><br>Kelli Blystone<br><a href="tel:3175500148,721">317.550.0148 ext. 721</a><br><a href="mailto:kelli.blystone@octiv.com">kelli.blystone@octiv.com</a></p>
 	</div>
 </section>
 
