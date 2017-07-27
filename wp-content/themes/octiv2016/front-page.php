@@ -33,7 +33,7 @@ $context = stream_context_create(array(
 					<h1 class="white-text">Experience Octiv in Action</h1>
 					<div class="white-text two-third-only font-bump">
 						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores porro, est! Mollitia illum ducimus possimus facere nostrum fugit, eum ut.</p>
+							<p>Create a personalized document based on your interests.</p>
 						</div>
 					</div>
 					<a href="/experience" class="btn-primary">Create Document Now</a>
