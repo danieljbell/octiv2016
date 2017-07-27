@@ -6,6 +6,8 @@ $context = stream_context_create(array(
 ));
 ?>
 
+<?php $rand_num = mt_rand(1,2); ?>
+
 <section>
   <div class="site-width">
     <div class="centered">
@@ -45,14 +47,25 @@ $context = stream_context_create(array(
         endif;
         wp_reset_query();
       ?>
-      <div class="card">
-        <a href="/tour" class="card-tb" title="Octiv Guided Tour" style="background-image: url(/wp-content/uploads/2017/06/guided-tour-hero.jpg);"></a>
-        <div>
-          <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Tour</p>
-          <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Octiv Guided Tour</a></h4>
-          <p><a href="/tour" class="btn-arrow">Take the Tour Now</a></p>
+      <?php if ($rand_num === 1) { ?>
+        <div class="card">
+          <a href="/tour" class="card-tb" title="Octiv Guided Tour" style="background-image: url(/wp-content/uploads/2017/06/guided-tour-hero.jpg);"></a>
+          <div>
+            <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Tour</p>
+            <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Octiv Guided Tour</a></h4>
+            <p><a href="/tour" class="btn-arrow">Take the Tour Now</a></p>
+          </div>
         </div>
-      </div>
+      <?php } else { ?>
+        <div class="card">
+          <a href="/experience" class="card-tb" title="Octiv Guided Tour" style="background-image: url(<?php echo '/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg';?>);"></a>
+          <div>
+            <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Experience</p>
+            <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Experience Octiv in Action</a></h4>
+            <p><a href="/experience" class="btn-arrow">Create Document Now</a></p>
+          </div>
+        </div>
+      <?php } ?>
     </div>
   </div>
 </section>
