@@ -14,8 +14,10 @@ $users = get_users( array(
 
 <?php get_header(); ?>
 
-<div class="fixed-hero-section">
-	<div class="site-width">
+<?php $rand_num = mt_rand(1,4); ?>
+
+<div class="fixed-hero-section" <?php echo 'style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg);"'; ?>>
+	<div class="site-width centered">
 		<h1 class="white-text"><?php the_title(); ?></h1>
 	</div>
 </div>
