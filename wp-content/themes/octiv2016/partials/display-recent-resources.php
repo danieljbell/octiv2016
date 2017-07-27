@@ -61,7 +61,7 @@ $context = stream_context_create(array(
           <a href="/experience" class="card-tb" title="Octiv Guided Tour" style="background-image: url(<?php echo '/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg';?>);"></a>
           <div>
             <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Experience</p>
-            <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Experience Octiv in Action</a></h4>
+            <h4 style="margin-bottom: 1rem;"><a href="/experience" title="Octiv Guided Tour">Experience Octiv in Action</a></h4>
             <p><a href="/experience" class="btn-arrow">Create Document Now</a></p>
           </div>
         </div>
