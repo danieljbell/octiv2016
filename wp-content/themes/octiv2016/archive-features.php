@@ -99,7 +99,7 @@ $context = stream_context_create(array(
            if ($custom_term->slug === 'document-generation') {
             echo '<div class="centered box" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/06/generic-' . $rand_num2 . '.jpg); background-size: cover; background-position: center; padding: 3rem;">';
               echo '<h2 class="white-text">Experience Octiv\'s Document Generation</h2>';
-              echo '<p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe earum, rerum officia hic iure!</p>';
+              echo '<p class="white-text">Create a personalized document based on your interests.</p>';
               echo '<a href="/experience" class="btn-primary">Create Document Now</a>';
             echo '</div>';
            }
