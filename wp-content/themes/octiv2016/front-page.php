@@ -32,8 +32,8 @@ $context = stream_context_create(array(
 				<div class="site-width centered">
 					<h1 class="white-text">Experience Octiv in Action</h1>
 					<div class="white-text two-third-only font-bump">
-						<div>
-							<p>Create a personalized document based on your interests.</p>
+						<div class="pad-x">
+							<p>Demo our document generation solution and create a personalized document based on your interests.</p>
 						</div>
 					</div>
 					<a href="/experience" class="btn-primary">Create Document Now</a>
