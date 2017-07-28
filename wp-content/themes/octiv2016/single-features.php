@@ -82,17 +82,17 @@
             endwhile;
               echo '</div>';
             echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
-            echo '<p>&nbsp;</p>';
-            echo '<div class="box datasheet-promo">';
-              echo '<div class="datasheet-promo-image">';
-                echo '<img src="//fillmurray.com/102/132">';
-              echo '</div>';
-              echo '<div class="datasheet-promo-content">';
-                echo '<h4>' . get_field('datasheet_headline') . '</h4>';
-                echo '<p>' . get_field('datasheet_subheadline') . '</p>';
-                echo '<button class="datasheet-modal-button btn-arrow">Get the Full Datasheet</button>';
-              echo '</div>';
-            echo '</div>';
+            // echo '<p>&nbsp;</p>';
+            // echo '<div class="box datasheet-promo">';
+            //   echo '<div class="datasheet-promo-image">';
+            //     echo '<img src="//fillmurray.com/102/132">';
+            //   echo '</div>';
+            //   echo '<div class="datasheet-promo-content">';
+            //     echo '<h4>' . get_field('datasheet_headline') . '</h4>';
+            //     echo '<p>' . get_field('datasheet_subheadline') . '</p>';
+            //     echo '<button class="datasheet-modal-button btn-arrow">Get the Full Datasheet</button>';
+            //   echo '</div>';
+            // echo '</div>';
           echo '</div>';
         else :
           echo '<div>';
