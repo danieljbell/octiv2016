@@ -53,19 +53,6 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(237,76,6,0.75),rgba(237,76,6,0)), url(https://octiv.com/wp-content/uploads/2017/06/fow-trifecta-hero.jpg)">
-			<section>
-				<div class="site-width centered" style="color: #fff;">
-					<h1>The Future of Work</h1>
-					<div class="half-only">
-						<div class="font-bump">
-							<p>Learn how you can prepare your business for the workplace of the future and boost productivity for your teams with the Future of Work infographic series.</p>
-						</div>
-					</div>
-					<a href="/resources/downloads/future-of-work" class="btn-primary" style="background-color: #42b0d8;">Download Now</a>
-				</div>
-			</section>
-		</div>
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
 			<section>
 				<div class="site-width centered">
