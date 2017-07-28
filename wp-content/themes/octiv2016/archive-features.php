@@ -10,6 +10,8 @@ $context = stream_context_create(array(
 
 <?php get_header(); ?>
 
+<?php $rand_num2 = mt_rand(1,4); ?>
+
 <?php
 	// get the terms
 	$categories = get_categories('taxonomy=feature_type');
@@ -82,18 +84,25 @@ $context = stream_context_create(array(
             echo '<h3 id="' . $custom_term->slug . '">' . $custom_term->name . '</h3>';
 						echo '<p>' . $custom_term->description . '</p>';
             echo '<div class="third">';
-          while($loop->have_posts()) : $loop->the_post();
-            $tag = get_field('status');
-            if ($tag[0] == 'roadmap') {
-              $tag = 'roadmap';
-            }
-            if ($tag[0] == 'beta') {
-              $tag = 'beta';
-            }
-            echo do_shortcode('[get_card excerpt="true" tag="' . $tag . '"]');
-          endwhile;
+            while($loop->have_posts()) : $loop->the_post();
+              $tag = get_field('status');
+              if ($tag[0] == 'roadmap') {
+                $tag = 'roadmap';
+              }
+              if ($tag[0] == 'beta') {
+                $tag = 'beta';
+              }
+              echo do_shortcode('[get_card excerpt="true" tag="' . $tag . '"]');
+            endwhile;
             echo '</div>';
-         }
+           }
+           if ($custom_term->slug === 'document-generation') {
+            echo '<div class="centered box" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/06/generic-' . $rand_num2 . '.jpg); background-size: cover; background-position: center; padding: 3rem;">';
+              echo '<h2 class="white-text">Experience Octiv\'s Document Generation</h2>';
+              echo '<p class="white-text">Create a personalized document based on your interests.</p>';
+              echo '<a href="/experience" class="btn-primary">Create Document Now</a>';
+            echo '</div>';
+           }
             echo '</section>';
       } ?>
       </div>
