@@ -86,54 +86,19 @@ $rand_num = mt_rand(1,4);
 	<div class="site-width">
 		<h2 class="centered">Leadership<br>&nbsp;</h2>
 		<div class="third">
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
-					<p><strong>David Kerr</strong><br />CEO<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/john-ludwig.png" alt="John Ludwig" />
-					<p><strong>John Ludwig</strong><br />CFO<br><a href="https://www.linkedin.com/in/john-ludwig-987bb64b" target="_blank"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="linkedin"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/john-k1.png" alt="John Kwiatkowski" />
-					<p><strong>John Kwiatkowski</strong><br />CRO<br><a href="https://www.linkedin.com/in/john-kwiatkowski-5b39b7"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/08/brad-gillespie.jpg" alt="Brad Gillespie" />
-					<p><strong>Brad Gillespie</strong><br />CMO<br><a href="https://www.linkedin.com/in/tbgillespie"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2017/05/Rachel-Clark.png" alt="Rachel Clark" />
-					<p><strong>Rachel Clark</strong><br />Product<br><a href="https://www.linkedin.com/in/rachelsauerclark/"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/shannon-bradley.png" alt="Shannon Bradley" />
-					<p><strong>Shannon Bradley</strong><br />Client Health<br><a href="https://www.linkedin.com/in/shannon-bradley-2653835"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Adam-Becker.png" alt="Adam Becker" />
-					<p><strong>Adam Becker</strong><br />Account Management<br><a href="https://www.linkedin.com/in/becker3ww"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="Jesse Kurth" />
-					<p><strong>Jesse Kurth</strong><br />Professional Services<br><a href="https://www.linkedin.com/in/jessekurth"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
+			<?php
+			 if (have_rows('company_leadership')) :
+          while (have_rows('company_leadership')) :
+            the_row();
+          		echo '<div>';
+	          		echo '<div class="centered">';
+	          			echo '<img src="' . get_sub_field('leader_headshot') . '" alt="' . get_sub_field('leader_name') . '">';
+	          			echo '<p><strong>' . get_sub_field('leader_name') . '</strong><br>' . get_sub_field('leader_title') . '<br><a href="' . get_sub_field('leader_linkedin_url') . '" title="' . get_sub_field('leader_name')  . '\'s Linkedin" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/octiv2016/dist/img/linkedin.svg" alt="LinkedIn"></a></p>';
+	          		echo '</div>';
+          		echo '</div>';
+          endwhile;
+        endif;
+      ?>
 		</div>
 	</div>
 </section>
@@ -142,62 +107,19 @@ $rand_num = mt_rand(1,4);
 	<div class="site-width">
 		<h2 class="centered">Board of Directors<br>&nbsp;</h2>
 		<div class="third">
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Scott-Dorsey.jpg" alt="Scott Dorsey" />
-					<p><strong>Scott Dorsey</strong><br />Chairman<br><a href="https://www.linkedin.com/pub/scott-dorsey/3/b39/96"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Don-Aquilano.png" alt="Don Aquilano" />
-					<p><strong>Don Aquilano</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/don-aquilano/4/712/232"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Mike-Fitzgerald.jpg" alt="Mike Fitzgerald" />
-					<p><strong>Mike Fitzgerald</strong><br />Co-Founder &amp; Board Member<br><a href="https://www.linkedin.com/in/mikesfitzgerald"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Mark-Hill.png" alt="Mark Hill" />
-					<p><strong>Mark Hill</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markehill56"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="David Kerr" />
-					<p><strong>David Kerr</strong><br />Board Member<br><a href="https://www.linkedin.com/pub/david-kerr/1/b50/9b0"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2017/02/Mark-Terbeek.jpg" alt="Mark Terbeek" />
-					<p><strong>Mark Terbeek</strong><br />Board Member<br><a href="https://www.linkedin.com/in/markterbeek"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/06/tony-wells.jpg" alt="Tony Wells" />
-					<p><strong>Tony Wells</strong><br />Board Member<br><a href="
-https://www.linkedin.com/in/tonywells1/"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2017/02/lisa-coca.png" alt="Lisa Coca" />
-					<p><strong>Lisa Coca</strong><br />Board Observer<br><a href="https://www.linkedin.com/in/lisabcoca"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
-				<div class="centered">
-					<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="Dustin Sapp" />
-					<p><strong>Dustin Sapp</strong><br />Co-Founder &amp; Board Observer<br><a href="https://www.linkedin.com/in/dustinsapp"><img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/linkedin.svg" alt="LinkedIn"></a></p>
-				</div>
-			</div>
-			<div>
+			<?php
+			 if (have_rows('board_leadership')) :
+          while (have_rows('board_leadership')) :
+            the_row();
+          		echo '<div>';
+	          		echo '<div class="centered">';
+	          			echo '<img src="' . get_sub_field('leader_headshot') . '" alt="' . get_sub_field('leader_name') . '">';
+	          			echo '<p><strong>' . get_sub_field('leader_name') . '</strong><br>' . get_sub_field('leader_title') . '<br><a href="' . get_sub_field('leader_linkedin_url') . '" title="' . get_sub_field('leader_name')  . '\'s Linkedin" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/octiv2016/dist/img/linkedin.svg" alt="LinkedIn"></a></p>';
+	          		echo '</div>';
+          		echo '</div>';
+          endwhile;
+        endif;
+      ?>
 		</div>
 	</div>
 </section>
