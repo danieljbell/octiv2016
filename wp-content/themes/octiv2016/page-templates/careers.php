@@ -6,6 +6,9 @@ TEMPLATE NAME: Careers
 */
 
 get_header();
+
+$rand_num = mt_rand(1,4);
+
 ?>
 
 <?php if (!isset($_GET['gh_jid'])) : ?>
@@ -129,7 +132,7 @@ get_header();
 
 <?php else : ?>
 
-<div class="fixed-hero-section">
+<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg);"'>
 	<div class="site-width white-text">
 		<h1>Careers</h1>
 	</div>
