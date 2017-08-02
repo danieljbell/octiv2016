@@ -90,7 +90,7 @@
 							max-width: 200px;
 							filter: grayscale(1) invert(1) brightness(300%);
 						}
-						.slick-slide:nth-child(3) .client-logo {
+						.slick-slide:nth-child(2) .client-logo {
 							margin-bottom: 1rem;
 						}
 					</style>
