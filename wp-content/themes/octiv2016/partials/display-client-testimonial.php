@@ -41,21 +41,3 @@ if (have_rows('client_stories')) :
   }
 endif;
 ?>
-
-<!-- <section class="fat-section" style="background-image: url(//fillmurray.com/1920/400);">
-  <div class="site-width">stuff</div>
-</section> -->
-
-
-<!-- <div role="listitem" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(' . get_field('client_testimonial_image') . ');">
-  <div class="site-width">
-    <div class="centered">
-      <img src="' . get_field('client_logo') . '" alt="' . get_field('client_testimonial_company') . '">
-      <br>
-      <a href="' . get_the_permalink() . '" class="btn-white-outline">Read Case Study</a>
-    </div>
-    <div>
-      <h4>' . get_field('client_testimonial') . '</h4>
-    </div>
-  </div>
-</div> -->

@@ -48,6 +48,51 @@
 						);
 					endif;
 				?>
+			
+			<?php
+				if ($post->ID === 74) {
+					echo '<section style="padding-top: 0;">';
+						echo '<div class="slider">';
+							$featured_args = array(
+								'post_type' => 'page',
+								'post__in' => array(3090, 2414, 426)
+							);
+							$query = new WP_Query($featured_args);
+							if ($query->have_posts()) :
+								while ($query->have_posts()) :
+									$query->the_post();
+										echo '<section style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(' . get_field('client_testimonial_image') . ');">';
+											echo '<div class="fourth-3-fourth">';
+												echo '<div class="centered">';
+													echo '<img src="' . get_field('client_logo'). '" alt="' . get_field('client_testimonial_company'). '" class="client-logo">';
+													echo '<a href="' . get_the_permalink().'" class="btn-white-outline">View Client Story</a>';
+												echo '</div>';
+												echo '<div class="white-text">';
+													echo '<h4>' . get_field('client_testimonial') . '</h4>';
+												echo '</div>';
+											echo '</div>';
+										echo '</section>';
+								endwhile;
+							endif;
+							wp_reset_query();
+						echo '</div>';
+					echo '</section>'; ?>
+					<style>
+						.slick-slide {
+							background-size: cover;
+						}
+						.slick-slide > .fourth-3-fourth {
+							align-items: center;
+							padding: 0 3rem;
+						}
+						.client-logo {
+							filter: invert(1) brightness(300%);
+						}
+					</style>
+			<?php	}
+			?>
+
+
 			<?php
 				$child_query = new WP_Query( $args );
 
