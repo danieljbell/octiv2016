@@ -86,7 +86,10 @@
 							padding: 0 3rem;
 						}
 						.client-logo {
-							filter: invert(1) brightness(300%);
+							filter: grayscale(1) invert(1) brightness(300%);
+						}
+						.slick-slide:nth-child(3) .client-logo {
+							margin-bottom: 1rem;
 						}
 					</style>
 			<?php	}
