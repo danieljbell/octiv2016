@@ -55,7 +55,8 @@
 						echo '<div class="slider">';
 							$featured_args = array(
 								'post_type' => 'page',
-								'post__in' => array(3090, 2414, 426)
+								'post__in' => array(3090, 2414, 426),
+								'orderby' => 'ID'
 							);
 							$query = new WP_Query($featured_args);
 							if ($query->have_posts()) :
