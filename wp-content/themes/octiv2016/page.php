@@ -86,6 +86,7 @@
 							padding: 0 3rem;
 						}
 						.client-logo {
+							max-width: 200px;
 							filter: grayscale(1) invert(1) brightness(300%);
 						}
 						.slick-slide:nth-child(3) .client-logo {
