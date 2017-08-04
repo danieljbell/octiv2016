@@ -114,11 +114,7 @@
               followUpUrl = 'http://see.octiv.com/proposals/create_and_view?api_key=35d333a314d6a4a2ceec0a321c111408465d293c&proposal[template_id]=40064&proposal[name]=Experience%20Octiv%20in%20Action&first_name=' + vals.FirstName + '&last_name=' + vals.LastName + '&company_name=' + vals.Company + '&has_integrations=' + hasIntegrations + '&is_salesforce=' + isSalesforce + '&is_dynamics=' + isDynamics + '&is_docusign=' + isDocusign + '&is_steelbrick=' + isSteelbrick + '&is_netsuite=' + isNetsuite + '&is_pipedrive=' + isPipedrive + '&is_oraclecpq=' + isOracleCPQ + '&is_zuoraquotes=' + isZuoraQuotes + '&use_cases=' + vals.poweredUseCase + '&has_features=' + hasFeatures + '&feature_interest=' + vals.octivFeatureInterest;
 						}
 
-						if (window.location.pathname === '/platform-demo/') {
-              followUpUrl = location.href + '/view/?reg=true&first_name=' + vals.FirstName;
-            }
-
-            if (window.location.pathname === '/resources/downloads/case-digital-document-generation/') {
+						if (window.location.pathname === '/resources/downloads/case-digital-document-generation/') {
 							followUpUrl = '/wp-content/uploads/2017/06/The-Case-For-Digital-Document-Generation.pdf';
 						}
 
@@ -159,6 +155,10 @@
 						if (window.location.pathname === '/resources/downloads/saas-buyer-journey-timeline/') {
 							followUpUrl = '/resources/downloads/saas-buyer-journey-timeline/view';
 						}
+
+            if (window.location.pathname === '/platform-demo/') {
+              followUpUrl = location.href + '/view/?reg=true&first_name=' + vals.FirstName;
+            }
 
 						// Redirect the page with form field
 						location.href = followUpUrl;
