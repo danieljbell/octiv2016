@@ -156,15 +156,14 @@
 							followUpUrl = '/resources/downloads/saas-buyer-journey-timeline/view';
 						}
 
-            if (window.location.pathname === '/platform-demo/') {
-              followUpUrl = location.href + '/view/?reg=true&first_name=' + vals.FirstName;
+            if (window.location.pathname !== '/platform-demo/') {
+              // Redirect the page with form field
+              location.href = followUpUrl;
+
+              // Return false to prevent the submission handler continuing with its own processing
+              return false;
             }
 
-						// Redirect the page with form field
-						location.href = followUpUrl;
-
-						// Return false to prevent the submission handler continuing with its own processing
-						return false;
 					});
 			});
 
