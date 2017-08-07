@@ -71,6 +71,15 @@
                       echo 'Webinars';
                     }
                   echo '</h3>';
+                  if ($term->slug === 'online') {
+                    echo '<div class="centered box" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/uploads/2017/06/generic-' . $rand_num2 . '.jpg); background-size: cover; background-position: center; padding: 3rem; margin-top: 1rem; margin-bottom: 2rem;">';
+                      echo '<h2 class="white-text">View An On-Demand Webinar Now</h2>';
+                      echo '<div class="two-third-only">';
+                        echo '<div><p class="white-text">This on-demand webinar is an exclusive opportunity to see the leading document generation and contract lifecycle management platform in action.</div>';
+                        echo '<a href="/platform-demo" class="btn-primary">Watch Now</a>';
+                      echo '</div>';
+                    echo '</div>';
+                  }
                 echo '</div>';
                 echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($local_query->have_posts()) :

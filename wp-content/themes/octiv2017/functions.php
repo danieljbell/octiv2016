@@ -20,6 +20,15 @@ function enqueue_global_js() {
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 
 
+/*
+==========================================
+CREATING ADMIN NAV MENUS
+==========================================
+*/
+register_nav_menus( array(
+    'site-header' => __( 'Site Header' )
+) );
+
 
 /*
 ==========================================

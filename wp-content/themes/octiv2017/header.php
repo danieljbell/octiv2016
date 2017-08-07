@@ -45,3 +45,25 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->  
+
+<?php if( current_user_can('edit_pages') ) :
+  echo '<ul style="position: fixed; bottom: 0; z-index: 999;" class="no-print"><li style="display: inline-block;"><a href="' . site_url() . '/wp-admin" class="btn-primary">Admin</a></li>';
+  echo '<li style="display: inline-block;"><a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a></li>';
+  echo '</ul>';
+  endif; ?>
+
+<section class="eyebrow">
+  <div class="eyebrow-phone-number">
+    
+  </div>
+  <ul class="eyebrow-links">
+    <li><a href="/support" title="Support">Support</a></li>
+    <li><button><img src="//fillmurray.com/12/12" alt=""></button></li>
+  </ul>
+</section>
+<section class="site-header">
+  <nav class="header-navigation">
+    <?php wp_nav_menu( array( 'menu' => 'Site Header' ) ); ?>
+  </nav>
+</section>
+<section class="hero"></section>
