@@ -502,7 +502,7 @@ $('.nav.sidebar-links a').on('click', function(e) {
 
 
 if ($('.single-integration').length || $('.single-solutions').length || $('.page-template-platform-page').length || $('.page-template-solutions-parent-page').length || $('.page-template-page-section-layout').length) {
-  $('.fixed-hero-section a').on('click', function(e) {
+  $('.fixed-hero-section .fancy-links a').on('click', function(e) {
     e.preventDefault();
     var target = $(this.hash);
     $('html, body').animate({
