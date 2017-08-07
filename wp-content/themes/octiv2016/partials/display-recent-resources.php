@@ -6,7 +6,7 @@ $context = stream_context_create(array(
 ));
 ?>
 
-<?php $rand_num = mt_rand(1,2); ?>
+<?php $rand_num = mt_rand(1,3); ?>
 
 <section>
   <div class="site-width">
@@ -54,6 +54,15 @@ $context = stream_context_create(array(
             <p class="card-tag-client-stories"><?php echo file_get_contents('https://octiv.com/wp-content/uploads/2017/06/compass.svg', false, $context); ?>Tour</p>
             <h4 style="margin-bottom: 1rem;"><a href="/tour" title="Octiv Guided Tour">Octiv Guided Tour</a></h4>
             <p><a href="/tour" class="btn-arrow">Take the Tour Now</a></p>
+          </div>
+        </div>
+      <?php } elseif ($rand_num === 2) { ?>
+        <div class="card">
+          <a href="/platform-demo" class="card-tb" title="Platform Demo" style="background-image: url(/wp-content/uploads/2017/06/generic-<?php echo $rand_num; ?>.jpg);"></a>
+          <div>
+            <p class="card-tag-webinars"><svg viewBox="0 0 16 11"><use xlink:href="#icon-webinar"></svg><span>Webinars</span></p>
+            <h4 style="margin-bottom: 1rem;"><a href="/platform-demo" title="Platform Demo">On-Demand Webinar: Live Platform Demo</a></h4>
+            <p><a href="/platform-demo" class="btn-arrow">Watch Now</a></p>
           </div>
         </div>
       <?php } else { ?>
