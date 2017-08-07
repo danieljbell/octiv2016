@@ -108,7 +108,7 @@ $count = 0;
       );
       $solutions_query = new WP_Query($args);
       if ($solutions_query->have_posts()) :
-        echo '<div class="fourth">';
+        echo '<div class="third">';
         while ($solutions_query->have_posts()) :
           $solutions_query->the_post();
           $icon = get_field('page_icon', $post->ID, true);
