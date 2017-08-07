@@ -7,6 +7,8 @@ Template Name: Resources Page
 
 get_header();
 
+$rand_num2 = mt_rand(1,4);
+
 ?>
 
 
@@ -126,7 +128,7 @@ get_header();
 						if ( $query->have_posts() ) :
 							echo '<div class="third">';
 							echo '<div class="card">';
-								echo '<a href="' . get_the_permalink() . '" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
+								echo '<a href="/platform-demo" style="background-image: url(/wp-content/uploads/2017/06/generic-' . $rand_num2 . '.jpg);" class="card-tb" title="Platform Demo"></a>';
 								echo '<div>';
 									echo '<p class="card-tag-webinars"><svg viewBox="0 0 16 11"><use xlink:href="#icon-webinar"></svg><span>webinars</span></p>';
 									echo '<h4><a href="/platform-demo" title="Platform Demo">On-Demand Webinar: Live Platform Demo</a></h4>';
