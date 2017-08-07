@@ -121,13 +121,22 @@ get_header();
 			<h6>Webinars</h6>
 			<div class="tabbody">
 				<?php
-						$args = array( 'post_type' => 'page', 'post_parent' => 207, 'posts_per_page' => 6 );
+						$args = array( 'post_type' => 'events', 'posts_per_page' => 5 );
 						$query = new WP_Query( $args );
 						if ( $query->have_posts() ) :
 							echo '<div class="third">';
+							echo '<div class="card">';
+								echo '<a href="' . get_the_permalink() . '" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . ');" class="card-tb" title="' . get_the_title() . '"></a>';
+								echo '<div>';
+									echo '<p class="card-tag-webinars"><svg viewBox="0 0 16 11"><use xlink:href="#icon-webinar"></svg><span>webinars</span></p>';
+									echo '<h4><a href="/platform-demo" title="Platform Demo">On-Demand Webinar: Live Platform Demo</a></h4>';
+									echo '<p>This on-demand webinar is an exclusive opportunity to see the leading document generation and contract lifecycle management platform in action.</p>';
+									echo '<p><a href="/platform-demo" class="btn-arrow" title="Platform Demo>">Learn More</a></p>';
+								echo '</div>';
+							echo '</div>';
 							while ( $query->have_posts() ) :
 								$query->the_post();
-									echo do_shortcode('[get_card thumb="true" excerpt="custom" tag="webinars"]');
+									echo do_shortcode('[get_card thumb="true" excerpt="true" tag="webinars"]');
 							endwhile;
 							echo '</div>';
 							echo '
