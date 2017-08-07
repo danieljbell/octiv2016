@@ -5,6 +5,8 @@
     'taxonomy' => 'event_type',
     'hide_empty' => false,
   ) );
+
+  $rand_num2 = mt_rand(1,4);
 ?>
 
 <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(/wp-content/uploads/2017/06/events-archive-bg.jpg);">
