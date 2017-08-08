@@ -25,12 +25,12 @@ gulp.task('css', function () {
   gulp.src('./src/css/*.css')
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
-  gulp.src('./src/scss/*.scss')
+  gulp.src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/css/global.css'))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 });
 
