@@ -25,7 +25,11 @@ add_shortcode('get_card', function($atts) {
               }
             else :
               if ($thumb_modifier === 'thought-leadership') {
-                echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), radial-gradient(rgba(66,176,216,0.75) 20%, rgba(66,176,216,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                if (get_field('external_event')) {
+                  echo '<a href="' . get_field('external_event_link') . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), radial-gradient(rgba(66,176,216,0.75) 20%, rgba(66,176,216,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                } else {
+                  echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-light-bulb.png), radial-gradient(rgba(66,176,216,0.75) 20%, rgba(66,176,216,0)), linear-gradient(rgba(66,176,216,0.6),rgba(66,176,216,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+                }
               } elseif ($thumb_modifier === 'platform') {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-online-meetings.png), radial-gradient(rgba(51,171,64,0.75) 20%,rgba(51,171,64,0)), linear-gradient(rgba(51,171,64,0.6),rgba(51,171,64,0.6)), url(' . wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) . '); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
               } else {
@@ -82,7 +86,11 @@ add_shortcode('get_card', function($atts) {
                 $end_date = date_create($event_end);
                 $end_date_day = date_format($end_date,"j");
               }
-              echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
+              if (get_field('external_event')) {
+                echo '<h4><a href="' . get_field('external_event_link') . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
+              } else {
+                echo '<h4><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
+              }
               echo '<p>';
                 echo $start_date_month;
                 echo ' ';
@@ -98,7 +106,13 @@ add_shortcode('get_card', function($atts) {
               echo '<h4 style="margin-bottom: 1rem;"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h4>';
             endif;
           ?>
-          <p><a href="<?php the_permalink(); ?>" class="btn-arrow" title="<?php echo get_the_title(); ?>">Learn More</a></p>
+          <?php
+            if (get_field('external_event')) {
+              echo '<p><a href="' . get_field('external_event_link') .'" class="btn-arrow" title="' . get_the_title() . '">Learn More</a></p>';
+            } else {
+              echo '<p><a href="' . get_the_permalink() .'" class="btn-arrow" title="' . get_the_title() . '">Learn More</a></p>';
+            }
+          ?>
         </div>
       </div>
 <?php
