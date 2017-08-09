@@ -13,7 +13,7 @@ $rand_num = mt_rand(1,4);
 
 <?php if (!isset($_GET['gh_jid'])) : ?>
 
-	<div class="fixed-hero-section">
+	<div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url('/wp-content/themes/octiv2016/dist/img/indy-skyline.jpg');">
 		<div class="site-width centered white-text">
 			<div class="two-third-only">
 				<div>
