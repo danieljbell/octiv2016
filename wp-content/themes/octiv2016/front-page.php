@@ -62,7 +62,7 @@ $context = stream_context_create(array(
 							<p>Join us on August 23 at the Sales Hacker Virtual Summit to learn how you can build your own army of unstoppable sales reps.</p>
 						</div>
 					</div>
-					<a href="http://armyofsalesreps.com" class="btn-primary">Register Now</a>
+					<a href="http://bit.ly/2eUcLgF" class="btn-primary">Register Now</a>
 				</div>
 			</section>
 		</div>
