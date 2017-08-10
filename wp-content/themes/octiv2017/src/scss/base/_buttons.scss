@@ -1,0 +1,20 @@
+button {
+  cursor: pointer;
+  font-family: $brand-font-stack;
+  font-size: 1rem;
+  border: transparent;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: $brand;
+  border-radius: 3px;
+  color: $white;
+  padding: 0.5em 1em;
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: darken($brand, 10%);
+  }
+}
