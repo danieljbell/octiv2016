@@ -23,17 +23,17 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700' rel='stylesheet' type='text/css'>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P7LZ6FP');</script>
+  })(window,document,'script','dataLayer','GTM-P7LZ6FP');</script> -->
   <!-- End Google Tag Manager -->
 
 
@@ -42,8 +42,8 @@
 </head>
 <body <?php body_class();?>>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
   <!-- End Google Tag Manager (noscript) -->  
 
 <?php if( current_user_can('edit_pages') ) :
@@ -52,18 +52,6 @@
   echo '</ul>';
   endif; ?>
 
-<section class="eyebrow">
-  <div class="eyebrow-phone-number">
-    
-  </div>
-  <ul class="eyebrow-links">
-    <li><a href="/support" title="Support">Support</a></li>
-    <li><button><img src="//fillmurray.com/12/12" alt=""></button></li>
-  </ul>
-</section>
-<section class="site-header">
-  <nav class="header-navigation">
-    <?php wp_nav_menu( array( 'menu' => 'Site Header' ) ); ?>
-  </nav>
-</section>
-<section class="hero"></section>
+<?php get_template_part('partials/module/display', 'eyebrow'); ?>
+
+<?php get_template_part('partials/module/display', 'site-header'); ?>
