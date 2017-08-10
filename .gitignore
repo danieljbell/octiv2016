@@ -32,8 +32,10 @@ wp-content/themes/twenty*/
 
 # DON'T ignore current theme
 !wp-content/themes/octiv2016/
+!wp-content/themes/octiv2017/
 
 # ignore current theme build files
 wp-content/themes/octiv2016/node_modules/
 wp-content/themes/octiv2016/bower_components/
 wp-content/themes/octiv2016/dist/video
+wp-content/themes/octiv2017/node_modules/
