@@ -10,7 +10,7 @@ SITE HEADER
     <div class="site-width">
       <ul class="site-header-list">
         <li class="hamburger-container">
-          <button id="site-header-menu-toggle">Menu</button>
+          <button id="site-header-menu-toggle"><?php get_template_part('partials/icons/display', 'menu'); ?>Menu</button>
         </li>
         <li class="site-header-logo-container">
           <a href="/" title="Home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo" class="site-header-logo"></a>
@@ -25,6 +25,7 @@ SITE HEADER
     wp_nav_menu(
       array(
         'menu' => 'site-header',
+        'container' => 'nav',
         'container_class' => 'site-header-mega-menu',
         'menu_class' => 'menu site-width'
       )

@@ -26,6 +26,19 @@
   button {
     padding: 2rem 1rem 2rem 2rem;
     margin: -2rem -1rem;
+    @include bp(sm) {
+      padding: 2rem 0;
+      margin: -2rem 0;
+    }
+    rect {
+      transition: all 200ms ease-in-out;
+    }
+    &:focus {
+      outline: none;
+      rect {
+        fill: $brand;
+      }
+    }
   }
 }
 
