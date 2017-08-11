@@ -1,6 +1,6 @@
 <?php get_header();  ?>
 
-<!-- <div class="site-width">
+<div class="site-width">
   <h3>grid</h3>
   <div class="half">
     <div>col1</div>
@@ -45,6 +45,6 @@
     <div>col1</div>
     <div>col2</div>
   </div>
-</div> -->
+</div>
 
 <?php get_footer();  ?>
