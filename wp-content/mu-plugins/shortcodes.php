@@ -158,7 +158,9 @@ add_shortcode('get_hero', function($atts) {
   <?php endif; ?>>
   <div class="site-width">
     <h1><?php echo $title; ?></h1>
-    <a href="#0" class="btn-primary rad-modal">Some CTA Button</a>
+    <?php
+    echo (!is_single() ? '<a href="#0" class="btn-primary rad-modal">Some CTA Button</a>' : '<h2>' . get_the_excerpt() . '</h2>');
+    ?>
   </div>
 </section>
 <?php

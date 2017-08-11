@@ -52,7 +52,7 @@ add_theme_support( 'post-thumbnails' );
 REMOVE EXTRA <p> TAGS FROM CONTENT
 ==========================================
 */
-// remove_filter ('the_content', 'wpautop');
+remove_filter( 'the_excerpt', 'wpautop' );
 add_filter('the_content', 'remove_empty_p', 20, 1);
 function remove_empty_p($content){
     $content = force_balance_tags($content);

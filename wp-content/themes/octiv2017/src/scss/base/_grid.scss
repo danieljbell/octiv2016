@@ -18,16 +18,18 @@
 .fourth,
 .two-third,
 .one-fourth {
+  // display: table;
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
+  // border: 2px solid red;
   @include bp(sm) {
     flex-direction: row;
   }
   > * {
+    // display: table-cell;
     flex: 1;
     margin-bottom: 2rem;
-    border: 1px solid green;
+    // border: 1px solid green;
     @include bp(sm) {
       margin-bottom: 0;      
     }

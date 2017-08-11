@@ -26,6 +26,9 @@ SITE HEADER
     </div>
   </div>
   <div class="site-header-mega-menu">
+    <div class="site-width">
+      <button id="site-head-rad" class="btn-primary rad-modal mar-b">Request A Demo</button>
+    </div>
     <?php
       wp_nav_menu(
         array(
@@ -48,7 +51,7 @@ SITE HEADER
           if ($query->have_posts()) :
             while ($query->have_posts()) :
               $query->the_post();
-                echo '<li>' . get_the_title() . '</li>';
+                echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
             endwhile;
           endif;
           wp_reset_query();

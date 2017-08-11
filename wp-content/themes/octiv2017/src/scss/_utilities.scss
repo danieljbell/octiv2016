@@ -1,3 +1,49 @@
 .no-mar-b {
   margin-bottom: 0;
 }
+
+.mar-b {
+  margin-bottom: 1rem;
+}
+
+.pad-a {
+  padding: 1rem;
+}
+
+.pad-y {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pad-x {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pad-t {
+  padding-top: 1rem;
+}
+
+.pad-r {
+  padding-right: 1rem;
+  &-more {
+    padding-right: 2rem;
+  }
+  &-most {
+    padding-right: 3rem;
+  }
+}
+
+.pad-b {
+  padding-right: 1rem;
+}
+
+.pad-l {
+  padding-left: 1rem;
+  &-more {
+    padding-left: 2rem;
+  }
+  &-most {
+    padding-left: 3rem;
+  }
+}

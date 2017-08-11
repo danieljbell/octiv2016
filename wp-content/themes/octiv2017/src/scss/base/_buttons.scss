@@ -13,6 +13,10 @@ button {
   color: $white;
   padding: 0.5em 1em;
   transition: all 200ms ease-in-out;
+  width: 100%;
+  @include bp(sm) {
+    width: initial;
+  }
   &:hover,
   &:focus {
     background-color: darken($brand, 10%);

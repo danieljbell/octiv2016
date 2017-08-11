@@ -1,4 +1,5 @@
 .hero {
+  background-color: $gray;
   padding: 3rem 0;
   @include bp(sm) {
     padding: 6rem 0;
@@ -8,8 +9,30 @@
   }
   text-align: center; 
   color: $white;
-  text-shadow: 10px 10px 1px rgba(black, 0.8);
+  text-shadow: 2px 2px 3px rgba(black, 0.8);
   *[class*="btn"] {
     text-shadow: none;
+  }
+  h2 {
+    font-weight: normal;
+    @include bp(md) {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.single-post .hero {
+  padding: 3rem 0;
+  @include bp(md) {
+    padding: 6rem 0;
+  }
+  h2 {
+    @include bp(sm) {
+      font-size: 1.2em;
+    }
+  }
+  p {
+    margin-bottom: 0;
   }
 }

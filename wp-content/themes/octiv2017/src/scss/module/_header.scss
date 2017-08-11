@@ -1,5 +1,10 @@
 .site-header {
   box-shadow: 0px 5px 10px rgba(black, 0.2);
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .site-header-main-container {
@@ -9,9 +14,12 @@
 }
 
 .site-header-list {
+  // display: table;
   display: flex;
   align-items: center;
   > * {
+    // display: table-cell;
+    // vertical-align: middle;
     flex: 1;
   }
 }
@@ -20,7 +28,7 @@
   order: 2;
   text-align: right;
   @include bp(sm) {
-    order: initial;
+    order: 1;
     text-align: left;
   }
   button {
@@ -57,7 +65,7 @@
 .site-header-logo-container {
   order: 1;
   @include bp(sm) {
-    order: initial;
+    order: 2;
   }
   display: block;
   padding-top: 1.5rem;
@@ -77,7 +85,8 @@
   text-align: right;
   display: none;
   @include bp(sm) {
-    display: initial;
+    order: 3;
+    display: inline-block;
   }
 }
 
@@ -134,6 +143,12 @@
     font-size: 0.85em;
     font-weight: normal;
     text-transform: initial;
+  }
+}
+
+.site-header-mega-menu .rad-modal {
+  @include bp(sm) {
+    display: none;
   }
 }
 

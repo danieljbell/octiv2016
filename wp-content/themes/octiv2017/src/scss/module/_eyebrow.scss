@@ -11,13 +11,18 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+  ul {
+    margin-bottom: 0;
+  }
 }
 
 .eyebrow-quick-links ul {
   list-style-type: none;
+  display: table;
   display: flex;
   justify-content: flex-end;
   li {
+    display: table-cell;
     &:after {
       content: '|';
       display: inline-block;
