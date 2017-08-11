@@ -10,7 +10,7 @@ EYEBROW
   <div class="site-width">
     <div class="half-force">
       <div class="eyebrow-phone-number no-mar-b">
-        <a href="tel:844-936-2848">844-936-2848</a>
+        <a href="tel:844-936-2848" title="Call Us Today: 844-936-2848">844-936-2848</a>
       </div>
       <?php
         wp_nav_menu(

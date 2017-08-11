@@ -147,20 +147,20 @@ add_shortcode('get_hero', function($atts) {
     array(
       'title' => single_post_title('', false),
       'img' => '',
-      'text_align' => '',
     ), $atts));
     ob_start(); ?>
-<div class="fixed-hero-section"
+<section class="hero"
   <?php if( $img ) : ?>
     style="
       background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(<?php echo $img; ?>);
       background-size: cover;
     "
   <?php endif; ?>>
-  <div class="site-width white-text <?php if ($text_align) { echo 'centered'; } ?>">
+  <div class="site-width">
     <h1><?php echo $title; ?></h1>
+    <a href="#0" class="btn-primary rad-modal">Some CTA Button</a>
   </div>
-</div>
+</section>
 <?php
     return ob_get_clean();
 });

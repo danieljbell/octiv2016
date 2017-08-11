@@ -30,13 +30,25 @@
       padding: 2rem 0;
       margin: -2rem 0;
     }
+    svg {
+      width: 100%;
+      max-width: 25px;
+    }
     rect {
       transition: all 200ms ease-in-out;
     }
-    &:focus {
+    .hamburger-inner,
+    .hamburger-inner:before,
+    .hamburger-inner:after {
+      transition: all 200ms ease-in-out;
+    }
+    &:focus,
+    &:hover {
       outline: none;
-      rect {
-        fill: $brand;
+      .hamburger-inner,
+      .hamburger-inner:before,
+      .hamburger-inner:after {
+        background-color: $gray;
       }
     }
   }
@@ -123,4 +135,16 @@
     font-weight: normal;
     text-transform: initial;
   }
+}
+
+.site-header-mega-menu-query {
+  display: none;
+  @include bp(md) {
+    display: block;
+  }
+}
+
+.site-header-mega-menu hr {
+  opacity: 0.25;
+  margin: 2rem 0;
 }
