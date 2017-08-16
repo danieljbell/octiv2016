@@ -30,6 +30,10 @@ h3, .h3 {
   color: $brand;
 }
 
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
 b, strong {
   font-weight: bold;
 }
@@ -42,6 +46,10 @@ ul {
   list-style-type: disc;
   padding-left: 1rem;
   margin-bottom: 2rem;
+}
+
+a {
+  color: $brand;
 }
 
 p {

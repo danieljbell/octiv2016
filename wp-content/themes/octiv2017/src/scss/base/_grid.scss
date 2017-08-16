@@ -21,7 +21,8 @@
   // display: table;
   display: flex;
   flex-direction: column;
-  // border: 2px solid red;
+  flex-wrap: wrap;
+  // border: 2px solid red !important;
   @include bp(sm) {
     flex-direction: row;
   }
@@ -29,9 +30,98 @@
     // display: table-cell;
     flex: 1;
     margin-bottom: 2rem;
-    // border: 1px solid green;
+    // border: 1px solid green !important;
     @include bp(sm) {
       margin-bottom: 0;      
+    }
+  }
+}
+
+.half {
+  > * {
+    margin-bottom: 1rem;
+    @include bp(sm) {
+      flex: 0;
+      flex-basis: calc(50% - 3.75rem) !important;
+      margin-bottom: 3rem;
+      &:nth-child(2n-1) {
+        margin-right: 1.5rem;
+      }
+      &:nth-child(2n) {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  &-only {
+    width: 100%;
+    @include bp(lg) {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.third {
+  flex-direction: column !important;
+  @include bp(lg) {
+    flex-direction: row !important;
+  }
+  > * {
+    margin-bottom: 1rem !important;
+    @include bp(sm) {
+      margin-bottom: 2rem !important;
+    }
+    @include bp(lg) {
+      flex: 0;
+      flex-basis: calc(33% - 4rem) !important;
+      margin-bottom: 3rem !important;
+      &:nth-child(2n),
+      &:nth-child(3n-1) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
+      &:nth-child(3n-2) {
+        margin-left: 0;
+        margin-right: 2rem;
+      }
+      &:nth-child(3n) {
+        margin-left: 2rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.fourth {
+  > * {
+    @include bp(sm) {
+      flex: 0;
+      flex-basis: calc(25% - 4.65rem) !important;
+      margin-bottom: 3rem;
+      &:nth-child(4n-3) {
+        margin-right: 2rem;
+      }
+      &:nth-child(4n-2),
+      &:nth-child(4n-1) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+      }
+      &:nth-child(4n) {
+        margin-left: 2rem;
+      }
+    }
+    @include bp-reverse(lg) {
+      flex-basis: calc(50% - 3.25rem) !important;
+      margin-bottom: 2rem;
+      &:nth-child(2n-1) {
+        margin-right: 1rem;
+        margin-left: initial;
+      }
+      &:nth-child(2n) {
+        margin-left: 1rem;
+        margin-right: initial;
+      }
     }
   }
 }

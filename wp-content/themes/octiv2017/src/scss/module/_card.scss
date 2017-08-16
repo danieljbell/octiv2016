@@ -1,0 +1,41 @@
+.card {
+  background-color: $white;
+  position: relative;
+  border: 1px solid $mgray;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px rgba(black, 0.1);
+  padding: 1rem;
+  transition: all 300ms ease-in-out;
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
+  h4 {
+    line-height: 1.1;
+    margin-bottom: 0.25em;
+  }
+  .card-image {
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    width: calc(100% + 2rem);
+    display: block;
+    // min-height: 200px;
+    // max-height: 200px;
+    padding: 62.95% 0 0;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 50px rgba(black, 0.5);
+  }
+  .card-description {
+    font-size: 0.85em;
+  }
+  &.is-faded {
+    opacity: 0.4;
+    z-index: -1;
+  }
+  &.is-hovered {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 6px rgba(black, 0.1);
+  }
+}

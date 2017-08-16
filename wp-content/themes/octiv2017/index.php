@@ -2,54 +2,29 @@
 
 <main>
 
-  <?php echo do_shortcode('[get_hero title="cool man" img="https://fillmurray.com/1920/500"]'); ?>
+  <?php // echo do_shortcode('[get_hero title="cool man" img="https://fillmurray.com/1920/500"]'); ?>
 
   <div class="site-width">
     <h3>grid</h3>
     <div class="half">
-      <div>col1</div>
-      <div>col2</div>
-    </div>
-    <br>
-    <br>
-    <div class="third">
-      <div>col1</div>
-      <div>col2</div>
-      <div>col3</div>
-    </div>
-    <br>
-    <br>
-    <div class="fourth">
-      <div>col1</div>
-      <div>col2</div>
-      <div>col3</div>
-      <div>col4</div>
-    </div>
-    <br>
-    <br>
-    <div class="two-third">
-      <div>col1</div>
-      <div>col2</div>
-    </div>
-    <br>
-    <br>
-    <div class="two-third grid-reverse">
-      <div>col1</div>
-      <div>col2</div>
-    </div>
-    <br>
-    <br>
-    <div class="one-fourth">
-      <div>col1</div>
-      <div>col2</div>
-    </div>
-    <br>
-    <br>
-    <div class="one-fourth grid-reverse">
-      <div>col1</div>
-      <div>col2</div>
+      <?php
+        $args = array(
+          'post_type' => 'post'
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) :
+          while ($query->have_posts()) :
+            $query->the_post();
+              echo do_shortcode('[get_card]');
+          endwhile;
+        endif;
+        wp_reset_query();
+      ?>
     </div>
   </div>
+  <section style="min-height: 1000px;">
+    space
+  </section>
 
 </main>
 

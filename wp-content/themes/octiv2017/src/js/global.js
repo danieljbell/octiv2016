@@ -44,4 +44,56 @@
   closeModalButton.addEventListener('click', function() {
     document.body.classList.remove('modal-open');
   });
+
+  window.addEventListener('keydown', function(e) {
+    if (e.keyCode === 27) {
+      if (document.body.classList.contains('modal-open')) {
+        document.body.classList.remove('modal-open');
+      }
+    }
+  });
+
+  // LOGO MODAL
+  var siteHeaderLogo = document.querySelector('.site-header-logo');
+  siteHeaderLogo.addEventListener('contextmenu', function() {
+    document.body.classList.add('modal-open');
+  })
+
+
+  /*
+  ==============================
+  CARDS
+  ==============================
+  */
+  var allCards = document.querySelectorAll('.card');
+  for (var i = 0; i < allCards.length; i++) {
+    // add mouseenter event on all cards
+    allCards[i].addEventListener('mouseenter', function(e) {
+      // get all children of the hovered element's parent
+      var allSiblings = this.parentElement.children;
+      // add .is-hovered class to the hovered element
+      this.classList.add('is-hovered');
+      // loop thru all children of the element's parent
+      for (var j = 0; j < allSiblings.length; j++) {
+        // test for .is-hovered class
+        if (!allSiblings[j].classList.contains('is-hovered')) {
+          // add .is-faded if a sibling element
+          allSiblings[j].classList.add('is-faded');
+        }
+      }
+    });
+
+    // add mouseleave event on all cards
+    allCards[i].addEventListener('mouseleave', function(e) {
+      // get all children of the hovered element's parent
+      var allSiblings = this.parentElement.children;
+      // remove .is-hovered class to the hovered element
+      this.classList.remove('is-hovered');
+      // loop thru all children of the element's parent
+      for (var j = 0; j < allSiblings.length; j++) {
+        // remove .is-faded class from all children of the element's parent
+        allSiblings[j].classList.remove('is-faded');
+      }
+    });
+  }
 })();
