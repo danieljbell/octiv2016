@@ -27,7 +27,8 @@ CREATING ADMIN NAV MENUS
 */
 register_nav_menus( array(
   'eyebrow_quick_links' => __( 'Eyebrow Quick Links' ),  
-  'site-header' => __( 'Site Header' )
+  'site-header' => __( 'Site Header' ),
+  'mega-menu-promo' => __( 'Mega Menu Promo' ),
 ) );
 
 

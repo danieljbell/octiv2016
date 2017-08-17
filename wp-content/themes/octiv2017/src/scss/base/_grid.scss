@@ -1,164 +1,97 @@
+// @import '../../node_modules/bulma/sass/grid/_all';
+
 .site-width {
   width: calc(100% - 2rem);
   max-width: map-get($breakpoints, xl);
   margin-left: auto;
   margin-right: auto;
-  @include bp(sm) {
-    width: calc(100% - 4rem);
+  @include tablet {
+    width: calc(100% - 4rem);  
   }
-  @include bp(lg) {
-    width: calc(100% - 8rem);
-  }
-}
-
-.half,
-.half-force,
-.third,
-.third-force,
-.fourth,
-.two-third,
-.one-fourth {
-  // display: table;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  // border: 2px solid red !important;
-  @include bp(sm) {
-    flex-direction: row;
-  }
-  > * {
-    // display: table-cell;
-    flex: 1;
-    margin-bottom: 2rem;
-    // border: 1px solid green !important;
-    @include bp(sm) {
-      margin-bottom: 0;      
-    }
+  @include desktop {
+    width: calc(100% - 8rem);  
   }
 }
 
 .half {
+  display: flex;
+  flex-wrap: wrap;
   > * {
-    margin-bottom: 1rem;
-    @include bp(sm) {
-      flex: 0;
-      flex-basis: calc(50% - 3.75rem) !important;
-      margin-bottom: 3rem;
-      &:nth-child(2n-1) {
-        margin-right: 1.5rem;
-      }
-      &:nth-child(2n) {
-        margin-left: 1.5rem;
-      }
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-basis: calc((100%/2) - 3.2rem);
+    &:nth-child(2n) {
+      margin-right: 0;
     }
   }
-  &-only {
-    width: 100%;
-    @include bp(lg) {
-      max-width: 50%;
-      margin-left: auto;
-      margin-right: auto;
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 2rem;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
 
 .third {
-  flex-direction: column !important;
-  @include bp(lg) {
-    flex-direction: row !important;
-  }
+  display: flex;
+  flex-wrap: wrap;
   > * {
-    margin-bottom: 1rem !important;
-    @include bp(sm) {
-      margin-bottom: 2rem !important;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-basis: calc((100%/3) - 3.5rem);
+    &:nth-child(3n) {
+      margin-right: 0;
     }
-    @include bp(lg) {
-      flex: 0;
-      flex-basis: calc(33% - 4rem) !important;
-      margin-bottom: 3rem !important;
-      &:nth-child(2n),
-      &:nth-child(3n-1) {
-        margin-right: 1rem;
-        margin-left: 1rem;
-      }
-      &:nth-child(3n-2) {
-        margin-left: 0;
-        margin-right: 2rem;
-      }
-      &:nth-child(3n) {
-        margin-left: 2rem;
-        margin-right: 0;
-      }
+  }
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 2rem;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
 
 .fourth {
+  display: flex;
+  flex-wrap: wrap;
   > * {
-    @include bp(sm) {
-      flex: 0;
-      flex-basis: calc(25% - 4.65rem) !important;
-      margin-bottom: 3rem;
-      &:nth-child(4n-3) {
-        margin-right: 2rem;
-      }
-      &:nth-child(4n-2),
-      &:nth-child(4n-1) {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-      }
-      &:nth-child(4n) {
-        margin-left: 2rem;
-      }
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-basis: calc((100%/4) - 3.6667rem);
+    &:nth-child(4n) {
+      margin-right: 0;
     }
-    @include bp-reverse(lg) {
-      flex-basis: calc(50% - 3.25rem) !important;
-      margin-bottom: 2rem;
-      &:nth-child(2n-1) {
-        margin-right: 1rem;
-        margin-left: initial;
-      }
-      &:nth-child(2n) {
-        margin-left: 1rem;
-        margin-right: initial;
-      }
+  }
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 2rem;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
 
-.two-third {
-  > * {
-    &:first-child {
-      flex-grow: 2;
-    }
-  }
-  &.grid-reverse > * {
-    &:first-child {
-      flex-grow: 1;
-    }
-    &:last-child {
-      flex-grow: 2;
-    }
-  }
-}
 
-.one-fourth {
-  > * {
-    &:first-child {
-      flex-grow: 3;
-    }
-  }
-  &.grid-reverse > * {
-    &:first-child {
-      flex-grow: 1;
-    }
-    &:last-child {
-      flex-grow: 3;
-    }
-  }
-}
-
-.half-force,
-.third-force {
-  flex-direction: row;
+.vertical-align {
+  align-items: center;
 }

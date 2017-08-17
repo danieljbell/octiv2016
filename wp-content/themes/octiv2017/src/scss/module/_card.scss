@@ -20,8 +20,6 @@
     left: -1rem;
     width: calc(100% + 2rem);
     display: block;
-    // min-height: 200px;
-    // max-height: 200px;
     padding: 62.95% 0 0;
     background-position: center;
     background-size: cover;
@@ -37,5 +35,15 @@
   &.is-hovered {
     transform: scale(1.03);
     box-shadow: 4px 4px 6px rgba(black, 0.1);
+  }
+}
+
+.card--sidebar {
+  display: flex;
+  .card-image {
+    flex: none;
+    flex-basis: 150px !important;
+    margin-bottom: -2rem;
+    padding-top: 0;
   }
 }

@@ -24,17 +24,22 @@
   */
 
   // OPEN MODAL
+var thing = document.querySelectorAll('[data-modal]');
+console.dir(thing);
+
   var radButton = document.querySelectorAll('.rad-modal');
   for (var i = 0; i < radButton.length; i++) {
     radButton[i].addEventListener('click', function(e) {
       var body = document.body;
+      var modalTarget = this.dataset.modal;
+      modalTarget = 'modal-open--' + modalTarget;
 
       e.preventDefault();
       if (body.classList.contains('modal-open')) {
-        body.classList.remove('modal-open');
+        body.classList.remove('modal-open', modalTarget);
         return
       } else {
-        body.classList.add('modal-open');
+        body.classList.add('modal-open', modalTarget);
       }
     });
   }

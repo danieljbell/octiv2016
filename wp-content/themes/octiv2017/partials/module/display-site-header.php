@@ -20,14 +20,14 @@ SITE HEADER
           <a href="/" title="Home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo" class="site-header-logo"></a>
         </li>
         <li class="site-header-rad-button-container">
-          <button id="site-head-rad" class="btn-primary rad-modal">Request A Demo</button>
+          <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request A Demo</button>
         </li>
       </ul>
     </div>
   </div>
   <div class="site-header-mega-menu">
     <div class="site-width">
-      <button id="site-head-rad" class="btn-primary rad-modal mar-b">Request A Demo</button>
+      <button id="site-head-rad" class="btn-primary rad-modal mar-b" data-modal="rad">Request A Demo</button>
     </div>
     <?php
       wp_nav_menu(
@@ -39,23 +39,20 @@ SITE HEADER
         )
       );
     ?>
-    <div class="site-width site-header-mega-menu-query">
+    <div class="site-width mega-menu-promo">
       <hr>
-      <ul class="third">
-        <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 3
-          );
-          $query = new WP_Query( $args );
-          if ($query->have_posts()) :
-            while ($query->have_posts()) :
-              $query->the_post();
-                echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
-            endwhile;
-          endif;
-          wp_reset_query();
-        ?>
+      <ul class="mega-menu-promo-list third">
+      <?php 
+        $mega_menu_items = wp_get_nav_menu_items('mega-menu-promo');
+        foreach ($mega_menu_items as $item) {
+          echo '<li class="card card--sidebar">';
+            echo '<div class="card-content">';
+              echo '<h4><a href="' . $item->url . '">' . $item->title . '</a></h4>';
+              echo '<a href="' . $item->url . '" class="btn-arrow">Learn More <span class="arrow">></span></a>';
+            echo '</div>';
+          echo '</li>';
+        }
+      ?>
       </ul>
     </div>
   </div>

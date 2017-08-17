@@ -20,6 +20,7 @@ button {
   }
   &:hover,
   &:focus {
+    outline: none;
     background-color: darken($brand, 10%);
   }
 }

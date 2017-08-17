@@ -1,17 +1,15 @@
-<div class="modal-container small-modal">
-  <button id="close-modal" class="close-modal">Close</button>
+<div class="modal-container modal-rad">
+  <button id="close-modal" class="close-modal">Close <span class="close-icon">+</span></button>
   <div class="modal-content">
-    <div class="half">
-      <div>
-        <div class="light-callout">
-          <div class="modal-header">
-            <h2>Request A Demo</h2>
-            <p>Please complete the form to speak with a Octiv representative about our products and services.</p>
-          </div>
-          <p>Once the form is submitted, we'll contact you within one to two business days to find out more about your needs.</p>
-          <p>Want to speak with us right now? Call <a href="tel:844-936-2848">844.936.2848</a>, we're happy to help.</p>
-          <p>For general inquiries, please visit the <a href="/company/contact-us">Contact Us</a> page. Customer, please visit our <a href="/support">Support portal</a>.</p>
+    <div class="half vertical-align">
+      <div class="light-callout">
+        <div class="modal-header">
+          <h2>Request A Demo</h2>
+          <p>Please complete the form to speak with a Octiv representative about our products and services.</p>
         </div>
+        <p>Once the form is submitted, we'll contact you within one to two business days to find out more about your needs.</p>
+        <p>Want to speak with us right now? Call <a href="tel:844-936-2848">844.936.2848</a>, we're happy to help.</p>
+        <p>For general inquiries, please visit the <a href="/company/contact-us">Contact Us</a> page. Customer, please visit our <a href="/support">Support portal</a>.</p>
       </div>
       <div>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
@@ -92,6 +90,7 @@
     </div>
   </div>
 </div>
+
 
 <?php wp_footer(); ?>
 

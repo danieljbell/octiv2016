@@ -61,3 +61,6 @@ $hamburger-hover-filter: opacity(50%) !default;
 $hamburger-types: (
   slider-r,
 ) !default;
+
+// @import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import '../../node_modules/bulma/sass/utilities/variables';

@@ -28,3 +28,5 @@ CREATE MEDIA QUERY
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@import '../../node_modules/bulma/sass/utilities/mixins';
