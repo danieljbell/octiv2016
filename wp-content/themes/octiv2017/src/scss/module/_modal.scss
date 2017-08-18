@@ -21,6 +21,10 @@ body:before {
   @include tablet {
     position: fixed; 
   }
+  min-width: 75vw;
+  @include fullhd {
+    min-width: 50vw;
+  }
   z-index: -1;
   top: 3rem;
   left: 1rem;
@@ -85,7 +89,7 @@ body:before {
   top: calc(-1rem - 1px);
   left: -2rem;
   padding: 1rem 2rem;
-  width: 100%;
+  width: calc(100% + 4rem);
   text-align: center;
   color: $white;
   h2 {
@@ -103,14 +107,12 @@ body:before {
   position: relative;
   top: -1rem;
   left: -2rem;
-  width: 100%;
-  @include tablet {
-    width: calc(100% - 2rem);
-  }
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  width: calc(100% + 4rem);
   @include tablet {
     border-top-right-radius: 0;
+    width: calc(100% + 2rem);
   }
   padding: 1rem 2rem;
   margin-bottom: -2rem;

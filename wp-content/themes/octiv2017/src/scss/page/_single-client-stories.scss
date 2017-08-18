@@ -1,0 +1,136 @@
+// ADD SOME CUSTOM STYLE TO BROWSER WINDOW CLASS FOR POST TYPE
+.single-client-stories .browser-window {
+  width: 100%;
+  @include desktop {
+    max-width: 700px;
+    float: right;
+    margin-left: 3em;
+  }
+}
+
+.client-story-company-details {
+  width: 100%;
+  max-width: 300px;
+  float: right;
+  background-image: linear-gradient($white, $lgray);
+  border: 1px solid $mgray;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px rgba(black, 0.1);
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-left: 3rem;
+  li {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+  }
+}
+
+.client-story-company-logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+.client-story-intro {
+  &:first-letter {
+    color: $brand;
+    padding: 0 .5rem 1rem 0;
+    font-size: 5rem;
+    line-height: 0.75;
+    float: left;
+    font-weight: 700;
+  }
+  &:first-line {
+    font-weight: bold;
+  }
+}
+
+.client-story-quote {
+  background-image: linear-gradient(to right, transparentize($brand4, 0.5) 40%, transparentize($brand, 0.4)), url(../img/octiv-pattern.svg), linear-gradient(to right, $brand4 40%, $brand);
+  color: $white;
+  text-shadow: 2px 2px 2px rgba(black, 0.6);
+  text-align: center;
+  font-size: 1.2em;
+  @include tablet {
+    font-size: 1.4em;
+  }
+  margin: 3rem 0;
+  padding: 3rem 0;
+  @include tablet {
+    padding: 4rem 0;
+  }
+  blockquote {
+    @include tablet {
+      max-width: 65%;
+      margin: 0 auto;
+    }
+  }
+  .quote {
+    position: relative;
+    &:before,
+    &:after {
+      font-size: 1em;
+      line-height: 1;
+      @include tablet {
+        position: absolute;
+        font-weight: bold;
+        top: 50%;
+        font-size: 4em;
+        transform: translateY(-50%);
+        opacity: 0.5;
+      }
+    }
+    &:before {
+      content:"\201C";
+      @include tablet {
+        left: -3.5rem;
+      }
+    }
+    &:after {
+      content:"\201D";
+      right: -3.5rem;
+    }
+  }
+}
+
+.person-details-container {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    text-align: left;
+  }
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.person-headshot {
+  @include tablet {
+    margin-right: 1em;
+  }
+  img {
+    width: 100%;
+    max-width: 85px;
+    border-radius: 50%;
+    border: 3px solid $white;
+    box-shadow: 0 0 25px rgba(black, 0.4);
+  }
+}
+
+.person-details-content {
+  line-height: 1.2;
+  p {
+    margin-bottom: 0;
+  }
+  .person-name {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .person-title {
+    font-style: italic;
+  }
+}

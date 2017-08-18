@@ -45,10 +45,12 @@ console.dir(thing);
   }
 
   // CLOSE MODAL
-  var closeModalButton = document.querySelector('#close-modal');
-  closeModalButton.addEventListener('click', function() {
-    document.body.classList.remove('modal-open');
-  });
+  var allCloseModalButtons = document.querySelectorAll('.close-modal');
+  for (var i = 0; i < allCloseModalButtons.length; i++) {
+    allCloseModalButtons[i].addEventListener('click', function() {
+      document.body.classList.remove('modal-open');
+    });
+  }
 
   window.addEventListener('keydown', function(e) {
     if (e.keyCode === 27) {
@@ -101,4 +103,18 @@ console.dir(thing);
       }
     });
   }
+
+
+  /*
+  ==============================
+  BROWSER WINDOW
+  ==============================
+  */
+  var allBrowserWindows = document.querySelectorAll('.browser-window');
+  for (var i = 0; i < allBrowserWindows.length; i++) {
+    allBrowserWindows[i].addEventListener('click', function() {
+      document.body.classList.add('modal-open');
+    });
+  }
+
 })();

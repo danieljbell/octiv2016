@@ -5,7 +5,7 @@ ADD GLOBAL CSS TO PAGE
 ==============================
 */
 function enqueue_global_css() {
-  wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.0');
+  wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.1');
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
 
@@ -198,50 +198,57 @@ function get_requested_slug() {
 
 /*
 ==============================
-
+YOAST BREADCRUMB OVERIDES
 ==============================
 */
 add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
 function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
   global $post;
-  if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
-    $breadcrumb[] = array(
-      'url' => '/platform',
-      'text' => 'Platform',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
-  if ( is_singular( 'integration' ) ) {
-    $breadcrumb[] = array(
-      'url' => '/platform',
-      'text' => 'Platform',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-    $integration_term_array = wp_get_post_terms($post->ID, 'integration_type');
-    $category[] = array(
-      'url' => '/platform/integrations/#' . $integration_term_array[0]->slug,
-      'text' => $integration_term_array[0]->name,
-    );
-    array_splice( $links, 3, 0, $category );
-  }
-  if ( is_singular( 'post' ) ) {
+  // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/platform',
+  //     'text' => 'Platform',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  // }
+  // if ( is_singular( 'integration' ) ) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/platform',
+  //     'text' => 'Platform',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  //   $integration_term_array = wp_get_post_terms($post->ID, 'integration_type');
+  //   $category[] = array(
+  //     'url' => '/platform/integrations/#' . $integration_term_array[0]->slug,
+  //     'text' => $integration_term_array[0]->name,
+  //   );
+  //   array_splice( $links, 3, 0, $category );
+  // }
+  // if ( is_singular( 'post' ) ) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/resources',
+  //     'text' => 'Resources',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  // }
+  // if ( is_singular( 'solutions' ) ) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/solutions',
+  //     'text' => 'Solutions',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  // }
+  // if ( is_tax( 'event_type' ) ) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/events',
+  //     'text' => 'Events',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  // }
+  if ( is_singular( 'client-stories' ) ) {
     $breadcrumb[] = array(
       'url' => '/resources',
       'text' => 'Resources',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
-  if ( is_singular( 'solutions' ) ) {
-    $breadcrumb[] = array(
-      'url' => '/solutions',
-      'text' => 'Solutions',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
-  if ( is_tax( 'event_type' ) ) {
-    $breadcrumb[] = array(
-      'url' => '/events',
-      'text' => 'Events',
     );
     array_splice( $links, 1, 0, $breadcrumb );
   }

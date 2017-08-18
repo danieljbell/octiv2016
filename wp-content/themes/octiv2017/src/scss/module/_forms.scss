@@ -66,6 +66,7 @@ MARKETO OVERRIDES
 }
 
 .mktoForm .mktoFieldWrap {
+  float: none;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -97,6 +98,10 @@ MARKETO OVERRIDES
 .mktoCheckboxList {
   order: -1;
   flex: 0;
+}
+
+.mktoFieldWrap.mktoFlexWrap {
+  flex-direction: row;
 }
 
 .mktoButtonRow {

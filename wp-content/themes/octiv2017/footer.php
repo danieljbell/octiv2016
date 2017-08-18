@@ -1,5 +1,12 @@
+<div class="modal-container empty-modal">
+  <button class="close-modal">Close <span class="close-icon">+</span></button>
+  <div class="modal-content">
+    asdfasdf
+  </div>
+</div>
+
 <div class="modal-container modal-rad">
-  <button id="close-modal" class="close-modal">Close <span class="close-icon">+</span></button>
+  <button class="close-modal">Close <span class="close-icon">+</span></button>
   <div class="modal-content">
     <div class="half vertical-align">
       <div class="light-callout">
@@ -35,19 +42,9 @@
             }
           );
           MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1334, function(form) {
-            var selectBoxes = form.getFormElem()[0].querySelectorAll('form select');
-            for (var i = 0; i < selectBoxes.length; i++) {
-              selectBoxes[i].classList.add('fancy');
-            }
             var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
             for (var i = 0; i < modalNewsletterBox.length; i++) {
               modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
-              var ast = modalNewsletterBox[i].querySelectorAll('.mktoAsterix');
-              if (ast) {
-                for (var j = 0; j < ast.length; j++) {
-                  ast[j].remove();
-                }
-              }
             }
             // Blacklisted Email Domains
             var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@live.","@aol.","@outlook."];
