@@ -5,8 +5,8 @@
     max-width: 600px;
     float: right;
     margin-left: 3em;
-    transform: translateY(3rem);
-    margin-bottom: 4rem;
+    transform: translateY(2rem);
+    margin-bottom: 3rem;
   }
 }
 
@@ -136,14 +136,19 @@
 .person-details-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
   @include tablet {
     flex-direction: row;
-    text-align: left;
   }
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
   font-size: 1rem;
+  &.has-person-headshot {
+    @include tablet {
+      text-align: left;
+    }
+  }
 }
 
 .person-headshot {
