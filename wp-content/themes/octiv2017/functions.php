@@ -29,6 +29,8 @@ register_nav_menus( array(
   'eyebrow_quick_links' => __( 'Eyebrow Quick Links' ),  
   'site-header' => __( 'Site Header' ),
   'mega-menu-promo' => __( 'Mega Menu Promo' ),
+  'site_footer' => __( 'Site Footer' ),
+  'sub_footer_links' => __( 'Sub Footer Links' ),
 ) );
 
 
@@ -245,7 +247,7 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
   //   );
   //   array_splice( $links, 1, 0, $breadcrumb );
   // }
-  if ( is_singular( 'client-stories' ) ) {
+  if ( is_singular( 'client-stories' ) || is_archive( 'client-stories' ) ) {
     $breadcrumb[] = array(
       'url' => '/resources',
       'text' => 'Resources',

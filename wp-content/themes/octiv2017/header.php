@@ -82,8 +82,8 @@
   <!-- End Google Tag Manager (noscript) -->  
 
 <?php if( current_user_can('edit_pages') ) :
-  echo '<ul style="position: fixed; bottom: 0; z-index: 999;" class="no-print"><li style="display: inline-block;"><a href="' . site_url() . '/wp-admin" class="btn-primary">Admin</a></li>';
-  echo '<li style="display: inline-block;"><a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a></li>';
+  echo '<ul style="position: fixed; bottom: 0; z-index: 999;" class="no-print"><li style="display: inline-block;"><a href="' . site_url() . '/wp-admin" class="btn-primary" style="text-decoration: none; font-weight: bold;">Admin</a></li>';
+  echo '<li style="display: inline-block; margin-left: 1rem;"><a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary" style="text-decoration: none; font-weight: bold;">Edit</a></li>';
   echo '</ul>';
   endif; ?>
 

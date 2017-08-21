@@ -46,6 +46,7 @@ SITE HEADER
         $mega_menu_items = wp_get_nav_menu_items('mega-menu-promo');
         foreach ($mega_menu_items as $item) {
           echo '<li class="card card--sidebar">';
+            print_r(wp_get_attachment_url( get_post_thumbnail_id($item->ID) ));
             echo '<div class="card-content">';
               echo '<h4><a href="' . $item->url . '">' . $item->title . '</a></h4>';
               echo '<a href="' . $item->url . '" class="btn-arrow">Learn More <span class="arrow">></span></a>';

@@ -88,6 +88,50 @@
   </div>
 </div>
 
+<footer class="site-footer">
+  <div class="site-width footer-utility-links">
+    <ul class="social-links">
+      <li><a href="https://www.linkedin.com/company-beta/10866770/" title="Octiv's LinkedIn Page"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/linkedin-icon.svg'); ?></a></li>
+      <li><a href="http://twitter.com/octivinc" title="Octiv's Twitter Page"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/twitter-icon.svg'); ?></a></li>
+      <li><a href="https://www.instagram.com/octivinc/" title="Octiv's Instagram Page"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/instagram-icon.svg'); ?></a></li>
+      <li><a href="http://facebook.com/OctivInc" title="Octiv's Facebook Page"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/facebook-icon.svg'); ?></a></li>
+    </ul>
+    <div class="site-footer-logo">
+      <a href="/" title="Home"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/Octiv-Logo.svg'); ?></a>
+    </div>
+    <div class="newsletter-subscription-container">
+      <button id="newsletter-subscription" class="btn-primary">Get Our Newsletter</button>
+    </div>
+  </div>
+  <div class="site-width footer-admin-links">
+    <div>
+      <a href="tel:844-936-2848" class="footer-phone-number"><strong>844-936-2848</strong></a>
+      <address>
+        54 Monument Circle,<br>Suite 700<br>Indianapolis, IN 46204
+      </address>
+    </div>
+    <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'site-footer',
+          )
+        );
+      ?>
+  </div>
+  <div class="sub-footer-container">
+    <div class="site-width">
+      <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'sub-footer-links',
+          )
+        );
+      ?>
+      <p>&copy; <?php echo date("Y"); ?> Octiv, Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
 
 <?php wp_footer(); ?>
 

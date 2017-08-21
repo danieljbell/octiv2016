@@ -8,7 +8,7 @@ HERO
 
 <?php
   if ($post->post_type === 'client-stories') {
-    $hero_bg = '//unsplash.it/1920/400';
+    $hero_bg = get_field('client_testimonial_image');
     $page_title = get_field('short_description');
     $page_sub_title = strip_tags( get_the_excerpt() );
   }
