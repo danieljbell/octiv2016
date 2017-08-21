@@ -2,9 +2,11 @@
 .single-client-stories .browser-window {
   width: 100%;
   @include desktop {
-    max-width: 700px;
+    max-width: 600px;
     float: right;
     margin-left: 3em;
+    transform: translateY(3rem);
+    margin-bottom: 4rem;
   }
 }
 
@@ -19,16 +21,52 @@
   text-align: center;
   padding: 1rem 2rem;
   margin-left: 3rem;
+  text-align: center;
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
   li {
     font-size: 0.9em;
     line-height: 1.4;
     margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .client-story-company-logo {
   width: 100%;
   max-width: 200px;
+}
+
+.client-story-integrations-container {
+  ul {
+    padding-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 1;
+    }
+  }
+  a {
+    border: 0;
+  }
+  img {
+    background-image: linear-gradient($white, $lgray);
+    width: 85px;
+    height: 85px;
+    border: 5px solid $white;
+    box-shadow: 0 0 10px rgba(black, 0.1);
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    padding: 0.5em;
+  }
 }
 
 .client-story-intro {
@@ -88,7 +126,9 @@
     }
     &:after {
       content:"\201D";
-      right: -3.5rem;
+      @include tablet {
+        right: -3.5rem;
+      }
     }
   }
 }

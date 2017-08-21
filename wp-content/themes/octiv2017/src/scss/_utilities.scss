@@ -1,5 +1,14 @@
+.no-style-text-link {
+  color: $gray;
+  text-decoration: none;
+}
+
 .has-text-left {
   text-align: left;
+}
+
+.has-text-center {
+  text-align: center;
 }
 
 .no-mar-b {
@@ -54,6 +63,10 @@
   &-more {
     padding-top: 2em;
     padding-bottom: 2em;
+  }
+  &-most {
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
 

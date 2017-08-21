@@ -14,6 +14,10 @@
 .half {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+  }
   > * {
     margin-right: 2rem;
     margin-bottom: 2rem;

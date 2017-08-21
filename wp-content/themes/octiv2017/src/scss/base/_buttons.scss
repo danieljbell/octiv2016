@@ -15,6 +15,7 @@ button {
   padding: 0.5em 1em;
   transition: all 200ms ease-in-out;
   width: 100%;
+  text-decoration: none;
   @include bp(sm) {
     width: initial;
   }
@@ -61,5 +62,17 @@ button {
     &:before {
       transform: translateY(0);
     }
+  }
+}
+
+.btn-white--outline {
+  padding: 0.5em 1em;
+  border: 1px solid $white;
+  color: $white;
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $gray;
   }
 }

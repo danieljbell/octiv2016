@@ -42,6 +42,12 @@
       &:first-child {
         margin-left: 0;
       }
+      &:last-child {
+        margin-right: 0;
+      }
+      @include mobile {
+        margin: 0 0.5rem;
+      }
     }
     a {
       fill: darken($white, 25%);
@@ -53,6 +59,9 @@
     svg {
       width: 100%;
       max-width: 25px;
+      @include mobile {
+        max-width: 20px;
+      }
     };
   }
   .newsletter-subscription-container {
@@ -148,5 +157,21 @@
   }
   p {
     margin-bottom: 0;
+  }
+}
+
+/*
+==============================
+OVERIDE BUTTON STYLE
+==============================
+*/
+.site-footer .btn-white--outline {
+  border-color: darken($white, 25%);
+  color: darken($white, 25%);
+  padding: 0.35em 0.75em;
+  &:hover,
+  &:focus {
+    background-color: darken($white, 25%);
+    color: $gray;
   }
 }
