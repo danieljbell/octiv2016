@@ -2,12 +2,7 @@
 
 <main>
   
-  <?php
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-    $image_url = $image[0];
-  ?>
-
-  <?php echo do_shortcode('[get_hero img="' . $image_url . '"]'); ?>
+  <?php echo get_template_part('partials/module/display', 'hero'); ?>
 
   <?php echo get_template_part('partials/module/display', 'breadcrumbs'); ?>
 

@@ -1,6 +1,6 @@
 .hero {
   background-color: $gray;
-  background-size: cover;
+  background-size: cover, cover, 300px, cover;
   background-position: center;
   padding: 3rem 0;
   @include tablet {
