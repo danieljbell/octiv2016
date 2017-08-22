@@ -35,6 +35,7 @@ $rand_num = mt_rand(1,4);
     $page_title = 'Press Releases';
   }
 
+  // POST POST TYPE
   if (is_singular('post')) {
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
@@ -44,6 +45,11 @@ $rand_num = mt_rand(1,4);
     $page_sub_title = strip_tags( get_the_excerpt() );
   }
 
+  // INTEGRATIONS POST TYPE
+  if (is_post_type_archive('integration')) {
+    $hero_bg = '/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg';
+    $page_title = 'Integrations';
+  }
 
   // PAGE TEMPLATES - Archive
   if (is_page_template('page-templates/archive.php')) {
