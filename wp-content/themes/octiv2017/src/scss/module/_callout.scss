@@ -1,3 +1,17 @@
 .light-callout {
   background-color: $lgray;
 }
+
+.brand-callout {
+  background-color: $brand;
+  * {
+    color: $white;
+  }
+  a[href*="tel"] {
+    color: $white; 
+  }
+  .btn-primary {
+    color: $brand;
+    background-color: $white;
+  }
+}

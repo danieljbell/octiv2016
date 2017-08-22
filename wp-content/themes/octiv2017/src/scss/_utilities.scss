@@ -47,6 +47,12 @@
 
 .mar-b {
   margin-bottom: 1em;
+  &-more {
+    margin-bottom: 2em;
+  }
+  &-most {
+    margin-bottom: 3em;
+  }
 }
 
 .mar-l {
@@ -90,7 +96,13 @@
 }
 
 .pad-b {
-  padding-right: 1em;
+  padding-bottom: 1em;
+  &-more {
+    padding-bottom: 2em;
+  }
+  &-most {
+    padding-bottom: 3em;
+  }
 }
 
 .pad-l {

@@ -2,7 +2,7 @@
 
 <main>
 
-  
+<?php get_template_part('partials/module/display', 'hero'); ?>  
 
 </main>
 

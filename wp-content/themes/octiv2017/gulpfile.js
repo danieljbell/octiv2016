@@ -38,10 +38,20 @@ gulp.task('js', function () {
   gulp.src('./dist/js/**/*', {read: false})
     .pipe(clean());
   gulp.src([
+    './node_modules/jquery/dist/jquery.min.js',
     'src/js/global.js'
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('global.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.stream());
+  gulp.src([
+    'src/js/pages/integrations.js'
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('integrations.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
@@ -56,7 +66,7 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['css']);
   gulp.watch('src/css/*.css', ['css']);
-  gulp.watch('src/js/*.js', ['js']);
+  gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/*.{png,jpg,gif,svg}', ['images']).on('change', browserSync.reload);
   gulp.watch(['*.php', 'page-templates/*.php',  'partials/**/*.php']).on('change', browserSync.reload);
 });

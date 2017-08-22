@@ -1,0 +1,38 @@
+.single-integration main {
+  @include tablet {
+    padding-top: 2rem;
+  }
+}
+
+.single-integration aside hr {
+  margin: 0.25em 0 0.5em;
+}
+
+.single-integration aside ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.single-integration aside li {
+  line-height: 1.2;
+  margin-bottom: 0.25em;
+}
+
+.single-integration aside a {
+  text-decoration: none;
+  color: $gray;
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: $brand;   
+  }
+}
+
+.single-integration .related-integrations {
+  margin-bottom: 5rem;
+}
+
+.single-integration .site-footer {
+  margin-top: 0;
+}
