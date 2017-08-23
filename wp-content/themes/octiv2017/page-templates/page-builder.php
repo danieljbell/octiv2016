@@ -51,6 +51,17 @@ Template Name: Page Builder
           </section>
             <?php            
           endif;
+          if ( get_row_layout() == 'simple_call_to_action' ) :
+            ?>
+            <section>
+              <div class="site-width has-text-center">
+                <h2><?php echo get_sub_field('heading'); ?></h2>
+                <p><?php echo get_sub_field('sub_heading'); ?></p>
+                <a href="<?php echo get_sub_field('call_to_action_link') ?>" class="btn-primary"><?php echo get_sub_field('call_to_action_text'); ?></a>
+              </div>
+            </section>
+            <?php
+          endif;  
         endwhile;
       endif;
     endwhile;

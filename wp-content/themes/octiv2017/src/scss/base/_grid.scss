@@ -106,19 +106,33 @@
 .sixth {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid green;
   > * {
-    margin-right: 2rem;
     margin-bottom: 2rem;
+    flex-basis: 100%;
     @include tablet {
-      flex-basis: calc((100%/3) - 1.6667rem);
+      margin-right: 2rem;
+      flex-basis: calc((100%/2) - 1rem);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
     @include desktop {
-      flex-basis: calc((100%/6) - 1.6667rem);
+      flex-basis: calc((100%/3) - 1.3334rem);
+      &:nth-child(2n) {
+        margin-right: 2rem;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
-    border: 1px solid red;
-    &:nth-child(6n) {
-      margin-right: 0;
+    @include fullhd {
+      flex-basis: calc((100%/6) - 1.6667rem);
+      &:nth-child(3n) {
+        margin-right: 2rem;
+      }
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
     }
   }
 }
