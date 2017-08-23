@@ -117,4 +117,24 @@ console.dir(thing);
     });
   }
 
+  /*
+  ===========================================
+  REMOVE STYLE ELEMENT FROM MARKETO FORM ELEM
+  ===========================================
+  */
+  MktoForms2.whenReady(function() {
+    var allMktoForms = MktoForms2.allForms();
+    for (var i = 0; i < allMktoForms.length; i++) {
+      var formElem = allMktoForms[i].getFormElem();
+      if (formElem[0].querySelector('style')) {
+        formElem[0].querySelector('style').remove();
+      }
+    }
+    var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
+    for (var i = 0; i < modalNewsletterBox.length; i++) {
+      modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
+    }
+  });
+  
+
 })();

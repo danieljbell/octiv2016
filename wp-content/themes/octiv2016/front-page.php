@@ -53,19 +53,6 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/08/2017-08-sales-hacker-event-bg.jpg)">
-			<section>
-				<div class="site-width centered">
-					<h1 class="white-text">Close deals faster with winning sales proposals.</h1>
-					<div class="half-only white-text">
-						<div class="font-bump">
-							<p>Join us on August 23 at the Sales Hacker Virtual Summit to learn how you can build your own army of unstoppable sales reps.</p>
-						</div>
-					</div>
-					<a href="http://bit.ly/2eUcLgF" class="btn-primary">Register Now</a>
-				</div>
-			</section>
-		</div>
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
 			<section>
 				<div class="site-width centered">

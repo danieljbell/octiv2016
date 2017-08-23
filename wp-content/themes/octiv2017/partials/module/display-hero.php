@@ -15,7 +15,16 @@ $rand_num = mt_rand(1,4);
   HERO DEFAULT VARIABLES
   ==============================
   */
-  $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
+  $page_title = get_the_title();
+  $page_sub_title = strip_tags(get_the_excerpt());
+  if (has_post_thumbnail()) {
+    $thumb_id = get_post_thumbnail_id();
+    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+    $thumb_url = $thumb_url_array[0];
+    $hero_bg = 'url(' . $thumb_url . ')';
+  } else {
+    $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
+  }
 
   if (is_front_page()) {
     $page_title = 'Octiv Powers Documents';

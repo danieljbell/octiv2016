@@ -101,6 +101,7 @@ MARKETO OVERRIDES
 }
 
 .mktoFieldWrap.mktoFlexWrap {
+  display: flex !important;
   flex-direction: row;
 }
 
