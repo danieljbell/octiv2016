@@ -79,13 +79,33 @@ $rand_num = mt_rand(1,4);
   }
 ?>
 
-<section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
-  <div class="site-width">
-    <h1><?php echo $page_title; ?></h1>
-    <?php
-      if ($page_sub_title) {
-        echo '<h2>' . $page_sub_title . '</h2>';
-      }
-    ?>
-  </div>
-</section>
+<?php if (!is_singular('integration')) : ?>
+
+  <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
+    <div class="site-width">
+      <h1><?php echo $page_title; ?></h1>
+      <?php
+        if ($page_sub_title) {
+          echo '<h2>' . $page_sub_title . '</h2>';
+        }
+      ?>
+    </div>
+  </section>
+
+<?php else : ?>
+
+  <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
+    <div class="site-width">
+      <div class="hero-integration-logo-container">
+        <div class="hero-integration-logo light-callout">
+          <img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo">
+        </div>
+        <div class="light-callout plus-sign">+</div>
+        <div class="hero-integration-logo light-callout">
+          <img src="<?php echo get_field('integration_logo'); ?>" alt="<?php echo get_the_title(); ?>">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<?php endif; ?>  

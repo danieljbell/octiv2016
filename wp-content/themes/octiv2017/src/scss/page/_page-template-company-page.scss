@@ -1,0 +1,47 @@
+.employee-testimonials-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $brand2;
+    background-image: linear-gradient(135deg, transparentize($brand2, 0.5), transparentize($brand3, 0.5)), url(../img/octiv-pattern.svg), linear-gradient(135deg, $brand2, $brand3);
+    background-size: cover, 200px, cover;
+    padding: 2rem;
+    @include fullhd {
+      padding: 3rem;
+    }
+    color: $white;
+    text-shadow: 2px 2px 1px rgba(black, 0.4);
+    font-size: 1.4em;
+    &:nth-child(2n) {
+      background-color: $brand3;
+      background-image: linear-gradient(135deg, transparentize($brand3, 0.5), transparentize($brand4, 0.5)), url(../img/octiv-pattern.svg), linear-gradient(135deg, $brand3, $brand4);
+    }
+    &:nth-child(3n) {
+      background-color: $brand4;
+      background-image: linear-gradient(135deg, transparentize($brand4, 0.5), transparentize($brand5, 0.5)), url(../img/octiv-pattern.svg), linear-gradient(135deg, $brand4, $brand5);
+    }
+  }
+}
+
+.leadership-grid {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  .leadership-headshot {
+    width: 100%;
+    max-width: 185px;
+    border-radius: 50%;
+  }
+  img[src*="svg"] {
+    max-width: 30px;
+  }
+}
+
+.page-template-company-page .site-footer {
+  margin-top: 0;
+}

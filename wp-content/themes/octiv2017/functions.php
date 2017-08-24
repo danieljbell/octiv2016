@@ -55,6 +55,14 @@ add_theme_support( 'post-thumbnails' );
 
 /*
 ==========================================
+ADDS EXCERPT TO PAGES
+==========================================
+*/
+add_post_type_support( 'page', 'excerpt' );
+
+
+/*
+==========================================
 REMOVE EXTRA <p> TAGS FROM CONTENT
 ==========================================
 */

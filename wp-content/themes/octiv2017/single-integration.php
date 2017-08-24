@@ -1,5 +1,18 @@
 <?php get_header(); ?>
 
+<style>
+  .hero {
+    background-image: 
+      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+      url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg),
+      linear-gradient(<?php echo get_field('integration_color'); ?>, <?php echo get_field('integration_color'); ?>) !important;
+  }
+  .plus-sign {
+    color: <?php echo get_field('integration_color'); ?>;
+  }
+</style>
+
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
 <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
@@ -72,15 +85,5 @@
   </section>
   <?php get_template_part('partials/module/display', 'call-to-action'); ?>
 </main>
-
-<style>
-  .hero {
-    background-image: 
-      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
-      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
-      url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg),
-      linear-gradient(<?php echo get_field('integration_color'); ?>, <?php echo get_field('integration_color'); ?>) !important;
-  }
-</style>
 
 <?php get_footer(); ?>

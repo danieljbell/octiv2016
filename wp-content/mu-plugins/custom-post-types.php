@@ -822,6 +822,7 @@ function register_client_story_post_type() {
     'labels'      => $labels,
     'description' => '',
     'public'      => true,
+    'publicly_queryable' => false,
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/client-stories' ),
     'menu_icon'   => 'dashicons-format-status',
@@ -857,6 +858,68 @@ function register_client_story_post_type() {
   );
 
   register_post_type( 'client-stories', $args );
+}
+
+
+/*
+=======================================
+REGISTER EMPLOYEE TESTIMONIAL POST TYPE
+=======================================
+*/
+add_action( 'init', 'register_employee_testimonial_post_type' );
+
+function register_employee_testimonial_post_type() {
+
+  $labels = array(
+    'name'                => 'Employee Testimonials',
+    'singular_name'       => 'Employee Testimonial',
+    'add_new'             => 'Add New Employee Testimonial',
+    'add_new_item'        => 'Add New Employee Testimonial',
+    'edit_item'           => 'Edit Employee Testimonial',
+    'new_item'            => 'New Employee Testimonial',
+    'all_items'           => 'All Employee Testimonials',
+    'view_item'           => 'View Employee Testimonial',
+    'search_items'        => 'Search Employee Testimonials',
+    'not_found'           => 'No employee testimonials found',
+    'not_found_in_trash'  => 'No employee testimonials found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Employee Testimonials'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'description' => '',
+    'public'      => true,
+    'menu_icon'   => 'dashicons-format-quote',
+    'supports'    => array( 'title' ),
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_employee_testimonial',
+    'read_post'              => 'read_employee_testimonial',
+    'delete_post'            => 'delete_employee_testimonial',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_employee_testimonial',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_employee_testimonial',
+    'edit_others_posts'      => 'edit_others_employee_testimonial',
+    'publish_posts'          => 'publish_employee_testimonial',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'delete_employee_testimonial',
+    'delete_private_posts'   => 'delete_private_employee_testimonial',
+    'delete_published_posts' => 'delete_published_employee_testimonial',
+    'delete_others_posts'    => 'delete_others_employee_testimonial',
+    'edit_private_posts'     => 'edit_private_employee_testimonial',
+    'edit_published_posts'   => 'edit_published_employee_testimonial'
+    ),
+  );
+
+  register_post_type( 'employee-testimonial', $args );
 }
 
 ?>
