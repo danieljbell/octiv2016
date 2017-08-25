@@ -200,3 +200,28 @@ add_shortcode('embed_video', function($atts) {
 <?php
     return ob_get_clean();
 });
+
+
+
+/*
+==============================
+VIDEO EMBED
+==============================
+*/
+add_shortcode('get_current_customers', function() {
+
+    $args = array(
+      'post_type' => 'page',
+      'post_parent' => 74
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+      while ($query->have_posts()) : $query->the_post();
+        echo get_the_title();
+      endwhile;
+    endif;
+
+    return ob_get_clean();
+});
