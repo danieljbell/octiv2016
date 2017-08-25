@@ -222,6 +222,7 @@ add_shortcode('get_current_customers', function() {
         echo get_the_title();
       endwhile;
     endif;
+    wp_reset_query();
 
     return ob_get_clean();
 });
