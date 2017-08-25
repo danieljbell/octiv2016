@@ -173,6 +173,7 @@ select {
 	background-repeat: no-repeat;
 	background-position: 95%;
 	background-size: 20px;
+	color: $gray;
 	&.fancy {
 		appearance: none;
 		background-image: url(../dist/img/select-arrow.svg);
