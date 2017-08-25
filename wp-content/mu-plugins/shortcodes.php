@@ -208,21 +208,31 @@ add_shortcode('embed_video', function($atts) {
 VIDEO EMBED
 ==============================
 */
-add_shortcode('get_current_customers', function() {
+add_shortcode('get_current_customers', function($atts) {
+  extract(shortcode_atts(
+    array(
+      'count' => '8',
+      'columns' => 'fourth'
+    ), $atts));
 
-    $args = array(
-      'post_type' => 'page',
-      'post_parent' => 74
-    );
+  ob_start();
+  $args = array(
+    'post_type' => 'page',
+    'post_parent' => 74,
+    'posts_per_page' => $count,
+    'orderby' => 'menu_order'
+  );
 
-    $query = new WP_Query($args);
+  $query = new WP_Query($args);
 
-    if ($query->have_posts()) :
-      while ($query->have_posts()) : $query->the_post();
-        echo get_the_title();
-      endwhile;
-    endif;
-    wp_reset_query();
+  if ($query->have_posts()) :
+    echo '<ul class="' . $columns . '" style="list-style-type: none; padding-left: 0; margin-bottom: 0;">';
+    while ($query->have_posts()) : $query->the_post();
+      echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><img src="' . get_field('client_logo') . '" alt="' . get_the_title() . '"></a></li>';
+    endwhile;
+    echo '</ul>';
+  endif;
+  wp_reset_query();
 
-    return ob_get_clean();
+  return ob_get_clean();
 });
