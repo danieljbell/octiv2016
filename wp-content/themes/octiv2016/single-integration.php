@@ -183,7 +183,7 @@
 </section>
 
 
-<?php if (get_field('integration_video_id')) : ?>
+<?php if (get_field('has_feature_video')) : ?>
   <div id="video-html">
     <div class="video-outer">
       <div class="video-inner">

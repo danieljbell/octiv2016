@@ -73,6 +73,12 @@
             echo '</div>';
             echo '<div>';
               echo '<div class="slider" id="catalog-screenshots">';
+              if (get_field('has_feature_video')) {
+                echo '<div class="centered">';
+                  echo '<h3 class="mar-b">See ' . get_the_title() . ' in Action</h3>';
+                  echo '<img src="' . get_field('feature_video_thumbnail') . '" alt="" class="video-thumbnail">';
+                echo '</div>';
+              }
             while (have_rows('screenshots')) :
               the_row();
               echo '<div class="centered">';
@@ -82,17 +88,6 @@
             endwhile;
               echo '</div>';
             echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
-            // echo '<p>&nbsp;</p>';
-            // echo '<div class="box datasheet-promo">';
-            //   echo '<div class="datasheet-promo-image">';
-            //     echo '<img src="//fillmurray.com/102/132">';
-            //   echo '</div>';
-            //   echo '<div class="datasheet-promo-content">';
-            //     echo '<h4>' . get_field('datasheet_headline') . '</h4>';
-            //     echo '<p>' . get_field('datasheet_subheadline') . '</p>';
-            //     echo '<button class="datasheet-modal-button btn-arrow">Get the Full Datasheet</button>';
-            //   echo '</div>';
-            // echo '</div>';
           echo '</div>';
         else :
           echo '<div>';
@@ -121,6 +116,37 @@
     <hr>
   </div>
   <?php get_template_part('partials/display', 'recent-resources'); ?>
+<?php endif; ?>
+
+<?php if (get_field('has_feature_video')) : ?>
+  <div id="video-html">
+    <div class="video-outer">
+      <div class="video-inner">
+        <iframe src="https://www.youtube.com/embed/<?php echo get_field('feature_video_id'); ?>?rel=0&showinfo=0&modestbranding=1&VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+
+<?php if (get_field('has_feature_video')) : ?>
+  <div id="video-form">
+    <h4>See Octiv + <?php echo get_the_title(); ?> in Action</h4>
+    <p>Fill out the form below to view a brief demonstration.</p>
+    <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <form id="mktoForm_<?php echo get_field('feature_video_marketo_form_id'); ?>"></form>
+    <script>
+      MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('feature_video_marketo_form_id'); ?>, function(form) {
+        form.onSuccess(function(values, followUpUrl) {
+          form.getFormElem().hide();
+          var videoContainer = document.querySelector('.empty-modal .modal-content');
+          var videoHTML = document.querySelector('#video-html');
+          videoContainer.innerHTML = videoHTML.innerHTML;
+          
+          return false;
+        });
+      });
+    </script>
+  </div>
 <?php endif; ?>
 
 <style>
@@ -164,6 +190,10 @@
   .slider .slick-slide {
     color: initial;
     padding: 0;
+  }
+  #video-html,
+  #video-form {
+    display: none;
   }
   @media screen and (max-width: 600px) {
     .fourth-3-fourth > div:first-child {
