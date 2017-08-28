@@ -80,7 +80,7 @@
                       echo '<h2 class="white-text">View a demo of the Octiv platform now</h2>';
                       echo '<div class="two-third-only">';
                         echo '<div><p class="white-text">This on-demand webinar is an exclusive opportunity to see the leading document generation and contract lifecycle management platform in action.</div>';
-                        echo '<a href="/platform-demo" class="btn-primary">Watch Now</a>';
+                        echo '<a href="/platform-demo" class="btn-primary" style="margin-bottom: 0; width: initial !important;">Watch Now</a>';
                       echo '</div>';
                     echo '</div>';
                   }

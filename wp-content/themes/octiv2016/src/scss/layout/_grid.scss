@@ -236,7 +236,7 @@
 CENTERED GRID ELEMENTS
 ==============================
 */
-[class$='-only'] > div {
+[class$='-only'] > * {
 	margin-bottom: 2rem;
 	@include bp(sm) {
 		margin-left: auto;
@@ -245,16 +245,16 @@ CENTERED GRID ELEMENTS
 }
 
 @include bp(lg) {
-	.two-third-only > div {
+	.two-third-only > * {
 		width: calc((100% / 3) * 2);
 	}
-	.half-only > div {
+	.half-only > * {
 		width: calc(100% / 2);
 	}
-	.third-only > div {
+	.third-only > * {
 		width: calc(100% / 3);
 	}
-	.fourth-only > div {
+	.fourth-only > * {
 		width: calc(100% / 4);
 	}
 }

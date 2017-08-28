@@ -139,13 +139,15 @@
               echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($past_query->have_posts()) :
                 $past_query->the_post();
-                if (get_field('webinar_type') === 'thought-leadership') {
-                  $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'platform') {
-                  $webinar_type = 'platform';
-                } else if (get_field('webinar_type') === 'client') {
-                  $webinar_type = 'client';
-                }
+                if ($queried_object->slug === 'online') :
+                  if (get_field('webinar_type') === 'thought-leadership') {
+                    $webinar_type = 'thought-leadership';
+                  } else if (get_field('webinar_type') === 'platform') {
+                    $webinar_type = 'platform';
+                  } else if (get_field('webinar_type') === 'client') {
+                    $webinar_type = 'client';
+                  }
+                endif;
                 echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" class="' . $webinar_type . '" excerpt="date"]');
               endwhile;
               echo '</div>';
