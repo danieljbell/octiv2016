@@ -50,7 +50,7 @@
           foreach ($terms as $term) {
             $local_args = array(
               'post_type' => 'events',
-              'posts_per_page' => 6,
+              'posts_per_page' => 3,
               'order' => 'DESC',
               'orderby' => 'meta_value',
               'meta_key' => 'event_start_date',
@@ -63,14 +63,16 @@
               ),
             );
             $local_query = new WP_Query($local_args);
+
             if ($local_query->have_posts()) :
               echo '<section style="padding-top: 0;">';
                 echo '<div class="section-menu">';
                   echo '<h3 id="' . $term->slug . '" class="inline">';
-                    if ($term->slug != 'online') {
-                      echo $term->name;
-                    } else {
+                    if ($term->slug == 'online') {
                       echo 'Webinars';
+                    }
+                    if ($term->slug == 'in-person') {
+                      echo 'Events';
                     }
                   echo '</h3>';
                   if ($term->slug === 'online') {
@@ -100,12 +102,14 @@
                     $class = 'past';
                   }
                 }
-                if (get_field('webinar_type') === 'thought-leadership') {
-                  $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'platform') {
-                  $webinar_type = 'platform';
-                } else if (get_field('webinar_type') === 'client') {
-                  $webinar_type = 'client';
+                if ($term->slug === 'online') {
+                  if (get_field('webinar_type') === 'thought-leadership') {
+                    $webinar_type = 'thought-leadership';
+                  } else if (get_field('webinar_type') === 'platform') {
+                    $webinar_type = 'platform';
+                  } else if (get_field('webinar_type') === 'client') {
+                    $webinar_type = 'client';
+                  }
                 }
                 echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" tag="' . $class . '" class="' . $class . ' ' . $webinar_type . '" excerpt="date"]');
               endwhile;

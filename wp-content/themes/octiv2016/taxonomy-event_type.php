@@ -13,6 +13,9 @@
 
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
+
+
+
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
@@ -23,7 +26,7 @@
           <li><a href="#upcoming">Upcoming</a></li>
           <li><a href="#past">Past</a></li>
         </ul>
-        <?php if (get_field('webinar_type')) : ?>
+        <?php if ($queried_object->slug === 'online') : ?>
           <div class="mar-t"></div>
           <h4>Filters</h4>
           <hr>
