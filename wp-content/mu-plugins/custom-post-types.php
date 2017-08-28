@@ -798,67 +798,67 @@ function register_alert_post_type() {
 REGISTER CLIENT STORY POST TYPE
 ==============================
 */
-add_action( 'init', 'register_client_story_post_type' );
+// add_action( 'init', 'register_client_story_post_type' );
 
-function register_client_story_post_type() {
+// function register_client_story_post_type() {
 
-  $labels = array(
-    'name'                => 'Client Stories',
-    'singular_name'       => 'Client Story',
-    'add_new'             => 'Add New Client Story',
-    'add_new_item'        => 'Add New Client Story',
-    'edit_item'           => 'Edit Client Story',
-    'new_item'            => 'New Client Story',
-    'all_items'           => 'All Client Stories',
-    'view_item'           => 'View Client Story',
-    'search_items'        => 'Search Client Stories',
-    'not_found'           => 'No client stories found',
-    'not_found_in_trash'  => 'No client stories found in Trash',
-    'parent_item_colon'   => '',
-    'menu_name'           => 'Client Stories'
-  );
+//   $labels = array(
+//     'name'                => 'Client Stories',
+//     'singular_name'       => 'Client Story',
+//     'add_new'             => 'Add New Client Story',
+//     'add_new_item'        => 'Add New Client Story',
+//     'edit_item'           => 'Edit Client Story',
+//     'new_item'            => 'New Client Story',
+//     'all_items'           => 'All Client Stories',
+//     'view_item'           => 'View Client Story',
+//     'search_items'        => 'Search Client Stories',
+//     'not_found'           => 'No client stories found',
+//     'not_found_in_trash'  => 'No client stories found in Trash',
+//     'parent_item_colon'   => '',
+//     'menu_name'           => 'Client Stories'
+//   );
 
-  $args = array(
-    'labels'      => $labels,
-    'description' => '',
-    'public'      => true,
-    'publicly_queryable' => false,
-    'has_archive' => true,
-    'rewrite'            => array( 'slug' => 'resources/client-stories' ),
-    'menu_icon'   => 'dashicons-format-status',
-    'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
-    'show_in_rest'       => true,
-    'rest_base'          => 'client-stories',
-    'rest_controller_class' => 'WP_REST_Posts_Controller',
-    'capabilities' => array(
+//   $args = array(
+//     'labels'      => $labels,
+//     'description' => '',
+//     'public'      => true,
+//     'publicly_queryable' => false,
+//     'has_archive' => true,
+//     'rewrite'            => array( 'slug' => 'resources/client-stories' ),
+//     'menu_icon'   => 'dashicons-format-status',
+//     'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+//     'show_in_rest'       => true,
+//     'rest_base'          => 'client-stories',
+//     'rest_controller_class' => 'WP_REST_Posts_Controller',
+//     'capabilities' => array(
 
-    // meta caps (don't assign these to roles)
-    'edit_post'              => 'edit_client_story',
-    'read_post'              => 'read_client_story',
-    'delete_post'            => 'delete_client_story',
+//     // meta caps (don't assign these to roles)
+//     'edit_post'              => 'edit_client_story',
+//     'read_post'              => 'read_client_story',
+//     'delete_post'            => 'delete_client_story',
 
-    // primitive/meta caps
-    'create_posts'           => 'create_client_story',
+//     // primitive/meta caps
+//     'create_posts'           => 'create_client_story',
 
-    // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_client_story',
-    'edit_others_posts'      => 'edit_others_client_story',
-    'publish_posts'          => 'publish_client_story',
-    'read_private_posts'     => 'read',
+//     // primitive caps used outside of map_meta_cap()
+//     'edit_posts'             => 'edit_client_story',
+//     'edit_others_posts'      => 'edit_others_client_story',
+//     'publish_posts'          => 'publish_client_story',
+//     'read_private_posts'     => 'read',
 
-    // primitive caps used inside of map_meta_cap()
-    'read'                   => 'read',
-    'delete_posts'           => 'delete_client_story',
-    'delete_private_posts'   => 'delete_private_client_story',
-    'delete_published_posts' => 'delete_published_client_story',
-    'delete_others_posts'    => 'delete_others_client_story',
-    'edit_private_posts'     => 'edit_private_client_story',
-    'edit_published_posts'   => 'edit_published_client_story'
-    ),
-  );
+//     // primitive caps used inside of map_meta_cap()
+//     'read'                   => 'read',
+//     'delete_posts'           => 'delete_client_story',
+//     'delete_private_posts'   => 'delete_private_client_story',
+//     'delete_published_posts' => 'delete_published_client_story',
+//     'delete_others_posts'    => 'delete_others_client_story',
+//     'edit_private_posts'     => 'edit_private_client_story',
+//     'edit_published_posts'   => 'edit_published_client_story'
+//     ),
+//   );
 
-  register_post_type( 'client-stories', $args );
-}
+//   register_post_type( 'client-stories', $args );
+// }
 
 
 /*
