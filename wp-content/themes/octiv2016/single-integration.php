@@ -217,42 +217,11 @@
 #video-html {
   display: none;
 }
-/*label[for="subscriptionNewsletter"] {
-  margin-top: 1.75rem;
-  padding-left: 1.25rem;
-}
-label[for="subscriptionNewsletter"] + div {
-  margin-top: -1.25rem;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 960px) {
-  label[for="subscriptionNewsletter"] {
-    margin-top: 1.5rem;
-  }
-  label[for="subscriptionNewsletter"] + div {
-    display: block;
-    margin-top: -2.5rem;
-    margin-bottom: 2rem;
+@media screen and (min-width: 768px) {
+  .integration-video-container .half > * {
+    margin-bottom: 0;
   }
 }
-
-@media screen and (min-width: 1440px) {
-  label[for="subscriptionNewsletter"] {
-    margin-top: 1.5rem;
-  }
-  label[for="subscriptionNewsletter"] + div {
-    display: block;
-    margin-top: -1.25rem;
-    margin-bottom: 1rem;
-  }
-}
-  select {
-    color: #000;
-  }
-  
-  #site-footer>.site-width:first-of-type {
-    border-top: 0;
-  }*/
 </style>
 
 <?php get_footer(); ?>
