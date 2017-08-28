@@ -75,6 +75,14 @@
   }
 }
 
+.customer-success-thumbnails {
+  list-style-type: none;
+  padding-left: 0;
+  img {
+    width: 100%;
+  }
+}
+
 .single-integration .related-integrations {
   margin-bottom: 5rem;
 }
