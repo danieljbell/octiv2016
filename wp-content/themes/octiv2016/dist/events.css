@@ -246,6 +246,55 @@ li[class*="day-"] > h2 {
   }  
 }
 
+
+/*
+==============================
+LIVE-EVENT SINGLE STYLES
+==============================
+*/
+.sub-events {
+  padding-left: 0;
+}
+
+.sub-events li {
+  border-bottom: 1px solid #ccc;
+}
+
+.sub-events li:last-child {
+  border-bottom: 0;
+}
+
+.sub-event-date-container {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+  opacity: 0.2;
+  margin-bottom: 0 !important;
+}
+
+.sub-event-date {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.sub-event-time {
+  text-transform: none;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .sub-event-date-container {
+    text-align: right;
+    font-size: 2.5em;
+  }
+  .sub-event-time {
+    display: block;
+    font-size: 0.65em;
+    margin-left: 0;
+  }
+}
+
+
 /*
 ==============================
 MARKETO FORM STYLING

@@ -13,6 +13,9 @@
 
 <?php get_template_part('partials/display', 'breadcrumbs'); ?>
 
+
+
+
 <section>
   <div class="site-width">
     <div class="fourth-3-fourth">
@@ -23,7 +26,7 @@
           <li><a href="#upcoming">Upcoming</a></li>
           <li><a href="#past">Past</a></li>
         </ul>
-        <?php if (get_field('webinar_type')) : ?>
+        <?php if ($queried_object->slug === 'online') : ?>
           <div class="mar-t"></div>
           <h4>Filters</h4>
           <hr>
@@ -136,13 +139,15 @@
               echo '<div class="third" style="margin-top: 0.5rem;">';
               while ($past_query->have_posts()) :
                 $past_query->the_post();
-                if (get_field('webinar_type') === 'thought-leadership') {
-                  $webinar_type = 'thought-leadership';
-                } else if (get_field('webinar_type') === 'platform') {
-                  $webinar_type = 'platform';
-                } else if (get_field('webinar_type') === 'client') {
-                  $webinar_type = 'client';
-                }
+                if ($queried_object->slug === 'online') :
+                  if (get_field('webinar_type') === 'thought-leadership') {
+                    $webinar_type = 'thought-leadership';
+                  } else if (get_field('webinar_type') === 'platform') {
+                    $webinar_type = 'platform';
+                  } else if (get_field('webinar_type') === 'client') {
+                    $webinar_type = 'client';
+                  }
+                endif;
                 echo do_shortcode('[get_card thumb="true" thumb_modifier="' . $webinar_type . '" class="' . $webinar_type . '" excerpt="date"]');
               endwhile;
               echo '</div>';

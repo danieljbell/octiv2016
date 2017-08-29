@@ -188,7 +188,7 @@
 <?php else : ?>
   
   <?php if (has_post_thumbnail()) : ?>
-    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(<?php echo the_post_thumbnail_url(); ?>);">
+    <div class="fixed-hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), url(<?php echo the_post_thumbnail_url(); ?>); background-size: cover, cover, 300px, cover;">
   <?php else : ?>
     <div class="fixed-hero-section">
   <?php endif; ?>
@@ -197,6 +197,7 @@
         <div class="two-third-only">
           <div>
             <h1><?php echo get_the_title(); ?></h1>
+            <h2><?php echo get_field('event_city_state'); ?></h2>
             <?php
               $event_start = get_field('event_start_date');
               $event_start = substr($event_start, 0, 4) . '-'. substr($event_start, 4, 2) . '-' . substr($event_start, 6);
@@ -227,66 +228,26 @@
 
   <section class="fat-section" id="event-agenda">
     <div class="site-width">
-      <div class="fourth-3-fourth">
-        <div class="sticky-sidebar" id="sticky-sidebar">
-          <h4>Agenda By Day</h4>
-          <hr>
-          <ul class="day-selector-container">
-          <?php
-            $i = 0;
-            if (have_rows('schedule')) {
-              while (have_rows('schedule')) {
-                $i++;
-                the_row();
-                echo '<li>';
-                  echo '<input type="checkbox" id="day-' . $i . '" checked>';
-                  echo '<label for="day-' . $i . '">Day ' . $i . '</label>';
-                echo '</li>';
-              }
-            }
-          ?>
-          </ul>
-        </div>
-        <div class="sticky-listing">
-          <ul class="event-day-list">
-            <?php
-              $i = 0;
-              if (have_rows('schedule')) {
-                while (have_rows('schedule')) {
-                  $i++;
-                  the_row();
-                  echo '<li class="day-' . $i . '">';
-                    echo '<h2>Day ' . $i . '<span class="event-day-date">' . get_sub_field('event_day') . '</span></h2>';
-                    if (have_rows('event_agenda')) {
-                      echo '<ul class="day-' . $i . '-event-list">';
-                        while (have_rows('event_agenda')) {
-                          the_row();
-                          echo '<li class="event-item">';
-                            echo '<h3>' . get_sub_field('event_title') . '</h3>';
-                            echo '<p class="event-time">' . get_sub_field('event_start') . ' - ' . get_sub_field('event_end') . '</p>';
-                            if (get_sub_field('event_description')) {
-                              echo '<p>' . get_sub_field('event_description') . '</p>';
-                            }
-                            if (get_sub_field('event_link')) {
-                              echo '<a href="' . get_sub_field('event_link') . '" title="Learn More About ' . get_sub_field('event_title') . '" class="btn-arrow">Learn More</a>';
-                            }
-                          echo '</li>';
-                        }
-                      echo '</ul>';
-                    }
-                  echo '</li>';
-                }
-              }
-            ?>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="fat-section brand-callout">
-    <div class="site-width">
-      <div>asdfdsa</div>
+      <ul class="sub-events two-third-only">
+        <?php
+          if (have_rows('event_agenda')) :
+            while (have_rows('event_agenda')) : the_row();
+        ?>
+          <li class="fourth-3-fourth sub-event">
+            <div class="sub-event-date-container">
+              <p class="sub-event-date"><?php echo get_sub_field('event_date'); ?><span class="sub-event-time"><?php echo get_sub_field('event_time'); ?></span></p>
+            </div>
+            <div class="sub-event-content-container">
+              <h3 class="sub-event-title"><?php echo get_sub_field('event_title'); ?></h3>
+              <p class="sub-event-description"><?php echo get_sub_field('event_description'); ?></p>
+              <a href="<?php echo get_sub_field('event_link') ?>" class="btn-arrow"><?php if (get_sub_field('event_link_text')) { echo get_sub_field('event_link_text'); } else { echo 'Learn More'; } ?></a>
+            </div>
+          </li>
+        <?php  
+            endwhile;
+          endif;
+        ?>
+      </ul>
     </div>
   </section>
 

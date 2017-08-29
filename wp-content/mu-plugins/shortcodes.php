@@ -20,6 +20,8 @@ add_shortcode('get_card', function($atts) {
             if (!get_post_thumbnail_id($post->ID)) :
               if ($thumb_modifier === 'client') {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/uploads/2017/06/WHITE-megaphone.png), radial-gradient(rgba(185,73,245,0.75), rgba(185,73,245,0)), url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(185,73,245,1), rgba(185,73,245,1)); background-size: 125px, cover, cover, cover; background-repeat: no-repeat;" class="card-tb" title="' . get_the_title() . '"></a>';
+              } elseif (get_field('external_event')) {
+                echo '<a href="' . get_field('external_event_link') . '" style="background-image: url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(237,76,6,1), rgba(237,76,6,1));" class="card-tb" title="' . get_the_title() . '"></a>';     
               } else {
                 echo '<a href="' . get_the_permalink() . '" style="background-image: url(/wp-content/themes/octiv2016/dist/img/octiv-pattern.svg), linear-gradient(rgba(237,76,6,1), rgba(237,76,6,1));" class="card-tb" title="' . get_the_title() . '"></a>';
               }
