@@ -189,7 +189,7 @@ select {
 	color: $brand;
 	font-weight: bold;
 	margin-right: 5px;
-	[class*="callout"] & {
+	[class*="brand-callout"] & {
 		color: $white;
 	}
 }

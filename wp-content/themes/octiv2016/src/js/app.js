@@ -617,12 +617,24 @@ if (window.MktoForms2) {
 
 if ($('#catalog-screenshots').length) {
   $('#catalog-screenshots').on('click', 'img', function() {
-    var imagePath = this.currentSrc;
-    var imageTitle = this.alt;
-    $('.empty-modal').find('.modal-content').html(function() {
-      return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
-    });
+    if (!this.classList.contains('video-thumbnail')) {
+      var imagePath = this.currentSrc;
+      var imageTitle = this.alt;
+      $('.empty-modal').find('.modal-content').html(function() {
+        return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
+      });
+    } else {
+      $('.empty-modal').find('.modal-content').html(function() {
+        var featureVideoForm = document.querySelector('#video-form').innerHTML;
+        this.innerHTML = featureVideoForm;
+      });
+    }
     $('.empty-modal').modal();
+  });
+  $('.modal .close').on('click', function() {
+    console.dir($('.empty-modal .modal-content').html(function() {
+      return '';
+    }));
   });
 }
 

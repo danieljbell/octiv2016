@@ -41,6 +41,32 @@
           <section style="padding-top: 0;">
             <h3 id="octiv-<?php echo strtolower(get_the_title()); ?>" style="padding-bottom: 0.5rem;">Why Octiv + <?php echo get_the_title(); ?></h3>
             <?php echo the_content(); ?>
+            <?php if (get_field('integration_video_id')) : ?>
+              <div class="callout integration-video-container" style="padding: 2rem; border: 1px solid #ccc; border-radius: 3px; box-shadow: 2px 2px 30px rgba(0,0,0,0.1);">
+                <div class="half">
+                  <div class="">
+                    <img src="<?php echo get_field('integration_video_thumbnail'); ?>" alt="" style="width: 100%;" class="video-thumbnail">
+                  </div>
+                  <div>
+                    <h4>See Octiv + <?php echo get_the_title(); ?> in Action</h4>
+                    <p>Fill out the form below to view a brief demonstration.</p>
+                    <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+                    <form id="mktoForm_<?php echo get_field('integration_video_marketo_form_id'); ?>"></form>
+                    <script>
+                      MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('integration_video_marketo_form_id'); ?>, function(form) {
+                        form.onSuccess(function(values, followUpUrl) {
+                          form.getFormElem().hide();
+                          var videoContainer = document.querySelector('.integration-video-container');
+                          var videoHTML = document.querySelector('#video-html');
+                          videoContainer.innerHTML = videoHTML.innerHTML;
+                          return false;
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+            <?php endif; ?>
           </section>
           <section style="padding-top: 0;">
             <h3 id="key-capabilities" style="padding-bottom: 0.5rem;">Key Capabilities</h3>
@@ -156,54 +182,46 @@
   </div>
 </section>
 
+
+<?php if (get_field('has_feature_video')) : ?>
+  <div id="video-html">
+    <div class="video-outer">
+      <div class="video-inner">
+        <iframe src="https://www.youtube.com/embed/<?php echo get_field('integration_video_id'); ?>?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+
 <style>
-.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap {
+#mktoForm_1008 .mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap {
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
 }
-.mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap label{
+#mktoForm_1008 .mktoFormRow.third:first-of-type > div:last-child > .mktoFieldWrap label{
   order: 1;
 }
 .fixed-hero-section .btn-white-outline:hover {
   color: <?php echo get_field('integration_color'); ?> !important;
 }
-/*label[for="subscriptionNewsletter"] {
-  margin-top: 1.75rem;
-  padding-left: 1.25rem;
+.video-thumbnail {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
 }
-label[for="subscriptionNewsletter"] + div {
-  margin-top: -1.25rem;
-  margin-bottom: 1rem;
+.integration-video-container form .third > * {
+  width: 100%;
+  margin-right: 0;
 }
-@media screen and (min-width: 960px) {
-  label[for="subscriptionNewsletter"] {
-    margin-top: 1.5rem;
-  }
-  label[for="subscriptionNewsletter"] + div {
-    display: block;
-    margin-top: -2.5rem;
-    margin-bottom: 2rem;
-  }
+#video-html {
+  display: none;
 }
-
-@media screen and (min-width: 1440px) {
-  label[for="subscriptionNewsletter"] {
-    margin-top: 1.5rem;
-  }
-  label[for="subscriptionNewsletter"] + div {
-    display: block;
-    margin-top: -1.25rem;
-    margin-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .integration-video-container .half > * {
+    margin-bottom: 0;
   }
 }
-  select {
-    color: #000;
-  }
-  
-  #site-footer>.site-width:first-of-type {
-    border-top: 0;
-  }*/
 </style>
 
 <?php get_footer(); ?>
