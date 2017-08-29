@@ -116,7 +116,7 @@
                 echo '</div>';
                 echo '<div class="centered"><a href="/resources/events/' . $term->slug . '" class="btn-outline" title="View All ' . $term->name . ' Events">View All ';
                 if ($term->slug != 'online') {
-                  echo $term->name . ' Events';
+                  echo 'Events';
                 } else {
                   echo 'Webinars';
                 }
