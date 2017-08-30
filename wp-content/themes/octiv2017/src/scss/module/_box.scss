@@ -1,0 +1,7 @@
+.box {
+  background-color: $lgray;
+  background-image: linear-gradient(transparentize(white, 0.9), transparentize(black, 0.9));
+  border-radius: 3px;
+  box-shadow: 0 0 45px rgba(black, 0.2);
+  padding: 2rem;
+}

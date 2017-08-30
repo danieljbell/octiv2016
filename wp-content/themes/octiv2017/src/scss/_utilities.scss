@@ -1,3 +1,7 @@
+.font-bump {
+  font-size: 1.25em;
+}
+
 .no-style-text-link {
   color: $gray;
   text-decoration: none;
@@ -61,6 +65,17 @@
 
 .pad-a {
   padding: 1em;
+  &-tablet-up {
+    @include tablet {
+      padding: 1em;
+    }
+  }
+  &-more {
+    padding: 2em;
+  }
+  &-most {
+    padding: 3em;
+  }
 }
 
 .pad-y {
@@ -79,10 +94,24 @@
 .pad-x {
   padding-left: 1em;
   padding-right: 1em;
+  &-more {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  &-most {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 
 .pad-t {
   padding-top: 1em;
+  &-more {
+    padding-top: 2em;
+  }
+  &-most {
+    padding-top: 3em;
+  }
 }
 
 .pad-r {
@@ -148,5 +177,106 @@
     width: 100%;
     display: block;
     border-radius: 0 0 5px 5px;
+  }
+}
+
+/*
+==============================
+COLOR BOXES
+==============================
+*/
+
+.color-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// matches all color-box-headline for common styles
+[class*='color-box-headline'] {
+  color: $white;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 3px;
+  text-shadow: none;
+  line-height: 1;
+}
+
+// matches all color-box-subheadline for common styles
+[class*='color-box-subheadline'] {
+  color: $white;
+  padding: 0.15em 0.5em 0.1em;
+  border-radius: 0px 0px 3px 3px;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow: inset 0 5px 4px rgba(black, 0.15);
+}
+
+.color-box-headline--brand {
+  background-color: $brand;
+}
+
+.color-box-subheadline--brand {
+  background-color: darken($brand, 10%);
+}
+
+.color-box-headline--brand-two {
+  background-color: $brand2;
+}
+
+.color-box-subheadline--brand-two {
+  background-color: darken($brand2, 15%);
+}
+
+.color-box-headline--brand-three {
+  background-color: $brand3;
+}
+
+.color-box-subheadline--brand-three {
+  background-color: darken($brand3, 15%);
+}
+
+
+/*
+==============================
+EMBEDED VIDEO CONTAINER STYLES
+==============================
+*/
+.video-outer {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.video-inner {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*
+==============================
+DOCUMENT CONTAINER
+==============================
+*/
+.document-container {
+  position: relative;
+  background-image: url(../img/document-container.svg);
+  background-position: top right;
+  background-size: cover;
+  @include desktop {
+    max-width: 75vw;
+  }
+  @include widescreen {
+    max-width: 40vw;
+  }
+  @include fullhd {
+    max-width: 35vw;
+  }
+  .typed-paragraph {
+    color: $brand;
+    font-size: 1.5em;
+    margin-bottom: 1em;
   }
 }

@@ -144,9 +144,24 @@ console.dir(thing);
   if (document.querySelectorAll('.slider')) {
     $('.slider').slick({
       arrows: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
       dots: true,
       draggable: false
     });
   }
+
+  /*
+  ==============================
+  DOCUMENT CONTAINER TYPED
+  ==============================
+  */
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    loop: true,
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 1500
+  });
 
 })();

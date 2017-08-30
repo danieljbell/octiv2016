@@ -26,11 +26,6 @@ $rand_num = mt_rand(1,4);
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
 
-  if (is_front_page()) {
-    $page_title = 'Octiv Powers Documents';
-    $page_sub_title = 'Create digital documents in minutes, share them online, sign from anywhere and store your documents securely in the cloud. Save more time and boost productivity.';
-  }
-
   // CLIENT STORIES POST TYPE
   if (is_post_type_archive('client-stories')) {
     $page_title = 'Client Stories';
@@ -85,9 +80,13 @@ $rand_num = mt_rand(1,4);
 
     <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
       <div class="site-width">
-        <div class="hero-color-boxes">
-          <h1><?php echo $page_title; ?></h1>
-          <p class="heading-sub"><?php echo strip_tags(get_the_excerpt()); ?></p>
+        <div class="color-boxes">
+          <h1 class="color-box-headline--brand-two"><?php echo $page_title; ?></h1>
+          <?php 
+            if (get_the_excerpt()) {
+              echo '<p class="color-box-subheadline--brand-two">' . strip_tags(get_the_excerpt()) . '</p>';
+            }
+          ?>
         </div>
         <?php
           if ($page_sub_title) {
@@ -97,7 +96,10 @@ $rand_num = mt_rand(1,4);
       </div>
     </section>
 
-  <?php else : ?>
+  <?php 
+    else :
+    /* HOMEPAGE HERO */
+  ?>
   
     <section class="hero">
       <div class="slider">
@@ -109,8 +111,8 @@ $rand_num = mt_rand(1,4);
                 $page_title = get_sub_field('banner_headline');
                 $page_sub_title = get_sub_field('banner_subheadline');
                 $page_hero_body_copy = get_sub_field('banner_body_copy');
-                $hero_bg = 'url(//unsplash.it/1280/600)';
-                $cta_location = 'asdfasdf';
+                $hero_bg = 'url(' . get_sub_field('banner_image') . ')';
+                $cta_location = get_sub_field('banner_link');
               } else {
                 $page_title = get_sub_field('pick_your_page')[0]->post_title;
                 $page_sub_title = get_sub_field('pick_your_page')[0]->post_excerpt;
@@ -124,9 +126,9 @@ $rand_num = mt_rand(1,4);
         ?>
           <div class="slide" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), <?php echo $hero_bg; ?>">
             <div class="site-width">
-              <div class="hero-color-boxes">
-                <h1><?php echo $page_title; ?></h1>
-                <p class="heading-sub"><?php echo $page_sub_title; ?></p>
+              <div class="color-boxes">
+                <h1 class="color-box-headline--brand-two"><?php echo $page_title; ?></h1>
+                <p class="color-box-subheadline--brand-two"><?php echo $page_sub_title; ?></p>
                 <h2><?php echo $page_hero_body_copy; ?></h2>
                 <a href="<?php echo $cta_location; ?>" class="btn-white--outline">asdsadf</a>
               </div>
@@ -141,7 +143,10 @@ $rand_num = mt_rand(1,4);
 
   <?php endif; ?>
 
-<?php else : ?>
+<?php 
+  else :
+  /* INTEGRATIONS HERO */
+?>
 
   <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
     <div class="site-width">

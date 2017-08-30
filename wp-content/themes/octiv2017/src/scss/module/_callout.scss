@@ -1,5 +1,6 @@
 .light-callout {
   background-color: $lgray;
+  background-image: linear-gradient($white,rgba(black, 0.1));
 }
 
 .brand-callout {
@@ -14,4 +15,10 @@
     color: $brand;
     background-color: $white;
   }
+}
+
+.pattern-callout {
+  background-color: darken($lgray, 3%);
+  background-image: linear-gradient(rgba(darken($lgray, 3%), 0.4), rgba(darken($lgray, 3%), 0.4)), url(../img/octiv-pattern--dark.svg);
+  background-size: 300px;
 }

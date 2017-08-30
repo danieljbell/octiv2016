@@ -40,6 +40,7 @@ gulp.task('js', function () {
   gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/slick-carousel/slick/slick.js',
+    './node_modules/typed.js/lib/typed.min.js',
     'src/js/global.js'
   ])
     .pipe(sourcemaps.init())

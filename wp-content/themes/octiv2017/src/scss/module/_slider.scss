@@ -37,3 +37,30 @@
     color: $brand;
   }
 }
+
+
+/*
+==============================
+SLIDER MODULES
+==============================
+*/
+.client-testimonial-slider {
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+/*
+==============================
+PAGE OVERRIDES
+==============================
+*/
+
+/* Homepage */
+.home .hero .slick-dots {
+  bottom: 5rem;
+}
+
