@@ -136,5 +136,17 @@ console.dir(thing);
     }
   });
   
+  /*
+  ==============================
+  SLIDERS
+  ==============================
+  */
+  if (document.querySelectorAll('.slider')) {
+    $('.slider').slick({
+      arrows: false,
+      dots: true,
+      draggable: false
+    });
+  }
 
 })();

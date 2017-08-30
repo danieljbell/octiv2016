@@ -81,16 +81,65 @@ $rand_num = mt_rand(1,4);
 
 <?php if (!is_singular('integration')) : ?>
 
-  <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
-    <div class="site-width">
-      <h1><?php echo $page_title; ?></h1>
-      <?php
-        if ($page_sub_title) {
-          echo '<h2>' . $page_sub_title . '</h2>';
-        }
-      ?>
-    </div>
-  </section>
+  <?php if (!is_front_page()) : ?>
+
+    <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
+      <div class="site-width">
+        <div class="hero-color-boxes">
+          <h1><?php echo $page_title; ?></h1>
+          <p class="heading-sub"><?php echo strip_tags(get_the_excerpt()); ?></p>
+        </div>
+        <?php
+          if ($page_sub_title) {
+            echo '<h2>' . $page_sub_title . '</h2>';
+          }
+        ?>
+      </div>
+    </section>
+
+  <?php else : ?>
+  
+    <section class="hero">
+      <div class="slider">
+        <?php
+          if (have_rows('hero_banners')) :
+            while (have_rows('hero_banners')) : 
+              the_row();
+              if (get_sub_field('custom_banner')) {
+                $page_title = get_sub_field('banner_headline');
+                $page_sub_title = get_sub_field('banner_subheadline');
+                $page_hero_body_copy = get_sub_field('banner_body_copy');
+                $hero_bg = 'url(//unsplash.it/1280/600)';
+                $cta_location = 'asdfasdf';
+              } else {
+                $page_title = get_sub_field('pick_your_page')[0]->post_title;
+                $page_sub_title = get_sub_field('pick_your_page')[0]->post_excerpt;
+                $thumb_id = get_post_thumbnail_id(get_sub_field('pick_your_page')[0]->ID);
+                $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+                $thumb_url = $thumb_url_array[0];
+                $hero_bg = 'url(' . $thumb_url . ')';
+                $page_hero_body_copy = get_field('sidebar_title', $page_hero_body_copy[0]->ID, false);
+                $cta_location = get_the_permalink(get_sub_field('pick_your_page')[0]->ID);
+              }
+        ?>
+          <div class="slide" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), <?php echo $hero_bg; ?>">
+            <div class="site-width">
+              <div class="hero-color-boxes">
+                <h1><?php echo $page_title; ?></h1>
+                <p class="heading-sub"><?php echo $page_sub_title; ?></p>
+                <h2><?php echo $page_hero_body_copy; ?></h2>
+                <a href="<?php echo $cta_location; ?>" class="btn-white--outline">asdsadf</a>
+              </div>
+            </div>
+          </div>
+        <?php
+            endwhile;
+          endif;
+        ?>
+      </div>
+    </section>
+
+  <?php endif; ?>
 
 <?php else : ?>
 

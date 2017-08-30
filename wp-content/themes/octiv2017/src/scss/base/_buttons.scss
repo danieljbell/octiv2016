@@ -66,8 +66,10 @@ button {
 }
 
 .btn-white--outline {
+  text-decoration: none;
   padding: 0.5em 1em;
   border: 1px solid $white;
+  border-radius: 3px;
   color: $white;
   transition: all 200ms ease-in-out;
   &:hover,

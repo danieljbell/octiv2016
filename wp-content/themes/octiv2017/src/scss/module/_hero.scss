@@ -12,13 +12,51 @@
   *[class*="btn"] {
     text-shadow: none;
   }
+  h1 {
+    background-color: $brand2;
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    text-shadow: none;
+  }
   h2 {
     text-transform: none;
     font-weight: normal;
+    font-size: 1.4em;
+    line-height: 1.3;
     @include bp(md) {
       max-width: 75%;
       margin: 0 auto;
     }
+  }
+  .hero-color-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-sub {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    background-color: darken($brand2, 15%);
+    padding: 0.15em 0.5em 0.1em;
+    border-radius: 0px 0px 3px 3px;
+    text-shadow: none;
+    box-shadow: inset 0 5px 4px rgba(black, 0.15);
+  }
+}
+
+.home .hero {
+  padding: 0;
+  .slide {
+    background-size: cover;
+    padding: 3rem 0;
+    @include tablet {
+      padding: 6rem 0;
+    }
+  }
+  h2 {
+    margin-bottom: 1em;
   }
 }
 

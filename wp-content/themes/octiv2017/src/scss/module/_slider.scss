@@ -1,0 +1,39 @@
+@import 
+  '../../node_modules/slick-carousel/slick/slick.css';
+
+.slick-slide {
+  outline: none;
+  min-height: 400px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  button {
+    color: transparent;
+    position: relative;
+    margin: 0 2px;
+    &:before {
+      color: $white;
+      position: absolute;
+      content: '•';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-active button:before {
+    color: $brand;
+  }
+}
