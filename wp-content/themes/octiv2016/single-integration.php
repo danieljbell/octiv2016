@@ -58,7 +58,8 @@
                           form.getFormElem().hide();
                           var videoContainer = document.querySelector('.integration-video-container');
                           var videoHTML = document.querySelector('#video-html');
-                          videoContainer.innerHTML = videoHTML.innerHTML;
+                          console.log(videoHTML);
+                          // videoContainer.innerHTML = videoHTML.innerHTML;
                           return false;
                         });
                       });
@@ -183,7 +184,7 @@
 </section>
 
 
-<?php if (get_field('has_feature_video')) : ?>
+<?php if (get_field('has_integration_video')) : ?>
   <div id="video-html">
     <div class="video-outer">
       <div class="video-inner">
