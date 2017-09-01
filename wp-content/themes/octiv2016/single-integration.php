@@ -58,8 +58,7 @@
                           form.getFormElem().hide();
                           var videoContainer = document.querySelector('.integration-video-container');
                           var videoHTML = document.querySelector('#video-html');
-                          console.log(videoHTML);
-                          // videoContainer.innerHTML = videoHTML.innerHTML;
+                          videoContainer.innerHTML = videoHTML.innerHTML;
                           return false;
                         });
                       });
