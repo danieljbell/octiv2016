@@ -1,3 +1,28 @@
+/*
+==============================
+FONT COLORS
+==============================
+*/
+.font-color-brand {
+  color: $brand;
+}
+
+.font-color-brand-two {
+  color: $brand2;
+}
+
+.font-color-brand-three {
+  color: $brand3;
+}
+
+.font-color-brand-four {
+  color: $brand4;
+}
+
+.font-color-brand-five {
+  color: $brand5;
+}
+
 .font-bump {
   font-size: 1.25em;
 }
@@ -236,6 +261,22 @@ COLOR BOXES
   background-color: darken($brand3, 15%);
 }
 
+.color-box-headline--brand-four {
+  background-color: $brand4;
+}
+
+.color-box-subheadline--brand-four {
+  background-color: darken($brand4, 15%);
+}
+
+.color-box-headline--brand-five {
+  background-color: $brand5;
+}
+
+.color-box-subheadline--brand-five {
+  background-color: darken($brand5, 15%);
+}
+
 
 /*
 ==============================
@@ -270,9 +311,6 @@ DOCUMENT CONTAINER
   }
   @include widescreen {
     max-width: 40vw;
-  }
-  @include fullhd {
-    max-width: 35vw;
   }
   .typed-paragraph {
     color: $brand;

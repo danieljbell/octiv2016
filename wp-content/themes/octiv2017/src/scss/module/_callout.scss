@@ -17,6 +17,20 @@
   }
 }
 
+.brand-two-callout {
+  background-color: $brand2;
+  * {
+    color: $white;
+  }
+  a[href*="tel"] {
+    color: $white; 
+  }
+  .btn-primary {
+    color: $brand;
+    background-color: $white;
+  }
+}
+
 .pattern-callout {
   background-color: darken($lgray, 3%);
   background-image: linear-gradient(rgba(darken($lgray, 3%), 0.4), rgba(darken($lgray, 3%), 0.4)), url(../img/octiv-pattern--dark.svg);
