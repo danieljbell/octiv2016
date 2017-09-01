@@ -741,5 +741,22 @@ if ($('body').hasClass('single-releases')) {
   });
 }
 
+
+/*
+==============================
+INTEGRATION VIDEO AUTH
+==============================
+*/
+if (getParameterByName('demo_auth')) {
+  var paramValue = getParameterByName('demo_auth');
+  if (paramValue === 'true') {
+    var videoBox = $('.integration-video-container');
+    videoBox.html($('#video-html').html());
+  }
+  var originalURL = document.location.pathname;
+  window.history.replaceState( {} , 'bar', originalURL );
+}
+
+
 // end document.ready
 });
