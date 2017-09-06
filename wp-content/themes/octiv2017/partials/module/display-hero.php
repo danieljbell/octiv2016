@@ -107,6 +107,10 @@ $rand_num = mt_rand(1,4);
           if (have_rows('hero_banners')) :
             while (have_rows('hero_banners')) : 
               the_row();
+              $cta_text = 'Learn More';
+              if (get_sub_field('banner_link_text')) {
+                $cta_text = get_sub_field('banner_link_text');
+              }
               if (get_sub_field('custom_banner')) {
                 $page_title = get_sub_field('banner_headline');
                 $page_sub_title = get_sub_field('banner_subheadline');
@@ -130,7 +134,7 @@ $rand_num = mt_rand(1,4);
                 <h1 class="color-box-headline--brand-two"><?php echo $page_title; ?></h1>
                 <p class="color-box-subheadline--brand-two"><?php echo $page_sub_title; ?></p>
                 <h2><?php echo $page_hero_body_copy; ?></h2>
-                <a href="<?php echo $cta_location; ?>" class="btn-white--outline">asdsadf</a>
+                <a href="<?php echo $cta_location; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
               </div>
             </div>
           </div>

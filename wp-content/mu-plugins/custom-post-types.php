@@ -138,6 +138,32 @@ function register_solutions_post_type() {
   register_post_type( 'solutions', $args );
 }
 
+/*
+==============================
+SOLUTIONS TAXONOMY
+==============================
+*/
+function solutions_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'solution_type',
+        'solutions',
+        array(
+            'label' => __( 'Solution Type' ),
+            // 'rewrite' => array( 'slug' => 'resources/events' ),
+            'with_front' => false,
+            'hierarchical' => true,
+            // 'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_solution_type',
+                'edit_terms' => 'publish_solution_type'
+            )
+        )
+    );
+}
+add_action( 'init', 'solutions_init' );
+
 
 /*
 ===================================

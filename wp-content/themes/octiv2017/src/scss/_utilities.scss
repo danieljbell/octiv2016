@@ -24,7 +24,9 @@ FONT COLORS
 }
 
 .font-bump {
-  font-size: 1.25em;
+  @include tablet {
+    font-size: 1.25em;
+  }
 }
 
 .no-style-text-link {
@@ -230,7 +232,7 @@ COLOR BOXES
 // matches all color-box-subheadline for common styles
 [class*='color-box-subheadline'] {
   color: $white;
-  padding: 0.15em 0.5em 0.1em;
+  padding: 0.1em 0.5em 0.2em;
   border-radius: 0px 0px 3px 3px;
   font-weight: normal;
   text-shadow: none;
@@ -306,6 +308,8 @@ DOCUMENT CONTAINER
   background-image: url(../img/document-container.svg);
   background-position: top right;
   background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 15px 30px rgba(0,0,0,0.25));
   @include desktop {
     max-width: 75vw;
   }
