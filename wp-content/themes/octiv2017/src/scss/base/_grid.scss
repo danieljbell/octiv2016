@@ -194,6 +194,16 @@
       }
     }
   }
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 2rem;
+    > * {
+      margin: 0 !important;
+    }
+    @include tablet {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
 }
 
 .one-fourth {

@@ -91,3 +91,22 @@
     }
   }
 }
+
+.post-author-bio-container {
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+    max-width: 125px;
+    border-radius: 50%;
+    border: 5px solid $white;
+    box-shadow: 0 0 35px rgba(black, 0.2);
+  }
+  .post-author-bio-headshot {
+    flex-shrink: 0;
+    margin-right: 2rem;
+  }
+}

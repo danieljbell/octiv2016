@@ -15,8 +15,9 @@ $rand_num = mt_rand(1,4);
   HERO DEFAULT VARIABLES
   ==============================
   */
-  $page_title = get_the_title();
-  $page_sub_title = strip_tags(get_the_excerpt());
+  $page_hero_title = get_the_title();
+  $page_hero_sub_title = get_field('short_description');
+  $page_hero_body = strip_tags(get_the_excerpt());
   if (has_post_thumbnail()) {
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
@@ -28,24 +29,26 @@ $rand_num = mt_rand(1,4);
 
   // CLIENT STORIES POST TYPE
   if (is_post_type_archive('client-stories')) {
-    $page_title = 'Client Stories';
-    $page_sub_title = null;
+    $page_hero_title = 'Client Stories';
+    $page_hero_sub_title = null;
+    $page_hero_body = null;
   }
 
   if (is_singular('client-stories')) {
     $hero_bg = 'url(' . get_field('client_testimonial_image') . ')';
-    $page_title = get_field('short_description');
-    $page_sub_title = strip_tags( get_the_excerpt() );
+    $page_hero_title = get_the_title();
+    $page_hero_sub_title = 'Client Story';
+    $page_hero_body = strip_tags(get_the_excerpt());
   }
 
   // EVENTS POST TYPE
   if (is_post_type_archive('events')) {
-    $page_title = 'Events & Webinars';
+    $page_hero_title = 'Events & Webinars';
   }
 
   // PRESS RELEASES POST TYPE
   if (is_post_type_archive('press-releases')) {
-    $page_title = 'Press Releases';
+    $page_hero_title = 'Press Releases';
   }
 
   // POST POST TYPE
@@ -54,23 +57,24 @@ $rand_num = mt_rand(1,4);
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     $thumb_url = $thumb_url_array[0];
     $hero_bg = 'url(' . $thumb_url . ')';
-    $page_title = get_the_title();
-    $page_sub_title = strip_tags( get_the_excerpt() );
+    $page_hero_title = get_the_title();
+    $page_hero_sub_title = 'Blog Post';
+    $page_hero_body = strip_tags( get_the_excerpt() );
   }
 
   // INTEGRATIONS POST TYPE
   if (is_post_type_archive('integration')) {
-    $page_title = 'Integrations';
+    $page_hero_title = 'Integrations';
   }
 
   if (is_singular('integration')) {
     $hero_bg = 'linear-gradient(' . get_field('integration_color') . ', ' . get_field('integration_color') . ')';
-    $page_title = get_the_title();
+    $page_hero_title = get_the_title();
   }
 
   // PAGE TEMPLATES - Archive
   if (is_page_template('page-templates/archive.php')) {
-    $page_title = get_the_title();
+    $page_hero_title = get_the_title();
   }
 ?>
 
@@ -81,16 +85,16 @@ $rand_num = mt_rand(1,4);
     <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
       <div class="site-width">
         <div class="color-boxes">
-          <h1 class="color-box-headline--brand-two"><?php echo $page_title; ?></h1>
-          <?php 
-            if (get_the_excerpt()) {
-              echo '<p class="color-box-subheadline--brand-two">' . strip_tags(get_the_excerpt()) . '</p>';
+          <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
+          <?php
+            if ($page_hero_sub_title) {
+              echo '<p class="color-box-subheadline--brand-two">' . $page_hero_sub_title . '</p>';
             }
           ?>
         </div>
         <?php
-          if ($page_sub_title) {
-            echo '<h2>' . $page_sub_title . '</h2>';
+          if ($page_hero_body) {
+            echo '<h2>' . $page_hero_body . '</h2>';
           }
         ?>
       </div>
@@ -112,14 +116,14 @@ $rand_num = mt_rand(1,4);
                 $cta_text = get_sub_field('banner_link_text');
               }
               if (get_sub_field('custom_banner')) {
-                $page_title = get_sub_field('banner_headline');
-                $page_sub_title = get_sub_field('banner_subheadline');
+                $page_hero_title = get_sub_field('banner_headline');
+                $page_hero_body = get_sub_field('banner_subheadline');
                 $page_hero_body_copy = get_sub_field('banner_body_copy');
                 $hero_bg = 'url(' . get_sub_field('banner_image') . ')';
                 $cta_location = get_sub_field('banner_link');
               } else {
-                $page_title = get_sub_field('pick_your_page')[0]->post_title;
-                $page_sub_title = get_sub_field('pick_your_page')[0]->post_excerpt;
+                $page_hero_title = get_sub_field('pick_your_page')[0]->post_title;
+                $page_hero_body = get_sub_field('pick_your_page')[0]->post_excerpt;
                 $thumb_id = get_post_thumbnail_id(get_sub_field('pick_your_page')[0]->ID);
                 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                 $thumb_url = $thumb_url_array[0];
@@ -131,8 +135,8 @@ $rand_num = mt_rand(1,4);
           <div class="slide" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), <?php echo $hero_bg; ?>">
             <div class="site-width">
               <div class="color-boxes">
-                <h1 class="color-box-headline--brand-two"><?php echo $page_title; ?></h1>
-                <p class="color-box-subheadline--brand-two"><?php echo $page_sub_title; ?></p>
+                <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
+                <p class="color-box-subheadline--brand-two"><?php echo $page_hero_body; ?></p>
                 <h2><?php echo $page_hero_body_copy; ?></h2>
                 <a href="<?php echo $cta_location; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
               </div>
