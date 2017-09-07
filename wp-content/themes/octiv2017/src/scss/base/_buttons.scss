@@ -78,3 +78,17 @@ button {
     color: $gray;
   }
 }
+
+.btn-dark--outline {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border: 1px solid $gray;
+  border-radius: 3px;
+  color: $gray;
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $gray;
+    color: $white;
+  }
+}

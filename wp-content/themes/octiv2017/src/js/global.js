@@ -151,6 +151,47 @@ console.dir(thing);
     });
   }
 
+  if (document.querySelectorAll('.slider-for')) {
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      arrows: false,
+      centerMode: true,
+      centerPadding: '2rem',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '18px',
+          }
+        }
+      ]
+    });
+  }
+
   /*
   ==============================
   DOCUMENT CONTAINER TYPED

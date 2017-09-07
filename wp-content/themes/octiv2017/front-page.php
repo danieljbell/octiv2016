@@ -4,7 +4,7 @@
 
   <?php get_template_part('partials/module/display', 'hero'); ?>
 
-  <section style="margin-top: -3rem; margin-bottom: -3rem; position: relative;">
+  <section style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
     <div class="site-width">
       <div class="box--light">
         <div class="two-third-only has-text-center pad-a-tablet-up">
@@ -71,30 +71,39 @@
     </section>
   <?php endif; ?>
 
-  <?php get_template_part('partials/module/display', 'client-testimonial-slider'); ?>
+  
+  <?php
+    if (get_field('has_promoted_item')) {
+      echo '<section class="client-testimonial-slider">';
+    } else {
+      echo '<section class="client-testimonial-slider no-promoted-item">';
+    }
+    get_template_part('partials/module/display', 'client-testimonial-slider');
+    echo '</section>';
+  ?>
 
-  <section class="pad-y-most">
-    <div class="site-width pad-y-most">
-      <div class="color-boxes">
-        <h2 class="color-box-headline--brand-five">Resources</h2>
-        <p class="color-box-subheadline--brand-five">Tack back your time</p>
-      </div>
-      <div class="third">
-        <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 3
-          );
-          $query = new WP_Query($args);
-          if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-              echo do_shortcode('[get_card_v3 excerpt="true"]');
-            endwhile;
-          endif;
-        ?>
-      </div>
+<section class="pad-y-most">
+  <div class="site-width pad-y-most">
+    <div class="color-boxes">
+      <h2 class="color-box-headline--brand-five">Resources</h2>
+      <p class="color-box-subheadline--brand-five">Tack back your time</p>
     </div>
-  </section>
+    <div class="third">
+      <?php
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 3
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+            echo do_shortcode('[get_card_v3 excerpt="true"]');
+          endwhile;
+        endif;
+      ?>
+    </div>
+  </div>
+</section>
 
   <section class="pattern-callout pad-t-most has-text-center">
     <div class="site-width">

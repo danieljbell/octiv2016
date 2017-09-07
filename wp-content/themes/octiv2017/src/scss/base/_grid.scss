@@ -64,12 +64,18 @@
 .third {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
   > * {
-    margin-right: 2rem;
     margin-bottom: 2rem;
-    flex-basis: calc((100%/3) - 3.5rem);
-    &:nth-child(3n) {
-      margin-right: 0;
+    @include tablet {
+      margin-right: 2rem;
+      flex-basis: calc((100%/3) - 3.5rem);
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
   @supports (display: grid) {

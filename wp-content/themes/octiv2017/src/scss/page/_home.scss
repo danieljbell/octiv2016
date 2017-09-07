@@ -8,3 +8,8 @@
   padding-bottom: 3rem; 
   color: $white;
 }
+
+.no-promoted-item {
+  position: relative;
+  z-index: 0;
+}

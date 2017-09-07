@@ -852,7 +852,7 @@ function register_client_story_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/client-stories' ),
     'menu_icon'   => 'dashicons-format-status',
-    'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
     'show_in_rest'       => true,
     'rest_base'          => 'client-stories',
     'rest_controller_class' => 'WP_REST_Posts_Controller',
