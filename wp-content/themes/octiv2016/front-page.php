@@ -49,7 +49,7 @@ $context = stream_context_create(array(
 							<p>The Fall '17 Release delivers advanced eSignature and contract management workflows.</p>
 						</div>
 					</div>
-					<a href="/press-releases/octiv-fall-17-release-is-now-live/" class="btn-primary">Learn More</a>
+					<a href="/press-releases/octiv-fall-17-release-now-live/" class="btn-primary">Learn More</a>
 				</div>
 			</section>
 		</div>
