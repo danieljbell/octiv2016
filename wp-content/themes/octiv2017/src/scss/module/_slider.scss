@@ -130,7 +130,10 @@ PAGE OVERRIDES
 .home {
   .hero {
     .slick-slide {
-      min-height: 550px;
+      min-height: 300px;
+      @include tablet {
+        min-height: 550px;
+      }
     }
     .slick-dots {
       bottom: 5rem;

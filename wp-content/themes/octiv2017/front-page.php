@@ -46,24 +46,30 @@
       $thumb_id = get_post_thumbnail_id($promoted_item_ID);
       $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       $thumb_url = $thumb_url_array[0];
+      $promoted_headline = $promoted_item[0]->post_title;
+      $promoted_subheadline = $promoted_item[0]->post_excerpt;
+      $promoted_body_copy = get_field('long_description', $promoted_item[0]->ID);
+      $cta_link = get_the_permalink($promoted_item_ID);
+      if (get_field('custom_promoted_item')) {
+        $promoted_headline = get_field('custom_promoted_headline');
+        $promoted_subheadline = get_field('custom_promoted_subheadline');
+        $promoted_body_copy = get_field('custom_promoted_body_copy');
+        $thumb_url = get_field('custom_promoted_image');
+        $cta_link = get_field('custom_promoted_link');
+      }
       if (get_field('promoted_item_cta_text')) {
         $cta_text = get_field('promoted_item_cta_text');
       } else {
         $cta_text = 'Learn More';
-      }
-      if (get_field('promoted_item_cta_link')) {
-        $cta_link = get_field('promoted_item_cta_link');
-      } else {
-        $cta_link = get_the_permalink($promoted_item_ID);
       }
   ?>
     <section class="has-text-center promoted-item-container" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo $thumb_url; ?>);">
       <div class="site-width">
         <div class="half-only">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-four"><?php echo $promoted_item[0]->post_title; ?></h2>
-            <p class="color-box-subheadline--brand-four"><?php echo $promoted_item[0]->post_excerpt; ?></p>
-            <p class="font-bump"><?php echo get_field('long_description', $promoted_item[0]->ID); ?></p>
+            <h2 class="color-box-headline--brand-four"><?php echo $promoted_headline; ?></h2>
+            <p class="color-box-subheadline--brand-four"><?php echo $promoted_subheadline; ?></p>
+            <p class="font-bump"><?php echo $promoted_body_copy; ?></p>
             <a href="<?php echo $cta_link; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
           </div>
         </div>

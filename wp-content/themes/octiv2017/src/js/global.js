@@ -144,10 +144,11 @@ console.dir(thing);
   if (document.querySelectorAll('.slider')) {
     $('.slider').slick({
       arrows: false,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
-      draggable: false
+      draggable: false,
+      adaptiveHeight: true
     });
   }
 
@@ -167,6 +168,7 @@ console.dir(thing);
       centerMode: true,
       centerPadding: '2rem',
       focusOnSelect: true,
+      draggable: false,
       responsive: [
         {
           breakpoint: 1280,
@@ -178,6 +180,7 @@ console.dir(thing);
           breakpoint: 960,
           settings: {
             slidesToShow: 3,
+            draggable: true,
           }
         },
         {
@@ -186,6 +189,7 @@ console.dir(thing);
             slidesToShow: 3,
             centerMode: true,
             centerPadding: '18px',
+            draggable: true,
           }
         }
       ]
