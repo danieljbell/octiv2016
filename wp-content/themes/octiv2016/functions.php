@@ -20,7 +20,7 @@ ADD GLOBAL JS TO PAGE
 ==============================
 */
 function enqueue_global_js() {
-	wp_enqueue_script('app', get_stylesheet_directory_URI() . '/dist/js/app.js', array(), '1.0.31', true);
+	wp_enqueue_script('app', get_stylesheet_directory_URI() . '/dist/js/app.js', array(), '1.0.32', true);
 	if (is_post_type_archive('events') || is_tax('event_type') || is_singular('events')) {
 		wp_enqueue_script('events', get_stylesheet_directory_URI() . '/dist/js/events.js', array(), '1.0.23', true);
 	}
