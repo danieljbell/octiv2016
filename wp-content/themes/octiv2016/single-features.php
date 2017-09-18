@@ -61,7 +61,7 @@
               }
             endwhile;
             echo '</ul>';
-            if (get_field('promoted_item')) {
+            if (get_field('has_promoted_item')) {
               $args = array(
                 'post_type' => 'any',
                 'post__in' => get_field('promoted_item')
