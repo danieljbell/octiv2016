@@ -1,4 +1,16 @@
-<?php get_header(); ?>
+<?php 
+
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+  'http' => array(
+    'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+  )
+));
+
+get_header();
+
+?>
 
 <main>
 
@@ -21,15 +33,15 @@
         </div>
         <div class="half has-text-center vertical-align">
           <div class="pad-t-more pad-x-most">
-            <div class="box--brand-two pad-a mar-b" style="display: inline-block;">
-              <img src="//fillmurray.com/65/65" alt="">
+            <div class="box--brand-two pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
+              <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
             </div>
             <h3 class="font-color-brand-two"><span class="font-bump">Complete Document Generation Platform</span></h3>
             <p class="no-mar-b">Create, share, sign and store documents all in one platform, giving your team all the tools they need to close deals faster and deliver business results.</p>
           </div>
           <div class="pad-t-more pad-x-most">
-            <div class="box--brand-three pad-a mar-b" style="display: inline-block;">
-              <img src="//fillmurray.com/65/65" alt="">
+            <div class="box--brand-three pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
+              <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/plug.svg', false, $context); ?>
             </div>
             <h3 class="font-color-brand-three"><span class="font-bump">Connect Systems and Data</span></h3>
             <p class="no-mar-b">Octiv connects the systems and data that your teams use every day - CRM, eSignature, CPQ, storage - eliminating steps in the document workflow allowing you to close deals faster.</p>
