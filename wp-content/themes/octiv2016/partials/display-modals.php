@@ -148,18 +148,18 @@
           });
         </script>
         <style>
-        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+        .modal-content .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
           display: flex;
           flex-direction: row;
         }
-        .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap label{
+        .modal-content .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap label{
           order: 1;
         }
         @media screen and (min-width: 767px) {
-          .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
+          .modal-content .mktoFormRow:first-of-type > div:last-child > .mktoFieldWrap {
             margin-top: 1rem;
           }
-        }
+        }*/
         </style>
     </div>
   </div>
