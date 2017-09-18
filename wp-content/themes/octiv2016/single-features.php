@@ -61,6 +61,24 @@
               }
             endwhile;
             echo '</ul>';
+            if (get_field('promoted_item')) {
+              $args = array(
+                'post_type' => 'any',
+                'post__in' => get_field('promoted_item')
+              );
+              $query = new WP_Query($args);
+              if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post();
+                  echo '<div class="ad-container" style="background-color: #42b0d8; background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.1));">'; ?>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('cover_image'); ?>" alt="<?php the_title(); ?>"></a>
+                    <p><strong>Free Download:</strong><br><?php the_title(); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-white-outline">Download Now</a>
+                <?php
+                  echo '</div>';
+                endwhile;
+              endif;
+              wp_reset_query();
+            }
           endif;
           wp_reset_query();
         ?>
