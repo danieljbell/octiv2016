@@ -752,6 +752,9 @@ if (getParameterByName('demo_auth')) {
   if (paramValue === 'true') {
     var videoBox = $('.integration-video-container');
     videoBox.html($('#video-html').html());
+    var videoBox = $('.feature-video-container');
+    videoBox.html($('#video-html').html());
+    document.querySelector('.feature-video-image').remove();
   }
   var originalURL = document.location.pathname;
   window.history.replaceState( {} , 'bar', originalURL );
