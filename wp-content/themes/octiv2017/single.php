@@ -6,7 +6,7 @@
 
   <?php echo get_template_part('partials/module/display', 'breadcrumbs'); ?>
 
-  <div class="site-width">
+  <div class="site-width mar-b-most">
     <div class="two-third">
       <section class="single-post-content">
         <?php echo the_content(); ?>  
@@ -62,7 +62,7 @@
       </div>
     </div>
     <hr>
-    <h2>You May Also Like...</h2>
+    <h2 class="has-text-center pad-b">You May Also Like...</h2>
     <div class="third">
       <?php
         $args = array(
@@ -79,6 +79,8 @@
       ?>
     </div>
   </div>
+
+  <?php echo get_template_part('partials/module/display', 'powers-documents'); ?>
 
 </main>
 

@@ -201,12 +201,14 @@ console.dir(thing);
   DOCUMENT CONTAINER TYPED
   ==============================
   */
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    loop: true,
-    typeSpeed: 60,
-    backSpeed: 40,
-    backDelay: 1500
-  });
+  if (document.querySelector('#typed')) {
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500
+    });
+  }
 
 })();
