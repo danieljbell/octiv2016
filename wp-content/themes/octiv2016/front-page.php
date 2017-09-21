@@ -40,32 +40,6 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/wp-content/uploads/2017/09/9-12-17.jpg);">
-			<section>
-				<div class="site-width centered">
-					<h1 class="white-text">The Octiv Fall '17 Release is Live</h1>
-					<div class="white-text two-third-only font-bump">
-						<div class="pad-x">
-							<p>The Fall '17 Release delivers advanced eSignature and contract management workflows.</p>
-						</div>
-					</div>
-					<a href="/press-releases/octiv-fall-17-release-now-live/" class="btn-primary">Learn More</a>
-				</div>
-			</section>
-		</div>
-		<div style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(/wp-content/uploads/2017/06/guided-tour.jpg);">
-			<section>
-				<div class="site-width centered">
-					<h1 class="white-text">See How Octiv Works</h1>
-					<div class="white-text two-third-only font-bump">
-						<div>
-							<p>Take our guided tour to see what makes Octiv a document generation industry leader.</p>
-						</div>
-					</div>
-					<a href="/tour" class="btn-primary">Take the Tour Now</a>
-				</div>
-			</section>
-		</div>
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/09/digital-redlining-hero.jpg)">
 			<section>
 				<div class="site-width centered">
