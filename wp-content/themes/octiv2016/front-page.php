@@ -66,16 +66,16 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/09/digital-redlining-hero.jpg)">
 			<section>
 				<div class="site-width centered">
-					<h1 class="white-text">The Case for Digital Document Generation</h1>
+					<h1 class="white-text">The Case for Digital Redlining</h1>
 					<div class="half-only white-text">
 						<div class="font-bump">
-							<p>See why digital document generation is helping sales teams meet their clients’ needs with speed and accuracy.</p>
+							<p>Download The Case for Digital Redlining to learn how to make contract revisions in minutes, collaborate in real-time and track contract statuses and versions.</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/case-digital-document-generation" class="btn-primary">Download Now</a>
+					<a href="/resources/downloads/the-case-for-digital-redlining/" class="btn-primary">Download Now</a>
 				</div>
 			</section>
 		</div>
