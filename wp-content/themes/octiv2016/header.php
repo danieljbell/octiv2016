@@ -11,6 +11,11 @@ if(is_404() && $_GET['ref']=="tinderbox"){
     header("Location: ".$newpageurl);
     exit;
 }
+
+if (is_single() && get_field('external_event')) {
+  $new_url = get_field('external_event_link');
+  header("Location: ".$new_url);
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

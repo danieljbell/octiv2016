@@ -40,29 +40,16 @@ $context = stream_context_create(array(
 				</div>
 			</section>
 		</div>
-		<div style="background-image: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(/wp-content/uploads/2017/06/guided-tour.jpg);">
+		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/09/digital-redlining-hero.jpg)">
 			<section>
 				<div class="site-width centered">
-					<h1 class="white-text">See How Octiv Works</h1>
-					<div class="white-text two-third-only font-bump">
-						<div>
-							<p>Take our guided tour to see what makes Octiv a document generation industry leader.</p>
-						</div>
-					</div>
-					<a href="/tour" class="btn-primary">Take the Tour Now</a>
-				</div>
-			</section>
-		</div>
-		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/06/Hero-Background-1920x530-1.png)">
-			<section>
-				<div class="site-width centered">
-					<h1 class="white-text">The Case for Digital Document Generation</h1>
+					<h1 class="white-text">The Case for Digital Redlining</h1>
 					<div class="half-only white-text">
 						<div class="font-bump">
-							<p>See why digital document generation is helping sales teams meet their clients’ needs with speed and accuracy.</p>
+							<p>Learn how digital redlining is improving accuracy and efficiency in the contracting process.</p>
 						</div>
 					</div>
-					<a href="/resources/downloads/case-digital-document-generation" class="btn-primary">Download Now</a>
+					<a href="/resources/downloads/the-case-for-digital-redlining/" class="btn-primary">Download Now</a>
 				</div>
 			</section>
 		</div>

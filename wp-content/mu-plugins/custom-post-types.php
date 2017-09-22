@@ -850,11 +850,11 @@ function register_client_story_post_type() {
     'public'      => true,
     'publicly_queryable' => true,
     'has_archive' => true,
-    'rewrite'            => array( 'slug' => 'resources/client-stories' ),
+    'rewrite'            => array( 'slug' => 'resources/client-story' ),
     'menu_icon'   => 'dashicons-format-status',
     'supports'    => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
     'show_in_rest'       => true,
-    'rest_base'          => 'client-stories',
+    'rest_base'          => 'client-story',
     'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
@@ -883,7 +883,7 @@ function register_client_story_post_type() {
     ),
   );
 
-  register_post_type( 'client-stories', $args );
+  register_post_type( 'client-story', $args );
 }
 
 

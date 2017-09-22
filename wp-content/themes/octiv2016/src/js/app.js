@@ -561,7 +561,7 @@ if (window.MktoForms2) {
     });
 
     // Add styles
-    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar|single-events|page-template-landing-page/)) {
+    if (!$('body').attr('class').match(/parent-pageid-65|page-id-219|single-releases|page-template-webinar|single-events|page-template-landing-page|single-features/)) {
       formObj.find('.mktoFormRow').addClass('third');
       formObj.find('select').addClass('fancy');
       formObj.find('.mktoButtonRow').addClass('centered');
@@ -617,12 +617,24 @@ if (window.MktoForms2) {
 
 if ($('#catalog-screenshots').length) {
   $('#catalog-screenshots').on('click', 'img', function() {
-    var imagePath = this.currentSrc;
-    var imageTitle = this.alt;
-    $('.empty-modal').find('.modal-content').html(function() {
-      return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
-    });
+    if (!this.classList.contains('video-thumbnail')) {
+      var imagePath = this.currentSrc;
+      var imageTitle = this.alt;
+      $('.empty-modal').find('.modal-content').html(function() {
+        return '<h3 class="centered">' + imageTitle + '</h3><br><img src="' + imagePath + '">';
+      });
+    } else {
+      $('.empty-modal').find('.modal-content').html(function() {
+        var featureVideoForm = document.querySelector('#video-form').innerHTML;
+        this.innerHTML = featureVideoForm;
+      });
+    }
     $('.empty-modal').modal();
+  });
+  $('.modal .close').on('click', function() {
+    console.dir($('.empty-modal .modal-content').html(function() {
+      return '';
+    }));
   });
 }
 
@@ -728,6 +740,26 @@ if ($('body').hasClass('single-releases')) {
     modal.modal();
   });
 }
+
+
+/*
+==============================
+INTEGRATION VIDEO AUTH
+==============================
+*/
+if (getParameterByName('demo_auth')) {
+  var paramValue = getParameterByName('demo_auth');
+  if (paramValue === 'true') {
+    var videoBox = $('.integration-video-container');
+    videoBox.html($('#video-html').html());
+    var videoBox = $('.feature-video-container');
+    videoBox.html($('#video-html').html());
+    document.querySelector('.feature-video-image').remove();
+  }
+  var originalURL = document.location.pathname;
+  window.history.replaceState( {} , 'bar', originalURL );
+}
+
 
 // end document.ready
 });

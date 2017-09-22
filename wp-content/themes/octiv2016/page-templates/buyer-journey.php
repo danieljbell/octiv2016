@@ -160,10 +160,7 @@ Template Name: Buyer Journey
 				</ul>
 				<div class="cd-date">
 					<blockquote>
-						<p><img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="">It's common for relationships to influence the way buyers choose products to evaluate in the early stages of the journey. A recommendation from leadership or people who are in similar roles can tip the scales.<br><span><strong>David Kerr,</strong> COO, Octiv</span></p>
-					</blockquote>
-					<blockquote>
-						<p><img src="https://octiv.com/wp-content/uploads/2016/10/alex-firtl.jpg" alt="">We started by identifying our needs: a solution that was very easy to use, with a mild learning curve. So, we looked at a variety of products, made comparisons and considered alternatives. Ultimately, our choice came down to simplicity.<br><span><strong>Alex Firtl,</strong> Sales and Marketing Analyst, Octiv</span></p>
+						<p><img src="/wp-content/uploads/2016/10/david-kerr.jpg" alt="">It's common for relationships to influence the way buyers choose products to evaluate in the early stages of the journey. A recommendation from leadership or people who are in similar roles can tip the scales.<br><span><strong>David Kerr,</strong> CEO, Octiv</span></p>
 					</blockquote>
 				</div>
 			</div> <!-- cd-timeline-content -->
@@ -205,8 +202,8 @@ Template Name: Buyer Journey
 				</ul>
 				<div class="cd-date">
 					<blockquote>
-						<img src="/wp-content/uploads/2016/07/Dustin-Sapp.png" alt="">
-						<p>When buyers can find the right mix of influencers and information, they're more likely to buy. That's why sites like <a href="https://www.g2crowd.com/" target="_blank">G2 Crowd</a> are the ideal complement to analysts like Forrester: they offer B-to-B buyers reliable peer reviews from trusted sources.<br><span><strong>Dustin Sapp,</strong> CEO, Octiv</span></p>
+						<img src="/wp-content/uploads/2016/06/kathryn-loheide.jpg" alt="">
+						<p>When buyers can find the right mix of influencers and information, they're more likely to buy. That's why sites like <a href="https://www.g2crowd.com/" target="_blank">G2 Crowd</a> are the ideal complement to analysts like Forrester: they offer B-to-B buyers reliable peer reviews from trusted sources.<br><span><strong>Kathryn Loheide,</strong> Sr. Director, Marketing, Octiv</span></p>
 					</blockquote>
 				</div>
 			</div> <!-- cd-timeline-content -->
@@ -245,7 +242,7 @@ Template Name: Buyer Journey
 				</ul>
 				<div class="cd-date">
 					<blockquote>
-						<p><img src="/wp-content/uploads/2016/07/David-Kerr.png" alt="">At this stage, speed matters. If we're choosing between two products, the response time and personal approach of a vendor can make the difference between moving to the final stage of the sales process and choosing someone else.<br><span><strong>David Kerr,</strong> COO, Octiv</span></p>
+						<p><img src="/wp-content/uploads/2017/06/adam-becker.jpg" alt="">At this stage, speed matters. If we're choosing between two products, the response time and personal approach of a vendor can make the difference between moving to the final stage of the sales process and choosing someone else.<br><span><strong>Adam Becker,</strong> Sr. Director, Account Management & Commercial Sales, Octiv</span></p>
 					</blockquote>
 				</div>
 			</div> <!-- cd-timeline-content -->
@@ -286,7 +283,7 @@ Template Name: Buyer Journey
 				</ul>
 				<div class="cd-date">
 					<blockquote>
-						<p><img src="https://octiv.com/wp-content/uploads/2016/10/jordan-easley.jpg" alt="">Vendors should work with the buyer to define all resources necessary for successful implementation and adoption. Both parties should be on the same page as to who will fill those roles and what will be expected of them. If necessary, vendors should provide documentation of this resource allocation, so they can hold buyers accountable.<br><span><strong>Jordan Easley,</strong> Sales Operations Manager, Octiv</span></p>
+						<p><img src="/wp-content/uploads/2016/07/Jesse-Kurth.png" alt="">Vendors should work with the buyer to define all resources necessary for successful implementation and adoption. Both parties should be on the same page as to who will fill those roles and what will be expected of them. If necessary, vendors should provide documentation of this resource allocation, so they can hold buyers accountable.<br><span><strong>Jesse Kurth,</strong> Sr. Director, Professional Services, Octiv</span></p>
 					</blockquote>
 				</div>
 			</div> <!-- cd-timeline-content -->

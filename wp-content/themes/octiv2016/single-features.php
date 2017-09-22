@@ -61,6 +61,24 @@
               }
             endwhile;
             echo '</ul>';
+            if (get_field('has_promoted_item')) {
+              $args = array(
+                'post_type' => 'any',
+                'post__in' => get_field('promoted_item')
+              );
+              $query = new WP_Query($args);
+              if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post();
+                  echo '<div class="ad-container" style="background-color: #42b0d8; background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.1));">'; ?>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('cover_image'); ?>" alt="<?php the_title(); ?>"></a>
+                    <p><strong>Free Download:</strong><br><?php the_title(); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-white-outline">Download Now</a>
+                <?php
+                  echo '</div>';
+                endwhile;
+              endif;
+              wp_reset_query();
+            }
           endif;
           wp_reset_query();
         ?>
@@ -72,27 +90,42 @@
               the_content();
             echo '</div>';
             echo '<div>';
-              echo '<div class="slider" id="catalog-screenshots">';
-            while (have_rows('screenshots')) :
-              the_row();
-              echo '<div class="centered">';
-                echo '<h3>' . get_sub_field('screenshot_title') . '</h3><br>';
-                echo '<img src="' . get_sub_field('screenshot_image') . '" alt="' . get_sub_field('screenshot_title') . '">';
-              echo '</div>';
-            endwhile;
-              echo '</div>';
-            echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
-            // echo '<p>&nbsp;</p>';
-            // echo '<div class="box datasheet-promo">';
-            //   echo '<div class="datasheet-promo-image">';
-            //     echo '<img src="//fillmurray.com/102/132">';
-            //   echo '</div>';
-            //   echo '<div class="datasheet-promo-content">';
-            //     echo '<h4>' . get_field('datasheet_headline') . '</h4>';
-            //     echo '<p>' . get_field('datasheet_subheadline') . '</p>';
-            //     echo '<button class="datasheet-modal-button btn-arrow">Get the Full Datasheet</button>';
-            //   echo '</div>';
-            // echo '</div>';
+              if (get_field('has_feature_video')) :
+                echo '<div class="box mar-b">';
+                  echo '<img src="' . get_field('feature_video_thumbnail') . '" alt="video-thumbnail" class="feature-video-image mar-b">';
+                  echo '<h3 class="centered">See ' . get_the_title() . ' in Action</h3>';
+                  echo '<div class="feature-video-container">';
+                    echo '<p class="centered">Fill out the form below to view a brief demonstration.</p>'; ?>
+                    <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+                    <form id="mktoForm_<?php echo get_field('feature_video_marketo_form_id'); ?>"></form>
+                    <script>
+                      MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('feature_video_marketo_form_id'); ?>, function(form) {
+                        form.onSuccess(function(values, followUpUrl) {
+                          form.getFormElem().hide();
+                          var videoContainer = document.querySelector('.feature-video-container');
+                          var videoHTML = document.querySelector('#video-html');
+                          document.querySelector('.feature-video-image').remove();
+                          videoContainer.innerHTML = videoHTML.innerHTML;
+                          return false;
+                        });
+                      });
+                    </script>
+              <?php
+                echo '</div>';
+                echo '</div>';
+                echo '<br />';
+                else :
+                  echo '<div class="slider" id="catalog-screenshots">';
+                  while (have_rows('screenshots')) :
+                    the_row();
+                    echo '<div class="centered">';
+                      echo '<h3>' . get_sub_field('screenshot_title') . '</h3><br>';
+                      echo '<img src="' . get_sub_field('screenshot_image') . '" alt="' . get_sub_field('screenshot_title') . '">';
+                    echo '</div>';
+                  endwhile;
+                  echo '</div>';
+                  echo '<p class="centered" style="font-size: 0.85em;">Click the image for a larger view</p>';
+              endif;
           echo '</div>';
         else :
           echo '<div>';
@@ -121,6 +154,16 @@
     <hr>
   </div>
   <?php get_template_part('partials/display', 'recent-resources'); ?>
+<?php endif; ?>
+
+<?php if (get_field('has_feature_video')) : ?>
+  <div id="video-html">
+    <div class="video-outer mar-t">
+      <div class="video-inner">
+        <iframe src="https://www.youtube.com/embed/<?php echo get_field('feature_video_id'); ?>?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
+      </div>
+    </div>
+  </div>
 <?php endif; ?>
 
 <style>
@@ -164,6 +207,10 @@
   .slider .slick-slide {
     color: initial;
     padding: 0;
+  }
+  #video-html,
+  #video-form {
+    display: none;
   }
   @media screen and (max-width: 600px) {
     .fourth-3-fourth > div:first-child {
