@@ -46,7 +46,7 @@ $context = stream_context_create(array(
 					<h1 class="white-text">The Case for Digital Redlining</h1>
 					<div class="half-only white-text">
 						<div class="font-bump">
-							<p>Download The Case for Digital Redlining to learn how to make contract revisions in minutes, collaborate in real-time and track contract statuses and versions.</p>
+							<p>Learn how digital redlining is improving accuracy and efficiency in the contracting process.</p>
 						</div>
 					</div>
 					<a href="/resources/downloads/the-case-for-digital-redlining/" class="btn-primary">Download Now</a>
