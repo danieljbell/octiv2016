@@ -54,6 +54,24 @@
               echo '</ul>';
           endif;
           ?>
+          <?php 
+            $customer_success = get_field('customer_success');
+            if ($customer_success) :
+          ?>
+          <h3 id="customer-success">See Success Stories with <?php echo get_the_title(); ?></h3>
+          <ul class="customer-success-thumbnails third">
+            <?php
+              foreach($customer_success as $post) :
+                setup_postdata($post);
+                $thumb_id = get_post_thumbnail_id();
+                $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+                $thumb_url = $thumb_url_array[0];
+                echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><img src="' . $thumb_url . '"></a></li>';
+                wp_reset_postdata();
+              endforeach;
+            ?>
+          </ul>
+          <?php endif; ?>
           <h3 id="about" class="pad-t">About <?php echo get_the_title(); ?></h3>
           <p><?php echo get_field('integration_description'); ?></p>
           <p>For more information about <?php echo get_the_title(); ?>, please visit their <a href="<?php echo get_field('integration_link'); ?>" target="_blank" rel="noopener noreferrer">website</a>.</p>

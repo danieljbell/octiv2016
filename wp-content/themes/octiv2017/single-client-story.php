@@ -92,7 +92,9 @@
     </div>
   </section>
 
-  <?php echo get_template_part('partials/module/display', 'call-to-action'); ?>
+  <?php // echo get_template_part('partials/module/display', 'call-to-action'); ?>
+
+  <?php echo get_template_part('partials/module/display', 'powers-documents'); ?>
 
 </main>
 

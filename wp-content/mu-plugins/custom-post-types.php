@@ -138,6 +138,32 @@ function register_solutions_post_type() {
   register_post_type( 'solutions', $args );
 }
 
+/*
+==============================
+SOLUTIONS TAXONOMY
+==============================
+*/
+function solutions_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'solution_type',
+        'solutions',
+        array(
+            'label' => __( 'Solution Type' ),
+            // 'rewrite' => array( 'slug' => 'resources/events' ),
+            'with_front' => false,
+            'hierarchical' => true,
+            // 'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_solution_type',
+                'edit_terms' => 'publish_solution_type'
+            )
+        )
+    );
+}
+add_action( 'init', 'solutions_init' );
+
 
 /*
 ===================================
@@ -826,7 +852,7 @@ function register_client_story_post_type() {
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/client-story' ),
     'menu_icon'   => 'dashicons-format-status',
-    'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
     'show_in_rest'       => true,
     'rest_base'          => 'client-story',
     'rest_controller_class' => 'WP_REST_Posts_Controller',

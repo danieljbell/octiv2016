@@ -1,7 +1,6 @@
 .site-footer {
   background-color: $gray;
   color: darken($white, 25%);
-  margin-top: 3rem;
   padding: 2rem 0 0;
   @include tablet {
     padding: 3rem 0 0;

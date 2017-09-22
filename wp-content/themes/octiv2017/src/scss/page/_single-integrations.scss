@@ -1,3 +1,7 @@
+.single-integration main {
+  padding-bottom: 0;
+}
+
 .single-integration .hero {
   text-shadow: none;
 }
@@ -72,6 +76,14 @@
   &:hover,
   &:focus {
     color: $brand;   
+  }
+}
+
+.customer-success-thumbnails {
+  list-style-type: none;
+  padding-left: 0;
+  img {
+    width: 100%;
   }
 }
 

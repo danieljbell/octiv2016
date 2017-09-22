@@ -136,5 +136,79 @@ console.dir(thing);
     }
   });
   
+  /*
+  ==============================
+  SLIDERS
+  ==============================
+  */
+  if (document.querySelectorAll('.slider')) {
+    $('.slider').slick({
+      arrows: false,
+      // autoplay: true,
+      autoplaySpeed: 5000,
+      dots: true,
+      draggable: false,
+      adaptiveHeight: true
+    });
+  }
+
+  if (document.querySelectorAll('.slider-for')) {
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      arrows: false,
+      centerMode: true,
+      centerPadding: '2rem',
+      focusOnSelect: true,
+      draggable: false,
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            draggable: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '18px',
+            draggable: true,
+          }
+        }
+      ]
+    });
+  }
+
+  /*
+  ==============================
+  DOCUMENT CONTAINER TYPED
+  ==============================
+  */
+  if (document.querySelector('#typed')) {
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500
+    });
+  }
 
 })();
