@@ -28,13 +28,13 @@ $rand_num = mt_rand(1,4);
   }
 
   // CLIENT STORIES POST TYPE
-  if (is_post_type_archive('client-stories')) {
+  if (is_post_type_archive('client-story')) {
     $page_hero_title = 'Client Stories';
     $page_hero_sub_title = null;
     $page_hero_body = null;
   }
 
-  if (is_singular('client-stories')) {
+  if (is_singular('client-story')) {
     $hero_bg = 'url(' . get_field('client_testimonial_image') . ')';
     $page_hero_title = get_the_title();
     $page_hero_sub_title = 'Client Story';
