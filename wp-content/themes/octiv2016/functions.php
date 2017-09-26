@@ -45,10 +45,11 @@ CREATING ADMIN NAV MENUS
 ==========================================
 */
 register_nav_menus( array(
-		'products' => __( 'Products' ),
-		'partners' => __( 'Partners' ),
-		'resources' => __( 'Resources' ),
-		'company' => __( 'Company' )
+  'eyebrow_quick_links' => __( 'Eyebrow Quick Links' ),  
+  'site-header' => __( 'Site Header' ),
+  'mega-menu-promo' => __( 'Mega Menu Promo' ),
+  'site_footer' => __( 'Site Footer' ),
+  'sub_footer_links' => __( 'Sub Footer Links' ),
 ) );
 
 
