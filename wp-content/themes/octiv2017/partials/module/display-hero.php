@@ -76,6 +76,17 @@ $rand_num = mt_rand(1,4);
   if (is_page_template('page-templates/archive.php')) {
     $page_hero_title = get_the_title();
   }
+
+  // SUPPORT POST TYPE
+  if (is_post_type_archive('support')) {
+    $page_hero_title = 'Support';
+  }
+
+  if (is_singular('support')) {
+    $page_hero_title = get_the_title();
+    $page_hero_sub_title = 'Support Article';
+    $page_hero_body = 'Last updated: ' . get_the_modified_time('F j, Y');
+  }
 ?>
 
 <?php if (!is_singular('integration')) : ?>
