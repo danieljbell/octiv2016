@@ -1,7 +1,8 @@
 <?php
   $args = array(
-    'post_type' => 'employee-testimonial',
-    'posts_per_page' => -1
+    'post_type'      => 'employee-testimonial',
+    'orderby'        => 'rand',
+    'posts_per_page' => 3
   );
   $query = new WP_Query($args);
   if ($query->have_posts()) :

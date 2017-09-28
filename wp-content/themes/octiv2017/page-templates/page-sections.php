@@ -30,9 +30,13 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
   if (have_rows('page_section')) :
     echo '<section class="page-sections mar-y-most">';
     echo '<ul class="page-section-list">';
-    while (have_rows('page_section')) : $count++; the_row();
+    while (have_rows('page_section')) : the_row();
+      // if (get_sub_field('visual_type')[0] != 'Background') {
+        $count++;
+      // }
       $section_title = get_sub_field('section_title');
       $section_content = get_sub_field('section_content');
+      $section_link = get_sub_field('section_call_to_action_link');
       $section_class = 'reverse';
       if ($count % 2 == 0) {
         $section_class = 'swap-order';
@@ -51,7 +55,7 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
           <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?> mar-b"><?php echo $section_title; ?></h2>
         </div>
         <p><?php echo $section_content; ?></p>
-        <a href="#0" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
+        <a href="<?php echo $section_link; ?>" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
       </div>
       <div class="browser-window">
         <div>

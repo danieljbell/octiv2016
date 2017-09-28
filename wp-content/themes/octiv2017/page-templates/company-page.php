@@ -45,9 +45,11 @@ Template Name: Company Page
   </div>
 </section>
 <section id="employee-testimonials">
-  <ul class="third employee-testimonials-list">
-    <?php get_template_part('partials/module/query', 'employee-testimonials'); ?>
-  </ul>
+  <div class="site-width">
+    <ul class="third employee-testimonials-list">
+      <?php get_template_part('partials/module/query', 'employee-testimonials'); ?>
+    </ul>
+  </div>
 </section>
 <section id="leadership" class="pad-y-most">
   <div class="site-width">
