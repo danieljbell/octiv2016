@@ -147,6 +147,8 @@
 }
 
 .site-header-mega-menu .rad-modal {
+  display: block;
+  width: 100%;
   @include bp(sm) {
     display: none;
   }
