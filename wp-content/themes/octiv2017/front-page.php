@@ -31,20 +31,22 @@ get_header();
             </div>
           </div>
         </div>
-        <div class="half has-text-center vertical-align">
+        <div class="half has-text-center vertical-align box--light-highlight">
           <div class="pad-t-more pad-x-most">
             <div class="box--brand-two pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
             </div>
             <h3 class="font-color-brand-two"><span class="font-bump">Complete Document Generation Platform</span></h3>
-            <p class="no-mar-b">Create, share, sign and store documents all in one platform, giving your team all the tools they need to close deals faster and deliver business results.</p>
+            <p class="mar-b">Create, share, sign and store documents all in one platform, giving your team all the tools they need to close deals faster and deliver business results.</p>
+            <a href="/platform" class="btn-brand-two--outline">Learn More</a>
           </div>
           <div class="pad-t-more pad-x-most">
             <div class="box--brand-three pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/plug.svg', false, $context); ?>
             </div>
             <h3 class="font-color-brand-three"><span class="font-bump">Connect Systems and Data</span></h3>
-            <p class="no-mar-b">Octiv connects the systems and data that your teams use every day - CRM, eSignature, CPQ, storage - eliminating steps in the document workflow allowing you to close deals faster.</p>
+            <p class="mar-b">Octiv connects the systems and data that your teams use every day - CRM, eSignature, CPQ, storage - eliminating steps in the document workflow allowing you to close deals faster.</p>
+            <a href="/platform/integrations" class="btn-brand-three--outline">Learn More</a>
           </div>
         </div>
       </div>

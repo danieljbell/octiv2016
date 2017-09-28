@@ -1,3 +1,17 @@
+@mixin button($button-color, $text-color: $white) {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border: 1px solid $button-color;
+  border-radius: 3px;
+  color: $button-color;
+  transition: all 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $button-color;
+    color: $text-color;
+  }
+}
+
 button {
   cursor: pointer;
   font-family: $brand-font-stack;
@@ -66,29 +80,17 @@ button {
 }
 
 .btn-white--outline {
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border: 1px solid $white;
-  border-radius: 3px;
-  color: $white;
-  transition: all 200ms ease-in-out;
-  &:hover,
-  &:focus {
-    background-color: $white;
-    color: $gray;
-  }
+  @include button($white, $gray);
 }
 
 .btn-dark--outline {
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border: 1px solid $gray;
-  border-radius: 3px;
-  color: $gray;
-  transition: all 200ms ease-in-out;
-  &:hover,
-  &:focus {
-    background-color: $gray;
-    color: $white;
-  }
+  @include button($gray);
+}
+
+.btn-brand-two--outline {
+  @include button($brand2);
+}
+
+.btn-brand-three--outline {
+  @include button($brand3);
 }

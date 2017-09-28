@@ -29,3 +29,7 @@
     background-color: $brand5;
   }
 }
+
+.box--light-highlight {
+  background-color: darken($lgray, 8%);
+}

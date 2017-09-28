@@ -19,3 +19,17 @@
   max-width: 100px;
   max-height: 100px;
 }
+
+.home .box--light-highlight {
+  position: relative;
+  left: -2rem;
+  width: calc(100% + 4rem);
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0px 0px 5px 5px;
+  .btn-brand-two--outline {
+    display: inline-block;
+  }
+}
