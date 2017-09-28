@@ -59,6 +59,16 @@
       }
     }
   }
+  &.swap-order {
+    > * {
+      &:first-child {
+        order: 2;
+      }
+      &:last-child {
+        order: 1;
+      }
+    }
+  }
 }
 
 .third {

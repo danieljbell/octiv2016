@@ -1,14 +1,24 @@
-@mixin button($button-color, $text-color: $white) {
+@mixin button($button-color, $text-color: $white, $outline: false) {
+  @if $outline == true {
+    border: 1px solid $button-color;
+    color: $button-color;
+  } @else {
+    background-color: $button-color;
+    color: $text-color;
+  }
   text-decoration: none;
   padding: 0.5em 1em;
-  border: 1px solid $button-color;
   border-radius: 3px;
-  color: $button-color;
   transition: all 200ms ease-in-out;
   &:hover,
   &:focus {
-    background-color: $button-color;
-    color: $text-color;
+    @if $outline == true {
+      background-color: $button-color;
+      color: $text-color;
+    } @else {
+      outline: none;
+      background-color: darken($button-color, 10%);
+    }
   }
 }
 
@@ -23,21 +33,31 @@ button {
 
 .btn-primary,
 .mktoButton {
-  background-color: $brand;
-  border-radius: 3px;
-  color: $white;
-  padding: 0.5em 1em;
-  transition: all 200ms ease-in-out;
-  width: 100%;
-  text-decoration: none;
-  @include bp(sm) {
-    width: initial;
-  }
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: darken($brand, 10%);
-  }
+  @include button($brand)
+}
+
+.btn-white--outline {
+  @include button($white, $gray, true);
+}
+
+.btn-dark--outline {
+  @include button($gray, $white, true);
+}
+
+.btn-brand-two--outline {
+  @include button($brand2, $white, true);
+}
+
+.btn-brand-three--outline {
+  @include button($brand3, $white, true);
+}
+
+.btn-brand-four--outline {
+  @include button($brand4, $white, true);
+}
+
+.btn-brand-five--outline {
+  @include button($brand5, $white, true);
 }
 
 .btn-arrow {
@@ -77,20 +97,4 @@ button {
       transform: translateY(0);
     }
   }
-}
-
-.btn-white--outline {
-  @include button($white, $gray);
-}
-
-.btn-dark--outline {
-  @include button($gray);
-}
-
-.btn-brand-two--outline {
-  @include button($brand2);
-}
-
-.btn-brand-three--outline {
-  @include button($brand3);
 }

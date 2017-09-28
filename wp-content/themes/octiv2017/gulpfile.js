@@ -79,4 +79,4 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['watch', 'browser-sync']);
+gulp.task('default', ['css', 'js', 'watch', 'browser-sync']);

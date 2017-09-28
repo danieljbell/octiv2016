@@ -87,6 +87,7 @@ $rand_num = mt_rand(1,4);
     $page_hero_sub_title = 'Support Article';
     $page_hero_body = 'Last updated: ' . get_the_modified_time('F j, Y');
   }
+
 ?>
 
 <?php if (!is_singular('integration')) : ?>
@@ -96,7 +97,11 @@ $rand_num = mt_rand(1,4);
     <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
       <div class="site-width">
         <div class="color-boxes">
-          <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
+          <?php if (is_page_template('page-templates/page-sections.php')) : ?>
+            <h1 class="color-box-headline--brand-two mar-b"><?php echo $page_hero_title; ?></h1>
+          <?php else : ?>
+            <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
+          <?php endif; ?>
           <?php
             if ($page_hero_sub_title) {
               echo '<p class="color-box-subheadline--brand-two">' . $page_hero_sub_title . '</p>';
