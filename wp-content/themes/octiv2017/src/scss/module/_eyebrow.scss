@@ -18,6 +18,19 @@
     display: flex;
     justify-content: space-between;
   }
+  .eyebrow-phone-number {
+    position: relative;
+    left: 1.25rem;
+  }
+  .eyebrow-phone-icon {
+    position: absolute;
+    top: 0.5em;
+    left: -1.25rem;
+    flex-shrink: 0;
+    max-height: 1rem; 
+    max-width: 1rem; 
+    margin-right: 0.5em;
+  }
 }
 
 .eyebrow-quick-links ul {
