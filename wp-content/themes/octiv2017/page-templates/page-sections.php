@@ -13,6 +13,8 @@ $context = stream_context_create(array(
   )
 ));
 
+$number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+
 ?>
 
 <?php get_header(); ?>
@@ -31,21 +33,25 @@ $context = stream_context_create(array(
     while (have_rows('page_section')) : $count++; the_row();
       $section_title = get_sub_field('section_title');
       $section_content = get_sub_field('section_content');
-      $section_class = '';
+      $section_class = 'reverse';
       if ($count % 2 == 0) {
         $section_class = 'swap-order';
-      } 
+      }
+      if ($count > 4) {
+        $count = 1;
+      }
+      $current_iteration = $number_formatter->format($count + 1);
 ?>
 
-<li>
+<li class="page-section-item">
   <div class="site-width">
     <div class="half vertical-align <?php echo $section_class; ?>">
       <div>
         <div class="color-boxes">
-          <h2 class="color-box-headline--brand-two"><?php echo $section_title; ?></h2>
+          <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?> mar-b"><?php echo $section_title; ?></h2>
         </div>
         <p><?php echo $section_content; ?></p>
-        <a href="#0" class="btn-brand-four--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
+        <a href="#0" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
       </div>
       <div class="browser-window">
         <div>

@@ -5,4 +5,10 @@
     margin-bottom: 0;
     text-align: center;
   }
+  .page-section-item {
+    margin-bottom: 3rem;
+    @include tablet {
+      margin-bottom: 9rem;
+    }
+  }
 }
