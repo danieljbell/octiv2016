@@ -56,7 +56,7 @@ $context = stream_context_create(array(
   </div>
 </li>
 
-<?
+<?php
     endwhile;
     echo '</ul>';
     echo '</section>';
