@@ -32,7 +32,7 @@ get_header();
           </div>
         </div>
         <div class="half has-text-center vertical-align box--light-highlight">
-          <div class="pad-t-more pad-x-most">
+          <div>
             <div class="box--brand-two pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
             </div>
@@ -40,7 +40,7 @@ get_header();
             <p class="mar-b">Create, share, sign and store documents all in one platform, giving your team all the tools they need to close deals faster and deliver business results.</p>
             <a href="/platform" class="btn-brand-two--outline">Learn More</a>
           </div>
-          <div class="pad-t-more pad-x-most">
+          <div>
             <div class="box--brand-three pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/plug.svg', false, $context); ?>
             </div>
