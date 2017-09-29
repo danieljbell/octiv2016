@@ -44,6 +44,10 @@ button {
   @include button($gray, $white, true);
 }
 
+.btn-brand--outline {
+  @include button($brand, $white, true);
+}
+
 .btn-brand-two--outline {
   @include button($brand2, $white, true);
 }
