@@ -1,5 +1,15 @@
 (function() {
 
+  var waypoints = $('.site-header').waypoint({
+    handler: function(direction) {
+      if (direction === 'down') {
+        $('body').addClass('site-header-fixed');
+      } else {
+        $('body').removeClass('site-header-fixed');
+      }
+    }
+  })
+
   /*
   ==============================
   MENU TOGGLE
