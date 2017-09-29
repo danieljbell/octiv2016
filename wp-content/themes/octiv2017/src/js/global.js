@@ -34,9 +34,6 @@
   */
 
   // OPEN MODAL
-var thing = document.querySelectorAll('[data-modal]');
-console.dir(thing);
-
   var radButton = document.querySelectorAll('.rad-modal');
   for (var i = 0; i < radButton.length; i++) {
     radButton[i].addEventListener('click', function(e) {
