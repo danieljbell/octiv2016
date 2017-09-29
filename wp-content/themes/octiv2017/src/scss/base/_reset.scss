@@ -51,10 +51,16 @@ table {
   box-sizing: border-box;
 }
 main {
-  transform: translateY(5.25rem);
   transition: all 200ms ease-in-out;
+  transform: translateY(4.75rem);
+  @include tablet {
+    transform: translateY(5.25rem);
+  }
 }
 .site-footer {
-  transform: translateY(5.25rem);
   transition: all 200ms ease-in-out;
+  transform: translateY(4.75rem);
+  @include tablet {
+    transform: translateY(5.25rem);
+  }
 }

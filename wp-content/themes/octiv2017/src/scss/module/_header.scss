@@ -78,7 +78,7 @@
   display: block;
   width: 100%;
   max-width: 185px;
-  @include bp(sm) {
+  @include tablet {
     margin: 0 auto;
   }
 }
@@ -214,5 +214,8 @@ FIXED HEADER ON SCROLL STYLES
 
 .site-header-fixed main,
 .site-header-fixed .site-footer {
-  transform: translateY(3.5rem);
+  transform: translateY(2.9rem);
+  @include tablet {
+    transform: translateY(3.5rem);
+  }
 }

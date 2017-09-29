@@ -13,6 +13,8 @@ if ($post_type === 'post' || $post_type === 'solutions') {
 
 <?php get_header(); ?>
 
+<main>
+
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
 <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
@@ -41,5 +43,7 @@ if ($post_type === 'post' || $post_type === 'solutions') {
     </div>
   </div>
 </section>
+  
+</main>
 
 <?php get_footer(); ?>
