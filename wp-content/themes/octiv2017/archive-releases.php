@@ -36,7 +36,7 @@ $today = date('Ymd');
           $query = new WP_Query($args);
           if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post();
-              echo do_shortcode('[get_card_v3 excerpt="true"]');
+              echo do_shortcode('[get_card_v3 excerpt="false"]');
             endwhile;
           endif;
           wp_reset_query();
@@ -70,7 +70,7 @@ $today = date('Ymd');
           $query = new WP_Query($args);
           if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post();
-              echo do_shortcode('[get_card_v3 excerpt="true"]');
+              echo do_shortcode('[get_card_v3 excerpt="false"]');
             endwhile;
           endif;
           wp_reset_query();

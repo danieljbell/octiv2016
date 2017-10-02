@@ -110,6 +110,12 @@ $rand_num = mt_rand(1,4);
     $page_hero_body = 'Last updated: ' . get_the_modified_time('F j, Y');
   }
 
+  // RELEASES POST TYPE
+  if (is_post_type_archive('releases')) {
+    $page_hero_title = 'Get Ready for the Next Release';
+    $page_hero_body = 'If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.';
+  }
+
   // 404 Error Page
   if (is_404()) {
     $page_hero_title = 'Oh Uh!';

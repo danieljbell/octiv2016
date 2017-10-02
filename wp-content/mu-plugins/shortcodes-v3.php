@@ -31,7 +31,11 @@ add_shortcode('get_card_v3', function($atts) {
       <?php else : ?>
         <a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo get_field('integration_logo'); ?>" alt="<?php echo get_the_title(); ?>"></a>
       <?php endif; ?>
-      <?php if ($excerpt != 'false') { echo '<div class="card-description">' . the_excerpt() . '</div>'; } ?>
+      <?php
+        if ($excerpt != 'false') { 
+          echo '<div class="card-description">' . strip_tags(get_the_excerpt()) . '</div>'; 
+        }
+      ?>
       <?php if (!is_post_type_archive('integration')) : ?>
         <a href="<?php echo get_the_permalink(); ?>" class="btn-arrow">Learn More <span class="arrow">></span></a>
       <?php endif; ?>
@@ -39,15 +43,7 @@ add_shortcode('get_card_v3', function($atts) {
   </div>
 
 <?php else : ?>
-  <?php echo $item->url; ?>
-  <!-- <div class="card <?php if ($class) { echo $class; } ?>">
-    <a class="card-image" href="<?php echo $item->url; ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);"></a>
-    <div class="card-content">
-      <h4><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
-      <?php if ($excerpt != 'false') { echo '<div class="card-description">' . the_excerpt() . '</div>'; } ?>
-      <a href="<?php echo get_the_permalink(); ?>" class="btn-arrow">Learn More <span class="arrow">></span></a>
-    </div>
-  </div> -->
+
 
 <?php endif; ?>
   
