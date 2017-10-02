@@ -214,9 +214,9 @@ function get_requested_slug() {
 YOAST BREADCRUMB OVERIDES
 ==============================
 */
-add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
-function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
-  global $post;
+// add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
+// function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
+//   global $post;
   // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
   //   $breadcrumb[] = array(
   //     'url' => '/platform',
@@ -258,12 +258,12 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
   //   );
   //   array_splice( $links, 1, 0, $breadcrumb );
   // }
-  if ( is_singular( 'client-stories' ) || is_archive( 'client-stories' ) ) {
-    $breadcrumb[] = array(
-      'url' => '/resources',
-      'text' => 'Resources',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
-  return $links;
-}
+//   if ( is_singular( 'client-stories' ) || is_archive( 'client-stories' ) ) {
+//     $breadcrumb[] = array(
+//       'url' => '/resources',
+//       'text' => 'Resources',
+//     );
+//     array_splice( $links, 1, 0, $breadcrumb );
+//   }
+//   return $links;
+// }

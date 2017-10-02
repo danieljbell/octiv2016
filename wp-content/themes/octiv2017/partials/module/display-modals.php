@@ -76,7 +76,7 @@ DISPLAY MODALS
           <p>Below you'll find all of our brand assets and logos.</p>
         </div>
         <div class="modal-header--content has-text-center">
-          <a href="#0" class="btn-primary mar-b">Download .zip of brand assets</a>
+          <a href="/wp-content/uploads/2016/07/Octiv-Brand-Assets.zip" class="btn-primary mar-b">Download .zip of brand assets</a>
           <p>If you have a special request or need help with anything, please reach out to us at <a href="mailto:marketing@octiv.com">marketing@octiv.com</a>.</p>
         </div>
       </div>

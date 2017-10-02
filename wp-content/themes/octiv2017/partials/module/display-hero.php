@@ -197,7 +197,7 @@ $rand_num = mt_rand(1,4);
   /* INTEGRATIONS HERO */
 ?>
 
-  <section class="hero" style="background-image: radial-gradient(rgba(45, 57, 67, 0.75),rgba(45, 57, 67, 0)), linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
+  <section class="hero" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo get_stylesheet_directory_URI(); ?>/dist/img/octiv-pattern.svg), <?php echo $hero_bg; ?>;">
     <div class="site-width">
       <div class="hero-integration-logo-container">
         <div class="hero-integration-logo light-callout">

@@ -13,11 +13,12 @@
   }
 </style>
 
-<?php get_template_part('partials/module/display', 'hero'); ?>
-
-<?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
-
 <main>
+  
+  <?php get_template_part('partials/module/display', 'hero'); ?>
+
+  <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
+
   <section class="post-content">
     <div class="site-width">
       <div class="one-fourth">
