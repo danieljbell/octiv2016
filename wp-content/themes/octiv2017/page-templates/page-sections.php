@@ -78,7 +78,7 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
       <div class="color-boxes">
         <h2 class="color-box-headline--brand"><?php echo $custom_page->post_title; ?></h2>
       </div>
-      <p class="font-bump"><?php echo $custom_page->post_excerpt; ?></p>
+      <p><?php echo $custom_page->post_excerpt; ?></p>
       <a href="<?php echo $cta_link; ?>" class="btn-primary">Learn More</a>
     </div>
   </div>

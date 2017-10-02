@@ -221,6 +221,7 @@ COLOR BOXES
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 // matches all color-box-headline for common styles
@@ -241,6 +242,10 @@ COLOR BOXES
   font-weight: normal;
   text-shadow: none;
   box-shadow: inset 0 5px 4px rgba(black, 0.15);
+}
+
+.color-box-headline--gray {
+  background-color: $gray;
 }
 
 .color-box-headline--brand {

@@ -42,6 +42,7 @@ gulp.task('js', function () {
     './node_modules/slick-carousel/slick/slick.js',
     './node_modules/typed.js/lib/typed.min.js',
     './node_modules/waypoints/lib/jquery.waypoints.js',
+    './node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
     'src/js/global.js'
   ])
     .pipe(sourcemaps.init())

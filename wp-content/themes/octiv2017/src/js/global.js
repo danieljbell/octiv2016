@@ -33,44 +33,23 @@
   ==============================
   */
 
-  // OPEN MODAL
-  var radButton = document.querySelectorAll('.rad-modal');
-  for (var i = 0; i < radButton.length; i++) {
-    radButton[i].addEventListener('click', function(e) {
-      var body = document.body;
-      var modalTarget = this.dataset.modal;
-      modalTarget = 'modal-open--' + modalTarget;
+  // GLOBAL RAD MODAL
+  var radButtons = $('.rad-modal');
+  radButtons.on('click', function() {
+    $('.rad-modal-container').modal();
+  });
 
-      e.preventDefault();
-      if (body.classList.contains('modal-open')) {
-        body.classList.remove('modal-open', modalTarget);
-        return
-      } else {
-        body.classList.add('modal-open', modalTarget);
-      }
-    });
-  }
-
-  // CLOSE MODAL
-  var allCloseModalButtons = document.querySelectorAll('.close-modal');
-  for (var i = 0; i < allCloseModalButtons.length; i++) {
-    allCloseModalButtons[i].addEventListener('click', function() {
-      document.body.classList.remove('modal-open');
-    });
-  }
-
-  window.addEventListener('keydown', function(e) {
-    if (e.keyCode === 27) {
-      if (document.body.classList.contains('modal-open')) {
-        document.body.classList.remove('modal-open');
-      }
-    }
+  var radLinks = $('[href="#request-a-demo"]');
+  radLinks.on('click', function(e) {
+    e.preventDefault();
+    $('.rad-modal-container').modal();
   });
 
   // LOGO MODAL
-  var siteHeaderLogo = document.querySelector('.site-header-logo');
-  siteHeaderLogo.addEventListener('contextmenu', function() {
-    document.body.classList.add('modal-open');
+  var siteHeaderLogo = $('.site-header-logo');
+  siteHeaderLogo.on('contextmenu', function(e) {
+    e.preventDefault();
+    $('.logo-modal-container').modal();
   })
 
 
@@ -119,9 +98,9 @@
   */
   var allBrowserWindows = document.querySelectorAll('.browser-window');
   for (var i = 0; i < allBrowserWindows.length; i++) {
-    allBrowserWindows[i].addEventListener('click', function() {
-      document.body.classList.add('modal-open');
-    });
+    // allBrowserWindows[i].addEventListener('click', function() {
+    //   document.body.classList.add('modal-open');
+    // });
   }
 
   /*
@@ -129,19 +108,19 @@
   REMOVE STYLE ELEMENT FROM MARKETO FORM ELEM
   ===========================================
   */
-  MktoForms2.whenReady(function() {
-    var allMktoForms = MktoForms2.allForms();
-    for (var i = 0; i < allMktoForms.length; i++) {
-      var formElem = allMktoForms[i].getFormElem();
-      if (formElem[0].querySelector('style')) {
-        formElem[0].querySelector('style').remove();
-      }
-    }
-    var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
-    for (var i = 0; i < modalNewsletterBox.length; i++) {
-      modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
-    }
-  });
+  // MktoForms2.whenReady(function() {
+  //   var allMktoForms = MktoForms2.allForms();
+  //   for (var i = 0; i < allMktoForms.length; i++) {
+  //     var formElem = allMktoForms[i].getFormElem();
+  //     if (formElem[0].querySelector('style')) {
+  //       formElem[0].querySelector('style').remove();
+  //     }
+  //   }
+  //   var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
+  //   for (var i = 0; i < modalNewsletterBox.length; i++) {
+  //     modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
+  //   }
+  // });
   
   /*
   ==============================

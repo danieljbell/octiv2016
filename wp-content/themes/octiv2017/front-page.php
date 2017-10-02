@@ -22,7 +22,6 @@ get_header();
         <div class="two-third-only has-text-center pad-a-tablet-up">
           <div class="color-boxes">
             <h2 class="color-box-headline--brand-three">Meet Sara</h2>
-            <p class="color-box-subheadline--brand-three">New Video!</p>
           </div>
           <p class="pad-x font-bump">Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p>
           <div class="video-outer">
@@ -61,12 +60,10 @@ get_header();
       $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       $thumb_url = $thumb_url_array[0];
       $promoted_headline = $promoted_item[0]->post_title;
-      $promoted_subheadline = $promoted_item[0]->post_excerpt;
-      $promoted_body_copy = get_field('long_description', $promoted_item[0]->ID);
+      $promoted_body_copy = $promoted_item[0]->post_excerpt;
       $cta_link = get_the_permalink($promoted_item_ID);
       if (get_field('custom_promoted_item')) {
         $promoted_headline = get_field('custom_promoted_headline');
-        $promoted_subheadline = get_field('custom_promoted_subheadline');
         $promoted_body_copy = get_field('custom_promoted_body_copy');
         $thumb_url = get_field('custom_promoted_image');
         $cta_link = get_field('custom_promoted_link');
@@ -82,10 +79,9 @@ get_header();
         <div class="half-only">
           <div class="color-boxes">
             <h2 class="color-box-headline--brand-four"><?php echo $promoted_headline; ?></h2>
-            <p class="color-box-subheadline--brand-four"><?php echo $promoted_subheadline; ?></p>
-            <p class="font-bump"><?php echo $promoted_body_copy; ?></p>
-            <a href="<?php echo $cta_link; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
           </div>
+          <p class="font-bump"><?php echo $promoted_body_copy; ?></p>
+          <a href="<?php echo $cta_link; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
         </div>
       </div>
     </section>
@@ -106,7 +102,6 @@ get_header();
   <div class="site-width pad-y-most">
     <div class="color-boxes">
       <h2 class="color-box-headline--brand-five">Resources</h2>
-      <p class="color-box-subheadline--brand-five">Tack back your time</p>
     </div>
     <div class="third">
       <?php

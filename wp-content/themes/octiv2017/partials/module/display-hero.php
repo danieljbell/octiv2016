@@ -15,9 +15,8 @@ $rand_num = mt_rand(1,4);
   HERO DEFAULT VARIABLES
   ==============================
   */
-  $page_hero_title = get_the_title();
-  $page_hero_sub_title = get_field('short_description');
-  $page_hero_body = strip_tags(get_the_excerpt());
+
+  /* BACKGROUND HERO IMAGE */
   if (has_post_thumbnail()) {
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
@@ -26,6 +25,29 @@ $rand_num = mt_rand(1,4);
   } else {
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
+  if (get_field('background_image')) {
+    $hero_bg = 'url(' . get_field('background_image') . ')';
+  }
+
+  /* HERO TITLE */
+  $page_hero_title = get_the_title();
+  if (get_field('hero_title')) {
+    $page_hero_title = get_field('hero_title');
+  }
+
+  /* HERO BODY COPY */
+  $page_hero_body = strip_tags(get_the_excerpt());
+  if (get_field('hero_body_copy')) {
+    $page_hero_body = get_field('hero_body_copy');
+  }
+
+  /* HERO BODY COPY */
+  if (get_field('hero_button_link')) {
+    $page_hero_button_text = get_field('hero_button_text');
+    $page_hero_button_link = get_field('hero_button_link');
+  }
+  
+  
 
   // CLIENT STORIES POST TYPE
   if (is_post_type_archive('client-story')) {
@@ -98,19 +120,17 @@ $rand_num = mt_rand(1,4);
       <div class="site-width">
         <div class="color-boxes">
           <?php if (is_page_template('page-templates/page-sections.php')) : ?>
-            <h1 class="color-box-headline--brand-two mar-b"><?php echo $page_hero_title; ?></h1>
+            <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
           <?php else : ?>
             <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
           <?php endif; ?>
-          <?php
-            if ($page_hero_sub_title) {
-              echo '<p class="color-box-subheadline--brand-two">' . $page_hero_sub_title . '</p>';
-            }
-          ?>
         </div>
         <?php
           if ($page_hero_body) {
-            echo '<h2>' . $page_hero_body . '</h2>';
+            echo '<h2 class="mar-b">' . $page_hero_body . '</h2>';
+          }
+          if ($page_hero_button_link) {
+            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
           }
         ?>
       </div>
@@ -152,10 +172,9 @@ $rand_num = mt_rand(1,4);
             <div class="site-width">
               <div class="color-boxes">
                 <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
-                <p class="color-box-subheadline--brand-two"><?php echo $page_hero_body; ?></p>
-                <h2><?php echo $page_hero_body_copy; ?></h2>
-                <a href="<?php echo $cta_location; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
               </div>
+              <h2 class="mar-b-most"><?php echo $page_hero_body_copy; ?></h2>
+              <a href="<?php echo $cta_location; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
             </div>
           </div>
         <?php

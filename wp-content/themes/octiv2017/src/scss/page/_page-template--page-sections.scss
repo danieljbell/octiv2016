@@ -25,5 +25,15 @@
       padding-top: 9rem;
       padding-bottom: 9rem;
     }
+
+    .color-boxes {
+      margin-bottom: 1.5rem;
+      & + p {
+        @include tablet {
+          font-size: 1.4em;
+        }
+      }
+    }
   }
+
 }
