@@ -82,19 +82,25 @@ $rand_num = mt_rand(1,4);
 
 	<section>
 		<div class="multi-slider employee-testimonials">
-				<div class="career-slide">
-					<p>What I love most about Octiv is our shared sense of purpose. We’re all focused on the same goals: creating an amazing product, helping our customers become more successful, and supporting each other every day.</p>
-					<p><img src="/wp-content/uploads/2016/10/sharmin-kent.jpg" alt="Sharmin" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"> <strong>Sharmin Kent</strong><br>Content and Communications Manager</p>
-				</div>
-				<div class="career-slide">
-					<p>The products we build aren’t just useful for our customers – they’re also visually appealing. Joining form and function is just one of the things that sets us apart from other companies in our space.</p>
-					<p><img src="/wp-content/uploads/2016/10/joe-heth.jpg" alt="Joe" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Joe Heth</strong><br>Lead Architect</p>
-				</div>
-				<div class="career-slide">
-					<p>Love working at Octiv because of the people. It's a fun experience coming into the office every day and getting to see my coworkers and team members.</p>
-					<p><img src="/wp-content/uploads/2016/10/tom-marvel.jpg" alt="Tom" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"><strong>Tom Marvel</strong><br>Product Manager</p>
-				</div>
+			<?php
+			$args = array(
+		    'post_type'      => 'employee-testimonial',
+		    'orderby'        => 'rand',
+		    'posts_per_page' => 3
+		  );
+		  $query = new WP_Query($args);
+		  if ($query->have_posts()) :
+		    while ($query->have_posts()) : $query->the_post(); ?>
+			<div class="career-slide">
+				<p><?php echo get_field('employee_quote'); ?></p>
+				<p><img src="<?php echo get_field('employee_headshot')[url] ?>" alt="<?php echo get_the_title(); ?>'s Headshot" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.25); max-width: 75px; float: left; margin-right: 1rem;"> <strong><?php echo get_the_title(); ?></strong><br><?php echo get_field('employee_title'); ?></p>
 			</div>
+			<?php
+		    endwhile;
+		  endif;
+		  wp_reset_query();
+			?>	
+		</div>
 	</section>
 
 	<section>
