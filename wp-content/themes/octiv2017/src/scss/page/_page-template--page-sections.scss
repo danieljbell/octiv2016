@@ -12,6 +12,9 @@
     @include tablet {
       margin-bottom: 9rem;
     }
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
   }
 
   .page-section-promoted-item {

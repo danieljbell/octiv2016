@@ -53,14 +53,20 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
     <div class="half vertical-align <?php echo $section_class; ?>">
       <div>
         <div class="color-boxes">
-          <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?> mar-b"><?php echo $section_title; ?></h2>
+          <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?>"><?php echo $section_title; ?></h2>
         </div>
         <p><?php echo $section_content; ?></p>
         <a href="<?php echo $section_link; ?>" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
       </div>
       <div class="browser-window">
         <div>
-          <img src="<?php echo get_sub_field('section_browser_window'); ?>" alt="">
+          <?php
+            if (get_sub_field('section_browser_window')) {
+              echo '<img src="' . get_sub_field('section_browser_window') . '" alt="' . get_sub_field('section_title') . '">';
+            } else {
+              echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
+            }
+          ?>
         </div>
       </div>
     </div>
