@@ -19,6 +19,9 @@ function enqueue_global_js() {
   if (is_post_type_archive('integration') || is_singular('integration')) {
     wp_enqueue_script('integrations', get_stylesheet_directory_URI() . '/dist/js/integrations.js', array(), '1.0.0', true);
   }
+  if (is_page_template('page-templates/resources.php')) {
+    wp_enqueue_script('integrations', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.0', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 
@@ -34,6 +37,7 @@ register_nav_menus( array(
   'mega-menu-promo' => __( 'Mega Menu Promo' ),
   'site_footer' => __( 'Site Footer' ),
   'sub_footer_links' => __( 'Sub Footer Links' ),
+  'resource_links' => __( 'Resource Links' ),
 ) );
 
 

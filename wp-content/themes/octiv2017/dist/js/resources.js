@@ -1,0 +1,2 @@
+!function(){$("#more-posts").on("click",function(){$(this).text("Loading Posts")})}();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlc291cmNlcy5qcyJdLCJuYW1lcyI6WyIkIiwib24iLCJ0aGlzIiwidGV4dCJdLCJtYXBwaW5ncyI6IkNBQUEsV0FDQUEsRUFBQSxlQUFBQyxHQUFBLFFBQUEsV0FDQUQsRUFBQUUsTUFBQUMsS0FBQSIsImZpbGUiOiJyZXNvdXJjZXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24oKSB7XG4gICQoJyNtb3JlLXBvc3RzJykub24oJ2NsaWNrJywgZnVuY3Rpb24oKSB7XG4gICAgJCh0aGlzKS50ZXh0KCdMb2FkaW5nIFBvc3RzJyk7XG4gIH0pO1xufSkoKTsiXX0=

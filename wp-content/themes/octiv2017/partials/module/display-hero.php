@@ -29,26 +29,6 @@ $rand_num = mt_rand(1,4);
     $hero_bg = 'url(' . get_field('background_image') . ')';
   }
 
-  /* HERO TITLE */
-  $page_hero_title = get_the_title();
-  if (get_field('hero_title')) {
-    $page_hero_title = get_field('hero_title');
-  }
-
-  /* HERO BODY COPY */
-  $page_hero_body = strip_tags(get_the_excerpt());
-  if (get_field('hero_body_copy')) {
-    $page_hero_body = get_field('hero_body_copy');
-  }
-
-  /* HERO BODY COPY */
-  if (get_field('hero_button_link')) {
-    $page_hero_button_text = get_field('hero_button_text');
-    $page_hero_button_link = get_field('hero_button_link');
-  }
-  
-  
-
   // CLIENT STORIES POST TYPE
   if (is_post_type_archive('client-story')) {
     $page_hero_title = 'Client Stories';
@@ -120,6 +100,24 @@ $rand_num = mt_rand(1,4);
   if (is_404()) {
     $page_hero_title = 'Oh Uh!';
     $page_hero_body = 'The page you are looking for either moved or doesn\'t exist.';
+  }
+
+  /* HERO TITLE */
+  $page_hero_title = get_the_title();
+  if (get_field('hero_title')) {
+    $page_hero_title = get_field('hero_title');
+  }
+
+  /* HERO BODY COPY */
+  $page_hero_body = strip_tags(get_the_excerpt());
+  if (get_field('hero_body_copy')) {
+    $page_hero_body = get_field('hero_body_copy');
+  }
+
+  /* HERO BODY COPY */
+  if (get_field('hero_button_link')) {
+    $page_hero_button_text = get_field('hero_button_text');
+    $page_hero_button_link = get_field('hero_button_link');
   }
 
 ?>

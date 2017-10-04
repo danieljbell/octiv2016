@@ -33,7 +33,7 @@ add_shortcode('get_card_v3', function($atts) {
       <?php endif; ?>
       <?php
         if ($excerpt != 'false') { 
-          echo '<div class="card-description">' . strip_tags(get_the_excerpt()) . '</div>'; 
+          echo '<p class="card-description">' . strip_tags(get_the_excerpt()) . '</p>'; 
         }
       ?>
       <?php if (!is_post_type_archive('integration')) : ?>
