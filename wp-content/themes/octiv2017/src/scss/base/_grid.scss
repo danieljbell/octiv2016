@@ -88,6 +88,16 @@
       }
     }
   }
+  &-only {
+    width: 100%;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 40%;
+    }
+    @include fullhd {
+      max-width: 33%;
+    }
+  }
   @supports (display: grid) {
     display: grid;
     grid-gap: 2rem;
