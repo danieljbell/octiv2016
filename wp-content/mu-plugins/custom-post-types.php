@@ -848,7 +848,7 @@ function register_client_story_post_type() {
     'labels'      => $labels,
     'description' => '',
     'public'      => true,
-    'publicly_queryable' => false,
+    'publicly_queryable' => true,
     'has_archive' => true,
     'rewrite'            => array( 'slug' => 'resources/client-story' ),
     'menu_icon'   => 'dashicons-format-status',
