@@ -36,35 +36,27 @@ TEMPLATE NAME: Resource Layout
 
   <section class="resource-grid">
     <div class="site-width">
-      <div class="third-only pad-y-most">
-        <div class="fancy-text-input">
-          <input id="resource-search" class="text-search-bar" type="text" placeholder="Search All Blog Posts">
-          <!-- <label for="resource-search">Search All Blog Posts</label> -->
+      <div id="searchable-resources" class="pad-t-more pad-b-most">
+        <div class="third-only">
+          <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search Blog Posts">
         </div>
-      </div>
-      <div class="third mar-b-most">
-        <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 3
-          );
-          $query = new WP_Query($args);
-        ?>
-        <?php
-          if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-              echo do_shortcode('[get_card_v3 excerpt="true"]');
-            endwhile;
-          endif;
-          wp_reset_query();
-        ?>
-      </div>
-      <div class="ajaxed-posts"></div>
-      <div class="has-text-center mar-b-most">
-        <button id="more-posts" class="btn-brand--outline">Load More Blog Posts</button>
+        <div id="resource-items" class="third">
+          <div v-for="post in filteredList" class="card">
+            <div class="card-content">
+              <h4><a v-bind:href="post.link">{{ htmlentities.decode(post.title.rendered) }}</a></h4>
+              <p class="card-description">{{ post.excerpt.rendered.substr(3).slice(0, -4) }}</p>
+              <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="has-text-center">
+          <button class="btn-brand--outline mar-t-most">Load More Posts</button>
+        </div>
       </div>
     </div>
   </section>
+
+<?php get_template_part('partials/module/display', 'powers-documents'); ?>
 
 </main>
 

@@ -65,7 +65,7 @@ gulp.task('js', function () {
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('resources.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());  

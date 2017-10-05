@@ -70,6 +70,12 @@ FONT COLORS
 
 .mar-t {
   margin-top: 1em;
+  &-more {
+    margin-top: 2em;
+  }
+  &-most {
+    margin-top: 3em;
+  }
 }
 
 .mar-r {
