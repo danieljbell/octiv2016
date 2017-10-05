@@ -50,6 +50,7 @@ register_nav_menus( array(
   'mega-menu-promo' => __( 'Mega Menu Promo' ),
   'site_footer' => __( 'Site Footer' ),
   'sub_footer_links' => __( 'Sub Footer Links' ),
+  'resource_links' => __( 'Resource Links' ),
 ) );
 
 
