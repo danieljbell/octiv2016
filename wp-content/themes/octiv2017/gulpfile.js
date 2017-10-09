@@ -61,14 +61,13 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
   gulp.src([
-    'src/js/pages/resources.js'
+    'src/js/pages/*.js'
   ])
     .pipe(sourcemaps.init())
-    .pipe(concat('resources.js'))
     //.pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
-    .pipe(browserSync.stream());  
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {

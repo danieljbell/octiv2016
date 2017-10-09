@@ -25,28 +25,46 @@ window.htmlentities = {
   }
 };
 
-var stuff;
-
 $.ajax({
     dataType: "json",
     async: false,
     url: "/wp-json/wp/v2/posts?per_page=9",
     success: function(data) {
-        stuff = data;
+      var app = new Vue({
+        el: '#searchable-resources',
+        data: {
+          keyword: ' ',
+          postList: data,
+          offset: 9
+        },
+        methods: {
+          getMorePosts(postList) {
+            var newOffset = this.offset += 9;
+            var postList = this.postList;
+            this.$el.querySelector('button').innerText = 'Loading...';
+            $.ajax({
+              dataType: "json",
+              async: false,
+              url: "/wp-json/wp/v2/posts?per_page=9&offset=" + newOffset,
+            }).done(function(data) {
+              var resp = data;
+              for (var i = 0; i < resp.length; i++) {
+                postList.push(resp[i]);
+              }
+              console.log($('#load-more-posts').text('Load More Posts'));
+            });
+          }
+        },
+        computed: {
+          filteredList() {
+            return this.postList.filter((post) => {
+              return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
+            });
+          }
+        }
+      });
     }
 });
 
-var app = new Vue({
-  el: '#searchable-resources',
-  data: {
-    keyword: ' ',
-    postList: stuff
-  },
-  computed: {
-    filteredList() {
-      return this.postList.filter((post) => {
-        return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
-      });
-    }
-  }
-});
+
+

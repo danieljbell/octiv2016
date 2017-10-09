@@ -50,7 +50,7 @@ TEMPLATE NAME: Resource Layout
           </div>
         </div>
         <div class="has-text-center">
-          <button class="btn-brand--outline mar-t-most">Load More Posts</button>
+          <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
         </div>
       </div>
     </div>
