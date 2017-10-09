@@ -35,7 +35,7 @@ $.ajax({
         data: {
           keyword: ' ',
           postList: data,
-          offset: 9
+          offset: 0
         },
         methods: {
           getMorePosts(postList) {
@@ -51,7 +51,7 @@ $.ajax({
               for (var i = 0; i < resp.length; i++) {
                 postList.push(resp[i]);
               }
-              console.log($('#load-more-posts').text('Load More Posts'));
+              $('#load-more-posts').text('Load More Posts');
             });
           }
         },

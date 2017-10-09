@@ -35,8 +35,6 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src('./dist/js/**/*', {read: false})
-    .pipe(clean());
   gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/slick-carousel/slick/slick.js',
@@ -55,8 +53,6 @@ gulp.task('js', function () {
     'src/js/pages/integrations.js'
   ])
     .pipe(sourcemaps.init())
-    .pipe(concat('integrations.js'))
-    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
@@ -64,7 +60,6 @@ gulp.task('js', function () {
     'src/js/pages/*.js'
   ])
     .pipe(sourcemaps.init())
-    //.pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());

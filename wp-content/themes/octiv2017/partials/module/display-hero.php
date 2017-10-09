@@ -102,6 +102,13 @@ $rand_num = mt_rand(1,4);
     $page_hero_body = 'The page you are looking for either moved or doesn\'t exist.';
   }
 
+  // CATEGORY PAGE HEROS
+  if (is_category()) {
+    $page_hero_title = get_queried_object()->name;
+    $page_hero_body = get_queried_object()->category_description;
+    $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
+  }
+
   /* HERO TITLE */
   $page_hero_title = get_the_title();
   if (get_field('hero_title')) {
@@ -109,7 +116,7 @@ $rand_num = mt_rand(1,4);
   }
 
   /* HERO BODY COPY */
-  $page_hero_body = strip_tags(get_the_excerpt());
+  // $page_hero_body = strip_tags(get_the_excerpt());
   if (get_field('hero_body_copy')) {
     $page_hero_body = get_field('hero_body_copy');
   }
