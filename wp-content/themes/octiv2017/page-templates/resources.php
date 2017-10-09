@@ -43,8 +43,8 @@ TEMPLATE NAME: Resource Layout
         <div id="resource-items" class="third">
           <div v-for="post in filteredList" class="card">
             <div class="card-content">
-              <h4><a v-bind:href="post.link">{{ htmlentities.decode(post.title.rendered) }}</a></h4>
-              <p class="card-description">{{ htmlentities.decode(post.excerpt.rendered.substr(3).slice(0, -4)) }}</p>
+              <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
+              <p class="card-description" v-html="post.excerpt.rendered"></p>
               <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>
             </div>
           </div>

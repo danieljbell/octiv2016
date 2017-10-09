@@ -110,7 +110,7 @@ $rand_num = mt_rand(1,4);
   }
 
   /* HERO TITLE */
-  $page_hero_title = get_the_title();
+  // $page_hero_title = get_the_title();
   if (get_field('hero_title')) {
     $page_hero_title = get_field('hero_title');
   }
