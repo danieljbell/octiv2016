@@ -1,6 +1,6 @@
 <?php
   $args = array(
-    'post_type' => 'client-stories',
+    'post_type' => 'client-story',
     'orderby' => 'menu_order',
     'order' => 'ASC'
   );
