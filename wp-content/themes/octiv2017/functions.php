@@ -27,6 +27,10 @@ function enqueue_global_js() {
     wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('category', get_stylesheet_directory_URI() . '/dist/js/category.js', array(), '1.0.0', true);
   }
+  if (is_post_type_archive('client-story')) {
+    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
+    wp_enqueue_script('category', get_stylesheet_directory_URI() . '/dist/js/client-story.js', array(), '1.0.0', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 
