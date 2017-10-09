@@ -28,7 +28,7 @@ window.htmlentities = {
 $.ajax({
     dataType: "json",
     async: false,
-    url: "/wp-json/wp/v2/client-story",
+    url: "/wp-json/wp/v2/client-story?_embed",
     success: function(data) {
       var app = new Vue({
         el: '#searchable-resources',
@@ -39,13 +39,13 @@ $.ajax({
         },
         methods: {
           getMorePosts(postList) {
-            var newOffset = this.offset += 9;
+            var newOffset = this.offset += 10;
             var postList = this.postList;
             this.$el.querySelector('button').innerText = 'Loading...';
             $.ajax({
               dataType: "json",
               async: false,
-              url: "/wp-json/wp/v2/client-story?per_page=9&offset=" + newOffset,
+              url: "/wp-json/wp/v2/client-story?_embed&per_page=10&offset=" + newOffset,
             }).done(function(data) {
               var resp = data;
               for (var i = 0; i < resp.length; i++) {

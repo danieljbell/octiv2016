@@ -28,20 +28,26 @@
   <section class="resource-grid">
     <div class="site-width">
       <div id="searchable-resources" class="pad-t-more pad-b-most">
-        <div class="third-only">
-          <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search <?php echo get_queried_object()->label; ?>">
-        </div>
-        <div id="resource-items" class="third">
-          <div v-for="post in filteredList" class="card">
-            <div class="card-content">
-              <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
-              <p class="card-description" v-html="post.excerpt.rendered"></p>
-              <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>
+        <div class="one-fourth">
+          <div>
+            <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search <?php echo get_queried_object()->label; ?>">
+          </div>
+          <div id="resource-items" class="half">
+            <div v-for="post in filteredList" class="card">
+              <a v-bind:href="post.link" class="card-image" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }"></a>
+              <div class="card-content">
+                <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
+                <p class="card-description" v-html="post.excerpt.rendered"></p>
+                <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="has-text-center">
-          <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
+        <div class="one-fourth">
+          <div>&nbsp;</div>
+          <div class="has-text-center">
+            <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
+          </div>
         </div>
       </div>
     </div>

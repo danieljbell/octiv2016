@@ -6,7 +6,7 @@ $.ajax({
       var app = new Vue({
         el: '#searchable-resources',
         data: {
-          keyword: ' ',
+          keyword: '',
           postList: data,
           offset: 0
         },
