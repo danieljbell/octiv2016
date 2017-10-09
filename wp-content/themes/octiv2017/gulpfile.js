@@ -68,6 +68,8 @@ gulp.task('js', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
+  gulp.src('./node_modules/vue/dist/vue.min.js')
+    .pipe(gulp.dest('./dist/js/lib'))
 });
 
 gulp.task('images', function() {

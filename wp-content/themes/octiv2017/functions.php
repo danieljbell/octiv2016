@@ -20,11 +20,11 @@ function enqueue_global_js() {
     wp_enqueue_script('integrations', get_stylesheet_directory_URI() . '/dist/js/integrations.js', array(), '1.0.0', true);
   }
   if (is_page_template('page-templates/resources.php')) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/node_modules/vue/dist/vue.min.js', array(), null, true);
+    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('resources', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.0', true);
   }
   if (is_category()) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/node_modules/vue/dist/vue.min.js', array(), null, true);
+    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('category', get_stylesheet_directory_URI() . '/dist/js/category.js', array(), '1.0.0', true);
   }
 }
