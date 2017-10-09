@@ -40,6 +40,18 @@ TEMPLATE NAME: Resource Layout
         <div class="one-fourth">
           <div>
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search Blog Posts">
+            <h4>Categories</h4>
+            <hr style="margin: 0.25rem 0;">
+            <ul class="resource-filter-list">
+              <?php
+                $all_cats = get_categories();
+                foreach ($all_cats as $single_cat) :
+              ?>
+                <li><input type="checkbox" id="<?php echo $single_cat->slug; ?>" checked> <label for="<?php echo $single_cat->slug; ?>"><?php echo $single_cat->name; ?></label></li>
+              <?php 
+                endforeach;
+              ?>
+            </ul>
           </div>
           <div id="resource-items" class="half">
             <div v-for="post in filteredList" class="card">

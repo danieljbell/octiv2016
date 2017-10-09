@@ -1,0 +1,14 @@
+.resource-grid {
+  @include tablet {
+    padding: 3rem 0;
+  }
+
+  .resource-filter-list {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      font-size: 0.85em;
+      margin-bottom: 0.15em;
+    }
+  }
+}
