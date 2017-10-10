@@ -16,16 +16,38 @@ TEMPLATE NAME: Resource Layout
   <section class="promoted-container" style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
     <div class="site-width">
       <div class="box--light">
-        <div class="half">
-          <?php
-            $promoted_items = get_field('pick_your_page');
+        <?php
+          $promoted_items = get_field('pick_your_page');
+          $promoted_count = count($promoted_items);
+          
+          echo '<div class="">';
             foreach ($promoted_items as $item) : ?>
-              <div class="promoted-item">
-                <?php echo $item->post_title; ?>
-              </div>
+              <?php
+                $args = array(
+                  'post_type' => $item->post_type,
+                  'posts_per_page' => 1,
+                  'page_id' => $item->ID
+                );
+                $query = new WP_Query($args);
+                if ($query->have_posts()) :
+                  while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="promoted-item">
+                      <img src="<?php echo get_field('client_logo'); ?>" alt="<?php echo get_field('person_company'); ?>" class="promoted-item-company-logo">
+                      <p class="quote"><?php echo get_field('highlighted_quote'); ?></p>
+                      <div class="person-headshot" style="margin-right: 0;">
+                        <img src="<?php echo get_field('person_headshot'); ?>" alt="<?php echo get_field('person_name'); ?>">
+                      </div>
+                      <p><strong><?php echo get_field('person_name'); ?></strong><br><?php echo get_field('person_title'); ?></p>
+                      <a href="<?php echo get_the_permalink(); ?>" class="btn-white--outline">Read the Full Story</a>
+                    </div>
+              <?php      
+                  endwhile;
+                endif;
+                wp_reset_query();
+              ?>
           <?php endforeach;
-          ?>
-        </div>
+          echo '</div>';
+        ?>
       </div>
     </div>
   </section>

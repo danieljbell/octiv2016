@@ -1,3 +1,19 @@
 .promoted-item {
   text-align: center;
+  padding: 2rem;
+  background-size: cover, 300px, cover;
+  background-position: center;
+  background-image: linear-gradient(135deg, transparentize($brand3, 0.5), transparentize($brand4, 0.5)), url(../img/octiv-pattern.svg), linear-gradient(135deg, $brand3, $brand4);
+  color: $white;
+  &:nth-child(2) {
+    background-image: linear-gradient(135deg, transparentize($brand4, 0.5), transparentize($brand, 0.5)), url(../img/octiv-pattern.svg), linear-gradient(135deg, $brand4, $brand);
+  }
+  p {
+    text-shadow: 2px 2px 3px rgba(black, 0.35);
+    font-size: 1.25em;
+  }
+  .promoted-item-company-logo {
+    filter: grayscale(1) invert(1) brightness(300%) drop-shadow(3px 3px 2px rgba(black, 0.5));
+    margin-bottom: 1rem;
+  }
 }
