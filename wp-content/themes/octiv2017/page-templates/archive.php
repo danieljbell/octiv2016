@@ -24,14 +24,14 @@ if ($post_type === 'post' || $post_type === 'solutions') {
     <div id="searchable-resources" class="pad-t-more pad-b-most">
       <div class="one-fourth">
         <div>
-          <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search <?php echo get_the_title(); ?>">
+          <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?>">
           <h4><?php echo get_the_title(); ?> By Type</h4>
           <hr style="margin: 0.25rem 0;">
           <ul class="resource-filter-list">
             <?php
               $allTerms = get_terms('integration_type');
               foreach ($allTerms as $term) {
-                echo '<li><input type="checkbox" id="' . $term->slug . '" checked> <label for="' . $term->slug . '">' . $term->name . '</label></li>';
+                echo '<li><input type="checkbox" id="' . $term->slug . '" value="' . $term->slug . '" checked> <label for="' . $term->slug . '">' . $term->name . '</label></li>';
               }
             ?>
           </ul>

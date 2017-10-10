@@ -1,7 +1,7 @@
 $.ajax({
     dataType: "json",
     async: false,
-    url: "/wp-json/wp/v2/" + pagePostType + "?_embed&per_page=" + postsPerPage,
+    url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=asc&per_page=" + postsPerPage,
     success: function(data) {
       var app = new Vue({
         el: '#searchable-resources',

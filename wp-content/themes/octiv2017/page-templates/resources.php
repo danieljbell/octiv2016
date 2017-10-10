@@ -24,13 +24,20 @@ TEMPLATE NAME: Resource Layout
   <section class="persistent-nav brand-two-callout">
     <div class="site-width">
       <h3 class="has-text-center">Resource By Type</h3>
-      <?php
-        wp_nav_menu(
-          array(
-            'menu' => 'resource-links',
-          )
-        );
-      ?>
+      <ul>
+        <li>
+          <a href="/resources/blog/">Blog</a>
+        </li>
+        <li>
+          <a href="/resources/client-story/">Client Stories</a>
+        </li>
+        <li>
+          <a href="/resources/downloads/">Downloads</a>
+        </li>
+        <li>
+          <a href="/resources/events/">Events &amp; Webinars</a>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -39,7 +46,7 @@ TEMPLATE NAME: Resource Layout
       <div id="searchable-resources" class="pad-t-more pad-b-most">
         <div class="one-fourth">
           <div>
-            <input type="text" v-model="keyword" class="text-search-bar" placeholder="Search Blog Posts">
+            <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?>">
             <h4>Categories</h4>
             <hr style="margin: 0.25rem 0;">
             <ul class="resource-filter-list">
@@ -77,5 +84,30 @@ TEMPLATE NAME: Resource Layout
 <?php get_template_part('partials/module/display', 'powers-documents'); ?>
 
 </main>
+
+<script>
+  <?php
+    /*
+    ==============================
+    DEFAULT VARIABLES
+    ==============================
+    */
+    $postsPerPage = 99;
+    
+    if (get_field('post_type')) {
+      echo "var pagePostType = '" . get_field('post_type') . "';";
+    }
+    if (get_field('post_count')) {
+      echo "var postsPerPage = '" . get_field('post_count') . "';";
+    } else {
+      echo "var postsPerPage = '" . $postsPerPage . "';";
+    }
+    if (get_field('post_order')) {
+      echo "var postOrder = '" . get_field('post_order') . "';";
+    } else {
+      // echo "var postsPerPage = '" . $postsPerPage . "';";
+    }
+  ?>
+</script>
 
 <?php get_footer(); ?>
