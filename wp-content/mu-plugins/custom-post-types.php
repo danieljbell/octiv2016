@@ -849,7 +849,7 @@ function register_client_story_post_type() {
     'description' => '',
     'public'      => true,
     'publicly_queryable' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'rewrite'            => array( 'slug' => 'resources/client-story' ),
     'menu_icon'   => 'dashicons-format-status',
     'supports'    => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
