@@ -1,14 +1,14 @@
 $.ajax({
     dataType: "json",
     async: false,
-    url: "/wp-json/wp/v2/integrations?_embed&per_page=99",
+    url: "/wp-json/wp/v2/" + pagePostType + "?_embed&per_page=" + postsPerPage,
     success: function(data) {
       var app = new Vue({
         el: '#searchable-resources',
         data: {
           keyword: '',
           postList: data,
-          offset: 0
+          offset: 0,
         },
         methods: {
           
