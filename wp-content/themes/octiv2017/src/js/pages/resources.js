@@ -12,13 +12,13 @@ $.ajax({
         },
         methods: {
           getMorePosts(postList) {
-            var newOffset = this.offset += 10;
+            var newOffset = this.offset += postsPerPage;
             var postList = this.postList;
             this.$el.querySelector('button').innerText = 'Loading...';
             $.ajax({
               dataType: "json",
               async: false,
-              url: "/wp-json/wp/v2/posts?_embed&offset=" + newOffset,
+              url: "/wp-json/wp/v2/" + pagePostType + "?_embed&per_page=" + postsPerPage + "&offset=" + newOffset,
             }).done(function(data) {
               var resp = data;
               for (var i = 0; i < resp.length; i++) {

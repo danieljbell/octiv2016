@@ -13,10 +13,19 @@ TEMPLATE NAME: Resource Layout
   
   <?php get_template_part('partials/module/display', 'hero'); ?>
 
-  <section style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
+  <section class="promoted-container" style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
     <div class="site-width">
-      <div class="box--light" style="height: 400px;">
-        Promoted Items
+      <div class="box--light">
+        <div class="half">
+          <?php
+            $promoted_items = get_field('pick_your_page');
+            foreach ($promoted_items as $item) : ?>
+              <div class="promoted-item">
+                <?php echo $item->post_title; ?>
+              </div>
+          <?php endforeach;
+          ?>
+        </div>
       </div>
     </div>
   </section>
@@ -24,32 +33,26 @@ TEMPLATE NAME: Resource Layout
   <section class="persistent-nav brand-two-callout">
     <div class="site-width">
       <h3 class="has-text-center">Resource By Type</h3>
-      <ul>
-        <li>
-          <a href="/resources/blog/">Blog</a>
-        </li>
-        <li>
-          <a href="/resources/client-stories/">Client Stories</a>
-        </li>
-        <li>
-          <a href="/resources/downloads/">Downloads</a>
-        </li>
-        <li>
-          <a href="/resources/events/">Events &amp; Webinars</a>
-        </li>
-      </ul>
+      <?php
+        wp_nav_menu(
+          array(
+            'menu' => 'resource-links',
+            'menu_id' => 'persistent-nav-list'
+          )
+        );
+      ?>
     </div>
   </section>
 
   <section class="resource-grid">
     <div class="site-width">
-      <div id="searchable-resources" class="pad-t-more pad-b-most">
+      <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
         <div class="one-fourth">
-          <div>
+          <div class="resource-grid-filters-container">
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?>">
             <h4>Categories</h4>
             <hr style="margin: 0.25rem 0;">
-            <ul id="sticky-resource-nav" class="resource-filter-list">
+            <ul class="resource-filter-list">
               <?php
                 $all_cats = get_categories();
                 foreach ($all_cats as $single_cat) :
@@ -100,9 +103,9 @@ TEMPLATE NAME: Resource Layout
       echo "var pagePostType = '" . get_field('post_type') . "';";
     }
     if (get_field('post_count')) {
-      echo "var postsPerPage = '" . get_field('post_count') . "';";
+      echo "var postsPerPage = " . get_field('post_count') . ";";
     } else {
-      echo "var postsPerPage = '" . $postsPerPage . "';";
+      echo "var postsPerPage = " . $postsPerPage . ";";
     }
     if (get_field('post_order')) {
       echo "var postOrder = '" . get_field('post_order') . "';";

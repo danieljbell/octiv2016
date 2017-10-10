@@ -27,14 +27,21 @@
   STICKY NAV LIST
   ==============================
   */
-  var stickyNav = document.querySelector('#sticky-resource-nav');
+  var stickyNav = document.querySelector('#persistent-nav-list');
   if (stickyNav) {
 
-    var topOfStickyNav = stickyNav.offsetTop;
+    // var topOfStickyNav = stickyNav.offsetTop - stickyNav.offsetHeight - siteHeader.offsetHeight - siteHeader.offsetTop - 18;
+
+    var topOfStickyNav = stickyNav.offsetTop - stickyNav.offsetHeight - 18;
 
     function stickyNavList() {
       if (window.scrollY >= topOfStickyNav) {
-        console.log(topOfStickyNav, scrollY);
+        var initialBodyPadding = document.body.style.paddingTop;
+        var currentBodyPadding = parseInt(initialBodyPadding.slice(0, 2)) + stickyNav.offsetHeight + (18*6) +'px';
+        document.body.style.paddingTop = currentBodyPadding;
+        document.body.classList.add('sticky-nav-fixed');
+      } else {
+        document.body.classList.remove('sticky-nav-fixed');
       }
     }
 

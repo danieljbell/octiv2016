@@ -1,5 +1,6 @@
 .persistent-nav {
   padding-top: 5rem;
+  transition: box-shadow 200ms ease-in-out;
 
   ul {
     list-style-type: none;
@@ -33,7 +34,32 @@
       width: 50px;
       transform: translateX(-50%);
       color: $gray;
+      transition: all 200ms ease-in-out;
     }
   }
 
 }
+
+.sticky-nav-fixed .persistent-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateY(-2rem);
+  box-shadow: 0 5px 15px rgba(black, 0.2);
+  .current-menu-item:after {
+    filter: drop-shadow(0 5px 5px rgba(black, 0.3));
+  }
+}
+
+.sticky-nav-fixed .promoted-container {
+  transform: translateY(-3rem);
+}
+
+// .sticky-nav-fixed .resource-grid-filters-container {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+// }
