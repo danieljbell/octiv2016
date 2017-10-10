@@ -29,7 +29,7 @@ TEMPLATE NAME: Resource Layout
           <a href="/resources/blog/">Blog</a>
         </li>
         <li>
-          <a href="/resources/client-story/">Client Stories</a>
+          <a href="/resources/client-stories/">Client Stories</a>
         </li>
         <li>
           <a href="/resources/downloads/">Downloads</a>
@@ -49,7 +49,7 @@ TEMPLATE NAME: Resource Layout
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?>">
             <h4>Categories</h4>
             <hr style="margin: 0.25rem 0;">
-            <ul class="resource-filter-list">
+            <ul id="sticky-resource-nav" class="resource-filter-list">
               <?php
                 $all_cats = get_categories();
                 foreach ($all_cats as $single_cat) :
@@ -62,7 +62,9 @@ TEMPLATE NAME: Resource Layout
           </div>
           <div id="resource-items" class="half">
             <div v-for="post in filteredList" class="card">
-              <a v-bind:href="post.link" class="card-image" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }"></a>
+              <?php if (!is_page(3631)) : ?>
+                <a v-bind:href="post.link" class="card-image" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }"></a>
+              <?php endif; ?>
               <div class="card-content">
                 <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
                 <p class="card-description" v-html="post.excerpt.rendered"></p>

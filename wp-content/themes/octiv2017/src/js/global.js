@@ -1,14 +1,48 @@
 (function() {
 
-  var waypoints = $('.site-header').waypoint({
-    handler: function(direction) {
-      if (direction === 'down') {
-        $('body').addClass('site-header-fixed');
-      } else {
-        $('body').removeClass('site-header-fixed');
+
+  /*
+  ==============================
+  STICKY SITE HEADER
+  ==============================
+  */
+  var siteHeader = document.querySelector('.site-header');
+  var topOfSiteHeader = siteHeader.offsetTop;
+  
+  function fixedHeaderNav() {
+    if (window.scrollY >= topOfSiteHeader) {
+      document.body.style.paddingTop = siteHeader.offsetHeight + 'px';
+      document.body.classList.add('site-header-fixed');
+    } else {
+      document.body.style.paddingTop = 0;
+      document.body.classList.remove('site-header-fixed');
+    }
+  }
+
+  window.addEventListener('scroll', fixedHeaderNav);
+
+
+  /*
+  ==============================
+  STICKY NAV LIST
+  ==============================
+  */
+  var stickyNav = document.querySelector('#sticky-resource-nav');
+  if (stickyNav) {
+
+    var topOfStickyNav = stickyNav.offsetTop;
+
+    function stickyNavList() {
+      if (window.scrollY >= topOfStickyNav) {
+        console.log(topOfStickyNav, scrollY);
       }
     }
-  })
+
+    window.addEventListener('scroll', stickyNavList);
+
+  }
+
+
 
   /*
   ==============================
