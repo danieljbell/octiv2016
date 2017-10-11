@@ -141,9 +141,11 @@ TEMPLATE NAME: Resource Layout
     if (get_field('post_type')) {
       echo "var pagePostType = '" . get_field('post_type') . "';";
       echo "var postTypeCats = [";
-        foreach ($all_cats as $single_cat) :
-          echo "'" . $single_cat->slug . "',";
-        endforeach;
+        if (get_field('post_type') !== 'client-story') :
+          foreach ($all_cats as $single_cat) :
+            echo "'" . $single_cat->slug . "',";
+          endforeach;
+        endif;
       echo "];";
     }
     if (get_field('post_count')) {
