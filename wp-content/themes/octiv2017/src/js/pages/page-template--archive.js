@@ -1,7 +1,7 @@
 $.ajax({
     dataType: "json",
     async: false,
-    url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=asc&per_page=" + postsPerPage,
+    url: "/wp-json/wp/v2/" + pagePostType + "?_embed&per_page=" + postsPerPage,
     success: function(data) {
       var app = new Vue({
         el: '#searchable-resources',
@@ -9,6 +9,7 @@ $.ajax({
           keyword: '',
           postList: data,
           offset: 0,
+          selectedCats: []
         },
         methods: {
           
@@ -16,7 +17,7 @@ $.ajax({
         computed: {
           filteredList() {
             return this.postList.filter((post) => {
-              return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
+              return (post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase())) && (post._embedded['wp:term'][0][0].slug.includes(this.selectedCats));
             });
           }
         }

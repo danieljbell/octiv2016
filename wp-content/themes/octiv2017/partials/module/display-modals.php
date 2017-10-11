@@ -83,3 +83,27 @@ DISPLAY MODALS
     </div>
   </div>
 </div>
+
+<div class="search-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+    <div class="modal-content half vertical-align">
+      <div class="modal-header light-callout">
+        <div class="modal-header--brand">
+          <div class="color-boxes">
+            <h4 class="color-box-headline--gray">What Can We Help You Find?</h4>
+          </div>
+          <p>Use the search bar below to find what you are looking for.</p>
+        </div>
+        <div class="modal-header--content">
+          <div id="global-search">
+            <input type="text" class="text-search-bar">
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+    </div>
+  </div>
+</div>

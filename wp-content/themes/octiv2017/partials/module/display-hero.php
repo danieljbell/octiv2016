@@ -210,7 +210,7 @@ $rand_num = mt_rand(1,4);
     <div class="site-width">
       <div class="hero-integration-logo-container">
         <div class="hero-integration-logo light-callout">
-          <img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo">
+          <img src="<?php echo get_stylesheet_directory_URI(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo" style="height: 200px;">
         </div>
         <div class="light-callout plus-sign">+</div>
         <div class="hero-integration-logo light-callout">

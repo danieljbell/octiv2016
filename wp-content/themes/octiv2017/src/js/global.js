@@ -93,6 +93,12 @@
     $('.logo-modal-container').modal();
   })
 
+  var searchButton = $('[href="#search"]');
+  searchButton.on('click', function(e) {
+    e.preventDefault();
+    $('.search-modal-container').modal();
+  })
+
 
   /*
   ==============================

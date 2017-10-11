@@ -3,7 +3,7 @@
   main .card-content {
     position: relative;
     padding: 2rem;
-    min-height: 100px;
+    min-height: 150px;
 
     a {
       position: absolute;
@@ -12,7 +12,9 @@
       right: 0;
       bottom: 0;
       display: flex;
+      justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     img {
@@ -21,6 +23,7 @@
       margin: 0 auto;
       max-height: 100px;
       max-width: 150px;
+      margin-bottom: 1rem;
     }
   }
 

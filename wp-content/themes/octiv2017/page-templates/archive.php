@@ -4,11 +4,6 @@
 Template Name: Archive
 ==============================
 */
-$post_type = get_field('post_type');
-$post_parent = get_field('post_parent');
-if ($post_type === 'post' || $post_type === 'solutions') {
-  $post_parent = '0';
-}
 ?>
 
 <?php get_header(); ?>
@@ -19,34 +14,49 @@ if ($post_type === 'post' || $post_type === 'solutions') {
 
 <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
 
-<section class="resource-grid">
-  <div class="site-width">
-    <div id="searchable-resources" class="pad-t-more pad-b-most">
-      <div class="one-fourth">
-        <div>
-          <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?>">
-          <h4><?php echo get_the_title(); ?> By Type</h4>
-          <hr style="margin: 0.25rem 0;">
-          <ul class="resource-filter-list">
-            <?php
-              $allTerms = get_terms('integration_type');
-              foreach ($allTerms as $term) {
-                echo '<li><input type="checkbox" id="' . $term->slug . '" value="' . $term->slug . '" checked> <label for="' . $term->slug . '">' . $term->name . '</label></li>';
-              }
-            ?>
-          </ul>
+  <section class="resource-grid">
+    <div class="site-width">
+      <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
+        <div class="one-fourth vertical-align">
+          <div class="resource-grid-filters-container">
+            <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
+          </div>
+          <div>
+            <h4>Categories</h4>
+            <select v-model="selectedCats">
+              <option value="">All <?php echo get_the_title(); ?> Posts</option>
+              <?php
+                $all_cats = get_terms('integration_type');
+                foreach ($all_cats as $single_cat) :
+              ?>
+                <option value="<?php echo $single_cat->slug; ?>"><?php echo $single_cat->name . ' - ' . $single_cat->count; ?></option>
+              <?php
+                endforeach;
+              ?>
+            </select>
+          </div>
         </div>
         <div id="resource-items" class="third">
           <div v-for="post in filteredList" class="card">
-            <div class="card-content">
-              <a v-bind:href="post.link"><img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered"></a>
-            </div>
+            <?php if (!is_page(3631)) : ?>
+              <div class="card-content">
+                <a v-bind:href="post.link">
+                  <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered">
+                  <h4>{{post.title.rendered}}</h4>
+                </a>
+              </div>
+            <?php else : ?>
+              <div class="card-content">
+                <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
+                <p class="card-description" v-html="post.excerpt.rendered"></p>
+                <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   
 </main>
 
@@ -61,11 +71,16 @@ if ($post_type === 'post' || $post_type === 'solutions') {
     
     if (get_field('post_type')) {
       echo "var pagePostType = '" . get_field('post_type') . "';";
+      echo "var postTypeCats = [";
+        foreach ($all_cats as $single_cat) :
+          echo "'" . $single_cat->slug . "',";
+        endforeach;
+      echo "];";
     }
     if (get_field('post_count')) {
-      echo "var postsPerPage = '" . get_field('post_count') . "';";
+      echo "var postsPerPage = " . get_field('post_count') . ";";
     } else {
-      echo "var postsPerPage = '" . $postsPerPage . "';";
+      echo "var postsPerPage = " . $postsPerPage . ";";
     }
   ?>
 </script>

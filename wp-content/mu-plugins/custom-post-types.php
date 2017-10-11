@@ -226,7 +226,7 @@ function register_event_post_type() {
     'labels'      => $labels,
     'description' => '',
     'public'      => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
     'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
@@ -280,6 +280,9 @@ function events_init() {
             'hierarchical' => true,
             'hasArchive' => true,
             'show_ui' => true,
+            'show_in_rest'       => true,
+            'rest_base'          => 'event_type',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
             'capabilities' => array(
                 'assign_terms' => 'edit_event_type',
                 'edit_terms' => 'publish_event_type'
@@ -613,7 +616,7 @@ function register_integration_post_type() {
     'labels'      => $labels,
     'public'      => true,
     // 'publicly_queryable' => false,
-    'has_archive' => true,
+    'has_archive' => false,
     // 'hierarchical'  => true,
     'rewrite'            => array( 'slug' => 'platform/integrations' ),
     'menu_icon'   => 'dashicons-admin-plugins',
@@ -669,6 +672,9 @@ function integration_init() {
             'hierarchical' => true,
             // 'hasArchive' => true,
             'show_ui' => true,
+            'show_in_rest'       => true,
+            'rest_base'          => 'integration_type',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
             'capabilities' => array(
                 'assign_terms' => 'edit_integration',
                 'edit_terms' => 'publish_integration'
