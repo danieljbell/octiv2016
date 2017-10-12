@@ -148,12 +148,14 @@ $rand_num = mt_rand(1,4);
             echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
           }
           /* WHITEPAPERS CTA BUTTON */
-          $post_ID = get_queried_object()->ID;
-          $post_tax = get_queried_object()->post_type . '_type';
-          $post_tax_array = get_the_terms($post_ID, $post_tax);
-          $post_tax_type = $post_tax_array[0]->slug;
-          if ($post_tax_type === 'whitepapers') {
-            echo '<a href="#call-to-action" class="btn-white--outline">Download Now</a>';
+          if (is_singular('library')) {
+            $post_ID = get_queried_object()->ID;
+            $post_tax = get_queried_object()->post_type . '_type';
+            $post_tax_array = get_the_terms($post_ID, $post_tax);
+            $post_tax_type = $post_tax_array[0]->slug;
+            if ($post_tax_type === 'whitepapers') {
+              echo '<a href="#call-to-action" class="btn-white--outline">Download Now</a>';
+            }
           }
           /* END WHITEPAPERS CTA BUTTON */
         ?>

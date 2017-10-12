@@ -20,7 +20,9 @@
 <section class="whitepaper-sneak-peek">
   <div class="site-width">
     <div class="has-text-center">
-      <h2>Take A Peek Inside</h2>
+      <div class="color-boxes" style="margin-bottom: 0.5rem;">
+        <h2 class="color-box-headline--brand-three">Take A Peek Inside</h2>
+      </div>
       <p>Use the arrows below to get a quick glance at <?php echo get_the_title(); ?>.</p>
       <div class="half-only">
         <div class="whitepaper-slider">
@@ -48,7 +50,9 @@
 <section id="call-to-action" class="brand-two-callout has-text-center pad-y-most">
   <div class="site-width">
     <div class="half-only">
-      <h2>Get the Whitepaper Now</h2>
+      <div class="color-boxes" style="margin-bottom: 0.5rem;">
+        <h2 class="color-box-headline--white">Get the Whitepaper Now</h2>
+      </div>
       <p>Fill out the form below and you'll get access to the whitepaper.</p>
       <div class="two-third-only">
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>

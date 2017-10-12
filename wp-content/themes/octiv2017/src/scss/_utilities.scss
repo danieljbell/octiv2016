@@ -274,6 +274,13 @@ COLOR BOXES
   background-color: $brand3;
 }
 
+.color-box-headline--white {
+  background-color: $white;
+  .brand-two-callout & {
+    color: $brand2;
+  }
+}
+
 .color-box-subheadline--brand-three {
   background-color: darken($brand3, 15%);
 }
