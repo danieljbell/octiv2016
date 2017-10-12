@@ -60,7 +60,7 @@
         <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
           form.onSuccess(function(values, followUpUrl) {
             // Update the redirect url with form fields
-            followUpUrl = <?php echo "'http:" . site_url() . $redirect_link . "'"; ?>;
+            followUpUrl = <?php echo "'" . site_url() . $redirect_link . "'"; ?>;
             // Redirect the page with form field
             location.href = followUpUrl;
             // Return false to prevent the submission handler continuing with its own processing

@@ -196,7 +196,7 @@ function register_solutions_post_type() {
     // 'publicly_queryable' => false,
     'hierarchical'  => true,
     'menu_icon'   => 'dashicons-welcome-learn-more',
-    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'capability_type' => 'support',
     'map_meta_cap' => true,
     'show_in_rest'       => true,

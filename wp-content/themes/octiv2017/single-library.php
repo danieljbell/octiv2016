@@ -14,4 +14,10 @@
   }
 ?>
 
+<?php
+  if ($post_tax_type === 'infographics') {
+    get_template_part('partials/pages/display', 'library--infographics');
+  }
+?>
+
 <?php get_footer(); ?>
