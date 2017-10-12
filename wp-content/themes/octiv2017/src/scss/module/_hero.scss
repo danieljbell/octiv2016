@@ -2,7 +2,7 @@
   background-color: $gray;
   background-size: cover, cover, 300px, cover;
   background-position: center;
-  padding: 3rem 0;
+  padding: 3rem 0 5rem;
   @include tablet {
     padding: 6rem 0 7rem;
   }
@@ -52,4 +52,8 @@
       font-size: 1.2em;
     }
   }
+}
+
+.single-library .hero {
+
 }

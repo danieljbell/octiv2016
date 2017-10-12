@@ -25,8 +25,8 @@ $rand_num = mt_rand(1,4);
   } else {
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
-  if (get_field('background_image')) {
-    $hero_bg = 'url(' . get_field('background_image') . ')';
+  if (get_field('hero_image')) {
+    $hero_bg = 'url(' . get_field('hero_image') . ')';
   }
 
   /* HERO TITLE */
@@ -147,6 +147,15 @@ $rand_num = mt_rand(1,4);
           if ($page_hero_button_link) {
             echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
           }
+          /* WHITEPAPERS CTA BUTTON */
+          $post_ID = get_queried_object()->ID;
+          $post_tax = get_queried_object()->post_type . '_type';
+          $post_tax_array = get_the_terms($post_ID, $post_tax);
+          $post_tax_type = $post_tax_array[0]->slug;
+          if ($post_tax_type === 'whitepapers') {
+            echo '<a href="#call-to-action" class="btn-white--outline">Download Now</a>';
+          }
+          /* END WHITEPAPERS CTA BUTTON */
         ?>
       </div>
     </section>

@@ -22,13 +22,15 @@
 
 .home .box--light-highlight {
   position: relative;
-  left: -2rem;
-  width: calc(100% + 4rem);
+  left: -1rem;
+  width: calc(100% + 2rem);
   margin-top: 3rem;
   margin-bottom: -2rem;
   border-radius: 0px 0px 5px 5px;
   padding: 2rem;
   @include tablet {
+    left: -2rem;
+    width: calc(100% + 4rem);
     padding: 3rem 6rem;
     &:after {
       content: '';

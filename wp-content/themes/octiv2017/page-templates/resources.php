@@ -33,8 +33,9 @@ TEMPLATE NAME: Resource Layout
                         <div class="one-fourth vertical-align">
                           <div class="has-text-center">
                             <img src="<?php echo get_field('client_logo'); ?>" alt="<?php echo get_field('person_company'); ?>" class="promoted-item-company-logo">
+                            <a href="<?php echo get_the_permalink(); ?>" class="btn-white--outline">Read the Full Story</a>
                           </div>
-                          <div class="two-third vertical-align">
+                          <div class="one-fourth reverse">
                             <div>
                               <p class="quote"><?php echo get_field('highlighted_quote'); ?></p>
                             </div>
@@ -45,9 +46,6 @@ TEMPLATE NAME: Resource Layout
                               <p><strong><?php echo get_field('person_name'); ?></strong><br><?php echo get_field('person_title'); ?></p>
                             </div>
                           </div>
-                        </div>
-                        <div class="has-text-center mar-b-more">
-                          <a href="<?php echo get_the_permalink(); ?>" class="btn-white--outline">Read the Full Story</a>
                         </div>
                       </div>
                 <?php      

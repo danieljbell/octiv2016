@@ -1,14 +1,18 @@
 [class^="box"] {
   border-radius: 3px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 0 45px rgba(black, 0.2);
   color: $white;
   background-image: linear-gradient(transparentize(white, 0.7), transparentize(black, 0.95));
   text-shadow: 2px 2px 1px rgba(black, 0.5);
+  @include tablet {
+    padding: 2rem;
+  }
 }
 
 .box {
   &--light {
+    border: 1px solid $mgray;
     background-color: $lgray;
     text-shadow: none;
     color: inherit;

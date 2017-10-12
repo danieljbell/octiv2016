@@ -30,8 +30,6 @@
   var stickyNav = document.querySelector('#persistent-nav-list');
   if (stickyNav) {
 
-    // var topOfStickyNav = stickyNav.offsetTop - stickyNav.offsetHeight - siteHeader.offsetHeight - siteHeader.offsetTop - 18;
-
     var topOfStickyNav = stickyNav.offsetTop - stickyNav.offsetHeight - 18;
 
     function stickyNavList() {
@@ -137,37 +135,6 @@
     });
   }
 
-
-  /*
-  ==============================
-  BROWSER WINDOW
-  ==============================
-  */
-  var allBrowserWindows = document.querySelectorAll('.browser-window');
-  for (var i = 0; i < allBrowserWindows.length; i++) {
-    // allBrowserWindows[i].addEventListener('click', function() {
-    //   document.body.classList.add('modal-open');
-    // });
-  }
-
-  /*
-  ===========================================
-  REMOVE STYLE ELEMENT FROM MARKETO FORM ELEM
-  ===========================================
-  */
-  // MktoForms2.whenReady(function() {
-  //   var allMktoForms = MktoForms2.allForms();
-  //   for (var i = 0; i < allMktoForms.length; i++) {
-  //     var formElem = allMktoForms[i].getFormElem();
-  //     if (formElem[0].querySelector('style')) {
-  //       formElem[0].querySelector('style').remove();
-  //     }
-  //   }
-  //   var modalNewsletterBox = document.querySelectorAll('label[for="subscriptionNewsletter"]');
-  //   for (var i = 0; i < modalNewsletterBox.length; i++) {
-  //     modalNewsletterBox[i].parentElement.classList.add('mktoFlexWrap');
-  //   }
-  // });
   
   /*
   ==============================

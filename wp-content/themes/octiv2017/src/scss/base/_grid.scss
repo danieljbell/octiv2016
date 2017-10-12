@@ -243,6 +243,16 @@
       }
     }
   }
+  &.reverse {
+    > * {
+      &:first-child {
+        order: 2;
+      }
+      &:nth-child(2) {
+        order: 1;
+      }
+    }
+  }
   @supports (display: grid) {
     display: grid;
     grid-gap: 2rem;

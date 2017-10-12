@@ -2,6 +2,100 @@
 
 /*
 ==============================
+REGISTER LIBRARY POST TYPE
+==============================
+*/
+add_action( 'init', 'register_library_post_type' );
+
+function register_library_post_type() {
+
+  $labels = array(
+    'name'                => 'Library',
+    'singular_name'       => 'Library',
+    'add_new'             => 'Add New Library Content',
+    'add_new_item'        => 'Add New Library Content',
+    'edit_item'           => 'Edit Library Content',
+    'new_item'            => 'New Library Content',
+    'all_items'           => 'All Library Content',
+    'view_item'           => 'View Page',
+    'search_items'        => 'Search Library',
+    'not_found'           => 'No Library found',
+    'not_found_in_trash'  => 'No Library found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Library'
+  );
+
+  $args = array(
+    'labels'      => $labels,
+    'public'      => true,
+    'has_archive' => false,
+    'with_front' => true,
+    'hierarchical'  => true,
+    'menu_icon'   => 'dashicons-admin-appearance',
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' ),
+    'rewrite'            => array( 'slug' => 'resources/library' ),
+    'capability_type' => 'library',
+    'map_meta_cap' => true,
+    'show_in_rest'       => true,
+    'capabilities' => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_library',
+    'read_post'              => 'read_library',
+    'delete_post'            => 'delete_library',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_librarys',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_librarys',
+    'edit_others_posts'      => 'manage_librarys',
+    'publish_posts'          => 'manage_librarys',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_librarys',
+    'delete_private_posts'   => 'manage_librarys',
+    'delete_published_posts' => 'manage_librarys',
+    'delete_others_posts'    => 'manage_librarys',
+    'edit_private_posts'     => 'edit_librarys',
+    'edit_published_posts'   => 'edit_librarys'
+    ),
+  );
+
+  register_post_type( 'library', $args );
+}
+
+/*
+==============================
+LIBRARY TAXONOMY
+==============================
+*/
+function library_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'library_type',
+        'library',
+        array(
+            'label' => __( 'Library Type' ),
+            // 'rewrite' => array( 'slug' => 'resources/events' ),
+            'with_front' => false,
+            'hierarchical' => true,
+            // 'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_library_type',
+                'edit_terms' => 'publish_library_type'
+            )
+        )
+    );
+}
+add_action( 'init', 'library_init' );
+
+
+/*
+==============================
 REGISTER SUPPORT POST TYPE
 ==============================
 */
@@ -36,8 +130,8 @@ function register_support_post_type() {
     'capability_type' => 'support',
     'map_meta_cap' => true,
     'show_in_rest'       => true,
-		'rest_base'          => 'support',
-		'rest_controller_class' => 'WP_REST_Posts_Controller',
+	'rest_base'          => 'support',
+	'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)

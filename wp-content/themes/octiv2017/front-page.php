@@ -16,7 +16,7 @@ get_header();
 
   <?php get_template_part('partials/module/display', 'hero'); ?>
 
-  <section style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
+  <section class="notch">
     <div class="site-width">
       <div class="box--light">
         <div class="two-third-only has-text-center pad-a-tablet-up">

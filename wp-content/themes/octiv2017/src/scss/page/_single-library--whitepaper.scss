@@ -1,0 +1,42 @@
+.whitepaper-cover-container {
+  perspective: 1000px;
+  float: right;
+  @include mobile {
+    display: none;
+  }
+}
+
+.whitepaper-cover {
+  max-width: 300px;
+  transform: rotateZ(5deg) rotateY(-25deg) translateX(5%) translateY(-4rem);
+  box-shadow: 5px 5px 25px rgba(black, 0.15);
+  @include fullhd {
+    margin-left: 3rem;
+    max-width: initial;
+    transform: rotateZ(5deg) rotateY(-25deg) translateX(10%) translateY(-4rem);
+  }
+}
+
+.single-library .notch {
+  margin-bottom: 3rem;
+}
+
+.whitepaper-sneak-peek {
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.whitepaper-slider img {
+  display: initial;
+}
+
+.single-library .slick-dots {
+  position: initial;
+  transform: initial;
+  button:before {
+    color: $mgray;
+  }
+  .slick-active button:before {
+    color: $brand; 
+  }
+}
