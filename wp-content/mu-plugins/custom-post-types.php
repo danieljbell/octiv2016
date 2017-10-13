@@ -30,13 +30,14 @@ function register_library_post_type() {
     'public'      => true,
     'has_archive' => false,
     'with_front' => true,
-    'hierarchical'  => true,
+    'hierarchical'  => false,
     'menu_icon'   => 'dashicons-admin-appearance',
-    'supports'    => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' ),
+    'supports'    => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'rewrite'            => array( 'slug' => 'resources/library' ),
     'capability_type' => 'library',
     'map_meta_cap' => true,
     'show_in_rest'       => true,
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
     'capabilities' => array(
 
     // meta caps (don't assign these to roles)
@@ -82,6 +83,8 @@ function library_init() {
             // 'rewrite' => array( 'slug' => 'resources/events' ),
             'with_front' => false,
             'hierarchical' => true,
+            'show_in_rest'       => true,
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
             // 'hasArchive' => true,
             'show_ui' => true,
             'capabilities' => array(

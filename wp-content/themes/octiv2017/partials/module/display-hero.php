@@ -68,7 +68,6 @@ $rand_num = mt_rand(1,4);
   if (is_post_type_archive('integration')) {
     $page_hero_title = 'Integrations';
   }
-
   if (is_singular('integration')) {
     $hero_bg = 'linear-gradient(' . get_field('integration_color') . ', ' . get_field('integration_color') . ')';
     $page_hero_title = get_the_title();
@@ -83,7 +82,6 @@ $rand_num = mt_rand(1,4);
   if (is_post_type_archive('support')) {
     $page_hero_title = 'Support';
   }
-
   if (is_singular('support')) {
     $page_hero_title = get_the_title();
     $page_hero_sub_title = 'Support Article';
@@ -94,6 +92,11 @@ $rand_num = mt_rand(1,4);
   if (is_post_type_archive('releases')) {
     $page_hero_title = 'Get Ready for the Next Release';
     $page_hero_body = 'If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.';
+  }
+
+  // SOLUTIONS POST TYPE
+  if (is_singular('solutions')) {
+    $page_hero_title = 'Octiv ' . get_the_title();
   }
 
   // 404 Error Page

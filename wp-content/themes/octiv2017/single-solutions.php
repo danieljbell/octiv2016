@@ -78,15 +78,17 @@
             $thumb_url = $thumb_url_array[0];
             $promoted_headline = $custom_page->post_title;
             $promoted_body = $custom_page->post_excerpt;
+            $promoted_class = 'page-section-promoted-item';
             $button_class = 'btn-primary';
             if ($custom_page->post_type === 'client-story') {
               $thumb_url = get_field('client_testimonial_image', $custom_page_ID);
               $promoted_body = get_field('highlighted_quote', $custom_page_ID);
+              $promoted_class = 'client-story-quote';
               $company_logo = get_field('client_logo', $custom_page_ID);
               $button_class = 'btn-white--outline';
             }
           ?>
-          <div class="page-section-promoted-item client-story-quote" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo $thumb_url; ?>);">
+          <div class="<?php echo $promoted_class; ?>" style="background-image: linear-gradient(rgba(45, 57, 67, 0.7), rgba(45, 57, 67, 0.7)), url(<?php echo $thumb_url; ?>);">
             <div class="site-width">
               <?php if ($custom_page->post_type === 'client-story') : ?>
                 <img src="<?php echo $company_logo; ?>" alt="" class="promoted-item-company-logo">
@@ -126,6 +128,65 @@
       ?>
     </ul>
   </section>
+
+  <?php
+    if (have_rows('picked_resources')) :
+      $count++;
+      if ($count > 4) {
+        $count = 1;
+      }
+      $current_iteration = $number_formatter->format($count + 1);
+  ?>
+  <section class="mar-b-most pad-b-most">
+    <div class="site-width">
+      <div class="color-boxes">
+        <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?>">Resources</h2>
+        <p class="mar-t no-mar-b">Keep exploring!</p>
+      </div>
+      <div class="third">
+  <?php
+      while (have_rows('picked_resources')) : the_row();
+        $picked_resource = get_sub_field('pick_your_page');
+        foreach ($picked_resource as $post) {
+          setup_postdata($post);
+          echo do_shortcode('[get_card_v3 excerpt="true"]');
+        }
+        wp_reset_postdata();
+      endwhile; ?>
+
+      </div>
+    </div>
+  </section>
+  <?php
+    endif;
+  ?>
+
+  <?php
+    // $picked_resources = get_field('pick_your_page');
+    // if ($picked_resources) :
+    //   $count++;
+    //   if ($count > 4) {
+    //     $count = 1;
+    //   }
+    //   $current_iteration = $number_formatter->format($count + 1);
+  ?>
+    <!-- <section class="mar-b-most pad-b-most">
+      <div class="site-width">
+        <div class="color-boxes">
+          <h2 class="color-box-headline--brand-<?php echo $current_iteration; ?>">Resources</h2>
+        </div>
+        <div class="third">
+          <?php
+            // foreach ($picked_resources as $post) {
+            //   setup_postdata($post);
+            //   echo do_shortcode('[get_card_v3 excerpt="true"]');
+            // }
+            // wp_reset_postdata();
+          ?>
+        </div>
+      </div>
+    </section> -->
+  <?php // endif; ?>
 
   <?php get_template_part('partials/module/display', 'powers-documents'); ?>
 

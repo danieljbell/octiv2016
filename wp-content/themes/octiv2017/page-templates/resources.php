@@ -90,6 +90,8 @@ TEMPLATE NAME: Resource Layout
                     $all_cats = get_categories();
                   } else if (get_field('post_type') === 'events') {
                     $all_cats = get_terms('event_type');
+                  } else if (get_field('post_type') === 'library') {
+                    $all_cats = get_terms('library_type');
                   }
                   foreach ($all_cats as $single_cat) :
                 ?>

@@ -1,0 +1,28 @@
+.single-solutions {
+
+  .notch {
+    @include tablet {    
+      margin-bottom: 5rem;
+    }
+  }
+
+  .client-story-quote {
+    font-size: 1.3em;
+    background-size: cover;
+    background-position: center;
+    
+    .btn-white--outline {
+      font-size: 1rem;
+      margin-top: 2rem;
+      &:hover {
+        text-shadow: none;
+      }
+    }
+
+    .promoted-item-company-logo {
+      filter: invert(1) grayscale(100%) brightness(300%) drop-shadow(2px 2px 3px rgba(black, 0.6));
+    }
+
+  }
+
+}
