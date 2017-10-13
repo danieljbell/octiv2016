@@ -80,7 +80,18 @@ $rand_num = mt_rand(1,4);
 
   // SUPPORT POST TYPE
   if (is_post_type_archive('support')) {
-    $page_hero_title = 'Support';
+    $page_hero_title = 'Octiv Support Portal';
+    $page_hero_body = '
+    <h2 class="mar-b">Search or view all categories.</h2>
+      <div class="half-only">
+        <div class="two-third-only">
+          <form role="search" method="get" action="' . site_url(). '">
+            <input type="text" name="s" placeholder="Search Octiv Support" class="text-search-bar">
+            <input type="hidden" name="post_type" value="support" />
+          </form>
+        </div>
+      </div>
+    ';
   }
   if (is_singular('support')) {
     $page_hero_title = get_the_title();
@@ -111,6 +122,7 @@ $rand_num = mt_rand(1,4);
     $page_hero_body = get_queried_object()->category_description;
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
+
 
   /* HERO TITLE */
   if (get_field('hero_title')) {

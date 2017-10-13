@@ -91,6 +91,7 @@
     $('.logo-modal-container').modal();
   })
 
+  // GLOBAL SEARCH 
   var searchButton = $('[href="#search"]');
   searchButton.on('click', function(e) {
     e.preventDefault();
@@ -210,5 +211,63 @@
       backDelay: 1500
     });
   }
+
+
+
+  /*
+  ==============================
+  GLOBAL SEARCH MODAL
+  ==============================
+  */
+  var gloablSearch = new Vue({
+    el: '#global-search-app',
+    data: {
+      keyword: '',
+      postList: [],
+      offset: 0,
+      selectedCats: []
+    },
+    mounted: function() {
+      var self = this;
+      $.ajax({
+        dataType: "json",
+        async: false,
+        url: "/wp-json/wp/v2/posts",
+        success: function(data) {
+          self.postList = data;
+        },
+        error: function(error) {
+          alert(JSON.stringify(error));
+        }
+      });
+    },
+    methods: {
+      getMorePosts() {
+        var self = this;
+        var postList = this.postList;
+        $.ajax({
+          dataType: "json",
+          async: false,
+          url: "/wp-json/wp/v2/posts",
+          success: function(data) {
+            var resp = data;
+            for (var i = 0; i < resp.length; i++) {
+              postList.push(resp[i]);
+            }
+          },
+          error: function(error) {
+            alert(JSON.stringify(error));
+          } 
+        });
+      }
+    },
+    computed: {
+      filteredList() {
+        return this.postList.filter((post) => {
+          return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
+        });
+      }
+    }
+  });
 
 })();

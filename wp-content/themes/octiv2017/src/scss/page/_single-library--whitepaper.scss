@@ -30,8 +30,15 @@
   }
 }
 
+.whitepaper-slider .slick-list {
+  box-shadow: 0px 0px 25px rgba(black, 0.15);
+  border: 1px solid $mgray;
+  border-radius: 5px;
+}
+
 .whitepaper-slider img {
-  display: initial;
+  display: block;
+  width: initial;
   max-width: 100%;
 }
 

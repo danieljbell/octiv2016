@@ -15,7 +15,9 @@ ADD GLOBAL JS TO PAGE
 ==============================
 */
 function enqueue_global_js() {
+  wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
   wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.4', true);
+  
   if (is_singular('integration')) {
     wp_enqueue_script('integration', get_stylesheet_directory_URI() . '/dist/js/integration.js', array(), '1.0.0', true);
   }
@@ -23,20 +25,19 @@ function enqueue_global_js() {
     wp_enqueue_script('library', get_stylesheet_directory_URI() . '/dist/js/library.js', array(), '1.0.0', true);
   }
   if (is_page_template('page-templates/resources.php')) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('resources', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.0', true);
   }
   if (is_page_template('page-templates/archive.php')) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('page-template--archive', get_stylesheet_directory_URI() . '/dist/js/page-template--archive.js', array(), '1.0.0', true);
   }
   if (is_category()) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('category', get_stylesheet_directory_URI() . '/dist/js/category.js', array(), '1.0.0', true);
   }
   if (is_post_type_archive('client-story')) {
-    wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
     wp_enqueue_script('category', get_stylesheet_directory_URI() . '/dist/js/client-story.js', array(), '1.0.0', true);
+  }
+  if (is_singular('support') || is_post_type_archive('support') ) {
+    wp_enqueue_script('support', get_stylesheet_directory_URI() . '/dist/js/support-portal.js', array(), '1.0.0', true);
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');

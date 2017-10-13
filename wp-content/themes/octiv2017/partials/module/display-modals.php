@@ -1,11 +1,10 @@
 <?php
 /*
 ==============================
-DISPLAY MODALS
+REQUEST A DEMO
 ==============================
 */
 ?>
-
 <div class="rad-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
@@ -64,6 +63,13 @@ DISPLAY MODALS
   </div>
 </div>
 
+<?php
+/*
+==============================
+GET OUR LOGO
+==============================
+*/
+?>
 <div class="logo-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
@@ -84,10 +90,18 @@ DISPLAY MODALS
   </div>
 </div>
 
+
+<?php
+/*
+==============================
+GLOBAL SEARCH
+==============================
+*/
+?>
 <div class="search-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
-    <div class="modal-content half vertical-align">
+    <div class="modal-content half" id="global-search-app">
       <div class="modal-header light-callout">
         <div class="modal-header--brand">
           <div class="color-boxes">
@@ -97,13 +111,70 @@ DISPLAY MODALS
         </div>
         <div class="modal-header--content">
           <div id="global-search">
-            <input type="text" class="text-search-bar">
+            <input type="text" class="text-search-bar" v-model="keyword">
+            <select v-model="selectedCats">
+              <?php
+                $args = array(
+                  'public' => true,
+                  'publicly_queryable' => true
+                );
+                $all_post_types = get_post_types($args);
+                foreach ($all_post_types as $post_type) {
+                  echo '<option>' . $post_type . '</option>';
+                }
+              ?>
+            </select>
           </div>
         </div>
       </div>
       <div class="modal-body">
-        
+        <strong>Searching <span v-if="selectedCats != ''">{{selectedCats}}</span> for: {{keyword}}</strong>
+        <ul class="modal-search-list">
+          <li v-for="post in filteredList"><a v-bind:href="post.link" v-html="post.title.rendered"></a></li>
+        </ul>
+        <div class="has-text-center">
+          <button v-on:click="getMorePosts()" class="btn-brand--outline">Load More Posts</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<?php
+/*
+==============================
+SUPPORT TICKET
+==============================
+*/
+?>
+<?php if ( is_singular( 'support' ) || is_post_type_archive( 'support' ) ) : ?>
+  <div class="submit-modal modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+      <div class="modal-content vertical-align">
+        <div class="modal-header light-callout">
+          <div class="modal-header--brand">
+            <div class="color-boxes">
+              <h4 class="color-box-headline--gray">Submit a "Help Me" ticket</h4>
+            </div>
+            <p>Please fill out the form below to submit a ticket to our support team.</p>
+          </div>
+          <div class="modal-header--content">
+            <?php get_template_part('partials/module/display', 'support-form'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal fade submit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-content">
+        <h2>Submit a "Help Me" ticket</h2>
+        <p>Please fill out the form below to submit a ticket to our support team.</p>
+        <?php get_template_part('partials/display', 'support-form'); ?>
+      </div>
+    </div>
+  </div> -->
+<?php endif; ?>

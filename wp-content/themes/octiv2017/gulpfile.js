@@ -45,14 +45,7 @@ gulp.task('js', function () {
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('global.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(browserSync.stream());
-  gulp.src([
-    'src/js/pages/integrations.js'
-  ])
-    .pipe(sourcemaps.init())
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
