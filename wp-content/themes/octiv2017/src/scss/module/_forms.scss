@@ -1,5 +1,6 @@
 input {
   font-family: $brand-font-stack;
+  font-size: 1rem;
   color: $gray !important;
   background-color: $lgray;
   border: 1px solid $mgray;
@@ -152,4 +153,48 @@ MARKETO OVERRIDES
   margin-left: 0 !important;
   display: block;
   text-align: center !important;
+}
+
+/*
+==============================
+SUPPORT FORM STYLES
+==============================
+*/
+.support-form {
+  input:not([type="submit"]),
+  textarea {
+    border: 1px solid $mgray;
+    background-color: $white;
+    // box-shadow: 2px 2px 5px rgba(black, 0.05);
+  }
+  input:not([type="checkbox"]),
+  textarea {
+    border-radius: 5px;
+    width: 100%;
+  }
+  input[type="file"] {
+    line-height: 1;
+    display: block;
+    padding: 1rem !important;
+    border: 1px solid darken($mgray, 10%);
+    background-color: transparent;
+  }
+  input[type="submit"] {
+    color: $white !important;
+    padding: 0.5rem 1rem !important;
+  }
+  textarea {
+    font-family: $brand-font-stack;
+    font-size: 1rem;
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: inset 0 -2px 0 $brand;
+    }
+  }
+  .half,
+  .third,
+  .fourth {
+    grid-row-gap: 1rem;
+  }
 }
