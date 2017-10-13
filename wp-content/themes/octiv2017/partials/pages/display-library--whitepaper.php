@@ -17,7 +17,34 @@
   </div>
 </section>
 
-<section class="whitepaper-sneak-peek">
+<?php if (have_rows('preview_images')) : ?>
+  
+  <section class="whitepaper-sneak-peek">
+    <div class="site-width has-text-center">
+      <div class="color-boxes" style="margin-bottom: 0.5rem;">
+        <h2 class="color-box-headline--brand-three">Take A Peek Inside</h2>
+      </div>
+      <p>Use the arrows below to get a quick glance at <?php echo get_the_title(); ?>.</p>
+      <div class="half-only">
+        <div id="arrow-append" class="mar-b"></div>
+        <div class="whitepaper-slider">
+
+<?php while (have_rows('preview_images')) : the_row(); ?>
+
+      <div>
+        <img src="<?php echo get_sub_field('preview_image'); ?>" alt="">
+      </div>
+
+<?php endwhile; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<?php endif; ?>
+
+
+<!-- <section class="whitepaper-sneak-peek">
   <div class="site-width">
     <div class="has-text-center">
       <div class="color-boxes" style="margin-bottom: 0.5rem;">
@@ -25,6 +52,7 @@
       </div>
       <p>Use the arrows below to get a quick glance at <?php echo get_the_title(); ?>.</p>
       <div class="half-only">
+        <div id="arrow-append" class="mar-b"></div>
         <div class="whitepaper-slider">
           <div>
             <img src="//fillmurray.com/350/500" alt="">
@@ -45,7 +73,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section id="call-to-action" class="brand-two-callout has-text-center pad-y-most">
   <div class="site-width">

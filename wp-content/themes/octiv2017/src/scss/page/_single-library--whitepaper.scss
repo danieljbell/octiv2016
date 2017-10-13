@@ -24,10 +24,15 @@
 .whitepaper-sneak-peek {
   padding-top: 3rem;
   margin-bottom: 3rem;
+
+  .btn-dark--outline {
+    padding: 0.25em 0.5em;
+  }
 }
 
 .whitepaper-slider img {
   display: initial;
+  max-width: 100%;
 }
 
 .single-library .slick-dots {
