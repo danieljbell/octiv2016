@@ -23,6 +23,7 @@ if (document.querySelectorAll('.whitepaper-slider')) {
   $('.whitepaper-slider').slick({
     arrows: true,
     dots: true,
+    appendDots: $('.notch'),
     draggable: false,
   });
 }
