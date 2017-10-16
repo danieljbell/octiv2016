@@ -22,27 +22,6 @@
     <div class="site-width">
       <div class="one-fourth">
         <div>
-          <img src="/wp-content/uploads/2016/08/cpq.png" alt="" style="width: 100%;">
-        </div>
-        <div>
-          <h3>CPQ</h3>
-          <hr style="margin: 0;">
-          <div class="half">
-            <div>
-              <h4>SteelBrick</h4>
-              <ul>
-                <?php postIDLogic(1067); ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="mar-b-most">
-    <div class="site-width">
-      <div class="one-fourth">
-        <div>
           <img src="/wp-content/uploads/2016/06/Support-Integrations-CRM.jpg" alt="" style="width: 100%;">
         </div>
         <div>
@@ -136,25 +115,6 @@
           <div class="half">
             <ul>
               <?php postIDLogic(294); ?>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mar-b-most">
-    <div class="site-width">
-      <div class="one-fourth">
-        <div>
-          <img src="/wp-content/uploads/2016/06/Support-Integrations-SocialNetworking.jpg" alt="" style="width: 100%;">
-        </div>
-        <div>
-          <h3>Social Network</h3>
-          <hr style="margin: 0;">
-          <div class="half">
-            <ul>
-              <?php postIDLogic(293); ?>
             </ul>
           </div>
         </div>
