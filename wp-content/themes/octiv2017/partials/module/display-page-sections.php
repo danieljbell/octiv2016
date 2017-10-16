@@ -37,7 +37,7 @@
                 <a href="<?php echo $section_link; ?>" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
               <?php endif; ?>
             </div>
-            <div class="<?php echo $image_frame_class; ?>">
+            <div class="browser-window">
               <div>
                 <?php
                     echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
