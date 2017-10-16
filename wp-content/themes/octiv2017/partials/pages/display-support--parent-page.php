@@ -622,7 +622,6 @@
   }
 
   function postIDLogic($ID) {
-  if ($post->ID = $ID) :
     $args = array(
       'post_type' => 'support',
       'post_parent' => $ID,
@@ -633,7 +632,6 @@
     if ( $IDLogic->have_posts() ) : while ( $IDLogic->have_posts() ) : $IDLogic->the_post();
       echo '<li><a href="' . get_the_permalink() . '">' .get_the_title() . '</a></li>';
     endwhile; endif; wp_reset_query();
-  endif;
   }
 
 ?>
