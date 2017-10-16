@@ -32,7 +32,7 @@ $.ajax({
       computed: {
         filteredList() {
           return this.postList.filter((post) => {
-            if (window.location.pathname.contains('client-stories')) {
+            if (window.location..href.indexOf("client-story") > -1) {
               return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
             } else {
               return (post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase())) && (post._embedded['wp:term'][0][0].slug.includes(this.selectedCats));
