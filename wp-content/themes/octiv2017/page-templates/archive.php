@@ -41,7 +41,7 @@ Template Name: Archive
             <?php if (is_page(array('integrations', 3671))) : ?>
               <div class="card-content">
                 <a v-bind:href="post.link">
-                  <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered">
+                  <!-- <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered"> -->
                   <h4>{{post.title.rendered}}</h4>
                 </a>
               </div>
