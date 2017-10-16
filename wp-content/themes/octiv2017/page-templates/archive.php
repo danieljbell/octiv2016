@@ -38,7 +38,7 @@ Template Name: Archive
         </div>
         <div id="resource-items" class="third">
           <div v-for="post in filteredList" class="card">
-            <?php if (!is_page(3631)) : ?>
+            <?php if (!is_page(3671)) : ?>
               <div class="card-content">
                 <a v-bind:href="post.link">
                   <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered">

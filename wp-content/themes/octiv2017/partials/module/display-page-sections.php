@@ -1,5 +1,6 @@
 <?php
   $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+  $image_frame_class = get_field('image_frame');
 ?>
 
 <section class="page-sections mar-y-most">
@@ -36,12 +37,9 @@
                 <a href="<?php echo $section_link; ?>" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
               <?php endif; ?>
             </div>
-            <div class="browser-window">
+            <div class="<?php echo $image_frame_class; ?>">
               <div>
                 <?php
-                  if (get_sub_field('section_browser_window')) {
-                    echo '<img src="' . get_sub_field('section_browser_window') . '" alt="' . get_sub_field('section_title') . '">';
-                  } else {
                     echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
                   }
                 ?>
