@@ -38,13 +38,11 @@ Template Name: Archive
         </div>
         <div id="resource-items" class="third">
           <div v-for="post in filteredList" class="card">
-            <?php if (is_page(array('integrations', 3671))) : ?>
+            <?php if (is_page('integrations')) : ?>
               <div class="card-content">
-                <!-- <a v-bind:href="post.link"> -->
-                  <!-- <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered"> -->
+                <a v-bind:href="post.link">
+                  <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered">
                   <h4>{{post.title.rendered}}</h4>
-                  {{post.acf.integration_logo}}
-                <!-- </a> -->
               </div>
             <?php else : ?>
               <div class="card-content">
