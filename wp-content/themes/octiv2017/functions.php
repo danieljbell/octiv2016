@@ -5,7 +5,7 @@ ADD GLOBAL CSS TO PAGE
 ==============================
 */
 function enqueue_global_css() {
-  wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.8');
+  wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.9');
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
 
@@ -16,7 +16,7 @@ ADD GLOBAL JS TO PAGE
 */
 function enqueue_global_js() {
   wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
-  wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.4', true);
+  wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.5', true);
   
   if (is_singular('integration')) {
     wp_enqueue_script('integration', get_stylesheet_directory_URI() . '/dist/js/integration.js', array(), '1.0.0', true);
