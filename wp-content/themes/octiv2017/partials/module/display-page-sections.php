@@ -1,6 +1,5 @@
 <?php
   $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
-  $image_frame_class = get_field('image_frame');
 ?>
 
 <section class="page-sections mar-y-most">
@@ -14,6 +13,7 @@
         }
         $section_title = get_sub_field('section_title');
         $section_content = get_sub_field('section_content');
+        $image_frame_class = get_sub_field('image_frame');
         $section_link = get_sub_field('section_call_to_action_link');
         $section_class = 'reverse';
         if ($count % 2 == 0) {
@@ -37,13 +37,19 @@
                 <a href="<?php echo $section_link; ?>" class="btn-brand-<?php echo $current_iteration; ?>--outline"><?php echo get_sub_field('section_call_to_action_title'); ?></a>
               <?php endif; ?>
             </div>
-            <div class="browser-window">
-              <div>
-                <?php
-                    echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
-                ?>
+            <?php
+              if ($image_frame_class === 'browser-window') {
+                echo '<div class="browser-window">';
+              }
+            ?>
+              <div class="img-container">
+                <img src="<?php echo get_sub_field('section_image'); ?>" alt="<?php echo get_sub_field('section_title'); ?>">
               </div>
-            </div>
+            <?php
+              if ($image_frame_class) {
+                echo '</div>';
+              }
+            ?>
           </div>
         </div>
         <?php else : 
