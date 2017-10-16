@@ -41,7 +41,6 @@
               <div>
                 <?php
                     echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
-                  }
                 ?>
               </div>
             </div>
