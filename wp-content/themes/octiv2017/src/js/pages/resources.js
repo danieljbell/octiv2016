@@ -19,7 +19,7 @@ $.ajax({
           $.ajax({
             dataType: "json",
             async: false,
-            url: "/wp-json/wp/v2/" + pagePostType + "?_embed&per_page=" + postsPerPage + "&offset=" + newOffset,
+            url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=" + postOrder + "&per_page=" + postsPerPage + "&offset=" + newOffset,
           }).done(function(data) {
             var resp = data;
             for (var i = 0; i < resp.length; i++) {
