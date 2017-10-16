@@ -17,6 +17,7 @@ input {
 
 select {
   color: $gray !important;
+  width: 100%;
   background-color: $lgray;
   border: 1px solid $mgray;
   font-family: $brand-font-stack;
@@ -197,4 +198,8 @@ SUPPORT FORM STYLES
   .fourth {
     grid-row-gap: 1rem;
   }
+}
+
+.fsHidden {
+  display: none;
 }

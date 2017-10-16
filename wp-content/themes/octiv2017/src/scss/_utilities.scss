@@ -29,6 +29,12 @@ FONT COLORS
   }
 }
 
+.no-bull {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .no-style-text-link {
   color: $gray;
   text-decoration: none;
@@ -43,7 +49,7 @@ FONT COLORS
 }
 
 .no-mar-b {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .mar-a {

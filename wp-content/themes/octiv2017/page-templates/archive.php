@@ -19,7 +19,7 @@ Template Name: Archive
       <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
         <div class="one-fourth vertical-align">
           <div class="resource-grid-filters-container">
-            <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
+            <input type="text" v-model="keyword" id="keyword-filter" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
           </div>
           <div>
             <h4>Categories</h4>

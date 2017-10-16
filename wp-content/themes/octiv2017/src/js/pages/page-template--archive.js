@@ -14,6 +14,14 @@ $.ajax({
         methods: {
           
         },
+        mounted: function() {
+          if (getParameterByName('cat')) {
+            var initialCat = getParameterByName('cat');
+            var initialValue = 'option[value="' + initialCat + '"]';
+            document.querySelector(initialValue).selected = true;
+            console.dir(document.querySelector('#keyword-filter'));
+          }
+        },
         computed: {
           filteredList() {
             return this.postList.filter((post) => {

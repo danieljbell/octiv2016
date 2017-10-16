@@ -39,37 +39,55 @@
     <input type="text" id="field43792599" name="field43792599" size="50" value="<?php if ($subject) : echo $subject; endif; ?>" class="fsField" />
   </div>
       
-      <label id="label43792600" class="label" for="field43792600">Description</label>
-      <textarea id="field43792600" name="field43792600" rows="4" cols="50" class="fsField mar-b"><?php if ($description) : echo $description; endif; ?></textarea>
+  <label id="label43792600" class="label" for="field43792600">Description</label>
+  <textarea id="field43792600" name="field43792600" rows="4" cols="50" class="fsField mar-b"><?php if ($description) : echo $description; endif; ?></textarea>
+    
+  <p class="fsLabel fsLabelVertical"><input type="checkbox" id="field48958837_1" name="field48958837[]" value="Yes" class="fsField vertical" /> <label class="fsOptionLabel vertical" for="field48958837_1"><strong>Yes,</strong></label> I authorize Octiv Support to access my Octiv account, as needed, to trouble-shoot this issue.</p>
         
-        <p class="fsLabel fsLabelVertical"><input type="checkbox" id="field48958837_1" name="field48958837[]" value="Yes" class="fsField vertical" /> <label class="fsOptionLabel vertical" for="field48958837_1"><strong>Yes,</strong></label> I authorize Octiv Support to access my Octiv account, as needed, to trouble-shoot this issue.</p>
-        
-      
-          <label id="label43792603" class="label" for="field43792603">Browser</label>
-          <p>Which browser were you using when you experienced the issue?</p>
-          
-          <input type="checkbox" id="field43792603_1" name="field43792603[]" value="Chrome" class="fsField vertical" /><label class="fsOptionLabel vertical" for="field43792603_1"> Chrome</label>
-          <input type="checkbox" id="field43792603_2" name="field43792603[]" value="Firefox" class="fsField vertical" /><label class="fsOptionLabel vertical" for="field43792603_2"> Firefox</label>
-          <input type="checkbox" id="field43792603_3" name="field43792603[]" value="Safari" class="fsField vertical" /><label class="fsOptionLabel vertical" for="field43792603_3"> Safari</label>
-          <input type="checkbox" id="field43792603_4" name="field43792603[]" value="Internet Explorer" class="fsField vertical" /><label class="fsOptionLabel vertical" for="field43792603_4"> Internet Explorer</label>
-          <input type="checkbox" id="field43792603_5" name="field43792603[]" value="Edge" class="fsField vertical" /><label class="fsOptionLabel vertical" for="field43792603_5"> Edge</label>
+  <div class="mar-t">
+    <p><strong>Which browser were you using when you experienced the issue?</strong></p>
+    <ul class="inline">
+      <li>
+        <input type="checkbox" id="field43792603_1" name="field43792603[]" value="Chrome" class="fsField vertical" />
+        <label class="fsOptionLabel vertical" for="field43792603_1"> Chrome</label>
+      </li>
+      <li>
+        <input type="checkbox" id="field43792603_2" name="field43792603[]" value="Firefox" class="fsField vertical" />
+        <label class="fsOptionLabel vertical" for="field43792603_2"> Firefox</label>    
+      </li>
+      <li>
+        <input type="checkbox" id="field43792603_3" name="field43792603[]" value="Safari" class="fsField vertical" />
+        <label class="fsOptionLabel vertical" for="field43792603_3"> Safari</label>    
+      </li>
+      <li>
+        <input type="checkbox" id="field43792603_4" name="field43792603[]" value="Internet Explorer" class="fsField vertical" />
+        <label class="fsOptionLabel vertical" for="field43792603_4"> Internet Explorer</label>    
+      </li>
+      <li>
+        <input type="checkbox" id="field43792603_5" name="field43792603[]" value="Edge" class="fsField vertical" />
+        <label class="fsOptionLabel vertical" for="field43792603_5"> Edge</label>
+      </li>
+    </ul>
+  </div>       
               
-      
-          <label id="label43792612" class="label" for="field43792612">Urgency</label>
-          <p id="fsSupporting43792612" class="explination fsSupporting">Please choose your urgency based on the descriptions below</p>
-          <select id="field43792612" name="field43792612" size="1" class="fsField fancy">
-            <option value="Normal" selected="selected">Normal</option>
-            <option value="High">High</option>
-            <option value="Critical">Critical</option>
-          </select>
+  <div class="pad-t">
+    <p class="no-mar-b"><strong>Urgency Level</strong> - <em>Please choose your urgency based on the descriptions below</em></p>
+    <ul class="no-mar-b">
+      <li><strong>Critical:</strong> - Issue has brought business to a halt and requires immediate resolution or workaround.</li>
+      <li><strong>High:</strong> - Issue is negatively impacting business but documents are generated with a short-term workaround.</li>
+      <li><strong>Normal:</strong> - Issue is a routine inquiry and non-business impacting.</li>
+    </ul>
+    <select id="field43792612" name="field43792612" size="1" class="fsField fancy mar-b-more">
+      <option value="Normal" selected="selected">Normal</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+  </div>
         
-      <h4>Urgency Levels</h4>
-      <p class="explination"><strong>Critical:</strong><br>Issue has brought business to a halt and requires immediate resolution or workaround.</p>
-      <p class="explination"><strong>High:</strong><br>Issue is negatively impacting business but documents are generated with a short-term workaround.</p>
-      <p class="explination"><strong>Normal:</strong><br>Issue is a routine inquiry and non-business impacting.</p>
+      
       
       <div class="mar-b">
-        <label id="label43792566" class="label" for="field43792566">Screenshot/Attachment</label>
+        <label id="label43792566" class="label" for="field43792566"><strong>Screenshot/Attachment</strong></label>
         <p class="explination">File uploads may not work on some mobile devices.</p>
         <input type="file" id="field43792566" name="field43792566" size="30" class="fsField fsUpload uploadTypes-jpg,jpeg,gif,png,bmp,tif,psd,pdf,doc,docx,xls,xlsx,txt,mp3,mp4,aac,wav,au,wmv,avi,mpg,mpeg,zip,gz,rar,z,tgz,tar,sitx" />
       </div>

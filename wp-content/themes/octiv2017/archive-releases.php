@@ -79,6 +79,8 @@ $today = date('Ymd');
     </div>
   </section>
   
+  <?php get_template_part('partials/module/display', 'powers-documents'); ?>
+
 </main>
 
 <?php get_footer(); ?>
