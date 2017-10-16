@@ -43,6 +43,7 @@ Template Name: Archive
                 <a v-bind:href="post.link">
                   <!-- <img v-bind:src="post.acf.integration_logo" v-bind:alt="post.title.rendered"> -->
                   <h4>{{post.title.rendered}}</h4>
+                  <pre>{{post}}</pre>
                 </a>
               </div>
             <?php else : ?>
