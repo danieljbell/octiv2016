@@ -4,7 +4,7 @@
 ?>
 
 <?php if ($content_type === 'text') : ?>
-  <section>
+  <section class="mar-y-most">
     <div class="site-width">
       <div class="two-third">
         <div>
@@ -43,7 +43,7 @@
   </section>
 <?php elseif ($content_type === 'video') : ?>
   <?php $video_source = get_field('video_id', $queried_object); ?>
-  <section>
+  <section class="mar-y-most">
       <div class="site-width">
         <div class="two-third">
           <div>

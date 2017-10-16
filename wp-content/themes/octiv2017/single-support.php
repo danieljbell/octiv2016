@@ -18,10 +18,9 @@
   
   <?php get_template_part('partials/module/display', 'hero'); ?>
 
-  <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
-
   <?php 
     if ( is_single( 917 ) || $support_topic === '') : 
+      get_template_part('partials/module/display', 'breadcrumbs');
       get_template_part('partials/pages/display', 'support--parent-page');
     else :
       get_template_part('partials/pages/display', 'support--child-page');
