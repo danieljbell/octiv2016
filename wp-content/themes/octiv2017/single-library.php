@@ -28,6 +28,12 @@
     }
   ?>
 
+  <?php
+    if ($post_tax_type === 'tools-quizes') {
+      get_template_part('partials/pages/display', 'library--tools-quizes');
+    }
+  ?>
+
 </main>
 
 <?php get_footer(); ?>
