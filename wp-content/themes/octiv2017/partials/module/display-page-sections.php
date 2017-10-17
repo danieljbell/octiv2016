@@ -59,6 +59,9 @@
           $thumb_id = get_post_thumbnail_id(get_sub_field('pick_your_page')[0]->ID);
           $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           $thumb_url = $thumb_url_array[0];
+          if (get_field('hero_image', $custom_page_ID)) {
+            $thumb_url = get_field('hero_image', $custom_page_ID);
+          }
           $promoted_headline = $custom_page->post_title;
           $promoted_body = $custom_page->post_excerpt;
           $promoted_class = 'page-section-promoted-item';
