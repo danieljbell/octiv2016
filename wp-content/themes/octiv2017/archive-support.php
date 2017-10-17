@@ -11,12 +11,10 @@
 <section class="notch">
   <div class="site-width">
     <div class="half-only">
-      <div class="two-third-only">
-        <div class="box--light has-text-center">
-          <h2>Need More Help?</h2>
-          <p>Click the button if you need assistance from Octiv. If your request is urgent, please call global support 24 hours a day at 844-906-2848.</p>
-          <button id="submit-ticket" class="btn-primary">Submit a "Help Me" Ticket</button>
-        </div>
+      <div class="box--light has-text-center">
+        <h2>Need More Help?</h2>
+        <p>Click the button if you need assistance from Octiv. If your request is urgent, please call global support 24 hours a day at 844-906-2848.</p>
+        <button id="submit-ticket" class="btn-primary">Submit a "Help Me" Ticket</button>
       </div>
     </div>
   </div>
