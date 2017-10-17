@@ -2,7 +2,6 @@ input {
   font-family: $brand-font-stack;
   font-size: 1rem;
   color: $gray !important;
-  background-color: $lgray;
   border: 1px solid $mgray;
   border-radius: 3px;
   padding: 0.25em !important;
@@ -18,7 +17,6 @@ input {
 select {
   color: $gray !important;
   width: 100%;
-  background-color: $lgray;
   border: 1px solid $mgray;
   font-family: $brand-font-stack;
   padding: 0.25em !important; 

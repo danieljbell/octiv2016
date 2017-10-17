@@ -27,23 +27,23 @@
     $query = new WP_Query($args);
     if ($query->have_posts()) : ?>
   <section class="other-quizzes">
-    <div class="site-width has-text-center">
+    <div class="site-width">
       <div class="color-boxes" style="margin-bottom: 0.5rem;">
         <h2 class="color-box-headline--brand-three">Other Quizzes You Might Want to Try</h2>
       </div>
-      <p>Don't stop at just <?php echo get_the_title(); ?> Try another quiz now!</p>        
+      <p class="has-text-center">Don't stop at just <?php echo get_the_title(); ?> Try another quiz now!</p>        
       <div class="third">
   <?php
     while ($query->have_posts()) : $query->the_post();
       echo do_shortcode('[get_card_v3]');
     endwhile; ?>
+      </div>
     </div>
+  </section>
   <?php      
       endif;
       wp_reset_query();
     ?>
 
-  </div>
-</section>
 
 <?php get_template_part('partials/module/display', 'powers-documents'); ?>
