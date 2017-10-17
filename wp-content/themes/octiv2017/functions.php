@@ -39,6 +39,9 @@ function enqueue_global_js() {
   if (is_singular('support') || is_post_type_archive('support') ) {
     wp_enqueue_script('support', get_stylesheet_directory_URI() . '/dist/js/support-portal.js', array(), '1.0.0', true);
   }
+  if (is_post_type_archive('press-releases')) {
+    wp_enqueue_script('press-releases', get_stylesheet_directory_URI() . '/dist/js/press-releases.js', array(), '1.0.0', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 

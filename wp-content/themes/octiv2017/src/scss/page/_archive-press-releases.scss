@@ -1,0 +1,20 @@
+.press-release-listing {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.press-release-item {
+  border-bottom: 1px solid $mgray;
+  margin-bottom: 2rem;
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  time {
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+  }
+}

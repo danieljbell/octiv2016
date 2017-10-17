@@ -119,6 +119,11 @@ $rand_num = mt_rand(1,4);
     $page_hero_title = 'Octiv ' . get_the_title();
   }
 
+  // PRESS RELEASES POST TYPE
+  if (is_post_type_archive('press-releases')) {
+    $page_hero_body = null;
+  }
+
   // 404 Error Page
   if (is_404()) {
     $page_hero_title = 'Oh Uh!';

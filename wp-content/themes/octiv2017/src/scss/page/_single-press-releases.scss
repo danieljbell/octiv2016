@@ -1,0 +1,14 @@
+.single-press-releases {
+
+  .press-sidebar-links {
+    font-size: 0.9em;
+    line-height: 1.1;
+
+    li {
+      margin-bottom: 0.5em;
+      &:first-child {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
