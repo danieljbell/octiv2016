@@ -43,7 +43,7 @@ $context = stream_context_create(array(
 		<div style="background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0)), url(/wp-content/uploads/2017/10/iStock-637367232.jpg)">
 			<section>
 				<div class="site-width centered">
-					<h1 class="white-text">Mapping Your Sales Process to the Modern Buyer’s Journey</h1>
+					<h1 class="white-text pad-x">Mapping Your Sales Process to the Modern Buyer’s Journey</h1>
 					<div class="half-only white-text">
 						<div class="font-bump">
 							<p>Join Octiv and Sirius Decisions on Oct. 24 for a discussion about how the digitization of buyer-aligned sales processes improves sales productivity.</p>
