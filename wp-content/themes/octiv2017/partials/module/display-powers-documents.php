@@ -5,9 +5,11 @@
   if (is_singular('solutions')) {
     $doc_type = str_replace('For ', '', get_the_title());
   }
-  if (get_field('rad_subheadline')) {
-    $typed_strings = null;
-    $document_container_subheadline = get_field('rad_subheadline');
+  if (get_field('rad_list_items')) {
+    $typed_strings = array();
+    while (have_rows('rad_list_items')) : the_row();
+      array_push($typed_strings, get_sub_field('rad_list_item'));
+    endwhile;
   }
   if (get_field('rad_body_copy')) {
     $document_container_body = get_field('rad_body_copy');
@@ -19,23 +21,15 @@
     <div class="color-boxes pad-t">
       <h2 class="color-box-headline--brand">Octiv Powers <?php echo $doc_type; ?></h2>
       <div class="document-container pad-x-most pad-y-more">
-        <?php
-          if ($typed_strings) : 
-            echo '<p class="typed-paragraph">for <span id="typed"></span></p>';
-          else :
-            echo '<p class="typed-paragraph">' . $document_container_subheadline . '</p>';
-          endif;
-        ?>
+        <p class="typed-paragraph">for <span id="typed"></span></p>
         <p class="font-bump"><?php echo $document_container_body; ?></p>
-        <?php
-          if ($typed_strings) : 
-            echo '<ul id="typed-strings">';
-              foreach ($typed_strings as $string) {
-                echo '<li>' . $string . '</li>';
-              }
-            echo '</ul>';
-          endif;
-        ?>
+        <ul id="typed-strings">
+          <?php
+            foreach ($typed_strings as $string) {
+              echo '<li>' . $string . '</li>';
+            }
+          ?>
+        </ul>
         <button class="btn-primary rad-modal">Request A Demo</button>
       </div>
     </div>
