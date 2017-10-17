@@ -193,6 +193,9 @@ SUPPORT FORM STYLES
       box-shadow: inset 0 -2px 0 $brand;
     }
   }
+  input[type="radio"] {
+    width: initial;
+  }
   .half,
   .third,
   .fourth {

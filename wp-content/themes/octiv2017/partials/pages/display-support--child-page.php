@@ -11,8 +11,10 @@
           <?php the_content(); ?>
           <br>
           <div class="box--light">
-            <h2>Did this article help?</h2>
-            <p>Please provide us your feedback below.</p>
+            <div class="has-text-center">
+              <h2>Did this article help?</h2>
+              <p>Please provide us your feedback below.</p>
+            </div>
             <?php get_template_part('partials/pages/display', 'support--article-feedback-form'); ?>
           </div>
         </div>

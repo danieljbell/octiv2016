@@ -7,5 +7,6 @@ var submitTicket = getParameterByName('submitTicket');
 if (submitTicket === 'true') {
   var modalContent = $('.submit-modal');
   modalContent.modal();
-  window.history.pushState( {} , 'bar', '/support' );
+  var initialPath = window.location.pathname;
+  window.history.replaceState( {} , 'bar', initialPath );
 }

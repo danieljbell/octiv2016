@@ -20,7 +20,7 @@
       <div id="fsRow1839694-2" class="fsRow fsFieldRow fsLastRow">                    
         <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell27864389" aria-describedby="fsSupporting27864389" lang="en">
           <fieldset id="label27864389">
-            <legend class="fsLabel fsRequiredLabel fsLabelVertical"><span>How helpful was this article?<span class="fsRequiredMarker">*</span></span></legend>
+            <legend class="fsLabel fsRequiredLabel fsLabelVertical"><strong><span style="color: red;">*</span> How helpful was this article?</strong></legend>
             <div class="fieldset-content">
               <div>
                 <label class="fsOptionLabel horizontal" for="field27864389_1"><input type="radio" id="field27864389_1" name="field27864389" value="1" class="fsField fsRequired horizontal" aria-required="true"> 1 - No Help at All</label>
@@ -44,16 +44,16 @@
           </div>
           <br>
         </div>
-        <div id="fsRow1839694-4" class="fsRow fsFieldRow fsLastRow">
+        <div id="fsRow1839694-4" class="fsRow fsFieldRow fsLastRow mar-b">
           <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell27864395" lang="en">
-              <label id="label27864395" class="fsLabel" for="field27864395">Any additional feedback?</label>
+              <label id="label27864395" class="fsLabel" for="field27864395"><strong>Any additional feedback?</strong></label>
               <textarea id="field27864395" name="field27864395" rows="10" cols="50" class="fsField"></textarea>
             </div>
           </div>                      
           <div id="fsRow1839694-5" class="fsRow fsFieldRow fsLastRow">                        
             <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell28854941" aria-describedby="fsSupporting28854941" lang="en">
-              <label id="label28854941" class="fsLabel" for="field28854941">Email</label>
-              <p id="fsSupporting28854941" class="fsSupporting explination">If you have any additional questions and would like to be contacted by a member of our support team, please provide your email.</p>
+              <label id="label28854941" class="fsLabel" for="field28854941"><strong>Email</strong></label>
+              <p id="fsSupporting28854941" class="fsSupporting explination no-mar-b">If you have any additional questions and would like to be contacted by a member of our support team, please provide your email.</p>
               <input type="email" id="field28854941" name="field28854941" size="50" value="" class="fsField fsFormatEmail">
             </div>
           </div>                      
@@ -70,8 +70,10 @@
               <label id="label27948833" class="fsLabel fsRequiredLabel" for="field27948833">Article URL<span class="fsRequiredMarker">*</span>                    </label>                          
               <input type="text" id="field27948833" name="field27948833" size="50" required="" value="<?php echo site_url() . $url; ?>" class="fsField fsRequired" aria-required="true">      
             </div>
-          </div>  
-                      <input id="fsSubmitButton1839694" class="fsSubmitButton" type="submit" value="Submit Form">                 
+          </div>
+          <div class="has-text-center">
+            <input id="fsSubmitButton1839694" class="fsSubmitButton mar-t btn-primary" type="submit" value="Submit Form" style="display: inline-block; width: initial;">
+          </div>
         </div>                    
       </div>
     </form>
