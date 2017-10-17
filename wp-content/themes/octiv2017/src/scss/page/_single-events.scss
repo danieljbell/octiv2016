@@ -1,0 +1,58 @@
+.speakers-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.speaker-item {
+  display: flex;
+  
+  .person-headshot {
+    flex-shrink: 0;
+    @include mobile {
+      margin-right: 1rem;
+    }
+  }
+
+  .speaker-name {
+    font-size: 1.15em;
+    text-transform: uppercase;
+    color: $brand;
+  }
+
+  .speaker-title {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 0.25em;
+  }
+
+  .speaker-company {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 0;
+  }
+
+  .speaker-social {
+    width: 100%;
+    max-width: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.single-events {
+  .twitter-icon {
+    path {
+      fill: #00aced;
+    }
+  }
+  .linkedin-icon {
+    path {
+      fill: #007bb6;
+    }
+  }
+  .facebook-icon {
+    path {
+      fill: #3b5998;
+    }
+  } 
+}
