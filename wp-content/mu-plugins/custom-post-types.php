@@ -291,7 +291,7 @@ function solutions_init() {
             // 'rewrite' => array( 'slug' => 'resources/events' ),
             'with_front' => false,
             'hierarchical' => true,
-            // 'hasArchive' => true,
+            'hasArchive' => false,
             'show_ui' => true,
             'capabilities' => array(
                 'assign_terms' => 'edit_solution_type',
