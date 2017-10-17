@@ -55,17 +55,24 @@
         <?php else : 
           $custom_page = get_sub_field('pick_your_page')[0];
           $custom_page_ID = get_sub_field('pick_your_page')[0]->ID;
+          $cta_text = 'Learn More';
           $cta_link = get_the_permalink($custom_page_ID);
           $thumb_id = get_post_thumbnail_id(get_sub_field('pick_your_page')[0]->ID);
           $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           $thumb_url = $thumb_url_array[0];
-          if (get_field('hero_image', $custom_page_ID)) {
-            $thumb_url = get_field('hero_image', $custom_page_ID);
-          }
           $promoted_headline = $custom_page->post_title;
           $promoted_body = $custom_page->post_excerpt;
           $promoted_class = 'page-section-promoted-item';
           $button_class = 'btn-primary';
+          if (get_field('hero_image', $custom_page_ID)) {
+            $thumb_url = get_field('hero_image', $custom_page_ID);
+          }
+          if (get_field('hero_title', $custom_page_ID)) {
+            $promoted_headline = get_field('hero_title', $custom_page_ID);
+          }
+          if (get_field('hero_button_text', $custom_page_ID)) {
+            $cta_text = get_field('hero_button_text', $custom_page_ID);
+          }
           if ($custom_page->post_type === 'client-story') {
             $thumb_url = get_field('client_testimonial_image', $custom_page_ID);
             $promoted_body = get_field('highlighted_quote', $custom_page_ID);
@@ -101,8 +108,10 @@
               <div class="color-boxes">
                 <h2 class="color-box-headline--brand"><?php echo $promoted_headline; ?></h2>
               </div>
-              <p><?php echo $promoted_body; ?></p>
-              <a href="<?php echo $cta_link; ?>" class="<?php echo $button_class; ?>">Learn More</a>
+              <div class="two-third-only">
+                <p><?php echo $promoted_body; ?></p>
+                <a href="<?php echo $cta_link; ?>" class="<?php echo $button_class; ?>"><?php echo $cta_text; ?></a>
+              </div>
             <?php endif; ?>
           </div>
         </div>
