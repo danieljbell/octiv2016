@@ -12,6 +12,10 @@
       <div class="two-third">
         <article>
           <?php the_content(); ?>
+          <hr>
+          <h3>About Octiv</h3>
+          <p>Octiv provides a document generation platform designed to create efficiencies in creating documents like proposals, quotes, contracts, presentations and more. Octiv integrates data from back-office systems to streamline workflows, save time and accelerate the document creation and delivery process. Founded in 2010, Octiv services more than 400 organizations including enterprises such as General Electric and Siemens, and high-growth companies such as Lindamood-Bell and G/O Digital. To learn more, visit <a href="/" title="Octiv Homepage">octiv.com</a>.</p>
+          <p><strong>Media Contact</strong><br>Kelli Blystone<br><a href="tel:3175500148,721">317.550.0148 ext. 721</a><br><a href="mailto:kelli.blystone@octiv.com">kelli.blystone@octiv.com</a></p>
         </article>
         <aside>
           <h4>Other Recent Press Releases</h4>
