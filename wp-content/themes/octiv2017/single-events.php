@@ -1,4 +1,14 @@
 <?php
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+  'http' => array(
+    'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+  )
+));
+?>
+
+<?php
   // page request variables
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
