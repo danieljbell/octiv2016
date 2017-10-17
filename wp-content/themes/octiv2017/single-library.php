@@ -29,8 +29,8 @@
   ?>
 
   <?php
-    if ($post_tax_type === 'tools-quizes') {
-      get_template_part('partials/pages/display', 'library--tools-quizes');
+    if ($post_tax_type === 'quizzes') {
+      get_template_part('partials/pages/display', 'library--quizzes');
     }
   ?>
 
