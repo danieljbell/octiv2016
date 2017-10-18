@@ -3,6 +3,7 @@
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
   $video_gate = get_field('gated_or_open');
+  $form_id = get_field('marketo_form_id');
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
@@ -27,8 +28,8 @@
           </div>
           <div>
             <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-            <form id="mktoForm_<?php echo get_field('marketo_form_id'); ?>"></form>
-            <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('marketo_form_id'); ?>, function(form) {
+            <form id="mktoForm_<?php echo $form_id; ?>"></form>
+            <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
 
               form.onSuccess(function(values, followUpUrl) {
                 form.getFormElem().hide();
