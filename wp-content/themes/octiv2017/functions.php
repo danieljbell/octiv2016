@@ -241,9 +241,28 @@ function get_requested_slug() {
 YOAST BREADCRUMB OVERIDES
 ==============================
 */
-// add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
-// function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
-//   global $post;
+add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
+function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
+  global $post;
+  if (is_singular('solutions')) {
+      $breadcrumb[] = array(
+      'url' => '/solutions',
+      'text' => 'Solutions',
+    );
+    array_splice( $links, 1, 0, $breadcrumb );
+  }
+  if (is_singular('integration')) {
+      $breadcrumb[] = array(
+      'url' => '/platform/integrations',
+      'text' => 'Integrations',
+    );
+    array_splice( $links, 1, 0, $breadcrumb );
+    $parent[] = array(
+        'url' => '/platform',
+        'text' => 'Platform',
+    );
+    array_splice( $links, 1, 0, $parent );
+  }
   // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
   //   $breadcrumb[] = array(
   //     'url' => '/platform',
@@ -292,8 +311,8 @@ YOAST BREADCRUMB OVERIDES
 //     );
 //     array_splice( $links, 1, 0, $breadcrumb );
 //   }
-//   return $links;
-// }
+  return $links;
+}
 
 
 
