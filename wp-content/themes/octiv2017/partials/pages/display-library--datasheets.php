@@ -21,15 +21,34 @@
       </div>
       <p>Fill out the form below and you'll get access to the datasheet.</p>
       <div class="two-third-only">
+        <div class="success-message" style="display: none;">
+          <div class="color-boxes" style="margin-bottom: 0.5rem;">
+            <h2 class="color-box-headline--white">Thanks!</h2>
+          </div>
+          <p>If the datasheet didn't already download, use the button below to get it.</p>
+          <a href="<?php echo $redirect_link; ?>" class="btn-white--outline" download>Download Datasheet</a>
+        </div>
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_<?php echo $form_id; ?>"></form>
         <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
           form.onSuccess(function(values, followUpUrl) {
-            // Update the redirect url with form fields
-            followUpUrl = <?php echo "'" . site_url() . $redirect_link . "'"; ?>;
-            // Redirect the page with form field
-            location.href = followUpUrl;
-            // Return false to prevent the submission handler continuing with its own processing
+            var vals = form.vals();
+            var evt = new MouseEvent('click', {
+              view: window,
+              bubbles: false,
+              cancelable: true
+            });
+
+            var downloadLink = document.createElement('a');
+            downloadLink.setAttribute('download', <?php echo "'Octiv - " . get_the_title() . " Datasheet'"; ?>);
+            downloadLink.setAttribute('href', <?php echo "'" . $redirect_link . "'"; ?>);
+            downloadLink.setAttribute('target', '_blank');
+            downloadLink.dispatchEvent(evt);
+            $('#call-to-action .color-boxes').first().hide().next().hide();
+            form.getFormElem().hide();
+            var successMessage = $('.success-message');
+            successMessage.find('h2').text('Thanks ' + vals.FirstName + '!');
+            successMessage.show();
             return false;
           });
         });</script>
