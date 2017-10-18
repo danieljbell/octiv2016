@@ -3,7 +3,10 @@
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
   $video_gate = get_field('gated_or_open');
-  $form_id = get_field('marketo_form_id');
+  $form_id = '1041';
+  if (get_field('marketo_form_id')) {
+    $form_id = get_field('marketo_form_id');
+  }
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
