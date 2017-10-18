@@ -2,6 +2,7 @@
   // page request variables
   $has_reg = $_GET['reg'];
   $has_first_name = $_GET['first_name'];
+  $video_gate = get_field('gated_or_open');
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
@@ -9,7 +10,7 @@
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
-      <div class="video-outer" style="display: none;">
+      <div class="video-outer" <?php if ($video_gate === 'gated') : ?> style="display: none;" <?php endif; ?>>
         <div class="video-inner">
           <?php
             $video_host = get_field('video_host');
@@ -19,7 +20,7 @@
             ?>
         </div>
       </div>
-      <?php if (get_field('gated_or_open') === 'gated') : ?>
+      <?php if ($video_gate === 'gated') : ?>
         <div class="half">
           <div class="page-content">
             <?php the_content(); ?>
