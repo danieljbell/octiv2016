@@ -137,8 +137,7 @@ $rand_num = mt_rand(1,4);
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
 
-
-  /* HERO TITLE */
+    /* HERO TITLE */
   if (get_field('hero_title')) {
     $page_hero_title = get_field('hero_title');
   }
@@ -148,10 +147,16 @@ $rand_num = mt_rand(1,4);
     $page_hero_body = get_field('hero_body_copy');
   }
 
-  /* HERO BODY COPY */
+  /* HERO BUTTONS */
   if (get_field('hero_button_link')) {
     $page_hero_button_text = get_field('hero_button_text');
     $page_hero_button_link = get_field('hero_button_link');
+  }
+
+  // LIBRARY--INFOGRAPHICS
+  if (is_singular('library') && has_term('infographics', 'library_type')) {
+    $page_hero_button_link = get_field('form_redirect_link');
+    $page_hero_button_text = 'Get the Infographic';
   }
 
 ?>
@@ -174,7 +179,11 @@ $rand_num = mt_rand(1,4);
             echo '<h2 class="mar-b">' . $page_hero_body . '</h2>';
           }
           if ($page_hero_button_link) {
-            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
+            if (is_singular('library') && has_term('infographics', 'library_type')) {
+              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline" download>' . $page_hero_button_text . '</a>';
+            } else {
+              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
+            }
           }
           /* WHITEPAPERS CTA BUTTON */
           if (is_singular('library')) {
