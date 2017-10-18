@@ -1,16 +1,5 @@
-.single-integration main {
-  padding-bottom: 0;
-}
-
 .single-integration .hero {
   text-shadow: none;
-}
-
-.single-integration .hero,
-.single-integration .breadcrumbs {
-  @include tablet {
-    transform: translateY(-1.75rem);
-  }
 }
 
 .plus-sign {
@@ -70,12 +59,6 @@
     max-width: 200px;
     max-height: 100px;
     width: 100%;
-  }
-}
-
-.single-integration main {
-  @include tablet {
-    padding-top: 2rem;
   }
 }
 
