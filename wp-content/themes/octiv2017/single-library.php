@@ -34,6 +34,12 @@
     }
   ?>
 
+  <?php
+    if ($post_tax_type === 'datasheets') {
+      get_template_part('partials/pages/display', 'library--datasheets');
+    }
+  ?>
+
 </main>
 
 <?php get_footer(); ?>
