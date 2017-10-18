@@ -194,7 +194,7 @@ $rand_num = mt_rand(1,4);
             $post_tax = get_queried_object()->post_type . '_type';
             $post_tax_array = get_the_terms($post_ID, $post_tax);
             $post_tax_type = $post_tax_array[0]->slug;
-            if ($post_tax_type === 'whitepapers') {
+            if ($post_tax_type === 'whitepapers' || $post_tax_type === 'datasheets') {
               echo '<a href="#call-to-action" class="btn-white--outline">Download Now</a>';
             }
           }

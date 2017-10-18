@@ -8,7 +8,11 @@
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
+      <div class="whitepaper-cover-container">
+        <img src="<?php echo get_field('datasheet_cover'); ?>" alt="<?php echo get_the_title(); ?> Cover" class="whitepaper-cover">
+      </div>
       <?php the_content(); ?>
+      <a href="#call-to-action" class="btn-primary">Download Now</a>
     </div>
   </div>
 </section>
