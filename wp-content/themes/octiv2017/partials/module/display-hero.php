@@ -140,6 +140,15 @@ $rand_num = mt_rand(1,4);
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
   }
 
+  // THANK YOU PAGE
+  if (is_page_template('page-templates/thank-you.php')) {
+    $page_hero_title = 'Thank You!';
+    if ($_GET['first_name']) {
+      $first_name = $_GET['first_name'];
+      $page_hero_title = 'Thank You ' . $first_name . '!';
+    }
+  }
+
     /* HERO TITLE */
   if (get_field('hero_title')) {
     $page_hero_title = get_field('hero_title');
