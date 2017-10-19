@@ -12,8 +12,6 @@
   if ($post->post_parent > 0) {
     if (!$has_reg || $has_reg != 'true') {
       header("Location: $parent_page");
-    } else {
-      get_template_part('partials/pages/display', 'library--tools-child');
     }
   }
 ?>
@@ -54,7 +52,11 @@
 
   <?php
     if ($post_tax_type === 'tools') {
-      get_template_part('partials/pages/display', 'library--tools');
+      if ($post->post_parent > 0) {
+        get_template_part('partials/pages/display', 'library--tools-child');
+      } else {
+        get_template_part('partials/pages/display', 'library--tools');
+      }
     }
   ?>
 
