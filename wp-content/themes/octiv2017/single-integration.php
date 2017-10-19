@@ -21,17 +21,7 @@
 
   <section class="post-content">
     <div class="site-width">
-      <div class="one-fourth">
-        <aside>
-          <h4><?php echo get_the_title(); ?></h4>
-          <hr>
-          <ul>
-            <li><a href="#why">Why Octiv &amp; <?php echo get_the_title(); ?></a></li>
-            <li><a href="#key-capabilities">Key Capabilities</a></li>
-            <li><a href="#technical-requirements">Technical Requirements</a></li>
-            <li><a href="#about">About <?php echo get_the_title(); ?></a></li>
-          </ul>
-        </aside>
+      <div class="two-third-only">
         <article>
           <h3 id="why">Why Octiv &amp; <?php echo get_the_title(); ?></h3>
           <?php echo get_the_content(); ?>
@@ -94,7 +84,7 @@
           echo '<div class="third">';
             while ($query->have_posts()) :
               $query->the_post();
-                echo do_shortcode('[get_card_v3 excerpt="true"]');
+                echo do_shortcode('[get_card_v3 title="false" has_cta_text="false"]');
             endwhile;
           echo '</div>';
         endif;
@@ -102,7 +92,7 @@
       ?>
     </div>
   </section>
-  <?php get_template_part('partials/module/display', 'call-to-action'); ?>
+  <?php get_template_part('partials/module/display', 'powers-documents'); ?>
 </main>
 
 <?php get_footer(); ?>

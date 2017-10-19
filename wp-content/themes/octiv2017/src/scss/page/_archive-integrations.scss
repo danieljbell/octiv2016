@@ -1,0 +1,21 @@
+.page-template-archive {
+  main .card-image {
+    top: 0;
+    background-size: 75% 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    padding: 0 0 50%;
+  }
+
+  main aside a {
+    text-decoration: none;
+    color: $gray;
+    transition: all 200ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: $brand;   
+    }
+  }
+
+}

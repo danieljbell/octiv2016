@@ -55,7 +55,7 @@ gulp.task('js', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
-  gulp.src('./node_modules/vue/dist/vue.min.js')
+  gulp.src(['./node_modules/vue/dist/vue.min.js', './node_modules/sticky-sidebar/dist/sticky-sidebar.min.js'])
     .pipe(gulp.dest('./dist/js/lib'))
 });
 

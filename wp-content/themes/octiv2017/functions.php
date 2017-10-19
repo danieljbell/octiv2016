@@ -28,6 +28,7 @@ function enqueue_global_js() {
     wp_enqueue_script('resources', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.0', true);
   }
   if (is_page_template('page-templates/archive.php')) {
+    wp_enqueue_script('sticky-sidebar', get_stylesheet_directory_URI() . '/dist/js/lib/sticky-sidebar.min.js', array(), '1.0.0', true);
     wp_enqueue_script('page-template--archive', get_stylesheet_directory_URI() . '/dist/js/page-template--archive.js', array(), '1.0.0', true);
   }
   if (is_category()) {
