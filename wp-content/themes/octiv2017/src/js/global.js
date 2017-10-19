@@ -77,6 +77,11 @@
   radButtons.on('click', function() {
     $('.rad-modal-container').modal();
   });
+  if (getParameterByName('rad') === 'true') {
+    $('.rad-modal-container').modal();
+    var initialPath = window.location.pathname;
+    window.history.replaceState( {} , 'bar', initialPath );
+  }
 
   var radLinks = $('[href="#request-a-demo"]');
   radLinks.on('click', function(e) {
