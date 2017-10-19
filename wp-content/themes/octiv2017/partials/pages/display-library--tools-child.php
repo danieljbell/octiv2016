@@ -1,6 +1,7 @@
 <script>
   var initialPath = window.location.pathname;
   window.history.replaceState( {} , 'bar', initialPath );
+  
 </script>
 
 <?php get_header(); ?>
