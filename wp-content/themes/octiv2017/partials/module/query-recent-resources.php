@@ -1,24 +1,47 @@
 <?php
   $args = array(
-    'post_type'      => 'any',
-    'posts_per_page' => 3
+    'post_type'      => 'post',
+    'posts_per_page' => 1
   );
   $query = new WP_Query($args);
   if ($query->have_posts()) :
-    while ($query->have_posts()) : $query->the_post(); ?>
-      <li class="quote">
-        <?php echo get_field('employee_quote'); ?>
-        <div class="person-details-container">
-          <div class="person-headshot has-person-headshot">
-            <img src="<?php echo get_field('employee_headshot')[url] ?>" alt="<?php echo get_the_title(); ?>'s Headshot">
-          </div>
-          <div class="person-details-content">
-            <p class="person-name"><?php echo get_the_title(); ?></p>
-            <p class="person-title"><?php echo get_field('employee_title'); ?></p>
-          </div>
-        </div>
-      </li>
-  <?php
+    while ($query->have_posts()) : $query->the_post();
+      echo do_shortcode('[get_card_v3 excerpt="true"]');
+    endwhile;
+  endif;
+  wp_reset_query();
+?>
+
+<?php
+  $args = array(
+    'post_type'      => 'library',
+    'posts_per_page' => 1,
+    'tax_query' => array(
+        array(
+          'taxonomy' => 'library_type',
+          'field'    => 'slug',
+          'terms'    => 'whitepapers',
+        ),
+      ),
+  );
+  $query = new WP_Query($args);
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+      echo do_shortcode('[get_card_v3 excerpt="true"]');
+    endwhile;
+  endif;
+  wp_reset_query();
+?>
+
+<?php
+  $args = array(
+    'post_type'      => 'events',
+    'posts_per_page' => 1,
+  );
+  $query = new WP_Query($args);
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+      echo do_shortcode('[get_card_v3 excerpt="true"]');
     endwhile;
   endif;
   wp_reset_query();

@@ -8,7 +8,7 @@ add_shortcode('get_card_v3', function($atts) {
   extract(shortcode_atts(
     array(
       'location' => '',
-      'thumb' => 'false',
+      'thumb' => 'true',
       'excerpt' => 'false',
       'class' => '',
       'tag' => '',
@@ -23,7 +23,9 @@ add_shortcode('get_card_v3', function($atts) {
   
   <div class="card <?php if ($class) { echo $class; } ?>">
     <?php if (!is_post_type_archive('integration')) : ?>
-      <a class="card-image" href="<?php echo get_the_permalink(); ?>" style="background-image: url(<?php echo $card_image; ?>);"></a>
+      <?php if ($thumb != 'false') : ?>
+        <a class="card-image" href="<?php echo get_the_permalink(); ?>" style="background-image: url(<?php echo $card_image; ?>);"></a>
+      <?php endif; ?>
     <?php endif; ?>
     <div class="card-content">
       <?php if (!is_post_type_archive('integration')) : ?>

@@ -10,7 +10,7 @@
         if (have_posts()) :
           echo '<div class="third">';
           while (have_posts()) : the_post();
-            echo do_shortcode('[get_card_v3 thumb=" "]');
+            echo do_shortcode('[get_card_v3 thumb="false"]');
           endwhile;
           echo '</ul>';
         endif;

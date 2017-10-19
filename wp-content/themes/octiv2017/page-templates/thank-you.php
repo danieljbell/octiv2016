@@ -15,7 +15,7 @@ TEMPLATE NAME: Thank You
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
-      <ul class="third">
+      <ul class="third no-mar-b" style="position: relative; z-index: 1;">
         <?php get_template_part('partials/module/query', 'recent-resources'); ?>
       </ul>
     </div>
@@ -25,6 +25,8 @@ TEMPLATE NAME: Thank You
 <section class="client-testimonial-slider">
   <?php get_template_part('partials/module/display', 'client-testimonial-slider'); ?>
 </section>
+
+<?php get_template_part('partials/module/display', 'powers-documents'); ?>
 
 <style>
   .notch {

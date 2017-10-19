@@ -143,6 +143,7 @@ $rand_num = mt_rand(1,4);
   // THANK YOU PAGE
   if (is_page_template('page-templates/thank-you.php')) {
     $page_hero_title = 'Thank You!';
+    $page_hero_body = '<div class="mar-b-more">' . strip_tags(get_the_excerpt()) . '</div>';
     if ($_GET['first_name']) {
       $first_name = $_GET['first_name'];
       $page_hero_title = 'Thank You ' . $first_name . '!';
