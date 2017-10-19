@@ -1,11 +1,15 @@
 .page-template-archive {
   main .card-image {
-    top: 0;
-    background-size: 75% 75%;
+    min-height: 100px;
+    background-size: 45% 45%;
     background-position: center center;
     background-repeat: no-repeat;
     box-shadow: none;
-    padding: 0 0 50%;
+    padding: 0 0 50% !important;
+    @include tablet {
+      top: 0;
+      background-size: 75% 75%;  
+    }
   }
 
   main aside a {
@@ -15,6 +19,12 @@
     &:hover,
     &:focus {
       color: $brand;   
+    }
+  }
+
+  #sidebar {
+    @include mobile {
+      display: none;
     }
   }
 
