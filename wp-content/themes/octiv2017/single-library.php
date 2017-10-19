@@ -12,8 +12,9 @@
   if ($post->post_parent > 0) {
     if (!$has_reg || $has_reg != 'true') {
       header("Location: $parent_page");
+    } else {
+      get_template_part('partials/pages/display', 'library--tools-child');
     }
-    get_template_part('partials/pages/display', 'library--tools-child');
   }
 ?>
 
