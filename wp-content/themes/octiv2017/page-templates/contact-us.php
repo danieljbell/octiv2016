@@ -13,7 +13,7 @@ Template Name: Contact Us
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
-      <div class="two-third">
+      <div class="half">
         <div>
           <?php the_content(); ?>
           <div class="video-outer">
@@ -38,10 +38,30 @@ Template Name: Contact Us
               return false;
             });
           });
+        </script>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="client-testimonial-slider">
+  <?php get_template_part('partials/module/display', 'client-testimonial-slider'); ?>
+</section>
+
+<?php get_template_part('partials/module/display', 'powers-documents'); ?>
+
+<style>
+  .notch {
+    margin-bottom: -3rem;
+  }
+</style>
+
+<script>
+  var initialPath = window.location.pathname;
+  window.history.replaceState( {} , 'bar', initialPath );
+</script>
+
+<?php get_footer(); ?>
 
 <?php get_footer(); ?>
