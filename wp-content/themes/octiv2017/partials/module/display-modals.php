@@ -19,7 +19,6 @@ REQUEST A DEMO
         <div class="modal-header--content">
           <p>Once the form is submitted, we'll contact you within one to two business days to find out more about your needs.</p>
           <p>Want to speak with us right now? Call <a href="tel:844-936-2848" title="Call Us Today: 844-936-2848">844-936-2848</a>, we're happy to help.</p>
-          <p>For general inquiries, please visit the <a href="/company/contact-us/">Contact Us</a> page. Customers, please visit our <a href="/support">Support</a> page.</p>
         </div>
       </div>
       <div class="modal-body">

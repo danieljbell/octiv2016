@@ -20,14 +20,14 @@ SITE HEADER
           <a href="/" title="Home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo" class="site-header-logo"></a>
         </li>
         <li class="site-header-rad-button-container">
-          <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request A Demo</button>
+          <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request a Demo</button>
         </li>
       </ul>
     </div>
   </div>
   <div class="site-header-mega-menu">
     <div class="site-width">
-      <button id="site-head-rad" class="btn-primary rad-modal mar-b" data-modal="rad">Request A Demo</button>
+      <button id="site-head-rad" class="btn-primary rad-modal mar-b" data-modal="rad">Request a Demo</button>
     </div>
     <?php
       wp_nav_menu(

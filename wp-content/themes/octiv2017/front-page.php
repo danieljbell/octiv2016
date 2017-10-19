@@ -23,7 +23,7 @@ get_header();
           <div class="color-boxes">
             <h2 class="color-box-headline--brand-three">Meet Sara</h2>
           </div>
-          <p class="pad-x font-bump">Her proposal is due by 5. See how Octiv offers a better way for all her documents to be created, shared, signed and stored.</p>
+          <p class="pad-x font-bump">Sara’s proposal is due by 5:00 p.m. Watch how Octiv gives her a better way to create, share, sign and store her document across the organization in no time.</p>
           <div class="video-outer">
             <div class="video-inner">
               <iframe src="https://fast.wistia.net/embed/iframe/hjy779ahf2?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
@@ -35,16 +35,16 @@ get_header();
             <div class="box--brand-two pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/doc-gen.svg', false, $context); ?>
             </div>
-            <h3 class="font-color-brand-two"><span class="font-bump">Complete Document Generation Platform</span></h3>
-            <p class="mar-b">Create, share, sign and store documents all in one platform, giving your team all the tools they need to close deals faster and deliver business results.</p>
+            <h3 class="font-color-brand-two"><span class="font-bump">The All-in-One Sales Platform</span></h3>
+            <p class="mar-b">Bypass the hassle of traditional document sharing with one comprehensive solution.</p>
             <a href="/platform" class="btn-brand-two--outline">Learn More</a>
           </div>
           <div>
             <div class="box--brand-three pad-a mar-b svg-icon white-icon" style="display: inline-block; width: inherit;">
               <?php echo file_get_contents(get_site_url() . '/wp-content/uploads/2017/01/plug.svg', false, $context); ?>
             </div>
-            <h3 class="font-color-brand-three"><span class="font-bump">Connect Systems and Data</span></h3>
-            <p class="mar-b">Octiv connects the systems and data that your teams use every day - CRM, eSignature, CPQ, storage - eliminating steps in the document workflow allowing you to close deals faster.</p>
+            <h3 class="font-color-brand-three"><span class="font-bump">The Best Integrations in the Industry</span></h3>
+            <p class="mar-b">Integrate seamlessly for the utmost personalization and accuracy.</p>
             <a href="/platform/integrations" class="btn-brand-three--outline">Learn More</a>
           </div>
         </div>
