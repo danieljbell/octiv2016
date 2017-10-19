@@ -1,6 +1,14 @@
 .light-callout {
   background-color: $lgray;
-  background-image: linear-gradient($white,rgba(black, 0.1));
+  background-image: linear-gradient(rgba(white, 0.1),rgba(black, 0.1));
+}
+
+.dark-callout {
+  background-color: $gray;
+  background-image: linear-gradient(rgba(white, 0.1),rgba(black, 0.1));
+  * {
+    color: $white;
+  }
 }
 
 .brand-callout {
@@ -19,15 +27,37 @@
 
 .brand-two-callout {
   background-color: $brand2;
+  background-image: linear-gradient(rgba(white, 0.1),rgba(black, 0.1));
   * {
     color: $white;
   }
   a[href*="tel"] {
-    color: $white; 
+    color: $white;
   }
   .btn-primary {
     color: $brand;
     background-color: $white;
+  }
+}
+
+.brand-three-callout {
+  background-color: $brand3;
+  * {
+    color: $white;
+  }
+}
+
+.brand-four-callout {
+  background-color: $brand4;
+  * {
+    color: $white;
+  }
+}
+
+.brand-five-callout {
+  background-color: $brand5;
+  * {
+    color: $white;
   }
 }
 

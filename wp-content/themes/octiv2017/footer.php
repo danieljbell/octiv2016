@@ -57,5 +57,17 @@ $context = stream_context_create(array(
 
 <?php wp_footer(); ?>
 
+<?php if (is_page_template('page-templates/brand-assets.php')) : ?>
+  <script>
+    $('aside a').on('click', function(e) {
+      e.preventDefault();
+      var target = $(this.hash);
+      $('html, body').animate({
+          scrollTop: target.offset().top - (document.querySelector('.site-header').offsetHeight)
+      }, 300);
+    });
+  </script>
+<?php endif; ?>
+
 </body>
 </html>
