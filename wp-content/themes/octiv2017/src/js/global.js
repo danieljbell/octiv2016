@@ -3,6 +3,25 @@
 
   /*
   ==============================
+  ACCORDIANS
+  ==============================
+  */
+  var accordianContainer = $('.accordian');
+
+  accordianContainer.find('dd').hide();
+
+  accordianContainer.find('dt').on('click', function() {
+    $(this).next().slideToggle(200);
+  });
+
+  $('dl.accordian dt').on('click', function() {
+      $(this).toggleClass('rotated');
+  });
+
+
+
+  /*
+  ==============================
   STICKY SITE HEADER
   ==============================
   */

@@ -116,6 +116,9 @@ $rand_num = mt_rand(1,4);
     $page_hero_title = 'Get Ready for the Next Release';
     $page_hero_body = 'If you administer or configure Octiv products and services, watch this page for the latest information about upcoming product releases.';
   }
+  if (is_singular('releases')) {
+    $page_hero_body = null;
+  }
 
   // SOLUTIONS POST TYPE
   if (is_singular('solutions')) {

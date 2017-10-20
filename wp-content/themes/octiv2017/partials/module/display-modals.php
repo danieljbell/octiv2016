@@ -166,14 +166,34 @@ SUPPORT TICKET
       </div>
     </div>
   </div>
-  <!-- <div class="modal fade submit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-content">
-        <h2>Submit a "Help Me" ticket</h2>
-        <p>Please fill out the form below to submit a ticket to our support team.</p>
-        <?php get_template_part('partials/display', 'support-form'); ?>
+<?php endif; ?>
+
+
+<?php
+/*
+==============================
+EMPTY MODAL
+==============================
+*/
+?>
+<?php if (is_singular('releases')) : ?>
+  <div class="empty-modal modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+      <div class="modal-content vertical-align">
       </div>
     </div>
-  </div> -->
+  </div>
+  <style>
+    .empty-modal .modal-content img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: initial;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  </style>
 <?php endif; ?>

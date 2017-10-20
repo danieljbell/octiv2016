@@ -76,7 +76,7 @@ TEMPLATE NAME: Resource Layout
   <section class="resource-grid">
     <div class="site-width">
       <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
-        <div class="one-fourth vertical-align">
+        <div class="third-only mar-b-more">
           <div class="resource-grid-filters-container">
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
           </div>

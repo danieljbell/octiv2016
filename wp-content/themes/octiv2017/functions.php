@@ -49,6 +49,9 @@ function enqueue_global_js() {
   if (is_singular('events')) {
     wp_enqueue_script('events', get_stylesheet_directory_URI() . '/dist/js/events.js', array(), '1.0.0', true);
   }
+  if (is_singular('releases')) {
+    wp_enqueue_script('releases', get_stylesheet_directory_URI() . '/dist/js/releases.js', array(), '1.0.0', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 
