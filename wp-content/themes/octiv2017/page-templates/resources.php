@@ -98,7 +98,7 @@ TEMPLATE NAME: Resource Layout
                     $cat_count = $single_cat->count;
 
                     if ($single_cat->slug === 'tools') {
-                      $cat_count = $single_cat->count / 2;
+                      $cat_count = ($single_cat->count % 2) + 2;
                     }
                 ?>
                   <option value="<?php echo $single_cat->slug; ?>"><?php echo $single_cat->name . ' - ' . $cat_count; ?></option>
