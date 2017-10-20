@@ -16,47 +16,29 @@
   }
 ?>
 
-<?php get_header(); ?>
+<?php
+  if ($post_tax_type === 'tools' && $post->post_parent > 0) {
+    get_template_part('partials/pages/display', 'library--tools-child');
+    return;
+  }
+  get_header();
+?>
 
 <main>
 
   <?php
     if ($post_tax_type === 'whitepapers') {
       get_template_part('partials/pages/display', 'library--whitepaper');
-    }
-  ?>
-
-  <?php
-    if ($post_tax_type === 'infographics') {
+    } else if ($post_tax_type === 'infographics') {
       get_template_part('partials/pages/display', 'library--infographics');
-    }
-  ?>
-
-  <?php
-    if ($post_tax_type === 'videos') {
+    } else if ($post_tax_type === 'videos') {
       get_template_part('partials/pages/display', 'library--videos');
-    }
-  ?>
-
-  <?php
-    if ($post_tax_type === 'quizzes') {
+    } else if ($post_tax_type === 'quizzes') {
       get_template_part('partials/pages/display', 'library--quizzes');
-    }
-  ?>
-
-  <?php
-    if ($post_tax_type === 'datasheets') {
+    } else if ($post_tax_type === 'datasheets') {
       get_template_part('partials/pages/display', 'library--datasheets');
-    }
-  ?>
-
-  <?php
-    if ($post_tax_type === 'tools') {
-      if ($post->post_parent > 0) {
-        get_template_part('partials/pages/display', 'library--tools-child');
-      } else {
-        get_template_part('partials/pages/display', 'library--tools');
-      }
+    } else if ($post_tax_type === 'tools') {
+      get_template_part('partials/pages/display', 'library--tools');
     }
   ?>
 

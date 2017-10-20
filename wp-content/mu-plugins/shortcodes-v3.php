@@ -57,3 +57,13 @@ add_shortcode('get_card_v3', function($atts) {
 <?php
     return ob_get_clean();
 });
+
+
+/*
+==============================
+GET SAAS BUYER JOURNEY
+==============================
+*/
+add_shortcode('get_saas_buyer_journey', function($atts) {
+  return file_get_contents('./wp-content/themes/octiv2016/page-templates/buyer-journey.php', false, $context);
+});

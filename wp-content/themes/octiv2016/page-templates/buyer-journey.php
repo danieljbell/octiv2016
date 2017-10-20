@@ -1,10 +1,4 @@
-<?php 
-/*
-Template Name: Buyer Journey
-*/ 
-?>
-
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
@@ -35,31 +29,31 @@ Template Name: Buyer Journey
 	<meta name="twitter:title" content="The SaaS Buyer Journey Timeline" />
 	<meta name="twitter:site" content="@GetTinderBox" />
 	<meta name="twitter:image" content="//octiv.com/wp-content/uploads/2016/04/buyer-journey-twitter.jpg" />
-	<meta name="twitter:creator" content="@GetTinderBox" />
+	<meta name="twitter:creator" content="@GetTinderBox" /> -->
 
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/buyer-journey/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/buyer-journey/style.css"> <!-- Resource style -->
-	<script src="<?php echo get_template_directory_uri(); ?>/dist/js/buyer-journey/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="/wp-content/themes/octiv2016/dist/buyer-journey/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/wp-content/themes/octiv2016/dist/buyer-journey/style.css"> <!-- Resource style -->
+	<script src="/wp-content/themes/octiv2016/dist/js/buyer-journey/modernizr.js"></script> <!-- Modernizr -->
   	
-	<title>The SaaS Buyer Journey Timeline</title>
-</head>
+	<!-- <title>The SaaS Buyer Journey Timeline</title> -->
+<!-- </head> -->
 <body>
 	<header id="title-hero">
 		<div class="buyer"></div>
-		<img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/buyer-journey-airplane.png" alt="" class="airplane">
+		<img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/buyer-journey-airplane.png" alt="" class="airplane">
 		<div class="overlay">
 			<div class="overlay-content">
 				<h1>The SaaS Buyer Journey Timeline</h1>
 				<p>Octiv and Forrester offer a real-life glimpse into how companies navigate the buyer's journey.</p>
 				<div>
-					<div class="TB-Logo logo"><a href="//octiv.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/Octiv-Logo-White.svg" alt="Octiv"></a></div>
-					<div class="Forrester-Logo logo"><a href="//www.forrester.com/home/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/forrester.svg" alt="Forrester"></a></div>
+					<div class="TB-Logo logo"><a href="//octiv.com" target="_blank"><img src="/wp-content/themes/octiv2016/dist/img/Octiv-Logo-White.svg" alt="Octiv"></a></div>
+					<div class="Forrester-Logo logo"><a href="//www.forrester.com/home/" target="_blank"><img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/forrester.svg" alt="Forrester"></a></div>
 				</div>
 			</div>
 			<div class="arrow">
-				<a href="#toc"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/arrow.png" alt="" class="animated bounce"></a>
+				<a href="#toc"><img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/arrow.png" alt="" class="animated bounce"></a>
 			</div>
 		</div>
 	</header>
@@ -129,7 +123,7 @@ Template Name: Buyer Journey
 	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block" id="early-stage">
 			<div class="cd-timeline-img cd-picture">
-				<img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/speeding-up.svg" alt="Picture">
+				<img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/speeding-up.svg" alt="Picture">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -168,7 +162,7 @@ Template Name: Buyer Journey
 
 		<div class="cd-timeline-block" id="mid-stage">
 			<div class="cd-timeline-img cd-movie">
-				<img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/takeoff.svg" alt="Movie">
+				<img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/takeoff.svg" alt="Movie">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -211,7 +205,7 @@ Template Name: Buyer Journey
 
 		<div class="cd-timeline-block" id="late-stage">
 			<div class="cd-timeline-img cd-picture">
-				<img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/in-air.svg" alt="Picture">
+				<img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/in-air.svg" alt="Picture">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -250,7 +244,7 @@ Template Name: Buyer Journey
 
 		<div class="cd-timeline-block" id="post-sale">
 			<div class="cd-timeline-img cd-location">
-				<img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/landing.svg" alt="landing">
+				<img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/landing.svg" alt="landing">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -310,7 +304,7 @@ Template Name: Buyer Journey
 				</div>
 			</div>
 			<div class="arrow">
-				<a href="#conclusion"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/buyer-journey/arrow.png" alt="" class="animated bounce"></a>
+				<a href="#conclusion"><img src="/wp-content/themes/octiv2016/dist/img/buyer-journey/arrow.png" alt="" class="animated bounce"></a>
 			</div>
 		</div>
 	</section>
@@ -331,7 +325,7 @@ Template Name: Buyer Journey
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/buyer-journey/main.js"></script> <!-- Resource jQuery -->
+<script src="/wp-content/themes/octiv2016/dist/js/buyer-journey/main.js"></script> <!-- Resource jQuery -->
 <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
 </body>
 </html>

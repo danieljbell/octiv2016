@@ -56,7 +56,7 @@ gulp.task('js', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
-  gulp.src('./node_modules/vue/dist/vue.min.js')
+  gulp.src('./node_modules/vue/dist/vue.js')
     .pipe(gulp.dest('./dist/js/lib'))
 });
 
