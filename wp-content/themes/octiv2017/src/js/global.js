@@ -48,6 +48,22 @@
   }
 
 
+  /*
+  ==============================
+  BLOG STICKY SIDEBAR
+  ==============================
+  */
+  if (document.querySelector('.single-post')) {
+    var blogSidebar = new StickySidebar('.single-post-sidebar', {
+      containerSelector: '.post-content',
+      innerWrapperSelector: '.sidebar__inner',
+      topSpacing: (document.querySelector('.site-header').offsetHeight + 18),
+      bottomSpacing: -54
+    });
+  }
+  
+
+
 
   /*
   ==============================

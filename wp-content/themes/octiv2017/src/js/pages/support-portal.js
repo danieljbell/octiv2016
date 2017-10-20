@@ -10,3 +10,12 @@ if (submitTicket === 'true') {
   var initialPath = window.location.pathname;
   window.history.replaceState( {} , 'bar', initialPath );
 }
+
+if (document.querySelector('#sticky-sidebar')) {
+  var blogSidebar = new StickySidebar('#sticky-sidebar', {
+    containerSelector: '.post-content',
+    innerWrapperSelector: '.sidebar__inner',
+    topSpacing: (document.querySelector('.site-header').offsetHeight + 18),
+    bottomSpacing: -54
+  });
+}

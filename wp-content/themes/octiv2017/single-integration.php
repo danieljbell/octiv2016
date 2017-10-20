@@ -21,7 +21,19 @@
 
   <section class="post-content">
     <div class="site-width">
-      <div class="two-third-only">
+      <div class="one-fourth">
+        <aside id="sidebar">
+          <div class="sidebar__inner">
+            <h4><?php echo get_the_title(); ?></h4>
+            <hr>
+            <ul>
+              <li><a href="#why">Why Octiv &amp; <?php echo get_the_title(); ?></a></li>
+              <li><a href="#key-capabilities">Key Capabilities</a></li>
+              <li><a href="#technical-requirements">Technical Requirements</a></li>
+              <li><a href="#about">About <?php echo get_the_title(); ?></a></li>
+            </ul>
+          </div>
+        </aside>
         <article>
           <h3 id="why">Why Octiv &amp; <?php echo get_the_title(); ?></h3>
           <?php echo get_the_content(); ?>

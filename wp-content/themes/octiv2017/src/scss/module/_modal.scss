@@ -110,7 +110,7 @@ MODAL ANIMATIONS
 .fade-scale {
   transform: scale(0.8);
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms cubic-bezier(0.42, 0, 0.54, 1.5);
 }
 
 .fade-scale.in {

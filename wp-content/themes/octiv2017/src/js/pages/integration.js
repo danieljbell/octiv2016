@@ -12,3 +12,10 @@ $('aside a').on('click', function(e) {
   }, 300);
 });
 })();
+
+var sidebar = new StickySidebar('#sidebar', {
+  containerSelector: '.post-content',
+  innerWrapperSelector: '.sidebar__inner',
+  topSpacing: (document.querySelector('.site-header').offsetHeight + 18),
+  bottomSpacing: -54
+});
