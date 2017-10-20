@@ -30,5 +30,17 @@ if (document.querySelectorAll('.whitepaper-slider')) {
   });
 }
 
+MktoForms2.whenRendered(function(form) {
+  var thisForm = form.getFormElem()[0];
+  if(thisForm.id === 'mktoForm_1263') {
+    var theseCheckboxes = thisForm.querySelectorAll('.mktoCheckboxList');
+    for (var i = theseCheckboxes.length - 1; i >= 0; i--) {
+      if (i != 1) {
+        theseCheckboxes[i].parentElement.style.flexDirection = 'column';
+        theseCheckboxes[i].parentElement.children[0].style.order = -1;
+      }
+    }
+  }
+});
 
 })();

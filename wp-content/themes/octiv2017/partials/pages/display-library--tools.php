@@ -11,9 +11,11 @@
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
+      <?php if (get_field('tool_promo_image')) : ?>
       <div class="whitepaper-cover-container">
         <img src="<?php echo get_field('tool_promo_image'); ?>" alt="<?php echo get_the_title(); ?> Cover" class="whitepaper-cover">
       </div>
+      <?php endif; ?>
       <?php the_content(); ?>
       <a href="#call-to-action" class="btn-primary">Download Now</a>
     </div>
@@ -32,8 +34,15 @@
         <form id="mktoForm_<?php echo $form_id; ?>"></form>
         <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
           form.onSuccess(function(values, followUpUrl) {
-            // Update the redirect url with form fields
-            followUpUrl = <?php echo "'" . site_url() . $redirect_link . "'"; ?>;
+            <?php if (!get_field('redirect_form_fields')) : ?>
+              // Update the redirect url with form fields
+              followUpUrl = <?php echo "'" . $redirect_link . "'"; ?>;
+            <?php
+              else : 
+                echo get_field('form_redirect_block');
+              endif;
+            ?>
+            
             // Redirect the page with form field
             location.href = followUpUrl;
             // Return false to prevent the submission handler continuing with its own processing
