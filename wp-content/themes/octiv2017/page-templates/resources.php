@@ -94,8 +94,14 @@ TEMPLATE NAME: Resource Layout
                     $all_cats = get_terms('library_type');
                   }
                   foreach ($all_cats as $single_cat) :
+
+                    $cat_count = $single_cat->count;
+
+                    if ($single_cat->slug === 'tools') {
+                      $cat_count = $single_cat->count / 2;
+                    }
                 ?>
-                  <option value="<?php echo $single_cat->slug; ?>"><?php echo $single_cat->name . ' - ' . $single_cat->count; ?></option>
+                  <option value="<?php echo $single_cat->slug; ?>"><?php echo $single_cat->name . ' - ' . $cat_count; ?></option>
                 <?php
                   endforeach;
                 ?>
