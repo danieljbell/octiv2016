@@ -195,10 +195,12 @@ $rand_num = mt_rand(1,4);
           if ($page_hero_body) {
             echo '<h2 class="mar-b">' . $page_hero_body . '</h2>';
           }
-          if (is_singular('library') && has_term('infographics', 'library_type') || is_page_template('page-templates/brand-assets.php')) {
-            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline" download>' . $page_hero_button_text . '</a>';
-          } else {
-            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
+          if ($page_hero_button_link) {
+            if (is_singular('library') && has_term('infographics', 'library_type') || is_page_template('page-templates/brand-assets.php')) {
+              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline" download>' . $page_hero_button_text . '</a>';
+            } else {
+              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
+            }
           }
           /* WHITEPAPERS CTA BUTTON */
           if (is_singular('library')) {
@@ -207,7 +209,7 @@ $rand_num = mt_rand(1,4);
             $post_tax_array = get_the_terms($post_ID, $post_tax);
             $post_tax_type = $post_tax_array[0]->slug;
             if ($post_tax_type === 'whitepapers' || $post_tax_type === 'datasheets' || $post_tax_type === 'tools') {
-              echo '<a href="#call-to-action" class="btn-white--outline">Download Now</a>';
+              echo '<a href="#call-to-action" class="btn-white--outline">' . $page_hero_button_text . 'Download Now''</a>';
             }
           }
           /* END WHITEPAPERS CTA BUTTON */
