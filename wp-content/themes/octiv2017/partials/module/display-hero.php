@@ -195,12 +195,10 @@ $rand_num = mt_rand(1,4);
           if ($page_hero_body) {
             echo '<h2 class="mar-b">' . $page_hero_body . '</h2>';
           }
-          if ($page_hero_button_link) {
-            if (is_singular('library') && has_term('infographics', 'library_type') || is_page_template('page-templates/brand-assets.php')) {
-              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline" download>' . $page_hero_button_text . '</a>';
-            } else {
-              echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
-            }
+          if (is_singular('library') && has_term('infographics', 'library_type') || is_page_template('page-templates/brand-assets.php')) {
+            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline" download>' . $page_hero_button_text . '</a>';
+          } else {
+            echo '<a href="' . $page_hero_button_link . '" class="btn-white--outline">' . $page_hero_button_text . '</a>';
           }
           /* WHITEPAPERS CTA BUTTON */
           if (is_singular('library')) {

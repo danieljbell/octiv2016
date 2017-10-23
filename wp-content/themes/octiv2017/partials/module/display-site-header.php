@@ -13,7 +13,7 @@ SITE HEADER
           <button id="site-header-menu-toggle" class="hamburger hamburger--slider-r" type="menu">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
-            </span>
+            </span> <strong style="text-transform: uppercase;">Menu</strong>
           </button>
         </li>
         <li class="site-header-logo-container">

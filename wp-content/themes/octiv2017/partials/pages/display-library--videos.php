@@ -7,6 +7,9 @@
   if (get_field('marketo_form_id')) {
     $form_id = get_field('marketo_form_id');
   }
+  $thumb_id = get_post_thumbnail_id();
+  $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+  $thumb_url = $thumb_url_array[0];
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
@@ -27,6 +30,7 @@
       <?php if ($video_gate === 'gated') : ?>
         <div class="half">
           <div class="page-content">
+            <img src="<?php echo $thumb_url; ?>" alt="<?php echo get_the_title(); ?> Featured Image" class="mar-b" style="width: initial; max-width: 100%;">
             <?php the_content(); ?>
           </div>
           <div>
