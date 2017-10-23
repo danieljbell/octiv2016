@@ -17,7 +17,13 @@
       </div>
       <?php endif; ?>
       <?php the_content(); ?>
-      <a href="#call-to-action" class="btn-primary">Download Now</a>
+      <?php
+        $page_hero_button_text = 'Download Now';
+        if (get_field('hero_button_text')) {
+          $page_hero_button_text = get_field('hero_button_text');
+        }
+      ?>
+      <a href="#call-to-action" class="btn-primary"><?php echo $page_hero_button_text; ?></a>
     </div>
   </div>
 </section>
