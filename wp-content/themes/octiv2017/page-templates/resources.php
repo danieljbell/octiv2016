@@ -5,6 +5,8 @@ TEMPLATE NAME: Resource Layout
 ===================================
 */
 
+$number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+
 ?>
 
 <?php get_header(); ?>
@@ -13,48 +15,51 @@ TEMPLATE NAME: Resource Layout
   
   <?php get_template_part('partials/module/display', 'hero'); ?>
 
-  <section class="promoted-container" style="margin-top: -3rem; margin-bottom: -3rem; position: relative; z-index: 2;">
+  <section class="promoted-container notch" style="margin-bottom: -3rem;">
     <div class="site-width">
-      <div class="box--light" style="min-height: 150px;">
-        <div class="slider">
-          <?php
-            $promoted_items = get_field('pick_your_page');
-              foreach ($promoted_items as $item) : ?>
-                <?php
-                  $args = array(
-                    'post_type' => $item->post_type,
-                    'posts_per_page' => 1,
-                    'page_id' => $item->ID
-                  );
-                  $query = new WP_Query($args);
-                  if ($query->have_posts()) :
-                    while ($query->have_posts()) : $query->the_post(); ?>
-                      <div class="promoted-item">
-                        <div class="one-fourth vertical-align">
-                          <div class="has-text-center">
-                            <img src="<?php echo get_field('client_logo'); ?>" alt="<?php echo get_field('person_company'); ?>" class="promoted-item-company-logo">
-                            <a href="<?php echo get_the_permalink(); ?>" class="btn-white--outline">Read the Full Story</a>
-                          </div>
-                          <div class="one-fourth reverse">
-                            <div>
-                              <p class="quote"><?php echo get_field('highlighted_quote'); ?></p>
-                            </div>
-                            <div>
-                              <div class="person-headshot" style="margin-right: 0;">
-                                <img src="<?php echo get_field('person_headshot'); ?>" alt="<?php echo get_field('person_name'); ?>">
-                              </div>
-                              <p><strong><?php echo get_field('person_name'); ?></strong><br><?php echo get_field('person_title'); ?></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                <?php      
-                    endwhile;
-                  endif;
-                  wp_reset_query();
-                endforeach;
-                ?>
-        </div>
+      <div class="box--light">
+        <?php
+          $posts = get_field('pick_your_page');
+          
+          $current_iteration = $number_formatter->format(count($posts));
+          if ($current_iteration === 'three') {
+            echo '<ul class="third no-bull">';
+          } elseif ($current_iteration === 'two') {
+            echo '<ul class="half no-bull">';
+          }
+
+          if (have_rows('resource_promoted_items')) :
+            $count = 0;
+            while (have_rows('resource_promoted_items')) : the_row();
+              $posts = get_sub_field('pick_your_page');
+              $count++;
+              foreach ($posts as $post) :
+                setup_postdata($post);
+                if ($post->post_type === 'client-story') :
+                  $thumb_url = 'radial-gradient(rgba(255,255,255, 0.75),rgba(255,255,255, 0)), linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(' . get_field('client_testimonial_image') . ')';
+                  echo '<li class="promoted-item" style="background-image: ' . $thumb_url . ';">';
+                    echo '<img src="' . get_field('client_logo') . '" alt="' . get_the_title() . ' Logo" class="promoted-item-company-logo">';
+                    echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';
+                    echo '<a href="' . get_the_permalink() . '" class="btn-dark--outline">Learn More</a>';
+                  echo '</li>';
+                else :
+                  $thumb_id = get_post_thumbnail_id();
+                  $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+                  $thumb_url = $thumb_url_array[0];
+                  $thumb_url = 'linear-gradient(135deg, rgba(66, 176, 216, 0.7), rgba(51, 171, 64, 0.7)), url(' . $thumb_url . ')';
+                  echo '<li class="pad-y-more promoted-item promoted-item--dark" style="background-image: ' . $thumb_url . ';">';
+                    echo '<h4 class="mar-b">' . get_the_title() . '</h4>';
+                    echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';
+                    echo '<a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a>';
+                  echo '</li>';
+                endif;
+              endforeach;
+              wp_reset_postdata();
+            endwhile;
+          endif;
+
+          echo '</ul>';
+        ?>
       </div>
     </div>
   </section>

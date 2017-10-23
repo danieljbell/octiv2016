@@ -67,3 +67,24 @@ GET SAAS BUYER JOURNEY
 add_shortcode('get_saas_buyer_journey', function($atts) {
   return file_get_contents('./wp-content/themes/octiv2016/page-templates/buyer-journey.php', false, $context);
 });
+
+
+/*
+==============================
+RESOURCE PROMOTED ITEMS
+==============================
+*/
+add_shortcode('promo_item', function($atts) {
+  extract(shortcode_atts(
+    array(
+      'type' => '',
+    ), $atts));
+    ob_start();
+?>
+  <?php if ($type === 'client-story') : ?>
+    <li class="promoted-item"><?php echo get_the_title(); ?></li>
+  <?php else : ?>
+    <li class="promoted-item"><?php echo get_the_permalink(); ?></li>
+  <?php endif; ?>
+<?php    
+});

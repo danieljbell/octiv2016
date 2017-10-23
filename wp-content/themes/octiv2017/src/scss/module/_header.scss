@@ -63,6 +63,16 @@
   }
 }
 
+.hamburger {
+  display: flex;
+  align-items: center;
+  strong {
+    font-size: 1.3em;
+    display: block;
+    margin-left: 0.5rem;
+  }
+}
+
 .site-header-logo-container {
   order: 1;
   @include bp(sm) {
