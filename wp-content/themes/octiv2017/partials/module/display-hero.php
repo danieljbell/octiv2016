@@ -209,7 +209,7 @@ $rand_num = mt_rand(1,4);
             $post_tax_array = get_the_terms($post_ID, $post_tax);
             $post_tax_type = $post_tax_array[0]->slug;
             if ($post_tax_type === 'whitepapers' || $post_tax_type === 'datasheets' || $post_tax_type === 'tools') {
-              echo '<a href="#call-to-action" class="btn-white--outline">' . $page_hero_button_text . 'Download Now''</a>';
+              echo '<a href="#call-to-action" class="btn-white--outline">' . $page_hero_button_text . '</a>';
             }
           }
           /* END WHITEPAPERS CTA BUTTON */
