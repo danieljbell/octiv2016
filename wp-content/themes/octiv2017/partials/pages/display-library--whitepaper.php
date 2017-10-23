@@ -1,6 +1,10 @@
 <?php
   $form_id = get_field('marketo_form_id');
   $redirect_link = get_field('form_redirect_link');
+  $page_hero_button_text = 'Download Now';
+  if (get_field('hero_button_text')) {
+    $page_hero_button_text = get_field('hero_button_text');
+  }
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
