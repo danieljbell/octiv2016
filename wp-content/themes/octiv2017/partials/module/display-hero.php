@@ -208,6 +208,10 @@ $rand_num = mt_rand(1,4);
             $post_tax = get_queried_object()->post_type . '_type';
             $post_tax_array = get_the_terms($post_ID, $post_tax);
             $post_tax_type = $post_tax_array[0]->slug;
+            $page_hero_button_text = 'Download Now';
+            if (get_field('hero_button_link')) {
+              $page_hero_button_text = get_field('hero_button_link');
+            }
             if ($post_tax_type === 'whitepapers' || $post_tax_type === 'datasheets' || $post_tax_type === 'tools') {
               echo '<a href="#call-to-action" class="btn-white--outline">' . $page_hero_button_text . '</a>';
             }
