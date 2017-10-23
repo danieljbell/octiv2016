@@ -2,7 +2,7 @@
   $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
 ?>
 
-<section class="page-sections mar-y-most">
+<section class="page-sections pad-y-most">
   <ul class="page-section-list">
     <?php
       $count = 0;
@@ -38,16 +38,22 @@
               <?php endif; ?>
             </div>
             <?php
-              if ($image_frame_class === 'browser-window') {
-                echo '<div class="browser-window">';
-              }
-            ?>
-              <div class="img-container">
-                <img src="<?php echo get_sub_field('section_image'); ?>" alt="<?php echo get_sub_field('section_title'); ?>">
-              </div>
-            <?php
-              if ($image_frame_class) {
+
+              if (!get_sub_field('is_animation')) {
+
+                if ($image_frame_class === 'browser-window') { echo '<div class="browser-window">'; }
+              
+                echo '<div class="img-container">';
+                  echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
                 echo '</div>';
+                
+                if ($image_frame_class) { echo '</div>'; }
+
+              } else {
+
+                $picked_animation = get_sub_field('choose_animation');
+                echo '<div>' . do_shortcode('[custom_animation tag="' . $picked_animation . '"]') . '</div>';
+
               }
             ?>
           </div>

@@ -52,8 +52,21 @@ function enqueue_global_js() {
   if (is_singular('releases')) {
     wp_enqueue_script('releases', get_stylesheet_directory_URI() . '/dist/js/releases.js', array(), '1.0.0', true);
   }
+
+  if (is_page_template('page-templates/page-sections.php')) {
+    wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.0', true);
+  }
+
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
+
+// function acf_custom_js() {
+//   wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.0', true);
+// }
+
+// if (get_field('is_animation')) {
+//   add_action('wp_enqueue_scripts', 'acf_custom_js');   
+// }
 
 
 /*

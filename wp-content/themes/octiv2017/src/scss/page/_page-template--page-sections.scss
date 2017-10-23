@@ -39,3 +39,97 @@
     }
   }
 }
+
+.animation-platform--create {
+  position: relative;
+  min-height: 300px;
+
+  [class*="badge"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid $white;
+    background-color: $lgray;
+    box-shadow: 3px 3px 15px rgba(black, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 0.85em;
+    line-height: 1.1;
+    width: 100px;
+    height: 100px;
+    svg {
+      width: 75%;
+      height: auto;
+    }
+  }
+
+  .octiv-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $brand;
+    color: $white;
+    svg path {
+      fill: $white;
+    }
+  }
+
+  .document-inputs,
+  .document-outputs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    > div {
+      width: 85px;
+      height: 85px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .badge-img {
+      transform: translate(-225%, -175%);
+    }
+    .badge-line-chart {
+      transform: translate(-175%, -75%); 
+    }
+    .badge-table {
+      transform: translate(-105%, -175%);  
+    }
+    .badge-video {
+      transform: translate(25%, -175%);    
+    }
+    .badge-bar-chart {
+      transform: translate(75%, -75%);      
+    }
+    .badge-pie-chart {
+      transform: translate(150%, -175%);  
+    }
+    .badge-contracts {
+      transform: translate(-225%, 0%);  
+    }
+    .badge-proposals {
+      transform: translate(-125%, 50%);  
+    }
+    .badge-quotes {
+      transform: translate(0%, 50%);  
+    }
+    .badge-invoices {
+      transform: translate(100%, 0%);  
+    }
+  }
+
+  .document-outputs {
+    > div {
+      width: 100px;
+      height: 100px;
+      a {
+        text-decoration: none;
+        color: $gray;
+        font-weight: bold;
+      }
+    }
+  }
+}
