@@ -36,17 +36,27 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
               foreach ($posts as $post) :
                 setup_postdata($post);
                 if ($post->post_type === 'client-story') :
-                  $thumb_url = 'radial-gradient(rgba(255,255,255, 0.75),rgba(255,255,255, 0)), linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(' . get_field('client_testimonial_image') . ')';
+                  $thumb_path = get_field('client_testimonial_image');
+                  $thumb_url = 'linear-gradient(135deg, rgba(66, 176, 216, 0.85), rgba(51, 171, 64, 0.85)), url(' . $thumb_path . ')';
+                  if ($count === 2) {
+                    $thumb_url = 'linear-gradient(135deg, rgba(51, 171, 64, 0.85), rgba(185, 73, 245, 0.85)), url(' . $thumb_path . ')';
+                  }
+                  if ($count === 3) {
+                    $thumb_url = 'linear-gradient(135deg, rgba(185, 73, 245, 0.85), rgba(250,197,0, 0.85)), url(' . $thumb_path . ')';
+                  }
                   echo '<li class="promoted-item" style="background-image: ' . $thumb_url . ';">';
                     echo '<img src="' . get_field('client_logo') . '" alt="' . get_the_title() . ' Logo" class="promoted-item-company-logo">';
                     echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';
-                    echo '<a href="' . get_the_permalink() . '" class="btn-dark--outline">Learn More</a>';
+                    echo '<a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a>';
                   echo '</li>';
                 else :
                   $thumb_id = get_post_thumbnail_id();
                   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-                  $thumb_url = $thumb_url_array[0];
-                  $thumb_url = 'linear-gradient(135deg, rgba(66, 176, 216, 0.7), rgba(51, 171, 64, 0.7)), url(' . $thumb_url . ')';
+                  $thumb_path = $thumb_url_array[0];
+                  $thumb_url = 'linear-gradient(135deg, rgba(66, 176, 216, 0.7), rgba(51, 171, 64, 0.7)), url(' . $thumb_path . ')';
+                  if ($count === 2) {
+                    $thumb_url = 'linear-gradient(135deg, rgba(51, 171, 64, 0.7), rgba(185, 73, 245, 0.7)), url(' . $thumb_path . ')';
+                  }
                   echo '<li class="pad-y-more promoted-item promoted-item--dark" style="background-image: ' . $thumb_url . ';">';
                     echo '<h4 class="mar-b">' . get_the_title() . '</h4>';
                     echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';

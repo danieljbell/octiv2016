@@ -1,17 +1,15 @@
 .promoted-item {
   padding: 1rem;
   text-align: center;
+  color: $white;
+  text-shadow: 2px 2px 3px rgba(black, 0.6);
   background-size: cover;
   background-position: center;
 }
 
-.promoted-item--dark {
-  color: $white;
-  text-shadow: 2px 2px 3px rgba(black, 0.6);
-}
-
 .promoted-item-company-logo {
   margin: 0 auto 1rem;
+  filter: grayscale(1) invert(1) brightness(300%) drop-shadow(3px 3px 2px rgba(black, 0.5));
 }
 
 // .promoted-item,
