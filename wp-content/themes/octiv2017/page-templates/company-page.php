@@ -27,7 +27,13 @@ Template Name: Company Page
               while ( have_rows('awards') ) : the_row();
                 $award_image = get_sub_field('award_logo');
                 echo '<div>';
-                  echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '">';
+                  if (get_sub_field('award_link')) {
+                    echo '<a href="' . get_sub_field('award_link') . '">';
+                      echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '">';
+                    echo '</a>';
+                  } else {
+                    echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '">';
+                  }
                 echo '</div>';
               endwhile;
             endif;
