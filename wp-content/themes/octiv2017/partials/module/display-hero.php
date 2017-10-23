@@ -176,6 +176,11 @@ $rand_num = mt_rand(1,4);
     $page_hero_button_text = 'Get the Infographic';
   }
 
+  // LIBRARY--VIDEO BG OVERRIDES
+  if (is_singular('library') && has_term('videos', 'library_type')) {
+    $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
+  }
+
 ?>
 
 <?php if (!is_singular('integration')) : ?>
