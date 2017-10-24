@@ -8,7 +8,7 @@ if (platformCreate) {
 
   function cool() {
     if (window.scrollY >= topOfPlatformCreate - (window.innerHeight / 2)) {
-      console.log('fire');
+      platformCreate.classList.add('active');
       // document.body.style.paddingTop = platformCreate.offsetHeight + 'px';
       // document.body.classList.add('site-header-fixed');
     } else {

@@ -57,6 +57,7 @@
     line-height: 1.1;
     width: 100px;
     height: 100px;
+    transition: transform 400ms cubic-bezier(0.46,-0.43, 0.89, 0.99);
     svg {
       width: 75%;
       height: auto;
@@ -64,6 +65,7 @@
   }
 
   .octiv-badge {
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -94,30 +96,29 @@
     }
     .badge-line-chart {
       transform: translate(-175%, -75%); 
+      transition-delay: 200ms
     }
     .badge-table {
       transform: translate(-105%, -175%);  
+      transition-delay: 400ms
     }
     .badge-video {
       transform: translate(25%, -175%);    
+      transition-delay: 600ms
     }
     .badge-bar-chart {
       transform: translate(75%, -75%);      
+      transition-delay: 800ms
     }
     .badge-pie-chart {
       transform: translate(150%, -175%);  
+      transition-delay: 1000ms
     }
-    .badge-contracts {
-      transform: translate(-225%, 0%);  
-    }
-    .badge-proposals {
-      transform: translate(-125%, 50%);  
-    }
-    .badge-quotes {
-      transform: translate(0%, 50%);  
-    }
+    .badge-contracts,
+    .badge-proposals,
+    .badge-quotes,
     .badge-invoices {
-      transform: translate(100%, 0%);  
+      transform: translate(-50%, -50%) scale(0.8);  
     }
   }
 
@@ -125,11 +126,50 @@
     > div {
       width: 100px;
       height: 100px;
+      transition: transform 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
         text-decoration: none;
         color: $gray;
         font-weight: bold;
       }
+    }
+  }
+
+  &.active {
+    .octiv-badge {
+      transform: scale(1.1) translate(-50%, -50%);
+    }
+    .badge-img,
+    .badge-line-chart,
+    .badge-table,
+    .badge-video,
+    .badge-bar-chart,
+    .badge-pie-chart {
+      transform: translate(-50%, -50%);
+    }
+    .badge-contracts {
+      transform: translate(-225%, 0%);
+      transition-delay: 1200ms
+    }
+    .badge-proposals {
+      transform: translate(-125%, 50%);  
+      transition-delay: 1400ms
+    }
+    .badge-quotes {
+      transform: translate(0%, 50%);  
+      transition-delay: 1600ms
+    }
+    .badge-invoices {
+      transform: translate(100%, 0%);  
+      transition-delay: 1800ms
     }
   }
 }
