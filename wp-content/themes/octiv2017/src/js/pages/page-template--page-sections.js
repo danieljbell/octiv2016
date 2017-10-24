@@ -4,16 +4,12 @@ if (platformCreate) {
 
   var topOfPlatformCreate = platformCreate.offsetTop;
 
-  console.log();
-
-  function cool() {
+  function animatePlatformCreate() {
     if (window.scrollY >= topOfPlatformCreate - (window.innerHeight / 2)) {
       platformCreate.classList.add('active');
-    } else if (window.scrollY <= topOfPlatformCreate - (window.innerHeight)) {
-      platformCreate.classList.remove('active');
     }
   }
 
-  window.addEventListener('scroll', cool);
+  window.addEventListener('scroll', animatePlatformCreate);
 
 }

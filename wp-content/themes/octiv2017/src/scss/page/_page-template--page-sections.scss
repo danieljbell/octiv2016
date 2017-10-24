@@ -40,6 +40,12 @@
   }
 }
 
+
+/*
+==============================
+ANIMATIONS
+==============================
+*/
 .animation-platform--create {
   position: relative;
   min-height: 300px;
@@ -173,3 +179,40 @@
     }
   }
 }
+
+.animation-platform--manage {
+  svg {
+    width: 100%;
+    max-width: 400px;
+    path {
+      fill: $lgray;
+    }
+    .manage--octiv-logo {
+      fill: $brand;
+    }
+    .manage--create {
+      fill: $brand5;
+      transform-origin: center;
+    }
+    .manage--share {
+      fill: $brand3;
+      transform-origin: center;
+    }
+    .manage--sign {
+      fill: $brand2;
+      transform-origin: center;
+    }
+    .manage--store {
+      fill: #7E7DE7;
+      transform-origin: center;
+    }
+    .manage--analyze {
+      fill: $brand4;
+      transform-origin: center;
+    }
+    .manage--container {
+      transform-origin: center;
+    }
+  }
+}
+

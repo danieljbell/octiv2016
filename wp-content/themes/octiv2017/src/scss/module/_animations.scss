@@ -15,3 +15,40 @@
   50% { opacity:0; }
   100% { opacity:1; }
 }
+
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateClockwise {
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-name: rotateClockwise;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+.rotateCounterClockwise {
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-name: rotateCounterClockwise;
+  animation-iteration-count: infinite;
+}
