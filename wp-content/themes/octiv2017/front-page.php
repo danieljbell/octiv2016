@@ -101,7 +101,7 @@ get_header();
 <section class="pad-y-most">
   <div class="site-width pad-y-most">
     <div class="color-boxes">
-      <h2 class="color-box-headline--brand-five">Resources</h2>
+      <h2 class="color-box-headline--brand-five">Recent Blogs</h2>
     </div>
     <div class="third">
       <?php

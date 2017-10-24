@@ -102,23 +102,23 @@ ANIMATIONS
     }
     .badge-line-chart {
       transform: translate(-175%, -75%); 
-      transition-delay: 200ms
+      transition-delay: 200ms;
     }
     .badge-table {
       transform: translate(-105%, -175%);  
-      transition-delay: 400ms
+      transition-delay: 400ms;
     }
     .badge-video {
       transform: translate(25%, -175%);    
-      transition-delay: 600ms
+      transition-delay: 600ms;
     }
     .badge-bar-chart {
       transform: translate(75%, -75%);      
-      transition-delay: 800ms
+      transition-delay: 800ms;
     }
     .badge-pie-chart {
       transform: translate(150%, -175%);  
-      transition-delay: 1000ms
+      transition-delay: 1000ms;
     }
     .badge-contracts,
     .badge-proposals,
@@ -177,6 +177,156 @@ ANIMATIONS
       transform: translate(100%, 0%);  
       transition-delay: 1800ms
     }
+  }
+}
+
+.animation-platform--share {
+  .badge {
+    overflow: hidden;
+    background-color: $lgray;
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
+      transform: translateY(125%);
+      transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+      width: 100%;
+      max-width: 70%;
+      max-height: 70%;
+      rect {
+        fill: $mgray;
+        &.st2 {
+          fill: $brand;  
+        }
+      }
+      path {
+        fill: $brand;
+      }
+      polygon.blue-edit,
+      circle.blue-edit {
+        fill: $white;
+      }
+    }
+    .badge-person {
+      position: absolute;
+      border-radius: 50%;
+      width: 100%;
+      max-width: 50px;
+      transition: all 400ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+      border: 3px solid $white;
+      box-shadow: 1px 1px 2px rgba(black, 0.2);
+    }
+    .blue-person {
+      transform: translate(-230%, -135%) scale(0);
+      transition-delay: 1200ms;
+    }
+    .blue-edit {
+      transition: all 300ms ease-in-out;
+      transition-delay: 1200ms;
+    }
+    .purple-person {
+      transform: translate(230%, 0%) scale(0);
+      transition-delay: 2400ms;
+    }
+    .purple-edit {
+      transition: all 300ms ease-in-out;
+      transition-delay: 2400ms;
+    }
+    .green-person {
+      transform: translate(-230%, 125%) scale(0);
+      transition-delay: 3600ms;
+    }
+    .green-edit {
+      transition: all 300ms ease-in-out;
+      transition-delay: 3600ms;
+    }
+  }
+
+  &.active {
+    svg {
+      transform: translateY(0);
+    }
+    .blue-person {
+      transform: translate(-230%, -135%) scale(1);
+    }
+    .purple-person {
+      transform: translate(230%, 0%) scale(1);
+    }
+    .green-person {
+      transform: translate(-230%, 125%) scale(1);
+    }
+    .blue-edit,
+    polygon.blue-edit,
+    circle.blue-edit {
+      fill: $brand2 !important;
+    }
+    .purple-edit {
+      fill: $brand4;
+    }
+    .green-edit {
+      fill: $brand3;
+    }
+  }
+}
+
+.animation-platform--sign {
+  .badge {
+    // overflow: hidden;
+    position: relative;
+    background-color: $lgray;
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
+      transform: translateY(0);
+      // transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+      width: 100%;
+      max-width: 70%;
+      max-height: 70%;
+      rect {
+        fill: $mgray;
+        &.st2 {
+          fill: $brand;  
+        }
+      }
+      path {
+        fill: $brand;
+      }
+      polygon.blue-edit,
+      circle.blue-edit {
+        fill: $white;
+      }
+    }
+  }
+  .blue-person {
+    transform: translate(-230%, -135%) scale(1);
+  }
+  .purple-person {
+    transform: translate(230%, 0%) scale(1);
+  }
+  .green-person {
+    transform: translate(-230%, 125%) scale(1);
+  }
+  .blue-edit,
+  polygon.blue-edit,
+  circle.blue-edit {
+    fill: $brand2 !important;
+  }
+  .purple-edit {
+    fill: $brand4;
+  }
+  .green-edit {
+    fill: $brand3;
   }
 }
 

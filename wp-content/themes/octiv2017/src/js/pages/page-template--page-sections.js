@@ -13,3 +13,19 @@ if (platformCreate) {
   window.addEventListener('scroll', animatePlatformCreate);
 
 }
+
+var platformShare = document.querySelector('.animation-platform--share');
+
+if (platformShare) {
+
+  var topOfPlatformShare = platformShare.offsetTop;
+
+  function animatePlatformShare() {
+    if (window.scrollY >= topOfPlatformShare - (window.innerHeight / 2)) {
+      platformShare.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', animatePlatformShare);
+
+}

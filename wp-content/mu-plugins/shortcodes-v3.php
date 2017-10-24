@@ -132,7 +132,74 @@ add_shortcode('custom_animation', function($atts) {
 <?php endif; ?>
 
 <?php if ($tag === 'platform--share') : ?>
-  cool dude
+  <div class="animation-platform--share">
+    <div class="badge">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 225.6 284.5" xml:space="preserve">
+        <polygon style="fill: #fff" points="225.6,284.5 0.2,284.5 0,0 225.6,0 "/>
+        <rect x="27.6" y="222.5" width="172.1" height="10.3"/>
+        <rect x="27.6" y="203.4" width="20.7" height="10.3"/>
+        <rect x="180.6" y="203.4" width="18.7" height="10.3"/>
+        <rect class="purple-edit" x="27.6" y="184.3" width="172.1" height="10.3"/>
+        <rect x="27.6" y="159.7" width="172.1" height="10.3"/>
+        <rect x="27.6" y="141.4" width="56" height="10.3"/>
+        <rect class="purple-edit" x="143.7" y="141.4" width="56" height="10.3"/>
+        <rect class="blue-edit" x="27.6" y="123" width="172.1" height="10.3"/>
+        <rect x="27.6" y="104.7" width="78.4" height="10.3"/>
+        <rect x="27.6" y="86" width="78.4" height="10.3"/>
+        <rect class="blue-edit" x="27.6" y="67.3" width="78.4" height="10.3"/>
+        <rect x="27.6" y="48.6" width="78.4" height="10.3"/>
+        <rect x="27.8" y="29.8" width="78.2" height="10.3"/>
+        <rect x="32.9" y="252.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 192.5993 52.0808)" width="1.1" height="12.7"/>
+        <rect x="32.9" y="252.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -173.015 99.3616)" width="1.1" height="12.7"/>
+        <rect x="28.3" y="266.8" width="171.8" height="1.3"/>
+        <rect x="89.1" y="139.8" class="st2" width="50.5" height="12.9"/>
+        <rect class="green-edit" x="54.7" y="202.2" class="st2" width="121.4" height="12.9"/>
+        <path class="st2" d="M190.4,114.8h-60.6c-5.4,0-9.8-4.4-9.8-9.8V42.8c0-5.4,4.4-9.8,9.8-9.8h60.6c5.4,0,9.8,4.4,9.8,9.8V105
+          C200.2,110.4,195.8,114.8,190.4,114.8z"/>
+        <polygon class="blue-edit" points="193.8,78.4 177.2,60.7 149.2,87.6 126.5,75.1 126.5,106.1 193.8,106.1 "/>
+        <circle class="blue-edit" cx="143.7" cy="63.2" r="7.8"/>
+      </svg>
+      <img src="/wp-content/themes/octiv2017/dist/img/blue-person.jpg" alt="Blue Person" class="badge-person blue-person">
+      <img src="/wp-content/themes/octiv2017/dist/img/green-person.jpg" alt="Green Person" class="badge-person green-person">
+      <img src="/wp-content/themes/octiv2017/dist/img/purple-person.jpg" alt="Purple Person" class="badge-person purple-person">
+    </div>
+  </div>
+<?php endif; ?>
+
+<?php if ($tag === 'platform--sign') : ?>
+  <div class="animation-platform--sign">
+    <div class="badge">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 225.6 284.5" xml:space="preserve">
+        <polygon style="fill: #fff" points="225.6,284.5 0.2,284.5 0,0 225.6,0 "/>
+        <rect x="27.6" y="222.5" width="172.1" height="10.3"/>
+        <rect x="27.6" y="203.4" width="20.7" height="10.3"/>
+        <rect x="180.6" y="203.4" width="18.7" height="10.3"/>
+        <rect class="purple-edit" x="27.6" y="184.3" width="172.1" height="10.3"/>
+        <rect x="27.6" y="159.7" width="172.1" height="10.3"/>
+        <rect x="27.6" y="141.4" width="56" height="10.3"/>
+        <rect class="purple-edit" x="143.7" y="141.4" width="56" height="10.3"/>
+        <rect class="blue-edit" x="27.6" y="123" width="172.1" height="10.3"/>
+        <rect x="27.6" y="104.7" width="78.4" height="10.3"/>
+        <rect x="27.6" y="86" width="78.4" height="10.3"/>
+        <rect class="blue-edit" x="27.6" y="67.3" width="78.4" height="10.3"/>
+        <rect x="27.6" y="48.6" width="78.4" height="10.3"/>
+        <rect x="27.8" y="29.8" width="78.2" height="10.3"/>
+        <rect x="32.9" y="252.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 192.5993 52.0808)" width="1.1" height="12.7"/>
+        <rect x="32.9" y="252.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -173.015 99.3616)" width="1.1" height="12.7"/>
+        <rect x="28.3" y="266.8" width="171.8" height="1.3"/>
+        <rect x="89.1" y="139.8" class="st2" width="50.5" height="12.9"/>
+        <rect class="green-edit" x="54.7" y="202.2" class="st2" width="121.4" height="12.9"/>
+        <path class="st2" d="M190.4,114.8h-60.6c-5.4,0-9.8-4.4-9.8-9.8V42.8c0-5.4,4.4-9.8,9.8-9.8h60.6c5.4,0,9.8,4.4,9.8,9.8V105
+          C200.2,110.4,195.8,114.8,190.4,114.8z"/>
+        <polygon class="blue-edit" points="193.8,78.4 177.2,60.7 149.2,87.6 126.5,75.1 126.5,106.1 193.8,106.1 "/>
+        <circle class="blue-edit" cx="143.7" cy="63.2" r="7.8"/>
+      </svg>
+      <img src="/wp-content/themes/octiv2017/dist/img/blue-person.jpg" alt="Blue Person" class="badge-person blue-person">
+      <img src="/wp-content/themes/octiv2017/dist/img/green-person.jpg" alt="Green Person" class="badge-person green-person">
+      <img src="/wp-content/themes/octiv2017/dist/img/purple-person.jpg" alt="Purple Person" class="badge-person purple-person">
+      <img src="/wp-content/themes/octiv2017/dist/img/yellow-person.jpg" alt="Yellow Person" class="badge-person yellow-person">
+    </div>
+  </div>
 <?php endif; ?>
 
 <?php if ($tag === 'platform--manage') : ?>
