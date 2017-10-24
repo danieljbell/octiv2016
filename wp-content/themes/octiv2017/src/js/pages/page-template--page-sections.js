@@ -29,3 +29,19 @@ if (platformShare) {
   window.addEventListener('scroll', animatePlatformShare);
 
 }
+
+var platformSign = document.querySelector('.animation-platform--sign');
+
+if (platformSign) {
+
+  var topOfPlatformSign = platformSign.offsetTop;
+
+  function animatePlatformSign() {
+    if (window.scrollY >= topOfPlatformSign - (window.innerHeight / 2)) {
+      platformSign.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', animatePlatformSign);
+
+}
