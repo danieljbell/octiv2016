@@ -205,6 +205,17 @@ add_shortcode('custom_animation', function($atts) {
   </div>
 <?php endif; ?>
 
+<?php if ($tag === 'platform--store') : ?>
+  <div class="animation-platform--store">
+    <div class="badge">
+      <div class="octiv-shell">
+        <div class="application-header"></div>
+        <div class="repository-list"></div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+
 <?php if ($tag === 'platform--manage') : ?>
   <div class="animation-platform--manage">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 374.2 377.9" xml:space="preserve">

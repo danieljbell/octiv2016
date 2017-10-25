@@ -52,3 +52,12 @@
   animation-name: rotateCounterClockwise;
   animation-iteration-count: infinite;
 }
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%); 
+  }
+}

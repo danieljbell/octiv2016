@@ -18,6 +18,19 @@
   }
 }
 
+.page-section-item .badge {
+  position: relative;
+  overflow: hidden;
+  background-color: $lgray;
+  border-radius: 50%;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .page-section-promoted-item {
   color: $white;
   background-size: cover;
@@ -182,16 +195,7 @@ ANIMATIONS
 
 .animation-platform--share {
   .badge {
-    position: relative;
-    overflow: hidden;
-    background-color: $lgray;
-    border-radius: 50%;
-    margin: 0 auto;
-    max-width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     svg {
       filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
       transform: translateY(125%);
@@ -213,6 +217,7 @@ ANIMATIONS
         fill: $white;
       }
     }
+
     .badge-person {
       position: absolute;
       border-radius: 50%;
@@ -222,26 +227,32 @@ ANIMATIONS
       border: 3px solid $white;
       box-shadow: 1px 1px 2px rgba(black, 0.2);
     }
+
     .blue-person {
       transform: translate(-230%, -135%) scale(0);
       transition-delay: 1200ms;
     }
+
     .blue-edit {
       transition: all 300ms ease-in-out;
       transition-delay: 1200ms;
     }
+
     .purple-person {
       transform: translate(230%, 0%) scale(0);
       transition-delay: 2400ms;
     }
+
     .purple-edit {
       transition: all 300ms ease-in-out;
       transition-delay: 2400ms;
     }
+    
     .green-person {
       transform: translate(-230%, 125%) scale(0);
       transition-delay: 3600ms;
     }
+    
     .green-edit {
       transition: all 300ms ease-in-out;
       transition-delay: 3600ms;
@@ -277,16 +288,6 @@ ANIMATIONS
 
 .animation-platform--sign {
   .badge {
-    overflow: hidden;
-    position: relative;
-    background-color: $lgray;
-    border-radius: 50%;
-    margin: 0 auto;
-    max-width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     rect {
       fill: $mgray;
       &.st2 {
@@ -376,6 +377,54 @@ ANIMATIONS
     .animated-signature {
       transform: translate(-0%, 200%);
       opacity: 1;
+    }
+  }
+}
+
+.animation-platform--store {
+  .octiv-shell {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    height: 169px;
+    background-image: url(../img/octiv-shell.svg);
+    background-repeat: no-repeat;
+    background-color: $mgray;
+    box-shadow: 3px 3px 5px rgba(black, 0.2);
+    transform: translateY(175%);
+    transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+  }
+  .application-header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: url(../img/app-header.svg);
+  }
+  .repository-list {
+    z-index: 0;
+    position: absolute;
+    left: 90px;
+    top: 40px;
+    right: 0px;
+    height: 360px;
+    background-image: url(../img/repository-list.svg);
+    background-repeat: repeat-y;
+  }
+
+  &.active {
+    .octiv-shell {
+      transform: translateY(0);
+    }
+    .repository-list {
+      animation-delay: 800ms;
+      animation-duration: 4000ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-name: infiniteScroll;
     }
   }
 }

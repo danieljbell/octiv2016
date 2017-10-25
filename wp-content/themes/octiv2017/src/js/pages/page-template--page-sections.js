@@ -45,3 +45,19 @@ if (platformSign) {
   window.addEventListener('scroll', animatePlatformSign);
 
 }
+
+var platformStore = document.querySelector('.animation-platform--store');
+
+if (platformStore) {
+
+  var topOfPlatformStore = platformStore.offsetTop;
+
+  function animatePlatformStore() {
+    if (window.scrollY >= topOfPlatformStore - (window.innerHeight / 2)) {
+      platformStore.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', animatePlatformStore);
+
+}
