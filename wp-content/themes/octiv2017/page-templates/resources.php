@@ -26,6 +26,8 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
             echo '<ul class="third no-bull">';
           } elseif ($current_iteration === 'two') {
             echo '<ul class="half no-bull">';
+          } else {
+            echo '<ul class="no-bull">';
           }
 
           if (have_rows('resource_promoted_items')) :
