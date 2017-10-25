@@ -61,3 +61,19 @@ if (platformStore) {
   window.addEventListener('scroll', animatePlatformStore);
 
 }
+
+var platformAnalyze = document.querySelector('.animation-platform--analyze');
+
+if (platformAnalyze) {
+
+  var topOfPlatformAnalyze = platformAnalyze.offsetTop;
+
+  function animatePlatformAnalyze() {
+    if (window.scrollY >= topOfPlatformAnalyze - (window.innerHeight / 2)) {
+      platformAnalyze.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', animatePlatformAnalyze);
+
+}

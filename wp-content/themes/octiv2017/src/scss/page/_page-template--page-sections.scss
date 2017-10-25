@@ -29,6 +29,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    max-width: 300px;
+    height: 300px;
+  }
 }
 
 .page-section-promoted-item {
@@ -230,6 +234,9 @@ ANIMATIONS
 
     .blue-person {
       transform: translate(-230%, -135%) scale(0);
+      @include mobile {
+        transform: translate(-185%, -100%) scale(0);
+      }
       transition-delay: 1200ms;
     }
 
@@ -240,6 +247,9 @@ ANIMATIONS
 
     .purple-person {
       transform: translate(230%, 0%) scale(0);
+      @include mobile {
+        transform: translate(185%, 0%) scale(0);
+      }
       transition-delay: 2400ms;
     }
 
@@ -250,6 +260,9 @@ ANIMATIONS
     
     .green-person {
       transform: translate(-230%, 125%) scale(0);
+      @include mobile {
+        transform: translate(-185%, 100%) scale(0);
+      }
       transition-delay: 3600ms;
     }
     
@@ -265,12 +278,21 @@ ANIMATIONS
     }
     .blue-person {
       transform: translate(-230%, -135%) scale(1);
+      @include mobile {
+        transform: translate(-185%, -100%) scale(1);
+      }
     }
     .purple-person {
       transform: translate(230%, 0%) scale(1);
+      @include mobile {
+        transform: translate(185%, 0%) scale(1);
+      }
     }
     .green-person {
       transform: translate(-230%, 125%) scale(1);
+      @include mobile {
+        transform: translate(-185%, 100%) scale(1);
+      }
     }
     .blue-edit,
     polygon.blue-edit,
@@ -307,6 +329,7 @@ ANIMATIONS
       width: 100%;
       max-width: 50px;
       transition: all 400ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+      transition-delay: 400ms;
       border: 3px solid $white;
       box-shadow: 1px 1px 2px rgba(black, 0.2);
     }
@@ -324,7 +347,7 @@ ANIMATIONS
     }
     .yellow-person {
       transform: translate(275%, 110%) scale(0);
-      transition-delay: 300ms;
+      transition-delay: 1000ms;
     }
     .blue-edit,
     polygon.blue-edit,
@@ -343,15 +366,15 @@ ANIMATIONS
     width: 100%;
     max-width: 70%;
     max-height: 70%;
-    transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
-    transition-delay: 100ms;
+    transition: all 1000ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+    transition-delay: 400ms;
   }
   .animated-signature {
     position: absolute;
     max-height: 30px;
     transform: translate(-0%, 200%);
-    transition: all 800ms ease-in-out;
-    transition-delay: 600ms;
+    transition: all 1200ms ease-in-out;
+    transition-delay: 1200ms;
     opacity: 0;
     path {
       fill: $gray;
@@ -425,6 +448,31 @@ ANIMATIONS
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
       animation-name: infiniteScroll;
+    }
+  }
+}
+
+.animation-platform--analyze {
+  .analyze-phone {
+    width: 100%;
+    max-width: 225px;
+    transform: translateY(110%);
+    transition: all 400ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+  }
+  .phone-notification {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+
+  }
+
+  &.active {
+
+    .analyze-phone {
+      transform: translateY(10%);   
+    }
+    .phone-notification {
+      opacity: 1;
+      transition-delay: 1000ms;
     }
   }
 }
