@@ -1,0 +1,16 @@
+.page-template-resources {
+  
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    div {
+      flex-basis: 33%;
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+}
