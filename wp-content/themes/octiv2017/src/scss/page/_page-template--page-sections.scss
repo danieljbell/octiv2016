@@ -513,3 +513,57 @@ ANIMATIONS
   }
 }
 
+
+
+/*
+==============================
+SOLUTIONS PARENT PAGE STYLES
+==============================
+*/
+.solutions-section-cta-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > li {
+    position: relative;
+    flex-basis: calc(50% - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &.card {
+      padding: 3rem 0;
+    }
+    @include tablet {
+      flex-basis: calc(25% - 1rem);
+      &:nth-child(2n) {
+        margin-right: 1rem;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $gray;
+  }
+  img {
+    width: 100%;
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
