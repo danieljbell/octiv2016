@@ -1,3 +1,7 @@
+.site-header-menu-open {
+  overflow: hidden;
+}
+
 .site-header {
   background-color: $white;
   position: relative;
@@ -9,6 +13,14 @@
     right: 0;
     top: 0;
     z-index: 100;
+  }
+  .site-header-fixed.site-header-menu-open & {
+    overflow: auto;
+    bottom: 0;
+    @include desktop {
+      overflow: auto;
+      bottom: auto;
+    }
   }
 }
 
@@ -23,9 +35,10 @@
 
 .site-header-logo {
   width: 100%;
-  max-width: 185px;
+  max-width: 150px;
   padding: 1rem 0;
   @include desktop {
+    max-width: 185px;
     padding: 0;
   }
 }
@@ -37,11 +50,13 @@
   opacity: 0;
   position: absolute;
   background-color: transparent;
-  top: 4.5rem;
+  top: 4.1rem;
   left: 0;
   width: 100%;
   transition: all 300ms ease-in-out;
+  border-top: 1px solid $mgray;
   @include desktop {
+    border-top: 0;
     z-index: auto;
     transform: translateY(0);
     opacity: 1;
@@ -99,56 +114,99 @@
 
     a {
       display: block;
-      padding: 2rem;
-      color: $gray;
+      padding: 1rem;
       text-decoration: none;
       transition: all 200ms ease-in-out;
-      &:hover,
-      &:focus {
-        outline: none;
-        color: $white;
-        background-color: $brand2;
-      }
       @include desktop {
         padding: 2rem 1rem;
+        &:hover,
+        &:focus {
+          color: $white;
+          outline: none;
+          color: $white;
+          background-color: $brand2;
+        }
       }
     }
 
-    &:nth-child(2) a:hover,
-    &:nth-child(2) a:focus {
-      background-color: $brand3;
+    &:nth-child(2) {
+      @include desktop {
+        background-color: initial;
+        a {
+          color: $gray;
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: $brand3;
+          }
+        }
+      }
     }
 
-    &:nth-child(3) a:hover,
-    &:nth-child(3) a:focus {
-      background-color: $brand4;
+    &:nth-child(3) {
+      @include desktop {
+        background-color: initial;
+        a {
+          color: $gray;
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: $brand4;
+          }
+        }
+      }
     }
 
-    &:nth-child(4) a:hover,
-    &:nth-child(4) a:focus {
-      background-color: $brand5;
+    &:nth-child(4) {
+      @include desktop {
+        background-color: initial;
+        a {
+          color: $gray;
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: $brand5;
+          }
+        }
+      }
     }
+
   }
 }
 
 .site-header .sub-menu {
-  min-width: 300px;
-  transform: translateY(-100%);
+  @include desktop {
+    min-width: 300px;
+    transform: translateY(-100%);
+  }
+  position: fixed;
   transition: all 200ms ease-in-out;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
   opacity: 0;
   visibility: hidden;
-  position: absolute;
-  z-index: -5;
-  background-color: lighten($gray, 7%);
-  li {
-    flex-basis: 33%;
-  }
+  // z-index: -5;
+  background-color: $gray;
   a {
     padding: 0.5rem 1rem !important;
     color: $white !important;
+  }
+}
+
+.sub-menu-active .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  @include desktop {
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+  }
+}
+
+.site-header-mobile-only {
+  @include tablet {
+    display: none;
   }
 }

@@ -101,6 +101,34 @@
     }
   })
 
+
+  /*
+  ==============================
+  MOBILE MENU
+  ==============================
+  */
+  function initMobileMenu() {
+
+    function itemClicked(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      this.parentElement.classList.toggle('sub-menu-active');
+    }
+
+    if (window.innerWidth < 1050) {
+      var allTopLevelLinks = document.querySelectorAll('.site-header .menu-item-has-children > a');
+      for (var i = 0; i < allTopLevelLinks.length; i++) {
+        allTopLevelLinks[i].addEventListener('click', itemClicked, {
+          capture: false
+        });
+      }
+    }
+  }
+
+  initMobileMenu();
+  window.addEventListener('resize', initMobileMenu);
+  
+
   /*
   ==============================
   MODALS
