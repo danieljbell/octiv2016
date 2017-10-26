@@ -6,9 +6,6 @@
   @include tablet {
     width: calc(100% - 4rem);  
   }
-  @include desktop {
-    width: calc(100% - 8rem);  
-  }
 }
 
 .half {
