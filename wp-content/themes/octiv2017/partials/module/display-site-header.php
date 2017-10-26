@@ -19,9 +19,9 @@ SITE HEADER
               $item_iteration = 0;
               foreach ($site_header_items as $item) {
                 if ($item->menu_item_parent === '0') {
-                  $item_iteration++;
-                  // print_r($item);
-                  echo '<li class="top-level-navigation-item item-' . $item_iteration . '"><a href="' . $item->url . '" title="' . $item->title . '">' . $item->title . '</a></li>';
+                  $item_iteration++; ?>
+                  <li class="top-level-navigation-item item-<?php echo $item_iteration; ?>"><a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"><?php echo $item->title; ?></a></li>
+            <?php
                 }
               }
             ?>
@@ -30,6 +30,9 @@ SITE HEADER
       </li>
       <li class="site-header-top-item site-header-rad-container">
         <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request a Demo</button>
+      </li>
+      <li class="site-header-top-item site-header-menu-toggle">
+        <button class="btn-primary">Menu</button>
       </li>
     </ul>
   </div>
