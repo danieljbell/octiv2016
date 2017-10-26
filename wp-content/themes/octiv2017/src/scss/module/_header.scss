@@ -132,12 +132,10 @@
 
     &:nth-child(2) {
       @include desktop {
-        background-color: initial;
         a {
           color: $gray;
           &:hover,
           &:focus {
-            color: $white;
             background-color: $brand3;
           }
         }
@@ -146,12 +144,10 @@
 
     &:nth-child(3) {
       @include desktop {
-        background-color: initial;
         a {
           color: $gray;
           &:hover,
           &:focus {
-            color: $white;
             background-color: $brand4;
           }
         }
@@ -160,12 +156,10 @@
 
     &:nth-child(4) {
       @include desktop {
-        background-color: initial;
         a {
           color: $gray;
           &:hover,
           &:focus {
-            color: $white;
             background-color: $brand5;
           }
         }
@@ -190,11 +184,14 @@
   background-color: $gray;
   a {
     padding: 0.5rem 0 !important;
-    color: $white !important;
+    color: darken($white, 20%) !important;
     border-bottom: 1px solid lighten($gray, 20%);
     margin-left: 1rem;
     margin-right: 1rem;
     @include desktop {
+      &:hover {
+        color: $white !important;
+      }
       border-bottom: 0;
       padding: 0.5rem 1rem !important;
       margin-left: 0;
@@ -216,6 +213,9 @@
   }
   li:first-child {
     padding-top: 1rem;
+    @include desktop {
+      padding-top: 0;
+    }
   }
   li:last-child {
     padding-bottom: 1rem;
