@@ -178,6 +178,7 @@
   @include desktop {
     min-width: 300px;
     transform: translateY(-100%);
+    z-index: -5;
   }
   position: fixed;
   transition: all 200ms ease-in-out;
@@ -186,7 +187,6 @@
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  // z-index: -5;
   background-color: $gray;
   a {
     padding: 0.5rem 1rem !important;
