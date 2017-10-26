@@ -95,13 +95,13 @@
   padding: 0;
   margin: 0;
   @include desktop {
-    margin-right: 2rem;
+    margin-right: 1rem;
     flex-direction: row;
   }
 
   > li {
     @include desktop {
-      margin-right: 1rem;
+      // margin-right: 1rem;
       &:last-child {
         margin-right: 0;
       }
@@ -119,6 +119,7 @@
       transition: all 200ms ease-in-out;
       @include desktop {
         padding: 2rem 1rem;
+        color: $gray;
         &:hover,
         &:focus {
           color: $white;
@@ -176,8 +177,7 @@
 
 .site-header .sub-menu {
   @include desktop {
-    min-width: 300px;
-    transform: translateY(-100%);
+    min-width: 200px;
     z-index: -5;
   }
   position: fixed;
@@ -189,8 +189,42 @@
   visibility: hidden;
   background-color: $gray;
   a {
-    padding: 0.5rem 1rem !important;
+    padding: 0.5rem 0 !important;
     color: $white !important;
+    border-bottom: 1px solid lighten($gray, 20%);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include desktop {
+      border-bottom: 0;
+      padding: 0.5rem 1rem !important;
+      margin-left: 0;
+      margin-right: 0;
+      width: calc(100% + 2rem);
+      position: relative;
+      left: -1rem;
+    }
+  }
+  li {
+    @include desktop {
+      border-bottom: 1px solid lighten($gray, 20%);
+      margin-left: 1rem;
+      margin-right: 1rem;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+  li:first-child {
+    padding-top: 1rem;
+  }
+  li:last-child {
+    padding-bottom: 1rem;
+    @include desktop {
+      padding-bottom: 0;
+    }
+    a {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -206,7 +240,7 @@
 }
 
 .site-header-mobile-only {
-  @include tablet {
+  @include desktop {
     display: none;
   }
 }

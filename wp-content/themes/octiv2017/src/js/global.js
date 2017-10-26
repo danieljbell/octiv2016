@@ -110,9 +110,13 @@
   function initMobileMenu() {
 
     function itemClicked(e) {
-      e.stopPropagation();
       e.preventDefault();
-      this.parentElement.classList.toggle('sub-menu-active');
+      var parent = this.parentElement;
+      if (parent.classList.contains('sub-menu-active')) {
+        parent.classList.remove('sub-menu-active');
+      } else {
+        parent.classList.add('sub-menu-active');
+      }
     }
 
     if (window.innerWidth < 1050) {
