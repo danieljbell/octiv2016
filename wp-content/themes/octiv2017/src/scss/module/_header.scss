@@ -42,6 +42,7 @@
   width: 100%;
   transition: all 300ms ease-in-out;
   @include desktop {
+    z-index: auto;
     transform: translateY(0);
     opacity: 1;
     position: relative;
@@ -83,7 +84,7 @@
     flex-direction: row;
   }
 
-  .top-level-navigation-item {
+  > li {
     @include desktop {
       margin-right: 1rem;
       &:last-child {
@@ -108,21 +109,25 @@
       }
     }
 
-    &.item-2 a:hover,
-    &.item-2 a:focus {
+    &:nth-child(2) a:hover,
+    &:nth-child(2) a:focus {
       background-color: $brand3;
     }
 
-    &.item-3 a:hover,
-    &.item-3 a:focus {
+    &:nth-child(3) a:hover,
+    &:nth-child(3) a:focus {
       background-color: $brand4;
     }
 
-    &.item-4 a:hover,
-    &.item-4 a:focus {
+    &:nth-child(4) a:hover,
+    &:nth-child(4) a:focus {
       background-color: $brand5;
     }
   }
+}
+
+.sub-menu {
+  display: none;
 }
 
 // .site-header {
