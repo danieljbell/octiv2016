@@ -113,12 +113,6 @@
       e.preventDefault();
       $this = $(this);
       $this.next().slideToggle();
-      // var parent = this.parentElement;
-      // if (parent.classList.contains('sub-menu-active')) {
-      //   parent.classList.remove('sub-menu-active');
-      // } else {
-      //   parent.classList.add('sub-menu-active');
-      // }
     }
 
     if (window.innerWidth < 1050) {

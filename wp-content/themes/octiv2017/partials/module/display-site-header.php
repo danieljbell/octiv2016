@@ -22,24 +22,6 @@ SITE HEADER
           );
 
         ?>
-        <!-- <nav>
-          <ul class="top-level-navigation"> -->
-            <?php
-              // $site_header_items = wp_get_nav_menu_items('site-header');
-              // $item_iteration = 0;
-              // $top_level_pages = array();
-              // foreach ($site_header_items as $item) :
-              //   if ($item->menu_item_parent === '0') {
-              //     array_push($top_level_pages, $item->ID);
-              //   }
-              // endforeach;
-              // $all_nav_item_ids = array();
-              // foreach ($site_header_items as $item) :
-              //   array_push($all_nav_item_ids, $item->ID);
-              // endforeach;
-            ?>
-          <!-- </ul>
-        </nav> -->
       </li>
       <li class="site-header-top-item site-header-rad-container">
         <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request a Demo</button>
@@ -50,8 +32,3 @@ SITE HEADER
     </ul>
   </div>
 </header>
-
-
-
-
-<!-- <li class="top-level-navigation-item item-<?php echo $item_iteration; ?>"><a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"><?php echo $item->title; ?></a></li> -->
