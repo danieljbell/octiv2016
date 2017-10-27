@@ -273,3 +273,27 @@
     display: none;
   }
 }
+
+
+
+.hamburger-container {
+  margin-right: -0.5rem;
+
+  rect {
+    transition: all 200ms ease-in-out;
+  }
+  .hamburger-inner,
+  .hamburger-inner:before,
+  .hamburger-inner:after {
+    transition: all 200ms ease-in-out;
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    .hamburger-inner,
+    .hamburger-inner:before,
+    .hamburger-inner:after {
+      background-color: $gray;
+    }
+  }
+}

@@ -26,8 +26,12 @@ SITE HEADER
       <li class="site-header-top-item site-header-rad-container">
         <button id="site-head-rad" class="btn-primary rad-modal" data-modal="rad">Request a Demo</button>
       </li>
-      <li class="site-header-top-item site-header-menu-toggle">
-        <button class="btn-primary">Menu</button>
+      <li class="site-header-top-item site-header-menu-toggle hamburger-container">
+        <button class="hamburger hamburger--slider-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </li>
     </ul>
   </div>

@@ -46,10 +46,16 @@ $context = stream_context_create(array(
               );
               $whitepaper_ad = new WP_Query( $args );
               if ($whitepaper_ad->have_posts()) : while ($whitepaper_ad->have_posts()) : $whitepaper_ad->the_post(); ?>
-                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" class="sidebar-ad-bg">
-                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
-                <p class="sidebar-ad-title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></p>
-                <a href="<?php echo get_the_permalink(); ?>" class="btn-primary">Learn More</a>
+                <a href="<?php echo get_the_permalink(); ?>">
+                  <img src="<?php echo get_field('whitepaper_cover'); ?>" alt="<?php echo get_the_title(); ?> Cover">
+                </a>
+                <p class="has-text-center mar-t no-mar-b">Free Whitepaper</p>
+                <a href="<?php echo get_the_permalink(); ?>">
+                  <h5 class="mar-b has-text-center"><?php echo get_the_title(); ?></h5>
+                </a>
+                <div class="has-text-center">
+                  <a href="<?php echo get_the_permalink(); ?>" class="btn-primary">Download Now</a>
+                </div>
               <?php endwhile; endif; wp_reset_query(); ?>
           </div>
         </div>
