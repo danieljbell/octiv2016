@@ -130,12 +130,6 @@ $rand_num = mt_rand(1,4);
     $page_hero_body = null;
   }
 
-  // 404 Error Page
-  if (is_404()) {
-    $page_hero_title = 'Oh Uh!';
-    $page_hero_body = 'The page you are looking for either moved or doesn\'t exist.';
-  }
-
   // CATEGORY PAGE HEROS
   if (is_category()) {
     $page_hero_title = get_queried_object()->name;

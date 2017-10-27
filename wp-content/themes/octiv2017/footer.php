@@ -22,7 +22,7 @@ $context = stream_context_create(array(
       <a href="/" title="Home"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/Octiv-Logo.svg', false, $context); ?></a>
     </div>
     <div class="newsletter-subscription-container">
-      <button id="newsletter-subscription" class="btn-white--outline">Get Our Newsletter</button>
+      <a href="http://lp.octiv.com/SubscriptionManagement.html" class="btn-white--outline">Get Our Newsletter</a>
     </div>
   </div>
   <div class="site-width footer-admin-links">
