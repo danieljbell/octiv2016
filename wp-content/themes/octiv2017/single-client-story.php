@@ -31,6 +31,20 @@
                 echo '</li>';
               endif;
             echo '</ul>';
+            $doc_types = get_field('document_types');
+              if ($doc_types) :
+                echo '<li style="list-style-type: none;" class="client-story-doctype-container">';
+                echo '<strong>' . get_the_title() . ' Uses Octiv for:</strong>';
+                echo '<ul style="list-style-type: none;">';
+                  foreach($doc_types as $post) :
+                    setup_postdata($post);
+                    echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
+                    wp_reset_postdata();
+                  endforeach;
+                echo '</ul>';  
+                echo '</li>';
+              endif;
+            echo '</ul>';
           endif;
         ?>
       </div>

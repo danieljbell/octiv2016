@@ -30,6 +30,7 @@
               <li><a href="#why">Why Octiv &amp; <?php echo get_the_title(); ?></a></li>
               <li><a href="#key-capabilities">Key Capabilities</a></li>
               <li><a href="#technical-requirements">Technical Requirements</a></li>
+              <li><a href="#customer-success">Success Stories</a></li>
               <li><a href="#about">About <?php echo get_the_title(); ?></a></li>
             </ul>
           </div>
@@ -84,18 +85,18 @@
           endif;
           ?>
           <?php 
-            $customer_success = get_field('customer_success');
+            $customer_success = get_field('client_stories');
             if ($customer_success) :
           ?>
-          <h3 id="customer-success">See Success Stories with <?php echo get_the_title(); ?></h3>
-          <ul class="customer-success-thumbnails third">
+          <h3 id="customer-success" style="margin-bottom: 0.5rem;">See Success Stories with <?php echo get_the_title(); ?></h3>
+          <ul class="customer-success-thumbnails fourth">
             <?php
               foreach($customer_success as $post) :
                 setup_postdata($post);
                 $thumb_id = get_post_thumbnail_id();
                 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                 $thumb_url = $thumb_url_array[0];
-                echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><img src="' . $thumb_url . '"></a></li>';
+                echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><img src="' . $thumb_url . '" style="border: 1px solid #ccc;"></a></li>';
                 wp_reset_postdata();
               endforeach;
             ?>
