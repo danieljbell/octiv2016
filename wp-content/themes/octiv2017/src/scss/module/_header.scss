@@ -66,6 +66,7 @@
   overflow: scroll;
   height: 100vh;
   @include desktop {
+    height: auto;
     border-top: 0;
     z-index: auto;
     transform: translateY(0);
