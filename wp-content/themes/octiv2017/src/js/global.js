@@ -121,7 +121,7 @@
       var allTopLevelLinks = document.querySelectorAll('.site-header .menu-item-has-children > a');
       for (var i = 0; i < allTopLevelLinks.length; i++) {
         allTopLevelLinks[i].addEventListener('click', itemClicked, {
-          capture: true
+          capture: false
         });
       }
     }
