@@ -12,16 +12,23 @@
 
 .client-story-company-details {
   width: 100%;
-  max-width: 300px;
-  float: right;
   background-image: linear-gradient($white, $lgray);
   border: 1px solid $mgray;
   border-radius: 3px;
   box-shadow: 2px 2px 3px rgba(black, 0.1);
   text-align: center;
   padding: 1rem 2rem;
-  margin-left: 3rem;
   text-align: center;
+  margin-bottom: -2rem;
+  position: relative;
+  top: -4rem;
+  @include tablet {
+    top: auto;
+    max-width: 300px;
+    float: right;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
   ul {
     padding-left: 0;
     margin-bottom: 0;

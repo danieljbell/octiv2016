@@ -30,7 +30,6 @@
                 echo '</ul>';  
                 echo '</li>';
               endif;
-            echo '</ul>';
             $doc_types = get_field('document_types');
               if ($doc_types) :
                 echo '<li style="list-style-type: none;" class="client-story-doctype-container">';
