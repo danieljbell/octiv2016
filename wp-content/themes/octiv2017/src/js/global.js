@@ -110,8 +110,8 @@
   function initMobileMenu() {
 
     function itemClicked(e) {
-      e.preventDefault();
       e.stopPropagation();
+      e.preventDefault();
       $this = $(this);
       $this.parent().toggleClass('active');
       $this.next().slideToggle();
@@ -120,9 +120,7 @@
     if (window.innerWidth < 1050) {
       var allTopLevelLinks = document.querySelectorAll('.site-header .menu-item-has-children > a');
       for (var i = 0; i < allTopLevelLinks.length; i++) {
-        allTopLevelLinks[i].addEventListener('click', itemClicked, {
-          capture: false
-        });
+        allTopLevelLinks[i].addEventListener('click', itemClicked);
       }
     }
   }
