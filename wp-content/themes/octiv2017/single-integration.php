@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php $customer_success = get_field('client_stories'); ?>
+
 <style>
   .hero {
     background-image: 
@@ -30,7 +32,9 @@
               <li><a href="#why">Why Octiv &amp; <?php echo get_the_title(); ?></a></li>
               <li><a href="#key-capabilities">Key Capabilities</a></li>
               <li><a href="#technical-requirements">Technical Requirements</a></li>
-              <li><a href="#customer-success">Success Stories</a></li>
+              <?php if ($customer_success) : ?>
+                <li><a href="#customer-success">Success Stories</a></li>
+              <?php endif; ?>
               <li><a href="#about">About <?php echo get_the_title(); ?></a></li>
             </ul>
           </div>
@@ -85,7 +89,6 @@
           endif;
           ?>
           <?php 
-            $customer_success = get_field('client_stories');
             if ($customer_success) :
           ?>
           <h3 id="customer-success" style="margin-bottom: 0.5rem;">See Success Stories with <?php echo get_the_title(); ?></h3>

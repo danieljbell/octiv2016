@@ -70,6 +70,7 @@
 }
 
 .client-story-doctype-container {
+  margin-top: 1rem;
   ul {
     margin-top: 0.5rem;
   }
@@ -78,7 +79,8 @@
     border-radius: 4px;
     background-color: $brand2;
     margin-right: 2rem;
-    &:nth-child(2n) {
+    &:nth-child(2n),
+    &:last-child {
       margin-right: 0;
     }
     &:nth-child(2) {
