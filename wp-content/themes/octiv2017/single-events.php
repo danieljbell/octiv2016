@@ -129,7 +129,7 @@ $context = stream_context_create(array(
           <div class="box--light">
             <?php if ($has_reg) : ?>
               <div class="has-text-center">
-                <h2>Thanks<?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
+                <h2>Thanks, <?php if ($has_first_name) { echo ' ' . $has_first_name; } ?>!</h2>
                 <p>We hope you enjoy the webinar!</p>
                 <?php
                   if (!get_field('webinar_id')) {

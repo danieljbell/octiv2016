@@ -1,5 +1,7 @@
 .site-header-menu-open {
-  overflow: hidden;
+  @include mobile {
+    overflow: hidden;
+  }
 }
 
 .site-header {
@@ -14,13 +16,19 @@
     top: 0;
     z-index: 100;
   }
-  .site-header-fixed.site-header-menu-open & {
-    overflow: auto;
+  .site-header-menu-open & {
+    // overflow: scroll;
     bottom: 0;
     @include desktop {
-      overflow: auto;
+      // overflow: auto;
       bottom: auto;
     }
+  }
+}
+
+.site-header-fixed .site-header-nav-container {
+  @include mobile {
+    top: 4.1rem;
   }
 }
 
@@ -48,13 +56,15 @@
   flex-grow: 2;
   z-index: -1;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   background-color: transparent;
-  top: 4.1rem;
+  top: 6.1rem;
   left: 0;
   width: 100%;
   transition: all 300ms ease-in-out;
   border-top: 1px solid $mgray;
+  overflow: scroll;
+  height: 100vh;
   @include desktop {
     border-top: 0;
     z-index: auto;
@@ -122,7 +132,7 @@
         color: $gray;
         &:hover,
         &:focus {
-          color: $white;
+          color: $white !important;
           outline: none;
           color: $white;
           background-color: $brand2;
@@ -170,18 +180,24 @@
 }
 
 .site-header .sub-menu {
-  @include desktop {
-    min-width: 200px;
-    z-index: -5;
-  }
-  position: fixed;
+  display: none;
   transition: all 200ms ease-in-out;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  opacity: 0;
-  visibility: hidden;
+  left: 0;
+  right: 0;
   background-color: $gray;
+  @include desktop {
+    left: auto;
+    right: auto;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 200px;
+    border-radius: 0 0 5px 5px;
+  }
   a {
     padding: 0.5rem 0 !important;
     color: darken($white, 20%) !important;
@@ -189,7 +205,8 @@
     margin-left: 1rem;
     margin-right: 1rem;
     @include desktop {
-      &:hover {
+      &:hover,
+      &:focus {
         color: $white !important;
       }
       border-bottom: 0;
@@ -228,16 +245,16 @@
   }
 }
 
-.sub-menu-active .sub-menu {
-  opacity: 1;
-  visibility: visible;
-  position: relative;
-  @include desktop {
-    opacity: 0;
-    visibility: visible;
-    position: absolute;
-  }
-}
+// .sub-menu-active .sub-menu {
+//   opacity: 1;
+//   visibility: visible;
+//   position: relative;
+//   @include desktop {
+//     opacity: 0;
+//     visibility: visible;
+//     position: absolute;
+//   }
+// }
 
 .site-header-mobile-only {
   @include desktop {

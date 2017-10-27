@@ -53,7 +53,7 @@
             $('#call-to-action .color-boxes').first().hide().next().hide();
             form.getFormElem().hide();
             var successMessage = $('.success-message');
-            successMessage.find('h2').text('Thanks ' + vals.FirstName + '!');
+            successMessage.find('h2').text('Thanks, ' + vals.FirstName + '!');
             successMessage.show();
             return false;
           });
