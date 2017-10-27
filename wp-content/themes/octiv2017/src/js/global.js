@@ -113,6 +113,7 @@
       e.preventDefault();
       e.stopPropagation();
       $this = $(this);
+      $this.parent().toggleClass('active');
       $this.next().slideToggle();
     }
 
