@@ -994,7 +994,7 @@ function register_client_story_post_type() {
     'public'      => true,
     'publicly_queryable' => true,
     'has_archive' => false,
-    'rewrite'            => array( 'slug' => 'resources/client-story' ),
+    'rewrite'            => array( 'slug' => 'resources/client-stories' ),
     'menu_icon'   => 'dashicons-format-status',
     'supports'    => array( 'title', 'thumbnail', 'excerpt', 'page-attributes', 'revisions' ),
     'show_in_rest'       => true,

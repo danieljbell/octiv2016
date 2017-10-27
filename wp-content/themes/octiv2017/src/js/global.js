@@ -219,6 +219,9 @@
       draggable: false,
       adaptiveHeight: true
     });
+    $('.slider').on('init', function() {
+      console.log('lets rock');
+    });
   }
 
   if (document.querySelectorAll('.slider-for')) {

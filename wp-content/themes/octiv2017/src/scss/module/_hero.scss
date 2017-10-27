@@ -1,4 +1,9 @@
 .hero {
+  max-height: 500px;
+  @include tablet {
+    max-height: 400px;
+  }
+  overflow: hidden;
   background-color: $gray;
   background-size: cover, cover, 300px, cover;
   background-position: center;
