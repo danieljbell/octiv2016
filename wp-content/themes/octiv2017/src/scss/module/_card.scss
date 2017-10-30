@@ -1,3 +1,16 @@
+@mixin card-tag($color) {
+  border: 1px solid $color;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0.25em;
+  line-height: 1;
+  color: $color;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
 .card {
   background-color: $white;
   position: relative;
@@ -43,6 +56,12 @@
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 50px rgba(black, 0.5);
+  }
+  .card-tag--brand-two {
+    @include card-tag($brand2);
+  }
+  .card-tag--brand-three {
+    @include card-tag($brand3);
   }
   .card-description {
     font-size: 0.85em;

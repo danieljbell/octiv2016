@@ -146,6 +146,12 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
               <a v-bind:href="post.link" class="card-image" style="background-image: url('/wp-content/themes/octiv2017/dist/img/octiv-pattern.svg'), linear-gradient(green, green);"></a>
             </template>
             <div class="card-content">
+              <template v-if="post._embedded['wp:term'][0][0].slug === 'webinar'">
+                <p class="card-tag--brand-two">{{post._embedded['wp:term'][0][0].slug}}</p>
+              </template>
+              <template v-else="post._embedded['wp:term'][0][0].slug === 'event'">
+                <p class="card-tag--brand-three">{{post._embedded['wp:term'][0][0].slug}}</p>
+              </template>
               <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
               <p class="card-description" v-html="post.excerpt.rendered"></p>
               <a v-bind:href="post.link" class="btn-arrow">Learn More <span class="arrow">&gt;</span></a>

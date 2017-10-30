@@ -1,4 +1,13 @@
 <?php
+$is_external = get_field('external_event');
+$external_link = get_field('external_event_link');
+
+if ($external_link) {
+  header("Location: $external_link");
+}
+?>
+
+<?php
 $user = 'octiv';
 $pass = 'D@n13lR0cks!';
 $context = stream_context_create(array(

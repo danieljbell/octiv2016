@@ -36,6 +36,21 @@
     width: 100%;
     max-width: 1.5rem;
     margin-top: 0.5rem;
+    display: flex;
+
+    li {
+      margin-right: 0.5rem;
+      &:last-child {
+        margin-right: 0rem;
+      }
+    }
+
+    svg {
+      min-width: 25px;
+      min-height: 25px;
+      max-width: 25px;
+      max-height: 25px;
+    }
   }
 }
 
