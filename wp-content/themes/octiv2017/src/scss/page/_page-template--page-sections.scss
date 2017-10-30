@@ -214,14 +214,15 @@ ANIMATIONS
       }
     }
 
-    .badge-img,
-    .badge-line-chart,
-    .badge-table,
-    .badge-video,
-    .badge-bar-chart,
-    .badge-pie-chart {
+    .document-inputs .badge-img,
+    .document-inputs .badge-line-chart,
+    .document-inputs .badge-table,
+    .document-inputs .badge-video,
+    .document-inputs .badge-bar-chart,
+    .document-inputs .badge-pie-chart {
       transform: translate(-50%, -50%);
     }
+
     .badge-contracts {
       transition-delay: 1200ms;
       transform: translate(-185%, -75%);
@@ -291,7 +292,7 @@ ANIMATIONS
     }
 
     .blue-person {
-      transform: translate(-230%, -135%) scale(0);
+      transform: translate(-275%, -185%) scale(0);
       @include mobile {
         transform: translate(-230%, -145%) scale(0);
       }
@@ -304,7 +305,7 @@ ANIMATIONS
     }
 
     .purple-person {
-      transform: translate(230%, 0%) scale(0);
+      transform: translate(180%, -40%) scale(0);
       @include mobile {
         transform: translate(130%, 10%) scale(0);
       }
@@ -317,7 +318,7 @@ ANIMATIONS
     }
     
     .green-person {
-      transform: translate(-230%, 125%) scale(0);
+      transform: translate(-275%, 75%) scale(0);
       @include mobile {
         transform: translate(-230%, 45%) scale(0);
       }
@@ -335,19 +336,19 @@ ANIMATIONS
       transform: translateY(0);
     }
     .blue-person {
-      transform: translate(-230%, -135%) scale(1);
+      transform: translate(-275%, -185%) scale(1);
       @include mobile {
         transform: translate(-230%, -145%) scale(1);
       }
     }
     .purple-person {
-      transform: translate(230%, 0%) scale(1);
+      transform: translate(180%, -40%) scale(1);
       @include mobile {
         transform: translate(130%, 10%) scale(1);
       }
     }
     .green-person {
-      transform: translate(-230%, 125%) scale(1);
+      transform: translate(-275%, 75%) scale(1);
       @include mobile {
         transform: translate(-230%, 45%) scale(1);
       }
@@ -394,21 +395,21 @@ ANIMATIONS
       box-shadow: 1px 1px 2px rgba(black, 0.2);
     }
     .blue-person {
-      transform: translate(-230%, -135%);
+      transform: translate(-275%, -185%);
       @include mobile {
         transform: translate(-230%, -145%);
       }
       transition-timing-function: ease-in-out;
     }
     .purple-person {
-      transform: translate(230%, 0%);
+      transform: translate(180%, -40%);
       @include mobile {
         transform: translate(130%, 10%);
       }
       transition-timing-function: ease-in-out;
     }
     .green-person {
-      transform: translate(-230%, 125%);
+      transform: translate(-275%, 75%);
       @include mobile {
         transform: translate(-230%, 45%);
       }
@@ -419,7 +420,7 @@ ANIMATIONS
       @include mobile {
         transform: translate(160%, 25%) scale(0);  
       }
-      transition-delay: 1000ms;
+      transition-delay: 1400ms;
     }
     .blue-edit,
     polygon.blue-edit,
@@ -450,7 +451,7 @@ ANIMATIONS
       max-height: 20px;
       transform: translate(-50%, 150%);
     }
-    transform: translate(-0%, 200%);
+    transform: translate(-50%, 150%) scale(0);
     transition: all 1200ms ease-in-out;
     transition-delay: 1200ms;
     opacity: 0;
@@ -464,31 +465,31 @@ ANIMATIONS
       transform: translateY(-30%) scale(1.3);
     }
     .blue-person {
-      transform: translate(-275%, -400%);
+      transform: translate(-330%, -400%);
       @include mobile {
         transform: translate(-260%, -290%);
       }
     }
     .purple-person {
-      transform: translate(275%, -160%);  
+      transform: translate(230%, -205%);  
       @include mobile {
         transform: translate(160%, -85%);
       }
     }
     .green-person {
-      transform: translate(-275%, 0%);  
+      transform: translate(-330%, -50%);  
       @include mobile {
         transform: translate(-260%, -50%);  
       }
     }
     .yellow-person {
-      transform: translate(275%, 110%) scale(1);
+      transform: translate(230%, 65%) scale(1);
       @include mobile {
         transform: translate(160%, 25%) scale(1);  
       }
     }
     .animated-signature {
-      transform: translate(-0%, 200%);
+      transform: translate(-50%, 150%) scale(1);
       @include mobile {
         transform: translate(-50%, 150%);
       }
@@ -498,44 +499,75 @@ ANIMATIONS
 }
 
 .animation-platform--store {
-  .octiv-shell {
-    position: relative;
-    z-index: 2;
+  .badge {
+    @include mobile {
+      width: 275px;
+    }
+  }
+
+  .badge--inner {
     overflow: hidden;
     width: 100%;
     max-width: 300px;
     height: 169px;
-    background-image: url(../img/octiv-shell.svg);
-    background-repeat: no-repeat;
+    @include mobile {
+      max-width: 200px;
+      height: 113px;
+    }
+  }
+  
+  .octiv-shell {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    max-width: 300px;
     background-color: lighten($mgray, 5%);
     box-shadow: 3px 3px 5px rgba(black, 0.2);
-    transform: translateY(175%);
+    transform: translate(-50%, 125%);
     transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+    @include mobile {
+      max-width: 200px;
+      height: 113px;
+    }
   }
   .application-header {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    content: url(../img/app-header.svg);
+    position: relative;
+    z-index: 4;
+    opacity: 0;
+    transition-delay: 700ms;
+    transform: translateY(-1px);
+    @include mobile {
+      transform: translateY(-4px);
+    }
   }
   .repository-list {
-    z-index: 0;
-    position: absolute;
-    left: 90px;
-    top: 40px;
-    right: 0px;
-    height: 360px;
-    background-image: url(../img/repository-list.svg);
-    background-repeat: repeat-y;
+    z-index: 3;
+    position: relative;
+    top: 50%;
+    left: calc(50% - 130px);
+    width: 100%;
+    max-width: 150px;
+    transform: translateY(-25%);
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    @include mobile {
+      left: calc(50% - 85px);
+      max-width: 100px;
+    }
   }
 
   &.active {
     .octiv-shell {
-      transform: translateY(0);
+      transform: translate(-50%, -50%);
+    }
+    .application-header {
+      opacity: 1;
     }
     .repository-list {
+      opacity: 1;
+      transition-delay: 600ms;
       animation-delay: 800ms;
       animation-duration: 4000ms;
       animation-timing-function: ease-in-out;
@@ -546,11 +578,20 @@ ANIMATIONS
 }
 
 .animation-platform--analyze {
+  .badge {
+    @include mobile {
+      width: 275px;
+    }
+  }
+
   .analyze-phone {
     width: 100%;
     max-width: 225px;
     transform: translateY(110%);
     transition: all 400ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+    @include mobile {
+      max-width: 150px;
+    }
   }
   .phone-notification {
     opacity: 0;

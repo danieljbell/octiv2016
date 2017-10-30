@@ -55,9 +55,11 @@
 
 @keyframes infiniteScroll {
   from {
-    transform: translateY(0);
+    transform: translateY(-25%);
+    // opacity: 0;
   }
   to {
-    transform: translateY(-50%); 
+    transform: translateY(-75%); 
+    // opacity: 1;
   }
 }

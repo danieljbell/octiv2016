@@ -208,10 +208,12 @@ add_shortcode('custom_animation', function($atts) {
 <?php if ($tag === 'platform--store') : ?>
   <div class="animation-platform--store">
     <div class="badge">
-      <div class="octiv-shell">
-        <div class="application-header"></div>
-        <div class="repository-list"></div>
+      <div class="badge--inner">
+        <img src="/wp-content/themes/octiv2017/dist/img/octiv-shell.svg" alt="" class="octiv-shell">
+        <img src="/wp-content/themes/octiv2017/dist/img/app-header.svg" alt="" class="application-header">
+        <img src="/wp-content/themes/octiv2017/dist/img/repository-list.svg" alt="" class="repository-list">
       </div>
+    <!-- <div class="repository-list"></div> -->
     </div>
   </div>
 <?php endif; ?>
