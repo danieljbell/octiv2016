@@ -12,7 +12,9 @@ $('aside a').on('click', function(e) {
   }, 300);
 });
 
-console.log('daniel');
+var initialPath = window.location.pathname;
+window.history.replaceState( {} , 'bar', initialPath );
+
 })();
 
 var sidebar = new StickySidebar('#sidebar', {

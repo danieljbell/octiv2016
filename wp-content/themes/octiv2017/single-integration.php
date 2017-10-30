@@ -44,28 +44,36 @@
           <?php echo get_the_content(); ?>
           <?php if (get_field('integration_video_id')) : ?>
               <div class="mar-y-more box--light integration-video-container" style="padding: 2rem; border: 1px solid #ccc; border-radius: 3px; box-shadow: 2px 2px 30px rgba(0,0,0,0.1);">
-                <div class="half">
-                  <div class="">
-                    <img src="<?php echo get_field('integration_video_thumbnail'); ?>" alt="" style="width: 100%;" class="video-thumbnail">
-                  </div>
-                  <div>
-                    <h4>See Octiv + <?php echo get_the_title(); ?> in Action</h4>
-                    <p>Fill out the form below to view a brief demonstration.</p>
-                    <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-                    <form id="mktoForm_<?php echo get_field('integration_video_marketo_form_id'); ?>"></form>
-                    <script>
-                      MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('integration_video_marketo_form_id'); ?>, function(form) {
-                        form.onSuccess(function(values, followUpUrl) {
-                          form.getFormElem().hide();
-                          var videoContainer = document.querySelector('.integration-video-container');
-                          var videoHTML = document.querySelector('#video-html');
-                          videoContainer.innerHTML = videoHTML.innerHTML;
-                          return false;
-                        });
-                      });
-                    </script>
+                <?php if ($_GET['demo_auth']) : ?>
+                <div class="video-outer">
+                  <div class="video-inner">
+                    <iframe src="https://www.youtube.com/embed/<?php echo get_field('integration_video_id'); ?>?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
                   </div>
                 </div>
+                <?php else : ?>
+                  <div class="half">
+                    <div class="">
+                      <img src="<?php echo get_field('integration_video_thumbnail'); ?>" alt="" style="width: 100%;" class="video-thumbnail">
+                    </div>
+                    <div>
+                      <h4>See Octiv + <?php echo get_the_title(); ?> in Action</h4>
+                      <p>Fill out the form below to view a brief demonstration.</p>
+                      <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+                      <form id="mktoForm_<?php echo get_field('integration_video_marketo_form_id'); ?>"></form>
+                      <script>
+                        MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo get_field('integration_video_marketo_form_id'); ?>, function(form) {
+                          form.onSuccess(function(values, followUpUrl) {
+                            form.getFormElem().hide();
+                            var videoContainer = document.querySelector('.integration-video-container');
+                            var videoHTML = document.querySelector('#video-html');
+                            videoContainer.innerHTML = videoHTML.innerHTML;
+                            return false;
+                          });
+                        });
+                      </script>
+                    </div>
+                  </div>
+                <?php endif; ?>
               </div>
             <?php endif; ?>
           <h3 id="key-capabilities" class="pad-t">Key Capabilities</h3>
