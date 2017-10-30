@@ -127,9 +127,20 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
           <?php endif; ?>
         </div>
         <div id="resource-items" class="third">
+          <script>
+            var today = new Date();
+            var todaysDate = today.getFullYear().toString() + (today.getMonth() + 1).toString() + today.getDate().toString();
+          </script>
           <div v-for="post in filteredList" class="card">
             <template v-if="post._embedded['wp:featuredmedia']">
-              <a v-bind:href="post.link" class="card-image" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }"></a>
+              <template v-if="post.acf.event_start_date < todaysDate">
+                <a v-bind:href="post.link" class="card-image past-event" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }">
+                  <div class="card-overlay"></div>
+                </a>
+              </template>
+              <template v-else>
+                <a v-bind:href="post.link" class="card-image" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }"></a>
+              </template>
             </template>
             <template v-else>
               <a v-bind:href="post.link" class="card-image" style="background-image: url('/wp-content/themes/octiv2017/dist/img/octiv-pattern.svg'), linear-gradient(green, green);"></a>
