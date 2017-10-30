@@ -32,7 +32,7 @@ Template Name: Archive
   <section class="post-content mar-b-most">
     <div class="site-width">
       <div class="one-fourth">
-        <aside id="sidebar">
+        <aside id="sidebar" style="padding-top: 6rem;">
           <div class="sidebar__inner">
             <h4>Integrations</h4>
             <hr style="margin: 0.25rem 0;">
@@ -45,7 +45,7 @@ Template Name: Archive
         </aside>
         <ul class="no-bull">
           <?php foreach ($sorted_cats as $single_cat) : ?>
-            <li id="<?php echo $single_cat->slug; ?>" class="mar-b-most">
+            <li id="<?php echo $single_cat->slug; ?>" class="mar-b-most" style="padding-top: 6rem;">
               <h3 style="margin-bottom: 0.5rem;"><?php echo $single_cat->name; ?></h3>
               <ul class="third no-bull">
                 <?php
