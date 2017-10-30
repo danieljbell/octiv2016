@@ -1,14 +1,14 @@
 @mixin card-tag($color) {
-  border: 1px solid $color;
+  background-color: $color;
   border-radius: 3px;
   display: inline-block;
   font-size: 0.7em;
-  padding: 0.25em;
+  padding: 0.35em 0.35em 0.25em;
   line-height: 1;
-  color: $color;
+  color: $white;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 }
 
 .card {
