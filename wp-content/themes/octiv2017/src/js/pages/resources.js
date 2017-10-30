@@ -1,7 +1,7 @@
 $.ajax({
   dataType: "json",
   async: false,
-  url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=" + postOrder + "&per_page=" + postsPerPage,
+  url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=" + postOrder + "&orderby=" + postOrderBy + "&per_page=" + postsPerPage,
   error: function() {
     console.log('oops!');
   },

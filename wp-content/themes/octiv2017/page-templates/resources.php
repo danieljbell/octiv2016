@@ -97,8 +97,8 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
           <div>
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
           </div>
-          <div>
-            <?php if (get_field('post_type') !== 'client-story') : ?>
+          <?php if (get_field('post_type') !== 'client-story') : ?>
+            <div>
               <h4>Categories</h4>
               <select v-model="selectedCats">
                 <option value="">All <?php echo get_the_title(); ?> Posts</option>
@@ -123,8 +123,8 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
                   endforeach;
                 ?>
               </select>
-            <?php endif; ?>
-          </div>
+            </div>
+          <?php endif; ?>
         </div>
         <div id="resource-items" class="third">
           <div v-for="post in filteredList" class="card">
@@ -178,8 +178,11 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
     }
     if (get_field('post_order')) {
       echo "var postOrder = '" . get_field('post_order') . "';";
+    }
+    if (get_field('post_order_by')) {
+      echo "var postOrderBy = '" . get_field('post_order_by') . "';";
     } else {
-      // echo "var postsPerPage = '" . $postsPerPage . "';";
+      echo "var postOrderBy = 'date';";
     }
   ?>
 </script>

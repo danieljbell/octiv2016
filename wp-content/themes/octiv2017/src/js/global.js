@@ -36,9 +36,13 @@
       document.body.style.paddingTop = 0;
       document.body.classList.remove('site-header-fixed');
     }
+    if (window.scrollY === 0) {
+      document.body.style.paddingTop = 0;
+      document.body.classList.remove('site-header-fixed');
+    }
   }
 
-  window.addEventListener('scroll', debounce(fixedHeaderNav));
+  window.addEventListener('scroll', fixedHeaderNav);
 
 
   /*

@@ -367,7 +367,7 @@ function register_event_post_type() {
     'has_archive' => false,
     'rewrite'            => array( 'slug' => 'resources/events' ),
     'menu_icon'   => 'dashicons-tickets-alt',
-    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'revisions' ),
+    'supports'    => array( 'title', 'thumbnail', 'excerpt', 'revisions', 'page-attributes' ),
     'show_in_rest'       => true,
     'rest_base'          => 'events',
     'rest_controller_class' => 'WP_REST_Posts_Controller',
@@ -379,22 +379,22 @@ function register_event_post_type() {
     'delete_post'            => 'delete_event',
 
     // primitive/meta caps
-    'create_posts'           => 'create_event',
+    'create_posts'           => 'create_events',
 
     // primitive caps used outside of map_meta_cap()
-    'edit_posts'             => 'edit_event',
-    'edit_others_posts'      => 'edit_others_event',
-    'publish_posts'          => 'publish_event',
+    'edit_posts'             => 'edit_events',
+    'edit_others_posts'      => 'edit_others_events',
+    'publish_posts'          => 'publish_events',
     'read_private_posts'     => 'read',
 
     // primitive caps used inside of map_meta_cap()
     'read'                   => 'read',
-    'delete_posts'           => 'delete_event',
-    'delete_private_posts'   => 'delete_private_event',
-    'delete_published_posts' => 'delete_published_event',
-    'delete_others_posts'    => 'delete_others_event',
-    'edit_private_posts'     => 'edit_private_event',
-    'edit_published_posts'   => 'edit_published_event'
+    'delete_posts'           => 'delete_events',
+    'delete_private_posts'   => 'delete_private_events',
+    'delete_published_posts' => 'delete_published_events',
+    'delete_others_posts'    => 'delete_others_events',
+    'edit_private_posts'     => 'edit_private_events',
+    'edit_published_posts'   => 'edit_published_events'
     ),
   );
 

@@ -336,3 +336,15 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
 
 
 
+/*
+==============================
+ADDING MENU ORDER TO WP-API
+==============================
+*/
+add_filter( 'rest_post_collection_params', 'add_menu_order_api', 10, 1 );
+
+function add_menu_order_api( $params ) {
+    $params['orderby']['enum'][] = 'menu_order';
+
+    return $params;
+}
