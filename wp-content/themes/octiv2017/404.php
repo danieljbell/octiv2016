@@ -18,6 +18,10 @@
           <form role="search" method="get" action="<?php echo site_url(); ?>">
             <input type="text" name="s" placeholder="Search Octiv" class="text-search-bar">
           </form>
+          <div class="mar-t-more">
+            <h4 class="mar-b">Please contact us if you are having trouble.</h4>
+            <a href="/company/contact-us" class="btn-primary">Contact Us</a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,4 @@
 .hero {
-  max-height: 500px;
-  @include tablet {
-    max-height: 400px;
-  }
   overflow: hidden;
   background-color: $gray;
   background-size: cover, cover, 300px, cover;
@@ -32,6 +28,10 @@
 }
 
 .home .hero {
+  max-height: 500px;
+  @include tablet {
+    max-height: 400px;
+  }
   padding: 0;
   .slide {
     background-size: cover;

@@ -6,6 +6,10 @@
     flex-direction: row;
   }
 
+  div {
+    flex: 1;
+  }
+
   img {
     width: 100%;
   }
@@ -21,16 +25,15 @@
   }
 
   .error-image-container {
-    @include tablet {
-      flex-basis: 33%;
-    }
+    // flex-grow: 0;
   }
   
   .error-content-container {
+    flex-shrink: 0;
+    flex-basis: 20%;
     text-align: center;
     @include tablet {
-      text-align: left;
-      margin-left: 3rem;
+      margin-left: 6rem;
     }
   }
 }
