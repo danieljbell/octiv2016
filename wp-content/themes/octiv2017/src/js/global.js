@@ -124,7 +124,9 @@
     if (window.innerWidth < 1050) {
       var allTopLevelLinks = document.querySelectorAll('.site-header .menu-item-has-children > a');
       for (var i = 0; i < allTopLevelLinks.length; i++) {
-        allTopLevelLinks[i].addEventListener('click', itemClicked);
+        allTopLevelLinks[i].addEventListener('click', itemClicked, {
+          capture: true
+        });
       }
     }
   }
