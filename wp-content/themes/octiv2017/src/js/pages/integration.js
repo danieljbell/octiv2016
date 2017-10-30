@@ -11,6 +11,8 @@ $('aside a').on('click', function(e) {
       scrollTop: target.offset().top - (document.querySelector('.site-header').offsetHeight)
   }, 300);
 });
+
+console.log('daniel');
 })();
 
 var sidebar = new StickySidebar('#sidebar', {
