@@ -146,11 +146,17 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
               <a v-bind:href="post.link" class="card-image" style="background-image: url('/wp-content/themes/octiv2017/dist/img/octiv-pattern.svg'), linear-gradient(green, green);"></a>
             </template>
             <div class="card-content">
-              <template v-if="post._embedded['wp:term'][0][0].slug === 'webinar'">
+              <template v-if="post._embedded['wp:term'][0][0].slug === 'webinar' || post._embedded['wp:term'][0][0].slug === 'datasheets' || post._embedded['wp:term'][0][0].slug === 'videos'">
                 <p class="card-tag--brand-two">{{post._embedded['wp:term'][0][0].slug}}</p>
               </template>
-              <template v-else="post._embedded['wp:term'][0][0].slug === 'event'">
+              <template v-else-if="post._embedded['wp:term'][0][0].slug === 'event' || post._embedded['wp:term'][0][0].slug === 'infographics' || post._embedded['wp:term'][0][0].slug === 'whitepapers'">
                 <p class="card-tag--brand-three">{{post._embedded['wp:term'][0][0].slug}}</p>
+              </template>
+              <template v-else-if="post._embedded['wp:term'][0][0].slug === 'quizzes'">
+                <p class="card-tag--brand-four">{{post._embedded['wp:term'][0][0].slug}}</p>
+              </template>
+              <template v-else-if="post._embedded['wp:term'][0][0].slug === 'tools'">
+                <p class="card-tag--brand-five">{{post._embedded['wp:term'][0][0].slug}}</p>
               </template>
               <h4><a v-bind:href="post.link" v-html="post.title.rendered"></a></h4>
               <p class="card-description" v-html="post.excerpt.rendered"></p>

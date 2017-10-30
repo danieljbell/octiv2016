@@ -1,8 +1,8 @@
 @mixin card-tag($color) {
   border: 1px solid $color;
-  border-radius: 4px;
+  border-radius: 3px;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.7em;
   padding: 0.25em;
   line-height: 1;
   color: $color;
@@ -62,6 +62,12 @@
   }
   .card-tag--brand-three {
     @include card-tag($brand3);
+  }
+  .card-tag--brand-four {
+    @include card-tag($brand4);
+  }
+  .card-tag--brand-five {
+    @include card-tag($brand5);
   }
   .card-description {
     font-size: 0.85em;
