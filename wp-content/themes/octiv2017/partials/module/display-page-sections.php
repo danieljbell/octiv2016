@@ -15,6 +15,8 @@
         $section_content = get_sub_field('section_content');
         $image_frame_class = get_sub_field('image_frame');
         $section_link = get_sub_field('section_call_to_action_link');
+        $image_link = get_sub_field('is_image_linked');
+        $image_link_location = get_sub_field('image_link');
         $section_class = 'reverse';
         if ($count % 2 == 0) {
           $section_class = 'swap-order';
@@ -44,7 +46,13 @@
                 if ($image_frame_class === 'browser-window') { echo '<div class="browser-window">'; }
               
                 echo '<div class="img-container">';
+                  if ($image_link_location) {
+                    echo '<a href="' . $image_link_location . '">';
+                  }
                   echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
+                  if ($image_link_location) {
+                    echo '</a>';
+                  }
                 echo '</div>';
                 
                 if ($image_frame_class) { echo '</div>'; }
