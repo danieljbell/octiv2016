@@ -46,6 +46,7 @@
 .site-header-logo {
   width: 100%;
   max-width: 150px;
+  min-height: 50px;
   padding: 1rem 0;
   @include desktop {
     max-width: 185px;
