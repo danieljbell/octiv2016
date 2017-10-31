@@ -33,19 +33,21 @@ add_shortcode('get_card_v3', function($atts) {
     <?php endif; ?>
     
     <?php if (!$is_integration_archive) : ?>
-    <div class="card-content">
-      <?php if ($title != 'false') : ?>
-        <h4><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
+      <?php if ($title != 'false' && $has_cta_text != 'false') : ?>
+      <div class="card-content">
+        <?php if ($title != 'false') : ?>
+          <h4><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
+        <?php endif; ?>
+        <?php
+          if ($excerpt != 'false') { 
+            echo '<p class="card-description">' . strip_tags(get_the_excerpt()) . '</p>'; 
+          }
+        ?>
+        <?php if ($has_cta_text != 'false') : ?>
+          <a href="<?php echo get_the_permalink(); ?>" class="btn-arrow">Learn More <span class="arrow">></span></a>
+        <?php endif; ?>
+      </div>
       <?php endif; ?>
-      <?php
-        if ($excerpt != 'false') { 
-          echo '<p class="card-description">' . strip_tags(get_the_excerpt()) . '</p>'; 
-        }
-      ?>
-      <?php if ($has_cta_text != 'false') : ?>
-        <a href="<?php echo get_the_permalink(); ?>" class="btn-arrow">Learn More <span class="arrow">></span></a>
-      <?php endif; ?>
-    </div>
     <?php endif; ?>
   </div>
 

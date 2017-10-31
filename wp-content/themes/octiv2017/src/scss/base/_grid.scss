@@ -104,6 +104,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
     > * {
+      flex-basis: auto !important;
       margin-right: 0 !important;
       margin-bottom: 0;
     }
@@ -159,7 +160,7 @@
         margin-right: 0;
       }
     }
-    @include fullhd {
+    @include widescreen {
       flex-basis: calc((100%/6) - 1.6667rem);
       &:nth-child(3n) {
         margin-right: 2rem;

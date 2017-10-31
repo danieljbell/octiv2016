@@ -176,7 +176,7 @@ $rand_num = mt_rand(1,4);
   }
 
   // Privacy & Terms & Conditions
-  if (is_page(array('264', '298'))) {
+  if (is_page(array('264', '298', '1536'))) {
     $page_hero_body = null;
   }
 

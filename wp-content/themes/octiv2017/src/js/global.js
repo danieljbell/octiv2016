@@ -274,6 +274,17 @@
     });
   }
 
+  if (document.querySelectorAll('.client-thumbnail-slider')) {
+    $('.client-thumbnail-slider').slick({
+      slidesToShow: 7,
+      // centerMode: true,
+      // centerPadding: '54px',
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+    });
+  }
+
   /*
   ==============================
   DOCUMENT CONTAINER TYPED

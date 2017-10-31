@@ -1,4 +1,4 @@
-<?php if (is_page(array('264', '298'))) {
+<?php if (is_page(array('264', '298', '1536'))) {
   $slim_page = true;
 } ?>
 
