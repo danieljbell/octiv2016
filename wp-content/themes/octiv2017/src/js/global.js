@@ -152,7 +152,7 @@
     window.history.replaceState( {} , 'bar', initialPath );
   }
 
-  var radLinks = $('[href="#request-a-demo"]');
+  var radLinks = $('[href="#request-a-demo"], [href="?rad=true"]');
   radLinks.on('click', function(e) {
     e.preventDefault();
     $('.rad-modal-container').modal();

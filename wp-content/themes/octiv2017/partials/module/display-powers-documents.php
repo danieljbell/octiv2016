@@ -30,7 +30,7 @@
             }
           ?>
         </ul>
-        <button class="btn-primary rad-modal">Request A Demo</button>
+        <button class="btn-primary rad-modal">Request a Demo</button>
       </div>
     </div>
   </div>
