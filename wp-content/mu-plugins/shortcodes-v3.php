@@ -125,10 +125,10 @@ add_shortcode('custom_animation', function($atts) {
       </div>
     </div>
     <div class="document-outputs">
-      <div class="badge-contracts"><a href="/solutions/contracts/"><span>Contracts</span></a></div>
-      <div class="badge-proposals"><a href="/solutions/proposals/"><span>Proposals</span></a></div>
-      <div class="badge-quotes"><a href="/solutions/quotes/"><span>Quotes</span></a></div>
-      <div class="badge-invoices"><a href="/solutions/invoices/"><span>Invoices</span></a></div>
+      <div class="badge-contracts"><a href="/solutions/for-contracts/"><span>Contracts</span></a></div>
+      <div class="badge-proposals"><a href="/solutions/for-proposals/"><span>Proposals</span></a></div>
+      <div class="badge-quotes"><a href="/solutions/for-quotes/"><span>Quotes</span></a></div>
+      <div class="badge-invoices"><a href="/solutions/for-invoices/"><span>Invoices</span></a></div>
     </div>
   </div>
 <?php endif; ?>

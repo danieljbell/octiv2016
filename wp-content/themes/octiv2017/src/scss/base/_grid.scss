@@ -25,7 +25,7 @@
       margin-right: 0;
     }
   }
-  @supports (display: grid) {
+  @supports (display: grid) and (not (display: -ms-grid)) {
     display: grid;
     grid-gap: 2rem;
     @include tablet {
@@ -81,7 +81,7 @@
     margin-bottom: 2rem;
     @include tablet {
       margin-right: 2rem;
-      flex-basis: calc((100%/3) - 3.5rem);
+      flex-basis: calc((100%/3) - 1.4rem);
       &:nth-child(3n) {
         margin-right: 0;
       }
@@ -94,7 +94,7 @@
       max-width: calc((100%/3) - 3.5rem);
     }
   }
-  @supports (display: grid) {
+  @supports (display: grid) and (not (display: -ms-grid)) {
     display: grid;
     grid-gap: 2rem;
     @include tablet {
@@ -122,7 +122,7 @@
       margin-right: 0;
     }
   }
-  @supports (display: grid) {
+  @supports (display: grid) and (not (display: -ms-grid)) {
     display: grid;
     grid-gap: 2rem;
     @include tablet {
@@ -211,7 +211,7 @@
       }
     }
   }
-  @supports (display: grid) {
+  @supports (display: grid) and (not (display: -ms-grid)) {
     display: grid;
     grid-gap: 2rem;
     > * {
@@ -253,7 +253,7 @@
       }
     }
   }
-  @supports (display: grid) {
+  @supports (display: grid) and (not (display: -ms-grid)) {
     display: grid;
     grid-gap: 2rem;
     > * {
