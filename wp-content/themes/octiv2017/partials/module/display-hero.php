@@ -1,4 +1,4 @@
-<?php
+  <?php
 /*
 ==============================
 HERO
@@ -173,6 +173,11 @@ $rand_num = mt_rand(1,4);
   // LIBRARY--VIDEO BG OVERRIDES
   if (is_singular('library') && has_term('videos', 'library_type')) {
     $hero_bg = 'url(/wp-content/uploads/2017/06/generic-' . $rand_num . '.jpg)';
+  }
+
+  // Privacy & Terms & Conditions
+  if (is_page(array('264', '298'))) {
+    $page_hero_body = null;
   }
 
 ?>
