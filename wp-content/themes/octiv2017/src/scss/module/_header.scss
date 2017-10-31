@@ -35,6 +35,10 @@
 }
 
 .site-header-top-items {
+  display: table;
+  > * {
+    display: table-cell;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,6 +107,10 @@
 }
 
 .top-level-navigation {
+  display: table;
+  > * {
+    display: table-cell;
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

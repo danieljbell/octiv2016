@@ -97,6 +97,10 @@ GLOBAL SEARCH
 ==============================
 */
 ?>
+
+<?php
+/*
+==============================
 <div class="search-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
@@ -138,6 +142,9 @@ GLOBAL SEARCH
     </div>
   </div>
 </div>
+==============================
+*/
+?>
 
 
 <?php

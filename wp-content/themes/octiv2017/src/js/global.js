@@ -321,86 +321,33 @@
 
 
 
-  /*
-  ==============================
-  GLOBAL SEARCH MODAL
-  ==============================
-  */
-  var gloablSearch = new Vue({
-    el: '#global-search-app',
-    data: {
-      keyword: '',
-      postList: [],
-      offset: 0,
-      selectedCats: []
-    },
-    mounted: function() {
-      var self = this;
-      $.ajax({
-        dataType: "json",
-        async: false,
-        url: "/wp-json/wp/v2/posts",
-        success: function(data) {
-          self.postList = data;
-        },
-        error: function(error) {
-          alert(JSON.stringify(error));
-        }
-      });
-    },
-    methods: {
-      getMorePosts() {
-        var self = this;
-        var postList = this.postList;
-        $.ajax({
-          dataType: "json",
-          async: false,
-          url: "/wp-json/wp/v2/posts",
-          success: function(data) {
-            var resp = data;
-            for (var i = 0; i < resp.length; i++) {
-              postList.push(resp[i]);
-            }
-          },
-          error: function(error) {
-            alert(JSON.stringify(error));
-          } 
-        });
-      }
-    },
-    computed: {
-      filteredList() {
-        return this.postList.filter((post) => {
-          return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());
-        });
-      }
-    }
-  });
+  
 
 })();
 
 function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-
-function debounce(func, wait = 20, immediate = true) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+  var results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
+
+
+// function debounce(func, wait = 20, immediate = true) {
+//   var timeout;
+//   return function() {
+//     var context = this;
+//     var args = arguments;
+//     var later = function() {
+//       timeout = null;
+//       if (!immediate) func.apply(context, args);
+//     };
+//     var callNow = immediate && !timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//     if (callNow) func.apply(context, args);
+//   };
+// };

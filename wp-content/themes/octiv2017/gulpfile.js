@@ -43,10 +43,10 @@ gulp.task('js', function () {
     './node_modules/sticky-sidebar/dist/sticky-sidebar.min.js',
     'src/js/global.js'
   ])
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(concat('global.js'))
     // .pipe(uglify())
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
   gulp.src([
