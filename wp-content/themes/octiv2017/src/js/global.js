@@ -277,11 +277,30 @@
   if (document.querySelectorAll('.client-thumbnail-slider')) {
     $('.client-thumbnail-slider').slick({
       slidesToShow: 7,
-      // centerMode: true,
-      // centerPadding: '54px',
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: false,
+      responsive: [
+        {
+          breakpoint: 1281,
+          settings: {
+            slidesToShow: 5,
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 601,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+          }
+        }
+      ]
     });
   }
 
