@@ -273,15 +273,10 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
   }
   if (is_singular('integration')) {
       $breadcrumb[] = array(
-      'url' => '/platform/integrations',
+      'url' => '/integrations',
       'text' => 'Integrations',
     );
     array_splice( $links, 1, 0, $breadcrumb );
-    $parent[] = array(
-        'url' => '/platform',
-        'text' => 'Platform',
-    );
-    array_splice( $links, 1, 0, $parent );
   }
   // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
   //   $breadcrumb[] = array(

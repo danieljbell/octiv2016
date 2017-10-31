@@ -756,7 +756,7 @@ function register_integration_post_type() {
     // 'publicly_queryable' => false,
     'has_archive' => false,
     // 'hierarchical'  => true,
-    'rewrite'            => array( 'slug' => 'platform/integrations' ),
+    'rewrite'            => array( 'slug' => 'integrations' ),
     'menu_icon'   => 'dashicons-admin-plugins',
     'supports'    => array( 'title', 'editor', 'excerpt', 'page-attributes', 'revisions' ),
     'capability_type' => 'integrations',
