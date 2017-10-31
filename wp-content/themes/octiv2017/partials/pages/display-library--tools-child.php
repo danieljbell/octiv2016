@@ -1,6 +1,8 @@
 <?php 
   if (get_field('remove_header')) {
     get_header('blank');
+  } else {
+    get_header();
   }
 ?>
 
@@ -15,5 +17,7 @@
 <?php
   if (get_field('remove_footer')) {
     get_footer('blank');
+  } else {
+    get_footer();
   }
 ?>
