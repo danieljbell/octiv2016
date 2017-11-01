@@ -49,8 +49,10 @@
     @include tablet {
       &:first-child {
         padding-right: 4rem;
+        margin-left: -2rem;
       }
       &:last-child {
+        margin-right: -2rem;
         padding-left: 4rem;
       }
     }
