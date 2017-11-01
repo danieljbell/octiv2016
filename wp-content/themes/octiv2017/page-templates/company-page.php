@@ -29,10 +29,10 @@ Template Name: Company Page
                 echo '<div>';
                   if (get_sub_field('award_link')) {
                     echo '<a href="' . get_sub_field('award_link') . '">';
-                      echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '">';
+                      echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '" style="width: 100%;">';
                     echo '</a>';
                   } else {
-                    echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '">';
+                    echo '<img src="' . $award_image[url] . '" alt="' . $award_image[title] . '" style="width: 100%;">';
                   }
                 echo '</div>';
               endwhile;
