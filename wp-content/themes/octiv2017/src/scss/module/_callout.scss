@@ -37,6 +37,9 @@
     color: $brand;
     background-color: $white;
   }
+  select, option {
+    color: $gray;
+  }
 }
 
 .brand-three-callout {
