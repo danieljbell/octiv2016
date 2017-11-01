@@ -45,30 +45,32 @@ $context = stream_context_create(array(
                 ),
               );
               $whitepaper_ad = new WP_Query( $args );
-              if ($whitepaper_ad->have_posts()) : while ($whitepaper_ad->have_posts()) : $whitepaper_ad->the_post(); ?>
-                <a href="<?php echo get_the_permalink(); ?>">
-                  <img src="<?php echo get_field('whitepaper_cover'); ?>" alt="<?php echo get_the_title(); ?> Cover">
-                </a>
-                <p class="has-text-center mar-t no-mar-b">Free Whitepaper</p>
-                <a href="<?php echo get_the_permalink(); ?>">
-                  <h5 class="mar-b has-text-center"><?php echo get_the_title(); ?></h5>
-                </a>
-                <div class="has-text-center">
-                  <a href="<?php echo get_the_permalink(); ?>" class="btn-primary">Download Now</a>
-                </div>
-              <?php endwhile; endif; wp_reset_query(); ?>
+              if ($whitepaper_ad->have_posts()) : 
+                while ($whitepaper_ad->have_posts()) : $whitepaper_ad->the_post(); 
+            ?>
+              <a href="<?php echo get_the_permalink(); ?>">
+                <img src="<?php echo get_field('whitepaper_cover'); ?>" alt="<?php echo get_the_title(); ?> Cover">
+              </a>
+              <p class="has-text-center mar-t no-mar-b">Free Whitepaper</p>
+              <a href="<?php echo get_the_permalink(); ?>">
+                <h5 class="mar-b has-text-center"><?php echo get_the_title(); ?></h5>
+              </a>
+              <div class="has-text-center">
+                <a href="<?php echo get_the_permalink(); ?>" class="btn-primary">Download Now</a>
+              </div>
+            <?php endwhile; endif; wp_reset_query(); ?>
           </div>
         </div>
       </aside>
-      <div class="two-third">
-        <div>
-          <h4>Share this Article</h4>
-          <ul class="article-sharing-social-links">
-            <li class="twitter-icon"><a href="http://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>&text=<?php echo the_title(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/twitter-icon.svg', false, $context); ?></a></li>
-            <li class="linkedin-icon"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/linkedin-icon.svg', false, $context); ?></a></li>
-            <li class="facebook-icon"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/facebook-icon.svg', false, $context); ?></a></li>
-          </ul>
-        </div>
+    </div>
+    <div class="two-third">
+      <div>
+        <h4>Share this Article</h4>
+        <ul class="article-sharing-social-links">
+          <li class="twitter-icon"><a href="http://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>&text=<?php echo the_title(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/twitter-icon.svg', false, $context); ?></a></li>
+          <li class="linkedin-icon"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/linkedin-icon.svg', false, $context); ?></a></li>
+          <li class="facebook-icon"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/facebook-icon.svg', false, $context); ?></a></li>
+        </ul>
       </div>
     </div>
     <hr>
