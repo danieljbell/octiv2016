@@ -103,9 +103,15 @@
 
 .single-integration .related-integrations {
   margin-bottom: 5rem;
+  .card {
+    position: relative;
+    min-height: 150px;
+  }
   .card-image {
-    top: 0;
-    background-size: 75% 75%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 55% 55%;
     background-position: center center;
     background-repeat: no-repeat;
     box-shadow: none;

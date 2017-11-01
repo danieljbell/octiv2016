@@ -123,11 +123,13 @@
   display: flex;
   flex-wrap: wrap;
   > * {
-    margin-right: 2rem;
     margin-bottom: 2rem;
-    flex-basis: calc((100%/4) - 3.6667rem);
-    &:nth-child(4n) {
-      margin-right: 0;
+    @include tablet {
+      margin-right: 2rem;
+      flex-basis: calc((100%/4) - 3.6667rem);
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
   @supports (display: grid) and (not (display: -ms-grid)) {
