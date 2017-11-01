@@ -72,12 +72,12 @@
   .card-description {
     font-size: 0.85em;
   }
-  &.is-faded {
-    opacity: 0.4;
-    z-index: -1;
-  }
-  &.is-hovered {
-    transform: scale(1.03);
-    box-shadow: 4px 4px 6px rgba(black, 0.1);
-  }
+  // &.is-faded {
+  //   opacity: 0.4;
+  //   // z-index: -1;
+  // }
+  // &.is-hovered {
+  //   transform: scale(1.03);
+  //   box-shadow: 4px 4px 6px rgba(black, 0.1);
+  // }
 }

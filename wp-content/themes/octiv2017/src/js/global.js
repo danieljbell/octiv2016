@@ -198,17 +198,17 @@
     });
 
     // add mouseleave event on all cards
-    allCards[i].addEventListener('mouseleave', function(e) {
-      // get all children of the hovered element's parent
-      var allSiblings = this.parentElement.children;
-      // remove .is-hovered class to the hovered element
-      this.classList.remove('is-hovered');
-      // loop thru all children of the element's parent
-      for (var j = 0; j < allSiblings.length; j++) {
-        // remove .is-faded class from all children of the element's parent
-        allSiblings[j].classList.remove('is-faded');
-      }
-    });
+    // allCards[i].addEventListener('mouseleave', function(e) {
+    //   // get all children of the hovered element's parent
+    //   var allSiblings = this.parentElement.children;
+    //   // remove .is-hovered class to the hovered element
+    //   this.classList.remove('is-hovered');
+    //   // loop thru all children of the element's parent
+    //   for (var j = 0; j < allSiblings.length; j++) {
+    //     // remove .is-faded class from all children of the element's parent
+    //     allSiblings[j].classList.remove('is-faded');
+    //   }
+    // });
   }
 
   
