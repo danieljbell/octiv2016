@@ -84,7 +84,7 @@
     <?php
       endif;
     ?>
-    <div class="site-width">
+    <div class="site-width client-story-the-result pad-b-more">
       <?php
         if (get_field('application_screenshot')) {
           echo '<div class="browser-window">';

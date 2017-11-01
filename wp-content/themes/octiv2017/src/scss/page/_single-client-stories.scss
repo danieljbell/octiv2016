@@ -1,8 +1,15 @@
+// CLEAR DAT FLOAT
+.client-story-the-result:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 // ADD SOME CUSTOM STYLE TO BROWSER WINDOW CLASS FOR POST TYPE
 .single-client-story .browser-window {
   width: 100%;
   @include desktop {
-    max-width: 600px;
+    max-width: 550px;
     float: right;
     margin-left: 3em;
     transform: translateY(2rem);
