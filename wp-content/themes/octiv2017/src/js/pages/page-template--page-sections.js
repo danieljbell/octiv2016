@@ -10,7 +10,7 @@ if (platformCreate) {
     }
   }
 
-  window.addEventListener('scroll', debounce(animatePlatformCreate));
+  window.addEventListener('scroll', animatePlatformCreate);
 
 }
 
@@ -26,7 +26,7 @@ if (platformShare) {
     }
   }
 
-  window.addEventListener('scroll', debounce(animatePlatformShare));
+  window.addEventListener('scroll', animatePlatformShare);
 
 }
 
@@ -42,7 +42,7 @@ if (platformSign) {
     }
   }
 
-  window.addEventListener('scroll', debounce(animatePlatformSign));
+  window.addEventListener('scroll', animatePlatformSign);
 
 }
 
@@ -58,7 +58,7 @@ if (platformStore) {
     }
   }
 
-  window.addEventListener('scroll', debounce(animatePlatformStore));
+  window.addEventListener('scroll', animatePlatformStore);
 
 }
 
@@ -74,6 +74,6 @@ if (platformAnalyze) {
     }
   }
 
-  window.addEventListener('scroll', debounce(animatePlatformAnalyze));
+  window.addEventListener('scroll', animatePlatformAnalyze);
 
 }
