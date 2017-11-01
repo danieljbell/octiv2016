@@ -17,14 +17,16 @@
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
-      <div class="video-outer" <?php if ($video_gate === 'gated') : ?> style="display: none;" <?php endif; ?>>
-        <div class="video-inner">
-          <?php
-            $video_host = get_field('video_host');
-            if ($video_host === 'youtube') {
-              echo '<iframe src="https://www.youtube.com/embed/' . get_field('video_id') . '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
-            }
-            ?>
+      <div class="two-third-only">
+        <div class="video-outer" <?php if ($video_gate === 'gated') : ?> style="display: none;" <?php endif; ?>>
+          <div class="video-inner">
+            <?php
+              $video_host = get_field('video_host');
+              if ($video_host === 'youtube') {
+                echo '<iframe src="https://www.youtube.com/embed/' . get_field('video_id') . '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>';
+              }
+              ?>
+          </div>
         </div>
       </div>
       <?php if ($video_gate === 'gated') : ?>
