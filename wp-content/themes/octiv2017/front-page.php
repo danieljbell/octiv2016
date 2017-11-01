@@ -45,7 +45,7 @@ get_header();
             </div>
             <h3 class="font-color-brand-three"><span class="font-bump">The Best Integrations in the Industry</span></h3>
             <p class="mar-b">Integrate seamlessly for the utmost personalization and accuracy.</p>
-            <a href="/platform/integrations" class="btn-brand-three--outline">Learn More</a>
+            <a href="/integrations" class="btn-brand-three--outline">Learn More</a>
           </div>
         </div>
       </div>

@@ -278,6 +278,18 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     );
     array_splice( $links, 1, 0, $breadcrumb );
   }
+  if (is_singular('client-story')) {
+    $breadcrumb[] = array(
+      'url' => '/resources',
+      'text' => 'Resources',
+    );
+    // array_splice( $links, 1, 0, $breadcrumb );
+    $breadcrumb[] = array(
+      'url' => '/resources/client-stories',
+      'text' => 'Client Stories',
+    );
+    array_splice($links, 1, 0, $breadcrumb);
+  }
   // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
   //   $breadcrumb[] = array(
   //     'url' => '/platform',
@@ -319,13 +331,13 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
   //   );
   //   array_splice( $links, 1, 0, $breadcrumb );
   // }
-//   if ( is_singular( 'client-stories' ) || is_archive( 'client-stories' ) ) {
-//     $breadcrumb[] = array(
-//       'url' => '/resources',
-//       'text' => 'Resources',
-//     );
-//     array_splice( $links, 1, 0, $breadcrumb );
-//   }
+  // if ( is_singular( 'client-stories' )) {
+  //   $breadcrumb[] = array(
+  //     'url' => '/resources',
+  //     'text' => 'Resources',
+  //   );
+  //   array_splice( $links, 1, 0, $breadcrumb );
+  // }
   return $links;
 }
 
