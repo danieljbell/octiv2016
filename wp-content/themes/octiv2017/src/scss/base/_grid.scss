@@ -61,10 +61,14 @@
   &.swap-order {
     > * {
       &:first-child {
+        margin-right: 0;
+        margin-left: 2rem;
         order: 2;
       }
       &:last-child {
         order: 1;
+        margin-right: 2rem;
+        margin-left: 0;
       }
     }
   }
