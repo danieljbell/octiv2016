@@ -7,6 +7,11 @@ TEMPLATE NAME: Resource Layout
 
 $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
 
+$browser =  $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+if ((strpos($browser, 'Windows NT'))) {
+  $older_browser = true;
+}
+
 ?>
 
 <?php get_header(); ?>
@@ -92,7 +97,26 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
 
   <section class="resource-grid">
     <div class="site-width">
-      <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
+      <?php if ($older_browser) : ?>
+      <div class="third">
+        <?php
+          $args = array(
+            'post_type' => get_field('post_type'),
+            'posts_per_page' => -1,
+            'order' => get_field('post_order'),
+            'orderby' => get_field('post_order_by')
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              echo do_shortcode('[get_card_v3]');
+            endwhile;
+          endif;
+          wp_reset_query();
+        ?>
+      </div>
+      <?php else : ?>
+        <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
         <div class="filter-container">
           <div>
             <input type="text" v-model="keyword" class="text-search-bar" placeholder="Filter <?php echo get_the_title(); ?> by Term">
@@ -170,6 +194,7 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
           <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
         </div>
       </div>
+      <?php endif; ?>
     </div>
   </section>
 

@@ -62,6 +62,7 @@
     svg {
       width: 100%;
       max-width: 25px;
+      max-height: 25px;
       @include mobile {
         max-width: 20px;
       }
@@ -85,6 +86,7 @@
     display: block;
     width: 100%;
     max-width: 175px;
+    max-height: 38px;
   }
   path {
     fill: $white;
