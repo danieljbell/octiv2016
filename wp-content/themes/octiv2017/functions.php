@@ -6,7 +6,7 @@ ADD GLOBAL CSS TO PAGE
 */
 function enqueue_global_css() {
   if (!get_field('remove_header')) {
-    wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.33');
+    wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.34');
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
@@ -283,7 +283,6 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
       'url' => '/resources',
       'text' => 'Resources',
     );
-    // array_splice( $links, 1, 0, $breadcrumb );
     $breadcrumb[] = array(
       'url' => '/resources/client-stories',
       'text' => 'Client Stories',

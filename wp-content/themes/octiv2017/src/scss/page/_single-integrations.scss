@@ -1,3 +1,9 @@
+.single-integration .post-content aside {
+  @include mobile {
+    display: none;
+  }
+}
+
 .single-integration .hero {
   text-shadow: none;
 }

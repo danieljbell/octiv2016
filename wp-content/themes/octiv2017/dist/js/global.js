@@ -3537,23 +3537,23 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   CARDS
   ==============================
   */
-  var allCards = document.querySelectorAll('.card');
-  for (var i = 0; i < allCards.length; i++) {
-    // add mouseenter event on all cards
-    allCards[i].addEventListener('mouseenter', function(e) {
-      // get all children of the hovered element's parent
-      var allSiblings = this.parentElement.children;
-      // add .is-hovered class to the hovered element
-      this.classList.add('is-hovered');
-      // loop thru all children of the element's parent
-      for (var j = 0; j < allSiblings.length; j++) {
-        // test for .is-hovered class
-        if (!allSiblings[j].classList.contains('is-hovered')) {
-          // add .is-faded if a sibling element
-          allSiblings[j].classList.add('is-faded');
-        }
-      }
-    });
+  // var allCards = document.querySelectorAll('.card');
+  // for (var i = 0; i < allCards.length; i++) {
+  //   // add mouseenter event on all cards
+  //   allCards[i].addEventListener('mouseenter', function(e) {
+  //     // get all children of the hovered element's parent
+  //     var allSiblings = this.parentElement.children;
+  //     // add .is-hovered class to the hovered element
+  //     this.classList.add('is-hovered');
+  //     // loop thru all children of the element's parent
+  //     for (var j = 0; j < allSiblings.length; j++) {
+  //       // test for .is-hovered class
+  //       if (!allSiblings[j].classList.contains('is-hovered')) {
+  //         // add .is-faded if a sibling element
+  //         allSiblings[j].classList.add('is-faded');
+  //       }
+  //     }
+  //   });
 
     // add mouseleave event on all cards
     // allCards[i].addEventListener('mouseleave', function(e) {
@@ -3567,7 +3567,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     //     allSiblings[j].classList.remove('is-faded');
     //   }
     // });
-  }
+  // }
 
   
   /*
