@@ -46,7 +46,7 @@ $context = stream_context_create(array(
 
   <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
 
-  <section class="pad-y-most">
+  <section class="pad-b-more">
     <div class="site-width">
       <div class="two-third reverse">
         <article>
