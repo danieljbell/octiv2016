@@ -33,50 +33,53 @@ if (platformShare) {
 
 }
 
-var platformSign = document.querySelector('.animation-platform--sign');
+var platformSign = $('.animation-platform--sign');
 
 if (platformSign) {
 
-  var topOfPlatformSign = platformSign.offsetTop;
+  var topOfPlatformSign = platformSign.offset().top;
 
   function animatePlatformSign() {
-    if (window.scrollY >= topOfPlatformSign - (window.innerHeight / 2)) {
-      platformSign.classList.add('active');
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfPlatformSign - (window.innerHeight / 2)) {
+      platformSign.addClass('active');
     }
   }
 
-  window.addEventListener('scroll', animatePlatformSign);
+  $(window).on('scroll', animatePlatformSign);
 
 }
 
-var platformStore = document.querySelector('.animation-platform--store');
+var platformStore = $('.animation-platform--store');
 
 if (platformStore) {
 
-  var topOfPlatformStore = platformStore.offsetTop;
+  var topOfPlatformStore = platformStore.offset().top;
 
   function animatePlatformStore() {
-    if (window.scrollY >= topOfPlatformStore - (window.innerHeight / 2)) {
-      platformStore.classList.add('active');
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfPlatformStore - (window.innerHeight / 2)) {
+      platformStore.addClass('active');
     }
   }
 
-  window.addEventListener('scroll', animatePlatformStore);
+  $(window).on('scroll', animatePlatformStore);
 
 }
 
-var platformAnalyze = document.querySelector('.animation-platform--analyze');
+var platformAnalyze = $('.animation-platform--analyze');
 
 if (platformAnalyze) {
 
-  var topOfPlatformAnalyze = platformAnalyze.offsetTop;
+  var topOfPlatformAnalyze = platformAnalyze.offset().top;
 
   function animatePlatformAnalyze() {
-    if (window.scrollY >= topOfPlatformAnalyze - (window.innerHeight / 2)) {
-      platformAnalyze.classList.add('active');
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfPlatformAnalyze - (window.innerHeight / 2)) {
+      platformAnalyze.addClass('active');
     }
   }
 
-  window.addEventListener('scroll', animatePlatformAnalyze);
+  $(window).on('scroll', animatePlatformAnalyze);
 
 }
