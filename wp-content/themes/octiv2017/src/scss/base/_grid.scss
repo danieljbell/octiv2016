@@ -20,22 +20,23 @@
       margin-right: 2rem;
     }
     margin-bottom: 2rem;
-    flex-basis: calc((100%/2) - 4rem);
+    flex-basis: calc((100%/2) - 2rem);
+    max-width: calc((100%/2) - 2rem);
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
-  @supports (display: grid) and (not (display: -ms-grid)) {
-    display: grid;
-    grid-gap: 2rem;
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    > * {
-      margin-right: 0;
-      margin-bottom: 0;
-    }
-  }
+  // @supports (display: grid) and (not (display: -ms-grid)) {
+  //   display: grid;
+  //   grid-gap: 2rem;
+  //   @include tablet {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+  //   > * {
+  //     margin-right: 0;
+  //     margin-bottom: 0;
+  //   }
+  // }
   &-only {
     width: 100%;
     margin: 0 auto;

@@ -16,7 +16,7 @@ var gulp          = require('gulp'),
 gulp.task('css', function () {
   var processors = [
     atImport,
-    autoprefixer({browsers: ['last 6 versions']}),
+    autoprefixer({browsers: ['last 6 versions', 'ie 9', 'ie 10', 'ie 11']}),
     mqpacker,
     cssnano
   ];

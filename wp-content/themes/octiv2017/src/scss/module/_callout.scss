@@ -1,3 +1,11 @@
+.box {
+  text-align: center;
+  border: 1px solid $mgray;
+  color: $gray;
+  text-shadow: none;
+}
+
+.box,
 .light-callout {
   background-color: $lgray;
   background-image: linear-gradient(rgba(white, 0.1),rgba(black, 0.1));
