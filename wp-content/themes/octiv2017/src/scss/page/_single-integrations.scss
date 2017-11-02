@@ -18,13 +18,15 @@
 }
 
 .hero-integration-logo-container {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
   > * {
-    flex: 1;
-    max-width: 300px;
     border-radius: 3px;
     box-shadow: 3px 8px 15px rgba(black, 0.2);
     padding: 1rem;
@@ -33,38 +35,55 @@
       margin-bottom: 0;
     }
     @include tablet {
+      flex: 1;
+      max-width: 300px;
+      min-height: 165px;
       padding: 2rem;
       margin-bottom: 0;
     }
     &.plus-sign {
+      min-height: auto;
       flex: 0;
       flex-basis: 50px;
       padding: 0;
       margin-bottom: 2rem;
+      display: none;
       @include tablet {
+        display: block;
         margin: 0 2rem;
       }
     }
   }
-  @include tablet {
-    flex-direction: row;
-  }
 }
 
 .hero-integration-logo.light-callout {
-  max-width: 200px;
+  padding: 3rem;
+  position: relative;
   @include tablet {
     max-width: 300px;
   }
   border: 1px solid $mgray;
   background-color: $lgray;
   background-image: linear-gradient($white, $lgray);
+  &:first-child {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
   img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     margin: 0 auto;
     max-width: 200px;
-    max-height: 100px;
+    max-height: 60px;
     width: 100%;
+    @include tablet {
+      max-height: 100px;
+    }
   }
 }
 
