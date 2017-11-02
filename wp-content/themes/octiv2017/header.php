@@ -4,7 +4,7 @@
   <base href="<?php echo site_url(); ?>">
   <meta charset="<?php bloginfo('charset'); ?>">
   <title><?php wp_title(''); ?></title>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -29,11 +29,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <!-- Google Tag Manager -->
-  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P7LZ6FP');</script> -->
+  })(window,document,'script','dataLayer','GTM-P7LZ6FP');</script>
   <!-- End Google Tag Manager -->
 
   <?php
@@ -53,11 +53,12 @@
     $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=" . $mkto_resp[access_token];
     $json = file_get_contents($url);
     $json_data = json_decode($json, true);
+    print_r($json_data);
   ?>
   <script>
     var mktoLead = {  
-      "requestId":"<?php echo $json_data[requestId]; ?>",
-      "success":true,
+      "requestId": "<?php echo $json_data[requestId]; ?>",
+      "success": true,
       "result":[  
         {  
           "firstName":"<?php echo $json_data[result][0][firstName]; ?>",
@@ -77,8 +78,8 @@
 </head>
 <body <?php body_class();?>>
   <!-- Google Tag Manager (noscript) -->
-  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7LZ6FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->  
 
 <?php if( current_user_can('edit_pages') ) :

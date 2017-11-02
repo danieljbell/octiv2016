@@ -325,8 +325,10 @@
 
 if (window.MktoForms2) {
   MktoForms2.whenReady(function (form) {
+    
     var pageURL = document.documentURI;
     $('input[name="sourceURL"]').attr('value', pageURL);  
+    
     var cook = getCookie('ref');
 
     if (cook) {

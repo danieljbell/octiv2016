@@ -3683,8 +3683,10 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 if (window.MktoForms2) {
   MktoForms2.whenReady(function (form) {
+    
     var pageURL = document.documentURI;
     $('input[name="sourceURL"]').attr('value', pageURL);  
+    
     var cook = getCookie('ref');
 
     if (cook) {
