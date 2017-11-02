@@ -15,7 +15,7 @@ $.ajax({
         selectedCats: []
       },
       methods: {
-        getMorePosts(postList) {
+        function getMorePosts(postList) {
           var newOffset = this.offset += postsPerPage;
           var postList = this.postList;
           this.$el.querySelector('button').innerText = 'Loading...';
@@ -33,7 +33,7 @@ $.ajax({
         }
       },
       computed: {
-        filteredList() {
+        function filteredList() {
           return this.postList.filter((post) => {
             if (window.location.href.indexOf("client-stories") > -1) {
               return post.title.rendered.toLowerCase().includes(this.keyword.toLowerCase());

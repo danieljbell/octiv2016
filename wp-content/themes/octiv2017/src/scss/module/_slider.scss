@@ -100,6 +100,9 @@ SLIDER MODULES
         width: 35px;
         bottom: calc(100% - 7px);
       }
+      @include IE {
+        bottom: 29px;
+      }
     }
     img {
       filter: grayscale(1);

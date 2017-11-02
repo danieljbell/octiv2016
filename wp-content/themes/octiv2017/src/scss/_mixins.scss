@@ -29,4 +29,10 @@ CREATE MEDIA QUERY
   }
 }
 
+@mixin IE {
+  @media screen and (min-width:0\0) {
+    @content;
+  }
+}
+
 @import '../../node_modules/bulma/sass/utilities/mixins';

@@ -102,4 +102,14 @@ button {
       transform: translateY(0);
     }
   }
+  @include IE {
+    border-bottom: 2px solid $brand2;
+    &:before {
+      display: none;
+    }
+    &:hover,
+    &:focus {
+      color: $gray;
+    }
+  }
 }

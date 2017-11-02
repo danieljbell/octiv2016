@@ -27,14 +27,13 @@ $greenhouse_page = parse_str($_SERVER['gh_jid']);
 
       <section class="pad-y-most">
         <div class="site-width">
-          <div class="half">
+          <div class="half vertical-align">
             <div>
               <h2>Come Join Our Growing Team</h2>
               <p>Octiv was founded to provide sales teams a better way to create the assets they need to close deals. We’re passionate about bringing insight, analytics and automation to sales and have earned our position as an industry leader by empowering hundreds of companies around the world to create, deliver and track sales materials online.</p>
               <a href="/company/careers/#openings" class="btn-primary">View All Opportunities</a>
             </div>
-            <div style="background-image: url(/wp-content/uploads/2016/07/team-togetherness.jpg); background-size: cover; background-position: center;">
-              <!-- <img src="/wp-content/uploads/2016/07/team-togetherness.jpg" alt="Team" style="width: 100%;"> -->
+            <div style="background-image: url(http://octiv.staging.wpengine.com/wp-content/uploads/2017/11/octiv-office-1.jpg); background-size: cover; background-position: center; min-height: 325px;">
             </div>
           </div>
         </div>

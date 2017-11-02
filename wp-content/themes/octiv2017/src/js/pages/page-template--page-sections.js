@@ -1,32 +1,35 @@
-var platformCreate = document.querySelector('.animation-platform--create');
+var platformCreate = $('.animation-platform--create');
 
 if (platformCreate) {
 
-  var topOfPlatformCreate = platformCreate.offsetTop;
+  var topOfPlatformCreate = platformCreate.offset().top;
+
 
   function animatePlatformCreate() {
-    if (window.scrollY >= topOfPlatformCreate - (window.innerHeight / 2)) {
-      platformCreate.classList.add('active');
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfPlatformCreate - (window.innerHeight / 2)) {
+      platformCreate.addClass('active');
     }
   }
 
-  window.addEventListener('scroll', animatePlatformCreate);
+  $(window).on('scroll', animatePlatformCreate);
 
 }
 
-var platformShare = document.querySelector('.animation-platform--share');
+var platformShare = $('.animation-platform--share');
 
 if (platformShare) {
 
-  var topOfPlatformShare = platformShare.offsetTop;
+  var topOfPlatformShare = platformShare.offset().top;
 
   function animatePlatformShare() {
-    if (window.scrollY >= topOfPlatformShare - (window.innerHeight / 2)) {
-      platformShare.classList.add('active');
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfPlatformShare - (window.innerHeight / 2)) {
+      platformShare.addClass('active');
     }
   }
 
-  window.addEventListener('scroll', animatePlatformShare);
+  $(window).on('scroll', animatePlatformShare);
 
 }
 

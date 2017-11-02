@@ -67,6 +67,9 @@
   background-color: darken($lgray, 3%);
   background-image: linear-gradient(rgba(darken($lgray, 3%), 0.4), rgba(darken($lgray, 3%), 0.4)), url(../img/octiv-pattern--dark.svg);
   background-size: 300px;
+  @include IE {
+    background-image: linear-gradient(rgba(darken($lgray, 3%), 0.4), rgba(darken($lgray, 3%), 0.4));
+  }
   .color-boxes {
     margin-bottom: 0;
   }

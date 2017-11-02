@@ -352,4 +352,8 @@ DOCUMENT CONTAINER
     font-size: 1.5em;
     margin-bottom: 1em;
   }
+  @include IE {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
