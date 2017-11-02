@@ -289,6 +289,17 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     );
     array_splice($links, 1, 0, $breadcrumb);
   }
+  if (is_singular('events')) {
+    $breadcrumb[] = array(
+      'url' => '/resources',
+      'text' => 'Resources',
+    );
+    $breadcrumb[] = array(
+      'url' => '/resources/events',
+      'text' => 'Events',
+    );
+    array_splice($links, 1, 1, $breadcrumb);
+  }
   // if ( is_singular( array('features', 'use-cases') ) || is_post_type_archive( array('integration', 'features', 'use-cases') ) || is_tax('integration_type') ) {
   //   $breadcrumb[] = array(
   //     'url' => '/platform',
