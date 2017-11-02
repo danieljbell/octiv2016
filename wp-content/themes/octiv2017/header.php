@@ -53,7 +53,6 @@
     $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=" . $mkto_resp[access_token];
     $json = file_get_contents($url);
     $json_data = json_decode($json, true);
-    print_r($json_data);
   ?>
   <script>
     var mktoLead = {  
