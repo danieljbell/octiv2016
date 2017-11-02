@@ -215,7 +215,6 @@ add_shortcode('custom_animation', function($atts) {
         <img src="/wp-content/themes/octiv2017/dist/img/app-header.svg" alt="" class="application-header">
         <img src="/wp-content/themes/octiv2017/dist/img/repository-list.svg" alt="" class="repository-list">
       </div>
-    <!-- <div class="repository-list"></div> -->
     </div>
   </div>
 <?php endif; ?>
