@@ -44,3 +44,11 @@ MktoForms2.whenRendered(function(form) {
 });
 
 })();
+
+var hasDemoAuth = getParameterByName('demo_auth');
+var hasReg = getParameterByName('reg');
+
+if (hasDemoAuth || hasReg) {
+  var initialPath = window.location.pathname;
+  window.history.replaceState( {} , 'bar', initialPath );
+}

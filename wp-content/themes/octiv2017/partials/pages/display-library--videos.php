@@ -1,6 +1,6 @@
 <?php
   // page request variables
-  $has_reg = $_GET['reg'];
+  $has_reg = $_GET['reg'] || $_GET['demo_auth'];
   $has_first_name = $_GET['first_name'];
   $video_gate = get_field('gated_or_open');
   $form_id = '1041';
@@ -18,7 +18,7 @@
   <div class="site-width">
     <div class="box--light">
       <div class="two-third-only">
-        <div class="video-outer" <?php if ($video_gate === 'gated') : ?> style="display: none;" <?php endif; ?>>
+        <div class="video-outer" <?php if (($video_gate === 'gated') && (!$has_reg)) : ?> style="display: none;" <?php endif; ?>>
           <div class="video-inner">
             <?php
               $video_host = get_field('video_host');
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <?php if ($video_gate === 'gated') : ?>
+      <?php if (($video_gate === 'gated') && (!$has_reg)) : ?>
         <div class="half">
           <div class="page-content">
             <img src="<?php echo $thumb_url; ?>" alt="<?php echo get_the_title(); ?> Featured Image" class="mar-b" style="width: initial; max-width: 100%;">
