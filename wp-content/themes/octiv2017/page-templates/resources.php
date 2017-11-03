@@ -7,13 +7,9 @@ TEMPLATE NAME: Resource Layout
 
 $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
 
-$browser =  $_SERVER['HTTP_USER_AGENT'] . "\n\n";
-
-// print_r($browser);
-
-// if ((strpos($browser, 'Windows NT'))) {
-//   $older_browser = true;
-// }
+if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false)) {
+  $older_browser = true;
+}
 
 ?>
 
@@ -100,25 +96,25 @@ $browser =  $_SERVER['HTTP_USER_AGENT'] . "\n\n";
 
   <section class="resource-grid">
     <div class="site-width">
-      <?php //if ($older_browser) : ?>
-      <div class="third">
+      <?php if ($older_browser) : ?>
+      <div class="third pad-t-more">
         <?php
-          // $args = array(
-          //   'post_type' => get_field('post_type'),
-          //   'posts_per_page' => -1,
-          //   'order' => get_field('post_order'),
-          //   'orderby' => get_field('post_order_by')
-          // );
-          // $query = new WP_Query($args);
-          // if ($query->have_posts()) :
-          //   while ($query->have_posts()) : $query->the_post();
-          //     echo do_shortcode('[get_card_v3]');
-          //   endwhile;
-          // endif;
-          // wp_reset_query();
+          $args = array(
+            'post_type' => get_field('post_type'),
+            'posts_per_page' => -1,
+            'order' => get_field('post_order'),
+            'orderby' => get_field('post_order_by')
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              echo do_shortcode('[get_card_v3]');
+            endwhile;
+          endif;
+          wp_reset_query();
         ?>
       </div>
-      <?php //else : ?>
+      <?php else : ?>
         <div id="searchable-resources" class="pad-t-more pad-b-most searchable-resources">
         <div class="filter-container">
           <div>
@@ -197,7 +193,7 @@ $browser =  $_SERVER['HTTP_USER_AGENT'] . "\n\n";
           <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
         </div>
       </div>
-      <?php //endif; ?>
+      <?php endif; ?>
     </div>
   </section>
 

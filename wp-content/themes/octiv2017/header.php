@@ -74,6 +74,10 @@
 
   <?php wp_head(); ?>
 
+  <!--[if lte IE 9]>
+    <link rel='stylesheet' href='http://localhost:1337/wp-content/themes/octiv2017/dist/css/ie.css?ver=1.0.0' type='text/css' media='all' />
+  <![endif]-->
+
 </head>
 <body <?php body_class();?>>
   <!-- Google Tag Manager (noscript) -->

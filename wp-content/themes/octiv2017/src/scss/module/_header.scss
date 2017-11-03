@@ -103,10 +103,6 @@
 }
 
 .top-level-navigation {
-  display: table;
-  > * {
-    display: table-cell;
-  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

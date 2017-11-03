@@ -26,12 +26,15 @@
     position: relative;
 
     &:after {
+      content: '';
       position: absolute;
-      content: url('../img/resource-wedge.svg');
+      background-image: url('../img/resource-wedge.svg');
+      background-repeat: no-repeat;
       display: block;
       top: 100%;
       left: 50%;
       width: 50px;
+      height: 25px;
       transform: translateX(-50%);
       color: $gray;
       transition: all 200ms ease-in-out;

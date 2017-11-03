@@ -38,11 +38,9 @@
 
 .eyebrow-quick-links ul {
   list-style-type: none;
-  display: table;
   display: flex;
   justify-content: flex-end;
   li {
-    display: table-cell;
     &:after {
       content: '|';
       display: inline-block;
