@@ -3,6 +3,18 @@
 GRID CLASSES
 ==============================
 */
+.half:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.half > * {
+  float: left;
+  width: calc((100%/2) - 2rem);
+  display: inline-block;
+}
+
 .third:after {
   content: '';
   display: table;
@@ -64,15 +76,102 @@ SITE HEADER
 }
 
 .top-level-navigation {
-  /*display: table;
-  width: 100%;*/
-  > * {
-    display: inline-block;
-  }
+  text-align: right;
+}
+
+.top-level-navigation > * {
+  display: inline-block;
+  text-align: left;
+}
+
+
+/*
+==============================
+SITE FOOTER
+==============================
+*/
+.footer-utility-links {
+  
+}
+
+.footer-utility-links:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.footer-utility-links > * {
+  float: left;
+  width: calc((100%/3) - 1rem);
+}
+
+.footer-utility-links > *:last-child {
+  text-align: right;
+}
+
+.footer-utility-links .social-links svg {
+  max-width: 25px;
+  width: 25px;
+}
+
+.footer-admin-links,
+#menu-site-footer {
+  display: table;
+  width: 100%;
+}
+
+.footer-admin-links > *,
+#menu-site-footer > * {
+  display: table-cell;
+}
+
+.sub-footer-container .site-width {
+  display: table;
+  width: 100%;
+}
+
+.sub-footer-container .site-width > * {
+  display: table-cell;
+}
+
+.sub-footer-container .site-width > *:last-child {
+  text-align: right;
 }
 
 
 
+
+/*
+==============================
+COLOR BOXES 
+==============================
+*/
+/* don't be bigger than you are supposed to */
 [class*='color-box-headline'] {
   display: inline-block;
+}
+
+
+/*
+==============================
+SLIDERS
+==============================
+*/
+.slick-dots {
+  text-align: center;
+}
+.slick-dots > * {
+  display: inline-block;
+}
+
+
+/*
+==============================
+UTILITIES
+==============================
+*/
+.document-container {
+  margin: 0 auto;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
