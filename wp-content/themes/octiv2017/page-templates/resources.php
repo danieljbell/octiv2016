@@ -99,11 +99,26 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
       <?php if ($older_browser) : ?>
       <div class="third pad-t-more">
         <?php
+          $old_post_type = 'posts';
+          if (get_field('post_type')) {
+            $old_post_type = get_field('post_type');
+          }
+
+          $old_post_order = 'DESC';
+          if (get_field('post_order')) {
+            $old_post_order = get_field('post_order');
+          }
+
+          $old_order_by = 'date';
+          if (get_field('post_order_by')) {
+            $old_order_by = get_field('post_order_by');
+          }
+
           $args = array(
-            'post_type' => get_field('post_type'),
+            'post_type' => $old_post_type,
             'posts_per_page' => -1,
-            'order' => get_field('post_order'),
-            'orderby' => get_field('post_order_by')
+            'order' => $old_post_order,
+            'orderby' => $old_order_by
           );
           $query = new WP_Query($args);
           if ($query->have_posts()) :
