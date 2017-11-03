@@ -169,7 +169,11 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
         <div id="resource-items" class="third">
           <script>
             var today = new Date();
-            var todaysDate = today.getFullYear().toString() + (today.getMonth() + 1).toString() + today.getDate().toString();
+            var todayDay = today.getDate();
+            if (todayDay < 10) {
+              todayDay = '0' + todayDay;
+            }
+            var todaysDate = today.getFullYear().toString() + (today.getMonth() + 1).toString() + todayDay.toString();
           </script>
           <div v-for="post in filteredList" class="card">
             <template v-if="post._embedded['wp:featuredmedia']">
