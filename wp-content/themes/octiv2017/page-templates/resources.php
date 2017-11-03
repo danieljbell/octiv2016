@@ -100,7 +100,9 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
       <div class="third pad-t-more">
         <?php
           $old_post_type = 'post';
-          if (get_field('post_type')) {
+          if (get_field('post_type') === 'posts') {
+            $old_post_type = 'post';
+          } else {
             $old_post_type = get_field('post_type');
           }
 
