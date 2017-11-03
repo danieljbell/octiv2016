@@ -57,4 +57,10 @@
       }
     }
   }
+  @include IE {
+    &.half > div {
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
