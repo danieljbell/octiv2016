@@ -221,7 +221,7 @@ if (get_field('post_type') === 'posts') {
           ?>
           <?php if ($post_type_total > get_field('post_count')) : ?>
             <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
-          <?php endif; ?>
+          <?php endif; wp_reset_query(); ?>
         </div>
       </div>
       <?php endif; ?>

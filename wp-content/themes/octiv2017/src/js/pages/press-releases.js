@@ -19,6 +19,11 @@ $('#load-more-press').on('click', function() {
         var postExcerpt = resp[i].excerpt.rendered;
         $('.press-release-listing').append('<li class="press-release-item"><time>' + finalPostDate + '</time><h3><a href="' + postLink + '" title="' + postTitle + '">' + postTitle + '</a></h3>' + postExcerpt + '</li>');
       }
+
+      if (resp.length < 10) {
+        // console.log('i am spent');
+        $('#load-more-press').parent().html('<h2 class="mar-t-more">All Press Releases loaded</h2>');  
+      }
     }
   });
 });

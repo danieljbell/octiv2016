@@ -27,14 +27,28 @@
             endwhile;
             echo '</ul>';
           endif;
+          wp_reset_query();
         ?>
       </div>
       <div class="has-text-center">
-        <button id="load-more-press" class="btn-primary">Load More Press Releases</button>
+        <button id="load-more-press" class="btn-brand--outline">Load More Press Releases</button>
       </div>
     </div>
   </section>
 
 </main>
+
+<?php
+  $args = array(
+    'post_type' => 'press-releases',
+    'posts_per_page' => -1
+  );
+  $query = new WP_Query($args);
+  $post_type_total = $query->post_count;
+?>
+
+<script>
+  var postTypeTotal = <?php echo $post_type_total; ?>;
+</script>
 
 <?php get_footer(); ?>

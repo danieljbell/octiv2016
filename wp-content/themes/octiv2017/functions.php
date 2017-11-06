@@ -44,7 +44,7 @@ function enqueue_global_js() {
     wp_enqueue_script('support', get_stylesheet_directory_URI() . '/dist/js/support-portal.js', array(), '1.0.0', true);
   }
   if (is_post_type_archive('press-releases')) {
-    wp_enqueue_script('press-releases', get_stylesheet_directory_URI() . '/dist/js/press-releases.js', array(), '1.0.0', true);
+    wp_enqueue_script('press-releases', get_stylesheet_directory_URI() . '/dist/js/press-releases.js', array(), '1.0.1', true);
   }
   if (is_singular('events')) {
     wp_enqueue_script('events', get_stylesheet_directory_URI() . '/dist/js/events.js', array(), '1.0.0', true);
