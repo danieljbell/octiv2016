@@ -21,10 +21,10 @@
         if ($count % 2 == 0) {
           $section_class = 'swap-order';
         }
-        if ($count > 4) {
-          $count = 1;
+        if ($count > 3) {
+          $count = 0;
         }
-        $current_iteration = $number_formatter->format($count + 1);
+        $current_iteration = $number_formatter->format($count + 2);
       ?>
       <li class="page-section-item">
         <?php if (!get_sub_field('is_promoted_item')) : ?>
