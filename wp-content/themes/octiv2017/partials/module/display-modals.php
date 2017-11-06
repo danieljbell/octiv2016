@@ -204,3 +204,24 @@ EMPTY MODAL
     }
   </style>
 <?php endif; ?>
+
+
+<?php
+/*
+==============================
+TINDERBOX REFERAL MODAL
+==============================
+*/
+?>
+<?php if ($_GET['ref'] === 'tinderbox') : ?>
+  <div class="rebrand-modal modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+      <div class="modal-content vertical-align">
+        <div class="modal-header--content">
+          <?php echo get_post(590)->post_content; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>

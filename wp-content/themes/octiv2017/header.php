@@ -1,3 +1,18 @@
+<?php
+  // Redirect deleted blog pages to the resource pages
+  if(is_404() && $_GET['ref']=="tinderbox"){
+      $postid = get_ID_by_slug(get_requested_slug());
+      if($postid!=null) {
+        $newpageurl = get_permalink($postid);
+      } else {
+        $newpageurl = "https://octiv.com/resources/?ref=tinderbox";
+      }
+      header("HTTP/1.1 301 Moved Permanently");
+      header("Location: ".$newpageurl);
+      exit;
+  }
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

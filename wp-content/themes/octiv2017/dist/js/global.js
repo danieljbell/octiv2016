@@ -3531,6 +3531,13 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     $('.search-modal-container').modal();
   })
 
+  // TINDERBOX REFERAL
+  if (getParameterByName('ref') === 'tinderbox') {
+    $('.rebrand-modal').modal();
+    // var initialPath = window.location.pathname;
+    // window.history.replaceState( {} , 'bar', initialPath );
+  }
+
 
   /*
   ==============================
@@ -3744,20 +3751,3 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
-
-
-// function debounce(func, wait = 20, immediate = true) {
-//   var timeout;
-//   return function() {
-//     var context = this;
-//     var args = arguments;
-//     var later = function() {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     var callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// };
