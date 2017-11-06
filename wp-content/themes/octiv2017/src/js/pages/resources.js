@@ -23,12 +23,22 @@ $.ajax({
             async: false,
             url: "/wp-json/wp/v2/" + pagePostType + "?_embed&order=" + postOrder + "&per_page=" + postsPerPage + "&offset=" + newOffset,
           }).done(function(data) {
+            var prettyPageType;
+            if (pagePostType === 'posts') {
+              prettyPageType = 'Blog Posts';
+            } else if (pagePostType === 'client-story') {
+              prettyPageType = 'Client Stories';
+            } else if (pagePostType === 'library') {
+              prettyPageType = 'Library Content';
+            } else if (pagePostType === 'events') {
+              prettyPageType = 'Events';
+            }
             var resp = data;
             for (var i = 0; i < resp.length; i++) {
               postList.push(resp[i]);
             }
             if (resp.length < postsPerPage) {
-              $('#load-more-posts').hide();
+              $('#load-more-posts').parent().html('<h2 class="mar-t-more">All ' + prettyPageType + ' loaded</h2>');
             }
           });
         }

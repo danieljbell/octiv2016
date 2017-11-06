@@ -11,6 +11,13 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
   $older_browser = true;
 }
 
+$old_post_type = 'post';
+if (get_field('post_type') === 'posts') {
+  $old_post_type = 'post';
+} else {
+  $old_post_type = get_field('post_type');
+}
+
 ?>
 
 <?php get_header(); ?>
@@ -99,13 +106,6 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
       <?php if ($older_browser) : ?>
       <div class="third pad-t-more">
         <?php
-          $old_post_type = 'post';
-          if (get_field('post_type') === 'posts') {
-            $old_post_type = 'post';
-          } else {
-            $old_post_type = get_field('post_type');
-          }
-
           $old_post_order = 'DESC';
           if (get_field('post_order')) {
             $old_post_order = get_field('post_order');
@@ -211,7 +211,17 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
           </div>
         </div>
         <div class="has-text-center">
-          <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
+          <?php
+            $args = array(
+              'post_type' => $old_post_type,
+              'posts_per_page' => -1
+            );
+            $query = new WP_Query($args);
+            $post_type_total = $query->post_count;
+          ?>
+          <?php if ($post_type_total > get_field('post_count')) : ?>
+            <button v-on:click="getMorePosts()" id="load-more-posts" class="btn-brand--outline mar-t-most">Load More Posts</button>
+          <?php endif; ?>
         </div>
       </div>
       <?php endif; ?>
@@ -232,6 +242,9 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
     $postsPerPage = 99;
     
     if (get_field('post_type')) {
+      
+      echo 'var postTypeTotal = ' . $post_type_total . ';';
+
       echo "var pagePostType = '" . get_field('post_type') . "';";
       echo "var postTypeCats = [";
         if (get_field('post_type') !== 'client-story') :
