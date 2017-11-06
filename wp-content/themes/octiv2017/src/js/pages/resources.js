@@ -18,7 +18,6 @@ $.ajax({
         getMorePosts(postList) {
           var newOffset = this.offset += postsPerPage;
           var postList = this.postList;
-          this.$el.querySelector('button').innerText = 'Loading...';
           $.ajax({
             dataType: "json",
             async: false,
@@ -28,7 +27,9 @@ $.ajax({
             for (var i = 0; i < resp.length; i++) {
               postList.push(resp[i]);
             }
-            $('#load-more-posts').text('Load More Posts');
+            if (resp.length < postsPerPage) {
+              $('#load-more-posts').hide();
+            }
           });
         }
       },

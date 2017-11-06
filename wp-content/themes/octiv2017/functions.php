@@ -29,7 +29,7 @@ function enqueue_global_js() {
     wp_enqueue_script('library', get_stylesheet_directory_URI() . '/dist/js/library.js', array(), '1.0.1', true);
   }
   if (is_page_template('page-templates/resources.php')) {
-    wp_enqueue_script('resources', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.2', true);
+    wp_enqueue_script('resources', get_stylesheet_directory_URI() . '/dist/js/resources.js', array(), '1.0.3', true);
   }
   if (is_page_template('page-templates/archive.php')) {
     wp_enqueue_script('page-template--archive', get_stylesheet_directory_URI() . '/dist/js/page-template--archive.js', array(), '1.0.1', true);
