@@ -176,8 +176,8 @@
   // TINDERBOX REFERAL
   if (getParameterByName('ref') === 'tinderbox') {
     $('.rebrand-modal').modal();
-    // var initialPath = window.location.pathname;
-    // window.history.replaceState( {} , 'bar', initialPath );
+    var initialPath = window.location.pathname;
+    window.history.replaceState( {} , 'bar', initialPath );
   }
 
 

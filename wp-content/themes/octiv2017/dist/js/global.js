@@ -3534,8 +3534,8 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   // TINDERBOX REFERAL
   if (getParameterByName('ref') === 'tinderbox') {
     $('.rebrand-modal').modal();
-    // var initialPath = window.location.pathname;
-    // window.history.replaceState( {} , 'bar', initialPath );
+    var initialPath = window.location.pathname;
+    window.history.replaceState( {} , 'bar', initialPath );
   }
 
 
