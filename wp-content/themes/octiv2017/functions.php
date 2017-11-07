@@ -365,3 +365,23 @@ function add_menu_order_api( $params ) {
 
     return $params;
 }
+
+/*
+==============================
+ADDING ACF OPTIONS PAGES
+==============================
+*/
+if( function_exists('acf_add_options_page') ) {
+  
+  $args = array(
+    'page_title'    => 'Press Release Settings',
+    'menu_title'    => 'Press Release Settings',
+    'menu_slug'     => 'press-release-settings',
+    'parent_slug'   => 'edit.php?post_type=press-releases',
+    'position'      => false,
+    'icon_url'      => false
+  );
+
+  acf_add_options_sub_page($args);
+  
+}

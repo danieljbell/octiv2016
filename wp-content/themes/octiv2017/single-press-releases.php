@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<?php
+  $boilerplate = get_field('boilerplate', 'option', false);
+  $contact_name = get_field('contact_name', 'option');
+  $contact_phone_number = get_field('contact_phone_number', 'option');
+  $contact_phone_number_link = $contact_phone_number;
+  $contact_email_address = get_field('contact_email_address', 'option');
+?>
+
 
 <main>
   
@@ -14,8 +22,9 @@
           <?php the_content(); ?>
           <hr>
           <h3>About Octiv</h3>
-          <p>Octiv provides a document generation platform designed to create efficiencies in creating documents like proposals, quotes, contracts, presentations and more. Octiv integrates data from back-office systems to streamline workflows, save time and accelerate the document creation and delivery process. Founded in 2010, Octiv services more than 400 organizations including enterprises such as General Electric and Siemens, and high-growth companies such as Lindamood-Bell and G/O Digital. To learn more, visit <a href="/" title="Octiv Homepage">octiv.com</a>.</p>
-          <p><strong>Media Contact</strong><br>Kelli Blystone<br><a href="tel:3175500148,721">317.550.0148 ext. 721</a><br><a href="mailto:kelli.blystone@octiv.com">kelli.blystone@octiv.com</a></p>
+          <p><?php echo $boilerplate; ?></p>
+          <p></p>
+          <p><strong>Media Contact</strong><br><?php echo $contact_name; ?><br><a href="tel:<?php echo $contact_phone_number; ?>"><?php echo $contact_phone_number; ?></a><br><a href="mailto:<?php echo $contact_email_address; ?>"><?php echo $contact_email_address; ?></a></p>
         </article>
       </div>
     </div>
