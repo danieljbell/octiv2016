@@ -96,9 +96,7 @@ GET OUR LOGO
 GLOBAL SEARCH
 ==============================
 */
-?>
 
-<?php
 /*
 ==============================
 <div class="search-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -114,8 +112,7 @@ GLOBAL SEARCH
         </div>
         <div class="modal-header--content">
           <div id="global-search">
-            <input type="text" class="text-search-bar" v-model="keyword">
-            <select v-model="selectedCats">
+            <select class="mar-b" v-model="selectedCats">
               <?php
                 $args = array(
                   'public' => true,
@@ -127,14 +124,15 @@ GLOBAL SEARCH
                 }
               ?>
             </select>
+            <input type="text" class="text-search-bar" v-model="keyword">
           </div>
         </div>
       </div>
       <div class="modal-body">
         <strong>Searching <span v-if="selectedCats != ''">{{selectedCats}}</span> for: {{keyword}}</strong>
-        <ul class="modal-search-list">
+        <!-- <ul class="modal-search-list">
           <li v-for="post in filteredList"><a v-bind:href="post.link" v-html="post.title.rendered"></a></li>
-        </ul>
+        </ul> -->
         <div class="has-text-center">
           <button v-on:click="getMorePosts()" class="btn-brand--outline">Load More Posts</button>
         </div>
@@ -144,6 +142,7 @@ GLOBAL SEARCH
 </div>
 ==============================
 */
+
 ?>
 
 
