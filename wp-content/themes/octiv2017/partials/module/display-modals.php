@@ -224,3 +224,41 @@ TINDERBOX REFERAL MODAL
     </div>
   </div>
 <?php endif; ?>
+
+
+<?php
+/*
+==============================
+LEADERSHIP BIO MODAL
+==============================
+*/
+?>
+<?php if (is_page_template('page-templates/company-page.php')) : ?>
+<div class="leadership-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+    <div class="modal-content half">
+      <div class="modal-header light-callout">
+        <div class="modal-header--brand">
+          <div class="color-boxes">
+            <div class="person-headshot mar-b" style="margin-right: 0;">
+              <img src="//fillmurray.com/185/185" alt="" class="">
+            </div>
+            <h4 class="color-box-headline--gray">Person Name</h4>
+          </div>
+          <p class="person-title">Person Title</p>
+        </div>
+        <div class="modal-header--content">
+          <p>Follow Person on:</p>
+          <ul>
+            <li>Linkedin</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="bio-content">person bio</div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php endif; ?>

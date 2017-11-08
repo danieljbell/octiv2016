@@ -65,7 +65,13 @@ Template Name: Company Page
           if (have_rows('company_leadership')) :
             while (have_rows('company_leadership')) : the_row();
               echo '<li class="has-text-center">';
-                echo '<img src="' . get_sub_field('leader_headshot') . '" alt="' . get_sub_field('leader_name') . '" class="leadership-headshot">';
+                echo '<div class="headshot-container">';
+                  echo '<img src="' . get_sub_field('leader_headshot') . '" alt="' . get_sub_field('leader_name') . '" class="leadership-headshot">';
+                  echo '<div class="read-bio">'; ?>
+<button class="launch-bio-modal btn-white--outline" data-name="<?php echo get_sub_field('leader_name'); ?>" data-title="<?php echo get_sub_field('leader_title'); ?>" data-bio="<?php echo get_sub_field('leader_biography'); ?>" data-headshot="<?php echo get_sub_field('leader_headshot'); ?>">Read Bio</button>
+                <?php  
+                  echo '</div>';
+                echo '</div>';
                 echo '<div class="leadership-content">';
                   echo '<h4>' . get_sub_field('leader_name') . '</h4>';
                   echo '<p>' . get_sub_field('leader_title') . '</p>';

@@ -20,8 +20,6 @@ gulp.task('css', function () {
     mqpacker,
     cssnano
   ];
-  gulp.src('./dist/css/**/*', {read: false})
-    .pipe(clean());
   gulp.src('./src/css/*.css')
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());

@@ -3538,6 +3538,21 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     window.history.replaceState( {} , 'bar', initialPath );
   }
 
+  // TINDERBOX REFERAL
+  var bioModalButtons = $('.launch-bio-modal');
+  bioModalButtons.on('click', function() {
+    var personName = this.dataset.name;
+    var personTitle = this.dataset.title;
+    var personBio = this.dataset.bio;
+    var personHeadshot = this.dataset.headshot;
+    var modalContainer = $('.leadership-modal-container');
+    modalContainer.find('.color-box-headline--gray').text(personName);
+    modalContainer.find('.person-title').text(personTitle);
+    modalContainer.find('.bio-content').html(personBio);
+    modalContainer.find('.person-headshot img').attr('src', personHeadshot);
+    modalContainer.modal();
+  });
+
 
   /*
   ==============================

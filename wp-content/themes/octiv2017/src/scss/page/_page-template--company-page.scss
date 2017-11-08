@@ -36,14 +36,69 @@
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
-  .leadership-headshot {
-    width: 100%;
-    max-width: 185px;
-    border-radius: 50%;
-  }
   img[src*="svg"] {
     max-width: 30px;
   }
+}
+
+.leadership-headshot {
+  width: 100%;
+  max-width: 185px;
+  min-width: 185px;
+  min-height: 185px;
+  border-radius: 50%;
+}
+
+.headshot-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:after {
+    max-width: 185px;
+    max-height: 185px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+}
+
+.headshot-container .read-bio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 2;
+}
+
+.read-bio button {
+  font-size: 0.9em;;
+}
+
+.headshot-container:hover {
+  
+  &:after {
+    opacity: 0.6;
+  }
+
+  .read-bio {
+    opacity: 1;
+  }
+
+}
+
+.leadership-content p {
+  margin-bottom: 0.5rem;
 }
 
 .page-template-company-page .site-footer {
