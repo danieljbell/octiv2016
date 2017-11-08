@@ -1,4 +1,14 @@
 <?php
+$user = 'octiv';
+$pass = 'D@n13lR0cks!';
+$context = stream_context_create(array(
+  'http' => array(
+    'header'  => "Authorization: Basic " . base64_encode("$user:$pass")
+  )
+));
+?>
+
+<?php
 /*
 ==============================
 REQUEST A DEMO
