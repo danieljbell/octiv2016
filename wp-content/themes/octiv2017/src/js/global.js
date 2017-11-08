@@ -187,7 +187,21 @@
     var personTitle = this.dataset.title;
     var personBio = this.dataset.bio;
     var personHeadshot = this.dataset.headshot;
+    var personLinkedIn = this.dataset.linkedin;
+    var personTwitter = this.dataset.twitter;
     var modalContainer = $('.leadership-modal-container');
+    if (personTwitter) {
+      modalContainer.find('.twitter-icon').show();
+      modalContainer.find('.twitter-icon a').attr('href', personTwitter);
+    } else {
+      modalContainer.find('.twitter-icon').hide();
+    }
+    if (personLinkedIn) {
+      modalContainer.find('.linkedin-icon').show();
+      modalContainer.find('.linkedin-icon a').attr('href', personLinkedIn);
+    } else {
+      modalContainer.find('.linkedin-icon').hide();
+    }
     modalContainer.find('.color-box-headline--gray').text(personName);
     modalContainer.find('.person-title').text(personTitle);
     modalContainer.find('.bio-content').html(personBio);

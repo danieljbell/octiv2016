@@ -238,25 +238,23 @@ LEADERSHIP BIO MODAL
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
     <div class="modal-content half">
-      <div class="modal-header light-callout" style="margin-right: 0;">
+      <div class="modal-header light-callout">
         <div class="modal-header--brand">
           <div class="color-boxes">
-            <div class="person-headshot mar-b" style="margin-right: 0;">
+            <div class="person-headshot mar-b">
               <img src="//fillmurray.com/185/185" alt="" class="">
             </div>
             <h4 class="color-box-headline--gray">Person Name</h4>
           </div>
-          <p class="person-title">Person Title</p>
-        </div>
-        <div class="modal-header--content">
-          <p>Follow Person on:</p>
-          <ul>
-            <li>Linkedin</li>
+          <p class="person-title mar-b-more">Person Title</p>
+          <ul class="social-links">
+            <li class="twitter-icon"><a href="http://twitter.com/" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/twitter-icon.svg', false, $context); ?></a></li>
+            <li class="linkedin-icon"><a href="http://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><?php echo file_get_contents(get_stylesheet_directory_URI() . '/dist/img/linkedin-icon.svg', false, $context); ?></a></li>
           </ul>
         </div>
       </div>
-      <div class="modal-body" style="overflow: scroll;">
-        <div class="bio-content" style="height: 0;">person bio</div>
+      <div class="modal-body">
+        <div class="bio-content">person bio</div>
       </div>
     </div>
   </div>
