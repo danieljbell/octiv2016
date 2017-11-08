@@ -19,7 +19,7 @@ ADD GLOBAL JS TO PAGE
 function enqueue_global_js() {
   if (!get_field('remove_footer')) {
     wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
-    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.3', true);
+    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.4', true);
   }
   
   if (is_singular('integration')) {
