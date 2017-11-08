@@ -238,7 +238,7 @@ LEADERSHIP BIO MODAL
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
     <div class="modal-content half">
-      <div class="modal-header light-callout">
+      <div class="modal-header light-callout" style="margin-right: 0;">
         <div class="modal-header--brand">
           <div class="color-boxes">
             <div class="person-headshot mar-b" style="margin-right: 0;">
@@ -255,8 +255,8 @@ LEADERSHIP BIO MODAL
           </ul>
         </div>
       </div>
-      <div class="modal-body">
-        <div class="bio-content">person bio</div>
+      <div class="modal-body" style="overflow: scroll;">
+        <div class="bio-content" style="height: 0;">person bio</div>
       </div>
     </div>
   </div>
