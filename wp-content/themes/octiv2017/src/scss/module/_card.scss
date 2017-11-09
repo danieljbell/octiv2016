@@ -81,3 +81,22 @@
   //   box-shadow: 4px 4px 6px rgba(black, 0.1);
   // }
 }
+
+.sidebar-card {
+  display: flex;
+
+  .card-image {
+    padding: 0;
+    max-width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .card-content {
+    position: relative;
+    left: 100px;
+    width: calc(100% - 100px);
+  }
+}

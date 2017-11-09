@@ -594,6 +594,7 @@ function register_landing_page_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
+    'publicly_queryable'      => false,
     'exclude_from_search' => true,
     'has_archive' => false,
     'menu_icon'   => 'dashicons-welcome-add-page',
@@ -1060,6 +1061,7 @@ function register_employee_testimonial_post_type() {
     'labels'      => $labels,
     'description' => '',
     'public'      => true,
+    'publicly_queryable'      => false,
     'menu_icon'   => 'dashicons-format-quote',
     'supports'    => array( 'title' ),
     'capabilities' => array(

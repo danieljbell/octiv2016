@@ -3,13 +3,13 @@
     border: 1px solid $button-color;
     color: $button-color;
   } @else {
-    background-color: $button-color;
-    color: $text-color;
+    background-color: $button-color !important;
+    color: $text-color !important;
   }
   display: inline-block; 
   text-decoration: none;
-  padding: 0.5em 1em;
-  border-radius: 3px;
+  padding: 0.5em 1em !important;
+  border-radius: 4px !important;
   transition: all 200ms ease-in-out;
   &:hover,
   &:focus {

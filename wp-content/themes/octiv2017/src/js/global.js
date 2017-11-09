@@ -252,7 +252,35 @@
   GLOBAL SEARCH
   ==============================
   */
+  $('#global-search-form').on('submit', function(e) {
+    e.preventDefault();
+    getSearchPosts();
+  });
   
+  function getSearchPosts() {
+    $('.search-modal-container .modal-body').html('Loading...');
+    var keyword = $('#global-search-input').val();
+    var searchPostType = $('#global-search-post-type').val();
+    var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
+    var searchQuery = window.location.origin + '?post_type=' + searchPostType + '&s=' + keyword + '&post_parent__not_in=[0]';
+    $.ajax({
+      type: "POST",
+      url: searchQuery,
+      success: function(data) {
+        var searchResults = $($.parseHTML(data)).find('#post-list');
+        var resultsHTML = searchResults.html()
+        var resultsLength = searchResults.children().length;
+        if (resultsLength > 0) {
+          $('.search-modal-container .modal-body').html(resultsHTML);
+        } else {
+          $('.search-modal-container .modal-body').html('There are no ' + prettyPostTypeName.toLowerCase());
+        }
+      },
+      error: function() {
+        console.log('duh!');
+      }
+    });
+  }
   
 
   
