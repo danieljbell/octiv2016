@@ -173,6 +173,15 @@
     $('.search-modal-container').modal();
   })
 
+  var lostPageSearch = $('#lost-page-search');
+  lostPageSearch.on('submit', function(e) {
+    e.preventDefault();
+    var searchTerm = $(this).children('input').val();
+    $('#global-search-input').val(searchTerm);
+    getSearchPosts();
+    $('.search-modal-container').modal();
+  })
+
   // TINDERBOX REFERAL
   if (getParameterByName('ref') === 'tinderbox') {
     $('.rebrand-modal').modal();
@@ -262,7 +271,7 @@
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
-    var searchQuery = window.location.origin + '?post_type=' + searchPostType + '&s=' + keyword + '&post_parent__not_in=[0]';
+    var searchQuery = window.location.origin + '?post_type=' + searchPostType + '&s=' + keyword;
     $.ajax({
       type: "POST",
       url: searchQuery,

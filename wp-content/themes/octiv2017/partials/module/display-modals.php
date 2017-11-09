@@ -128,8 +128,9 @@ GLOBAL SEARCH
                 $args = array(
                   'publicly_queryable' => true
                 );
-                $excludes = array('Media', 'Landing Page', 'Features', 'Employee Testimonial');
-                foreach (get_post_types($args, 'objects') as $post_type) {
+                $excludes = array('Media', 'Landing Pages', 'Features', 'Employee Testimonial');
+                $all_post_types = get_post_types($args, 'objects');
+                foreach ($all_post_types as $post_type) {
                   if (!in_array($post_type->label, $excludes)) {
                     $value = $post_type->name;
                     $text = $post_type->label;
@@ -139,13 +140,16 @@ GLOBAL SEARCH
                     if ($post_type->label === 'Library') {
                       $text = 'Resources';
                     }
+                    if ($post_type->label === 'Releases') {
+                      $text = 'Product Releases';
+                    }
                     echo '<option value="' . $value . '">' . $text . '</option>';
                   }
                 }
               ?>
             </select>
             <div class="has-text-center">
-              <input id="global-search-submit" type="submit" class="btn-primary">
+              <input id="global-search-submit" type="submit" class="btn-primary" value="Search">
             </div>
           </form>
         </div>
