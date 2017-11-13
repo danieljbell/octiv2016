@@ -71,7 +71,7 @@ $redirect_link = get_field('form_redirect_link');
           <h2 class="color-box-headline--white"><?php echo $cta_headline; ?></h2>
         </div>
         <p class="has-text-center"><?php echo $cta_subheadline; ?></p>
-        <div class="two-third-only">
+        <div id="form-container" class="two-third-only">
           <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
           <form id="mktoForm_<?php echo $form_id; ?>"></form>
           <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
