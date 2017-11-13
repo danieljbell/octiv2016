@@ -34,7 +34,7 @@ $redirect_link = get_field('form_redirect_link');
       <div class="site-width">
         <div class="has-text-center">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-three">Success Stores with Octiv</h2>
+            <h2 class="color-box-headline--brand-three">Success Stories with Octiv</h2>
             <p>Read our clients success stories by clicking the logos below.</p>
           </div>
         </div>
