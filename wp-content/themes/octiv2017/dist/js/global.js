@@ -3492,6 +3492,18 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
   initMobileMenu();
   window.addEventListener('resize', initMobileMenu);
+
+  
+
+  /*
+  ==============================
+  EXTRA PADDING FOR NOTCH PAGES
+  ==============================
+  */
+  var hasNotch = $('main .notch');
+  if (hasNotch && !(document.querySelector('.home'))) {
+    hasNotch.siblings('.hero').addClass('has-notch');
+  }
   
 
   /*
