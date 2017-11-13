@@ -134,6 +134,18 @@
 
   initMobileMenu();
   window.addEventListener('resize', initMobileMenu);
+
+  
+
+  /*
+  ==============================
+  EXTRA PADDING FOR NOTCH PAGES
+  ==============================
+  */
+  var hasNotch = $('main .notch');
+  if (hasNotch && !(document.querySelector('.home'))) {
+    hasNotch.siblings('.hero').addClass('has-notch');
+  }
   
 
   /*
