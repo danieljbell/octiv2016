@@ -57,6 +57,10 @@ function enqueue_global_js() {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
   }
 
+  if (is_page_template('page-templates/landing-page.php')) {
+    wp_enqueue_script('page-template--landing-page', get_stylesheet_directory_URI() . '/dist/js/page-template--landing-page.js', array(), '1.0.2', true);
+  }
+
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');
 
