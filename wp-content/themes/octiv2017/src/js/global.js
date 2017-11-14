@@ -191,13 +191,23 @@
 
   // TINDERBOX REFERAL
   var bioModalButtons = $('.launch-bio-modal');
-  bioModalButtons.on('click', function() {
-    var personName = this.dataset.name;
-    var personTitle = this.dataset.title;
-    var personBio = this.dataset.bio;
-    var personHeadshot = this.dataset.headshot;
-    var personLinkedIn = this.dataset.linkedin;
-    var personTwitter = this.dataset.twitter;
+  bioModalButtons.on('click', function(e) {
+    bioModal(e.target);
+  });
+  if (getParameterByName('bio')) {
+    var activeBio = getParameterByName('bio');
+    var searchedBio = document.querySelector('[data-parameter=' + activeBio + ']');
+    bioModal(searchedBio);
+  }
+
+  function bioModal(elem) {
+    var personName = elem.dataset.name;
+    var personSlug = elem.dataset.parameter;
+    var personTitle = elem.dataset.title;
+    var personBio = elem.dataset.bio;
+    var personHeadshot = elem.dataset.headshot;
+    var personLinkedIn = elem.dataset.linkedin;
+    var personTwitter = elem.dataset.twitter;
     var modalContainer = $('.leadership-modal-container');
     if (personTwitter) {
       modalContainer.find('.twitter-icon').show();
@@ -216,7 +226,10 @@
     modalContainer.find('.bio-content').html(personBio);
     modalContainer.find('.person-headshot img').attr('src', personHeadshot);
     modalContainer.modal();
-  });
+    var initialPath = window.location.pathname;
+    var currentBio = initialPath + '?bio=' + personSlug;
+    window.history.replaceState( {} , 'bar', currentBio );  
+  }
 
 
   /*
@@ -467,3 +480,7 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
+
+function capitalize(s) {
+  return s && s[0].toUpperCase() + s.slice(1);
+}

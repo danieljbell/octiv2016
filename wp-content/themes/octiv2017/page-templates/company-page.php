@@ -67,8 +67,10 @@ Template Name: Company Page
               echo '<li class="has-text-center">';
                 echo '<div class="headshot-container">';
                   echo '<img src="' . get_sub_field('leader_headshot') . '" alt="' . get_sub_field('leader_name') . '" class="leadership-headshot">';
-                  echo '<div class="read-bio">'; ?>
-<button class="launch-bio-modal btn-white--outline" data-name="<?php echo get_sub_field('leader_name'); ?>" data-title="<?php echo get_sub_field('leader_title'); ?>" data-bio="<?php echo get_sub_field('leader_biography'); ?>" data-headshot="<?php echo get_sub_field('leader_headshot'); ?>" data-linkedin="<?php echo get_sub_field('leader_linkedin_url'); ?>" data-twitter="<?php echo get_sub_field('leader_twitter_url'); ?>">Read Bio</button>
+                  echo '<div class="read-bio">'; 
+                  $person_slug = str_replace(" ", "-", strtolower(get_sub_field('leader_name')));
+        ?>
+<button class="launch-bio-modal btn-white--outline" data-parameter="<?php echo $person_slug; ?>" data-name="<?php echo get_sub_field('leader_name'); ?>" data-title="<?php echo get_sub_field('leader_title'); ?>" data-bio="<?php echo get_sub_field('leader_biography'); ?>" data-headshot="<?php echo get_sub_field('leader_headshot'); ?>" data-linkedin="<?php echo get_sub_field('leader_linkedin_url'); ?>" data-twitter="<?php echo get_sub_field('leader_twitter_url'); ?>">Read Bio</button>
                 <?php  
                   echo '</div>';
                 echo '</div>';
