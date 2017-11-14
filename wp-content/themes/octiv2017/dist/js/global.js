@@ -3638,13 +3638,13 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   });
   
   function getSearchPosts() {
-    $('.search-modal-container .modal-body').html('Loading...');
+    $('.search-modal-container .modal-body').html('<img src="//fillmurray.com/300/300" class="abs-center">');
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
-    var searchQuery = window.location.origin + '?post_type=' + searchPostType + '&s=' + keyword;
+    var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&s=' + keyword;
     $.ajax({
-      type: "POST",
+      type: "GET",
       url: searchQuery,
       success: function(data) {
         var searchResults = $($.parseHTML(data)).find('#post-list');
