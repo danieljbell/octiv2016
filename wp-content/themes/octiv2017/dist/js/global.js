@@ -3638,11 +3638,13 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   });
   
   function getSearchPosts() {
-    $('.search-modal-container .modal-body').html('<img src="//fillmurray.com/300/300" class="abs-center">');
+    var animationContainer = $('.search-modal-container .modal-body .searching-animation');
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
     var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&s=' + keyword;
+    animationContainer.show();
+    $('.search-modal-container .modal-body .search-results').html('');
     $.ajax({
       type: "GET",
       url: searchQuery,
@@ -3650,10 +3652,11 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         var searchResults = $($.parseHTML(data)).find('#post-list');
         var resultsHTML = searchResults.html()
         var resultsLength = searchResults.children().length;
+        animationContainer.hide();
         if (resultsLength > 0) {
-          $('.search-modal-container .modal-body').html(resultsHTML);
+          $('.search-modal-container .modal-body .search-results').html(resultsHTML);
         } else {
-          $('.search-modal-container .modal-body').html('There are no ' + prettyPostTypeName.toLowerCase());
+          $('.search-modal-container .modal-body .search-results').html('There are no ' + prettyPostTypeName.toLowerCase());
         }
       },
       error: function() {

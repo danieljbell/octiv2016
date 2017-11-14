@@ -155,7 +155,12 @@ GLOBAL SEARCH
         </div>
       </div>
       <div class="modal-body">
-        
+        <div class="searching-animation" style="display: none;">
+          <?php echo do_shortcode('[custom_animation tag="platform--manage"]'); ?>
+        </div>
+        <div class="search-results">
+          
+        </div>
       </div>
     </div>
   </div>
