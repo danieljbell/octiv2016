@@ -3634,7 +3634,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   if (document.querySelectorAll('.slider')) {
     $('.slider').slick({
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
       draggable: false,
@@ -3647,6 +3647,8 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
   if (document.querySelectorAll('.slider-for')) {
     $('.slider-for').slick({
+      autoplay: true,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
