@@ -285,9 +285,9 @@
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
+    var pageCount = 10;
     var offset = 0;
-    var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&posts_per_page=3' + '&s=' + keyword;
-    console.log(searchQuery);
+    var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&posts_per_page=' + pageCount + '&s=' + keyword;
     animationContainer.show();
     $('.search-modal-container .modal-body .search-results').html('');
     $.ajax({
@@ -298,11 +298,10 @@
         var resultsHTML = searchResults.html()
         var resultsLength = searchResults.children().length;
         animationContainer.hide();
-        offset += 3;
-        console.log(offset);
+        offset += pageCount;
         if (resultsLength > 0) {
           resultsContainer.html(resultsHTML);
-          resultsContainer.append('<button class="btn-brand--outline">Load More</button>');
+          resultsContainer.append('<div class="has-text-center"><button class="btn-brand--outline">Load More</button></div>');
         } else {
           resultsContainer.html('There are no ' + prettyPostTypeName.toLowerCase());
         }
