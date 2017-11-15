@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php $no_images = array('support', 'press-releases'); ?>
+
 <main>
   
   <?php get_template_part('partials/module/display', 'hero'); ?>
@@ -10,7 +12,7 @@
         if (have_posts()) :
           echo '<div id="post-list" class="third">';
           while (have_posts()) : the_post();
-            if ($_GET['post_type']=="support") {
+            if (in_array($_GET['post_type'], $no_images)) {
               echo do_shortcode('[get_card_v3 thumb="false"]');
             } else {
               if (($post->post_type === 'library')) {

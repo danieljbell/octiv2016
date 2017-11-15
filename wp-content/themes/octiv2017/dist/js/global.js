@@ -3547,7 +3547,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     window.history.replaceState( {} , 'bar', initialPath );
   }
 
-  // TINDERBOX REFERAL
+  // BIO MODAL
   var bioModalButtons = $('.launch-bio-modal');
   bioModalButtons.on('click', function(e) {
     bioModal(e.target);
@@ -3639,10 +3639,13 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   
   function getSearchPosts() {
     var animationContainer = $('.search-modal-container .modal-body .searching-animation');
+    var resultsContainer = $('.search-modal-container .modal-body .search-results');
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
-    var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&s=' + keyword;
+    var offset = 0;
+    var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&posts_per_page=3' + '&s=' + keyword;
+    console.log(searchQuery);
     animationContainer.show();
     $('.search-modal-container .modal-body .search-results').html('');
     $.ajax({
@@ -3653,10 +3656,13 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         var resultsHTML = searchResults.html()
         var resultsLength = searchResults.children().length;
         animationContainer.hide();
+        offset += 3;
+        console.log(offset);
         if (resultsLength > 0) {
-          $('.search-modal-container .modal-body .search-results').html(resultsHTML);
+          resultsContainer.html(resultsHTML);
+          resultsContainer.append('<button class="btn-brand--outline">Load More</button>');
         } else {
-          $('.search-modal-container .modal-body .search-results').html('There are no ' + prettyPostTypeName.toLowerCase());
+          resultsContainer.html('There are no ' + prettyPostTypeName.toLowerCase());
         }
       },
       error: function() {
