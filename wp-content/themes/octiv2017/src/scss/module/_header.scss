@@ -298,3 +298,16 @@
     }
   }
 }
+
+.site-header .menu-item-4118 {
+  display: flex;
+  align-items: center;
+}
+
+.site-header [href*="free-trial"] {
+  @include tablet {
+    @include button($brand2, null, true);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
