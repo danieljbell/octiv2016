@@ -10,6 +10,11 @@
   $article_name = $parsed_url[count($parsed_url)-2];
   $article_name_string = explode( '-', $article_name );
   $term_list = wp_get_post_terms($post->ID, 'type', array("fields" => "all"));
+
+  $external_link = get_field('external_link');
+  if ($external_link) {
+    header("Location: $external_link");
+  }
 ?>
 
 <?php get_header(); ?>
