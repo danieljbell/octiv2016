@@ -304,10 +304,21 @@
   align-items: center;
 }
 
+.site-header .free-trial-container {
+  position: relative;
+  display: none;
+}
+
 .site-header [href*="free-trial"] {
   @include tablet {
+    // position: absolute;
+    // bottom: calc(100% + 2rem);
+    // right: -70px;
+    // letter-spacing: 0.5px;
+    // text-transform: uppercase;
+    // font-weight: bold;
     @include button($brand2, null, true);
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.15rem 0.3rem;
+    font-size: 0.75rem;
   }
 }
