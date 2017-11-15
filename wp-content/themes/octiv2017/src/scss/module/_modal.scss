@@ -156,6 +156,41 @@ MODAL SEARCH LISTS
 
   }
 
+  .loading-container {
+    background-color: $mgray;
+    color: $white;
+    border-radius: 4px;
+    font-size: 1.5em;
+    padding: 1rem;
+    margin: -1rem;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .loading-text {
+    float: left;
+  }
+
+  .loading-cog {
+    float: right;
+  }
+
+  .loading-cog img {
+    animation-name: rotateClockwise;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    width: 100%;
+    max-width: 30px;
+    margin-left: 1rem;
+    position: relative;
+    top: 3px;
+  }
+
 }
 
 

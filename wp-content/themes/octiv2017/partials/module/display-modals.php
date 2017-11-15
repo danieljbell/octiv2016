@@ -156,7 +156,12 @@ GLOBAL SEARCH
       </div>
       <div class="modal-body">
         <div class="searching-animation" style="display: none;">
-          <?php echo do_shortcode('[custom_animation tag="platform--manage"]'); ?>
+          <div class="loading-container abs-center">
+            <div class="loading-text">Loading</div>
+            <div class="loading-cog">
+              <img src="/wp-content/themes/octiv2017/dist/img/loading-cog--white.svg" alt="Loading Icon">
+            </div>
+          </div>
         </div>
         <div class="search-results">
           
