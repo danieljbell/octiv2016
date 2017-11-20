@@ -299,7 +299,7 @@
   }
 }
 
-.site-header .top-level-navigation li:last-child {
+.site-header .top-level-navigation > li:last-child {
   display: flex;
   align-items: center;
 }
