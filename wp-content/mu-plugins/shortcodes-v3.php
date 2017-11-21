@@ -28,6 +28,9 @@ add_shortcode('get_card_v3', function($atts) {
     if (!$card_image) {
       $card_image = get_field('integration_logo');
     }
+    if (!$card_image) {
+      $card_image = '/wp-content/themes/octiv2017/dist/img/default-thumbnail.jpg';
+    }
   ?>
   
   <div class="card <?php if ($class) { echo $class; } ?>">

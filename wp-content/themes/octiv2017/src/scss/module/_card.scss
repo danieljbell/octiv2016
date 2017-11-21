@@ -87,7 +87,7 @@
 
   .card-image {
     padding: 0;
-    max-width: 100px;
+    max-width: 125px;
     position: absolute;
     top: 0;
     left: 0;
@@ -96,7 +96,7 @@
 
   .card-content {
     position: relative;
-    left: 100px;
-    width: calc(100% - 100px);
+    left: 125px;
+    width: calc(100% - 125px);
   }
 }
