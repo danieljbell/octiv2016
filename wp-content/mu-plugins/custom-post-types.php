@@ -1128,7 +1128,7 @@ function register_app_promo_post_type() {
     'show_in_rest'          => true,
     'rest_base'             => 'app-promo',
     'menu_icon'             => 'dashicons-format-quote',
-    'supports'              => array( 'title' ),
+    'supports'              => array( 'title', 'page-attributes' ),
     'capabilities'          => array(
 
     // meta caps (don't assign these to roles)
