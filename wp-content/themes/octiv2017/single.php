@@ -8,6 +8,16 @@ $context = stream_context_create(array(
 ));
 ?>
 
+<?php
+  /*
+  ==============================
+  GET GLOBAL PROMOTED ITEM
+  ==============================
+  */
+  $pick_your_page = get_field('pick_your_page', 'option');
+
+?>
+
 <?php get_header(); ?>
 
 <main>
@@ -20,6 +30,15 @@ $context = stream_context_create(array(
     <div class="two-third post-content">
       <section class="single-post-content">
         <?php echo the_content(); ?>  
+        <?php if ($pick_your_page) : ?>
+          <div class="has-text-center box--light mar-b-more pad-a-most" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('//fillmurray.com/800/500');">
+            <div class="color-boxes">
+              <h4 class="color-box-headline--brand-two"><?php echo get_the_title(); ?></h4>
+            </div>
+            <p><?php echo strip_tags(get_the_excerpt()); ?></p>
+            <a href="<?php echo get_the_permalink(); ?>" class="btn-brand-two--outline" style="border-bottom: 1px solid #42b0d8; color: #42b0d8;">Learn More</a>
+          </div>
+        <?php endif; ?>
       </section>
       <aside class="single-post-sidebar">
         <div class="sidebar__inner">

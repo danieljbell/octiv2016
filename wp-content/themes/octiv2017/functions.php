@@ -387,6 +387,17 @@ if( function_exists('acf_add_options_page') ) {
   );
 
   acf_add_options_sub_page($args);
+
+  $args = array(
+    'page_title'    => 'Blog Settings',
+    'menu_title'    => 'Blog Settings',
+    'menu_slug'     => 'blog-settings',
+    'parent_slug'   => 'edit.php',
+    'position'      => false,
+    'icon_url'      => false
+  );
+
+  acf_add_options_sub_page($args);
   
 }
 

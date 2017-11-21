@@ -15,7 +15,7 @@
   &:focus {
     @if $outline == true {
       background-color: $button-color;
-      color: $text-color;
+      color: $text-color !important;
     } @else {
       outline: none;
       background-color: darken($button-color, 10%);
