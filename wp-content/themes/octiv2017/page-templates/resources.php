@@ -30,19 +30,28 @@ if (get_field('post_type') === 'posts') {
     <div class="site-width">
       <div class="box--light">
         <?php
-          $posts = get_field('pick_your_page');
+          // $posts = get_field('pick_your_page');
+          // print_r($posts);
           
-          $current_iteration = $number_formatter->format(count($posts));
-          if ($current_iteration === 'three') {
-            echo '<ul class="third no-bull">';
-          } elseif ($current_iteration === 'two') {
-            echo '<ul class="half no-bull">';
-          } else {
-            echo '<ul class="no-bull">';
-          }
+          // $current_iteration = $number_formatter->format(count($posts));
+          // if ($current_iteration === 'three') {
+          //   echo '<ul class="third no-bull">';
+          // } elseif ($current_iteration === 'two') {
+          //   echo '<ul class="half no-bull">';
+          // } else {
+          //   echo '<ul class="no-bull">';
+          // }
 
           if (have_rows('resource_promoted_items')) :
             $count = 0;
+            $total_items = count(get_field('resource_promoted_items'));
+            if ($total_items === 1) {
+              echo '<ul class="no-bull">';
+            } elseif ($total_items === 2) {
+              echo '<ul class="half no-bull">';
+            } elseif ($total_items === 3) {
+              echo '<ul class="third no-bull">';
+            }
             while (have_rows('resource_promoted_items')) : the_row();
               $posts = get_sub_field('pick_your_page');
               $count++;
@@ -60,7 +69,7 @@ if (get_field('post_type') === 'posts') {
                   echo '<li class="promoted-item" style="background-image: ' . $thumb_url . ';">';
                     echo '<img src="' . get_field('client_logo') . '" alt="' . get_the_title() . ' Logo" class="promoted-item-company-logo">';
                     echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';
-                    echo '<a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a>';
+                    echo '<div><a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a></div>';
                   echo '</li>';
                 else :
                   $thumb_id = get_post_thumbnail_id();
@@ -73,7 +82,7 @@ if (get_field('post_type') === 'posts') {
                   echo '<li class="pad-y-more promoted-item promoted-item--dark" style="background-image: ' . $thumb_url . ';">';
                     echo '<h4 class="mar-b">' . get_the_title() . '</h4>';
                     echo '<p class="mar-b">' . strip_tags(get_the_excerpt()) . '</p>';
-                    echo '<a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a>';
+                    echo '<div><a href="' . get_the_permalink() . '" class="btn-white--outline">Learn More</a></div>';
                   echo '</li>';
                 endif;
               endforeach;

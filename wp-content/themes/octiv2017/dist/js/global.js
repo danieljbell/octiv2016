@@ -3492,6 +3492,18 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
   initMobileMenu();
   window.addEventListener('resize', initMobileMenu);
+
+  
+
+  /*
+  ==============================
+  EXTRA PADDING FOR NOTCH PAGES
+  ==============================
+  */
+  var hasNotch = $('main .notch');
+  if (hasNotch && !(document.querySelector('.home'))) {
+    hasNotch.siblings('.hero').addClass('has-notch');
+  }
   
 
   /*
@@ -3680,7 +3692,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   if (document.querySelectorAll('.slider')) {
     $('.slider').slick({
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
       draggable: false,

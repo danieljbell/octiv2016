@@ -10,6 +10,7 @@ SITE HEADER
     <ul class="site-header-top-items">
       <li class="site-header-top-item site-header-logo-container">
         <a href="/" title="Home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/Octiv-Logo.svg" alt="Octiv Logo" class="site-header-logo"></a>
+        <!-- <div class="free-trial-container"><a href="/free-trial">Free Trial</a></div> -->
       </li>
       <li class="site-header-top-item site-header-nav-container">
         <?php

@@ -34,8 +34,8 @@ $redirect_link = get_field('form_redirect_link');
       <div class="site-width">
         <div class="has-text-center">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-three">Success Stores with Octiv</h2>
-            <p>Read our clients success stories by clicking the logos below.</p>
+            <h2 class="color-box-headline--brand-three">Success Stories with Octiv</h2>
+            <p>See how our clients win by selecting a logo below.</p>
           </div>
         </div>
       </div>
@@ -86,7 +86,6 @@ $redirect_link = get_field('form_redirect_link');
                   echo get_field('form_redirect_block');
                 endif;
               ?>
-
               // Return false to prevent the submission handler continuing with its own processing
               return false;
             });

@@ -6,7 +6,7 @@ ADD GLOBAL CSS TO PAGE
 */
 function enqueue_global_css() {
   if (!get_field('remove_header')) {
-    wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.5');
+    wp_enqueue_style('global', get_stylesheet_directory_URI() . '/dist/css/global.css', array(), '1.0.8');
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
@@ -19,7 +19,7 @@ ADD GLOBAL JS TO PAGE
 function enqueue_global_js() {
   if (!get_field('remove_footer')) {
     wp_enqueue_script('library--vue', get_stylesheet_directory_URI() . '/dist/js/lib/vue.min.js', array(), null, true);
-    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.6', true);
+    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.7', true);
   }
   
   if (is_singular('integration')) {
@@ -55,6 +55,10 @@ function enqueue_global_js() {
 
   if (is_page_template('page-templates/page-sections.php')) {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
+  }
+
+  if (is_page_template('page-templates/landing-page.php')) {
+    wp_enqueue_script('page-template--landing-page', get_stylesheet_directory_URI() . '/dist/js/page-template--landing-page.js', array(), '1.0.2', true);
   }
 
 }

@@ -134,6 +134,18 @@
 
   initMobileMenu();
   window.addEventListener('resize', initMobileMenu);
+
+  
+
+  /*
+  ==============================
+  EXTRA PADDING FOR NOTCH PAGES
+  ==============================
+  */
+  var hasNotch = $('main .notch');
+  if (hasNotch && !(document.querySelector('.home'))) {
+    hasNotch.siblings('.hero').addClass('has-notch');
+  }
   
 
   /*
@@ -322,7 +334,7 @@
   if (document.querySelectorAll('.slider')) {
     $('.slider').slick({
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
       draggable: false,
