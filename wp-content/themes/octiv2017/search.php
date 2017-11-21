@@ -19,6 +19,8 @@
                 if ($post->post_parent === 0) {
                   echo do_shortcode('[get_card_v3 thumb="true" class="sidebar-card"]');
                 }
+              } elseif ($post->post_type === 'integration') {
+                echo do_shortcode('[get_card_v3 class="sidebar-card integration-search"]');
               } else {
                 echo do_shortcode('[get_card_v3 thumb="true" class="sidebar-card"]');
               }

@@ -3643,7 +3643,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     var keyword = $('#global-search-input').val();
     var searchPostType = $('#global-search-post-type').val();
     var prettyPostTypeName = $('#global-search-post-type').find(':selected').text();
-    var pageCount = 10;
+    var pageCount = 99;
     var offset = 0;
     var searchQuery = window.location.protocol + '//' + window.location.host + '?post_type=' + searchPostType + '&posts_per_page=' + pageCount + '&s=' + keyword;
     animationContainer.show();
@@ -3659,7 +3659,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         offset += pageCount;
         if (resultsLength > 0) {
           resultsContainer.html(resultsHTML);
-          resultsContainer.append('<div class="has-text-center"><button class="btn-brand--outline">Load More</button></div>');
+          // resultsContainer.append('<div class="has-text-center"><button class="btn-brand--outline">Load More</button></div>');
         } else {
           resultsContainer.html('There are no ' + prettyPostTypeName.toLowerCase());
         }
