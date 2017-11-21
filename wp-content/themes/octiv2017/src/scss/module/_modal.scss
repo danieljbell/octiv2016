@@ -124,9 +124,79 @@ MODAL ANIMATIONS
 MODAL SEARCH LISTS
 ==============================
 */
-.modal-search-list li {
-  line-height: 1.2;
-  margin-bottom: 1em;
+.search-modal-container {
+  .modal-header {
+    margin-right: 0;
+  }
+
+  .modal-body {
+    max-height: 500px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+  }
+  .card {
+    margin-bottom: 1rem;
+
+    h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-arrow {
+      font-size: 0.8rem;
+    }
+
+  }
+
+  .loading-container {
+    background-color: $mgray;
+    color: $white;
+    border-radius: 4px;
+    font-size: 1.5em;
+    padding: 1rem;
+    margin: -1rem;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .loading-text {
+    float: left;
+  }
+
+  .loading-cog {
+    float: right;
+  }
+
+  .loading-cog img {
+    animation-name: rotateClockwise;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    width: 100%;
+    max-width: 30px;
+    margin-left: 1rem;
+    position: relative;
+    top: 3px;
+  }
+
+  .integration-search.card .card-image {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.15);
+  }
+
 }
 
 
@@ -147,6 +217,7 @@ LEADERSHIP BIO MODAL
   .modal-header {
     padding-bottom: 0;
     margin-right: 0;
+    border-bottom: 0;
 
     p {
       margin-bottom: 1rem;

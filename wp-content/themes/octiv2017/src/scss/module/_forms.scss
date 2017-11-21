@@ -19,6 +19,7 @@ select {
   width: 100%;
   border: 1px solid $mgray;
   font-family: $brand-font-stack;
+  font-size: 1rem;
   padding: 0.25em !important; 
   appearance: none;
   background-image: url(../img/select-arrow.svg);
@@ -40,6 +41,10 @@ input[type="checkbox"] {
   &:active {
     box-shadow: none;
   }
+}
+
+input[type="submit"] {
+  cursor: pointer;
 }
 
 input.text-search-bar {

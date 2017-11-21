@@ -106,9 +106,7 @@ GET OUR LOGO
 GLOBAL SEARCH
 ==============================
 */
-
-/*
-==============================
+?>
 <div class="search-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
@@ -121,39 +119,57 @@ GLOBAL SEARCH
           <p>Use the search bar below to find what you are looking for.</p>
         </div>
         <div class="modal-header--content">
-          <div id="global-search">
-            <select class="mar-b" v-model="selectedCats">
+          <form id="global-search-form" method="POST" action="<?php echo site_url(); ?>">
+            <input id="global-search-input" type="text" class="text-search-bar" placeholder="Search">
+            <label for="global-search-post-type">Page Type:</label>
+            <select name="global-search-post-type" id="global-search-post-type" class="mar-b">
+              <option value="any" selected>All Pages</option>
               <?php
                 $args = array(
-                  'public' => true,
                   'publicly_queryable' => true
                 );
-                $all_post_types = get_post_types($args);
+                $excludes = array('Media', 'Landing Pages', 'Features', 'Employee Testimonial');
+                $all_post_types = get_post_types($args, 'objects');
                 foreach ($all_post_types as $post_type) {
-                  echo '<option>' . $post_type . '</option>';
+                  if (!in_array($post_type->label, $excludes)) {
+                    $value = $post_type->name;
+                    $text = $post_type->label;
+                    if ($post_type->label === 'Posts') {
+                      $text = 'Blog';
+                    }
+                    if ($post_type->label === 'Library') {
+                      $text = 'Resources';
+                    }
+                    if ($post_type->label === 'Releases') {
+                      $text = 'Product Releases';
+                    }
+                    echo '<option value="' . $value . '">' . $text . '</option>';
+                  }
                 }
               ?>
             </select>
-            <input type="text" class="text-search-bar" v-model="keyword">
-          </div>
+            <div class="has-text-center">
+              <input id="global-search-submit" type="submit" class="btn-primary" value="Search">
+            </div>
+          </form>
         </div>
       </div>
       <div class="modal-body">
-        <strong>Searching <span v-if="selectedCats != ''">{{selectedCats}}</span> for: {{keyword}}</strong>
-        <!-- <ul class="modal-search-list">
-          <li v-for="post in filteredList"><a v-bind:href="post.link" v-html="post.title.rendered"></a></li>
-        </ul> -->
-        <div class="has-text-center">
-          <button v-on:click="getMorePosts()" class="btn-brand--outline">Load More Posts</button>
+        <div class="searching-animation" style="display: none;">
+          <div class="loading-container abs-center">
+            <div class="loading-text">Loading</div>
+            <div class="loading-cog">
+              <img src="/wp-content/themes/octiv2017/dist/img/loading-cog--white.svg" alt="Loading Icon">
+            </div>
+          </div>
+        </div>
+        <div class="search-results">
+          
         </div>
       </div>
     </div>
   </div>
 </div>
-==============================
-*/
-
-?>
 
 
 <?php

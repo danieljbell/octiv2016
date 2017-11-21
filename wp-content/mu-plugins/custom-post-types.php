@@ -594,6 +594,7 @@ function register_landing_page_post_type() {
   $args = array(
     'labels'      => $labels,
     'public'      => true,
+    'publicly_queryable'      => false,
     'exclude_from_search' => true,
     'has_archive' => false,
     'menu_icon'   => 'dashicons-welcome-add-page',
@@ -1060,6 +1061,7 @@ function register_employee_testimonial_post_type() {
     'labels'      => $labels,
     'description' => '',
     'public'      => true,
+    'publicly_queryable'      => false,
     'menu_icon'   => 'dashicons-format-quote',
     'supports'    => array( 'title' ),
     'capabilities' => array(
@@ -1090,6 +1092,71 @@ function register_employee_testimonial_post_type() {
   );
 
   register_post_type( 'employee-testimonial', $args );
+}
+
+
+/*
+=======================================
+REGISTER TEST PUBLIC POST TYPE
+=======================================
+*/
+add_action( 'init', 'register_app_promo_post_type' );
+
+function register_app_promo_post_type() {
+
+  $labels = array(
+    'name'                => 'App Promos',
+    'singular_name'       => 'App Promo',
+    'add_new'             => 'Add New App Promo',
+    'add_new_item'        => 'Add New App Promo',
+    'edit_item'           => 'Edit App Promo',
+    'new_item'            => 'New App Promo',
+    'all_items'           => 'All App Promos',
+    'view_item'           => 'View App Promo',
+    'search_items'        => 'Search App Promos',
+    'not_found'           => 'No app promos found',
+    'not_found_in_trash'  => 'No app promos found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'App Promos'
+  );
+
+  $args = array(
+    'labels'                => $labels,
+    'description'           => '',
+    'public'                => true,
+    'publicly_queryable'    => false,
+    'show_in_rest'          => true,
+    'rest_base'             => 'app-promo',
+    'menu_icon'             => 'dashicons-format-quote',
+    'supports'              => array( 'title' ),
+    'capabilities'          => array(
+
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_app_promo',
+    'read_post'              => 'read_app_promo',
+    'delete_post'            => 'delete_app_promo',
+
+    // primitive/meta caps
+    'create_posts'           => 'create_app_promo',
+
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_app_promo',
+    'edit_others_posts'      => 'edit_others_app_promo',
+    'publish_posts'          => 'publish_app_promo',
+    'read_private_posts'     => 'read',
+
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'delete_app_promo',
+    'delete_private_posts'   => 'delete_private_app_promo',
+    'delete_published_posts' => 'delete_published_app_promo',
+    'delete_others_posts'    => 'delete_others_app_promo',
+    'edit_private_posts'     => 'edit_private_app_promo',
+    'edit_published_posts'   => 'edit_published_app_promo'
+    ),
+  );
+
+  register_post_type( 'app-promo', $args );
 }
 
 ?>
