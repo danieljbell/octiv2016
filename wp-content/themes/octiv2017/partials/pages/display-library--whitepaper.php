@@ -59,11 +59,23 @@
         <form id="mktoForm_<?php echo $form_id; ?>"></form>
         <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
           form.onSuccess(function(values, followUpUrl) {
-            // Update the redirect url with form fields
-            followUpUrl = <?php echo "'" . site_url() . $redirect_link . "'"; ?>;
-            // Redirect the page with form field
-            location.href = followUpUrl;
-            // Return false to prevent the submission handler continuing with its own processing
+            var vals = form.vals();
+            var evt = new MouseEvent('click', {
+              view: window,
+              bubbles: false,
+              cancelable: true
+            });
+
+            var downloadLink = document.createElement('a');
+            downloadLink.setAttribute('download', <?php echo "'" . get_the_title() . "'"; ?>);
+            downloadLink.setAttribute('href', <?php echo "'" . $redirect_link . "'"; ?>);
+            downloadLink.setAttribute('target', '_blank');
+            downloadLink.dispatchEvent(evt);
+
+            // Get the form's jQuery element and hide it
+            form.getFormElem().hide();
+            $('#call-to-action .color-box-headline--white').text('Thanks ' + vals.FirstName + '!');
+            $('#call-to-action p').html('If the whitepaper didn\'t already download, <a href="<?php echo $redirect_link; ?>" download>click here</a>.');
             return false;
           });
         });</script>
