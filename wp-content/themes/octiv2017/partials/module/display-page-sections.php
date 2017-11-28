@@ -52,7 +52,7 @@
                     echo '<a href="' . $image_link_location . '">';
                   }
                   if ($is_video) {
-                    echo '<a href="#0" class="launch-video-modal" data-video-provider="' . get_sub_field('video_provider') . '" data-video-id="' . get_sub_field('video_id') . '">';
+                    echo '<a href="#0" class="launch-video-modal" data-modal-headline="' . get_sub_field('modal_headline') . '" data-modal-body="' . get_sub_field('modal_body') . '" data-video-provider="' . get_sub_field('video_provider') . '" data-video-id="' . get_sub_field('video_id') . '">';
                   }
                   echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
                   if ($image_link_location || $is_video) {
