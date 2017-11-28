@@ -273,3 +273,27 @@ LEADERSHIP BIO MODAL
   }
 
 }
+
+
+/*
+==============================
+VIDEO MODALS
+==============================
+*/
+.video-modal {
+
+  .modal-body {
+    padding: 1rem;
+    @include tablet {
+      padding: 2rem;
+    }
+  }
+
+  .video-outer {
+    margin-top: 1rem;
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
+
+}

@@ -1,6 +1,6 @@
 var platformCreate = $('.animation-platform--create');
 
-if (platformCreate) {
+if (document.querySelector('.animation-platform--create')) {
 
   var topOfPlatformCreate = platformCreate.offset().top;
 
@@ -18,7 +18,7 @@ if (platformCreate) {
 
 var platformShare = $('.animation-platform--share');
 
-if (platformShare) {
+if (document.querySelector('.animation-platform--share')) {
 
   var topOfPlatformShare = platformShare.offset().top;
 
@@ -35,7 +35,7 @@ if (platformShare) {
 
 var platformSign = $('.animation-platform--sign');
 
-if (platformSign) {
+if (document.querySelector('.animation-platform--sign')) {
 
   var topOfPlatformSign = platformSign.offset().top;
 
@@ -52,7 +52,7 @@ if (platformSign) {
 
 var platformStore = $('.animation-platform--store');
 
-if (platformStore) {
+if (document.querySelector('.animation-platform--store')) {
 
   var topOfPlatformStore = platformStore.offset().top;
 
@@ -69,7 +69,7 @@ if (platformStore) {
 
 var platformAnalyze = $('.animation-platform--analyze');
 
-if (platformAnalyze) {
+if (document.querySelector('.animation-platform--analyze')) {
 
   var topOfPlatformAnalyze = platformAnalyze.offset().top;
 
@@ -81,5 +81,36 @@ if (platformAnalyze) {
   }
 
   $(window).on('scroll', animatePlatformAnalyze);
+
+}
+
+
+var videoLaunchModals = $('.launch-video-modal');
+
+if (document.querySelectorAll('.launch-video-modal')) {
+
+  videoLaunchModals.on('click', launchVideoModal);
+
+  function launchVideoModal(e) {
+    e.preventDefault();
+
+    var $this = $(this);
+    var modalContainer = $('.video-modal');
+    var videoProvider = $this.data('video-provider');
+    var videoID = $this.data('video-id');
+    var videoSrc = 'https://www.youtube.com/embed/' + videoID + '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720';
+
+    if (videoProvider === 'wistia') {
+      var videoSrc = 'https://fast.wistia.net/embed/iframe/' + videoID + '?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false';
+    }
+
+    modalContainer.find('iframe').attr('src', videoSrc);
+
+    modalContainer.modal();
+
+    modalContainer.on('hide.bs.modal', function(e) {
+      console.log(modalContainer.find('iframe').attr('src', ''));
+    })
+  }
 
 }
