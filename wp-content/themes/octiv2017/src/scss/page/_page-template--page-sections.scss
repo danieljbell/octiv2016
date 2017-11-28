@@ -56,6 +56,7 @@
   position: relative;
   display: block;
   overflow: hidden;
+  text-decoration: none;
 
   img {
     display: block;
@@ -71,6 +72,16 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     font-size: 2rem;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    // transform: translate(-50%, -50%) scale(2);
+    animation-duration: 2000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: wiggleGrow;
+    animation-iteration-count: infinite;
   }
 
   &:after {
@@ -93,8 +104,6 @@
   &:focus:after {
     max-width: 100%;
     max-height: 100%;
-    // padding: 10rem 18rem;
-    // transform: translate(-50%, -50%) scale(3);
   }
 
 }
