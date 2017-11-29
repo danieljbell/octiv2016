@@ -252,12 +252,16 @@ PAGE SECTION VIDEO MODAL
             <p>Please fill out the form below to submit a ticket to our support team.</p>
           </div>
           <div class="modal-body">
-          <div class="video-outer">
-            <div class="video-inner">
-              <iframe src="" name="wistia_embed" width="100%" height="100%" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <div class="form-container">
+              <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+              <form id="mktoForm_"></form>
+            </div>
+            <div class="video-outer">
+              <div class="video-inner">
+                <iframe src="" name="wistia_embed" width="100%" height="100%" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
