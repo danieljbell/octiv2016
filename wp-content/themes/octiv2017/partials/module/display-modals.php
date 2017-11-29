@@ -244,18 +244,20 @@ PAGE SECTION VIDEO MODAL
     <div class="modal-dialog" role="document">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
       <div class="modal-content">
-        <div class="modal-body">
-          <div class="color-boxes">
-            <h2 class="color-box-headline--brand-four">something</h2>
+        <div class="modal-header light-callout">
+          <div class="modal-header--brand">
+            <div class="color-boxes">
+              <h2 class="color-box-headline--gray">Submit a "Help Me" ticket</h2>
+            </div>
+            <p>Please fill out the form below to submit a ticket to our support team.</p>
           </div>
-          <p class="two-third-only has-text-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laudantium rerum, temporibus doloribus asperiores est esse, soluta odit veniam repellendus consequuntur incidunt qui consequatur quas.
-          </p>
+          <div class="modal-body">
           <div class="video-outer">
             <div class="video-inner">
               <iframe src="" name="wistia_embed" width="100%" height="100%" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

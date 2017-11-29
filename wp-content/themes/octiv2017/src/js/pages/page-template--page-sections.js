@@ -96,7 +96,6 @@ if (document.querySelectorAll('.launch-video-modal')) {
 
     var $this = $(this);
     var modalContainer = $('.video-modal');
-    var headlineColorClass = $this.parents('.page-section-item').find('h2').attr('class');
     var modalHeadline = $this.data('modal-headline');
     var modalBody = $this.data('modal-body');
     var videoProvider = $this.data('video-provider');
@@ -108,7 +107,7 @@ if (document.querySelectorAll('.launch-video-modal')) {
     }
 
     modalContainer.find('iframe').attr('src', videoSrc);
-    modalContainer.find('h2').show().text(modalHeadline).attr('class', headlineColorClass);
+    modalContainer.find('h2').show().text(modalHeadline);
     modalContainer.find('p').show().text(modalBody);
     if (!modalHeadline) {
       modalContainer.find('h2').hide();  

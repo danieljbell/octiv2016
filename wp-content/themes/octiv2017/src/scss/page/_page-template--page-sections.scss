@@ -77,7 +77,7 @@
   &:hover:before,
   &:focus:before {
     // transform: translate(-50%, -50%) scale(2);
-    animation-duration: 2000ms;
+    animation-duration: 3000ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-name: wiggleGrow;
