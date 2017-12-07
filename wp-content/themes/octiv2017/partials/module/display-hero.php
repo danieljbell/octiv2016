@@ -253,7 +253,7 @@ $rand_num = mt_rand(1,4);
                 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                 $thumb_url = $thumb_url_array[0];
                 $hero_bg = 'url(' . $thumb_url . ')';
-                $page_hero_body_copy = get_field('sidebar_title', $page_hero_body_copy[0]->ID, false);
+                $page_hero_body_copy = get_sub_field('pick_your_page')[0]->post_excerpt;
                 $cta_location = get_the_permalink(get_sub_field('pick_your_page')[0]->ID);
               }
         ?>
@@ -263,6 +263,16 @@ $rand_num = mt_rand(1,4);
                 <h1 class="color-box-headline--brand-two"><?php echo $page_hero_title; ?></h1>
               </div>
               <h2 class="mar-b-most"><?php echo $page_hero_body_copy; ?></h2>
+              <?php
+                // PULL HEADSHOTS AND INFO FROM EVENT PAGE
+                $picked_post_type = get_sub_field('pick_your_page');
+
+                if ($picked_post_type[0]->post_type === 'events' && !get_sub_field('custom_banner')) {
+                  $thing = $picked_post_type[0]->ID;
+                  echo do_shortcode('[display_headshots post_type="' . $thing . '"]');
+                }
+
+              ?>
               <a href="<?php echo $cta_location; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
             </div>
           </div>

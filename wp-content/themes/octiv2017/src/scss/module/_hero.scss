@@ -35,11 +35,16 @@
   padding: 0;
   .slide {
     background-size: cover;
+    background-position: center;
     padding: 3rem 0 6rem;
   }
   h2 {
     margin-bottom: 1em;
   }
+}
+
+.slider-ready.home .hero {
+  max-height: none; 
 }
 
 .single-post .hero {
@@ -57,4 +62,41 @@
 .single-library .hero,
 .has-notch.hero {
   padding: 3rem 0 6rem;
+}
+
+.hero .event-headshot-listing {
+  list-style-type: none;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  @include mobile {
+    display: none;
+  }
+
+  li {
+    margin-right: 2rem;
+    display: block;
+  }
+
+  img {
+    margin: 0 auto 0.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .person-headshot {
+    margin-right: 0;
+  }
+
+  .speaker-name {
+    font-weight: bold;
+    color: $white;
+  }
+
+  .speaker-company {
+    font-style: italic;
+  }
+
 }

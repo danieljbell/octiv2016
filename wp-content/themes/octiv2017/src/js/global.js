@@ -1,3 +1,9 @@
+if ($('body').hasClass('home')) {
+  $('.slider').on('init', function() {
+    $('body').addClass('slider-ready')
+  });
+}
+
 (function() {
 
 
@@ -340,10 +346,9 @@
       draggable: false,
       adaptiveHeight: true
     });
-    $('.slider').on('init', function() {
-      console.log('lets rock');
-    });
   }
+
+
 
   if (document.querySelectorAll('.slider-for')) {
     $('.slider-for').slick({

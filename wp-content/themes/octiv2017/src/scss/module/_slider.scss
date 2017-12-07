@@ -27,6 +27,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 4rem;
+      line-height: 1rem;
     }
     &:focus {
       outline: none;
@@ -140,7 +141,7 @@ PAGE OVERRIDES
       }
     }
     .slick-dots {
-      bottom: 5rem;
+      bottom: 4rem;
     }
   }
   .no-promoted-item .slider-for .slick-slide {
