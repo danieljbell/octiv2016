@@ -76,6 +76,36 @@ add_shortcode('get_saas_buyer_journey', function($atts) {
   return file_get_contents('./wp-content/themes/octiv2016/page-templates/buyer-journey.php', false, $context);
 });
 
+add_shortcode('display_headshots', function($atts) {
+  extract(shortcode_atts(
+    array(
+      'post_type' => '',
+    ), $atts)
+  );
+  ob_start();
+?>
+  <?php
+    if (have_rows('speakers', $post_type)) :
+      echo '<ul class="event-headshot-listing">';
+      while (have_rows('speakers', $post_type)) :
+        the_row();
+          echo '<li class="speaker-item">';
+            echo '<div class="person-headshot">';
+              echo '<img src="' . get_sub_field('speaker_headshot') . '" alt="' . get_sub_field('speaker_name') . '">';
+            echo '</div>';
+            echo '<div class="speaker-details">';
+              echo '<p class="speaker-name">' . get_sub_field('speaker_name') . '</p>';
+              echo '<p class="speaker-company">' . get_sub_field('speaker_company') . '</p>';
+            echo '</div>';
+          echo '</li>';
+      endwhile;
+      echo '</ul>';
+    endif;
+  ?>
+<?php
+    return ob_get_clean();
+});
+
 
 
 /*
@@ -87,8 +117,10 @@ add_shortcode('custom_animation', function($atts) {
   extract(shortcode_atts(
     array(
       'tag' => '',
-    ), $atts));
-    ob_start(); ?>
+    ), $atts)
+  );
+  ob_start();
+?>
 
 <?php if ($tag === 'platform--create') : ?>
   <div class="animation-platform--create">
