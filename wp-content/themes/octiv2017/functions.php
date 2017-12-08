@@ -18,7 +18,7 @@ ADD GLOBAL JS TO PAGE
 */
 function enqueue_global_js() {
   if (!get_field('remove_footer')) {
-    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.10', true);
+    wp_enqueue_script('global', get_stylesheet_directory_URI() . '/dist/js/global.js', array(), '1.0.11', true);
   }
   
   if (is_singular('integration')) {

@@ -65,23 +65,30 @@
     curl_close($ch);
     // QUERY MARKETO BASED ON COOKIE FOR THE LEAD
     $encoded_cookie = str_replace("&","%26",$_COOKIE["_mkto_trk"]);
-    $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,company,phone,state,LinkedIn_Company_Size__c&access_token=" . $mkto_resp[access_token];
-    $json = file_get_contents($url);
-    $json_data = json_decode($json, true);
+    $url = "https://625-MXY-689.mktorest.com/rest/v1/leads.json?filterType=cookie&filterValues=" . $encoded_cookie . "&fields=email,firstName,lastName,title,company,phone,state,LinkedIn_Company_Size__c&access_token=" . $mkto_resp[access_token];
+    $getLead = curl_init();
+    curl_setopt($getLead, CURLOPT_URL, $url);
+    curl_setopt($getLead, CURLOPT_HEADER, 0);
+    curl_setopt($getLead, CURLOPT_RETURNTRANSFER, 1);
+    
+    $returnLead = json_decode(curl_exec($getLead), true);
+
+    // print_r();
   ?>
   <script>
     var mktoLead = {  
-      "requestId": "<?php echo $json_data[requestId]; ?>",
+      "requestId": "<?php echo $returnLead[requestId]; ?>",
       "success": true,
       "result":[  
         {  
-          "firstName":"<?php echo $json_data[result][0][firstName]; ?>",
-          "lastName":"<?php echo $json_data[result][0][lastName]; ?>",
-          "email":"<?php echo $json_data[result][0][email]; ?>",
-          "company":"<?php echo $json_data[result][0][company]; ?>",
-          "phone":"<?php echo $json_data[result][0][phone]; ?>",
-          "state":"<?php echo $json_data[result][0][state]; ?>",
-          "LinkedIn_Company_Size__c":"<?php echo $json_data[result][0][LinkedIn_Company_Size__c]; ?>"
+          "firstName":"<?php echo $returnLead[result][0][firstName]; ?>",
+          "lastName":"<?php echo $returnLead[result][0][lastName]; ?>",
+          "email":"<?php echo $returnLead[result][0][email]; ?>",
+          "title":"<?php echo $returnLead[result][0][title]; ?>",
+          "company":"<?php echo $returnLead[result][0][company]; ?>",
+          "phone":"<?php echo $returnLead[result][0][phone]; ?>",
+          "state":"<?php echo $returnLead[result][0][state]; ?>",
+          "LinkedIn_Company_Size__c":"<?php echo $returnLead[result][0][LinkedIn_Company_Size__c]; ?>"
         }
       ]
     }
