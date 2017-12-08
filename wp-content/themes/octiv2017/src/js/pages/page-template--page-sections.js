@@ -91,6 +91,7 @@ if (document.querySelector('.animation-integration--crm')) {
   var topOfintegrationCRM = integrationCRM.offset().top;
 
   function animateintegrationCRM() {
+    
     var $this = $(this);
     if ($this.scrollTop() >= topOfintegrationCRM - (window.innerHeight / 2)) {
       integrationCRM.addClass('active');
@@ -100,16 +101,28 @@ if (document.querySelector('.animation-integration--crm')) {
 
   $(window).on('scroll', animateintegrationCRM);
 
-  
+  var integrationCRMItems = integrationCRM.find('.animated-integrations-list li');
 
   setInterval(function() {
     if (integrationCRM.hasClass('active')) {
-      loopIntegrations(integrationCRM);
+      loopIntegrations(document.querySelector('.animation-integration--crm'), integrationCRMItems);
     }
-  }, 500);
+  }, 2000);
 
-  function loopIntegrations(elem) {
-    console.log(elem);
+  function loopIntegrations(elem, items) {
+
+    // var allItems = elem.querySelectorAll('li');
+    // for (var i = 0; i < allItems.length; i++) {
+    //   var self = allItems[i];
+    //   if (self.classList.contains('current')) {
+    //     self.classList.remove('current')
+    //   }
+    //   console.log(self.parentElement.children);
+    // }
+
+    // console.dir($());
+    var className = elem.classList[0];
+    $('.' + className).find('li').first().addClass('current');
   }
 
 }
