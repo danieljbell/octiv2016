@@ -203,7 +203,7 @@ if (get_field('post_type') === 'posts') {
                 <template v-if="post._embedded['wp:term'][0][0].slug === 'webinar' || post._embedded['wp:term'][0][0].slug === 'datasheets' || post._embedded['wp:term'][0][0].slug === 'videos'">
                   <p class="card-tag--brand-two">{{post._embedded['wp:term'][0][0].slug}}</p>
                 </template>
-                <template v-else-if="post._embedded['wp:term'][0][0].slug === 'event' || post._embedded['wp:term'][0][0].slug === 'infographics' || post._embedded['wp:term'][0][0].slug === 'whitepapers'">
+                <template v-else-if="post._embedded['wp:term'][0][0].slug === 'event' || post._embedded['wp:term'][0][0].slug === 'infographics' || post._embedded['wp:term'][0][0].slug === 'guides'">
                   <p class="card-tag--brand-three">{{post._embedded['wp:term'][0][0].slug}}</p>
                 </template>
                 <template v-else-if="post._embedded['wp:term'][0][0].slug === 'quizzes'">

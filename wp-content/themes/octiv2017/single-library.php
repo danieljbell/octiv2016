@@ -27,7 +27,7 @@
 <main>
 
   <?php
-    if ($post_tax_type === 'whitepapers') {
+    if ($post_tax_type === 'guides') {
       get_template_part('partials/pages/display', 'library--whitepaper');
     } else if ($post_tax_type === 'infographics') {
       get_template_part('partials/pages/display', 'library--infographics');

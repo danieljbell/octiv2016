@@ -40,18 +40,20 @@ $context = stream_context_create(array(
                   array(
                     'taxonomy' => 'library_type',
                     'field'    => 'slug',
-                    'terms'    => 'whitepapers',
+                    'terms'    => 'guides',
                   ),
                 ),
               );
               $whitepaper_ad = new WP_Query( $args );
               if ($whitepaper_ad->have_posts()) : 
                 while ($whitepaper_ad->have_posts()) : $whitepaper_ad->the_post(); 
+                $terms = get_the_terms($post->ID, $post->post_type . '_type');
+                $page_term = substr($terms[0]->name, 0, -1);
             ?>
               <a href="<?php echo get_the_permalink(); ?>">
                 <img src="<?php echo get_field('whitepaper_cover'); ?>" alt="<?php echo get_the_title(); ?> Cover">
               </a>
-              <p class="has-text-center mar-t no-mar-b">Free Whitepaper</p>
+              <p class="has-text-center mar-t no-mar-b">Free <?php echo $page_term; ?></p>
               <a href="<?php echo get_the_permalink(); ?>">
                 <h5 class="mar-b has-text-center"><?php echo get_the_title(); ?></h5>
               </a>

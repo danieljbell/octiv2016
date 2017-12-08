@@ -5,6 +5,8 @@
   if (get_field('hero_button_text')) {
     $page_hero_button_text = get_field('hero_button_text');
   }
+  $terms = get_the_terms($post->ID, $post->post_type . '_type');
+  $page_term = substr($terms[0]->name, 0, -1);
 ?>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
@@ -51,9 +53,9 @@
   <div class="site-width">
     <div class="half-only">
       <div class="color-boxes" style="margin-bottom: 0.5rem;">
-        <h2 class="color-box-headline--white">Get the Whitepaper Now</h2>
+        <h2 class="color-box-headline--white">Get the <?php echo $page_term; ?> Now</h2>
       </div>
-      <p>Fill out the form below and you'll get access to the whitepaper.</p>
+      <p>Fill out the form below and you'll get access to the <?php echo strtolower($page_term); ?>.</p>
       <div class="two-third-only">
         <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_<?php echo $form_id; ?>"></form>
