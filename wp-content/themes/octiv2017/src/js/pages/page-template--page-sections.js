@@ -95,9 +95,22 @@ if (document.querySelector('.animation-integration--crm')) {
     if ($this.scrollTop() >= topOfintegrationCRM - (window.innerHeight / 2)) {
       integrationCRM.addClass('active');
     }
+
   }
 
   $(window).on('scroll', animateintegrationCRM);
+
+  
+
+  setInterval(function() {
+    if (integrationCRM.hasClass('active')) {
+      loopIntegrations(integrationCRM);
+    }
+  }, 500);
+
+  function loopIntegrations(elem) {
+    console.log(elem);
+  }
 
 }
 

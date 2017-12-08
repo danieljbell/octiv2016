@@ -724,7 +724,7 @@ ANIMATIONS
     left: 50%;
     width: 100%;
     transform: translate(-50%, 200px);
-    transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
+    // transition: all 600ms cubic-bezier(0.15, 0.11, 0.13, 1.42);
     // &:nth-child(4) {
     //   transform: translate(-50%, -50%);
     // }
@@ -737,8 +737,28 @@ ANIMATIONS
   }
 
   .active & {
-    li:nth-child(1) {
-      transform: translate(-50%, -50%);
+    li {
+      // animation-duration: 4000ms;
+      // animation-timing-function: cubic-bezier(0.15, 0.11, 0.13, 1.42);
+      // animation-fill-mode: forwards;
+      // animation-name: flyInOut;
+      // animation-iteration-count: infinite;
+      // &:hover {
+      //   animation-play-state: paused;
+      // }
+      
+      // &:nth-child(2) {
+      //   animation-delay: 4000ms;
+      // }
+
+      // &:nth-child(3) {
+      //   animation-delay: 8000ms;
+      // }
+
+      // &:nth-child(4) {
+      //   animation-delay: 12000ms;
+      // }
+
     }
   }
 
