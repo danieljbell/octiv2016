@@ -3802,6 +3802,32 @@ if ($('body').hasClass('home')) {
 
 if (window.MktoForms2) {
   MktoForms2.whenReady(function (form) {
+
+    // Blacklisted Email Domains
+    var invalidDomains = ["@gmail.","@yahoo.","@hotmail.","@aol.","@att.","@comcast.","@live.","@outlook.","@yandex.","@icloud."];
+    //Add an onValidate handler
+    form.onValidate(function(values, followUpUrl) {
+      // Verify Email is Business Domain
+      var email = form.vals().Email;
+      if(email){
+        if(!isEmailGood(email)) {
+          form.submitable(false);
+          var emailElem = form.getFormElem().find("#Email");
+          form.showErrorMessage("Must be Business email.", emailElem);
+        } else{
+          form.submitable(true);
+        }
+      }
+    function isEmailGood(email) {
+      for(var i=0; i < invalidDomains.length; i++) {
+        var domain = invalidDomains[i];
+        if (email.indexOf(domain) != -1) {
+          return false;
+        }
+      }
+      return true;
+    }
+    });
     
     var pageURL = document.documentURI;
     $('input[name="sourceURL"]').attr('value', pageURL);  
