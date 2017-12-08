@@ -84,6 +84,23 @@ if (document.querySelector('.animation-platform--analyze')) {
 
 }
 
+var integrationCRM = $('.animation-integration--crm');
+
+if (document.querySelector('.animation-integration--crm')) {
+
+  var topOfintegrationCRM = integrationCRM.offset().top;
+
+  function animateintegrationCRM() {
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationCRM - (window.innerHeight / 2)) {
+      integrationCRM.addClass('active');
+    }
+  }
+
+  $(window).on('scroll', animateintegrationCRM);
+
+}
+
 
 var videoLaunchModals = $('.launch-video-modal');
 

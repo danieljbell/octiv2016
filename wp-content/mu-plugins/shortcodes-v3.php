@@ -318,5 +318,36 @@ add_shortcode('custom_animation', function($atts) {
     </svg>
   </div>
 <?php endif; ?>
+<?php if ($tag === 'integration--crm') : ?>
+  <div class="animation-integration--crm">
+    <div class="badge">
+      <ul class="animated-integrations-list">
+        <?php
+          $args = array(
+            'post_type' => 'integration',
+            'posts_per_page' => 6,
+            'order' => 'ASC',
+            'orderby' => 'menu_order',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'integration_type',
+                'field'    => 'slug',
+                'terms'    => 'crm',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post(); ?>
+  <li><a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo get_field('integration_logo'); ?>" alt=""></a></li>
+<?php
+            endwhile;
+          endif;
+          wp_reset_query();
+        ?>
+      </ul>
+    </div>
+  </div>
+<?php endif; ?>
 
 <?php return ob_get_clean(); }); ?>
