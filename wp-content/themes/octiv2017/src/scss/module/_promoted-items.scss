@@ -19,6 +19,7 @@
   filter: grayscale(1) invert(1) brightness(300%) drop-shadow(3px 3px 2px rgba(black, 0.5));
 }
 
-.promoted-item-container .speaker-item .speaker-name {
-  color: $white;
+.promoted-item-container .speaker-item .speaker-name,
+.hero .speaker-item .speaker-name {
+  color: $white !important;
 }
