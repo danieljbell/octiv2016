@@ -81,6 +81,16 @@ get_header();
             <h2 class="color-box-headline--brand-four"><?php echo $promoted_headline; ?></h2>
           </div>
           <p class="font-bump"><?php echo $promoted_body_copy; ?></p>
+          <?php
+                // PULL HEADSHOTS AND INFO FROM EVENT PAGE
+                $picked_post_type = get_field('pick_your_item');
+
+                if ($picked_post_type[0]->post_type === 'events' && !get_sub_field('custom_banner')) {
+                  $thing = $picked_post_type[0]->ID;
+                  echo do_shortcode('[display_headshots post_type="' . $thing . '"]');
+                }
+
+              ?>
           <a href="<?php echo $cta_link; ?>" class="btn-white--outline"><?php echo $cta_text; ?></a>
         </div>
       </div>
