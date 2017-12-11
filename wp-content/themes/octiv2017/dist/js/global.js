@@ -3706,6 +3706,15 @@ if ($('body').hasClass('home')) {
     });
   }
 
+  if (document.querySelector('.animated-integrations-list')) {
+    $('.animated-integrations-list').slick( {
+      vertical: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false
+    })
+  }
+
 
 
   if (document.querySelectorAll('.slider-for')) {

@@ -89,13 +89,13 @@ get_header();
 
   
   <?php
-    // if (get_field('has_promoted_item')) {
-    //   echo '<section class="client-testimonial-slider">';
-    // } else {
-    //   echo '<section class="client-testimonial-slider no-promoted-item">';
-    // }
-    // get_template_part('partials/module/display', 'client-testimonial-slider');
-    // echo '</section>';
+    if (get_field('has_promoted_item')) {
+      echo '<section class="client-testimonial-slider">';
+    } else {
+      echo '<section class="client-testimonial-slider no-promoted-item">';
+    }
+    get_template_part('partials/module/display', 'client-testimonial-slider');
+    echo '</section>';
   ?>
 
 <section class="pad-y-most">
