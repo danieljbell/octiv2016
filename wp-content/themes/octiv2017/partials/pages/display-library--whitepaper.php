@@ -76,7 +76,7 @@
 
             // Get the form's jQuery element and hide it
             form.getFormElem().hide();
-            $('#call-to-action .color-box-headline--white').text('Thanks ' + vals.FirstName + '!');
+            $('#call-to-action .color-box-headline--white').text('Thanks, ' + vals.FirstName + '!');
             $('#call-to-action p').html('If the whitepaper didn\'t already download, <a href="<?php echo $redirect_link; ?>" download>click here</a>.');
             return false;
           });
