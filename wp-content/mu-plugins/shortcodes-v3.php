@@ -318,7 +318,11 @@ add_shortcode('custom_animation', function($atts) {
     </svg>
   </div>
 <?php endif; ?>
-<?php if ($tag === 'integration--crm') : ?>
+<?php
+  $integration_tags = array('integration--crm', 'integration--esignature', 'integration--cpq', 'integration--file-storage', 'integration--email', 'integration--finance', 'integration--forms', 'integration--sso');
+  if (in_array($tag, $integration_tags)) :
+    $meta_term = str_replace('integration--', '', $tag);
+?>
   <div class="animation-integration--crm">
     <div class="badge">
       <ul class="animated-integrations-list">
@@ -332,7 +336,7 @@ add_shortcode('custom_animation', function($atts) {
               array(
                 'taxonomy' => 'integration_type',
                 'field'    => 'slug',
-                'terms'    => 'crm',
+                'terms'    => $meta_term,
               ),
             ),
           );

@@ -724,7 +724,10 @@ ANIMATIONS
     display: flex !important;
     justify-content: center;
     align-items: center;
-    height: 400px !important;
+    height: 275px !important;
+    @include tablet {
+      height: 400px !important;
+    }
 
   }
 

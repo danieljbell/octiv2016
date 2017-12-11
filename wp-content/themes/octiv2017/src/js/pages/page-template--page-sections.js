@@ -86,10 +86,6 @@ if (document.querySelector('.animation-platform--analyze')) {
 
 var integrationCRM = $('.animation-integration--crm');
 
-$(document).one('cool-dude', function() {
-  console.log('poop');
-});
-
 if (document.querySelector('.animation-integration--crm')) {
 
   var topOfintegrationCRM = integrationCRM.offset().top;
@@ -99,14 +95,150 @@ if (document.querySelector('.animation-integration--crm')) {
     var $this = $(this);
     if ($this.scrollTop() >= topOfintegrationCRM - (window.innerHeight / 2)) {
       integrationCRM.addClass('active');
-      $(document).trigger('cool-dude');
     }
 
   }
 
   $(window).on('scroll', animateintegrationCRM);
 
+}
 
+
+var integrationEsignature = $('.animation-integration--esignature');
+
+if (document.querySelector('.animation-integration--esignature')) {
+
+  var topOfintegrationEsignature = integrationEsignature.offset().top;
+
+  function animateintegrationEsignature() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationEsignature - (window.innerHeight / 2)) {
+      integrationEsignature.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationEsignature);
+
+}
+
+var integrationCPQ = $('.animation-integration--cpq');
+
+if (document.querySelector('.animation-integration--cpq')) {
+
+  var topOfintegrationCPQ = integrationCPQ.offset().top;
+
+  function animateintegrationCPQ() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationCPQ - (window.innerHeight / 2)) {
+      integrationCPQ.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationCPQ);
+
+}
+
+
+var integrationFileStorage = $('.animation-integration--file-storage');
+
+if (document.querySelector('.animation-integration--file-storage')) {
+
+  var topOfintegrationFileStorage = integrationFileStorage.offset().top;
+
+  function animateintegrationFileStorage() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationFileStorage - (window.innerHeight / 2)) {
+      integrationFileStorage.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationFileStorage);
+
+}
+
+
+var integrationEmail = $('.animation-integration--email');
+
+if (document.querySelector('.animation-integration--email')) {
+
+  var topOfintegrationEmail = integrationEmail.offset().top;
+
+  function animateintegrationEmail() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationEmail - (window.innerHeight / 2)) {
+      integrationEmail.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationEmail);
+
+}
+
+
+var integrationFinance = $('.animation-integration--finance');
+
+if (document.querySelector('.animation-integration--finance')) {
+
+  var topOfintegrationFinance = integrationFinance.offset().top;
+
+  function animateintegrationFinance() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationFinance - (window.innerHeight / 2)) {
+      integrationFinance.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationFinance);
+
+}
+
+
+var integrationForms = $('.animation-integration--forms');
+
+if (document.querySelector('.animation-integration--forms')) {
+
+  var topOfintegrationForms = integrationForms.offset().top;
+
+  function animateintegrationForms() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationForms - (window.innerHeight / 2)) {
+      integrationForms.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationForms);
+
+}
+
+
+var integrationSSO = $('.animation-integration--sso');
+
+if (document.querySelector('.animation-integration--sso')) {
+
+  var topOfintegrationSSO = integrationSSO.offset().top;
+
+  function animateintegrationSSO() {
+    
+    var $this = $(this);
+    if ($this.scrollTop() >= topOfintegrationSSO - (window.innerHeight / 2)) {
+      integrationSSO.addClass('active');
+    }
+
+  }
+
+  $(window).on('scroll', animateintegrationSSO);
 
 }
 

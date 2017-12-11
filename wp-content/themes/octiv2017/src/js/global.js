@@ -352,9 +352,12 @@ if ($('body').hasClass('home')) {
     $('.animated-integrations-list').slick( {
       vertical: true,
       autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false
+      autoplaySpeed: 2000,
+      speed: 600,
+      arrows: false,
+      cssEase: 'cubic-bezier(0.15, 0.11, 0.13, 1.42)'
     })
+    // $('.animated-integrations-list').slick('slickPause');
   }
 
 
