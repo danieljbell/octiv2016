@@ -25,6 +25,13 @@
           $count = 0;
         }
         $current_iteration = $number_formatter->format($count + 2);
+        
+        if (is_page_template('page-templates/page-sections-with-promo.php')) {
+          $current_iteration = $number_formatter->format($count + 3);
+          if (($count + 3) > 4) {
+            $count = -2;
+          }
+        }
 
         $is_video = get_sub_field('is_video_modal');
       ?>
