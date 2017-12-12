@@ -63,10 +63,9 @@ if ($('body').hasClass('home')) {
 
     function stickyNavList() {
       if (window.scrollY >= topOfStickyNav) {
-        var initialBodyPadding = document.body.style.paddingTop;
-        var currentBodyPadding = parseInt(initialBodyPadding.slice(0, 2)) + stickyNav.offsetHeight + (18*6) + 'px';
-        document.body.style.paddingTop = currentBodyPadding;
-        document.body.style.paddingBottom = stickyNav.offsetHeight + siteHeader.offsetHeight + 10 + 'px';
+        var initialBodyPadding = document.body.style.paddingTop;        
+        var currentBodyPadding = parseInt(initialBodyPadding.slice(0, 2)) + stickyNav.offsetHeight + 'px';
+        document.body.style.minHeight = 'calc(100% + ' + currentBodyPadding + ')';
         document.body.classList.add('sticky-nav-fixed');
       } else {
         document.body.classList.remove('sticky-nav-fixed');
