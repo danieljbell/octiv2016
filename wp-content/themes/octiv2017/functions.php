@@ -57,6 +57,10 @@ function enqueue_global_js() {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
   }
 
+  if (is_page_template('page-templates/page-sections-with-promo.php')) {
+    wp_enqueue_script('page-template--page-sections-with-promo', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections-with-promo.js', array(), '1.0.2', true);
+  }
+
   if (is_page_template('page-templates/landing-page.php')) {
     wp_enqueue_script('page-template--landing-page', get_stylesheet_directory_URI() . '/dist/js/page-template--landing-page.js', array(), '1.0.2', true);
   }
@@ -556,53 +560,3 @@ function wp_html_compression_start()
   ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');
-
-
-
-
-/**
- * Removes the regular excerpt box. We're not getting rid
- * of it, we're just moving it above the wysiwyg editor
- *
- * @return null
- */
-function oz_remove_normal_excerpt() {
-    remove_meta_box( 'postexcerpt' , 'post' , 'normal' );
-}
-add_action( 'admin_menu' , 'oz_remove_normal_excerpt' );
- 
-/**
- * Add the excerpt meta box back in with a custom screen location
- *
- * @param  string $post_type
- * @return null
- */
-function oz_add_excerpt_meta_box( $post_type ) {
-    if ( in_array( $post_type, array( 'post', 'page' ) ) ) {
-        add_meta_box(
-            'oz_postexcerpt',
-            __( 'Excerpt', 'thetab-theme' ),
-            'post_excerpt_meta_box',
-            $post_type,
-            'after_title',
-            'high'
-        );
-    }
-}
-add_action( 'add_meta_boxes', 'oz_add_excerpt_meta_box' );
- 
-/**
- * You can't actually add meta boxes after the title by default in WP so
- * we're being cheeky. We've registered our own meta box position
- * `after_title` onto which we've regiestered our new meta boxes and
- * are now calling them in the `edit_form_after_title` hook which is run
- * after the post tile box is displayed.
- *
- * @return null
- */
-function oz_run_after_title_meta_boxes() {
-    global $post, $wp_meta_boxes;
-    # Output the `below_title` meta boxes:
-    do_meta_boxes( get_current_screen(), 'after_title', $post );
-}
-add_action( 'edit_form_after_title', 'oz_run_after_title_meta_boxes' );

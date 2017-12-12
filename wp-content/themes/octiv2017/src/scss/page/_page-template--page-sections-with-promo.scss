@@ -1,0 +1,33 @@
+.page-template-page-sections-with-promo {
+
+  .slick-list,
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .slick-slide.card {
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+    }
+
+    img {
+      max-width: 75%;
+      max-height: 75%;
+    }
+
+  }
+
+  .slick-dots {
+    bottom: -2.5rem;
+  }
+
+}
