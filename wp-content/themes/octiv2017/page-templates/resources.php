@@ -30,18 +30,6 @@ if (get_field('post_type') === 'posts') {
     <div class="site-width">
       <div class="box--light">
         <?php
-          // $posts = get_field('pick_your_page');
-          // print_r($posts);
-          
-          // $current_iteration = $number_formatter->format(count($posts));
-          // if ($current_iteration === 'three') {
-          //   echo '<ul class="third no-bull">';
-          // } elseif ($current_iteration === 'two') {
-          //   echo '<ul class="half no-bull">';
-          // } else {
-          //   echo '<ul class="no-bull">';
-          // }
-
           if (have_rows('resource_promoted_items')) :
             $count = 0;
             $total_items = count(get_field('resource_promoted_items'));
@@ -206,7 +194,7 @@ if (get_field('post_type') === 'posts') {
                 <template v-else-if="post._embedded['wp:term'][0][0].slug === 'event' || post._embedded['wp:term'][0][0].slug === 'infographics' || post._embedded['wp:term'][0][0].slug === 'guides'">
                   <p class="card-tag--brand-three">{{post._embedded['wp:term'][0][0].slug}}</p>
                 </template>
-                <template v-else-if="post._embedded['wp:term'][0][0].slug === 'quizzes'">
+                <template v-else-if="post._embedded['wp:term'][0][0].slug === 'quizzes' || post._embedded['wp:term'][0][0].slug === 'research'">
                   <p class="card-tag--brand-four">{{post._embedded['wp:term'][0][0].slug}}</p>
                 </template>
                 <template v-else-if="post._embedded['wp:term'][0][0].slug === 'tools'">

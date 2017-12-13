@@ -39,6 +39,8 @@
       get_template_part('partials/pages/display', 'library--datasheets');
     } else if ($post_tax_type === 'tools') {
       get_template_part('partials/pages/display', 'library--tools');
+    } else if ($post_tax_type === 'research') {
+      get_template_part('partials/pages/display', 'library--research');
     }
   ?>
 
