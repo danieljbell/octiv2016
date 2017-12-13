@@ -13,6 +13,12 @@
   }
 ?>
 
+<style>
+  .whitepaper-cover {
+    box-shadow: none;
+  }
+</style>
+
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
 <section class="notch">
