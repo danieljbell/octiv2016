@@ -53,7 +53,7 @@ function enqueue_global_js() {
     wp_enqueue_script('releases', get_stylesheet_directory_URI() . '/dist/js/releases.js', array(), '1.0.0', true);
   }
 
-  if (is_page_template('page-templates/page-sections.php') || is_singular('solutions')) {
+  if (is_page_template('page-templates/page-sections.php') || is_singular('solutions') || is_page_template('page-templates/page-sections-with-promo.php')) {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
   }
 
