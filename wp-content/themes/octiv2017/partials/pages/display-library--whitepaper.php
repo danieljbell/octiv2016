@@ -78,6 +78,16 @@
             form.getFormElem().hide();
             $('#call-to-action .color-box-headline--white').text('Thanks, ' + vals.FirstName + '!');
             $('#call-to-action p').html('If the whitepaper didn\'t already download, <a href="<?php echo $redirect_link; ?>" download>click here</a>.');
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'formSubmissionSuccess',
+              formID: '<?php echo $form_id; ?>'
+            });
+
+            console.log(window.dataLayer);
+
+
             return false;
           });
         });</script>
