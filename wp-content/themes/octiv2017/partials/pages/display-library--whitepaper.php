@@ -79,14 +79,12 @@
             $('#call-to-action .color-box-headline--white').text('Thanks, ' + vals.FirstName + '!');
             $('#call-to-action p').html('If the whitepaper didn\'t already download, <a href="<?php echo $redirect_link; ?>" download>click here</a>.');
 
+            // SEND CUSTOM EVENT TO GOOGLE TAG MANAGER
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
               event: 'formSubmissionSuccess',
               formID: '<?php echo $form_id; ?>'
             });
-
-            console.log(window.dataLayer);
-
 
             return false;
           });
