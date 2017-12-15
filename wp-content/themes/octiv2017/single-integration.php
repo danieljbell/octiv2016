@@ -31,6 +31,26 @@
     }
   ?>
 
+  <?php if ($has_video) : ?>
+    <section class="notch">
+      <div class="site-width">
+        <div class="two-third-only">
+          <div class="box--light">
+            <div class="color-boxes">
+              <h2 class="color-box-headline--brand-two">See Octiv + <?php echo get_the_title(); ?> in Action</h2>
+            </div>
+            <div class="two-third-only">
+              <p class="has-text-center"><?php echo strip_tags(get_the_excerpt()); ?></p>
+              <a href="#0" class="launch-video-modal" data-modal-type="<?php echo get_sub_field('gated_or_ungated'); ?>" data-modal-id="<?php echo get_sub_field('marketo_form_id'); ?>" data-modal-headline="<?php echo get_sub_field('modal_headline'); ?>" data-modal-body="<?php echo get_sub_field('modal_body'); ?>" data-video-provider="<?php echo get_sub_field('video_provider'); ?>" data-video-id="<?php echo get_sub_field('video_id'); ?>">
+                <img src="<?php echo get_field('integration_video_thumbnail'); ?>" alt="" style="width: 100%;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php endif; ?>
+
   <section class="post-content">
     <div class="site-width">
       <div class="two-third-only">
