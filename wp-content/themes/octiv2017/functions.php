@@ -391,6 +391,17 @@ if( function_exists('acf_add_options_page') ) {
   );
 
   acf_add_options_sub_page($args);
+
+  $args = array(
+    'page_title'    => 'Integration Settings',
+    'menu_title'    => 'Integration Settings',
+    'menu_slug'     => 'integration-settings',
+    'parent_slug'   => 'edit.php?post_type=integration',
+    'position'      => false,
+    'icon_url'      => false
+  );
+
+  acf_add_options_sub_page($args);
   
 }
 

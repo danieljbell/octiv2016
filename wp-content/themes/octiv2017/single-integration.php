@@ -51,24 +51,38 @@
     </section>
   <?php endif; ?>
 
-  <section class="post-content">
+  <section class="post-content pad-y-most">
     <div class="site-width">
-      <div class="two-third-only">
-        <article>
-          <h3 id="why">Why Octiv &amp; <?php echo get_the_title(); ?></h3>
+      <article>
+        <div class="two-third-only pad-b-most">
+          <div class="color-boxes">
+            <h2 class="color-box-headline--brand-three">Why Octiv &amp; <?php echo get_the_title(); ?></h2>
+          </div>
           <?php echo get_the_content(); ?>
-          
-          <h3 id="key-capabilities" class="pad-t">Key Capabilities</h3>
+        </div>
+        <div class="pad-b-most pad-t-most">
+          <div class="color-boxes">
+            <h2 class="color-box-headline--brand-four">Key Capabilities</h2>
+          </div>
           <?php
             if( have_rows('key_capabilities') ):
-              echo '<ul>';
+              echo '<ul class="single-integration--key-capabilities fourth">';
               while ( have_rows('key_capabilities') ) : the_row();
-                  echo '<li>' . get_sub_field('key_capability') . '</li>';
+                  echo '<li class="has-text-center">';
+                    echo '<div class="single-integration--icon-container">';
+                      echo '<img src="/wp-content/uploads/2017/01/yellow-invoices.svg">';
+                    echo '</div>';
+                    echo '<p>' . get_sub_field('key_capability') . '</p>';
+                  echo '</li>';
               endwhile;
               echo '</ul>';
           endif;
           ?>
-          <h3 id="technical-requirements" class="pad-t">Technical Requirements</h3>
+        </div>
+        <div class="two-third-only pad-b-most pad-t-most">
+          <div class="color-boxes">
+            <h3 class="color-box-headline--brand-five">Technical Requirements</h2>
+          </div>
           <?php
             if( have_rows('technical_requirements') ):
               echo '<ul>';
@@ -78,10 +92,15 @@
               echo '</ul>';
           endif;
           ?>
-          <?php 
-            if ($customer_success) :
-          ?>
-          <h3 id="customer-success" style="margin-bottom: 0.5rem;">See Success Stories with <?php echo get_the_title(); ?></h3>
+        </div>
+        
+        <?php 
+          if ($customer_success) :
+        ?>
+        <div class="pad-b-most pad-t-most">
+          <div class="color-boxes">
+            <h2 class="color-box-headline--brand-two">See Success Stories with <?php echo get_the_title(); ?></h2>
+          </div>
           <ul class="customer-success-thumbnails fourth">
             <?php
               foreach($customer_success as $post) :
@@ -94,48 +113,20 @@
               endforeach;
             ?>
           </ul>
-          <?php endif; ?>
-          <h3 id="about" class="pad-t">About <?php echo get_the_title(); ?></h3>
+        </div>
+        <?php endif; ?>
+        <div class="pad-b-most pad-t-most two-third-only">
+          <div class="color-boxes">
+            <h2 class="color-box-headline--brand-three">About <?php echo get_the_title(); ?></h2>
+          </div>
           <p><?php echo get_field('integration_description'); ?></p>
           <p>For more information about <?php echo get_the_title(); ?>, please visit their <a href="<?php echo get_field('integration_link'); ?>" target="_blank" rel="noopener noreferrer">website</a>.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="related-integrations">
-    <div class="site-width">
-      <hr>
-      <h2 class="has-text-center mar-b">Other Integrations You Might Find Interesting</h2>
-      <?php
-        $args = array(
-          'post_type' => 'integration',
-          'posts_per_page' => 3
-        );
-        $query = new WP_Query($args);
-        if ($query->have_posts()) :
-          echo '<div class="third">';
-            while ($query->have_posts()) :
-              $query->the_post();
-                echo do_shortcode('[get_card_v3 title="false" has_cta_text="false"]');
-            endwhile;
-          echo '</div>';
-        endif;
-        wp_reset_query();
-      ?>
+        </div>
+      </article>
     </div>
   </section>
   <?php get_template_part('partials/module/display', 'powers-documents'); ?>
 </main>
-
-<?php if (get_field('has_integration_video')) : ?>
-  <div id="video-html" style="display: none;">
-    <div class="video-outer">
-      <div class="video-inner">
-        <iframe src="https://www.youtube.com/embed/<?php echo get_field('integration_video_id'); ?>?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
 
 <?php get_footer(); ?>
 

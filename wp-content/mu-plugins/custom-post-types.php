@@ -755,9 +755,12 @@ function register_integration_post_type() {
     'labels'      => $labels,
     'public'      => true,
     // 'publicly_queryable' => false,
-    'has_archive' => false,
+    'has_archive' => true,
     // 'hierarchical'  => true,
-    'rewrite'            => array( 'slug' => 'integrations' ),
+    'rewrite'            => array( 
+        'slug' => 'integrations',
+    //     'with_front' => false
+    ),
     'menu_icon'   => 'dashicons-admin-plugins',
     'supports'    => array( 'title', 'editor', 'excerpt', 'page-attributes', 'revisions' ),
     'capability_type' => 'integrations',
@@ -807,10 +810,10 @@ function integration_init() {
         'integration',
         array(
             'label' => __( 'Integration Type' ),
-            // 'rewrite' => array( 'slug' => 'integrations' ),
+            'rewrite' => array( 'slug' => '' ),
             'hierarchical' => true,
             // 'public' => false,
-            'publicly_queryable' => false,
+            // 'publicly_queryable' => false,
             'show_ui' => true,
             'show_in_rest'       => true,
             'rest_base'          => 'integration_type',

@@ -6,8 +6,8 @@
   <ul class="page-section-list">
     <?php
       $count = 0;
-      if (have_rows('page_section')) :
-        while (have_rows('page_section')) : the_row();
+      if (have_rows('page_section', 'options')) :
+        while (have_rows('page_section', 'options')) : the_row();
         if (!get_sub_field('is_promoted_item')) {
           $count++;
         }
