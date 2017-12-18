@@ -34,9 +34,9 @@
       </div>
       <?php
         if(preg_match("/\?$/", get_the_title())) {
-          echo '<p class="has-text-center">Don\'t stop at just ' . get_the_title() . ' Try another quiz now!</p>';
+          echo '<p class="has-text-center">Don\'t stop at just <em>' . get_the_title() . '</em> Try another quiz now!</p>';
         } else {
-          echo '<p class="has-text-center">Don\'t stop at just ' . get_the_title() . '. Try another quiz now!</p>';
+          echo '<p class="has-text-center">Don\'t stop at just <em>' . get_the_title() . '</em>. Try another quiz now!</p>';
         }
       ?>
       <div class="third">
