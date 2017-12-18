@@ -755,7 +755,7 @@ function register_integration_post_type() {
     'labels'      => $labels,
     'public'      => true,
     // 'publicly_queryable' => false,
-    'has_archive' => true,
+    // 'has_archive' => true,
     // 'hierarchical'  => true,
     'rewrite'            => array( 
         'slug' => 'integrations',
@@ -812,7 +812,7 @@ function integration_init() {
             'label' => __( 'Integration Type' ),
             'rewrite' => array( 'slug' => '' ),
             'hierarchical' => true,
-            // 'public' => false,
+            'public' => false,
             // 'publicly_queryable' => false,
             'show_ui' => true,
             'show_in_rest'       => true,
