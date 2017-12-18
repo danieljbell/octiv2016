@@ -14,6 +14,11 @@
       header("Location: $parent_page");
     }
   }
+
+  if (get_field('internal_or_external')) {
+    $location = get_field('url');
+    header("Location: $location");
+  }
 ?>
 
 <?php
