@@ -189,7 +189,7 @@ EMPTY MODAL
 ==============================
 */
 ?>
-<?php if (is_singular('releases')) : ?>
+<?php if (is_singular('releases') || is_post_type_archive('support') || is_singular('support')) : ?>
   <div class="empty-modal modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
