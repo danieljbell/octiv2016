@@ -150,8 +150,15 @@ $context = stream_context_create(array(
               </div>
               <?php else : ?>
                 <div class="has-text-center">
-                  <h2>Register Now!</h2>
-                  <p>Fill out the form below to register.</p>
+                  <?php
+                    if (!get_field('webinar_id')) {
+                      echo '<h2>Register Now!</h2>';
+                      echo '<p>Fill out the form below to register.</p>';
+                    } else {
+                      echo '<h2>Watch Now!</h2>';
+                      echo '<p>Fill out the form below to view.</p>';
+                    }
+                  ?>
                 </div>
                 <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
                 <form id="mktoForm_<?php echo get_field('marketo_form_id'); ?>"></form>
