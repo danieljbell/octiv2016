@@ -810,9 +810,12 @@ function integration_init() {
         'integration',
         array(
             'label' => __( 'Integration Type' ),
-            'rewrite' => array( 'slug' => '' ),
+            'rewrite' => array(
+                'slug' => 'integrations',
+                'with_front' => false,
+            ),
             'hierarchical' => true,
-            'public' => false,
+            // 'public' => false,
             // 'publicly_queryable' => false,
             'show_ui' => true,
             'show_in_rest'       => true,
