@@ -91,7 +91,7 @@ $context = stream_context_create(array(
                   echo '<h4 class="color-box-headline--gray">' . get_the_title() . '</h4>';
                 echo '</div>';
               echo '</div>';
-              echo '<div class="modal-header--content">';
+              echo '<div class="modal-header--content has-text-center">';
                 echo get_the_content();
               echo '</div>';
             echo '</div>';
