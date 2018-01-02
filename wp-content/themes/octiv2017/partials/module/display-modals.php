@@ -220,7 +220,7 @@ PAGE SECTION VIDEO MODAL
 ==============================
 */
 ?>
-<?php if (is_page_template('page-templates/page-sections.php') || is_singular('solutions')) : ?>
+<?php if (is_page_template('page-templates/page-sections.php') || is_singular('solutions') || is_page_template('page-templates/page-sections-with-promo.php') || is_singular('integration')) : ?>
   <div class="video-modal modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>

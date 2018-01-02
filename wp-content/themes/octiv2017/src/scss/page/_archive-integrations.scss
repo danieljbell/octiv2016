@@ -1,35 +1,35 @@
-.page-template-archive {
-  main .card-image {
-    min-height: 100px;
-    background-size: 45% 45%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: none;
-    padding: 0 0 50% !important;
-    @include tablet {
-      top: 0;
-      background-size: 75% 75%;  
-    }
-  }
+// .page-template-archive {
+//   main .card-image {
+//     min-height: 100px;
+//     background-size: 45% 45%;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     box-shadow: none;
+//     padding: 0 0 50% !important;
+//     @include tablet {
+//       top: 0;
+//       background-size: 75% 75%;  
+//     }
+//   }
 
-  main aside a {
-    text-decoration: none;
-    color: $gray;
-    transition: all 200ms ease-in-out;
-    &:hover,
-    &:focus {
-      color: $brand;   
-    }
-  }
+//   main aside a {
+//     text-decoration: none;
+//     color: $gray;
+//     transition: all 200ms ease-in-out;
+//     &:hover,
+//     &:focus {
+//       color: $brand;   
+//     }
+//   }
 
-  #sidebar {
-    @include mobile {
-      display: none;
-    }
-  }
+//   #sidebar {
+//     @include mobile {
+//       display: none;
+//     }
+//   }
 
-  .breadcrumbs {
-    margin-bottom: 0;
-  }
+//   .breadcrumbs {
+//     margin-bottom: 0;
+//   }
 
-}
+// }

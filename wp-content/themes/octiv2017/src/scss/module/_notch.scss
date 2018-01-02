@@ -4,3 +4,10 @@
   margin-top: -3rem;
   // margin-bottom: -3rem;
 }
+
+.single-integration .notch {
+  margin-bottom: 2rem;
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+}

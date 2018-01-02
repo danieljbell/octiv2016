@@ -89,3 +89,18 @@
     transform: translate(-50%, -50%) scaleX(1)
   }
 }
+
+@keyframes flyInOut {
+  0% {
+    transform: translate(-50%, 200px);
+  }
+  10%, 33.3334% {
+    transform: translate(-50%, -200px); 
+  }
+  50% {
+    transform: translate(-50%, -600px); 
+  }
+  100% {
+    
+  }
+}

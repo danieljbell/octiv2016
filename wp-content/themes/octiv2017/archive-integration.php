@@ -1,16 +1,4 @@
-<?php
-/*
-===================================
-TEMPLATE NAME: Page Sections
-===================================
-*/
-$number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
-
-?>
-
 <?php get_header(); ?>
-
-<main>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
@@ -20,8 +8,8 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
   <ul class="page-section-list">
     <?php
       $count = 0;
-      if (have_rows('page_section')) :
-        while (have_rows('page_section')) : the_row();
+      if (have_rows('page_section', 'options')) :
+        while (have_rows('page_section', 'options')) : the_row();
           if (!get_sub_field('is_promoted_item')) {
             $count++;
           }
@@ -31,9 +19,5 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
     ?>
   </ul>
 </section>
-  
-<?php get_template_part('partials/module/display', 'powers-documents'); ?>
-
-</main>
 
 <?php get_footer(); ?>

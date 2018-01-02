@@ -1,0 +1,29 @@
+#edittag {
+  max-width: initial;
+}
+
+#edittag h2 {
+  background-color: white;
+  border: 1px solid #E1E1E1;
+  border-bottom: 0;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+#edittag h2 ~ table {
+  margin-top: 0;
+  background-color: #fff;
+  border: 1px solid #EDEDED;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.08);
+}
+
+#edittag .acf-field th,
+#edittag .acf-field td {
+  padding: 2em;
+  border: 1px solid #E1E1E1;
+}
+
+#edittag .acf-field td:first-child {
+  background-color: #F9F9F9;
+}

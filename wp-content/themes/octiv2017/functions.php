@@ -57,6 +57,10 @@ function enqueue_global_js() {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
   }
 
+  if (is_tax('integration_type')) {
+    wp_enqueue_script('taxonomy-integration_type', get_stylesheet_directory_URI() . '/dist/js/taxonomy-integration_type.js', array(), '1.0.0', true);
+  }
+
   if (is_page_template('page-templates/landing-page.php')) {
     wp_enqueue_script('page-template--landing-page', get_stylesheet_directory_URI() . '/dist/js/page-template--landing-page.js', array(), '1.0.2', true);
   }
@@ -275,13 +279,6 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     );
     array_splice( $links, 1, 0, $breadcrumb );
   }
-  if (is_singular('integration')) {
-      $breadcrumb[] = array(
-      'url' => '/integrations',
-      'text' => 'Integrations',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
   if (is_singular('client-story')) {
     $breadcrumb[] = array(
       'url' => '/resources',
@@ -382,6 +379,17 @@ if( function_exists('acf_add_options_page') ) {
     'menu_title'    => 'Press Release Settings',
     'menu_slug'     => 'press-release-settings',
     'parent_slug'   => 'edit.php?post_type=press-releases',
+    'position'      => false,
+    'icon_url'      => false
+  );
+
+  acf_add_options_sub_page($args);
+
+  $args = array(
+    'page_title'    => 'Integration Settings',
+    'menu_title'    => 'Integration Settings',
+    'menu_slug'     => 'integration-settings',
+    'parent_slug'   => 'edit.php?post_type=integration',
     'position'      => false,
     'icon_url'      => false
   );
@@ -556,3 +564,29 @@ function wp_html_compression_start()
   ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');
+
+
+
+/*
+==============================
+STYLE TAXONOMY EDIT PAGE
+==============================
+*/
+//* Make sure we're on the load edit tags admin page
+add_action( 'load-edit-tags.php', 'wpse_262299_edit_tags' );
+add_action( 'term.php', 'wpse_262299_edit_tags' );
+
+function wpse_262299_edit_tags() {
+
+  $taxonomies = [ 'integration_type' ];
+  //* Add actions to $taxonomy_pre_add_form and $taxonomy_pre_edit_form
+  array_filter( $taxonomies, function( $taxonomy ) {
+    add_action( "{$taxonomy}_pre_add_form",  'wpse_262299_enqueue_style' );
+    add_action( "{$taxonomy}_pre_edit_form", 'wpse_262299_enqueue_style' );
+  });
+}
+
+function wpse_262299_enqueue_style( $taxonomy ) {
+  //* All the logic has already been done, do enqueue the style
+  wp_enqueue_style ('custom-admin-edit-taxonomy', get_template_directory_uri() . '/dist/css/admin-edit-taxonomy.css') ;
+}
