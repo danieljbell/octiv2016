@@ -6,7 +6,40 @@
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
-<?php get_template_part('partials/module/display', 'breadcrumbs'); ?>
+<section class="notch">
+  <div class="site-width">
+    <div class="box--light">
+      <div class="color-boxes">
+        <h2 class="color-box-headline--brand-three">seomth</h2>
+      </div>
+      <p class="has-text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste eius asperiores nam nobis vitae?</p>
+      <ul class="integrations-category-slider hide">
+        <?php
+          $args = array(
+            'post_type' => $post->post_type,
+            'posts_per_page' => -1,
+            'order' => 'ASC',
+            'orderby' => 'menu_order',
+            'tax_query' => array(
+              array(
+                'taxonomy' =>  $term->taxonomy,
+                'field'    => 'slug',
+                'terms'    => $term->slug,
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              echo '<li class="card"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><img src="' . get_field('integration_logo') . '" alt="' . get_the_title() . '"></a></li>';
+            endwhile;
+          endif;
+          wp_reset_query();
+        ?>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <?php // get_template_part('partials/module/display', 'page-sections'); ?>
 

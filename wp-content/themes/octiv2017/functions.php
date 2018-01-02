@@ -53,12 +53,12 @@ function enqueue_global_js() {
     wp_enqueue_script('releases', get_stylesheet_directory_URI() . '/dist/js/releases.js', array(), '1.0.0', true);
   }
 
-  if (is_page_template('page-templates/page-sections.php') || is_singular('solutions') || is_page_template('page-templates/page-sections-with-promo.php')) {
+  if (is_page_template('page-templates/page-sections.php') || is_singular('solutions')) {
     wp_enqueue_script('page-template--page-sections', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections.js', array(), '1.0.2', true);
   }
 
-  if (is_page_template('page-templates/page-sections-with-promo.php')) {
-    wp_enqueue_script('page-template--page-sections-with-promo', get_stylesheet_directory_URI() . '/dist/js/page-template--page-sections-with-promo.js', array(), '1.0.2', true);
+  if (is_tax('integration_type')) {
+    wp_enqueue_script('taxonomy-integration_type', get_stylesheet_directory_URI() . '/dist/js/taxonomy-integration_type.js', array(), '1.0.0', true);
   }
 
   if (is_page_template('page-templates/landing-page.php')) {
@@ -564,3 +564,58 @@ function wp_html_compression_start()
   ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');
+
+
+
+/*
+==============================
+STYLE TAXONOMY EDIT PAGE
+==============================
+*/
+//* Make sure we're on the load edit tags admin page
+add_action( 'load-edit-tags.php', 'wpse_262299_edit_tags' );
+add_action( 'term.php', 'wpse_262299_edit_tags' );
+
+function wpse_262299_edit_tags() {
+
+  //* Return early if not the integrations post type
+  // if( 'integrations' !== get_current_screen()->post_type ) {
+  //   return;
+  // }
+
+  $taxonomies = [ 'integration_type' ];
+  //* Add actions to $taxonomy_pre_add_form and $taxonomy_pre_edit_form
+  array_filter( $taxonomies, function( $taxonomy ) {
+    add_action( "{$taxonomy}_pre_add_form",  'wpse_262299_enqueue_style' );
+    add_action( "{$taxonomy}_pre_edit_form", 'wpse_262299_enqueue_style' );
+  });
+}
+
+function wpse_262299_enqueue_style( $taxonomy ) {
+  //* All the logic has already been done, do enqueue the style
+  wp_enqueue_style ('custom-admin-edit-taxonomy', get_template_directory_uri() . '/dist/css/admin-edit-taxonomy.css') ;
+}
+
+
+// add_action ('admin_enqueue_scripts', 'wpse_style_tax') ;
+
+// function
+// wpse_style_tax ()
+// {
+//   // these 3 globals are set during execution of {edit-tags,term}.php
+//   global $pagenow, $typenow, $taxnow ;
+
+//   if (!in_array ($pagenow, array ('edit-tags.php', 'term.php')) {
+//     return;
+//   }
+//   if ('news' != $typenow) {
+//     return;
+//   }
+//   if ('news-category' != $taxnow) {
+//     return;
+//   }
+
+//   wp_enqueue_style ('custom-admin_edit-taxonomy', get_template_directory_uri() . '/dist/css/admin_edit-taxonomy.css') ;
+
+//   return;
+// }

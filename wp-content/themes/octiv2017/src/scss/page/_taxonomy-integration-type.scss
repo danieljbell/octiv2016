@@ -1,0 +1,22 @@
+.tax-integration_type .integrations-category-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.tax-integration_type .integrations-category-slider .slick-slide {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-height: 125px;
+  img {
+    max-width: 175px;
+    max-height: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.tax-integration_type .integrations-category-slider .slick-dots {
+  bottom: -2.5rem; 
+}
