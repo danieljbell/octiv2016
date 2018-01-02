@@ -6,7 +6,21 @@
 
   <?php get_template_part('partials/module/display', 'breadcrumbs'); ?>  
 
-  <?php get_template_part('partials/module/display', 'page-sections'); ?>
+  <section class="page-sections pad-y-most">
+    <ul class="page-section-list">
+      <?php
+        $count = 0;
+        if (have_rows('page_section')) :
+          while (have_rows('page_section')) : the_row();
+            if (!get_sub_field('is_promoted_item')) {
+              $count++;
+            }
+            echo do_shortcode('[page_section count="' . $count . '"]');
+          endwhile;
+        endif;
+      ?>
+    </ul>
+  </section>
 
   <?php get_template_part('partials/module/display', 'picked-resources'); ?>
 
