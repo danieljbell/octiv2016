@@ -279,13 +279,6 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     );
     array_splice( $links, 1, 0, $breadcrumb );
   }
-  if (is_singular('integration')) {
-      $breadcrumb[] = array(
-      'url' => '/integrations',
-      'text' => 'Integrations',
-    );
-    array_splice( $links, 1, 0, $breadcrumb );
-  }
   if (is_singular('client-story')) {
     $breadcrumb[] = array(
       'url' => '/resources',
