@@ -10,9 +10,9 @@
   <div class="site-width">
     <div class="box--light">
       <div class="color-boxes">
-        <h2 class="color-box-headline--brand-three">seomth</h2>
+        <h2 class="color-box-headline--brand-three"><?php echo get_field('notch_headline', $term); ?></h2>
       </div>
-      <p class="has-text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste eius asperiores nam nobis vitae?</p>
+      <p class="has-text-center"><?php echo get_field('notch_body_copy', $term); ?></p>
       <ul class="integrations-category-slider hide">
         <?php
           $args = array(
@@ -40,8 +40,6 @@
     </div>
   </div>
 </section>
-
-<?php // get_template_part('partials/module/display', 'page-sections'); ?>
 
 <section class="page-sections pad-y-most">
   <ul class="page-section-list">

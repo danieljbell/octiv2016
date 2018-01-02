@@ -71,6 +71,16 @@ $term = get_queried_object();
   // INTEGRATIONS POST TYPE
   if (is_post_type_archive('integration')) {
     $page_hero_title = 'Integrations';
+    $page_hero_body = 'Seamlessly integrate with your existing business systems to take action on your data, streamline processes and keep your records up-to-date.';
+    if (get_field('hero_title', 'option')) {
+      $page_hero_title = get_field('hero_title', 'option');
+    }
+    if (get_field('hero_body_copy', 'option')) {
+      $page_hero_body = get_field('hero_body_copy', 'option');
+    }
+    if (get_field('hero_image', 'option')) {
+      $hero_bg = 'url(' . get_field('hero_image', 'option') . ')';
+    }
   }
   if (is_singular('integration')) {
     $hero_bg = 'linear-gradient(' . get_field('integration_color') . ', ' . get_field('integration_color') . ')';
@@ -162,6 +172,7 @@ $term = get_queried_object();
   if (get_field('hero_title')) {
     $page_hero_title = get_field('hero_title');
   }
+
 
   /* HERO BODY COPY */
   if (get_field('hero_body_copy')) {
