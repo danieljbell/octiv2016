@@ -20,7 +20,7 @@
         array(
           'taxonomy' => 'library_type',
           'field'    => 'slug',
-          'terms'    => 'whitepapers',
+          'terms'    => 'guides',
         ),
       ),
   );

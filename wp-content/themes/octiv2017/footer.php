@@ -69,5 +69,40 @@ $context = stream_context_create(array(
   </script>
 <?php endif; ?>
 
+<?php
+    /*
+    ==============================
+    MAJOR SYSTEM ALERT
+    ==============================
+    */
+    $args = array(
+      'post_type' => 'alerts'
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+      while ($query->have_posts()) :
+        $query->the_post(); ?>
+
+        <script>
+          $('.empty-modal .modal-content').html('<?php 
+            echo '<div class="modal-header light-callout">';
+              echo '<div class="modal-header--brand">';
+                echo '<div class="color-boxes">';
+                  echo '<h4 class="color-box-headline--gray">' . get_the_title() . '</h4>';
+                echo '</div>';
+              echo '</div>';
+              echo '<div class="modal-header--content has-text-center">';
+                echo get_the_content();
+              echo '</div>';
+            echo '</div>';
+            ?>');
+          $('.empty-modal').modal();
+        </script>
+
+<?php endwhile;
+    endif;
+    wp_reset_query();
+  ?>
+
 </body>
 </html>

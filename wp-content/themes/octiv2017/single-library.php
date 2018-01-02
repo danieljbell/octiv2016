@@ -14,6 +14,11 @@
       header("Location: $parent_page");
     }
   }
+
+  if (get_field('internal_or_external')) {
+    $location = get_field('url');
+    header("Location: $location");
+  }
 ?>
 
 <?php
@@ -27,7 +32,7 @@
 <main>
 
   <?php
-    if ($post_tax_type === 'whitepapers') {
+    if ($post_tax_type === 'guides') {
       get_template_part('partials/pages/display', 'library--whitepaper');
     } else if ($post_tax_type === 'infographics') {
       get_template_part('partials/pages/display', 'library--infographics');
@@ -39,6 +44,8 @@
       get_template_part('partials/pages/display', 'library--datasheets');
     } else if ($post_tax_type === 'tools') {
       get_template_part('partials/pages/display', 'library--tools');
+    } else if ($post_tax_type === 'research') {
+      get_template_part('partials/pages/display', 'library--research');
     }
   ?>
 

@@ -51,6 +51,14 @@
             
             // Redirect the page with form field
             location.href = followUpUrl;
+
+            // SEND CUSTOM EVENT TO GOOGLE TAG MANAGER
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'formSubmissionSuccess',
+              formID: '<?php echo $form_id; ?>'
+            });
+
             // Return false to prevent the submission handler continuing with its own processing
             return false;
           });

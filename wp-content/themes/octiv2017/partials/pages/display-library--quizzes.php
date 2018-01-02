@@ -25,13 +25,20 @@
       ),
     );
     $query = new WP_Query($args);
-    if ($query->have_posts()) : ?>
+    if ($query->have_posts()) : 
+    ?>
   <section class="other-quizzes">
     <div class="site-width">
       <div class="color-boxes" style="margin-bottom: 0.5rem;">
         <h2 class="color-box-headline--brand-three">Other Quizzes You Might Want to Try</h2>
       </div>
-      <p class="has-text-center">Don't stop at just <?php echo get_the_title(); ?> Try another quiz now!</p>        
+      <?php
+        if(preg_match("/\?$/", get_the_title())) {
+          echo '<p class="has-text-center">Don\'t stop at just <em>' . get_the_title() . '</em> Try another quiz now!</p>';
+        } else {
+          echo '<p class="has-text-center">Don\'t stop at just <em>' . get_the_title() . '</em>. Try another quiz now!</p>';
+        }
+      ?>
       <div class="third">
   <?php
     while ($query->have_posts()) : $query->the_post();

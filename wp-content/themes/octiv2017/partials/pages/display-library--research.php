@@ -6,8 +6,18 @@
     $page_hero_button_text = get_field('hero_button_text');
   }
   $terms = get_the_terms($post->ID, $post->post_type . '_type');
-  $page_term = substr($terms[0]->name, 0, -1);
+  if ($terms[0]->name !== 'Research') {
+    $page_term = substr($terms[0]->name, 0, -1);
+  } else {
+    $page_term = $terms[0]->name;
+  }
 ?>
+
+<style>
+  .whitepaper-cover {
+    box-shadow: none;
+  }
+</style>
 
 <?php get_template_part('partials/module/display', 'hero'); ?>
 
@@ -61,31 +71,18 @@
         <form id="mktoForm_<?php echo $form_id; ?>"></form>
         <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
           form.onSuccess(function(values, followUpUrl) {
-            var vals = form.vals();
-            var evt = new MouseEvent('click', {
-              view: window,
-              bubbles: false,
-              cancelable: true
-            });
-
-            var downloadLink = document.createElement('a');
-            downloadLink.setAttribute('download', <?php echo "'" . get_the_title() . "'"; ?>);
-            downloadLink.setAttribute('href', <?php echo "'" . $redirect_link . "'"; ?>);
-            downloadLink.setAttribute('target', '_blank');
-            downloadLink.dispatchEvent(evt);
-
-            // Get the form's jQuery element and hide it
-            form.getFormElem().hide();
-            $('#call-to-action .color-box-headline--white').text('Thanks, ' + vals.FirstName + '!');
-            $('#call-to-action p').html('If the whitepaper didn\'t already download, <a href="<?php echo $redirect_link; ?>" download>click here</a>.');
-
-            // SEND CUSTOM EVENT TO GOOGLE TAG MANAGER
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: 'formSubmissionSuccess',
-              formID: '<?php echo $form_id; ?>'
-            });
-
+            <?php if (!get_field('redirect_form_fields')) : ?>
+              // Update the redirect url with form fields
+              followUpUrl = <?php echo "'" . $redirect_link . "'"; ?>;
+            <?php
+              else : 
+                echo get_field('form_redirect_block');
+              endif;
+            ?>
+            
+            // Redirect the page with form field
+            location.href = followUpUrl;
+            // Return false to prevent the submission handler continuing with its own processing
             return false;
           });
         });</script>
