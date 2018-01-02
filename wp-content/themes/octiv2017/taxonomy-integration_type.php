@@ -49,7 +49,10 @@
       $count = 0;
       if (have_rows('page_section', $term)) :
         while (have_rows('page_section', $term)) : the_row();
-          echo '<li>' . get_sub_field('section_title') . '</li>';
+          if (!get_sub_field('is_promoted_item')) {
+            $count++;
+          }
+          echo do_shortcode('[page_section count="' . $count . '"]');
         endwhile;
       endif;
     ?>

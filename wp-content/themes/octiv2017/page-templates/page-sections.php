@@ -19,9 +19,13 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
 <section class="page-sections pad-y-most">
   <ul class="page-section-list">
     <?php
+      $count = 0;
       if (have_rows('page_section')) :
         while (have_rows('page_section')) : the_row();
-          get_template_part('partials/module/display', 'page-sections');
+          if (!get_sub_field('is_promoted_item')) {
+            $count++;
+          }
+          echo do_shortcode('[page_section count="' . $count . '"]');
         endwhile;
       endif;
     ?>

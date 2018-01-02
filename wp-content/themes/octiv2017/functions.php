@@ -578,11 +578,6 @@ add_action( 'term.php', 'wpse_262299_edit_tags' );
 
 function wpse_262299_edit_tags() {
 
-  //* Return early if not the integrations post type
-  // if( 'integrations' !== get_current_screen()->post_type ) {
-  //   return;
-  // }
-
   $taxonomies = [ 'integration_type' ];
   //* Add actions to $taxonomy_pre_add_form and $taxonomy_pre_edit_form
   array_filter( $taxonomies, function( $taxonomy ) {
@@ -595,27 +590,3 @@ function wpse_262299_enqueue_style( $taxonomy ) {
   //* All the logic has already been done, do enqueue the style
   wp_enqueue_style ('custom-admin-edit-taxonomy', get_template_directory_uri() . '/dist/css/admin-edit-taxonomy.css') ;
 }
-
-
-// add_action ('admin_enqueue_scripts', 'wpse_style_tax') ;
-
-// function
-// wpse_style_tax ()
-// {
-//   // these 3 globals are set during execution of {edit-tags,term}.php
-//   global $pagenow, $typenow, $taxnow ;
-
-//   if (!in_array ($pagenow, array ('edit-tags.php', 'term.php')) {
-//     return;
-//   }
-//   if ('news' != $typenow) {
-//     return;
-//   }
-//   if ('news-category' != $taxnow) {
-//     return;
-//   }
-
-//   wp_enqueue_style ('custom-admin_edit-taxonomy', get_template_directory_uri() . '/dist/css/admin_edit-taxonomy.css') ;
-
-//   return;
-// }
