@@ -393,9 +393,6 @@ add_shortcode('page_section', function($atts) {
   
   if (is_tax('integration_type')) {
     $current_iteration = $number_formatter->format($count + 3);
-    if (($count + 3) > 4) {
-      $count = -2;
-    }
   }
 
   $is_video = get_sub_field('is_video_modal');

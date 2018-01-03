@@ -50,6 +50,9 @@
           if (!get_sub_field('is_promoted_item')) {
             $count++;
           }
+          if ($count > 2) {
+            $count = -1;
+          }
           echo do_shortcode('[page_section count="' . $count . '"]');
         endwhile;
       endif;
