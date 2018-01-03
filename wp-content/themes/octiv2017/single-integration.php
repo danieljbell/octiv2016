@@ -78,12 +78,16 @@
             if( have_rows('key_capabilities') ):
               echo '<ul class="single-integration--key-capabilities fourth">';
               while ( have_rows('key_capabilities') ) : the_row();
-                  echo '<li class="has-text-center">';
-                    echo '<div class="single-integration--icon-container">';
-                      echo '<img src="/wp-content/uploads/2017/01/yellow-invoices.svg">';
-                    echo '</div>';
-                    echo '<p>' . get_sub_field('key_capability') . '</p>';
-                  echo '</li>';
+                $capability_icon = get_sub_field('icon');
+                $capability_copy = get_sub_field('key_capability');
+          ?>
+            <li class="has-text-center">
+              <div class="single-integration--icon-container">
+                <img src="<?php echo $capability_icon; ?>">
+              </div>
+              <p><?php echo $capability_copy; ?></p>
+            </li>
+          <?php
               endwhile;
               echo '</ul>';
           endif;
