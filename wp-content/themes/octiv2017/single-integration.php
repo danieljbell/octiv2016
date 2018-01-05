@@ -56,7 +56,15 @@
       <article>
         <div class="two-third-only pad-b-most">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-three"><?php echo get_field('body_copy_headline'); ?></h2>
+            <h2 class="color-box-headline--brand-three">
+              <?php
+                if (get_field('body_copy_headline')) {
+                  echo get_field('body_copy_headline');
+                } else {
+                  echo 'Why Octiv &amp;' . get_the_title(); ?>
+                }
+              ?>  
+            </h2>
           </div>
           <?php echo get_the_content(); ?>
         </div>
