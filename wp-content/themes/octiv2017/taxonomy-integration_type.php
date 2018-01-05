@@ -58,4 +58,6 @@
       endif;
     ?>
 
+<?php echo get_template_part('partials/module/display', 'powers-documents'); ?>
+
 <?php get_footer(); ?>

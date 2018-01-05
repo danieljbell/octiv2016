@@ -56,19 +56,9 @@
       <article>
         <div class="two-third-only pad-b-most">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-three">Why Octiv &amp; <?php echo get_the_title(); ?></h2>
+            <h2 class="color-box-headline--brand-three"><?php echo get_field('body_copy_headline'); ?></h2>
           </div>
           <?php echo get_the_content(); ?>
-          <?php 
-            if( have_rows('technical_requirements') ) :
-              echo '<p class="mar-t-more no-mar-b"><strong>Technical Requirements:</strong></p>';
-              echo '<ul>';
-              while ( have_rows('technical_requirements') ) : the_row();
-                  echo '<li>' . get_sub_field('technical_requirement') . '</li>';
-              endwhile;
-              echo '</ul>';
-            endif;
-          ?>
         </div>
         <div class="pad-b-most pad-t-most">
           <div class="color-boxes">
@@ -125,7 +115,6 @@
       </article>
     </div>
   </section>
-  <?php get_template_part('partials/module/display', 'powers-documents'); ?>
 </main>
 
 <?php get_footer(); ?>

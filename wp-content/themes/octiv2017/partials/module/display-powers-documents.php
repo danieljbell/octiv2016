@@ -1,4 +1,5 @@
 <?php
+  $term = get_queried_object();
   $doc_type = 'Documents';
   $typed_strings = array('Presentations', 'Proposals', 'Contracts', 'Invoices', 'Quotes');
   $document_container_body = 'Create, share, sign and store documents, increase efficiency, accuracy and take back your time.';
@@ -13,6 +14,25 @@
   }
   if (get_field('rad_body_copy')) {
     $document_container_body = get_field('rad_body_copy');
+  }
+
+  /*
+  ==============================
+  INTEGRATIONS CATEGORY TERMS
+  ==============================
+  */
+  if (is_tax('integration_type')) {
+    // THIS PULLS FROM THE TAXONOMY PAGE
+    if (get_field('rad_list_items', $term)) {
+      $typed_strings = array();
+      while (have_rows('rad_list_items', $term)) : the_row();
+        array_push($typed_strings, get_sub_field('rad_list_item', $term));
+      endwhile;
+    }
+    // THIS PULLS FROM THE TAXONOMY PAGE
+    if (get_field('rad_body_copy', $term)) {
+      $document_container_body = get_field('rad_body_copy', $term);
+    }
   }
 ?>
 
