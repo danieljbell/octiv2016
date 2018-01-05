@@ -61,7 +61,7 @@
                 if (get_field('body_copy_headline')) {
                   echo get_field('body_copy_headline');
                 } else {
-                  echo 'Why Octiv &amp;' . get_the_title(); ?>
+                  echo 'Why Octiv &amp;' . get_the_title();
                 }
               ?>  
             </h2>
