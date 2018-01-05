@@ -9,9 +9,6 @@
 <section class="notch">
   <div class="site-width">
     <div class="box--light">
-      <div class="color-boxes">
-        <h2 class="color-box-headline--brand-three"><?php echo get_field('notch_headline', $term); ?></h2>
-      </div>
       <p class="has-text-center"><?php echo get_field('notch_body_copy', $term); ?></p>
       <ul class="integrations-category-slider hide">
         <?php
@@ -50,8 +47,8 @@
           if (!get_sub_field('is_promoted_item')) {
             $count++;
           }
-          if ($count > 2) {
-            $count = -1;
+          if ($count > 3) {
+            $count = 0;
           }
           echo do_shortcode('[page_section count="' . $count . '"]');
         endwhile;

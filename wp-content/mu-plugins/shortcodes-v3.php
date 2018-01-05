@@ -391,9 +391,9 @@ add_shortcode('page_section', function($atts) {
   }
   $current_iteration = $number_formatter->format($count + 2);
   
-  if (is_tax('integration_type')) {
-    $current_iteration = $number_formatter->format($count + 3);
-  }
+  // if (is_tax('integration_type')) {
+  //   $current_iteration = $number_formatter->format($count + 3);
+  // }
 
   $is_video = get_sub_field('is_video_modal');
 ?>
