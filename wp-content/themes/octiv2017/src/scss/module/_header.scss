@@ -66,8 +66,8 @@
   width: 100%;
   transition: all 300ms ease-in-out;
   border-top: 1px solid $mgray;
-  overflow: visible;
-  height: calc(100% + 500px);
+  overflow: scroll;
+  height: calc(100% - 4rem);
   @include desktop {
     overflow: initial;
     height: auto;
@@ -118,19 +118,6 @@
     position: relative;
     border-bottom: 1px solid $lgray;
 
-    &:after {
-      content: "+";
-      display: block;
-      position: absolute;
-      top: 0.5rem;
-      left: calc(100% - 2rem);
-      font-size: 2em;
-      font-weight: bold;
-      transition: transform 400ms ease-in-out;
-    }
-    &.active:after {
-      transform: rotate(45deg);
-    }
     @include desktop {
       border-bottom: 0;
 
@@ -141,8 +128,10 @@
         margin-right: 0;
       }
       &:hover .sub-menu {
-        opacity: 1 !important;
-        visibility: visible;
+        @include desktop {
+          opacity: 1 !important;
+          visibility: visible;
+        }
       }
     }
 
@@ -204,7 +193,7 @@
 }
 
 .site-header .sub-menu {
-  display: none;
+  // display: none;
   transition: all 200ms ease-in-out;
   list-style-type: none;
   padding: 0;
