@@ -333,6 +333,9 @@ PARTNER MODAL
         <script>
           MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1437, function(form) {
             form.onSuccess(function(values, followUpUrl) {
+              // Get the form field values
+              var vals = form.vals();
+              $('.partner-modal-container .modal-header--content').html('<div class="has-text-center"><h2>Thanks, ' + vals.FirstName + '</h2><p>We\'ll be in touch soon.</p></div>');
               // Hide the form
               form.getFormElem().hide();
               // Return false to prevent the submission handler continuing with its own processing
