@@ -248,6 +248,20 @@ if ($('body').hasClass('home')) {
     window.history.replaceState( {} , 'bar', currentBio );  
   }
 
+  // PARTNER MODAL
+  var partnerButtons = $('[href="#partner-modal"]');
+  partnerButtons.on('click', function(e) {
+    e.preventDefault();
+    var defaultOption = this.dataset.defaultOption;
+    var modalContainer = $('.partner-modal-container');
+
+    modalContainer.find('input[name="partnerInterests"]').prop('checked', false);
+    modalContainer.find('input[value=' + defaultOption + ']').prop('checked', true);
+
+
+    modalContainer.modal();
+  });
+
 
   /*
   ==============================

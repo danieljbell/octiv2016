@@ -22,7 +22,7 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
     <h2 class="mar-b"><?php echo $page_hero_body; ?></h2>
     <ul class="button-group">
       <li>
-        <a href="#0" class="btn-primary">Become A Partner</a>
+        <a href="#partner-modal" class="btn-primary">Become A Partner</a>
       </li>
       <li>
         <a href="https://partners.octiv.com" class="btn-white--outline" target="_blank" rel="noopener noreferrer">Partner Login</a>
@@ -52,7 +52,7 @@ $number_formatter = new NumberFormatter("en", NumberFormatter::SPELLOUT);
             <h3 class="color-box-headline--brand-<?php echo $current_iteration; ?>"><?php echo get_sub_field('partner_title');?></h3>
           </div>
           <p><?php echo get_sub_field('partner_copy'); ?></p>
-          <a href="#0" class="btn-brand-<?php echo $current_iteration; ?>--outline">Link</a>
+          <a href="#partner-modal" class="btn-brand-<?php echo $current_iteration; ?>--outline" data-default-option="<?php echo get_sub_field('default_form_option'); ?>"><?php echo get_sub_field('cta_button_text'); ?></a>
         </div>    
       <?php      
           endwhile;

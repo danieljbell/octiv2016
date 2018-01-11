@@ -306,3 +306,43 @@ LEADERSHIP BIO MODAL
   </div>
 </div>
 <?php endif; ?>
+
+
+<?php
+/*
+==============================
+PARTNER MODAL
+==============================
+*/
+?>
+<?php if (is_page_template('page-templates/partner-page.php')) : ?>
+<div class="partner-modal-container modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <span class="font-bump">&times;</span></span></button>
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-header--brand">
+          <div class="color-boxes">
+            <h4 class="color-box-headline--gray">Become a Partner</h4>
+          </div>
+          <p>Please complete the form to speak with an Octiv representative about becoming a partner.</p>
+        </div>
+        <div class="modal-header--content">
+          <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+        <form id="mktoForm_1437"></form>
+        <script>
+          MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", 1437, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+              // Hide the form
+              form.getFormElem().hide();
+              // Return false to prevent the submission handler continuing with its own processing
+              return false;
+            });
+          });
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
