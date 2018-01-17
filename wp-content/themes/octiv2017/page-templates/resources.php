@@ -179,7 +179,7 @@ if (get_field('post_type') === 'posts') {
             <template v-if="post._embedded['wp:featuredmedia']">
               <template v-if="post.acf.event_start_date < todaysDate">
                 <a v-bind:href="post.link" class="card-image past-event" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }">
-                  <div class="card-overlay">{{post.acf.event_start_date}}<br>{{todaysDate}}</div>
+                  <div class="card-overlay"></div>
                 </a>
               </template>
               <template v-else>
