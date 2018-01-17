@@ -170,13 +170,16 @@ if (get_field('post_type') === 'posts') {
             if (todayDay < 10) {
               todayDay = '0' + todayDay;
             }
-            var todaysDate = today.getFullYear().toString() + (today.getMonth() + 1).toString() + todayDay.toString();
+            if (today.getMonth() < 1) {
+              var eventMonth = '01';
+            }
+            var todaysDate = today.getFullYear().toString() + (eventMonth).toString() + todayDay.toString();
           </script>
           <div v-for="post in filteredList" class="card">
             <template v-if="post._embedded['wp:featuredmedia']">
               <template v-if="post.acf.event_start_date < todaysDate">
                 <a v-bind:href="post.link" class="card-image past-event" v-bind:style="{ backgroundImage: 'url(' + post._embedded['wp:featuredmedia'][0].source_url + ')' }">
-                  <div class="card-overlay"></div>
+                  <div class="card-overlay">{{post.acf.event_start_date}}<br>{{todaysDate}}</div>
                 </a>
               </template>
               <template v-else>
