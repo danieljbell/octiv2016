@@ -76,6 +76,13 @@ $redirect_link = get_field('form_redirect_link');
           <form id="mktoForm_<?php echo $form_id; ?>"></form>
           <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
             form.onSuccess(function(values, followUpUrl) {
+              // SEND CUSTOM EVENT TO GOOGLE TAG MANAGER
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'formSubmissionSuccess',
+                formID: '<?php echo $form_id; ?>'
+              });
+
               <?php if (!get_field('redirect_form_fields')) : ?>
               // Update the redirect url with form fields
               followUpUrl = <?php echo "'" . $redirect_link . "'"; ?>;
