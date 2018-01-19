@@ -521,8 +521,10 @@ if ($('body').hasClass('home')) {
           formScript.innerHTML = 
             'MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", ' + modalID + ', function(form) {' +
               'form.onSuccess(function(values, followUpUrl) {' +
+                'var vals = form.vals();' +
                 'form.getFormElem().hide();' +
                 'window.modalHasReg = true;' +
+                '$(".video-modal .color-box-headline--gray").text("Thanks, " + vals.FirstName + "!");' +
                 '$(".video-modal iframe").attr("src", videoSrc);' +
                 '$(".video-modal .video-outer").show();' +
                 'return false;' +

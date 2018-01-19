@@ -41,7 +41,7 @@
             </div>
             <div class="two-third-only">
               <p class="has-text-center"><?php echo strip_tags(get_the_excerpt()); ?></p>
-              <a href="#0" class="launch-video-modal" data-modal-type="gated" data-modal-id="<?php echo get_field('integration_video_marketo_form_id'); ?>" data-modal-headline="<?php echo get_field('modal_headline'); ?>" data-modal-body="<?php echo get_field('modal_body'); ?>" data-video-provider="youtube" data-video-id="<?php echo get_field('integration_video_id'); ?>">
+              <a href="#0" class="launch-video-modal" data-modal-type="gated" data-modal-id="<?php echo get_field('integration_video_marketo_form_id'); ?>" data-modal-headline="See Octiv + <?php echo get_the_title(); ?> in Action" data-modal-body="<?php echo get_field('modal_body'); ?>" data-video-provider="youtube" data-video-id="<?php echo get_field('integration_video_id'); ?>">
                 <img src="<?php echo get_field('integration_video_thumbnail'); ?>" alt="" style="width: 100%;">
               </a>
             </div>
