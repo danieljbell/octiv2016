@@ -19,6 +19,11 @@
     modalContainer.find('iframe').attr('src', videoSrc);
   }
 
+  modalContainer.on('hide.bs.modal', function(e) {
+    modalContainer.find('iframe').attr('src', '');
+    modalContainer.find('.form-container').hide();
+  })
+
   var initialPath = window.location.pathname;
   window.history.replaceState( {} , 'bar', initialPath );
 
