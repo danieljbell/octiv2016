@@ -18,7 +18,7 @@
             <?php get_template_part('partials/pages/display', 'support--article-feedback-form'); ?>
           </div>
         </div>
-        <aside id="sticky-sidebar">
+        <aside id="sticky-sidebar" class="single-post-sidebar">
           <div class="sidebar__inner">
             <?php 
               $parent_page_ID = $post->post_parent;
