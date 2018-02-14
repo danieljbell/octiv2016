@@ -10,6 +10,11 @@ $context = stream_context_create(array(
 
 get_header();
 
+$notch_headline = get_field('notch_headline');
+$notch_copy = get_field('notch_copy');
+$notch_video_platform = get_field('notch_video_platform');
+$notch_video_id = get_field('notch_video_id');
+
 ?>
 
 <main>
@@ -21,12 +26,16 @@ get_header();
       <div class="box--light">
         <div class="two-third-only has-text-center pad-a-tablet-up">
           <div class="color-boxes">
-            <h2 class="color-box-headline--brand-three">Meet Sara</h2>
+            <h2 class="color-box-headline--brand-three"><?php echo $notch_headline; ?></h2>
           </div>
-          <p class="pad-x font-bump">Sara’s proposal is due by 5:00 p.m. Watch how Octiv gives her a better way to create, share, sign and store her document across the organization in no time.</p>
+          <p class="pad-x font-bump"><?php echo $notch_copy; ?></p>
           <div class="video-outer">
             <div class="video-inner">
-              <iframe src="https://fast.wistia.net/embed/iframe/hjy779ahf2?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+              <?php if ($notch_video_platform === 'wistia') : ?>
+                <iframe src="https://fast.wistia.net/embed/iframe/<?php echo $notch_video_id; ?>?playbar=true&smallPlayButton=true&volumeControl=true&fullscreenButton=true&controlsVisibleOnLoad=false" name="wistia_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
+              <?php else : ?>
+                <iframe src="https://www.youtube.com/embed/<?php echo $notch_video_id; ?>?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;VQ=HD720" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" width="100%" height="100%" style="box-shadow: 0 0 15px rgba(0,0,0,0.15);"></iframe>
+              <?php endif; ?>
             </div>
           </div>
         </div>
