@@ -423,7 +423,35 @@ add_shortcode('page_section', function($atts) {
             if ($is_video) {
               echo '<a href="#0" class="launch-video-modal" data-modal-type="' . get_sub_field('gated_or_ungated') . '" data-modal-id="' . get_sub_field('marketo_form_id') . '" data-modal-headline="' . get_sub_field('modal_headline') . '" data-modal-body="' . get_sub_field('modal_body') . '" data-video-provider="' . get_sub_field('video_provider') . '" data-video-id="' . get_sub_field('video_id') . '">';
             }
-            echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
+            if (!get_sub_field('is_integration_grid')) {
+              echo '<img src="' . get_sub_field('section_image') . '" alt="' . get_sub_field('section_title') . '">';
+            } else {
+              $posts = get_sub_field('pick_integrations');
+              $total_posts = count($posts);
+              switch ($total_posts) {
+                case ($total_posts === 1):
+                  $int_container_class = 'half-only';
+                  break;
+                case (($total_posts === 3) || ($total_posts === 5) || ($total_posts === 6)):
+                  $int_container_class = 'third';
+                  break;  
+                default:
+                  $int_container_class = 'half';
+                  break;
+              }
+              echo '<div class="' . $int_container_class . '">';
+              foreach ($posts as $post) : 
+                setup_postdata($post); ?>
+                <div class="card">
+                  <a href="<?php echo $post->guid; ?>">
+                    <img src="<?php echo get_field('integration_logo', $post->ID); ?>" alt="<?php echo $post->post_title; ?>">
+                  </a>
+                </div>
+            <?php    
+              endforeach;
+              wp_reset_postdata();
+              echo '</div>';
+            }
             if ($image_link_location || $is_video) {
               echo '</a>';
             }
