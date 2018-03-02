@@ -752,7 +752,7 @@ SOLUTIONS PARENT PAGE STYLES
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   > li {
     position: relative;
     flex-basis: calc(50% - 1rem);
@@ -786,11 +786,14 @@ SOLUTIONS PARENT PAGE STYLES
     align-items: center;
     text-decoration: none;
     color: $gray;
+    font-size: 0.8em;
+    line-height: 1.2;
   }
   img {
     width: 100%;
     max-width: 50px;
     max-height: 50px;
     min-height: 50px;
+    margin-bottom: 0.25rem;
   }
 }
