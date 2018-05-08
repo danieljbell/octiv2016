@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -151,6 +151,39 @@ abstract class Ai1wm_Archiver {
 		} else {
 			throw new Ai1wm_Not_Writable_Exception( sprintf( 'Unable to write end of block to file. File: %s', $this->file_name ) );
 		}
+	}
+
+	/**
+	 * Replace forward slash with current directory separator
+	 *
+	 * @param string $path Path
+	 *
+	 * @return string
+	 */
+	protected function replace_forward_slash_with_directory_separator( $path ) {
+		return str_replace( '/', DIRECTORY_SEPARATOR, $path );
+	}
+
+	/**
+	 * Replace current directory separator with forward slash
+	 *
+	 * @param string $path Path
+	 *
+	 * @return string
+	 */
+	protected function replace_directory_separator_with_forward_slash( $path ) {
+		return str_replace( DIRECTORY_SEPARATOR, '/', $path );
+	}
+
+	/**
+	 * Escape Windows directory separator
+	 *
+	 * @param string $path Path
+	 *
+	 * @return string
+	 */
+	protected function escape_windows_directory_separator( $path ) {
+		return preg_replace( '/[\\\\]+/', '\\\\\\\\', $path );
 	}
 
 	/**

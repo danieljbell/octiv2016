@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -82,7 +82,7 @@ class Ai1wm_Http {
 		// Set server IP address
 		if ( ! empty( $_SERVER['SERVER_ADDR'] ) ) {
 			$server = $_SERVER['SERVER_ADDR'];
-		} else if ( ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
+		} elseif ( ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
 			$server = $_SERVER['LOCAL_ADDR'];
 		} else {
 			$server = '127.0.0.1';

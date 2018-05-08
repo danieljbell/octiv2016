@@ -5,8 +5,11 @@ GITHUB REPO: https://github.com/danieljbell/2018-octiv-theme
 */
 /* MAINFRAME HACK FOR LOGIN BG */
 body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets/themes/8028/background_original.jpg?1516293993); }
+body.content #content_editor { padding: 20px 30px !important; }
+body.content #content_editor section { padding: 0; }
 /* END MAINFRAME HACKS */
-.octiv-hero { overflow: hidden; background-position: center; position: relative; z-index: 1; left: -30px; top: -20px; width: calc(100% + 60px); padding: 45px 100px; text-align: center; }
+.octiv-hero { overflow: hidden; background-size: cover; background-position: center; position: relative; z-index: 1; left: -30px; top: -20px; width: calc(100% + 60px); text-align: center; }
+#content_editor .octiv-hero, .pdf-page-content .octiv-hero { padding: 45px 100px !important; }
 .octiv-hero:before, .octiv-hero:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(45, 57, 67, 0.65); }
 .octiv-hero:before { -webkit-filter: blur(75px); filter: blur(75px); }
 #content_editor .octiv-hero h1, .pdf-page-content .octiv-hero h1 { font-weight: 700; }
@@ -15,6 +18,8 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-hero-no-subheadline .octiv-color-boxes { margin-bottom: 0; }
 .octiv-color-boxes { margin-bottom: 1em; text-align: center; }
 #content_editor .octiv-color-boxes *, .pdf-page-content .octiv-color-boxes * { color: #fff; }
+.octiv-color-box-headline--white { background-color: #fff; border-radius: 4px; display: inline-block; }
+#content_editor .octiv-color-box-headline--white, .pdf-page-content .octiv-color-box-headline--white { color: #fff !important; font-weight: bold !important; line-height: 1 !important; padding: 0.25em 0.5em; }
 .octiv-color-box-headline--brand-two { background-color: #42b0d8; border-radius: 4px; display: inline-block; }
 #content_editor .octiv-color-box-headline--brand-two, .pdf-page-content .octiv-color-box-headline--brand-two { color: #fff !important; font-weight: bold !important; line-height: 1 !important; padding: 0.25em 0.5em; }
 .octiv-color-box-headline--brand-three { background-color: #33ab40; border-radius: 4px; display: inline-block; }
@@ -34,6 +39,11 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-icon-list .octiv-icon-img-container img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 45px !important; max-height: 45px !important; }
 #content_editor .octiv-icon-list .octiv-icon-content-container h6, .pdf-page-content .octiv-icon-list .octiv-icon-content-container h6 { font-size: 0.9em !important; line-height: 1.3 !important; }
 #content_editor .octiv-icon-list .octiv-icon-content-container p, .pdf-page-content .octiv-icon-list .octiv-icon-content-container p { font-size: 0.8em !important; line-height: 1.3 !important; color: #7c93a7; }
+.octiv-icon-list ul { list-style-type: disc; }
+.octiv-icon-content--heading-container { display: table; width: 100%; border-bottom: 1px solid #ccc; }
+.octiv-icon-content--heading-container h4, .octiv-icon-content--heading-container h5 { display: table-cell; }
+.octiv-icon-content--heading-container h5 { text-align: right; }
+#content_editor .octiv-icon-content--heading-container h5, .pdf-page-content .octiv-icon-content--heading-container h5 { color: #ed4c06 !important; font-weight: normal; }
 .octiv-brand-two-callout { background-color: #42b0d8; padding: 30px; }
 #content_editor .octiv-brand-two-callout *, .pdf-page-content .octiv-brand-two-callout * { color: #fff; }
 #content_editor .octiv-brand-two-callout *:last-child, .pdf-page-content .octiv-brand-two-callout *:last-child { margin-bottom: 0 !important; }
@@ -55,6 +65,9 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-employee-feature .octiv-employee-feature-content { padding-left: 30px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 .octiv-employee-feature .octiv-employee-feature-name { text-transform: uppercase; }
 #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 2em !important; }
+#content_editor .octiv-employee-feature .octiv-employee-feature-numbers, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-numbers { list-style-type: none; padding-left: 0 !important; margin-bottom: 0.5em !important; }
+.octiv-employee-feature .octiv-employee-feature-numbers li { font-style: italic; display: table-cell; padding-right: 1em; }
+#content_editor .octiv-employee-feature .octiv-employee-feature-numbers li, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-numbers li { font-size: 1.2em !important; line-height: 1 !important; margin-bottom: 0.5em !important; color: #8ba0b1; }
 .octiv-employee-feature .octiv-employee-feature-title { font-style: italic; }
 #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1.2em !important; line-height: 1 !important; margin-bottom: 0.5em !important; color: #8ba0b1; }
 .octiv-employee-feature .octiv-employee-feature-social-list { list-style-type: none; display: table; }
@@ -73,7 +86,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-content-toggle-list { position: relative; list-style-type: none; }
 #content_editor .octiv-content-toggle-list, .pdf-page-content .octiv-content-toggle-list { padding-left: 0 !important; }
 .octiv-content-toggle-list .octiv-content-toggle-item { margin-bottom: 0.5em; font-size: 1em !important; }
-.octiv-content-toggle-list .octiv-content-toggle-item label img { max-width: 100px !important; border: 1px solid #f0f0f0; }
+.octiv-content-toggle-list .octiv-content-toggle-item label img { max-width: 100px !important; border: 1px solid #f0f0f0; cursor: pointer; }
 .octiv-slide-content { position: absolute; left: calc(100px + 1.5em); top: 0; -webkit-animation-name: slideOut; animation-name: slideOut; -webkit-animation-duration: 300ms; animation-duration: 300ms; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
 .octiv-slide-toggle { display: none; }
 .octiv-slide-toggle:checked + .octiv-slide-content { display: block; -webkit-animation-name: slideIn; animation-name: slideIn; -webkit-animation-duration: 300ms; animation-duration: 300ms; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
@@ -105,6 +118,12 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
     -webkit-transform: translateX(1.5em);
             transform: translateX(1.5em);
     visibility: hidden; } }
+.octiv-content-toggle-list--implementation { display: table; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 100%; min-height: 10em; }
+.octiv-content-toggle-list--implementation .octiv-content-toggle-item { display: table-cell; text-align: center; }
+.octiv-content-toggle-list--implementation .octiv-slide-content { top: 5em; left: 0; text-align: left; }
+.octiv-content-toggle-list--implementation label { position: relative; display: block; }
+.octiv-content-toggle-list--implementation label:after { content: ''; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); border-top: 5px dotted #ccc; height: 1px; width: 100%; }
+.octiv-content-toggle-list--implementation .octiv-content-toggle-item:last-child label:after { display: none; }
 .octiv-card { border: 1px solid #ccc; -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); padding: 1em; border-radius: 4px; }
 #content_editor .octiv-card h4, .pdf-page-content .octiv-card h4 { line-height: 1em !important; }
 .octiv-card h4 a { color: #2d3943 !important; text-decoration: none !important; font-weight: bold !important; }
@@ -112,6 +131,9 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-card-image-with-content:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(45, 57, 67, 0.7); }
 .octiv-card-image-with-content img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: calc(100% - 2em) !important; }
 .octiv-card-description { font-size: 0.8em !important; line-height: 1.4 !important; }
+.octiv-button--brand { background-color: #ed4c06; color: #fff !important; padding: 0.75em 1em; border-radius: 4px; -webkit-transition: all 250ms ease-in-out; -o-transition: all 250ms ease-in-out; transition: all 250ms ease-in-out; }
+.octiv-button--brand:hover { background-color: #bb3c05; }
+#content_editor .octiv-button--brand, .pdf-page-content .octiv-button--brand { text-decoration: none; }
 .octiv-btn-arrow { position: relative; text-decoration: none !important; }
 #content_editor .octiv-btn-arrow, .octiv-btn-arrow .pdf-page-content { color: #2d3943; font-weight: bold; }
 #content_editor .octiv-btn-arrow:hover, .octiv-btn-arrow:hover .pdf-page-content { color: #2d3943; }
@@ -123,7 +145,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-color-cards h6 span { float: right; }
 .octiv-color-card-brand { border: 1px solid #ed4c06; border-radius: 4px; background-color: #fff; }
 .octiv-color-card-brand h6 { color: #fff !important; padding: 0.25em 0.5em; background-color: #ed4c06; }
-#content_editor .octiv-color-card-brand h6, .pdf-page-content .octiv-color-card-brand h6 { margin-bottom: 0; }
+#content_editor .octiv-color-card-brand h6, .pdf-page-content .octiv-color-card-brand h6 { font-size: 0.9em !important; margin-bottom: 0; }
 #content_editor .octiv-color-card-brand ul, .pdf-page-content .octiv-color-card-brand ul, #content_editor .octiv-color-card-brand ol, .pdf-page-content .octiv-color-card-brand ol { padding: 0.5em; padding-left: 1em !important; margin-bottom: 0 !important; }
 #content_editor .octiv-color-card-brand ul li:last-child, .pdf-page-content .octiv-color-card-brand ul li:last-child, #content_editor .octiv-color-card-brand ol li:last-child, .pdf-page-content .octiv-color-card-brand ol li:last-child { margin-bottom: 0; }
 .octiv-color-card-brand ul { list-style-type: disc; }
@@ -136,7 +158,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-color-card-brand table tfoot tr td, .pdf-page-content .octiv-color-card-brand table tfoot tr td { border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
 .octiv-color-card-brand-two { border: 1px solid #42b0d8; border-radius: 4px; background-color: #fff; }
 .octiv-color-card-brand-two h6 { color: #fff !important; padding: 0.25em 0.5em; background-color: #42b0d8; }
-#content_editor .octiv-color-card-brand-two h6, .pdf-page-content .octiv-color-card-brand-two h6 { margin-bottom: 0; }
+#content_editor .octiv-color-card-brand-two h6, .pdf-page-content .octiv-color-card-brand-two h6 { font-size: 0.9em !important; margin-bottom: 0; }
 #content_editor .octiv-color-card-brand-two ul, .pdf-page-content .octiv-color-card-brand-two ul, #content_editor .octiv-color-card-brand-two ol, .pdf-page-content .octiv-color-card-brand-two ol { padding: 0.5em; padding-left: 1em !important; margin-bottom: 0 !important; }
 #content_editor .octiv-color-card-brand-two ul li:last-child, .pdf-page-content .octiv-color-card-brand-two ul li:last-child, #content_editor .octiv-color-card-brand-two ol li:last-child, .pdf-page-content .octiv-color-card-brand-two ol li:last-child { margin-bottom: 0; }
 .octiv-color-card-brand-two ul { list-style-type: disc; }
@@ -149,7 +171,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-color-card-brand-two table tfoot tr td, .pdf-page-content .octiv-color-card-brand-two table tfoot tr td { border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
 .octiv-color-card-brand-three { border: 1px solid #33ab40; border-radius: 4px; background-color: #fff; }
 .octiv-color-card-brand-three h6 { color: #fff !important; padding: 0.25em 0.5em; background-color: #33ab40; }
-#content_editor .octiv-color-card-brand-three h6, .pdf-page-content .octiv-color-card-brand-three h6 { margin-bottom: 0; }
+#content_editor .octiv-color-card-brand-three h6, .pdf-page-content .octiv-color-card-brand-three h6 { font-size: 0.9em !important; margin-bottom: 0; }
 #content_editor .octiv-color-card-brand-three ul, .pdf-page-content .octiv-color-card-brand-three ul, #content_editor .octiv-color-card-brand-three ol, .pdf-page-content .octiv-color-card-brand-three ol { padding: 0.5em; padding-left: 1em !important; margin-bottom: 0 !important; }
 #content_editor .octiv-color-card-brand-three ul li:last-child, .pdf-page-content .octiv-color-card-brand-three ul li:last-child, #content_editor .octiv-color-card-brand-three ol li:last-child, .pdf-page-content .octiv-color-card-brand-three ol li:last-child { margin-bottom: 0; }
 .octiv-color-card-brand-three ul { list-style-type: disc; }
@@ -162,7 +184,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-color-card-brand-three table tfoot tr td, .pdf-page-content .octiv-color-card-brand-three table tfoot tr td { border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
 .octiv-color-card-brand-four { border: 1px solid #b949f5; border-radius: 4px; background-color: #fff; }
 .octiv-color-card-brand-four h6 { color: #fff !important; padding: 0.25em 0.5em; background-color: #b949f5; }
-#content_editor .octiv-color-card-brand-four h6, .pdf-page-content .octiv-color-card-brand-four h6 { margin-bottom: 0; }
+#content_editor .octiv-color-card-brand-four h6, .pdf-page-content .octiv-color-card-brand-four h6 { font-size: 0.9em !important; margin-bottom: 0; }
 #content_editor .octiv-color-card-brand-four ul, .pdf-page-content .octiv-color-card-brand-four ul, #content_editor .octiv-color-card-brand-four ol, .pdf-page-content .octiv-color-card-brand-four ol { padding: 0.5em; padding-left: 1em !important; margin-bottom: 0 !important; }
 #content_editor .octiv-color-card-brand-four ul li:last-child, .pdf-page-content .octiv-color-card-brand-four ul li:last-child, #content_editor .octiv-color-card-brand-four ol li:last-child, .pdf-page-content .octiv-color-card-brand-four ol li:last-child { margin-bottom: 0; }
 .octiv-color-card-brand-four ul { list-style-type: disc; }
@@ -175,7 +197,7 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-color-card-brand-four table tfoot tr td, .pdf-page-content .octiv-color-card-brand-four table tfoot tr td { border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
 .octiv-color-card-brand-five { border: 1px solid #fac500; border-radius: 4px; background-color: #fff; }
 .octiv-color-card-brand-five h6 { color: #fff !important; padding: 0.25em 0.5em; background-color: #fac500; }
-#content_editor .octiv-color-card-brand-five h6, .pdf-page-content .octiv-color-card-brand-five h6 { margin-bottom: 0; }
+#content_editor .octiv-color-card-brand-five h6, .pdf-page-content .octiv-color-card-brand-five h6 { font-size: 0.9em !important; margin-bottom: 0; }
 #content_editor .octiv-color-card-brand-five ul, .pdf-page-content .octiv-color-card-brand-five ul, #content_editor .octiv-color-card-brand-five ol, .pdf-page-content .octiv-color-card-brand-five ol { padding: 0.5em; padding-left: 1em !important; margin-bottom: 0 !important; }
 #content_editor .octiv-color-card-brand-five ul li:last-child, .pdf-page-content .octiv-color-card-brand-five ul li:last-child, #content_editor .octiv-color-card-brand-five ol li:last-child, .pdf-page-content .octiv-color-card-brand-five ol li:last-child { margin-bottom: 0; }
 .octiv-color-card-brand-five ul { list-style-type: disc; }
@@ -188,50 +210,98 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-color-card-brand-five table tfoot tr td, .pdf-page-content .octiv-color-card-brand-five table tfoot tr td { border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
 .octiv-block-quote { position: relative; margin: 2em 0 !important; padding: 2em 4em; background-image: -webkit-linear-gradient(280deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545), -webkit-linear-gradient(280deg, #b949f5 45%, #ed4c06); background-image: -o-linear-gradient(280deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545), -o-linear-gradient(280deg, #b949f5 45%, #ed4c06); background-image: linear-gradient(170deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545), linear-gradient(170deg, #b949f5 45%, #ed4c06); text-align: center; }
 .octiv-block-statement { color: #fff !important; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); font-size: 1.25em !important; line-height: 1.4 !important; }
+.octiv-product-name { font-weight: bold; font-size: 1.2em; }
+.octiv-product-name .integer { display: inline-block; margin-right: 0.25em; }
+#content_editor .octiv-product-details, .pdf-page-content .octiv-product-details { font-style: italic; }
+#content_editor .octiv-product-description, .pdf-page-content .octiv-product-description { font-size: 1em; line-height: 1.4; color: #566d80; margin-bottom: 0 !important; }
 #content_editor .custom_pricing td, .pdf-page-content .custom_pricing td { padding: 0.85em 0.5em; }
-.custom_pricing .octiv-product-name { font-weight: bold; font-size: 1.2em; }
-.custom_pricing .octiv-product-name .integer { display: inline-block; margin-right: 0.25em; }
-.custom_pricing .octiv-product-details { font-style: italic; }
-#content_editor .custom_pricing .octiv-product-description, .pdf-page-content .custom_pricing .octiv-product-description { font-size: 1em; line-height: 1.4; color: #566d80; margin-bottom: 0 !important; }
-#content_editor .custom_pricing tbody td:nth-child(2), .pdf-page-content .custom_pricing tbody td:nth-child(2), #content_editor .custom_pricing tfoot td, .pdf-page-content .custom_pricing tfoot td { font-size: 1.1em !important; }
-.custom_pricing tfoot td:first-child { width: 100%; text-align: right; }
-.octiv-competitor-table { margin-bottom: 0 !important; border-radius: 0 0 4px 4px; }
+.custom_pricing tfoot td:first-child { width: 100%; }
+.octiv-competitor-table { margin-bottom: 0 !important; border-radius: 0 0 4px 4px; page-break-inside: auto; }
 .octiv-competitor-table em { display: block; font-size: 0.75em; line-height: 1.2 !important; margin-top: 0.25em; }
 .octiv-competitor-table thead th { border-left: 1px solid #fff; }
-.octiv-competitor-table thead th:first-child { text-align: left; border-left: 0; }
-.octiv-competitor-table tbody tr:nth-child(2n) td { background-color: #f0f0f0 !important; }
-#content_editor .octiv-competitor-table tbody tr:last-child td, .pdf-page-content .octiv-competitor-table tbody tr:last-child td { border-bottom: 0; }
+.octiv-competitor-table thead th:first-child { text-align: left; border-left: 1px solid #ed4c06; }
+.octiv-competitor-table thead th:last-child { border-right: 1px solid #ed4c06; }
+#content_editor .octiv-competitor-table tbody tr:last-child td, .pdf-page-content .octiv-competitor-table tbody tr:last-child td { border-bottom: 1px solid #ed4c06; }
 #content_editor .octiv-competitor-table tbody tr:last-child td:first-child, .pdf-page-content .octiv-competitor-table tbody tr:last-child td:first-child { border-radius: 0 0 0 4px; }
 #content_editor .octiv-competitor-table tbody tr:last-child td:last-child, .pdf-page-content .octiv-competitor-table tbody tr:last-child td:last-child { border-radius: 0 0 4px 0; }
 .octiv-competitor-table tbody td { text-align: center; width: 18%; }
 #content_editor .octiv-competitor-table tbody td, .pdf-page-content .octiv-competitor-table tbody td { font-size: 0.85em !important; }
 #content_editor .octiv-competitor-table tbody td strong, .pdf-page-content .octiv-competitor-table tbody td strong { display: block; }
 .octiv-competitor-table tbody td:first-child { text-align: left; width: 64%; }
-#content_editor .octiv-competitor-table tbody td:first-child, .pdf-page-content .octiv-competitor-table tbody td:first-child { border-left: 0; }
-#content_editor .octiv-competitor-table tbody td:last-child, .pdf-page-content .octiv-competitor-table tbody td:last-child { border-right: 0; }
+#content_editor .octiv-competitor-table tbody td:first-child, .pdf-page-content .octiv-competitor-table tbody td:first-child { border-left: 1px solid #ed4c06; }
+#content_editor .octiv-competitor-table tbody td:last-child, .pdf-page-content .octiv-competitor-table tbody td:last-child { border-right: 1px solid #ed4c06; }
+.octiv-feature-table { border-radius: 0 0 4px 4px; }
+#content_editor .octiv-feature-table, .pdf-page-content .octiv-feature-table { margin-bottom: 0; }
+.octiv-feature-table td:first-child { font-weight: bold; }
+#content_editor .octiv-feature-table td:first-child, .pdf-page-content .octiv-feature-table td:first-child { border-left: 0; }
+.octiv-feature-table td:last-child { border-right: 0; }
+#content_editor .octiv-feature-table tr:nth-child(2n) td, .pdf-page-content .octiv-feature-table tr:nth-child(2n) td { background-color: #fff !important; }
+#content_editor .octiv-feature-table tr:last-child td, .pdf-page-content .octiv-feature-table tr:last-child td { border-bottom: 0; }
+.octiv-feature-table tr:last-child td:first-child { border-radius: 0 0 0 4px; }
+.octiv-feature-table tr:last-child td:last-child { border-radius: 0 0 4px 0; }
+#content_editor .octiv-brand-table, .pdf-page-content .octiv-brand-table { font-size: 0.85em !important; margin-bottom: 1.5em !important; border-collapse: inherit !important; border-spacing: 0; }
+#content_editor .octiv-brand-table strong, .pdf-page-content .octiv-brand-table strong { display: block; }
+.octiv-brand-table thead, .octiv-brand-table thead th { background-color: #ed4c06 !important; }
+.octiv-brand-table thead th:first-child { text-align: left; border-top-left-radius: 5px; border-right: 1pt solid #ed4c06; }
+.octiv-brand-table thead th:last-child { border-top-right-radius: 5px; border-left: 1pt solid #ed4c06; white-space: pre; }
+.octiv-brand-table tbody tr:nth-child(2n) td { background-color: #fff !important; }
+#content_editor .octiv-brand-table tbody tr:last-child td, .pdf-page-content .octiv-brand-table tbody tr:last-child td { border-bottom: 1px solid #ed4c06 !important; }
+#content_editor .octiv-brand-table tbody td:first-child, .pdf-page-content .octiv-brand-table tbody td:first-child { border-left: 1px solid #ed4c06 !important; }
+#content_editor .octiv-brand-table tbody td:last-child, .pdf-page-content .octiv-brand-table tbody td:last-child { border-right: 1px solid #ed4c06 !important; }
+.octiv-brand-table tfoot, .octiv-brand-table tfoot td { background-color: #ed4c06 !important; color: #fff; font-weight: bold; }
+.octiv-brand-table tfoot tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+.octiv-brand-table tfoot tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+#content_editor .octiv-brand-two-table, .pdf-page-content .octiv-brand-two-table { font-size: 0.85em !important; margin-bottom: 1.5em !important; border-collapse: inherit !important; border-spacing: 0; }
+#content_editor .octiv-brand-two-table strong, .pdf-page-content .octiv-brand-two-table strong { display: block; }
+.octiv-brand-two-table thead, .octiv-brand-two-table thead th { background-color: #42b0d8 !important; }
+.octiv-brand-two-table thead th:first-child { text-align: left; border-top-left-radius: 5px; border-right: 1pt solid #42b0d8; }
+.octiv-brand-two-table thead th:last-child { border-top-right-radius: 5px; border-left: 1pt solid #42b0d8; white-space: pre; }
+.octiv-brand-two-table tbody tr:nth-child(2n) td { background-color: #fff !important; }
+#content_editor .octiv-brand-two-table tbody tr:last-child td, .pdf-page-content .octiv-brand-two-table tbody tr:last-child td { border-bottom: 1px solid #42b0d8 !important; }
+#content_editor .octiv-brand-two-table tbody td:first-child, .pdf-page-content .octiv-brand-two-table tbody td:first-child { border-left: 1px solid #42b0d8 !important; }
+#content_editor .octiv-brand-two-table tbody td:last-child, .pdf-page-content .octiv-brand-two-table tbody td:last-child { border-right: 1px solid #42b0d8 !important; }
+.octiv-brand-two-table tfoot, .octiv-brand-two-table tfoot td { background-color: #42b0d8 !important; color: #fff; font-weight: bold; }
+.octiv-brand-two-table tfoot tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+.octiv-brand-two-table tfoot tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+#content_editor .octiv-brand-three-table, .pdf-page-content .octiv-brand-three-table { font-size: 0.85em !important; margin-bottom: 1.5em !important; border-collapse: inherit !important; border-spacing: 0; }
+#content_editor .octiv-brand-three-table strong, .pdf-page-content .octiv-brand-three-table strong { display: block; }
+.octiv-brand-three-table thead, .octiv-brand-three-table thead th { background-color: #33ab40 !important; }
+.octiv-brand-three-table thead th:first-child { text-align: left; border-top-left-radius: 5px; border-right: 1pt solid #33ab40; }
+.octiv-brand-three-table thead th:last-child { border-top-right-radius: 5px; border-left: 1pt solid #33ab40; white-space: pre; }
+.octiv-brand-three-table tbody tr:nth-child(2n) td { background-color: #fff !important; }
+#content_editor .octiv-brand-three-table tbody tr:last-child td, .pdf-page-content .octiv-brand-three-table tbody tr:last-child td { border-bottom: 1px solid #33ab40 !important; }
+#content_editor .octiv-brand-three-table tbody td:first-child, .pdf-page-content .octiv-brand-three-table tbody td:first-child { border-left: 1px solid #33ab40 !important; }
+#content_editor .octiv-brand-three-table tbody td:last-child, .pdf-page-content .octiv-brand-three-table tbody td:last-child { border-right: 1px solid #33ab40 !important; }
+.octiv-brand-three-table tfoot, .octiv-brand-three-table tfoot td { background-color: #33ab40 !important; color: #fff; font-weight: bold; }
+.octiv-brand-three-table tfoot tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+.octiv-brand-three-table tfoot tr:last-child td:last-child { border-bottom-right-radius: 5px; }
 .octiv-number-list-brand-two { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-two li { position: relative; }
+.octiv-number-list-brand-two li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-two li, .pdf-page-content .octiv-number-list-brand-two li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-two li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #42b0d8; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-two li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #42b0d8; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-two ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-two ol li { counter-increment: none; }
 .octiv-number-list-brand-two ol li:before { display: none; }
 .octiv-number-list-brand-three { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-three li { position: relative; }
+.octiv-number-list-brand-three li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-three li, .pdf-page-content .octiv-number-list-brand-three li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-three li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #33ab40; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-three li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #33ab40; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-three ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-three ol li { counter-increment: none; }
 .octiv-number-list-brand-three ol li:before { display: none; }
 .octiv-number-list-brand-four { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-four li { position: relative; }
+.octiv-number-list-brand-four li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-four li, .pdf-page-content .octiv-number-list-brand-four li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-four li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #b949f5; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-four li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #b949f5; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-four ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-four ol li { counter-increment: none; }
 .octiv-number-list-brand-four ol li:before { display: none; }
 .octiv-number-list-brand-five { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-five li { position: relative; }
+.octiv-number-list-brand-five li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-five li, .pdf-page-content .octiv-number-list-brand-five li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-five li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #fac500; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-five li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #fac500; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-five ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-five ol li { counter-increment: none; }
 .octiv-number-list-brand-five ol li:before { display: none; }
 .octiv-footnote { font-style: italic; }
 #content_editor .octiv-footnote, .pdf-page-content .octiv-footnote { font-size: 0.7em; line-height: 1.4 !important; }
@@ -241,7 +311,20 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-brand-three-dot, .octiv-green-dot { background-color: #33ab40; width: 20px; height: 20px; border-radius: 50%; margin: 0 auto; }
 .octiv-brand-four-dot, .octiv-purple-dot { background-color: #b949f5; width: 20px; height: 20px; border-radius: 50%; margin: 0 auto; }
 .octiv-brand-five-dot, .octiv-yellow-dot { background-color: #fac500; width: 20px; height: 20px; border-radius: 50%; margin: 0 auto; }
+.octiv-color-page--brand-two { background-color: #42b0d8; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); margin-bottom: -20px; padding: 30px; }
+#content_editor .octiv-color-page--brand-two [class*="octiv-color-box-headline"], .pdf-page-content .octiv-color-page--brand-two [class*="octiv-color-box-headline"] { color: #42b0d8 !important; }
+#content_editor .octiv-color-page--brand-two *, .pdf-page-content .octiv-color-page--brand-two * { color: #fff; }
+.octiv-color-page--brand-three { background-color: #33ab40; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); margin-bottom: -20px; padding: 30px; }
+#content_editor .octiv-color-page--brand-three [class*="octiv-color-box-headline"], .pdf-page-content .octiv-color-page--brand-three [class*="octiv-color-box-headline"] { color: #33ab40 !important; }
+#content_editor .octiv-color-page--brand-three *, .pdf-page-content .octiv-color-page--brand-three * { color: #fff; }
+.octiv-color-page--brand-four { background-color: #b949f5; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); margin-bottom: -20px; padding: 30px; }
+#content_editor .octiv-color-page--brand-four [class*="octiv-color-box-headline"], .pdf-page-content .octiv-color-page--brand-four [class*="octiv-color-box-headline"] { color: #b949f5 !important; }
+#content_editor .octiv-color-page--brand-four *, .pdf-page-content .octiv-color-page--brand-four * { color: #fff; }
+.octiv-color-page--brand-five { background-color: #fac500; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); margin-bottom: -20px; padding: 30px; }
+#content_editor .octiv-color-page--brand-five [class*="octiv-color-box-headline"], .pdf-page-content .octiv-color-page--brand-five [class*="octiv-color-box-headline"] { color: #fac500 !important; }
+#content_editor .octiv-color-page--brand-five *, .pdf-page-content .octiv-color-page--brand-five * { color: #fff; }
 .octiv-case-study .octiv-hero { margin-bottom: 10px; }
+.octiv-case-study .octiv-case-study-customer-logo img { max-width: 150px; max-height: 100px; margin-bottom: 1em; }
 .octiv-case-study .octiv-icon-item { text-align: left; text-align: left; display: table; width: 100%; margin-bottom: 2em; }
 .octiv-case-study .octiv-icon-item:last-child { margin-bottom: 0; }
 .octiv-case-study .octiv-icon-img-container { width: 85px !important; height: 85px !important; }
@@ -249,44 +332,71 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-case-study .octiv-icon-content-container { display: table-cell; vertical-align: middle; padding-left: 1em; }
 #content_editor .octiv-case-study .octiv-icon-content-container h4, .pdf-page-content .octiv-case-study .octiv-icon-content-container h4 { font-size: 24px !important; line-height: 1.3 !important; }
 #content_editor .octiv-case-study .octiv-icon-content-container p, .pdf-page-content .octiv-case-study .octiv-icon-content-container p { font-size: 1em !important; line-height: 1.3 !important; color: #2d3943; }
-.octiv-integration .octiv-hero { display: table; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545); min-height: 200px; }
+.octiv-integration .octiv-hero { display: table; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545); background-size: auto; min-height: 200px; }
+#content_editor .octiv-integration .octiv-hero, .pdf-page-content .octiv-integration .octiv-hero { padding: 45px 100px 65px !important; }
 .octiv-integration .octiv-hero:before, .octiv-integration .octiv-hero:after { display: none; }
 .octiv-integration .octiv-hero .octiv-integration-logo-container, .octiv-integration .octiv-hero .octiv-integration-plus-sign-wrap { display: table-cell; vertical-align: middle; width: 50%; position: relative; }
 .octiv-integration .octiv-hero .octiv-integration-logo-container { padding: 0 2em; }
-.octiv-integration .octiv-hero .octiv-integration-logo-container:first-child .octiv-integration-logo-wrap { right: 1.5em; }
+.octiv-integration .octiv-hero .octiv-integration-logo-container:first-child .octiv-integration-logo-wrap { right: 1.5em; padding: 1.5em 0; }
 .octiv-integration .octiv-hero .octiv-integration-plus-sign-wrap { width: auto; }
 .octiv-integration .octiv-hero .octiv-integration-logo-wrap { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 1em 0em; background-color: #fff; border-radius: 4px; -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); width: 100%; max-width: 175px; }
 .octiv-integration .octiv-hero .octiv-integration-logo-wrap img { max-width: 85% !important; max-height: 50px !important; }
-.octiv-integration .octiv-hero .octiv-integration-plus-sign { margin: 0 auto; text-align: center; line-height: 45px; font-size: 2em; font-weight: bold; background-color: #fff; background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); width: 45px; height: 45px; border-radius: 50%; }
+.octiv-integration .octiv-hero .octiv-integration-plus-sign { margin: 0 auto; text-align: center; line-height: 45px; font-size: 2em; font-weight: bold; background-color: #fff; width: 45px; height: 45px; border-radius: 50%; }
 .octiv-integration .octiv-notch { padding: 2em 3em; }
 .octiv-integration .octiv-why-integration, .octiv-integration .octiv-integration-capabilities { margin-top: 2.5em; }
 .octiv-integration .octiv-card-image { min-height: 150px; }
-.octiv-datasheet .octiv-block-quote-highlight { background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); border: 1px solid #ccc; padding: 1em; border-radius: 4px; float: right; max-width: 45%; font-weight: bold; margin-left: 2em; }
-.octiv-datasheet .octiv-advantages { margin-top: 45px; }
-.octiv-datasheet .octiv-icon-item { text-align: left; text-align: left; display: table; width: 100%; margin-bottom: 2em; }
+.octiv-integration--zuora { page: octiv-integration--zuora; }
+@page octiv-integration--zuora { margin-bottom: -0.5in;
+  min-height: 11in; }
+.octiv-integration--salesforce-cpq { page: octiv-integration--salesforce-cpq; }
+@page octiv-integration--salesforce-cpq { margin-bottom: -0.5in; }
+.octiv-integration--oracle-cpq { page: octiv-integration--oracle-cpq; }
+@page octiv-integration--oracle-cpq { margin-bottom: -0.5in; }
+.octiv-integration--formstack { page: octiv-integration--formstack; }
+@page octiv-integration--formstack { margin-bottom: 0;
+  min-height: 11in; }
+.octiv-datasheet .octiv-block-quote-highlight { background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); border: 1px solid #ccc; padding: 1em; border-radius: 4px; float: right; max-width: 45%; font-weight: bold; }
+#content_editor .octiv-datasheet .octiv-block-quote-highlight, .pdf-page-content .octiv-datasheet .octiv-block-quote-highlight { margin: 0 0 2em 2em; }
+.octiv-datasheet .octiv-icon-item { text-align: left; display: table; width: 100%; margin-bottom: 2em; }
 .octiv-datasheet .octiv-icon-item:last-child { margin-bottom: 0; }
 .octiv-datasheet .octiv-icon-img-container { width: 85px !important; height: 85px !important; }
 .octiv-icon-item .octiv-datasheet .octiv-icon-img-container { display: none; }
 .octiv-datasheet .octiv-icon-content-container { display: table-cell; vertical-align: middle; padding-left: 1em; width: 100%; }
 #content_editor .octiv-datasheet .octiv-icon-content-container p, .pdf-page-content .octiv-datasheet .octiv-icon-content-container p { font-size: 1em !important; line-height: 1.3 !important; color: #7c93a7; margin-bottom: 0 !important; }
-.octiv-datasheet .octiv-datasheet-features { margin-top: 45px; }
 .octiv-datasheet .octiv-datasheet-features li { font-size: 0.8em !important; line-height: 1.3 !important; margin-bottom: 0.25em; }
 #content_editor .octiv-datasheet .octiv-datasheet-features li, .pdf-page-content .octiv-datasheet .octiv-datasheet-features li { padding-left: 0 !important; }
 .octiv-datasheet .octiv-datasheet-client-logos { margin-top: 45px; }
 .octiv-datasheet .octiv-datasheet-logo-list { list-style-type: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-gap: 30px; justify-items: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 #content_editor .octiv-datasheet .octiv-datasheet-logo-list, .pdf-page-content .octiv-datasheet .octiv-datasheet-logo-list { padding-left: 0 !important; }
 .octiv-datasheet .octiv-datasheet-logo-item img { max-width: 125px !important; max-height: 75px; }
-.octiv-datasheet .octiv-competitor-capabilities { margin-top: 60px; }
-.octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key { list-style-type: none; display: table; margin: 0 auto; }
+.octiv-datasheet .octiv-competitor-capabilities { margin-top: 60px; page-break-inside: auto !important; }
+.octiv-datasheet .octiv-competitor-capabilities .octiv-color-card-brand { page-break-inside: auto !important; }
+.octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key { list-style-type: none; display: table; margin: 0 auto !important; }
 #content_editor .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key, .pdf-page-content .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key { padding-left: 0 !important; }
 .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key li { display: table-cell; vertical-align: middle; padding-right: 1.5em; }
 .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key li:last-child { padding-right: 0; }
 .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key [class$="-dot"] { display: inline-block; vertical-align: middle; margin-right: 0.25em; }
 .octiv-datasheet .octiv-product-features-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-gap: 30px; }
-.octiv-datasheet .octiv-product-features-list .octiv-icon-item { display: list-item; text-align: center; margin-bottom: 0; }
+.octiv-datasheet .octiv-product-features-list .octiv-icon-item { text-align: center; margin-bottom: 0; }
 .octiv-datasheet .octiv-product-features-list .octiv-icon-content-container { padding-left: 0; display: initial; vertical-align: initial; }
 #content_editor .octiv-datasheet .octiv-product-features-list .octiv-icon-content-container p, .pdf-page-content .octiv-datasheet .octiv-product-features-list .octiv-icon-content-container p { margin-top: 0.5em; }
-@page octiv-order-form { margin-bottom: -0.5in !important; }
+.octiv-datasheet .octiv-integration-visual { position: relative; min-height: 450px; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100px; height: 100px; border-radius: 50%; background-color: #f0f0f0; border: 5px solid #fff; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-animation-duration: 500ms; animation-duration: 500ms; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.37, -0.15, 0.32, 1.51); animation-timing-function: cubic-bezier(0.37, -0.15, 0.32, 1.51); }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item img { max-width: 80% !important; max-height: 80% !important; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(1) { z-index: 10; background-color: #ed4c06; -webkit-animation-name: octivPulse; animation-name: octivPulse; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(1) img { max-width: 60% !important; max-height: 60% !important; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(2) { -webkit-animation-name: integrationOne; animation-name: integrationOne; -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(3) { -webkit-animation-name: integrationTwo; animation-name: integrationTwo; -webkit-animation-delay: 0.5s; animation-delay: 0.5s; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(4) { -webkit-animation-name: integrationThree; animation-name: integrationThree; -webkit-animation-delay: 0.75s; animation-delay: 0.75s; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(5) { -webkit-animation-name: integrationFour; animation-name: integrationFour; -webkit-animation-delay: 1s; animation-delay: 1s; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(6) { -webkit-animation-name: integrationFive; animation-name: integrationFive; -webkit-animation-delay: 1.25s; animation-delay: 1.25s; }
+.octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(7) { -webkit-animation-name: integrationSix; animation-name: integrationSix; -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
+.octiv-datasheet--overview { page: octiv-datasheet--overview; }
+@page octiv-datasheet--overview { margin-bottom: -0.5in; }
+.octiv-terms-conditions--premium-support { page: octiv-terms-conditions--premium-support; }
+@page octiv-terms-conditions--premium-support { margin-bottom: 0;
+  min-height: 11in; }
+@page octiv-order-form { min-height: 11in; }
 .octiv-order-form { page: octiv-order-form; }
 .octiv-order-form .octiv-order-form-details-list { list-style-type: none; }
 #content_editor .octiv-order-form .octiv-order-form-details-list, .pdf-page-content .octiv-order-form .octiv-order-form-details-list { padding-left: 0 !important; }
@@ -303,10 +413,46 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .octiv-order-form table th, #content_editor .octiv-order-form table td, .pdf-page-content .octiv-order-form table th, .pdf-page-content .octiv-order-form table td { border: 0 !important; }
 .octiv-order-form table thead th:nth-child(2n) { text-align: right; }
 #content_editor .octiv-order-form table tr:last-child td, .pdf-page-content .octiv-order-form table tr:last-child td { border-bottom: 0 !important; }
-#content_editor .octiv-order-form table td, .pdf-page-content .octiv-order-form table td { border-bottom: 1px solid #e6e6e6 !important; }
+#content_editor .octiv-order-form table td, .pdf-page-content .octiv-order-form table td { border-bottom: 1px solid #e6e6e6 !important; padding-top: 0.25em; padding-bottom: 0.25em; }
 .octiv-order-form table td:nth-child(2) { text-align: right; }
 .octiv-order-form .octiv-color-cards [class*="octiv-color-card"] { margin-bottom: 2em; }
 .octiv-order-form .octiv-color-cards [class*="octiv-color-card"]:last-of-type { margin-bottom: 0; }
+.octiv-support-services .octiv-icon-item { text-align: left; text-align: left; display: table; width: 100%; margin-bottom: 2em; }
+.octiv-support-services .octiv-icon-item:last-child { margin-bottom: 0; }
+.octiv-support-services .octiv-icon-content-container { display: table-cell; vertical-align: middle; padding-left: 1em; width: 100%; }
+#content_editor .octiv-support-services .octiv-icon-content-container h4, .pdf-page-content .octiv-support-services .octiv-icon-content-container h4 { font-size: 24px !important; line-height: 1.3 !important; }
+#content_editor .octiv-support-services .octiv-icon-content-container p, .pdf-page-content .octiv-support-services .octiv-icon-content-container p { font-size: 1em !important; line-height: 1.3 !important; color: #2d3943; }
+.octiv-implementation [class*="octiv-color-card-brand"] * { padding: 0.5em 0.5em 0; }
+.octiv-implementation [class*="octiv-color-card-brand"] h6 { padding: 0.25em 0.5em; }
+.octiv-implementation [class*="octiv-color-card-brand"] span { padding: 0; }
+@-webkit-keyframes octivPulse { from { -webkit-transform: translate(-50%, -50%) scale(1.25); transform: translate(-50%, -50%) scale(1.25); }
+  to { -webkit-transform: translate(-50%, -50%) scale(1.4); transform: translate(-50%, -50%) scale(1.4); } }
+@keyframes octivPulse { from { -webkit-transform: translate(-50%, -50%) scale(1.25); transform: translate(-50%, -50%) scale(1.25); }
+  to { -webkit-transform: translate(-50%, -50%) scale(1.4); transform: translate(-50%, -50%) scale(1.4); } }
+@-webkit-keyframes integrationOne { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-200%, -125%); transform: translate(-200%, -125%); } }
+@keyframes integrationOne { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-200%, -125%); transform: translate(-200%, -125%); } }
+@-webkit-keyframes integrationTwo { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-50%, -200%); transform: translate(-50%, -200%); } }
+@keyframes integrationTwo { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-50%, -200%); transform: translate(-50%, -200%); } }
+@-webkit-keyframes integrationThree { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(100%, -125%); transform: translate(100%, -125%); } }
+@keyframes integrationThree { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(100%, -125%); transform: translate(100%, -125%); } }
+@-webkit-keyframes integrationFour { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(100%, 25%); transform: translate(100%, 25%); } }
+@keyframes integrationFour { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(100%, 25%); transform: translate(100%, 25%); } }
+@-webkit-keyframes integrationFive { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-50%, 100%); transform: translate(-50%, 100%); } }
+@keyframes integrationFive { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-50%, 100%); transform: translate(-50%, 100%); } }
+@-webkit-keyframes integrationSix { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-200%, 25%); transform: translate(-200%, 25%); } }
+@keyframes integrationSix { from { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  to { -webkit-transform: translate(-200%, 25%); transform: translate(-200%, 25%); } }
 #content_editor h1, .pdf-page-content h1 { line-height: 1.4 !important; }
 #content_editor h2, .pdf-page-content h2 { line-height: 1.4 !important; }
 #content_editor h3, .pdf-page-content h3 { line-height: 1.4 !important; }
@@ -319,7 +465,10 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor ul li, .pdf-page-content ul li, #content_editor ol li, .pdf-page-content ol li { font-size: 0.9em; line-height: 1.4 !important; font-weight: 300; }
 #content_editor hr, .pdf-page-content hr { margin-top: 1em; margin-bottom: 1em; border: 0; border-top: 1px solid #ccc; }
 #content_editor a:hover, .pdf-page-content a:hover { color: #fa7c45; }
-#content_editor table, .pdf-page-content table { margin-bottom: 1em; border: 0; background-color: #fff; color: #2d3943; }
+#content_editor table, .pdf-page-content table { width: 100%; margin-bottom: 1em; border: 0; background-color: #fff; color: #2d3943; }
+#content_editor table thead tr th, .pdf-page-content table thead tr th { color: #2d3943; background-color: #ccc; border-left: 1px solid #f0f0f0; }
+#content_editor table thead tr th:first-child, .pdf-page-content table thead tr th:first-child { border-left: 0; }
+#content_editor table thead tr:first-child th, .pdf-page-content table thead tr:first-child th { color: #fff; background-color: #ed4c06; }
 #content_editor table td, .pdf-page-content table td { padding: 0.5em; border-left: 1px solid #ccc; font-size: 0.9em !important; line-height: 1.4 !important; }
 #content_editor table td:last-child, .pdf-page-content table td:last-child { border-right: 1px solid #ccc; }
 #content_editor table tr:nth-child(2n) td, .pdf-page-content table tr:nth-child(2n) td { background-color: #fff; }
@@ -333,11 +482,49 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor .no-gutters .one-third:nth-child(3n), .pdf-page-content .no-gutters .one-third:nth-child(3n) { padding-right: 0px !important; }
 @supports ((display: -webkit-box) or (display: flex)) { #content_editor .grid.no-gutters { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 33%; -ms-flex-preferred-size: 33%; flex-basis: 33%; }
-  @media screen and (max-width: 735px) { #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; } } }
-@media screen and (max-width: 735px) { .octiv-hero { padding-left: 30px; padding-right: 30px; } .octiv-notch { padding: 1em; } .octiv-icon-list .octiv-icon-item { text-align: left; display: table; width: 100%; }
-  #content_editor .octiv-icon-list .octiv-icon-item.unit.one-third { padding: 0 !important; } .octiv-icon-list .octiv-icon-img-wrapper, .octiv-icon-list .octiv-icon-content-container { display: table-cell; vertical-align: middle; } .octiv-icon-list .octiv-icon-img-wrapper { width: 65px; } #content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 0 !important; } .octiv-icon-list .octiv-icon-img-container { width: 65px; height: 65px; border: 3px solid #fff; } .octiv-icon-list .octiv-icon-img-container img { max-width: 35px !important; max-height: 35px !important; } .octiv-icon-list .octiv-icon-content-container { padding-left: 1em; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; border: 3px solid #fff; border-radius: 50%; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 100px; height: 100px; margin: 1em auto; } .octiv-employee-feature .octiv-employee-feature-headshot:before { display: none; } .octiv-employee-feature .octiv-employee-feature-headshot img { position: absolute; max-width: 240px !important; right: -10px; } .octiv-employee-feature .octiv-employee-feature-content { position: static; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); text-align: center; padding-left: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 1.3em !important; } #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1em !important; } .octiv-employee-feature .octiv-employee-feature-social-list { margin: 0 auto; } .octiv-person-container { display: block; } .octiv-person-container .octiv-person-content { display: block; padding-left: 0; } .octiv-person-container .octiv-person-headshot { max-width: 80px; overflow: hidden; margin: 1em auto 0.5em; } .octiv-person-container .octiv-person-name, .octiv-person-container .octiv-person-title, .octiv-person-container .octiv-person-company { text-align: center; } .octiv-content-toggle-list .octiv-content-toggle-item { margin-bottom: 1em; } .octiv-content-toggle-list .octiv-content-toggle-item label { display: none; } .octiv-slide-content { -webkit-animation-name: none; animation-name: none; position: static; } .octiv-slide-toggle:checked + .octiv-slide-content { -webkit-animation-name: none; animation-name: none; } .octiv-two-third-only { max-width: 100%; right: auto; } .octiv-block-quote { padding: 2em; } .octiv-block-statement { font-size: 1em !important; } .octiv-case-study .octiv-icon-item { display: block; } .octiv-case-study .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-case-study .octiv-icon-content-container { padding-left: 0; } .octiv-integration .octiv-notch { padding: 1em; } .octiv-datasheet .octiv-block-quote-highlight { float: none; max-width: 100%; margin-left: 0; margin-bottom: 1em; } .octiv-datasheet .octiv-icon-item { display: block; } .octiv-datasheet .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-datasheet .octiv-icon-content-container { padding-left: 0; } .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key li { display: list-item; } #content_editor h2, .pdf-page-content h2 { font-size: 1.3em !important; } #content_editor h4, .pdf-page-content h4 { font-size: 1.15em !important; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; width: 100%; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding: 0 !important; } }
-@media print { .octiv-hero { top: -0.5in; left: -0.5in; width: 8.5in; } .octiv-hero:before, .octiv-hero:after { background-color: rgba(45, 57, 67, 0.55); } .octiv-notch { margin-top: -0.75in; padding: 0.25in; } .octiv-full-width { left: -0.5in; width: 8.5in; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; position: absolute; right: 0; top: 0; bottom: 0; } .octiv-employee-feature .octiv-employee-feature-headshot:before { background-size: cover; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589435_original.png?1516302091); } .octiv-employee-feature .octiv-employee-feature-content { position: absolute; top: 100%; -webkit-transform: translateY(50%); -ms-transform: translateY(50%); transform: translateY(50%); } .octiv-content-toggle-list .octiv-content-toggle-item label { display: none; } .octiv-slide-content { display: none; } .octiv-four-child-items .octiv-content-toggle-item { display: inline-block; max-width: 1.78125in; margin-right: 0.125in; }
-  .octiv-four-child-items .octiv-content-toggle-item:nth-child(4n) { margin-right: 0; } .octiv-color-card-brand { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand ul, .pdf-page-content .octiv-color-card-brand ul { padding-left: 1.5em !important; } .octiv-color-card-brand li:before { top: 0; } .octiv-color-card-brand-two { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-two ul, .pdf-page-content .octiv-color-card-brand-two ul { padding-left: 1.5em !important; } .octiv-color-card-brand-two li:before { top: 0; } .octiv-color-card-brand-three { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-three ul, .pdf-page-content .octiv-color-card-brand-three ul { padding-left: 1.5em !important; } .octiv-color-card-brand-three li:before { top: 0; } .octiv-color-card-brand-four { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-four ul, .pdf-page-content .octiv-color-card-brand-four ul { padding-left: 1.5em !important; } .octiv-color-card-brand-four li:before { top: 0; } .octiv-color-card-brand-five { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-five ul, .pdf-page-content .octiv-color-card-brand-five ul { padding-left: 1.5em !important; } .octiv-color-card-brand-five li:before { top: 0; } .octiv-block-quote:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545); } .octiv-block-statement { font-size: 1.1em !important; } .custom_pricing .octiv-product-name { font-size: 0.8em; } .custom_pricing .octiv-product-details { font-size: 0.8em; } #content_editor .custom_pricing .octiv-product-description, .pdf-page-content .custom_pricing .octiv-product-description { font-size: 0.8; } #content_editor .custom_pricing tbody td:nth-child(2), .pdf-page-content .custom_pricing tbody td:nth-child(2), #content_editor .custom_pricing tfoot td, .pdf-page-content .custom_pricing tfoot td { font-size: 0.8em !important; } #content_editor .octiv-footnote, .pdf-page-content .octiv-footnote { font-size: 0.6em; } .octiv-case-study .octiv-hero { margin-bottom: -0.25in; } #content_editor .octiv-case-study .octiv-icon-content-container p, .pdf-page-content .octiv-case-study .octiv-icon-content-container p { font-size: 0.9em !important; } .octiv-integration .octiv-hero .octiv-integration-logo-container, .octiv-integration .octiv-hero .octiv-integration-plus-sign-wrap { padding-top: 0.25in; padding-bottom: 0.25in; } .octiv-integration .octiv-hero .octiv-integration-logo-container:first-child .octiv-integration-logo-wrap { right: 0in; } .octiv-integration .octiv-icon-item, .octiv-integration .octiv-content-toggle-item { float: left; } .octiv-integration .octiv-content-toggle-item img { border: 1px solid #ccc; } .octiv-datasheet .octiv-color-cards li:nth-child(3n) { margin-right: 0; } #content_editor .octiv-datasheet .octiv-icon-content-container p, .pdf-page-content .octiv-datasheet .octiv-icon-content-container p { font-size: 0.9em !important; } .octiv-datasheet .octiv-datasheet-logo-item { display: inline-block; vertical-align: middle; width: 100%; max-width: 1.75in; } .octiv-datasheet .octiv-datasheet-logo-item img { display: block; margin: 0 auto !important; } .octiv-terms-conditions .octiv-color-cards li { margin-right: 0.3125in; max-width: 3.575in !important; }
-  .octiv-terms-conditions .octiv-color-cards li:nth-child(2n) { margin-right: 0; } .octiv-order-form .octiv-order-form-details-list { margin-top: -0.25in; } .octiv-order-form .octiv-order-form-details-list li { margin-bottom: 0; } .octiv-order-form .octiv-employee-feature-content { position: static; top: auto; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); } .octiv-order-form .octiv-employee-feature-headshot { float: none; position: relative; width: 0.75in; height: 0.75in; } .octiv-order-form .octiv-employee-feature-headshot img { position: absolute; max-width: 200px !important; top: -0.4in; right: -0.15in; } #content_editor .octiv-order-form .octiv-employee-feature-title, .pdf-page-content .octiv-order-form .octiv-employee-feature-title { font-size: 0.8em !important; } .octiv-order-form .octiv-color-cards { margin-top: -0.25in; } .octiv-order-form .octiv-color-cards [class*="octiv-color-card"] { max-width: 100% !important; } #content_editor h2, .pdf-page-content h2 { font-size: 1.5em !important; } #content_editor h4, .pdf-page-content h4 { font-size: 1.25em !important; } #content_editor p, .pdf-page-content p { font-size: 0.9em !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 0.125in !important; margin-bottom: 0.25in; } #content_editor .no-gutters .one-third:nth-child(3n-2), .pdf-page-content .no-gutters .one-third:nth-child(3n-2) { padding-left: 0in !important; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding-left: 0.0625in !important; padding-right: 0.0625in !important; } #content_editor .no-gutters .one-third:nth-child(3n), .pdf-page-content .no-gutters .one-third:nth-child(3n) { padding-right: 0in !important; } }
+  @media screen and (max-width: 735px) { #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; } }
+  #content_editor .octiv-order-form .grid.no-gutters { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
+#content_editor .octiv-has-text-white, .pdf-page-content .octiv-has-text-white { color: #fff !important; }
+#content_editor .octiv-has-text-brand-two, .pdf-page-content .octiv-has-text-brand-two { color: #42b0d8 !important; }
+#content_editor .octiv-has-text-center, .pdf-page-content .octiv-has-text-center { text-align: center !important; }
+#content_editor .octiv-has-font-bump, .pdf-page-content .octiv-has-font-bump, #content_editor .octiv-has-font-bump *, .pdf-page-content .octiv-has-font-bump * { font-size: 1.15em !important; line-height: 1.4 !important; }
+#content_editor .octiv-pad-y, .pdf-page-content .octiv-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
+#content_editor .octiv-pad-y-more, .pdf-page-content .octiv-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
+#content_editor .octiv-pad-t, .pdf-page-content .octiv-pad-t { padding-top: 30px !important; }
+#content_editor .octiv-pad-t-more, .pdf-page-content .octiv-pad-t-more { padding-top: 60px !important; }
+#content_editor .octiv-pad-b, .pdf-page-content .octiv-pad-b { padding-bottom: 30px !important; }
+#content_editor .octiv-pad-b-more, .pdf-page-content .octiv-pad-b-more { padding-bottom: 60px !important; }
+#content_editor .octiv-pad-x, .pdf-page-content .octiv-pad-x { padding-left: 30px !important; padding-right: 30px !important; }
+#content_editor .octiv-pad-x-more, .pdf-page-content .octiv-pad-x-more { padding-left: 60px !important; padding-right: 60px !important; }
+#content_editor .octiv-pad-l, .pdf-page-content .octiv-pad-l { padding-left: 30px !important; }
+#content_editor .octiv-pad-l-more, .pdf-page-content .octiv-pad-l-more { padding-left: 60px !important; }
+#content_editor .octiv-pad-r, .pdf-page-content .octiv-pad-r { padding-right: 30px !important; }
+#content_editor .octiv-pad-r-more, .pdf-page-content .octiv-pad-r-more { padding-right: 60px !important; }
+#content_editor .octiv-mar-y, .pdf-page-content .octiv-mar-y { margin-top: 30px !important; margin-bottom: 30px !important; }
+#content_editor .octiv-mar-y-more, .pdf-page-content .octiv-mar-y-more { margin-top: 60px !important; margin-bottom: 60px !important; }
+#content_editor .octiv-mar-t, .pdf-page-content .octiv-mar-t { margin-top: 30px !important; }
+#content_editor .octiv-mar-t-more, .pdf-page-content .octiv-mar-t-more { margin-top: 60px !important; }
+#content_editor .octiv-mar-t-neg, .pdf-page-content .octiv-mar-t-neg { margin-top: -1em !important; }
+#content_editor .octiv-mar-t-none, .pdf-page-content .octiv-mar-t-none { margin-top: 0 !important; }
+#content_editor .octiv-mar-b, .pdf-page-content .octiv-mar-b { margin-bottom: 30px !important; }
+#content_editor .octiv-mar-b-more, .pdf-page-content .octiv-mar-b-more { margin-bottom: 60px !important; }
+#content_editor .octiv-mar-b-neg, .pdf-page-content .octiv-mar-b-neg { margin-bottom: -30px !important; }
+#content_editor .octiv-mar-b-none, .pdf-page-content .octiv-mar-b-none { margin-bottom: 0px !important; }
+#content_editor .octiv-mar-x, .pdf-page-content .octiv-mar-x { margin-left: 30px !important; margin-right: 30px !important; }
+#content_editor .octiv-mar-x-more, .pdf-page-content .octiv-mar-x-more { margin-left: 60px !important; margin-right: 60px !important; }
+#content_editor .octiv-mar-l, .pdf-page-content .octiv-mar-l { margin-left: 30px !important; }
+#content_editor .octiv-mar-l-more, .pdf-page-content .octiv-mar-l-more { margin-left: 60px !important; }
+#content_editor .octiv-mar-r, .pdf-page-content .octiv-mar-r { margin-right: 30px !important; }
+#content_editor .octiv-mar-r-more, .pdf-page-content .octiv-mar-r-more { margin-right: 60px !important; }
+#content_editor .octiv-b-a, .pdf-page-content .octiv-b-a { border: 1px solid #fff; }
+#content_editor .octiv-video-outer, .pdf-page-content .octiv-video-outer { padding: 56.25% 0 0 0; position: relative; }
+#content_editor .octiv-video-inner, .pdf-page-content .octiv-video-inner { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+#content_editor .octiv-video-inner .mce-preview-object.mce-object-iframe, .pdf-page-content .octiv-video-inner .mce-preview-object.mce-object-iframe { display: inline; }
+@media screen and (max-width: 735px) { #content_editor .octiv-hero { padding-left: 30px !important; padding-right: 30px !important; } .octiv-notch { padding: 1em; } .octiv-icon-list .octiv-icon-item { text-align: left; display: table; width: 100%; }
+  #content_editor .octiv-icon-list .octiv-icon-item.unit.one-third { padding: 0 !important; } .octiv-icon-list .octiv-icon-img-wrapper, .octiv-icon-list .octiv-icon-content-container { display: table-cell; vertical-align: middle; } .octiv-icon-list .octiv-icon-img-wrapper { width: 65px; } #content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 0 !important; } .octiv-icon-list .octiv-icon-img-container { width: 65px; height: 65px; border: 3px solid #fff; } .octiv-icon-list .octiv-icon-img-container img { max-width: 35px !important; max-height: 35px !important; } .octiv-icon-list .octiv-icon-content-container { padding-left: 1em; } .octiv-icon-content--heading-container { display: block; border-bottom: 0; } .octiv-icon-content--heading-container h4, .octiv-icon-content--heading-container h5 { display: block; } .octiv-icon-content--heading-container h5 { text-align: left; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; border: 3px solid #fff; border-radius: 50%; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 100px; height: 100px; margin: 1em auto; } .octiv-employee-feature .octiv-employee-feature-headshot:before { display: none; } .octiv-employee-feature .octiv-employee-feature-headshot img { position: absolute; max-width: 240px !important; right: -10px; } .octiv-employee-feature .octiv-employee-feature-content { position: static; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); text-align: center; padding-left: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 1.3em !important; } .octiv-employee-feature .octiv-employee-feature-numbers li { display: list-item; padding-right: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-numbers li, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-numbers li { font-size: 1em !important; } #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1em !important; } .octiv-employee-feature .octiv-employee-feature-social-list { margin: 0 auto !important; } .octiv-person-container { display: block; } .octiv-person-container .octiv-person-content { display: block; padding-left: 0; } .octiv-person-container .octiv-person-headshot { max-width: 80px; overflow: hidden; margin: 1em auto 0.5em; } .octiv-person-container .octiv-person-name, .octiv-person-container .octiv-person-title, .octiv-person-container .octiv-person-company { text-align: center; } .octiv-content-toggle-list .octiv-content-toggle-item { margin-bottom: 1em; } .octiv-content-toggle-list .octiv-content-toggle-item label { display: none; } .octiv-slide-content { -webkit-animation-name: none; animation-name: none; position: static; } .octiv-slide-toggle:checked + .octiv-slide-content { -webkit-animation-name: none; animation-name: none; } .octiv-content-toggle-list--implementation .octiv-content-toggle-item { display: block; } .octiv-two-third-only { max-width: 100%; right: auto; } .octiv-block-quote { padding: 2em; } .octiv-block-statement { font-size: 1em !important; } .octiv-case-study .octiv-icon-item { display: block; } .octiv-case-study .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-case-study .octiv-icon-content-container { padding-left: 0; } .octiv-integration .octiv-notch { padding: 1em; } .octiv-datasheet .octiv-block-quote-highlight { float: none; max-width: 100%; }
+  #content_editor .octiv-datasheet .octiv-block-quote-highlight, .pdf-page-content .octiv-datasheet .octiv-block-quote-highlight { margin: 0 0 1em 0; } .octiv-datasheet .octiv-icon-item { display: block; } .octiv-datasheet .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-datasheet .octiv-icon-content-container { padding-left: 0; } .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key li { display: list-item; } .octiv-support-services .octiv-icon-item { display: block; } .octiv-support-services .octiv-icon-content-container { padding-left: 0; } #content_editor h2, .pdf-page-content h2 { font-size: 1.3em !important; } #content_editor h4, .pdf-page-content h4 { font-size: 1.15em !important; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; width: 100%; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding: 0 !important; } }
+@media print { .octiv-hero { top: -0.5in; left: -0.5in; width: 8.5in; } .octiv-hero:before, .octiv-hero:after { background-color: rgba(45, 57, 67, 0.55); } .octiv-notch { margin-top: -0.75in; margin-bottom: -0.5in; padding: 0.25in; } .octiv-after-notch { padding-top: 0.4375in !important; margin-top: 0.25in; } .octiv-full-width { left: -0.5in; width: 8.5in; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; position: absolute; right: 0; top: 0; bottom: 0; } .octiv-employee-feature .octiv-employee-feature-headshot:before { background-size: cover; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589435_original.png?1516302091); } .octiv-employee-feature .octiv-employee-feature-content { position: absolute; top: 1.5in; } .octiv-content-toggle-list .octiv-content-toggle-item label { display: none; } .octiv-slide-content { display: none; } .octiv-content-toggle-list--implementation { display: block; min-height: none; } .octiv-content-toggle-list--implementation .octiv-content-toggle-item { display: block; width: 100% !important; } .octiv-content-toggle-list--implementation .octiv-slide-content { position: static; display: block; top: 0; } .octiv-four-child-items .octiv-content-toggle-item { display: inline-block; max-width: 1.78125in; margin-right: 0.125in; }
+  .octiv-four-child-items .octiv-content-toggle-item:nth-child(4n) { margin-right: 0; } .octiv-color-card-brand { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand ul, .pdf-page-content .octiv-color-card-brand ul { padding-left: 1.5em !important; } .octiv-color-card-brand li:before { top: 0; } .octiv-datasheet-key-capabilities .octiv-color-card-brand { max-width: 100% !important; } .octiv-color-card-brand-two { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-two ul, .pdf-page-content .octiv-color-card-brand-two ul { padding-left: 1.5em !important; } .octiv-color-card-brand-two li:before { top: 0; } .octiv-color-card-brand-three { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-three ul, .pdf-page-content .octiv-color-card-brand-three ul { padding-left: 1.5em !important; } .octiv-color-card-brand-three li:before { top: 0; } .octiv-color-card-brand-four { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-four ul, .pdf-page-content .octiv-color-card-brand-four ul { padding-left: 1.5em !important; } .octiv-color-card-brand-four li:before { top: 0; } .octiv-color-card-brand-five { display: inline-block; vertical-align: top; width: 100%; max-width: 2.0625in; margin-right: 0.3125in; margin-bottom: 0.125in; min-height: 1.5in; } #content_editor .octiv-color-card-brand-five ul, .pdf-page-content .octiv-color-card-brand-five ul { padding-left: 1.5em !important; } .octiv-color-card-brand-five li:before { top: 0; } .octiv-block-quote:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545); } .octiv-block-statement { font-size: 1.1em !important; } .octiv-product-name { font-size: 0.8em; } #content_editor .octiv-product-details, .pdf-page-content .octiv-product-details { font-size: 0.8em; } #content_editor .octiv-product-description, .pdf-page-content .octiv-product-description { font-size: 0.8; } #content_editor .octiv-brand-table thead, .pdf-page-content .octiv-brand-table thead, #content_editor .octiv-brand-table thead th, .pdf-page-content .octiv-brand-table thead th { padding: 0.25em 0.5em; } #content_editor .octiv-brand-two-table thead, .pdf-page-content .octiv-brand-two-table thead, #content_editor .octiv-brand-two-table thead th, .pdf-page-content .octiv-brand-two-table thead th { padding: 0.25em 0.5em; } #content_editor .octiv-brand-three-table thead, .pdf-page-content .octiv-brand-three-table thead, #content_editor .octiv-brand-three-table thead th, .pdf-page-content .octiv-brand-three-table thead th { padding: 0.25em 0.5em; } #content_editor .octiv-footnote, .pdf-page-content .octiv-footnote { font-size: 0.6em; } .octiv-color-page--brand-two { top: -0.5in; left: -0.5in; padding: 0.5in; width: 8.5in; min-height: 11in; } .octiv-color-page--brand-three { top: -0.5in; left: -0.5in; padding: 0.5in; width: 8.5in; min-height: 11in; } .octiv-color-page--brand-four { top: -0.5in; left: -0.5in; padding: 0.5in; width: 8.5in; min-height: 11in; } .octiv-color-page--brand-five { top: -0.5in; left: -0.5in; padding: 0.5in; width: 8.5in; min-height: 11in; } .octiv-case-study .octiv-hero { margin-bottom: -0.25in; } .octiv-case-study .octiv-case-study-customer-logo img { max-width: 3in; max-height: 1in; } #content_editor .octiv-case-study .octiv-icon-content-container p, .pdf-page-content .octiv-case-study .octiv-icon-content-container p { font-size: 0.9em !important; } #content_editor .octiv-integration .octiv-hero, .pdf-page-content .octiv-integration .octiv-hero { padding: 0.5in 0.75in !important; } .octiv-integration .octiv-hero { margin-bottom: -0.25in; } .octiv-integration .octiv-hero .octiv-integration-logo-container, .octiv-integration .octiv-hero .octiv-integration-plus-sign-wrap { padding-top: 0.25in; padding-bottom: 0.25in; } .octiv-integration .octiv-hero .octiv-integration-logo-container:first-child .octiv-integration-logo-wrap { right: 0in; } .octiv-integration .octiv-why-integration, .octiv-integration .octiv-integration-capabilities { margin-top: 1.5em; } .octiv-integration .octiv-icon-item, .octiv-integration .octiv-content-toggle-item { float: left; } .octiv-integration .octiv-content-toggle-item img { border: 1px solid #ccc; } .octiv-integration--oracle-cpq .octiv-why-integration, .octiv-integration--oracle-cpq .octiv-integration-capabilities { margin-top: 0 !important; } .octiv-integration--formstack .octiv-hero { margin-bottom: -0.5in; } .octiv-datasheet .octiv-color-cards li:nth-child(3n) { margin-right: 0; } #content_editor .octiv-datasheet .octiv-icon-content-container p, .pdf-page-content .octiv-datasheet .octiv-icon-content-container p { font-size: 0.9em !important; } .octiv-datasheet .octiv-datasheet-logo-item { display: inline-block; vertical-align: middle; width: 100%; max-width: 1.75in; } .octiv-datasheet .octiv-datasheet-logo-item img { display: block; margin: 0 auto !important; } .octiv-datasheet .octiv-competitor-capabilities .octiv-competitor-table-key { margin-bottom: 1em !important; } .octiv-datasheet .octiv-product-features-list { text-align: center; } .octiv-datasheet .octiv-product-features-list .octiv-icon-item { display: inline-block; width: 1.75in; margin-bottom: 0.5em; } #content_editor .octiv-datasheet .octiv-product-features-list .octiv-icon-content-container p, .pdf-page-content .octiv-datasheet .octiv-product-features-list .octiv-icon-content-container p { margin-top: 0; } .octiv-datasheet .octiv-integration-visual { min-height: 4in; margin-bottom: 0.125in; } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item { text-align: center; line-height: 100px !important; } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item img { margin: -0.125in auto 0; display: inline-block; vertical-align: middle; } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(2) { -webkit-transform: translate(-200%, -125%); -ms-transform: translate(-200%, -125%); transform: translate(-200%, -125%); } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(3) { -webkit-transform: translate(-50%, -200%); -ms-transform: translate(-50%, -200%); transform: translate(-50%, -200%); } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(4) { -webkit-transform: translate(100%, -125%); -ms-transform: translate(100%, -125%); transform: translate(100%, -125%); } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(5) { -webkit-transform: translate(100%, 25%); -ms-transform: translate(100%, 25%); transform: translate(100%, 25%); } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(6) { -webkit-transform: translate(-50%, 100%); -ms-transform: translate(-50%, 100%); transform: translate(-50%, 100%); } .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(7) { -webkit-transform: translate(-200%, 25%); -ms-transform: translate(-200%, 25%); transform: translate(-200%, 25%); } .octiv-terms-conditions .octiv-hero { margin-bottom: -0.25in; } .octiv-terms-conditions .octiv-color-cards li { margin-right: 0.3125in; max-width: 3.575in !important; }
+  .octiv-terms-conditions .octiv-color-cards li:nth-child(2n) { margin-right: 0; } .octiv-order-form .octiv-order-form-details-list { margin-top: -0.25in; } .octiv-order-form .octiv-order-form-details-list li { margin-bottom: 0; } .octiv-order-form .octiv-employee-feature-content { position: static; top: auto; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); } .octiv-order-form .octiv-employee-feature-headshot { float: none; position: relative; width: 0.75in; height: 0.75in; } .octiv-order-form .octiv-employee-feature-headshot img { position: absolute; max-width: 200px !important; top: -0.4in; right: -0.15in; } #content_editor .octiv-order-form .octiv-employee-feature-title, .pdf-page-content .octiv-order-form .octiv-employee-feature-title { font-size: 0.8em !important; } .octiv-order-form .octiv-color-cards { margin-top: -0.25in; } .octiv-order-form .octiv-color-cards [class*="octiv-color-card"] { max-width: 100% !important; min-height: 0 !important; } #content_editor .octiv-support-services .octiv-icon-content-container p, .pdf-page-content .octiv-support-services .octiv-icon-content-container p { font-size: 0.9em !important; } .octiv-implementation [class*="octiv-color-card-brand"] { max-width: none; } #content_editor h2, .pdf-page-content h2 { font-size: 1.5em !important; } #content_editor h4, .pdf-page-content h4 { font-size: 1.25em !important; } #content_editor p, .pdf-page-content p { font-size: 0.9em !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 0.125in !important; margin-bottom: 0.25in; } #content_editor .no-gutters .one-third:nth-child(3n-2), .pdf-page-content .no-gutters .one-third:nth-child(3n-2) { padding-left: 0in !important; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding-left: 0.0625in !important; padding-right: 0.0625in !important; } #content_editor .no-gutters .one-third:nth-child(3n), .pdf-page-content .no-gutters .one-third:nth-child(3n) { padding-right: 0in !important; } #content_editor .octiv-pad-b, .pdf-page-content .octiv-pad-b { padding-bottom: 0in !important; } #content_editor .octiv-mar-b, .pdf-page-content .octiv-mar-b { margin-bottom: 0.125in !important; } #content_editor .octiv-mar-b-more, .pdf-page-content .octiv-mar-b-more { margin-bottom: 0.25in !important; } }
 
 /*# sourceMappingURL=client-theme.css.map */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -53,11 +53,11 @@ class Ai1wm_Compressor extends Ai1wm_Archiver {
 	public function add_file( $file_name, $new_file_name = '', &$file_written = 0, &$file_offset = 0, $timeout = 0 ) {
 		$file_written = 0;
 
-		// Replace / with DIRECTORY_SEPARATOR in file name
-		$file_name = str_replace( '/', DIRECTORY_SEPARATOR, $file_name );
+		// Replace forward slash with current directory separator in file name
+		$file_name = $this->replace_forward_slash_with_directory_separator( $file_name );
 
-		// Replace \ with \\ in file name (Windows)
-		$file_name = str_replace( '\\', '\\\\', $file_name );
+		// Escape Windows directory separator in file name
+		$file_name = $this->escape_windows_directory_separator( $file_name );
 
 		// Flag to hold if file data has been processed
 		$completed = true;
@@ -121,7 +121,10 @@ class Ai1wm_Compressor extends Ai1wm_Archiver {
 
 					// Seek to beginning of file size
 					if ( @fseek( $this->file_handle, - $file_offset - 4096 - 12 - 14, SEEK_CUR ) === -1 ) {
-						throw new Ai1wm_Not_Seekable_Exception( sprintf( 'Unable to seek to offset on file. File: %s Offset: %d', $this->file_name, - $file_offset - 4096 - 12 - 14 ) );
+						throw new Ai1wm_Not_Seekable_Exception(
+							'Your PHP is 32-bit. In order to export your file, please change your PHP version to 64-bit and try again. ' .
+							'<a href="https://help.servmask.com/knowledgebase/php-32bit/" target="_blank">Technical details</a>'
+						);
 					}
 
 					// Write file size to file header
@@ -135,7 +138,10 @@ class Ai1wm_Compressor extends Ai1wm_Archiver {
 
 					// Seek to end of file content
 					if ( @fseek( $this->file_handle, + $file_offset + 4096 + 12, SEEK_CUR ) === -1 ) {
-						throw new Ai1wm_Not_Seekable_Exception( sprintf( 'Unable to seek to offset on file. File: %s Offset: %d', $this->file_name, + $file_offset + 4096 + 12 ) );
+						throw new Ai1wm_Not_Seekable_Exception(
+							'Your PHP is 32-bit. In order to export your file, please change your PHP version to 64-bit and try again. ' .
+							'<a href="https://help.servmask.com/knowledgebase/php-32bit/" target="_blank">Technical details</a>'
+						);
 					}
 				}
 			}
@@ -177,8 +183,8 @@ class Ai1wm_Compressor extends Ai1wm_Archiver {
 			// Last time the file was modified
 			$date = $stat['mtime'];
 
-			// Replace DIRECTORY_SEPARATOR with / in path, we want to always have /
-			$path = str_replace( DIRECTORY_SEPARATOR, '/', $pathinfo['dirname'] );
+			// Replace current directory separator with backward slash in file path
+			$path = $this->replace_directory_separator_with_forward_slash( $pathinfo['dirname'] );
 
 			// Concatenate block format parts
 			$format = implode( '', $this->block_format );
