@@ -36,20 +36,24 @@
             <?php the_content(); ?>
           </div>
           <div>
-            <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
-            <form id="mktoForm_<?php echo $form_id; ?>"></form>
-            <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
+            <?php if (!get_field('pardot_form_url')) : ?>
+              <script src="//app-sj20.marketo.com/js/forms2/js/forms2.min.js"></script>
+              <form id="mktoForm_<?php echo $form_id; ?>"></form>
+              <script>MktoForms2.loadForm("//app-sj20.marketo.com", "625-MXY-689", <?php echo $form_id; ?>, function(form) {
 
-              form.onSuccess(function(values, followUpUrl) {
-                form.getFormElem().hide();
-                $('.notch .page-content').hide();
+                form.onSuccess(function(values, followUpUrl) {
+                  form.getFormElem().hide();
+                  $('.notch .page-content').hide();
 
-                $('.notch .video-outer').show();
+                  $('.notch .video-outer').show();
 
-                // Return false to prevent the submission handler continuing with its own processing
-                return false;
-              });
-            });</script>
+                  // Return false to prevent the submission handler continuing with its own processing
+                  return false;
+                });
+              });</script>
+            <?php else : ?>
+              <iframe src="<?php echo get_field('pardot_form_url'); ?>" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+            <?php endif; ?>
           </div>
         </div>
       <?php endif; ?>
