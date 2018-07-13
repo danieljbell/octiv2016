@@ -1,3 +1,5 @@
+
+
 <?php
   $form_id = get_field('marketo_form_id');
   $redirect_link = $_SERVER['REQUEST_URI'] . 'view/?reg=true';
@@ -40,7 +42,7 @@
           <iframe src="<?php echo $redirect_link; ?>" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
         <?php endif; ?>
         <?php if ($form_id) : ?>
-          <iframe src="https://go.pardot.com/l/217282/2018-04-30/3dmm3" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+          <iframe src="https://go.pardot.com/l/217282/2018-04-30/3dmm3" width="100%" height="800" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
         <?php endif; ?>
       </div>
     </div>
